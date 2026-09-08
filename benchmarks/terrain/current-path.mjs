@@ -139,20 +139,23 @@ for (const name of ["lax", "la_hills", "rainier"]) {
     return 0;
   }, options);
   const seam = measure(() => { stitchTerrainEdges(patches); return 0; }, options);
-  // Current runtime calls animateTerrain both before and after tile selection.
+  // Compare the checkpoint's two passes with Stage A1's single pass. Runtime
+  // lifecycle tests separately verify the number of actual calls per update.
   const update = () => {
     patches.forEach((p, i) => advanceRefinement(p.mesh, states[i], 600));
     stitchTerrainEdges(patches);
   };
   const twoPass = measure(() => { update(); update(); return 0; }, options);
+  const onePass = measure(() => { update(); return 0; }, options);
   const copyOnly = measure(() => {
     central.mesh.updateVerticesData(VertexBuffer.PositionKind, states[4].to, true);
     return 0;
   }, options);
   results.push({ ...queryResult, construct_one_tile: construct, morph_nine_tiles: morph, seam_nine_tiles: seam,
-    current_two_animation_passes: twoPass, one_tile_buffer_update: copyOnly,
+    checkpoint_two_animation_passes: twoPass, single_animation_pass: onePass,
+    refinement_reduction_percent: 100 * (1 - onePass.median_ms / twoPass.median_ms), one_tile_buffer_update: copyOnly,
     limitation: "NullEngine: CPU work only; no GPU upload, rendering, texture decode, full scene traversal, tile selection, or browser frame time. Nine adjacent tiles, duplicated neighboring fixture heights." });
-  console.log(`Updates ${name}: morph ${morph.median_ms.toFixed(2)} ms, seams ${seam.median_ms.toFixed(2)} ms, two passes ${twoPass.median_ms.toFixed(2)} ms`);
+  console.log(`Updates ${name}: two passes ${twoPass.median_ms.toFixed(2)} ms, one pass ${onePass.median_ms.toFixed(2)} ms`);
   engine.dispose();
 }
 const sourceHashes = Object.fromEntries([
