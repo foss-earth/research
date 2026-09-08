@@ -1,14 +1,14 @@
 # Flat-basemap performance recovery
 
-Status: Stage A implemented — awaiting user in-game validation; Stages B–D proposed
+Status: Initial Stage B–C4 implementation complete; in-game calibration remains
 Date: 2026-09-07  
 Scope: foss-earth raster basemaps and their flight-sim integration
 
 ## Implementation record — 2026-09-07
 
 The pre-change checkpoints are `foss-earth` commit `860d217` and `flight-sim`
-commit `c0126d98`. Stage A retains the existing tile density, texture resolution
-and 1.2-second refinement duration.
+commit `c0126d98`. Stage A began with the existing tile density and refinement
+duration; the follow-up implementation now uses discrete, bounded commits.
 
 - **A1 is complete.** Terrain load callbacks now only mark work pending. Each
   runtime update performs at most one refinement/seam pass after coverage is
@@ -28,6 +28,35 @@ and 1.2-second refinement duration.
   bounded to 3,600 frames, and records CPU timing, query/seam/write counters and
   sampled resource estimates. It reports unavailable GPU/process measurements as
   `null` and adds no capture buffer or per-query clock when disabled.
+
+### Integrated follow-up implementation — 2026-09-07
+
+- **Stage B is complete.** A new terrain grid replaces its displayed mesh data
+  once at an update boundary. There is no 1.2-second position-buffer morph or
+  repeated seam/geometry work while the surface is settled.
+- **C1/C2 are complete as a conservative first policy.** Auto starts Low on
+  devices reporting at most four CPU cores or 4 GB of device memory; otherwise
+  it starts Balanced. Low, Balanced and High cap the focus ring at 1, 2 and 3
+  tiles, cap mesh subdivisions at 32, 64 and 128, and cap retained tiles at 96,
+  160 and 256. Auto steps down only after two one-second windows above 20 ms,
+  waits five seconds between changes, and will not treat a 60 FPS cap as spare
+  capacity. Mesh rebuilds after a quality change are budgeted to roughly 2 ms
+  per update.
+- **C3 is complete for the registered Terrarium sources.** Mapterhorn remains
+  the default; AWS-hosted Mapzen/Terrain Tiles is selectable independently.
+  `elevationSource` and `terrainQuality` persist in the URL. Changing elevation
+  leaves current terrain meshes displayed and queried while replacement tiles
+  stream, so terrain contact receives an ordinary safe surface revision instead
+  of a missing surface.
+- **C4 is complete.** A flat-to-flat source change replaces textures in-place,
+  retains mesh/elevation work and updates `mapSource` with `history.replaceState`.
+  Google/raster switching preserves the running app and flight state while
+  changing the renderer mode. The flight HUD has separate Basemap, Elevation and
+  Terrain Detail controls, a visible FPS readout, and a settings button.
+
+The policy values are bounded starting values, not device-specific performance
+claims. User in-game testing still determines whether Low/Balanced/High need
+calibration on target hardware.
 
 Focused geometry tests, the full foss-earth suite, production build, and the full
 flight-sim test suite passed. These are CPU and correctness checks; they do not
