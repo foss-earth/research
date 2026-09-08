@@ -1,8 +1,37 @@
 # Flat-basemap performance recovery
 
-Status: Proposed for review — implementation has not started  
+Status: Stage A implemented — awaiting user in-game validation; Stages B–D proposed
 Date: 2026-09-07  
 Scope: foss-earth raster basemaps and their flight-sim integration
+
+## Implementation record — 2026-09-07
+
+The pre-change checkpoints are `foss-earth` commit `860d217` and `flight-sim`
+commit `c0126d98`. Stage A retains the existing tile density, texture resolution
+and 1.2-second refinement duration.
+
+- **A1 is complete.** Terrain load callbacks now only mark work pending. Each
+  runtime update performs at most one refinement/seam pass after coverage is
+  adopted, and stationary simulation frames no longer reselect coverage solely
+  because the render loop is active. The nine-tile benchmark reduced active
+  refinement from 10.16–10.19 ms to 5.08–5.10 ms at LAX/LA hills and from 2.76
+  ms to 1.38 ms at Rainier in the CPU-only reference run.
+- **A2 is complete.** Raster `surface.sample()` indexes adopted tile triangles
+  directly. It reads the current position buffers, including morphs and stitched
+  seams, and checks only the owning/adjacent patches. The general `raycast()` API
+  is unchanged. The same benchmark measured 0.88–0.94 µs median production
+  sampling and 1.08–1.17 µs P95, versus 225–700 µs for the former scene raycast.
+  Height agreement was better than 0.00003 m; no fixture query needed a restricted
+  fallback.
+- **Stage 0 capture is available.** Add `terrainCapture=1` to the app URL, then
+  inspect `window.fossTerrainPerformance?.snapshot()` in DevTools. It is opt-in,
+  bounded to 3,600 frames, and records CPU timing, query/seam/write counters and
+  sampled resource estimates. It reports unavailable GPU/process measurements as
+  `null` and adds no capture buffer or per-query clock when disabled.
+
+Focused geometry tests, the full foss-earth suite, production build, and the full
+flight-sim test suite passed. These are CPU and correctness checks; they do not
+replace the required browser test for frame pacing, heat or GPU upload stalls.
 
 ## Recommendation
 

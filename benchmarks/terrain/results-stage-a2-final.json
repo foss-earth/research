@@ -1,0 +1,334 @@
+{
+  "date": "2026-09-08T02:33:06.953Z",
+  "environment": {
+    "node": "v26.0.0",
+    "cpu": "Apple M5"
+  },
+  "sourceHashes": {
+    "src/engine/babylon/createRasterTilesRuntime.ts": "85e0a764866aea337e291e38af78e6f8635c5db07e0cf081f4e65710c3c114e3",
+    "src/terrain/meshRefinement.ts": "95f699c4d1836de4b75a3a1d95dca427077367f37eb5929c04c265e58d7f071d",
+    "src/terrain/surfaceQuery.ts": "7e39c31e01df6f3e601456ed72eb48537d9339cbed137a7b6f20292574b07364",
+    "src/terrain/rasterSurfaceSampler.ts": "1d48008559f78a8ecc3b903afa588b2dfc6267501d51e33c6571c9be80907e34"
+  },
+  "planner": [
+    {
+      "zoomMeters": 500,
+      "desired_leaves": 187,
+      "parent_records": 57,
+      "fully_loaded_triangles": 4994360,
+      "fully_loaded_vertices": 2539491,
+      "levels": {
+        "2": 15,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 2,
+        "12": 6,
+        "13": 4,
+        "14": 5,
+        "15": 15,
+        "16": 116
+      },
+      "timing": {
+        "median_ms": 0.0518876953125007,
+        "p90_ms": 0.06253125000000015,
+        "repetitions": 128,
+        "rounds": 7
+      },
+      "note": "Demanded geometry before frustum culling, if all downloads succeed; not observed rendered triangles."
+    },
+    {
+      "zoomMeters": 1500,
+      "desired_leaves": 184,
+      "parent_records": 56,
+      "fully_loaded_triangles": 4773176,
+      "fully_loaded_vertices": 2427488,
+      "levels": {
+        "2": 15,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 1,
+        "12": 7,
+        "13": 9,
+        "14": 16,
+        "15": 112
+      },
+      "timing": {
+        "median_ms": 0.04457389453125016,
+        "p90_ms": 0.09078239062499982,
+        "repetitions": 256,
+        "rounds": 7
+      },
+      "note": "Demanded geometry before frustum culling, if all downloads succeed; not observed rendered triangles."
+    },
+    {
+      "zoomMeters": 5000,
+      "desired_leaves": 178,
+      "parent_records": 54,
+      "fully_loaded_triangles": 4527416,
+      "fully_loaded_vertices": 2302810,
+      "levels": {
+        "2": 15,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "12": 5,
+        "13": 14,
+        "14": 120
+      },
+      "timing": {
+        "median_ms": 0.048318519531250104,
+        "p90_ms": 0.06464924999999955,
+        "repetitions": 256,
+        "rounds": 7
+      },
+      "note": "Demanded geometry before frustum culling, if all downloads succeed; not observed rendered triangles."
+    }
+  ],
+  "results": [
+    {
+      "fixture": "lax",
+      "tiles": 9,
+      "segments": 128,
+      "triangles": 294912,
+      "original_us_per_query": 700.2853835616431,
+      "addressed_us_per_query": 0.23376854130993244,
+      "maximum_height_difference_m": 4.6566128730773926e-8,
+      "checked_queries": 73,
+      "production_us_per_query": 0.9067984803082172,
+      "production_p95_us": 1.1249999997744453,
+      "production_maximum_height_difference_m": 1.862645149230957e-9,
+      "production_counters": {
+        "samples": 85996,
+        "patches": 85996,
+        "triangles": 1547928,
+        "fallbacks": 0,
+        "misses": 0
+      },
+      "production": {
+        "median_ms": 0.06619628906249986,
+        "p90_ms": 0.06720898437500011,
+        "repetitions": 128,
+        "rounds": 7
+      },
+      "original": {
+        "median_ms": 51.12083299999995,
+        "p90_ms": 60.9375,
+        "repetitions": 1,
+        "rounds": 7
+      },
+      "addressed": {
+        "median_ms": 0.01706510351562507,
+        "p90_ms": 0.01859122851562489,
+        "repetitions": 512,
+        "rounds": 7
+      },
+      "construct_one_tile": {
+        "median_ms": 1.4069115000000068,
+        "p90_ms": 2.2184843750000027,
+        "repetitions": 8,
+        "rounds": 7
+      },
+      "morph_nine_tiles": {
+        "median_ms": 3.83071874999996,
+        "p90_ms": 3.861270750000017,
+        "repetitions": 4,
+        "rounds": 7
+      },
+      "seam_nine_tiles": {
+        "median_ms": 1.6054374999999936,
+        "p90_ms": 2.0107602499999757,
+        "repetitions": 4,
+        "rounds": 7
+      },
+      "checkpoint_two_animation_passes": {
+        "median_ms": 10.160624999999982,
+        "p90_ms": 10.262416999999914,
+        "repetitions": 1,
+        "rounds": 7
+      },
+      "single_animation_pass": {
+        "median_ms": 5.076896000000033,
+        "p90_ms": 5.11027050000007,
+        "repetitions": 2,
+        "rounds": 7
+      },
+      "refinement_reduction_percent": 50.03362490004264,
+      "one_tile_buffer_update": {
+        "median_ms": 0.0387405585937497,
+        "p90_ms": 0.038825843750000644,
+        "repetitions": 256,
+        "rounds": 7
+      },
+      "limitation": "NullEngine: CPU work only; no GPU upload, rendering, texture decode, full scene traversal, tile selection, or browser frame time. Nine adjacent tiles, duplicated neighboring fixture heights."
+    },
+    {
+      "fixture": "la_hills",
+      "tiles": 9,
+      "segments": 128,
+      "triangles": 294912,
+      "original_us_per_query": 691.9160958904074,
+      "addressed_us_per_query": 0.23541957405820968,
+      "maximum_height_difference_m": 0.000012362375855445862,
+      "checked_queries": 73,
+      "production_us_per_query": 0.9207736515410938,
+      "production_p95_us": 1.1249999997744453,
+      "production_maximum_height_difference_m": 2.7939677238464355e-9,
+      "production_counters": {
+        "samples": 85996,
+        "patches": 85996,
+        "triangles": 1547928,
+        "fallbacks": 0,
+        "misses": 0
+      },
+      "production": {
+        "median_ms": 0.06721647656249985,
+        "p90_ms": 0.07137857812499959,
+        "repetitions": 128,
+        "rounds": 7
+      },
+      "original": {
+        "median_ms": 50.50987499999974,
+        "p90_ms": 51.72375000000011,
+        "repetitions": 1,
+        "rounds": 7
+      },
+      "addressed": {
+        "median_ms": 0.017185628906249306,
+        "p90_ms": 0.018104654296875466,
+        "repetitions": 512,
+        "rounds": 7
+      },
+      "construct_one_tile": {
+        "median_ms": 1.058833375000006,
+        "p90_ms": 1.0770572499999957,
+        "repetitions": 8,
+        "rounds": 7
+      },
+      "morph_nine_tiles": {
+        "median_ms": 3.748281249999991,
+        "p90_ms": 3.812031250000018,
+        "repetitions": 4,
+        "rounds": 7
+      },
+      "seam_nine_tiles": {
+        "median_ms": 1.4101198750000776,
+        "p90_ms": 2.6831979999999476,
+        "repetitions": 8,
+        "rounds": 7
+      },
+      "checkpoint_two_animation_passes": {
+        "median_ms": 10.187124999999469,
+        "p90_ms": 10.32183299999997,
+        "repetitions": 1,
+        "rounds": 7
+      },
+      "single_animation_pass": {
+        "median_ms": 5.095812500000193,
+        "p90_ms": 5.151437500000156,
+        "repetitions": 2,
+        "rounds": 7
+      },
+      "refinement_reduction_percent": 49.97791329741749,
+      "one_tile_buffer_update": {
+        "median_ms": 0.038505859375000284,
+        "p90_ms": 0.03872835156249721,
+        "repetitions": 256,
+        "rounds": 7
+      },
+      "limitation": "NullEngine: CPU work only; no GPU upload, rendering, texture decode, full scene traversal, tile selection, or browser frame time. Nine adjacent tiles, duplicated neighboring fixture heights."
+    },
+    {
+      "fixture": "rainier",
+      "tiles": 9,
+      "segments": 64,
+      "triangles": 73728,
+      "original_us_per_query": 226.24942465753432,
+      "addressed_us_per_query": 0.2650753959760431,
+      "maximum_height_difference_m": 0.000023937784135341644,
+      "checked_queries": 73,
+      "production_us_per_query": 0.9269450984588699,
+      "production_p95_us": 1.0830000001078588,
+      "production_maximum_height_difference_m": 2.7939677238464355e-9,
+      "production_counters": {
+        "samples": 85996,
+        "patches": 85996,
+        "triangles": 1547928,
+        "fallbacks": 0,
+        "misses": 0
+      },
+      "production": {
+        "median_ms": 0.0676669921874975,
+        "p90_ms": 0.07354003906250028,
+        "repetitions": 128,
+        "rounds": 7
+      },
+      "original": {
+        "median_ms": 16.516208000000006,
+        "p90_ms": 17.045500000000175,
+        "repetitions": 1,
+        "rounds": 7
+      },
+      "addressed": {
+        "median_ms": 0.01935050390625115,
+        "p90_ms": 0.019636310546875535,
+        "repetitions": 512,
+        "rounds": 7
+      },
+      "construct_one_tile": {
+        "median_ms": 0.3070546874999991,
+        "p90_ms": 0.31133462500000064,
+        "repetitions": 32,
+        "rounds": 7
+      },
+      "morph_nine_tiles": {
+        "median_ms": 0.9046875000000227,
+        "p90_ms": 0.9515625000000227,
+        "repetitions": 16,
+        "rounds": 7
+      },
+      "seam_nine_tiles": {
+        "median_ms": 0.4572083125000006,
+        "p90_ms": 0.4668971250000027,
+        "repetitions": 32,
+        "rounds": 7
+      },
+      "checkpoint_two_animation_passes": {
+        "median_ms": 2.7584062500000073,
+        "p90_ms": 2.8145624999999654,
+        "repetitions": 4,
+        "rounds": 7
+      },
+      "single_animation_pass": {
+        "median_ms": 1.3781874999999673,
+        "p90_ms": 1.4186457500001097,
+        "repetitions": 8,
+        "rounds": 7
+      },
+      "refinement_reduction_percent": 50.03681926837413,
+      "one_tile_buffer_update": {
+        "median_ms": 0.010798217773436924,
+        "p90_ms": 0.010899658203125107,
+        "repetitions": 1024,
+        "rounds": 7
+      },
+      "limitation": "NullEngine: CPU work only; no GPU upload, rendering, texture decode, full scene traversal, tile selection, or browser frame time. Nine adjacent tiles, duplicated neighboring fixture heights."
+    }
+  ]
+}

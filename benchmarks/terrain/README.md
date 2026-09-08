@@ -14,11 +14,11 @@ vertical-error threshold. The evidence does **not** establish that square grids
 are intrinsically faster, or that a complete adaptive spherical hex hierarchy
 would outperform square tiles.
 
-The much larger measured costs are in the current application's dense geometry,
+The much larger measured costs were in the checkpoint application's dense geometry,
 continuous vertex updates/seam processing during refinement, and scene raycasts.
 Changing the sample lattice alone would leave these costs in place.
 
-### Current application code: nine adjacent loaded tiles
+### Checkpoint application code: nine adjacent loaded tiles
 
 The experiment imports the actual terrain mesh builder, refinement functions, and
 surface query, using Babylon's NullEngine. Repeated runs gave:
@@ -32,9 +32,9 @@ surface query, using Babylon's NullEngine. Repeated runs gave:
 | Morph + stitch twice, as the active-refinement update path does | 9.77–10.03 ms | 2.73–2.75 ms |
 | Construct one current terrain mesh | 1.03–1.06 ms | 0.30 ms |
 
-The two animation passes occur while refinement is active, not continuously on
-fully settled terrain. The runtime calls `animateTerrain()` before and after
-tile selection. Each active pass processes every tile in its displayed coverage,
+The two animation passes occurred while refinement was active, not continuously on
+fully settled terrain. The checkpoint runtime called `animateTerrain()` before and
+after tile selection. Each active pass processed every tile in its displayed coverage,
 including tiles outside the camera frustum. This benchmark uses only nine tiles;
 it does not extrapolate a full game's frame time from that small scene.
 
@@ -45,7 +45,22 @@ boundaries, heights agreed with the original scene query within 0.000024 m. This
 comparison was repeated. This is agreement between algorithms, not geographic
 accuracy. The prototype assumes a known tile with no transformed world root; a
 complete consumer needs tile selection, input checks, floating-origin handling,
-and mixed-LOD boundary validation. No general scene raycast was replaced.
+and mixed-LOD boundary validation. No general scene raycast was replaced in this
+checkpoint measurement.
+
+### Stage A implementation: same nine-tile fixture
+
+Stage A1 removes the duplicate refinement/seam pass without changing density or
+the 1.2-second transition. The repeated run recorded 5.08–5.10 ms at LAX/LA hills
+and 1.38 ms at Rainier, roughly half of the two-pass checkpoint cost.
+
+Stage A2 replaces routine raster `surface.sample()` with an index of adopted mesh
+triangles. It reads the current position buffer and uses a restricted neighboring-
+patch check only for exceptional misses. On the same CPU-only setup, its median
+cost was 0.88–0.94 µs/query and sampled P95 was 1.08–1.17 µs/query. It agreed
+with the prior raycast to within 0.00003 m across the fixture queries; no
+restricted fallback was taken. This does not measure browser frame time, GPU work,
+texture decode or actual power use. See `results-stage-a2-final.json`.
 
 NullEngine does not perform GPU uploads or rendering. The timings exclude image
 decode, texture uploads, shaders, actual frame pacing, and the full game scene.

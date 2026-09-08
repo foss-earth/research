@@ -7,6 +7,7 @@ import { NullEngine, Scene, Ray, Vector3, VertexBuffer } from "@babylonjs/core";
 import { createTerrainMesh, benchmarkDesiredTiles, benchmarkSegments } from "../../src/engine/babylon/createRasterTilesRuntime.ts";
 import { RASTER_BASE_MAP_SOURCES } from "../../src/engine/babylon/rasterBaseMaps.ts";
 import { createSurfaceQuery } from "../../src/terrain/surfaceQuery.ts";
+import { createRasterSurfaceSampler } from "../../src/terrain/rasterSurfaceSampler.ts";
 import { advanceRefinement, refineMesh, stitchTerrainEdges } from "../../src/terrain/meshRefinement.ts";
 import { geodeticToEcef, ecefToGeodetic, DEG_TO_RAD } from "../../src/camera/cameraMath.ts";
 import { measure, randomPoints } from "./layouts.mjs";
@@ -98,6 +99,10 @@ for (const name of ["lax", "la_hills", "rainier"]) {
     const count = mesh.getTotalVertices(); mesh.dispose(); return count;
   }, options);
   const direct = addressedQuery(central.mesh, central.tile);
+  const counters = { samples: 0, patches: 0, triangles: 0, fallbacks: 0, misses: 0 };
+  const sampler = createRasterSurfaceSampler(() => 0, counters);
+  sampler.setCoverage(patches);
+  const production = createSurfaceQuery(scene, () => null, mesh => Boolean(mesh.metadata?.mapSurface), () => 0, sampler.sample);
   const coordinates = [];
   for (let i = 0; i < points.length; i += 2) {
     coordinates.push([(Math.atan(Math.sinh(Math.PI * (1 - 2 * (f.y + points[i + 1]) / 2 ** f.z))) / DEG_TO_RAD),
@@ -108,13 +113,17 @@ for (const name of ["lax", "la_hills", "rainier"]) {
     coordinates.push([Math.atan(Math.sinh(Math.PI * (1 - 2 * (f.y + u + offset) / 2 ** f.z))) / DEG_TO_RAD,
       (f.x + u + offset) / 2 ** f.z * 360 - 180]);
   }
-  let maximumDifference = 0;
+  let maximumDifference = 0, productionDifference = 0;
   for (const [lat, lon] of coordinates) {
     const original = query.sample(lat, lon), addressed = direct(lat, lon);
     assert.ok(original && addressed, `${name}: missed sample`);
     maximumDifference = Math.max(maximumDifference, Math.abs(original.heightMeters - addressed.heightMeters));
+    const indexed = production.sample(lat, lon);
+    assert.ok(indexed, `${name}: production miss`);
+    productionDifference = Math.max(productionDifference, Math.abs(original.heightMeters - indexed.heightMeters));
   }
   assert.ok(maximumDifference < 0.002, `Height mismatch: ${maximumDifference}`);
+  assert.ok(productionDifference < 0.01, `Production height mismatch: ${productionDifference}`);
   const batched = fn => () => {
     let sum = 0;
     for (const [lat, lon] of coordinates) sum += fn(lat, lon).heightMeters;
@@ -122,12 +131,22 @@ for (const name of ["lax", "la_hills", "rainier"]) {
   };
   const original = measure(batched((lat, lon) => query.sample(lat, lon)), options);
   const addressed = measure(batched(direct), options);
+  const indexed = measure(batched((lat, lon) => production.sample(lat, lon)), options);
+  const latencies = [];
+  for (let i = 0; i < 1024; i++) {
+    const [lat, lon] = coordinates[i % coordinates.length];
+    const start = performance.now(); production.sample(lat, lon); latencies.push(performance.now() - start);
+  }
+  latencies.sort((a, b) => a - b);
   const queryResult = { fixture: name, tiles: patches.length, segments: central.mesh.metadata.segments,
     triangles: patches.reduce((sum, p) => sum + p.mesh.getTotalIndices() / 3, 0),
     original_us_per_query: original.median_ms * 1000 / coordinates.length,
     addressed_us_per_query: addressed.median_ms * 1000 / coordinates.length,
     maximum_height_difference_m: maximumDifference, checked_queries: coordinates.length,
-    original, addressed };
+    production_us_per_query: indexed.median_ms * 1000 / coordinates.length,
+    production_p95_us: latencies[Math.floor(latencies.length * 0.95)] * 1000,
+    production_maximum_height_difference_m: productionDifference, production_counters: { ...counters },
+    production: indexed, original, addressed };
   console.log(`Query ${name}: ${JSON.stringify(queryResult)}`);
 
   const states = patches.map(patch => {
@@ -160,6 +179,7 @@ for (const name of ["lax", "la_hills", "rainier"]) {
 }
 const sourceHashes = Object.fromEntries([
   "src/engine/babylon/createRasterTilesRuntime.ts", "src/terrain/meshRefinement.ts", "src/terrain/surfaceQuery.ts",
+  "src/terrain/rasterSurfaceSampler.ts",
 ].map(path => [path, crypto.createHash("sha256").update(fs.readFileSync(path)).digest("hex")]));
 const output = process.argv[2] ?? `${root}results-current.json`;
 fs.writeFileSync(output, JSON.stringify({ date: new Date().toISOString(), environment: { node: process.version, cpu: os.cpus()[0]?.model },
