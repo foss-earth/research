@@ -106,7 +106,7 @@ export function createCpuBvhQuery(bvh) {
 }
 
 export const bvhShader = /* wgsl */`
-struct Node { low: vec4f, high: vec4f, meta: vec4u }
+struct Node { low: vec4f, high: vec4f, links: vec4u }
 struct Triangle { a: vec4f, b: vec4f, c: vec4f }
 struct Ray { originLength: vec4f, direction: vec4f }
 @group(0) @binding(0) var<storage, read> nodes: array<Node>;
@@ -138,10 +138,10 @@ fn main(@builtin(global_invocation_id) id: vec3u) {
       }
     }
     if (near > far) { continue; }
-    if (node.meta.w == 0u) {
-      stack[size] = node.meta.x; stack[size + 1u] = node.meta.y; size += 2u; continue;
+    if (node.links.w == 0u) {
+      stack[size] = node.links.x; stack[size + 1u] = node.links.y; size += 2u; continue;
     }
-    for (var i = node.meta.z; i < node.meta.z + node.meta.w; i += 1u) {
+    for (var i = node.links.z; i < node.links.z + node.links.w; i += 1u) {
       let tri = triangles[i];
       let e1 = tri.b.xyz - tri.a.xyz; let e2 = tri.c.xyz - tri.a.xyz;
       let p = cross(direction, e2); let det = dot(e1, p);

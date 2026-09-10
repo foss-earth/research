@@ -1,0 +1,1188 @@
+{
+  "generatedAt": "2026-09-10T15:08:10.640Z",
+  "source": {
+    "commit": "5a751f4c37a5c2b3d6bb2e58b1d15a783924c1c0",
+    "workingTreeMayBeDirty": true,
+    "sha256": {
+      "benchmarks/collision/bvh-prototype.mjs": "5ec944afbecb9e333d60360085ea6589b4fc98654a772644bf7b3b63177e270f",
+      "benchmarks/collision/gpu-comparison.mjs": "e89f506da59a5de204afcca2edc02bc3ecd9417eb7c55c9eadf03b60c2e64880",
+      "benchmarks/collision/run-gpu-headless.mjs": "d64ecd087b1286c9210b6b12acf61740ce0cd8191824c9cef02fa04f5e02fb20",
+      "src/terrain/surfaceQuery.ts": "c69da748fbf277054de9142fd19e571975ac360f7b4e123531d98d497fdbedf7"
+    }
+  },
+  "buildMachine": {
+    "cpu": "Apple M5",
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.6.0"
+  },
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "secureContext": true,
+    "crossOriginIsolated": false,
+    "hardwareConcurrency": 10,
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "runner": {
+      "mode": "isolated headless Chromium via Playwright; offline file URL; no visible browser or user profile",
+      "browserVersion": "153.0.8010.37",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "args": [
+        "--enable-unsafe-webgpu",
+        "--enable-gpu",
+        "--disable-software-rasterizer",
+        "--use-angle=metal"
+      ],
+      "hardwareGpuVerified": true,
+      "gpuDiagnostics": {
+        "devices": [
+          {
+            "vendorId": 4203,
+            "deviceId": 0,
+            "vendorString": "Google Inc. (Apple)",
+            "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 26.6.2 (Build 25G83))",
+            "driverVendor": "Apple",
+            "driverVersion": "26.6.2"
+          }
+        ],
+        "auxAttributes": {
+          "amdSwitchable": false,
+          "canSupportThreadedTextureMailbox": false,
+          "directRenderingVersion": "",
+          "displayType": "ANGLE_METAL",
+          "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_IMG_texture_compression_pvrtc GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_NV_fence GL_NV_framebuffer_blit GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_QCOM_render_shared_exponent ",
+          "glImplementationParts": "(gl=egl-angle,angle=metal)",
+          "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 26.6.2 (Build 25G83))",
+          "glResetNotificationStrategy": 33362,
+          "glVendor": "Google Inc. (Apple)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28650 git hash: fca5efdfeff5)",
+          "glWsExtensions": "",
+          "glWsVendor": "",
+          "glWsVersion": "",
+          "inProcessGpu": false,
+          "initializationTime": 0.034016,
+          "isAsan": false,
+          "isClangCoverage": false,
+          "jpegDecodeAcceleratorSupported": false,
+          "maxMsaaSamples": "8",
+          "optimus": false,
+          "passthroughCmdDecoder": true,
+          "pixelShaderVersion": "3.00",
+          "processCrashCount": 0,
+          "sandboxed": false,
+          "skiaBackendType": "GraphiteDawnMetal",
+          "subpixelFontRendering": true,
+          "targetCpuBits": 64,
+          "vertexShaderVersion": "3.00",
+          "visibilityCallbackCallCount": 0
+        },
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "enabled_on",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "driverBugWorkarounds": [
+          "disable_2d_canvas_auto_flush",
+          "enable_webgl_timer_query_extensions",
+          "disabled_extension_GL_KHR_blend_equation_advanced",
+          "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+        ],
+        "videoDecoding": [],
+        "videoEncoding": []
+      }
+    }
+  },
+  "method": {
+    "rounds": 15,
+    "warmupBatches": 12,
+    "rayCounts": [
+      1,
+      5,
+      128,
+      1024
+    ],
+    "alternatingOrder": true,
+    "geometry": "32,768 triangles, undulating 128 x 128 m grid, all algorithms use identical float32 positions and rays in local metres",
+    "workload": "Each timed batch is a current-step query; sequential batches await full completion; GPU uploads new rays, dispatches, copies output, awaits mapAsync, copies results into CPU-owned memory, then unmaps",
+    "timing": "End-to-end wall latency per batch. CPU repetition count is calibrated per backend and case by doubling until >=4 ms total, capped at 1,048,576 repeats (calibration performed twice to warm JIT); same count used throughout a case and reported below. CPU totals divided by repeats; GPU always timed individually including readback. P95 across 15 samples (maximum order statistic). Browser file URL is not cross-origin isolated; GPU samples are timer-quantized. No GPU timestamp or CPU energy claim.",
+    "algorithms": "Production Babylon finite-ray picking; custom CPU and WebGPU Moller-Trumbore triangle queries with either one whole-mesh AABB followed by a linear scan (brute force) or a median-split BVH (8 triangles per leaf). CPU and GPU prototypes share identical packed geometry, ray data, tolerances and traversal order.",
+    "validation": "All tested rays match production Babylon hit/miss and distance within 3 mm; normals agree up to orientation (absolute dot >= 0.999). GPU matches CPU BVH with the same checks. Not an exhaustive robustness proof."
+  },
+  "limitations": "Synthetic benchmark in an idle browser, no renderer or streaming workload. Prototype implementations are experimental query kernels, not integrated collision backends; production query includes transforms/geodetic metadata omitted by the prototypes. CPU builds the BVH once; GPU copies it, with build/upload/compile measured separately. Float32 local coordinates required. Brute GPU uses one invocation per ray, not a parallel triangle reduction. Does not move JSBSim's CPU WASM contact solver to GPU. No game FPS, battery, watts, or cross-device claims. Repeated CPU batches are hot-cache throughput divided by repetitions; compare sub-timer-resolution values cautiously.",
+  "preparation": {
+    "pipelineCompileMs": 2.1999999284744263,
+    "cpuBvhBuildMs": 60.699999928474426,
+    "nodes": 8191,
+    "depth": 13,
+    "uploadBytes": 1966032,
+    "cpuBrutePackingMs": 26.90000009536743
+  },
+  "results": [
+    {
+      "scenario": "dense-local-hit",
+      "rays": 1,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 2,
+      "gpuBruteUploadAndAllocationMs": 0.6000000238418579,
+      "repeatsPerSample": {
+        "productionCpu": 16,
+        "cpuBrute": 64,
+        "cpuBvh": 32768,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 27,
+      "checksum": 9034610.115800858,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 0.4437500014901161,
+          "p95Ms": 0.45625000447034836,
+          "minMs": 0.4375,
+          "samplesMs": [
+            0.44999999552965164,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.4375,
+            0.45000000298023224,
+            0.4437499940395355,
+            0.45000000298023224,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.4437500014901161,
+            0.45624999701976776,
+            0.45625000447034836
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.09531250037252903,
+          "p95Ms": 0.09999999962747097,
+          "minMs": 0.09375,
+          "samplesMs": [
+            0.09531250037252903,
+            0.09375,
+            0.09531249850988388,
+            0.09531250037252903,
+            0.09531250037252903,
+            0.09999999962747097,
+            0.09687500074505806,
+            0.09531250037252903,
+            0.09687500074505806,
+            0.09375,
+            0.09687499888241291,
+            0.09531250037252903,
+            0.09531250037252903,
+            0.09375,
+            0.09687499888241291
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.0001678466796875,
+          "p95Ms": 0.00018615722729009576,
+          "minMs": 0.00016479492114740424,
+          "samplesMs": [
+            0.00016479492114740424,
+            0.0001678466796875,
+            0.00017089843822759576,
+            0.0001678466796875,
+            0.00017089843822759576,
+            0.0001678466796875,
+            0.00017395019676769152,
+            0.00018615722729009576,
+            0.00017089843458961695,
+            0.00017395019676769152,
+            0.0001678466796875,
+            0.0001678466796875,
+            0.00016479492114740424,
+            0.0001678466796875,
+            0.0001678466796875
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 8.099999904632568,
+          "p95Ms": 15.800000071525574,
+          "minMs": 6.100000023841858,
+          "samplesMs": [
+            8,
+            10,
+            7.800000071525574,
+            15.299999952316284,
+            8,
+            8.200000047683716,
+            8.099999904632568,
+            9.5,
+            8.100000023841858,
+            6.100000023841858,
+            15.800000071525574,
+            6.399999976158142,
+            7.5,
+            6.5,
+            8.600000023841858
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.30000007152557373,
+          "p95Ms": 0.7000000476837158,
+          "minMs": 0.09999990463256836,
+          "samplesMs": [
+            0.30000007152557373,
+            0.2999999523162842,
+            0.5999999046325684,
+            0.3999999761581421,
+            0.2999999523162842,
+            0.09999990463256836,
+            0.40000009536743164,
+            0.3999999761581421,
+            0.5,
+            0.2999999523162842,
+            0.19999992847442627,
+            0.2999999523162842,
+            0.5,
+            0.20000004768371582,
+            0.7000000476837158
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 1787.3458806818182,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "dense-local-hit",
+      "rays": 5,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 4,
+      "gpuBruteUploadAndAllocationMs": 0.8000000715255737,
+      "repeatsPerSample": {
+        "productionCpu": 2,
+        "cpuBrute": 16,
+        "cpuBvh": 8192,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 135,
+      "checksum": 2258515.015871048,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 2.25,
+          "p95Ms": 2.649999976158142,
+          "minMs": 2.199999988079071,
+          "samplesMs": [
+            2.25,
+            2.200000047683716,
+            2.199999988079071,
+            2.399999976158142,
+            2.649999976158142,
+            2.399999976158142,
+            2.199999988079071,
+            2.300000011920929,
+            2.25,
+            2.25,
+            2.199999988079071,
+            2.25,
+            2.199999988079071,
+            2.199999988079071,
+            2.25
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.5,
+          "p95Ms": 0.5437500029802322,
+          "minMs": 0.48125000298023224,
+          "samplesMs": [
+            0.4937499985098839,
+            0.4937499985098839,
+            0.5,
+            0.5437500029802322,
+            0.5249999985098839,
+            0.53125,
+            0.48125000298023224,
+            0.48125000298023224,
+            0.5,
+            0.5,
+            0.5249999985098839,
+            0.5062500014901161,
+            0.4937499985098839,
+            0.5125000029802322,
+            0.48749999701976776
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.000805664065410383,
+          "p95Ms": 0.0009399414120707661,
+          "minMs": 0.0007690429774811491,
+          "samplesMs": [
+            0.0008300781337311491,
+            0.000805664065410383,
+            0.000866699221660383,
+            0.000903320309589617,
+            0.000866699221660383,
+            0.0009399414120707661,
+            0.000781249997089617,
+            0.0008300781191792339,
+            0.0007812500116415322,
+            0.0007812500116415322,
+            0.0007690429774811491,
+            0.000805664065410383,
+            0.00079345703125,
+            0.00079345703125,
+            0.000805664065410383
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 9,
+          "p95Ms": 15.299999952316284,
+          "minMs": 7.899999976158142,
+          "samplesMs": [
+            9,
+            14.299999952316284,
+            15.299999952316284,
+            14.799999952316284,
+            14.399999976158142,
+            10.899999976158142,
+            8.600000023841858,
+            7.899999976158142,
+            8.199999928474426,
+            8,
+            13.600000023841858,
+            8.100000023841858,
+            9.200000047683716,
+            8.100000023841858,
+            8.399999976158142
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.3999999761581421,
+          "p95Ms": 2.100000023841858,
+          "minMs": 0.19999992847442627,
+          "samplesMs": [
+            0.5,
+            0.6000000238418579,
+            0.3999999761581421,
+            2.100000023841858,
+            0.3999999761581421,
+            0.2999999523162842,
+            0.5,
+            0.30000007152557373,
+            0.6000000238418579,
+            0.6999999284744263,
+            0.5,
+            0.3999999761581421,
+            0.3999999761581421,
+            0.19999992847442627,
+            0.30000007152557373
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 496.48481709854235,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "dense-local-hit",
+      "rays": 128,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 1.899999976158142,
+      "gpuBruteUploadAndAllocationMs": 1.3000000715255737,
+      "repeatsPerSample": {
+        "productionCpu": 1,
+        "cpuBrute": 1,
+        "cpuBvh": 256,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 3456,
+      "checksum": 71506.80763339996,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 56.199999928474426,
+          "p95Ms": 58,
+          "minMs": 55.89999997615814,
+          "samplesMs": [
+            56.199999928474426,
+            56.299999952316284,
+            56.10000002384186,
+            56.10000002384186,
+            56.199999928474426,
+            56.199999928474426,
+            56.200000047683716,
+            56.300000071525574,
+            56.200000047683716,
+            58,
+            57.40000009536743,
+            56.199999928474426,
+            56.199999928474426,
+            55.89999997615814,
+            55.89999997615814
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 12.299999952316284,
+          "p95Ms": 12.5,
+          "minMs": 12.199999928474426,
+          "samplesMs": [
+            12.300000071525574,
+            12.299999952316284,
+            12.299999952316284,
+            12.200000047683716,
+            12.300000071525574,
+            12.200000047683716,
+            12.299999952316284,
+            12.199999928474426,
+            12.5,
+            12.5,
+            12.399999976158142,
+            12.200000047683716,
+            12.300000071525574,
+            12.299999952316284,
+            12.300000071525574
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.021484375,
+          "p95Ms": 0.022656249813735485,
+          "minMs": 0.020703124813735485,
+          "samplesMs": [
+            0.021093749906867743,
+            0.02109375037252903,
+            0.021875000093132257,
+            0.022265624720603228,
+            0.022265624720603228,
+            0.021875000093132257,
+            0.021093749906867743,
+            0.021484375,
+            0.022656249813735485,
+            0.021484375,
+            0.021484375,
+            0.021093749906867743,
+            0.020703124813735485,
+            0.021484375,
+            0.022656249813735485
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 11.400000095367432,
+          "p95Ms": 23.399999976158142,
+          "minMs": 6.299999952316284,
+          "samplesMs": [
+            8.299999952316284,
+            6.299999952316284,
+            10.5,
+            11.400000095367432,
+            23.399999976158142,
+            11.899999976158142,
+            22.700000047683716,
+            6.700000047683716,
+            21.200000047683716,
+            9.399999976158142,
+            17,
+            11.200000047683716,
+            19.799999952316284,
+            7.700000047683716,
+            20.100000023841858
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.3999999761581421,
+          "p95Ms": 2.5,
+          "minMs": 0.20000004768371582,
+          "samplesMs": [
+            0.3999999761581421,
+            0.2999999523162842,
+            0.5,
+            0.5,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.3999999761581421,
+            0.2999999523162842,
+            0.3999999761581421,
+            0.2999999523162842,
+            0.3999999761581421,
+            2.5,
+            0.5,
+            0.20000004768371582,
+            0.6000000238418579
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 18.618180708451703,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "dense-local-hit",
+      "rays": 1024,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 3.9000000953674316,
+      "gpuBruteUploadAndAllocationMs": 2.1999999284744263,
+      "repeatsPerSample": {
+        "productionCpu": 1,
+        "cpuBrute": 1,
+        "cpuBvh": 32,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 27648,
+      "checksum": 9900.94261264801,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 465.8000000715256,
+          "p95Ms": 467.2999999523163,
+          "minMs": 464.90000009536743,
+          "samplesMs": [
+            465.89999997615814,
+            465.6999999284744,
+            465.40000009536743,
+            467.2999999523163,
+            465.10000002384186,
+            465.90000009536743,
+            465.8000000715256,
+            466.10000002384186,
+            465.60000002384186,
+            465.7000000476837,
+            466,
+            466.39999997615814,
+            466.39999997615814,
+            465.3000000715256,
+            464.90000009536743
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 98.29999995231628,
+          "p95Ms": 98.79999995231628,
+          "minMs": 97.89999997615814,
+          "samplesMs": [
+            98,
+            98.10000002384186,
+            98.29999995231628,
+            98.60000002384186,
+            98.29999995231628,
+            98.29999995231628,
+            98.79999995231628,
+            98.39999997615814,
+            98.09999990463257,
+            98.29999995231628,
+            98.30000007152557,
+            98.20000004768372,
+            98.10000002384186,
+            97.89999997615814,
+            98.19999992847443
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.21249999850988388,
+          "p95Ms": 0.22500000149011612,
+          "minMs": 0.20625000074505806,
+          "samplesMs": [
+            0.21249999850988388,
+            0.20625000074505806,
+            0.21249999850988388,
+            0.21249999850988388,
+            0.22500000149011612,
+            0.21249999850988388,
+            0.21249999850988388,
+            0.21249999850988388,
+            0.21250000223517418,
+            0.20937500149011612,
+            0.21249999850988388,
+            0.20937499776482582,
+            0.21249999850988388,
+            0.21249999850988388,
+            0.21562499925494194
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 17.799999952316284,
+          "p95Ms": 18.40000009536743,
+          "minMs": 5.800000071525574,
+          "samplesMs": [
+            18.40000009536743,
+            6.799999952316284,
+            18.100000023841858,
+            5.899999976158142,
+            18.399999976158142,
+            6,
+            18,
+            5.900000095367432,
+            17.899999976158142,
+            6,
+            17.799999952316284,
+            5.900000095367432,
+            18.100000023841858,
+            5.800000071525574,
+            18.100000023841858
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.5,
+          "p95Ms": 0.6000000238418579,
+          "minMs": 0.2999999523162842,
+          "samplesMs": [
+            0.2999999523162842,
+            0.5,
+            0.5,
+            0.6000000238418579,
+            0.30000007152557373,
+            0.5,
+            0.40000009536743164,
+            0.5,
+            0.3999999761581421,
+            0.5,
+            0.5,
+            0.2999999523162842,
+            0.2999999523162842,
+            0.6000000238418579,
+            0.3999999761581421
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 2.352941192970144,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "distant-miss",
+      "rays": 1,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 2.100000023841858,
+      "gpuBruteUploadAndAllocationMs": 2,
+      "repeatsPerSample": {
+        "productionCpu": 32768,
+        "cpuBrute": 524288,
+        "cpuBvh": 262144,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 27,
+      "checksum": -22118454,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 0.0001983642578125,
+          "p95Ms": 0.00020446777125471272,
+          "minMs": 0.00019226074073230848,
+          "samplesMs": [
+            0.0001983642578125,
+            0.00020141601635259576,
+            0.00019531249927240424,
+            0.00019226074437028728,
+            0.00019531249927240424,
+            0.0001983642578125,
+            0.00020446777125471272,
+            0.00020141601635259576,
+            0.0001983642578125,
+            0.00020141601635259576,
+            0.00019226074073230848,
+            0.00020141601635259576,
+            0.00019226074437028728,
+            0.0001983642578125,
+            0.00019531249927240424
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.00001659393319641822,
+          "p95Ms": 0.000016975402786556515,
+          "minMs": 0.00001640319806028856,
+          "samplesMs": [
+            0.00001678466787780053,
+            0.000016403198287662235,
+            0.00001678466787780053,
+            0.000016593932969044545,
+            0.000016403198287662235,
+            0.000016975402786556515,
+            0.00001659393319641822,
+            0.00001659393319641822,
+            0.00001659393319641822,
+            0.000016593932969044545,
+            0.000016784668105174205,
+            0.00001640319806028856,
+            0.000016593932969044545,
+            0.00001659393319641822,
+            0.00001659393319641822
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.00001678466787780053,
+          "p95Ms": 0.0000171661376953125,
+          "minMs": 0.00001640319806028856,
+          "samplesMs": [
+            0.00001640319851503591,
+            0.00001678466787780053,
+            0.0000171661376953125,
+            0.00001678466787780053,
+            0.00001678466787780053,
+            0.00001640319806028856,
+            0.00001678466787780053,
+            0.00001678466787780053,
+            0.0000171661376953125,
+            0.0000171661376953125,
+            0.00001678466787780053,
+            0.0000171661376953125,
+            0.00001678466787780053,
+            0.00001678466787780053,
+            0.00001678466787780053
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 0.3999999761581421,
+          "p95Ms": 0.7000000476837158,
+          "minMs": 0.10000002384185791,
+          "samplesMs": [
+            0.5,
+            0.3999999761581421,
+            0.3999999761581421,
+            0.20000004768371582,
+            0.3999999761581421,
+            0.20000004768371582,
+            0.6000000238418579,
+            0.20000004768371582,
+            0.3999999761581421,
+            0.10000002384185791,
+            0.3999999761581421,
+            0.20000004768371582,
+            0.40000009536743164,
+            0.7000000476837158,
+            0.5
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.3999999761581421,
+          "p95Ms": 0.5,
+          "minMs": 0.19999992847442627,
+          "samplesMs": [
+            0.3999999761581421,
+            0.30000007152557373,
+            0.5,
+            0.3999999761581421,
+            0.5,
+            0.2999999523162842,
+            0.2999999523162842,
+            0.19999992847442627,
+            0.20000004768371582,
+            0.5,
+            0.2999999523162842,
+            0.20000004768371582,
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 23831.271435950406,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "distant-miss",
+      "rays": 5,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 3,
+      "gpuBruteUploadAndAllocationMs": 1.100000023841858,
+      "repeatsPerSample": {
+        "productionCpu": 4096,
+        "cpuBrute": 65536,
+        "cpuBvh": 65536,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 135,
+      "checksum": -3649590,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 0.0009765625,
+          "p95Ms": 0.0010253906075377017,
+          "minMs": 0.0009521484316792339,
+          "samplesMs": [
+            0.0009765625,
+            0.0009765625,
+            0.0009765625,
+            0.0010009765392169356,
+            0.0009765625,
+            0.0009521484316792339,
+            0.0010253906075377017,
+            0.001000976568320766,
+            0.0010009765392169356,
+            0.0009521484316792339,
+            0.001000976568320766,
+            0.0009765625,
+            0.0009765625,
+            0.001000976568320766,
+            0.0009765625
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.00006561279406014364,
+          "p95Ms": 0.00006713867151120212,
+          "minMs": 0.00006408691479009576,
+          "samplesMs": [
+            0.00006561279224115424,
+            0.00006561279224115424,
+            0.00006561279224115424,
+            0.00006561279406014364,
+            0.00006561279406014364,
+            0.00006561279224115424,
+            0.00006561279406014364,
+            0.00006561279406014364,
+            0.00006561279406014364,
+            0.00006713867151120212,
+            0.00006408691479009576,
+            0.00006561279406014364,
+            0.00006713867151120212,
+            0.00006561279406014364,
+            0.00006561279406014364
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.00006561279406014364,
+          "p95Ms": 0.00006713867333019152,
+          "minMs": 0.00006561279224115424,
+          "samplesMs": [
+            0.00006561279406014364,
+            0.00006713867151120212,
+            0.00006713867333019152,
+            0.00006561279224115424,
+            0.00006561279224115424,
+            0.00006561279406014364,
+            0.00006561279224115424,
+            0.00006713867151120212,
+            0.00006713867151120212,
+            0.00006561279224115424,
+            0.00006713867151120212,
+            0.00006713867151120212,
+            0.00006561279224115424,
+            0.00006561279224115424,
+            0.00006713867151120212
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 0.6000000238418579,
+          "p95Ms": 0.7999999523162842,
+          "minMs": 0.3999999761581421,
+          "samplesMs": [
+            0.5,
+            0.6000000238418579,
+            0.3999999761581421,
+            0.7000000476837158,
+            0.5,
+            0.3999999761581421,
+            0.3999999761581421,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.7000000476837158,
+            0.5,
+            0.7999999523162842,
+            0.3999999761581421,
+            0.7000000476837158,
+            0.6000000238418579
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.6000000238418579,
+          "p95Ms": 0.7999999523162842,
+          "minMs": 0.2999999523162842,
+          "samplesMs": [
+            0.7999999523162842,
+            0.5,
+            0.6999999284744263,
+            0.5,
+            0.6000000238418579,
+            0.6999999284744263,
+            0.40000009536743164,
+            0.2999999523162842,
+            0.6000000238418579,
+            0.3999999761581421,
+            0.6999999284744263,
+            0.40000009536743164,
+            0.7000000476837158,
+            0.5999999046325684,
+            0.6999999284744263
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 9144.558350797724,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "distant-miss",
+      "rays": 128,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 2.600000023841858,
+      "gpuBruteUploadAndAllocationMs": 0.6999999284744263,
+      "repeatsPerSample": {
+        "productionCpu": 256,
+        "cpuBrute": 4096,
+        "cpuBvh": 4096,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 3456,
+      "checksum": -228150,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 0.024999999906867743,
+          "p95Ms": 0.025390625,
+          "minMs": 0.024609374813735485,
+          "samplesMs": [
+            0.024999999906867743,
+            0.024609375279396772,
+            0.024999999906867743,
+            0.025390625,
+            0.024999999906867743,
+            0.025390625,
+            0.024609375279396772,
+            0.025390625,
+            0.02500000037252903,
+            0.024999999906867743,
+            0.024999999906867743,
+            0.024609374813735485,
+            0.025390625,
+            0.025390625,
+            0.024609375279396772
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.0015869140625,
+          "p95Ms": 0.0016357421991415322,
+          "minMs": 0.0015869140625,
+          "samplesMs": [
+            0.001611328130820766,
+            0.0016113281017169356,
+            0.001611328130820766,
+            0.0015869140625,
+            0.001611328130820766,
+            0.0015869140625,
+            0.0016113281017169356,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.0016357421991415322,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.0016357421700377017
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.0015869140625,
+          "p95Ms": 0.001611328130820766,
+          "minMs": 0.0015869140625,
+          "samplesMs": [
+            0.0015869140625,
+            0.001611328130820766,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.001611328130820766,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.0015869140625,
+            0.001611328130820766,
+            0.001611328130820766,
+            0.0015869140625,
+            0.0015869140625
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 0.5999999046325684,
+          "p95Ms": 0.8000000715255737,
+          "minMs": 0.3999999761581421,
+          "samplesMs": [
+            0.3999999761581421,
+            0.7000000476837158,
+            0.5999999046325684,
+            0.5,
+            0.6000000238418579,
+            0.7000000476837158,
+            0.5,
+            0.5,
+            0.5,
+            0.8000000715255737,
+            0.3999999761581421,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.7000000476837158,
+            0.5
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.6000000238418579,
+          "p95Ms": 0.8000000715255737,
+          "minMs": 0.19999992847442627,
+          "samplesMs": [
+            0.6000000238418579,
+            0.6000000238418579,
+            0.5,
+            0.8000000715255737,
+            0.6000000238418579,
+            0.2999999523162842,
+            0.5,
+            0.7000000476837158,
+            0.5999999046325684,
+            0.19999992847442627,
+            0.6000000238418579,
+            0.5999999046325684,
+            0.2999999523162842,
+            0.6000000238418579,
+            0.7000000476837158
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 378.09232271634613,
+      "gpuPreparationAmortizedAfterBatches": null
+    },
+    {
+      "scenario": "distant-miss",
+      "rays": 1024,
+      "triangles": 32768,
+      "gpuUploadAndAllocationMs": 2.799999952316284,
+      "gpuBruteUploadAndAllocationMs": 2.799999952316284,
+      "repeatsPerSample": {
+        "productionCpu": 16,
+        "cpuBrute": 512,
+        "cpuBvh": 512,
+        "gpuBrute": 1,
+        "gpuBvh": 1
+      },
+      "validatedRays": 27648,
+      "checksum": -28134,
+      "timing": {
+        "productionCpu": {
+          "medianMs": 0.20000000298023224,
+          "p95Ms": 0.20625000447034836,
+          "minMs": 0.19374999403953552,
+          "samplesMs": [
+            0.19999999552965164,
+            0.20000000298023224,
+            0.19375000149011612,
+            0.20624999701976776,
+            0.20000000298023224,
+            0.19375000149011612,
+            0.20000000298023224,
+            0.20625000447034836,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.19374999403953552,
+            0.20000000298023224,
+            0.19999999552965164,
+            0.19999999552965164,
+            0.19999999552965164
+          ]
+        },
+        "cpuBrute": {
+          "medianMs": 0.0126953125,
+          "p95Ms": 0.012890624813735485,
+          "minMs": 0.012499999953433871,
+          "samplesMs": [
+            0.0126953125,
+            0.012890624813735485,
+            0.0126953125,
+            0.0126953125,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.0126953125,
+            0.012500000186264515,
+            0.0126953125,
+            0.012500000186264515,
+            0.012500000186264515,
+            0.012500000186264515
+          ]
+        },
+        "cpuBvh": {
+          "medianMs": 0.0126953125,
+          "p95Ms": 0.012890624813735485,
+          "minMs": 0.012499999953433871,
+          "samplesMs": [
+            0.0126953125,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.0126953125,
+            0.012499999953433871,
+            0.0126953125,
+            0.012890624813735485,
+            0.0126953125
+          ]
+        },
+        "gpuBrute": {
+          "medianMs": 0.5,
+          "p95Ms": 0.8000000715255737,
+          "minMs": 0.40000009536743164,
+          "samplesMs": [
+            0.5,
+            0.8000000715255737,
+            0.5,
+            0.40000009536743164,
+            0.5,
+            0.7000000476837158,
+            0.6000000238418579,
+            0.5,
+            0.5,
+            0.6999999284744263,
+            0.5,
+            0.6000000238418579,
+            0.5,
+            0.7000000476837158,
+            0.5999999046325684
+          ]
+        },
+        "gpuBvh": {
+          "medianMs": 0.6000000238418579,
+          "p95Ms": 0.6999999284744263,
+          "minMs": 0.30000007152557373,
+          "samplesMs": [
+            0.30000007152557373,
+            0.5,
+            0.6999999284744263,
+            0.6999999284744263,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.6000000238418579,
+            0.30000007152557373,
+            0.5999999046325684,
+            0.6999999284744263,
+            0.5,
+            0.5,
+            0.30000007152557373
+          ]
+        }
+      },
+      "fasterPrototype": "cpuBvh",
+      "gpuToCpuLatencyRatio": 47.26154033954327,
+      "gpuPreparationAmortizedAfterBatches": null
+    }
+  ],
+  "completedAt": "2026-09-10T15:08:52.976Z",
+  "backgroundedDuringRun": false
+}

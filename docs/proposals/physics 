@@ -1,0 +1,100 @@
+# Physics compute strategy
+
+Status: proposal, informed by local measurements on 2026-09-10.
+
+Use CPU collision queries as the current default and fallback. Preserve a path to
+validated CPU/GPU selection; a single Apple M5 measurement does not justify a
+permanently CPU-only architecture. Whether the M5 leads a particular single-thread
+ranking is not established by this experiment and is unnecessary to this decision.
+
+## What the benchmark establishes
+
+Five implementations queried identical finite rays against 32,768 triangles in
+an isolated terminal-controlled headless Chromium process. Chromium diagnostics
+confirmed the actual Apple M5 Metal GPU; WebGPU reported a non-fallback adapter.
+All four prototypes matched the production picker across 62,532 rays.
+
+Median milliseconds per entire nearby-hit batch:
+
+| Rays | Production CPU | CPU linear scan | CPU BVH | GPU linear scan | GPU BVH |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 5 | 2.25 | 0.500 | 0.000806 | 9.0 | 0.4 |
+| 1,024 | 465.8 | 98.3 | 0.2125 | 17.8 | 0.5 |
+
+GPU values include upload, dispatch and results returned to CPU memory. Short CPU
+values use calibrated repeated batches and are hot-cache averages. These are
+query timings, not game FPS, CPU utilization or energy measurements. The GPU
+linear scan assigns one invocation per ray; it does not test every possible
+parallel reduction or traversal implementation.
+
+CPU BVH's advantage over GPU BVH was about 497 times for five rays but only
+2.35 times for 1,024 rays. Another device or implementation could move the
+crossover. GPU linear scanning already beat CPU linear scanning at 1,024 rays;
+the algorithm matters as well as the processor.
+
+The current aircraft generates up to five body rays per 120 Hz step. Steps depend
+on preceding collision results, so combining many steps into a large batch would
+change the simulation. CPU access to WebGPU results awaits completion through
+[buffer mapping](https://developer.mozilla.org/en-US/docs/Web/API/GPUBuffer/mapAsync).
+That dependency remains relevant across hardware, but its cost must be measured.
+
+The [complete benchmark table and methodology](../../benchmarks/collision/README.md)
+includes distant misses, preparation costs and reproducible terminal commands.
+[Raw results](../../benchmarks/collision/results-gpu.json) include samples,
+source hashes and hardware evidence. The
+[broader algorithm matrix](../../../flight-sim/docs/collision-compute-comparison.md)
+labels alternatives that have not been measured.
+
+## What does not generalize yet
+
+This is one CPU, GPU, memory system and browser version with no concurrent game
+rendering or tile streaming. Older CPUs, mobile devices, integrated GPUs, discrete
+GPUs, browser drivers, cache pressure and thermal limits can change both paths.
+A faster GPU does not by itself predict lower end-to-end small-batch latency.
+Artificially throttling this M5 would be a sensitivity test, not a substitute for
+real devices. Power and battery efficiency need separate measurements.
+
+The promising general direction is to avoid unnecessary triangle tests. Direct
+raster height lookup is already specialized for terrain. Dense arbitrary meshes
+are candidates for a spatial index/BVH. A CPU-built tree cost 60.7 ms in this
+fixture, so worker construction, streaming updates, memory and disposal matter
+alongside steady query speed. Production BVH integration is future work.
+
+## Proposed implementation sequence
+
+1. Keep the existing finite-ray CPU backend and the corrected passive collision
+   response. Separate contact queries from JSBSim's CPU/WASM dynamics solver.
+2. Integrate a production CPU spatial index for dense static tiles behind a clear
+   query contract. Preserve nearest-hit, finite-segment, transform, normal and
+   visible-tile semantics; measure construction, replacement and disposal costs.
+3. Test a production GPU candidate on representative devices and normal game
+   loads. Geometry must remain resident, results must carry terrain generation
+   and aircraft-state identity, and late/stale results must never drive a newer
+   physics step. Device loss or unavailable support must safely use the CPU.
+4. Expose Auto / CPU / GPU once both production paths are correct. Auto should
+   measure actual batch latency including CPU readback, p95 delay and preparation
+   cost; switch only for a sustained meaningful benefit. Show the active backend,
+   support an explicit user override, and report any necessary fallback.
+
+No gameplay CPU/GPU selector or GPU dynamics solver is implemented by this work.
+The GPU kernels and CPU BVH remain benchmark prototypes. CPU-only operation today
+is the available production path, not a permanent hardware policy.
+
+## Crash response already implemented
+
+Body impacts now select the earliest swept probe, preserve its offset from the
+centre, account for attitude, normalize the contact normal and use dissipative
+restitution by default. Deep ground penetration stops integration before loading
+unbounded springs, using the seven actual C172 contacts and current centre of
+gravity. Clear banked and pitched flight must keep running.
+
+Settings → Ground impacts → Arcade ground launches restores exaggerated launches
+as an opt-in persistent mode. The default hard-impact stop is not a complete
+crash/damage simulation. See the
+[crash investigation and regression evidence](../../../flight-sim/docs/near-ground-performance.md#crash-response-follow-up).
+
+Flight-sim validation passed lint, all 375 tests and a production build. Tests
+include high-speed impacts, ordinary touchdowns, terrain revisions, engine-state
+restoration, banked clearance and the optional arcade behavior. Benchmark runs
+use terminal/headless automation without controlling the user's cursor; this
+preference is recorded in both repositories' AGENTS.md files.
