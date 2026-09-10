@@ -1,0 +1,477 @@
+{
+  "generatedAt": "2026-09-10T21:54:15.404Z",
+  "machine": {
+    "cpu": "Apple M5",
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.0.0"
+  },
+  "sdkVersion": "1.2.4-beta.4",
+  "sourceSha256": {
+    "adapter": "c637cd144a5d0273e35d0bc38f7b26aa82c5278642b07741c0bd78809c2a56f1",
+    "model": "39e9b2ca5fed84e1731a03b3bc2c79a6ba1b8aadf819940ad72af9dd6499f11f",
+    "wasm": "2c79b90ff12c7cd94b36a9af8db07e0bde19ffe4e2716816dc6cea8ad4f8de92"
+  },
+  "methodology": {
+    "physicsHz": 120,
+    "wheels": 3,
+    "measuredSamples": 11,
+    "targetCalibrationMilliseconds": 30,
+    "includes": "Actual production three-wheel adapter, SDK string property lookup, JS/WASM boundary and scalar wheel math; frozen real C172 telemetry; steady wheel-state after warmup; loop and final checksum overhead.",
+    "excludes": "JSBSim simulation advance, loading/initialization, browser overhead, visuals, audio, frame time, power, and dynamic touchdown transients.",
+    "caution": "Node V8 terminal microbenchmark on this machine; not measured Safari/Chrome or other hardware; read-only baseline has separate sum/loop overhead and should not be subtracted as an exact isolated model cost."
+  },
+  "results": [
+    {
+      "scenario": "airborne",
+      "mode": "instant",
+      "snapshot": {
+        "initializationSteps": 0,
+        "simulationTimeSeconds": 0,
+        "wow": [
+          false,
+          false,
+          false
+        ],
+        "wheelSpeedMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "compressionMeters": [
+          0,
+          0,
+          0
+        ],
+        "compressionVelocityMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 5,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[1]/WOW",
+        "gear/unit[2]/WOW"
+      ],
+      "iterationsPerSample": 32000,
+      "samplesMilliseconds": [
+        42.127250000000004,
+        40.892917000000125,
+        41.54549999999995,
+        41.696249999999964,
+        41.761666000000105,
+        41.581750000000284,
+        41.092417000000296,
+        41.03933300000017,
+        40.85845900000004,
+        41.29808300000013,
+        41.251832999999806
+      ],
+      "samplesMicrosecondsPerStep": [
+        1.3164765625,
+        1.277903656250004,
+        1.2982968749999984,
+        1.3030078124999989,
+        1.3050520625000033,
+        1.2994296875000089,
+        1.284138031250009,
+        1.2824791562500055,
+        1.2768268437500012,
+        1.290565093750004,
+        1.2891197812499942
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 1.290565093750004,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 2.581130187500008,
+      "cpuMillisecondsPerSecondAt120Hz": 0.15486781125000046
+    },
+    {
+      "scenario": "airborne",
+      "mode": "inertia",
+      "snapshot": {
+        "initializationSteps": 0,
+        "simulationTimeSeconds": 0,
+        "wow": [
+          false,
+          false,
+          false
+        ],
+        "wheelSpeedMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "compressionMeters": [
+          0,
+          0,
+          0
+        ],
+        "compressionVelocityMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 5,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[1]/WOW",
+        "gear/unit[2]/WOW"
+      ],
+      "iterationsPerSample": 32000,
+      "samplesMilliseconds": [
+        42.84220800000003,
+        41.13083299999994,
+        41.29641700000002,
+        41.92520800000011,
+        41.45295799999985,
+        41.02333399999998,
+        41.154041000000234,
+        41.693333000000166,
+        40.99474999999984,
+        40.78337499999998,
+        40.934999999999945
+      ],
+      "samplesMicrosecondsPerStep": [
+        1.3388190000000009,
+        1.285338531249998,
+        1.2905130312500004,
+        1.3101627500000037,
+        1.2954049374999954,
+        1.281979187499999,
+        1.286063781250007,
+        1.3029166562500052,
+        1.281085937499995,
+        1.2744804687499993,
+        1.279218749999998
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 1.286063781250007,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 2.572127562500014,
+      "cpuMillisecondsPerSecondAt120Hz": 0.15432765375000085
+    },
+    {
+      "scenario": "airborne",
+      "mode": "property-reads-only",
+      "snapshot": {
+        "initializationSteps": 0,
+        "simulationTimeSeconds": 0,
+        "wow": [
+          false,
+          false,
+          false
+        ],
+        "wheelSpeedMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "compressionMeters": [
+          0,
+          0,
+          0
+        ],
+        "compressionVelocityMetersSec": [
+          0,
+          0,
+          0
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 5,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[1]/WOW",
+        "gear/unit[2]/WOW"
+      ],
+      "iterationsPerSample": 32000,
+      "samplesMilliseconds": [
+        40.02075000000002,
+        40.518540999999914,
+        40.24083399999995,
+        39.96291700000006,
+        39.94791699999996,
+        39.61408400000005,
+        39.59637500000008,
+        39.836125000000266,
+        39.480833000000075,
+        39.55670800000007,
+        39.17499999999973
+      ],
+      "samplesMicrosecondsPerStep": [
+        1.2506484375000007,
+        1.266204406249997,
+        1.2575260624999984,
+        1.248841156250002,
+        1.2483724062499986,
+        1.2379401250000015,
+        1.2373867187500025,
+        1.244878906250008,
+        1.2337760312500021,
+        1.2361471250000022,
+        1.2242187499999913
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 1.244878906250008,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 2.489757812500016,
+      "cpuMillisecondsPerSecondAt120Hz": 0.14938546875000097
+    },
+    {
+      "scenario": "all-three-grounded",
+      "mode": "instant",
+      "snapshot": {
+        "initializationSteps": 29,
+        "simulationTimeSeconds": 0.24166666666666664,
+        "wow": [
+          true,
+          true,
+          true
+        ],
+        "wheelSpeedMetersSec": [
+          26.187591356703653,
+          26.17654082805681,
+          26.179106663360756
+        ],
+        "compressionMeters": [
+          0.0494726020643257,
+          0.010207306374127773,
+          0.0064680632773723296
+        ],
+        "compressionVelocityMetersSec": [
+          0.825011341750619,
+          1.1032540136562137,
+          0.7761675932846795
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 15,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[0]/compression-ft",
+        "gear/unit[0]/compression-velocity-fps",
+        "gear/unit[0]/wheel-speed-fps",
+        "fcs/steer-pos-deg[0]",
+        "gear/unit[1]/WOW",
+        "gear/unit[1]/compression-ft",
+        "gear/unit[1]/compression-velocity-fps",
+        "gear/unit[1]/wheel-speed-fps",
+        "gear/unit[2]/WOW",
+        "gear/unit[2]/compression-ft",
+        "gear/unit[2]/compression-velocity-fps",
+        "gear/unit[2]/wheel-speed-fps"
+      ],
+      "iterationsPerSample": 8000,
+      "samplesMilliseconds": [
+        36.857834000000025,
+        37.23179200000004,
+        36.867500000000064,
+        36.42116699999997,
+        36.4782909999999,
+        37.06358299999988,
+        36.16533299999992,
+        36.02387499999986,
+        36.19399999999996,
+        36.62779199999977,
+        36.49866699999984
+      ],
+      "samplesMicrosecondsPerStep": [
+        4.607229250000003,
+        4.653974000000006,
+        4.608437500000008,
+        4.552645874999997,
+        4.5597863749999865,
+        4.632947874999985,
+        4.52066662499999,
+        4.502984374999983,
+        4.524249999999994,
+        4.578473999999971,
+        4.56233337499998
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 4.56233337499998,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 9.12466674999996,
+      "cpuMillisecondsPerSecondAt120Hz": 0.5474800049999976
+    },
+    {
+      "scenario": "all-three-grounded",
+      "mode": "inertia",
+      "snapshot": {
+        "initializationSteps": 29,
+        "simulationTimeSeconds": 0.24166666666666664,
+        "wow": [
+          true,
+          true,
+          true
+        ],
+        "wheelSpeedMetersSec": [
+          26.187591356703653,
+          26.17654082805681,
+          26.179106663360756
+        ],
+        "compressionMeters": [
+          0.0494726020643257,
+          0.010207306374127773,
+          0.0064680632773723296
+        ],
+        "compressionVelocityMetersSec": [
+          0.825011341750619,
+          1.1032540136562137,
+          0.7761675932846795
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 15,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[0]/compression-ft",
+        "gear/unit[0]/compression-velocity-fps",
+        "gear/unit[0]/wheel-speed-fps",
+        "fcs/steer-pos-deg[0]",
+        "gear/unit[1]/WOW",
+        "gear/unit[1]/compression-ft",
+        "gear/unit[1]/compression-velocity-fps",
+        "gear/unit[1]/wheel-speed-fps",
+        "gear/unit[2]/WOW",
+        "gear/unit[2]/compression-ft",
+        "gear/unit[2]/compression-velocity-fps",
+        "gear/unit[2]/wheel-speed-fps"
+      ],
+      "iterationsPerSample": 8000,
+      "samplesMilliseconds": [
+        37.46479199999999,
+        36.87870799999996,
+        37.1462919999999,
+        37.32808399999999,
+        37.18383399999993,
+        36.85008400000015,
+        36.76420800000005,
+        36.29116699999986,
+        36.40516699999989,
+        36.9440840000002,
+        36.567167000000154
+      ],
+      "samplesMicrosecondsPerStep": [
+        4.683098999999999,
+        4.609838499999995,
+        4.643286499999987,
+        4.666010499999999,
+        4.647979249999991,
+        4.606260500000018,
+        4.5955260000000075,
+        4.5363958749999815,
+        4.5506458749999865,
+        4.618010500000026,
+        4.570895875000019
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 4.609838499999995,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 9.21967699999999,
+      "cpuMillisecondsPerSecondAt120Hz": 0.5531806199999995
+    },
+    {
+      "scenario": "all-three-grounded",
+      "mode": "property-reads-only",
+      "snapshot": {
+        "initializationSteps": 29,
+        "simulationTimeSeconds": 0.24166666666666664,
+        "wow": [
+          true,
+          true,
+          true
+        ],
+        "wheelSpeedMetersSec": [
+          26.187591356703653,
+          26.17654082805681,
+          26.179106663360756
+        ],
+        "compressionMeters": [
+          0.0494726020643257,
+          0.010207306374127773,
+          0.0064680632773723296
+        ],
+        "compressionVelocityMetersSec": [
+          0.825011341750619,
+          1.1032540136562137,
+          0.7761675932846795
+        ],
+        "brake": [
+          0,
+          0
+        ]
+      },
+      "sdkPropertyReadsPerStep": 15,
+      "propertyReads": [
+        "fcs/left-brake-cmd-norm",
+        "fcs/right-brake-cmd-norm",
+        "gear/unit[0]/WOW",
+        "gear/unit[0]/compression-ft",
+        "gear/unit[0]/compression-velocity-fps",
+        "gear/unit[0]/wheel-speed-fps",
+        "fcs/steer-pos-deg[0]",
+        "gear/unit[1]/WOW",
+        "gear/unit[1]/compression-ft",
+        "gear/unit[1]/compression-velocity-fps",
+        "gear/unit[1]/wheel-speed-fps",
+        "gear/unit[2]/WOW",
+        "gear/unit[2]/compression-ft",
+        "gear/unit[2]/compression-velocity-fps",
+        "gear/unit[2]/wheel-speed-fps"
+      ],
+      "iterationsPerSample": 8000,
+      "samplesMilliseconds": [
+        36.334540999999945,
+        36.42495799999995,
+        36.265083000000004,
+        36.32579099999998,
+        35.98416700000007,
+        36.21362500000009,
+        36.04495799999995,
+        36.50679199999968,
+        36.26166599999988,
+        36.17029099999991,
+        36.342083
+      ],
+      "samplesMicrosecondsPerStep": [
+        4.541817624999993,
+        4.553119749999993,
+        4.5331353750000005,
+        4.540723874999998,
+        4.49802087500001,
+        4.526703125000012,
+        4.505619749999995,
+        4.563348999999961,
+        4.532708249999986,
+        4.521286374999989,
+        4.542760374999999
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 4.5331353750000005,
+      "averageMicrosecondsPer60FpsFrameAt120Hz": 9.066270750000001,
+      "cpuMillisecondsPerSecondAt120Hz": 0.5439762450000001
+    }
+  ],
+  "checksum": 30497445.45499658
+}

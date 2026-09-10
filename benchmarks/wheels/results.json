@@ -1,0 +1,249 @@
+{
+  "generatedAt": "2026-09-10T21:54:12.910Z",
+  "machine": {
+    "cpu": "Apple M5",
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.0.0"
+  },
+  "sourceSha256": "39e9b2ca5fed84e1731a03b3bc2c79a6ba1b8aadf819940ad72af9dd6499f11f",
+  "methodology": {
+    "physicsHz": 120,
+    "wheels": 3,
+    "stepsPerRun": 480,
+    "warmupRuns": 20,
+    "samples": 9,
+    "runsPerSample": 200,
+    "includes": "Three scalar wheel updates and loop/checksum overhead, with precomputed inputs; reset allocations once per480 steps",
+    "excludes": "JSBSim property reads, rendering, audio processing, full-game FPS and power; no aircraft force feedback",
+    "parameters": [
+      {
+        "name": "NOSE",
+        "radiusMeters": 0.18,
+        "widthMeters": 0.127,
+        "inertiaKgMetersSquared": 0.052,
+        "frictionCoefficient": 0.5,
+        "maxBrakeTorqueNewtonMeters": 0
+      },
+      {
+        "name": "LEFT_MAIN",
+        "radiusMeters": 0.22,
+        "widthMeters": 0.152,
+        "inertiaKgMetersSquared": 0.124,
+        "frictionCoefficient": 0.5,
+        "maxBrakeTorqueNewtonMeters": 450
+      },
+      {
+        "name": "RIGHT_MAIN",
+        "radiusMeters": 0.22,
+        "widthMeters": 0.152,
+        "inertiaKgMetersSquared": 0.124,
+        "frictionCoefficient": 0.5,
+        "maxBrakeTorqueNewtonMeters": 450
+      }
+    ]
+  },
+  "results": [
+    {
+      "scenario": "gentle",
+      "mode": "instant",
+      "medianMicrosecondsPerThreeWheelStep": 0.059328124999999954,
+      "samplesMicroseconds": [
+        0.08380294791666658,
+        0.053170145833333425,
+        0.05503949999999991,
+        0.06058723958333342,
+        0.07002561458333334,
+        0.05340711458333332,
+        0.059328124999999954,
+        0.05473437500000008,
+        0.07568880208333337
+      ],
+      "checksum": 451.68086768617826,
+      "heatJoules": 0,
+      "mainSpinUpSeconds": 0.008333333333333333,
+      "maxPowerWatts": 0
+    },
+    {
+      "scenario": "gentle",
+      "mode": "inertia",
+      "medianMicrosecondsPerThreeWheelStep": 0.07595833333333335,
+      "samplesMicroseconds": [
+        0.09644878125000005,
+        0.08215278124999988,
+        0.08146701041666689,
+        0.07858507291666654,
+        0.0752048645833335,
+        0.07595833333333335,
+        0.07463759375000005,
+        0.07477994791666673,
+        0.07477039583333323
+      ],
+      "checksum": 445.3906800863515,
+      "heatJoules": 3028.007346189164,
+      "mainSpinUpSeconds": 0.15833333333333333,
+      "maxPowerWatts": 21510.1814516129
+    },
+    {
+      "scenario": "firm",
+      "mode": "instant",
+      "medianMicrosecondsPerThreeWheelStep": 0.07486241666666663,
+      "samplesMicroseconds": [
+        0.07653385416666669,
+        0.07574652083333344,
+        0.07508723958333352,
+        0.07486241666666663,
+        0.0732725625,
+        0.0736814270833331,
+        0.07369401041666693,
+        0.07493272916666674,
+        0.07437673958333353
+      ],
+      "checksum": 451.68086768617826,
+      "heatJoules": 0,
+      "mainSpinUpSeconds": 0.008333333333333333,
+      "maxPowerWatts": 0
+    },
+    {
+      "scenario": "firm",
+      "mode": "inertia",
+      "medianMicrosecondsPerThreeWheelStep": 0.09618316666666675,
+      "samplesMicroseconds": [
+        0.09667361458333328,
+        0.09566970833333362,
+        0.09565841666666644,
+        0.09524566666666641,
+        0.09822439583333362,
+        0.09755468750000004,
+        0.09644617708333313,
+        0.09562543749999956,
+        0.09618316666666675
+      ],
+      "checksum": 445.66416678046653,
+      "heatJoules": 3028.0073461891634,
+      "mainSpinUpSeconds": 0.125,
+      "maxPowerWatts": 27332.082586618857
+    },
+    {
+      "scenario": "bounce",
+      "mode": "instant",
+      "medianMicrosecondsPerThreeWheelStep": 0.07842447916666669,
+      "samplesMicroseconds": [
+        0.08536371875000033,
+        0.08424609375000003,
+        0.08558766666666646,
+        0.07525433333333353,
+        0.07549218750000009,
+        0.07761848958333317,
+        0.08597265625000006,
+        0.07842447916666669,
+        0.07810242708333348
+      ],
+      "checksum": 453.2700967133107,
+      "heatJoules": 0,
+      "mainSpinUpSeconds": 0.008333333333333333,
+      "maxPowerWatts": 0
+    },
+    {
+      "scenario": "bounce",
+      "mode": "inertia",
+      "medianMicrosecondsPerThreeWheelStep": 0.09893055208333361,
+      "samplesMicroseconds": [
+        0.10051779166666641,
+        0.09831119791666629,
+        0.09833723958333353,
+        0.0995655416666666,
+        0.0991718749999997,
+        0.09893055208333361,
+        0.10030903125000043,
+        0.09660851041666696,
+        0.09621874999999966
+      ],
+      "checksum": 444.7040287777157,
+      "heatJoules": 3028.5184334744936,
+      "mainSpinUpSeconds": 0.15833333333333333,
+      "maxPowerWatts": 21510.1814516129
+    },
+    {
+      "scenario": "braking",
+      "mode": "instant",
+      "medianMicrosecondsPerThreeWheelStep": 0.0736054687499994,
+      "samplesMicroseconds": [
+        0.07372092708333315,
+        0.0736054687499994,
+        0.0732873229166664,
+        0.07295356249999922,
+        0.07490582291666688,
+        0.07474479166666607,
+        0.07418707291666611,
+        0.07283897916666741,
+        0.07323177083333358
+      ],
+      "checksum": 159.2116761086545,
+      "heatJoules": 0,
+      "mainSpinUpSeconds": 0.008333333333333333,
+      "maxPowerWatts": 0
+    },
+    {
+      "scenario": "braking",
+      "mode": "inertia",
+      "medianMicrosecondsPerThreeWheelStep": 0.08657942708333265,
+      "samplesMicroseconds": [
+        0.09829731250000032,
+        0.08586892708333357,
+        0.08674869791666613,
+        0.08657942708333265,
+        0.08635981250000077,
+        0.08671266666666709,
+        0.08651171874999973,
+        0.08594184374999969,
+        0.08804427083333265
+      ],
+      "checksum": 70.90250835971445,
+      "heatJoules": 119956.34646577977,
+      "mainSpinUpSeconds": 0.15833333333333333,
+      "maxPowerWatts": 70240.42798353908
+    },
+    {
+      "scenario": "reverse",
+      "mode": "instant",
+      "medianMicrosecondsPerThreeWheelStep": 0.07276171874999922,
+      "samplesMicroseconds": [
+        0.07250867708333313,
+        0.07294661458333351,
+        0.07155641666666668,
+        0.0733072916666669,
+        0.07276171874999922,
+        0.07249306250000014,
+        0.07437456249999978,
+        0.0723706562499989,
+        0.07288411458333381
+      ],
+      "checksum": -432.8313117646395,
+      "heatJoules": 0,
+      "mainSpinUpSeconds": 0.008333333333333333,
+      "maxPowerWatts": 0
+    },
+    {
+      "scenario": "reverse",
+      "mode": "inertia",
+      "medianMicrosecondsPerThreeWheelStep": 0.08983767708333328,
+      "samplesMicroseconds": [
+        0.09059765625000084,
+        0.09116883333333328,
+        0.08847439583333384,
+        0.09029036458333314,
+        0.08969444791666585,
+        0.08984375,
+        0.08958377083333365,
+        0.08983767708333328,
+        0.08956336458333305
+      ],
+      "checksum": -426.5411241648127,
+      "heatJoules": 3028.007346189164,
+      "mainSpinUpSeconds": 0.15833333333333333,
+      "maxPowerWatts": 21510.1814516129
+    }
+  ],
+  "checksum": 3754901.070410457
+}

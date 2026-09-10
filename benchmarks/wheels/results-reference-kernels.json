@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-09-10T21:55:27.391Z",
+  "machine": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.0.0",
+    "cpu": "Apple M5"
+  },
+  "methodology": {
+    "physicsHz": 120,
+    "wheels": 3,
+    "stepsPerRun": 720,
+    "warmupRuns": 40,
+    "samples": 11,
+    "targetCalibrationMilliseconds": 30,
+    "includes": "Reference-kernel arithmetic, bounded wheel/body state and local compliance arrays.",
+    "excludes": "JSBSim/WASM, property reads, terrain queries, collision detection, rendering, browser/audio work, and validation against aircraft data.",
+    "interpretation": "A cost envelope for shapes of algorithms, not an implementation performance prediction."
+  },
+  "results": [
+    {
+      "id": "coupled-rigid",
+      "description": "3 generalized rigid wheel/contact impulses with axle moments and wheel inertia",
+      "runsPerSample": 2048,
+      "samplesMicrosecondsPerThreeWheelStep": [
+        0.03219867282443575,
+        0.032809476725260404,
+        0.032393702528211804,
+        0.031924551730685785,
+        0.03200610148111977,
+        0.03204410671657988,
+        0.03198564317491322,
+        0.03327602810329865,
+        0.03203735351562499,
+        0.032501616075303795,
+        0.032582741970486113
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 0.03219867282443575,
+      "equivalentCpuMillisecondsPerSimulatedSecondAt120Hz": 0.0038638407389322903,
+      "checksum": 225268385.0472466
+    },
+    {
+      "id": "combined-slip-brush",
+      "description": "rigid coupling plus longitudinal/lateral relaxation and friction ellipse",
+      "runsPerSample": 256,
+      "samplesMicrosecondsPerThreeWheelStep": [
+        0.1817981825086807,
+        0.18148939344618067,
+        0.18145186631944432,
+        0.18238027886284752,
+        0.18105445963541703,
+        0.18256587456597206,
+        0.18225233289930567,
+        0.18154138997395855,
+        0.18236423068576338,
+        0.1811161729600694,
+        0.18191415473090247
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 0.1817981825086807,
+      "equivalentCpuMillisecondsPerSimulatedSecondAt120Hz": 0.021815781901041685,
+      "checksum": 7894070.122369966
+    },
+    {
+      "id": "compliant-tire-soil-8",
+      "description": "brush kernel plus 8 local compliance cells per wheel",
+      "runsPerSample": 128,
+      "samplesMicrosecondsPerThreeWheelStep": [
+        0.39228289930555654,
+        0.390906673177084,
+        0.39206000434027904,
+        0.39199354383680557,
+        0.3918551974826403,
+        0.3922015082465282,
+        0.3915292317708325,
+        0.39129503038194524,
+        0.3935271158854157,
+        0.3899088541666664,
+        0.3911309136284717
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 0.3918551974826403,
+      "equivalentCpuMillisecondsPerSimulatedSecondAt120Hz": 0.047022623697916835,
+      "checksum": 4592463.737165103
+    },
+    {
+      "id": "compliant-tire-soil-32",
+      "description": "brush kernel plus 32 local compliance cells per wheel",
+      "runsPerSample": 64,
+      "samplesMicrosecondsPerThreeWheelStep": [
+        0.9051188151041679,
+        0.9072799262152801,
+        0.9063169053819455,
+        0.9058883246527778,
+        0.9034351562500011,
+        0.9053991102430547,
+        0.9035328124999964,
+        0.9040021050347206,
+        0.9059913845486051,
+        0.9026864583333349,
+        0.905490451388887
+      ],
+      "medianMicrosecondsPerThreeWheelStep": 0.9053991102430547,
+      "equivalentCpuMillisecondsPerSimulatedSecondAt120Hz": 0.10864789322916657,
+      "checksum": 2325083.448938301
+    }
+  ]
+}
