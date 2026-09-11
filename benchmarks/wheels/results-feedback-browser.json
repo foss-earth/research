@@ -1,0 +1,148 @@
+{
+  "generatedAt": "2026-09-10T22:41:21.170Z",
+  "machine": {
+    "cpu": "Apple M5",
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.0.0"
+  },
+  "browser": {
+    "name": "Chromium (Playwright, headless)",
+    "version": "153.0.8010.37",
+    "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  },
+  "gpu": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "hardware": true,
+    "note": "Hardware GPU reported by WebGL (unmasked renderer)"
+  },
+  "sourceSha256": {
+    "src/flight/audio/createTireAudio.ts": "0010a81fcf0543ba8a1f5c48a51af11440f39642c518c11e4344b2d35dbef263",
+    "src/flight/diagnostics/createWheelSpinDebugOverlay.ts": "dee33324b37ea50f0707c2a8b36906f1b4f9e4328862b2cf7e88932d1e7bb779",
+    "src/flight/physics/wheelSpin.ts": "ac8ebec05f5b69b89ebe582171a9d059acf86c797c43df70444aef706e21d2c0"
+  },
+  "labels": {
+    "measured": "Headless Chromium on this machine: OfflineAudioContext render wall time per rendered second, batched main-thread AudioParam scheduling per 60 Hz frame, and Babylon scene.render() CPU submit time plus a forced gl.finish() (means over 20-frame batches; per-frame p50/p95 too when timers are cross-origin isolated) with the wheel overlay off/on in an isolated small scene.",
+    "inferred": "Real-time audio-thread headroom from offline render speed; in-game frame cost from an isolated scene.",
+    "unmeasured": "Real-time AudioContext on an audio device, the full globe/terrain/aircraft scene, GPU timer queries, Safari/Firefox, mobile devices, power."
+  },
+  "audio": {
+    "crossOriginIsolated": true,
+    "renderedSeconds": 10,
+    "sampleRate": 48000,
+    "framesPerRender": 600,
+    "peakTracePowerW": 62632.258064516136,
+    "cases": {
+      "empty-context": {
+        "renderMsPerRenderedSecond": {
+          "n": 7,
+          "p50": 0.0625,
+          "p95": 0.06549999713897706,
+          "mean": 0.06464285850524902
+        },
+        "mainThreadUpdateMicrosecondsPerFrame": null
+      },
+      "tire-graph-silent": {
+        "renderMsPerRenderedSecond": {
+          "n": 7,
+          "p50": 0.7669999957084656,
+          "p95": 0.7855000019073486,
+          "mean": 0.7720714262553624
+        },
+        "mainThreadUpdateMicrosecondsPerFrame": {
+          "n": 7,
+          "p50": 1.225000023841858,
+          "p95": 1.2583333253860474,
+          "mean": 1.2178571735109602
+        }
+      },
+      "tire-graph-touchdown": {
+        "renderMsPerRenderedSecond": {
+          "n": 7,
+          "p50": 0.8004999995231629,
+          "p95": 0.8120000004768372,
+          "mean": 0.8032857128552029
+        },
+        "mainThreadUpdateMicrosecondsPerFrame": {
+          "n": 7,
+          "p50": 1.2166666984558105,
+          "p95": 1.25,
+          "mean": 1.2130952165240334
+        }
+      }
+    }
+  },
+  "render": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "webgl": 2,
+    "crossOriginIsolated": true,
+    "canvas": [
+      1280,
+      720
+    ],
+    "drawInfo": {
+      "meshes": 7,
+      "drawsPerFrame": {
+        "overlay-off": 4,
+        "overlay-on": 7
+      }
+    },
+    "timerNote": "cross-origin isolated timers",
+    "cases": {
+      "overlay-off": {
+        "batchMeanCpuSubmitMs": {
+          "n": 72,
+          "p50": 0.010750001668930054,
+          "p95": 0.020250004529953004,
+          "mean": 0.012517361094554261
+        },
+        "batchMeanSubmitPlusGlFinishMs": {
+          "n": 72,
+          "p50": 0.013249999284744263,
+          "p95": 0.02424999475479126,
+          "mean": 0.015145833128028446
+        },
+        "perFrameCpuSubmitMs": {
+          "n": 1440,
+          "p50": 0.009999990463256836,
+          "p95": 0.02499997615814209,
+          "mean": 0.012517361094554265
+        },
+        "perFrameSubmitPlusGlFinishMs": {
+          "n": 1440,
+          "p50": 0.010000109672546387,
+          "p95": 0.029999971389770508,
+          "mean": 0.015145833128028446
+        }
+      },
+      "overlay-on": {
+        "batchMeanCpuSubmitMs": {
+          "n": 72,
+          "p50": 0.01800000071525574,
+          "p95": 0.05600000023841858,
+          "mean": 0.02513888892200258
+        },
+        "batchMeanSubmitPlusGlFinishMs": {
+          "n": 72,
+          "p50": 0.020499998331069948,
+          "p95": 0.05824999809265137,
+          "mean": 0.02782638884252971
+        },
+        "perFrameCpuSubmitMs": {
+          "n": 1440,
+          "p50": 0.014999985694885254,
+          "p95": 0.08999991416931152,
+          "mean": 0.02513888892200258
+        },
+        "perFrameSubmitPlusGlFinishMs": {
+          "n": 1440,
+          "p50": 0.019999980926513672,
+          "p95": 0.09000003337860107,
+          "mean": 0.02782638884252972
+        }
+      }
+    }
+  }
+}

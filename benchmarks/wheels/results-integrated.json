@@ -1,0 +1,1470 @@
+{
+  "generatedAt": "2026-09-10T22:38:03.834Z",
+  "machine": {
+    "cpu": "Apple M5",
+    "cores": 10,
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v26.0.0",
+    "totalMemGiB": 16
+  },
+  "sdkVersion": "1.2.4-beta.4",
+  "sourceSha256": {
+    "flight/physics/fixedStepLoop.ts": "9e0361a99fe4fdb9a1df510a92deb6616c52c8d5c3764f70148cffd692257ac9",
+    "flight/physics/terrainContact.ts": "0f6dc918c460ab20c60744536030adbf0f8c995e356d3f675a0f5c6eaa95262c",
+    "flight/physics/visibleMeshCollision.ts": "700b83326e90d48293fc7305eeb8fdf7847b55919c94abc5fe86efbb53f7b577",
+    "flight/physics/createWheelSpinExperiment.ts": "c637cd144a5d0273e35d0bc38f7b26aa82c5278642b07741c0bd78809c2a56f1",
+    "flight/physics/wheelSpin.ts": "ac8ebec05f5b69b89ebe582171a9d059acf86c797c43df70444aef706e21d2c0",
+    "flight/feedback/wheelCueBus.ts": "5aa6cee816e6f93cf0fa1bc1cb4d1cb9abe0f3aa9d5107c18f5e905775777944",
+    "flight/feedback/haptics.ts": "415e97ea433f90cae64fedbcb3adcc99845a74bb890522a6afb03262c2555aeb",
+    "wasm": "2c79b90ff12c7cd94b36a9af8db07e0bde19ffe4e2716816dc6cea8ad4f8de92"
+  },
+  "labels": {
+    "measured": "Per accepted 120 Hz step on this machine in Node/V8: whole fixed step and its components through the production fixed-step loop with real C172 WASM, dynamic touchdown/rollout/braking; SDK reads per step; flight-state bridge read cost; coarse heap delta.",
+    "inferred": "Any per-frame or percent-of-core conversion; browser behaviour from Node/V8.",
+    "unmeasured": "Airborne flight near terrain (the airborne trace cruises 150 m up; the touchdown trace is airborne only ~0.2 s, inside the spawn transient), streamed Google/raster terrain queries and BVH/mesh raycasts (the surface here is analytic and raycasts return no hit), rendering, real-time audio thread, browser main-thread contention, other devices/browsers, power."
+  },
+  "methodology": {
+    "physicsHz": 120,
+    "stepsPerRun": 1440,
+    "rounds": 5,
+    "warmupRounds": 1,
+    "timer": "performance.now() around each component; ~0.03–0.1 µs instrumentation overhead per bracket is included in the samples",
+    "traces": [
+      {
+        "id": "touchdown-rollout-brake",
+        "note": "1.6 m above 300 m terrain, 50 kt, 0.5 m/s sink, engine off; brakes from 6 s"
+      },
+      {
+        "id": "airborne-cruise",
+        "note": "150 m above 300 m terrain, 90 kt, level, 70% throttle"
+      }
+    ],
+    "spawnTransientSteps": 60,
+    "surface": "flat analytic 300 m; raycast returns null",
+    "heap": "V8 heapUsed around the step loop only, after a forced GC; allocation-rate indicator, not resident memory",
+    "invariance": "Trajectory (altitude, u, q, r, lat, lon every simulated second) asserted identical across all modes"
+  },
+  "flightStateReadMicroseconds": {
+    "median": 2.306,
+    "callsPerStepInLoop": 2
+  },
+  "hapticEnvelopesPerRun": {
+    "touchdown-rollout-brake": 3,
+    "airborne-cruise": 0
+  },
+  "results": [
+    {
+      "trace": "touchdown-rollout-brake",
+      "mode": "feedback-off",
+      "sdkPropertyReadsPerStep": 67,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 1416,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 34.208,
+            "p95Us": 54.625,
+            "p99Us": 115.125,
+            "maxUs": 173.333,
+            "meanUs": 37.78
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.792,
+            "p95Us": 12,
+            "p99Us": 37.75,
+            "maxUs": 65.5,
+            "meanUs": 8.144
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.375,
+            "p95Us": 2.875,
+            "p99Us": 29.166,
+            "maxUs": 42.25,
+            "meanUs": 2.949
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.25,
+            "p95Us": 5.167,
+            "p99Us": 7.5,
+            "maxUs": 9.75,
+            "meanUs": 4.412
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.208,
+            "p95Us": 4.25,
+            "p99Us": 13.583,
+            "maxUs": 20.459,
+            "meanUs": 3.602
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.582,
+            "p95Us": 23.209,
+            "p99Us": 52.708,
+            "maxUs": 64.833,
+            "meanUs": 18.674
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.167,
+            "maxUs": 0.209,
+            "meanUs": 0.027
+          }
+        },
+        "airborne": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        },
+        "grounded": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 33.458,
+            "p95Us": 38.542,
+            "p99Us": 54.042,
+            "maxUs": 482.917,
+            "meanUs": 34.479
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.792,
+            "p95Us": 7.917,
+            "p99Us": 11.709,
+            "maxUs": 67.375,
+            "meanUs": 7.015
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.542,
+            "p99Us": 3.125,
+            "maxUs": 22.125,
+            "meanUs": 2.348
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 4.167,
+            "p95Us": 4.958,
+            "p99Us": 6.167,
+            "maxUs": 194.417,
+            "meanUs": 4.383
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.125,
+            "p95Us": 3.416,
+            "p99Us": 4.75,
+            "maxUs": 56.25,
+            "meanUs": 3.218
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 17,
+            "p95Us": 19.625,
+            "p99Us": 26.041,
+            "maxUs": 448.583,
+            "meanUs": 17.515
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 0.584,
+            "meanUs": 0.024
+          }
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 16760744
+    },
+    {
+      "trace": "touchdown-rollout-brake",
+      "mode": "instant",
+      "sdkPropertyReadsPerStep": 81.82,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 1416,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 39.709,
+            "p95Us": 71.125,
+            "p99Us": 221.458,
+            "maxUs": 459.166,
+            "meanUs": 46.571
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.958,
+            "p95Us": 15.291,
+            "p99Us": 42.583,
+            "maxUs": 55.625,
+            "meanUs": 8.812
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.417,
+            "p95Us": 3.041,
+            "p99Us": 32.625,
+            "maxUs": 107.792,
+            "meanUs": 3.345
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.333,
+            "p95Us": 6.125,
+            "p99Us": 8.334,
+            "maxUs": 83.792,
+            "meanUs": 4.797
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.25,
+            "p95Us": 4.667,
+            "p99Us": 29.834,
+            "maxUs": 69.208,
+            "meanUs": 4.11
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 5.458,
+            "p95Us": 6.209,
+            "p99Us": 7.041,
+            "maxUs": 10.041,
+            "meanUs": 4.154
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.084,
+            "p95Us": 0.209,
+            "p99Us": 1.834,
+            "maxUs": 2.959,
+            "meanUs": 0.144
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.918,
+            "p95Us": 25.835,
+            "p99Us": 119.042,
+            "maxUs": 224.457,
+            "meanUs": 21.209
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.125,
+            "maxUs": 0.167,
+            "meanUs": 0.031
+          }
+        },
+        "airborne": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        },
+        "grounded": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 39.417,
+            "p95Us": 46.125,
+            "p99Us": 61.417,
+            "maxUs": 245.708,
+            "meanUs": 40.707
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.917,
+            "p95Us": 8.125,
+            "p99Us": 12.666,
+            "maxUs": 56.125,
+            "meanUs": 7.16
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.333,
+            "p95Us": 2.75,
+            "p99Us": 3.708,
+            "maxUs": 40.292,
+            "meanUs": 2.404
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 4.167,
+            "p95Us": 5,
+            "p99Us": 7.542,
+            "maxUs": 195.75,
+            "meanUs": 4.363
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.166,
+            "p95Us": 3.666,
+            "p99Us": 5.875,
+            "maxUs": 25,
+            "meanUs": 3.241
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 5.5,
+            "p95Us": 6.458,
+            "p99Us": 9.833,
+            "maxUs": 45.875,
+            "meanUs": 5.644
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.083,
+            "p95Us": 0.125,
+            "p99Us": 0.25,
+            "maxUs": 14.75,
+            "meanUs": 0.093
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 17.207,
+            "p95Us": 20.416,
+            "p99Us": 26.918,
+            "maxUs": 187.791,
+            "meanUs": 17.803
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 4.209,
+            "meanUs": 0.026
+          }
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17592688
+    },
+    {
+      "trace": "touchdown-rollout-brake",
+      "mode": "inertia",
+      "sdkPropertyReadsPerStep": 81.82,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 1416,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 39.417,
+            "p95Us": 72.875,
+            "p99Us": 167.625,
+            "maxUs": 318.916,
+            "meanUs": 45.546
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.917,
+            "p95Us": 16.25,
+            "p99Us": 54.75,
+            "maxUs": 192.208,
+            "meanUs": 9.863
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.416,
+            "p95Us": 3.166,
+            "p99Us": 35.583,
+            "maxUs": 42.875,
+            "meanUs": 3.071
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.291,
+            "p95Us": 6.875,
+            "p99Us": 9.417,
+            "maxUs": 11.959,
+            "meanUs": 4.601
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.25,
+            "p95Us": 5.417,
+            "p99Us": 16.667,
+            "maxUs": 49.208,
+            "meanUs": 3.837
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 5.334,
+            "p95Us": 6.542,
+            "p99Us": 8.541,
+            "maxUs": 58.167,
+            "meanUs": 4.386
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.084,
+            "p95Us": 0.292,
+            "p99Us": 2,
+            "maxUs": 3,
+            "meanUs": 0.157
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.834,
+            "p95Us": 26.208,
+            "p99Us": 58.793,
+            "maxUs": 127.376,
+            "meanUs": 19.631
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.166,
+            "maxUs": 1.042,
+            "meanUs": 0.037
+          }
+        },
+        "airborne": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        },
+        "grounded": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 39,
+            "p95Us": 47.875,
+            "p99Us": 70.542,
+            "maxUs": 228.542,
+            "meanUs": 40.629
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.875,
+            "p95Us": 8.458,
+            "p99Us": 14.583,
+            "maxUs": 109.833,
+            "meanUs": 7.254
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.708,
+            "p99Us": 5.125,
+            "maxUs": 70.334,
+            "meanUs": 2.419
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 4.125,
+            "p95Us": 4.959,
+            "p99Us": 8.541,
+            "maxUs": 188.958,
+            "meanUs": 4.395
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.125,
+            "p95Us": 3.541,
+            "p99Us": 7.209,
+            "maxUs": 81.625,
+            "meanUs": 3.219
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 5.458,
+            "p95Us": 6.417,
+            "p99Us": 10.375,
+            "maxUs": 43.166,
+            "meanUs": 5.63
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.084,
+            "p95Us": 0.125,
+            "p99Us": 0.291,
+            "maxUs": 33.291,
+            "meanUs": 0.107
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 17,
+            "p95Us": 21.374,
+            "p99Us": 30.625,
+            "maxUs": 149.834,
+            "meanUs": 17.606
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 0.333,
+            "meanUs": 0.027
+          }
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17625416
+    },
+    {
+      "trace": "touchdown-rollout-brake",
+      "mode": "inertia+cues+haptics",
+      "sdkPropertyReadsPerStep": 81.82,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 1416,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 39.375,
+            "p95Us": 83.042,
+            "p99Us": 159.125,
+            "maxUs": 333.75,
+            "meanUs": 46.409
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.916,
+            "p95Us": 23.709,
+            "p99Us": 53.625,
+            "maxUs": 115.583,
+            "meanUs": 9.411
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.375,
+            "p95Us": 5.042,
+            "p99Us": 33.542,
+            "maxUs": 52.334,
+            "meanUs": 3.189
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.209,
+            "p95Us": 7.125,
+            "p99Us": 11.708,
+            "maxUs": 26,
+            "meanUs": 4.676
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.25,
+            "p95Us": 7.041,
+            "p99Us": 15.583,
+            "maxUs": 24.125,
+            "meanUs": 3.816
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 5.458,
+            "p95Us": 5.958,
+            "p99Us": 8.75,
+            "maxUs": 15.458,
+            "meanUs": 4.209
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.166,
+            "p95Us": 0.458,
+            "p99Us": 2.666,
+            "maxUs": 4.75,
+            "meanUs": 0.251
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.668,
+            "p95Us": 40.667,
+            "p99Us": 63.626,
+            "maxUs": 250.543,
+            "meanUs": 20.857
+          },
+          "hapticTickPerFrame": {
+            "n": 150,
+            "p50Us": 0.083,
+            "p95Us": 3.208,
+            "p99Us": 9.375,
+            "maxUs": 15.792,
+            "meanUs": 0.75
+          },
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.042,
+            "p95Us": 0.084,
+            "p99Us": 0.166,
+            "maxUs": 0.291,
+            "meanUs": 0.04
+          }
+        },
+        "airborne": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        },
+        "grounded": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 39.5,
+            "p95Us": 46.75,
+            "p99Us": 60.834,
+            "maxUs": 210.875,
+            "meanUs": 40.883
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.916,
+            "p95Us": 8.334,
+            "p99Us": 11.875,
+            "maxUs": 63.333,
+            "meanUs": 7.174
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.375,
+            "p95Us": 2.708,
+            "p99Us": 3.25,
+            "maxUs": 23.25,
+            "meanUs": 2.413
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 4.167,
+            "p95Us": 5.041,
+            "p99Us": 6.417,
+            "maxUs": 161.833,
+            "meanUs": 4.398
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.167,
+            "p95Us": 3.667,
+            "p99Us": 4.833,
+            "maxUs": 42.167,
+            "meanUs": 3.281
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 5.541,
+            "p95Us": 6.334,
+            "p99Us": 8.917,
+            "maxUs": 66.167,
+            "meanUs": 5.7
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.125,
+            "p95Us": 0.167,
+            "p99Us": 0.333,
+            "maxUs": 12.541,
+            "meanUs": 0.147
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 17.209,
+            "p95Us": 20.457,
+            "p99Us": 26.375,
+            "maxUs": 171.084,
+            "meanUs": 17.771
+          },
+          "hapticTickPerFrame": {
+            "n": 3450,
+            "p50Us": 0.042,
+            "p95Us": 0.209,
+            "p99Us": 0.541,
+            "maxUs": 16.125,
+            "meanUs": 0.098
+          },
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 0.417,
+            "meanUs": 0.025
+          }
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17572672
+    },
+    {
+      "trace": "airborne-cruise",
+      "mode": "feedback-off",
+      "sdkPropertyReadsPerStep": 66.01,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 0,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 33.792,
+            "p95Us": 43.084,
+            "p99Us": 137.709,
+            "maxUs": 170.041,
+            "meanUs": 36.509
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.416,
+            "p95Us": 9.5,
+            "p99Us": 32.167,
+            "maxUs": 100.75,
+            "meanUs": 7.421
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.166,
+            "p95Us": 2.791,
+            "p99Us": 32.584,
+            "maxUs": 44.708,
+            "meanUs": 2.791
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.125,
+            "p95Us": 5.125,
+            "p99Us": 7.417,
+            "maxUs": 8.792,
+            "meanUs": 3.782
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.209,
+            "p95Us": 3.916,
+            "p99Us": 12.833,
+            "maxUs": 18.75,
+            "meanUs": 3.534
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.584,
+            "p95Us": 25.083,
+            "p99Us": 49.832,
+            "maxUs": 63.874,
+            "meanUs": 18.981
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.042,
+            "p95Us": 0.042,
+            "p99Us": 0.167,
+            "maxUs": 0.417,
+            "meanUs": 0.034
+          }
+        },
+        "airborne": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 30.458,
+            "p95Us": 35.625,
+            "p99Us": 47.625,
+            "maxUs": 169.167,
+            "meanUs": 31.283
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.166,
+            "p95Us": 7.167,
+            "p99Us": 10.875,
+            "maxUs": 38.292,
+            "meanUs": 6.362
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.042,
+            "p95Us": 2.375,
+            "p99Us": 3,
+            "maxUs": 19.208,
+            "meanUs": 2.115
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.625,
+            "p99Us": 4.083,
+            "maxUs": 32.334,
+            "meanUs": 2.362
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.042,
+            "p95Us": 3.417,
+            "p99Us": 4.375,
+            "maxUs": 21.208,
+            "meanUs": 3.121
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0,
+            "p95Us": 0,
+            "p99Us": 0,
+            "maxUs": 0,
+            "meanUs": 0
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 16.834,
+            "p95Us": 20.041,
+            "p99Us": 26.25,
+            "maxUs": 98.417,
+            "meanUs": 17.324
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 4.375,
+            "meanUs": 0.026
+          }
+        },
+        "grounded": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17112200
+    },
+    {
+      "trace": "airborne-cruise",
+      "mode": "instant",
+      "sdkPropertyReadsPerStep": 71.01,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 0,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 35.125,
+            "p95Us": 56.708,
+            "p99Us": 145.959,
+            "maxUs": 193.833,
+            "meanUs": 38.479
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.417,
+            "p95Us": 10.291,
+            "p99Us": 34.042,
+            "maxUs": 54.167,
+            "meanUs": 7.426
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.084,
+            "p95Us": 3.084,
+            "p99Us": 31.459,
+            "maxUs": 49.208,
+            "meanUs": 2.819
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.125,
+            "p95Us": 6.375,
+            "p99Us": 8.375,
+            "maxUs": 15.458,
+            "meanUs": 3.863
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.125,
+            "p95Us": 4.417,
+            "p99Us": 14.084,
+            "maxUs": 19.167,
+            "meanUs": 3.543
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 1.666,
+            "p95Us": 2.125,
+            "p99Us": 4.917,
+            "maxUs": 6.667,
+            "meanUs": 1.782
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.083,
+            "p95Us": 0.208,
+            "p99Us": 2.5,
+            "maxUs": 3.458,
+            "meanUs": 0.144
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.375,
+            "p95Us": 25.376,
+            "p99Us": 54.292,
+            "maxUs": 69.376,
+            "meanUs": 18.901
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.042,
+            "p95Us": 0.083,
+            "p99Us": 0.208,
+            "maxUs": 0.375,
+            "meanUs": 0.038
+          }
+        },
+        "airborne": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 32.208,
+            "p95Us": 37.917,
+            "p99Us": 48.542,
+            "maxUs": 166.375,
+            "meanUs": 33.068
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.167,
+            "p95Us": 7.042,
+            "p99Us": 11.125,
+            "maxUs": 65.25,
+            "meanUs": 6.407
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.042,
+            "p95Us": 2.25,
+            "p99Us": 2.792,
+            "maxUs": 22.917,
+            "meanUs": 2.11
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.5,
+            "p99Us": 4.167,
+            "maxUs": 18.917,
+            "meanUs": 2.359
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.042,
+            "p95Us": 3.333,
+            "p99Us": 4.375,
+            "maxUs": 71.667,
+            "meanUs": 3.139
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 1.625,
+            "p95Us": 1.792,
+            "p99Us": 2.208,
+            "maxUs": 22.875,
+            "meanUs": 1.669
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.083,
+            "p95Us": 0.125,
+            "p99Us": 0.208,
+            "maxUs": 4.458,
+            "meanUs": 0.085
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 16.835,
+            "p95Us": 19.833,
+            "p99Us": 26.167,
+            "maxUs": 82.417,
+            "meanUs": 17.299
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 0.167,
+            "meanUs": 0.026
+          }
+        },
+        "grounded": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17374584
+    },
+    {
+      "trace": "airborne-cruise",
+      "mode": "inertia",
+      "sdkPropertyReadsPerStep": 71.01,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 0,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 36.042,
+            "p95Us": 104.833,
+            "p99Us": 173.083,
+            "maxUs": 397.375,
+            "meanUs": 44.089
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.458,
+            "p95Us": 16.792,
+            "p99Us": 46,
+            "maxUs": 96.834,
+            "meanUs": 8.392
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.125,
+            "p95Us": 5.208,
+            "p99Us": 34.375,
+            "maxUs": 85.25,
+            "meanUs": 3.207
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.167,
+            "p95Us": 8.209,
+            "p99Us": 14.208,
+            "maxUs": 46.666,
+            "meanUs": 4.365
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.25,
+            "p95Us": 8.709,
+            "p99Us": 15.5,
+            "maxUs": 18.459,
+            "meanUs": 3.878
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 1.708,
+            "p95Us": 3.792,
+            "p99Us": 8.208,
+            "maxUs": 19.125,
+            "meanUs": 2.047
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.083,
+            "p95Us": 0.5,
+            "p99Us": 1.875,
+            "maxUs": 3.292,
+            "meanUs": 0.173
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.918,
+            "p95Us": 49.124,
+            "p99Us": 67.25,
+            "maxUs": 259.333,
+            "meanUs": 22.028
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.042,
+            "p95Us": 0.167,
+            "p99Us": 0.292,
+            "maxUs": 0.541,
+            "meanUs": 0.046
+          }
+        },
+        "airborne": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 32.416,
+            "p95Us": 39.875,
+            "p99Us": 60.417,
+            "maxUs": 185.209,
+            "meanUs": 33.799
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.208,
+            "p95Us": 7.667,
+            "p99Us": 13.292,
+            "maxUs": 91.041,
+            "meanUs": 6.552
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.083,
+            "p95Us": 2.416,
+            "p99Us": 3.541,
+            "maxUs": 36.375,
+            "meanUs": 2.158
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.709,
+            "p99Us": 4.292,
+            "maxUs": 44.708,
+            "meanUs": 2.405
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.083,
+            "p95Us": 3.583,
+            "p99Us": 6.458,
+            "maxUs": 144,
+            "meanUs": 3.215
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 1.625,
+            "p95Us": 1.916,
+            "p99Us": 2.792,
+            "maxUs": 59.458,
+            "meanUs": 1.709
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.083,
+            "p95Us": 0.125,
+            "p99Us": 0.25,
+            "maxUs": 6.083,
+            "meanUs": 0.091
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 16.999,
+            "p95Us": 20.959,
+            "p99Us": 31.998,
+            "maxUs": 100.332,
+            "meanUs": 17.669
+          },
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.083,
+            "maxUs": 0.375,
+            "meanUs": 0.027
+          }
+        },
+        "grounded": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17182552
+    },
+    {
+      "trace": "airborne-cruise",
+      "mode": "inertia+cues+haptics",
+      "sdkPropertyReadsPerStep": 71.01,
+      "stepsPerRound": 1440,
+      "rounds": 5,
+      "groundedStepsPerRun": 0,
+      "byPhase": {
+        "spawnTransient": {
+          "wholeStep": {
+            "n": 300,
+            "p50Us": 35.667,
+            "p95Us": 64.125,
+            "p99Us": 145.708,
+            "maxUs": 218.875,
+            "meanUs": 40.015
+          },
+          "jsbsimRun": {
+            "n": 300,
+            "p50Us": 6.458,
+            "p95Us": 12.584,
+            "p99Us": 31.625,
+            "maxUs": 57.542,
+            "meanUs": 7.649
+          },
+          "terrainContact": {
+            "n": 300,
+            "p50Us": 2.166,
+            "p95Us": 2.917,
+            "p99Us": 32.291,
+            "maxUs": 60.667,
+            "meanUs": 2.881
+          },
+          "bodyCollision": {
+            "n": 300,
+            "p50Us": 4.166,
+            "p95Us": 7,
+            "p99Us": 9.875,
+            "maxUs": 10.958,
+            "meanUs": 3.963
+          },
+          "controlWrites": {
+            "n": 300,
+            "p50Us": 3.25,
+            "p95Us": 7.708,
+            "p99Us": 18.083,
+            "maxUs": 32.917,
+            "meanUs": 3.925
+          },
+          "wheelAdapter": {
+            "n": 300,
+            "p50Us": 1.708,
+            "p95Us": 2.125,
+            "p99Us": 4.25,
+            "maxUs": 9.167,
+            "meanUs": 1.836
+          },
+          "cueBusAndSinks": {
+            "n": 300,
+            "p50Us": 0.125,
+            "p95Us": 0.333,
+            "p99Us": 2.459,
+            "maxUs": 5.791,
+            "meanUs": 0.2
+          },
+          "loopOverhead": {
+            "n": 300,
+            "p50Us": 17.751,
+            "p95Us": 26.625,
+            "p99Us": 54.415,
+            "maxUs": 68.167,
+            "meanUs": 19.56
+          },
+          "hapticTickPerFrame": {
+            "n": 150,
+            "p50Us": 0.083,
+            "p95Us": 0.542,
+            "p99Us": 2.209,
+            "maxUs": 2.875,
+            "meanUs": 0.207
+          },
+          "audioSinkTakePerFrame": {
+            "n": 150,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.084,
+            "maxUs": 0.166,
+            "meanUs": 0.031
+          }
+        },
+        "airborne": {
+          "wholeStep": {
+            "n": 6900,
+            "p50Us": 32.25,
+            "p95Us": 38.458,
+            "p99Us": 54.125,
+            "maxUs": 226,
+            "meanUs": 33.447
+          },
+          "jsbsimRun": {
+            "n": 6900,
+            "p50Us": 6.208,
+            "p95Us": 7.416,
+            "p99Us": 11.042,
+            "maxUs": 66.083,
+            "meanUs": 6.435
+          },
+          "terrainContact": {
+            "n": 6900,
+            "p50Us": 2.042,
+            "p95Us": 2.292,
+            "p99Us": 3.208,
+            "maxUs": 182.958,
+            "meanUs": 2.141
+          },
+          "bodyCollision": {
+            "n": 6900,
+            "p50Us": 2.292,
+            "p95Us": 2.625,
+            "p99Us": 4.375,
+            "maxUs": 54.541,
+            "meanUs": 2.383
+          },
+          "controlWrites": {
+            "n": 6900,
+            "p50Us": 3.042,
+            "p95Us": 3.5,
+            "p99Us": 4.917,
+            "maxUs": 43.417,
+            "meanUs": 3.147
+          },
+          "wheelAdapter": {
+            "n": 6900,
+            "p50Us": 1.625,
+            "p95Us": 1.833,
+            "p99Us": 2.625,
+            "maxUs": 29.167,
+            "meanUs": 1.705
+          },
+          "cueBusAndSinks": {
+            "n": 6900,
+            "p50Us": 0.125,
+            "p95Us": 0.167,
+            "p99Us": 0.292,
+            "maxUs": 12.917,
+            "meanUs": 0.122
+          },
+          "loopOverhead": {
+            "n": 6900,
+            "p50Us": 16.915,
+            "p95Us": 20.333,
+            "p99Us": 29.624,
+            "maxUs": 123.125,
+            "meanUs": 17.514
+          },
+          "hapticTickPerFrame": {
+            "n": 3450,
+            "p50Us": 0.083,
+            "p95Us": 0.208,
+            "p99Us": 0.459,
+            "maxUs": 4.292,
+            "meanUs": 0.1
+          },
+          "audioSinkTakePerFrame": {
+            "n": 3450,
+            "p50Us": 0.041,
+            "p95Us": 0.042,
+            "p99Us": 0.042,
+            "maxUs": 0.125,
+            "meanUs": 0.025
+          }
+        },
+        "grounded": {
+          "wholeStep": null,
+          "jsbsimRun": null,
+          "terrainContact": null,
+          "bodyCollision": null,
+          "controlWrites": null,
+          "wheelAdapter": null,
+          "cueBusAndSinks": null,
+          "loopOverhead": null,
+          "hapticTickPerFrame": null,
+          "audioSinkTakePerFrame": null
+        }
+      },
+      "medianStepLoopHeapDeltaBytes": 17434672
+    }
+  ]
+}

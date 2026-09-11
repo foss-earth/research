@@ -4,6 +4,34 @@ Status: implementation specification and measured algorithm-cost envelope,
 2026-09-10. This document does not add new gameplay modes. The current
 experiment is described in [flight-sim's implementation notes](../../../flight-sim/docs/wheel-spin-experiment.md).
 
+## Implementation status (2026-09-10)
+
+| Roadmap step | State | Where (flight-sim) |
+|---|---|---|
+| 2. Durable controls | **Implemented.** `GroundInteractionSettingsV1` store with migration (unversioned/partial → Minimal-safe fields; newer versions are never downgraded and become session-only), Minimal / Landing feedback presets, Custom derivation, locks, Auto-within-choices vs Manual, requested → active → reason, capped named profiles (12, 1 KiB each) with validated import/export. Wheel response, force, contact and backend changes apply only when paused, reset, teleported or at a new flight; volume, haptic strength and audio/haptic modes apply immediately. Ground handling and Rough terrain presets, and every unimplemented mode, are shown disabled with their missing capability. Debug A/B stays session-only; **Keep experiment choices** copies it into Settings explicitly. | `src/flight/settings/groundInteractionSettings.ts`, `src/flight/hud/GroundInteractionSettingsPanel.tsx` |
+| 3. Cue bus and presentation | **Implemented** (contact resonators still proposed). `WheelCue` published only from accepted fixed steps; no queue, sinks aggregate latest values; epochs advance on pause, reset, fault, teleport, mode change and terrain re-placement (`groundRevision`). The slip sound now reads the bus (same mean power as before) and has an immediate volume. Optional haptics: 50 ms latest-value envelopes (≤ 60 ms), touchdown impulse → low-frequency, spin-up slip (first 0.4 s of contact only) → high-frequency; gamepad `dual-rumble` with capability detection and session disable on rejection; paired phone via an additive, sub-versioned `feedback` field on the existing 50 ms heartbeat (TTL 90 ms, sent once, only while the phone owns control) and `navigator.vibrate`, off by default, "Unavailable on this device" where unsupported. Cancellation on pause, hidden page, reset, disconnect, ownership loss, stale host, expiry, disable and disposal. | `src/flight/feedback/`, `src/remote/protocol.ts`, `src/remote/phoneControllerClient.ts`, `src/flight/remote/createPhoneControlSession.ts` |
+| 4. Coupled rigid wheels | **Contract and reference solver only; not in the game.** The native/WASM boundary (`WheelContact`, `WheelForceResult`, `NativeWheelContactBridge`) and a capability probe exist. The installed `@0x62/jsbsim-wasm` 1.2.4-beta.4 has no per-wheel contact packet or accepted-impulse entry point, and this machine has no Emscripten/CMake toolchain to build one, so the probe reports unavailable and JSBSim remains the only friction owner. The probe also refuses any bridge that has not disabled JSBSim's own longitudinal friction. A reference coupled solver (axle-point accounting, internal equal/opposite brake torque, clamped sequential impulses, epoch-cleared warm start with a cold-solve energy guard) passes conservation/stability tests in an isolated rigid-body harness with prescribed normal loads. That is **not** integrated validation. | `src/flight/physics/wheelContact.ts`, `src/flight/physics/coupledRigidWheels.ts` |
+| 5. Combined slip | **Not started** — gated on step 4 being validated inside the integrated JSBSim step. | — |
+| 6. Per-wheel support / footprint | **Not started** — needs the same native contact interface; must precede step 7. | — |
+| 7. Local compliance | **Not started** — gated on step 6. | — |
+| 8. Conservative Auto | **Not started.** Current Auto only substitutes cheaper *implemented* choices; it never changes force/contact/timestep and no GPU/worker/WASM backend is selectable. | — |
+
+The implemented `WheelContact` differs from the sketch below in one deliberate
+way: it carries the axle offset from the CG plus the tire radius instead of a
+single contact point, because the airframe must receive the tangential impulse
+at the axle (`r_axle × J`) while the wheel receives `−R·J`. Applying it at the
+contact point and also spinning the wheel double-counts angular momentum.
+
+**Measured** 2026-09-10 on Apple M5 / Node 26 (integrated, real C172 WASM):
+grounded whole fixed step 33.5 µs p50 / 38.5 µs p95 with feedback off and
+39.0–39.5 µs p50 / 46–48 µs p95 with Instant, Inertia or Inertia + cues +
+haptics; JSBSim `Run()` 6–7 µs; wheel adapter 5.5 µs (15 reads); cue bus and
+sinks ≈0.1 µs. Headless Chromium 153 on a verified hardware GPU: the tire graph
+costs 0.77–0.80 ms of offline render per audio second whether silent or active,
+and the wheel overlay adds ~7 µs CPU per frame in an isolated scene. Streamed
+terrain queries, GPU execution time, real-time audio, other browsers and
+devices are **unmeasured**. Details and labels: [benchmark README](../../benchmarks/wheels/README.md#integrated-fixed-step-path).
+
 ## Start with the actual cost
 
 The current finite-inertia wheel model is small: three angular speeds and angles,
