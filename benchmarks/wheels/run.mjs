@@ -1,5 +1,5 @@
 // Node 24+ native TypeScript stripping; no browser, server, or GPU required.
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import path from "node:path";
@@ -88,7 +88,12 @@ const report = { generatedAt: new Date().toISOString(),
     excludes: "JSBSim property reads, rendering, audio processing, full-game FPS and power; no aircraft force feedback",
     parameters: WHEEL_SPIN_CONFIGS },
   results, checksum };
-const output = outputArgument ?? path.join(here, "results.json");
+// Full traces are too large for the tracked results.json, so by default they go
+// to the gitignored build/ tree instead of overwriting it.
+const output = outputArgument ?? (includeTraces
+  ? path.join(here, "../../build/benchmarks/wheels/results-traces.json")
+  : path.join(here, "results.json"));
+mkdirSync(path.dirname(output), { recursive: true });
 writeFileSync(output, JSON.stringify(report, null, 2) + "\n");
 console.table(results.map(({ scenario, mode, medianMicrosecondsPerThreeWheelStep, mainSpinUpSeconds, heatJoules }) => ({
   scenario, mode, "µs / 3 wheels": medianMicrosecondsPerThreeWheelStep.toFixed(3),

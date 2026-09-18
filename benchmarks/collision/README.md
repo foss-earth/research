@@ -43,12 +43,12 @@ Run from this repository with dependencies installed. Playwright can live in a
 separate directory; it is not required by the game:
 
 ```sh
-npm install --prefix /private/tmp/collision-browser-tools --no-audit --no-fund playwright
-PLAYWRIGHT_MODULE=/private/tmp/collision-browser-tools/node_modules/playwright/index.mjs \
-  node benchmarks/collision/run-gpu-headless.mjs
+npm install --prefix build/tools/playwright --no-audit --no-fund playwright  # once
+node benchmarks/collision/run-gpu-headless.mjs
 ```
 
-If Playwright is installed in this repository, omit `PLAYWRIGHT_MODULE`. On macOS
+The runner uses `PLAYWRIGHT_MODULE` when it is set, then the gitignored
+`build/tools/playwright/`, then this project's `node_modules`. On macOS
 the runner uses `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`;
 set `CHROME_PATH` to select another compatible Chromium executable. On other
 platforms it defaults to Playwright's installed Chromium. An optional positional

@@ -7,12 +7,17 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 // to the user's browser, opens a window, or sends native mouse/keyboard events.
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const output = path.resolve(process.argv[2] || path.join(root, "benchmarks/collision/results-gpu.json"));
-const moduleName = process.env.PLAYWRIGHT_MODULE;
+// Playwright is not a dependency: PLAYWRIGHT_MODULE, else the gitignored
+// build/tools/playwright/ copy, else this project's node_modules.
+const installed = path.join(root, "build/tools/playwright/node_modules/playwright/index.mjs");
+const moduleName = process.env.PLAYWRIGHT_MODULE ?? (existsSync(installed) ? installed : undefined);
 let chromium;
 try {
   ({ chromium } = await import(moduleName ? pathToFileURL(path.resolve(moduleName)).href : "playwright"));
 } catch (error) {
-  throw new Error("Playwright is required. Install it separately and set PLAYWRIGHT_MODULE to its index.mjs, or install playwright in this project.", { cause: error });
+  throw new Error("Playwright is required. From the repository root run:\n"
+    + "  npm install --prefix build/tools/playwright --no-audit --no-fund playwright\n"
+    + "or set PLAYWRIGHT_MODULE to another copy's index.mjs.", { cause: error });
 }
 const macChrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const executablePath = process.env.CHROME_PATH || (existsSync(macChrome) ? macChrome : undefined);

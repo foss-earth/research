@@ -23,8 +23,9 @@ It writes [results.json](results.json), which contains medians from nine samples
 after warm-up. The fixture covers a gentle and firm touchdown, bounce, braking,
 and reverse taxi. It includes pure model update time for all three wheels; it
 excludes JSBSim property reads, rendering, audio synthesis, frame time, and
-power. Use `--traces /private/tmp/wheel-traces.json` only when a full 120 Hz
-slip-power trace is needed for offline audio verification.
+power. Use `--traces` only when a full 120 Hz slip-power trace is needed for
+offline audio verification; it writes the gitignored
+`build/benchmarks/wheels/results-traces.json` instead of `results.json`.
 
 The recorded M5 results show B at roughly 0.08–0.10 µs per three-wheel physics
 step, versus 0.05–0.08 µs for A. At the modeled 30 m/s gentle touchdown, B
@@ -90,7 +91,7 @@ For a terminal-only OfflineAudioContext check, run the companion command from
 `flight-sim` after its source is applied:
 
 ```sh
-PLAYWRIGHT_MODULE=/private/tmp/flight-phone.hd8Ggu/browser-tools/node_modules/playwright/index.mjs \
+npm install --prefix build/tools/playwright --no-audit --no-fund playwright  # once
 node benchmarks/wheels/run-audio-headless.mjs
 ```
 
