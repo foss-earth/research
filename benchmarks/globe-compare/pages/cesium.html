@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Cesium terrain</title>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.131/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.131/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+  <style>html, body, #cesiumContainer { width: 100%; height: 100%; margin: 0; overflow: hidden; }</style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    const TERRAIN = "https://terrain.reearth.land/cesium-mesh/ellipsoid";
+    window.__benchReady = false;
+    void (async () => {
+      const terrainProvider = await Cesium.CesiumTerrainProvider.fromUrl(TERRAIN);
+      const imagery = new Cesium.UrlTemplateImageryProvider({
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        maximumLevel: 19,
+      });
+      const viewer = new Cesium.Viewer("cesiumContainer", {
+        animation: false,
+        timeline: false,
+        baseLayerPicker: false,
+        geocoder: false,
+        homeButton: false,
+        sceneModePicker: false,
+        navigationHelpButton: false,
+        terrainProvider,
+        baseLayer: new Cesium.ImageryLayer(imagery),
+      });
+      viewer.scene.globe.enableLighting = false;
+      window.__viewer = viewer;
+      window.__setView = (state) => {
+        viewer.camera.setView({
+          destination: Cesium.Cartesian3.fromDegrees(state.lonDeg, state.latDeg, state.zoomMeters),
+          orientation: {
+            heading: Cesium.Math.toRadians(state.headingDeg),
+            pitch: Cesium.Math.toRadians(state.pitchDeg - 90),
+            roll: 0,
+          },
+        });
+      };
+      window.__benchReady = true;
+    })();
+  </script>
+</body>
+</html>

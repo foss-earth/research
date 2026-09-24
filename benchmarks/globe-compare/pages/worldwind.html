@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Web WorldWind</title>
+  <script src="https://cdn.jsdelivr.net/npm/worldwindjs@1.9.5/build/dist/worldwind.min.js"></script>
+  <style>html, body, canvas { width: 100%; height: 100%; margin: 0; }</style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    WorldWind.configuration.baseUrl = "https://cdn.jsdelivr.net/npm/worldwindjs@1.9.5/build/dist/";
+    const wwd = new WorldWind.WorldWindow("canvas");
+    wwd.addLayer(new WorldWind.BMNGLayer());
+    wwd.addLayer(new WorldWind.BMNGLandsatLayer());
+    window.__setView = (state) => {
+      wwd.navigator.lookAtLocation.latitude = state.latDeg;
+      wwd.navigator.lookAtLocation.longitude = state.lonDeg;
+      wwd.navigator.range = state.zoomMeters;
+      wwd.navigator.heading = state.headingDeg;
+      wwd.navigator.tilt = Math.max(0, 90 - state.pitchDeg);
+      wwd.redraw();
+    };
+    window.__benchReady = true;
+  </script>
+</body>
+</html>

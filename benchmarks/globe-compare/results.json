@@ -1,0 +1,63 @@
+{
+  "discarded": "The machine was in use during this run. Do not cite these numbers. See docs/performance-pass.md.",
+  "date": "2026-09-23",
+  "machine": "Apple M5, 8 GPU cores, macOS",
+  "browser": "Google Chrome headless, ANGLE Metal",
+  "gpuRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+  "viewport": { "width": 1280, "height": 720 },
+  "flightMs": 8000,
+  "warmupMs": 6000,
+  "place": { "name": "Grand Canyon", "lat": 36.1, "lon": -112.14, "altMeters": 1200 },
+  "results": [
+    {
+      "name": "FOSS Earth",
+      "renderer": "WebGPU",
+      "terrain": "Mapterhorn terrarium mesh",
+      "imagery": "USGS Imagery",
+      "fps": 59.4,
+      "mainThreadMedianMs": 2.0,
+      "mainThreadP95Ms": 4.6,
+      "framesOver33ms": 2
+    },
+    {
+      "name": "FOSS Earth",
+      "renderer": "WebGL2",
+      "terrain": "Mapterhorn terrarium mesh",
+      "imagery": "USGS Imagery",
+      "fps": 60.0,
+      "mainThreadMedianMs": 1.2,
+      "mainThreadP95Ms": 4.5,
+      "framesOver33ms": 0
+    },
+    {
+      "name": "CesiumJS 1.131",
+      "renderer": "WebGL",
+      "terrain": "Re:Earth quantized-mesh",
+      "imagery": "Esri World Imagery",
+      "fps": 58.2,
+      "mainThreadMedianMs": 2.1,
+      "mainThreadP95Ms": 3.1,
+      "framesOver33ms": 2
+    },
+    {
+      "name": "MapLibre GL 5.6",
+      "renderer": "WebGL",
+      "terrain": "Mapterhorn raster-dem",
+      "imagery": "Esri World Imagery",
+      "fps": 60.0,
+      "mainThreadMedianMs": 1.7,
+      "mainThreadP95Ms": 2.4,
+      "framesOver33ms": 0
+    },
+    {
+      "name": "WorldWindJS 1.9",
+      "renderer": "WebGL",
+      "terrain": "default elevation model",
+      "imagery": "Blue Marble / Landsat",
+      "fps": 57.0,
+      "mainThreadMedianMs": 5.0,
+      "mainThreadP95Ms": 12.1,
+      "framesOver33ms": 4
+    }
+  ]
+}
