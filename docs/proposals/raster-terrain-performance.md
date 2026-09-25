@@ -4,6 +4,16 @@ Status: Initial Stage B–C4 implementation complete; in-game calibration remain
 Date: 2026-09-07  
 Scope: foss-earth raster basemaps and their flight-sim integration
 
+The [Map detail control implementation specification](map-detail-control.md)
+(2026-09-24) defines the next imagery-selection policy and shared Map-tab controls.
+It extends the conservative C1/C2 implementation below with projected image-pixel
+selection, independent imagery residency and bounded loading. It was implemented
+on 2026-09-25 (see its implementation record) and is the default;
+`?rasterImagery=legacy` restores per-tile imagery. With projected imagery, the
+profiles below still choose terrain detail and resource limits, but their image
+`zoomBias` and focus ring no longer choose imagery. The implementation record
+below remains a dated record.
+
 ## Implementation record — 2026-09-07
 
 The pre-change checkpoints are `foss-earth` commit `860d217` and `flight-sim`
