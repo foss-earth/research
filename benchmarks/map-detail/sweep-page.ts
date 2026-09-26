@@ -12,7 +12,7 @@ import { createRasterTilesRuntime, type RasterTilesRuntime } from "../../src/eng
 import { resolveRasterBaseMapSource } from "../../src/engine/babylon/rasterBaseMaps";
 import { AWS_TERRARIUM, MAPTERHORN } from "../../src/terrain/terrainTiles";
 import { createTerrainPerformanceCapture } from "../../src/terrain/terrainPerformanceCapture";
-import type { RasterQualitySetting } from "../../src/engine/babylon/rasterQuality";
+import { getAppSettings } from "../../src/settings/appSettings";
 
 interface SweepView { latDeg: number; lonDeg: number; zoomMeters: number; pitchDeg: number; headingDeg: number }
 
@@ -22,10 +22,14 @@ export interface SweepCase {
   source: string;
   imagery: "legacy" | "atlas";
   offset: number;
-  quality: RasterQualitySetting;
+  /** The retired profile the case was recorded with; set as the terrain values `?terrainQuality` maps it to. */
+  quality: "auto" | "low" | "balanced" | "high";
   /** Extra sequences run after settling (atlas only). */
   sequences?: Array<"drag" | "switch-source" | "elevation">;
 }
+
+/** The terrain error, px, `?terrainQuality` sets for each retired profile. */
+const TERRAIN_TARGET = { low: 8, balanced: 4, high: 2 } as const;
 
 const WIDTH = 960;
 const HEIGHT = 540;
@@ -124,10 +128,13 @@ async function runCase(engine: AbstractEngine, backend: RendererMode, test: Swee
   controller.applyViewState(view);
   controller.applyViewState(view);
   const capture0 = createTerrainPerformanceCapture(2048);
+  const settings = getAppSettings();
+  if (test.quality === "auto") settings.set("map.auto.terrainDetail", true);
+  else settings.setMany({ "map.detail.terrain.default": TERRAIN_TARGET[test.quality], "map.auto.terrainDetail": false });
   let downloadBytes = 0, loadErrors = 0;
   const runtime: RasterTilesRuntime = createRasterTilesRuntime({
     scene, source: resolveRasterBaseMapSource(test.source), getViewState: () => view,
-    terrainSource: MAPTERHORN, quality: test.quality, imagery: test.imagery, detailOffset: test.offset,
+    terrainSource: MAPTERHORN, imagery: test.imagery, detailOffset: test.offset,
     performanceCapture: capture0,
     onDownloadBytes: bytes => { downloadBytes += bytes; },
     onLoadError: () => { loadErrors += 1; },
