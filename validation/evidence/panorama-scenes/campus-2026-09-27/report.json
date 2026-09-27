@@ -1,0 +1,2379 @@
+{
+ "generatedAt": "2026-09-27T05:50:36.346Z",
+ "config": {
+  "landscape": {
+   "width": 1440,
+   "height": 900
+  },
+  "portrait": {
+   "width": 720,
+   "height": 1280
+  },
+  "dpr": 1,
+  "scale": 1,
+  "fps": 60,
+  "toleranceDeg": 0.01,
+  "rayToleranceDeg": 0.002,
+  "endToEndPixelShare": 0.1,
+  "budget": {
+   "p95Ms": 20,
+   "p99Ms": 33.3,
+   "maxIntervalMs": 100
+  },
+  "previewFovDeg": 90,
+  "probeEverySeconds": 1,
+  "colourStepCssPx": 1,
+  "colourDistinctLevels": 24,
+  "colourMinimumDistinctPixels": 20,
+  "userAgentSuffix": "foss-earth-check/1.0",
+  "suspendedMs": 2000,
+  "preventIdleSleep": "caffeinate -i, for this process's lifetime",
+  "trace": [
+   {
+    "name": "orbit-clockwise",
+    "type": "orbit",
+    "seconds": 20,
+    "fromBearingDeg": 180,
+    "turnDeg": 360,
+    "distanceM": 100,
+    "heightM": 3
+   },
+   {
+    "name": "orbit-counterclockwise",
+    "type": "orbit",
+    "seconds": 20,
+    "fromBearingDeg": 180,
+    "turnDeg": -360,
+    "distanceM": 100,
+    "heightM": 3
+   },
+   {
+    "name": "near-far",
+    "type": "sweep",
+    "seconds": 10,
+    "bearingDeg": 180,
+    "nearM": 30,
+    "farM": 200,
+    "heightM": 3
+   },
+   {
+    "name": "look-above",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 225,
+    "distanceM": 100,
+    "heightM": 40,
+    "yawAmplitudeDeg": 20,
+    "pitchAmplitudeDeg": 8
+   },
+   {
+    "name": "look-below",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 135,
+    "distanceM": 100,
+    "heightM": -15,
+    "yawAmplitudeDeg": 20,
+    "pitchAmplitudeDeg": 4
+   },
+   {
+    "name": "look-near",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 300,
+    "distanceM": 50,
+    "heightM": 10,
+    "yawAmplitudeDeg": 25,
+    "pitchAmplitudeDeg": 10
+   },
+   {
+    "name": "stop",
+    "type": "stop",
+    "seconds": 2
+   },
+   {
+    "name": "restart",
+    "type": "orbit",
+    "seconds": 5,
+    "fromBearingDeg": 300,
+    "turnDeg": 90,
+    "distanceM": 50,
+    "heightM": 10
+   }
+  ],
+  "controlTrace": [
+   {
+    "name": "control",
+    "type": "orbit",
+    "seconds": 4,
+    "fromBearingDeg": 180,
+    "turnDeg": 90,
+    "distanceM": 100,
+    "heightM": 3
+   }
+  ],
+  "views": [
+   {
+    "name": "north",
+    "note": "south of the marker, looking north",
+    "pose": {
+     "bearingDeg": 180,
+     "distanceM": 40,
+     "heightM": 3
+    }
+   },
+   {
+    "name": "east",
+    "note": "west of the marker, looking east",
+    "pose": {
+     "bearingDeg": 270,
+     "distanceM": 40,
+     "heightM": 3
+    }
+   }
+  ]
+ },
+ "inputs": {
+  "commit": "47f2d61e07784d05c2910454f2dce48219acc31b",
+  "uncommittedFiles": 0,
+  "files": {
+   "examples/panorama-scenes/umn-single.scene.json": "06fe28cb0066785e9bd475811b1be5a0e2a4e8fc9bce567a689a1fce6ee1228d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/px.jpg": "3281579dfce9b4815d5803f63bdaea061f75cb89a4d0daa5b0c934a731447428",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/nx.jpg": "9a6b9dde896f937f6cc8407f219ce26596e37802e21f5b509c2d8c37f3b7da96",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/py.jpg": "66b02f26c29be4de7f93120b6ad018c550340c856bad12ccf9743bad8cf8e8ca",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/ny.jpg": "a92bfbaa13f204827e9161b2686e2f926ca5fcf6ee0915b52c029926861e96b9",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/pz.jpg": "f0bcf2c0c6af6e1224c5c62b9c6138e3f7906443dc674a26ed40bc747d5895c3",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/nz.jpg": "073e7242e1c06a567c4053c32e28fa4b19b81b889c6c2e1d810e22223cc4432d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/px.jpg": "d2180df6785dab034c5fd7637d08b2ffb9f5ed3bbf4a6507805b1874a9d94391",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/nx.jpg": "bfcb067dcd8b73c73f5a9c99ddb09193f24aeeffda727566bf45505a330257d5",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/py.jpg": "edd33028946192a22a2b5e4c361b697ae253f08949f7b7873b59119c7ae0f733",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/ny.jpg": "64b8259724a94778a9442f0f02f7721adafdce3af314d7a5523db01f8794557d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/pz.jpg": "15cb8fd2df0f4c65b9106ed5f80e5d63035ae7179a54467cfe0b54f4798f5014",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/nz.jpg": "222d7f96d222cb7e82722ae891b1fa66d4257c93f98ad90ad73d73115d1ae646",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/px.jpg": "82655a0a021dd9e1851d8284e250f31aaa1fcfb36717c37915f2a047f2eae6f4",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/nx.jpg": "e58ddd5a80983cb41bdb05ef9f639109f935f6d2e7f34728398d6462367b8b11",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/py.jpg": "35fbf630be1367a5ab4dce359b2d0a74b7054d11ad4edf4e64405de14acae0bf",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/ny.jpg": "2123050dac37a7f945ba301223b803099c1814c256c580b719a38f70f66f4a72",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/pz.jpg": "fbcce3edff81376780336ecd836ecbe66d15334b92a3eb395502d31a992fe7e5",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/nz.jpg": "ab06248dfe9fa426ff0d80793c1acc29dd04ca046e7c536fd28f02768edd1572",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/immersion-512.jpg": "dc06da6dc608b7ea257b08f132548c2207b0348eed2d90b207821c5a4d003b38",
+   "examples/panorama-scenes/umn-cardinal.scene.json": "0767985198227d5bef1769e27a6b56391109a3d57bf3b03be4f73f735bf958bc",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/px.jpg": "d4416b3945fc7a0be82c5a05902eb8865ac9b269e6db29b372312edea5925eaa",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/nx.jpg": "e46bd4a1cf09dedc3a0881ebde639dab696c9df8e57dbed77b99decc2441b343",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/py.jpg": "e4deccaa6a57f694f4d17ed4adeebd4a2c2553f1c0d53b104ae351246ab8b3ca",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/ny.jpg": "d81621addd55e04c16a27fb1f1bfe53083ea74159f06f8a15f476913a6c6731b",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/pz.jpg": "fd35d6bdc8cb805d7d8714492ddf2ea17f7fc55ab895d880104296832c9687db",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/nz.jpg": "0a13cce9c468cb0e30ba61143f0f76041d9449266535fab8abd6ab7d32b8efcc",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/px.jpg": "be7020ff76da8b4968c5c445a6889da2a0e429a733108c2da5dfac574a8d7bd2",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/nx.jpg": "b120eceeec89a86703ecab739dd454bdecf5b9b36df59bd9dfb2457f81262ba7",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/py.jpg": "939d8332acfec1a7e034c9c45f50f2e6d937d57885023f748376c04bf6f0a3c7",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/ny.jpg": "defbb1c521941892a1abf638094ad558836efddfaa07f33ca4d6ed10cf15d3f0",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/pz.jpg": "e119b3bd43c721512cdce672ff8e1a328f458cdff76f7fff9104f0e3ad43cf09",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/nz.jpg": "b0e94fd347b9ffa55d810bdf8790e299c34694990e6c17bd396b531e18bb41ce",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/px.jpg": "cd9a3d7b11f354782591d2b0f8037b03686bc6d6343ca2a9c1e351b0a153dc3e",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/nx.jpg": "96933450fb8abe69711de986cbf6a07abe0ca01226bce34813f70285690cbc2e",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/py.jpg": "adf71f21caf4aeb779d2122d699d4591031f082254dd5370ee6d3f9853226258",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/ny.jpg": "733b668cc1efe73b40aba20fc1828a02687359042a1ecdef7f9fd8dff9e8a794",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/pz.jpg": "55e6d3b2da7cc3fe9264b7139768645fd46ccee0898c92f32bd6fc48edd72fec",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/nz.jpg": "be07d7197e8547d20cb59368f225e3a4dc6db172d6184736fc69d6bc956e0a11",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/px.jpg": "987efbac121dc055f23a9c80503aa7757a507608551e30ceda42c8343c04dc2f",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/nx.jpg": "f7b32335f8eb6a69b1017a902a8e98e6710d7d65be94602ddc4ba182463bcf1d",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/py.jpg": "e7af5ea6456058a4a92754271592cea0f9e055ad69fbd1f79fecdf72637b703a",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/ny.jpg": "5a1a68341edc687a43508a433f816693d28f7a59a538f5da16888fdefeb47c16",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/pz.jpg": "cbe8d145369599eec0509c1dd73b38f3cadc0285d3add61b51dd9bf0291b98ae",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/nz.jpg": "0a85a409f6df2ba22d815dae1241ae29d8c4d92f304f1692f85e8cee7e6cfd45",
+   "examples/panorama-scenes/media/cardinal-grid/immersion-1024.jpg": "873e50ac8bddaac82fe7ef09f657ab91b799ac8c4eff22d1c8fa6257a473867f",
+   "examples/panorama-scenes/media/cardinal-grid/immersion-2048.jpg": "076d49e6cce75ea184706fed939769877779e98c39559e4dfff8189ba3372dea",
+   "examples/panorama-scenes/campus-pair.scene.json": "6fb7a9b90736ad71a4334f9d0363c1f1d46c219e4cebd21d3642b9d87bd3df60",
+   "scripts/validation/panorama-campus.mjs": "1f5329078d4719df0a27716474d74bcf1c8965de0ea35eadb8474f6dab436d56",
+   "scripts/validation/panoramaCampusAgent.js": "c2980f6ec4eec1e18a079992b1d764fbbc1b8d6e7df2e7c2656836e72af7f38e"
+  }
+ },
+ "browser": {
+  "product": "Chrome/153.0.8010.53",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36 foss-earth-check/1.0",
+  "gpu": {
+   "devices": [
+    {
+     "vendorId": 4203,
+     "deviceId": 0,
+     "vendorString": "Google Inc. (Apple)",
+     "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+     "driverVendor": "Apple",
+     "driverVersion": "27.0"
+    }
+   ],
+   "auxAttributes": {
+    "amdSwitchable": false,
+    "canSupportThreadedTextureMailbox": false,
+    "directRenderingVersion": "",
+    "displayType": "ANGLE_METAL",
+    "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_IMG_texture_compression_pvrtc GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_NV_fence GL_NV_framebuffer_blit GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_QCOM_render_shared_exponent ",
+    "glImplementationParts": "(gl=egl-angle,angle=metal)",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+    "glResetNotificationStrategy": 33362,
+    "glVendor": "Google Inc. (Apple)",
+    "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28654 git hash: ed04c8113c65)",
+    "glWsExtensions": "",
+    "glWsVendor": "",
+    "glWsVersion": "",
+    "inProcessGpu": false,
+    "initializationTime": 0.027529,
+    "isAsan": false,
+    "isClangCoverage": false,
+    "jpegDecodeAcceleratorSupported": false,
+    "maxMsaaSamples": "8",
+    "optimus": false,
+    "passthroughCmdDecoder": true,
+    "pixelShaderVersion": "3.00",
+    "processCrashCount": 0,
+    "sandboxed": true,
+    "skiaBackendType": "GraphiteDawnMetal",
+    "subpixelFontRendering": true,
+    "targetCpuBits": 64,
+    "vertexShaderVersion": "3.00",
+    "visibilityCallbackCallCount": 0
+   },
+   "featureStatus": {
+    "2d_canvas": "enabled",
+    "direct_rendering_display_compositor": "disabled_off_ok",
+    "gpu_compositing": "enabled",
+    "multiple_raster_threads": "enabled_on",
+    "opengl": "enabled_on",
+    "rasterization": "enabled",
+    "raw_draw": "disabled_off_ok",
+    "skia_graphite": "enabled_on",
+    "trees_in_viz": "disabled_off",
+    "video_decode": "enabled",
+    "video_encode": "enabled",
+    "webgl": "enabled",
+    "webgpu": "enabled",
+    "webnn": "disabled_off"
+   },
+   "driverBugWorkarounds": [
+    "disable_2d_canvas_auto_flush",
+    "enable_webgl_timer_query_extensions",
+    "disabled_extension_GL_KHR_blend_equation_advanced",
+    "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+   ],
+   "videoDecoding": [],
+   "videoEncoding": []
+  }
+ },
+ "coldLoad": {
+  "appMs": 819.8000000119209,
+  "sceneMs": 874.5,
+  "previewReadyMs": 874.5,
+  "overviewAppliedMs": 2083.699999988079,
+  "markerPlacedMs": 2083.699999988079,
+  "pollIntervalMs": 50,
+  "note": "Page time from navigation, with an empty browser profile and cache."
+ },
+ "environment": {
+  "adapter": {
+   "vendor": "apple",
+   "architecture": "metal-3",
+   "device": "0x0000",
+   "description": "Apple M5",
+   "isFallbackAdapter": false
+  },
+  "renderer": "webgpu",
+  "map": {
+   "mode": "raster-basemap",
+   "basemap": "usgs-imagery-topo",
+   "basemapProvider": "USGS The National Map",
+   "elevation": "mapterhorn"
+  },
+  "gpuTiming": true,
+  "devicePixelRatio": 1
+ },
+ "hardwareVerified": true,
+ "scene": {
+  "photograph": {
+   "entity": "umn-test-orb",
+   "marker": [
+    -255060.70420898977,
+    -4512633.508409398,
+    4485507.054418583
+   ],
+   "markerGeodetic": {
+    "longitudeDeg": -93.235,
+    "latitudeDeg": 44.97399999999999,
+    "heightMeters": 286.13653790205717
+   },
+   "radiusMeters": 2,
+   "contentDifference": 0,
+   "fovDeg": 59.99999999999999,
+   "markerSettle": {
+    "settled": true,
+    "seconds": 39.72080000001192,
+    "travelM": 104.63167259369743,
+    "history": [
+     {
+      "t": 0.1005,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 1.0154000000357628,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 2.0234000000357626,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 3.034900000035763,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 4.049600000023842,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 5.079900000035763,
+      "heightM": 390.7682104976848,
+      "streaming": true
+     },
+     {
+      "t": 6.101600000023842,
+      "heightM": 285.74281532596797,
+      "streaming": true
+     },
+     {
+      "t": 7.013200000047684,
+      "heightM": 285.74281532596797,
+      "streaming": true
+     },
+     {
+      "t": 8.021900000035762,
+      "heightM": 285.74281532596797,
+      "streaming": true
+     },
+     {
+      "t": 9.0355,
+      "heightM": 285.74281532596797,
+      "streaming": true
+     },
+     {
+      "t": 10.0615,
+      "heightM": 285.71790452767164,
+      "streaming": true
+     },
+     {
+      "t": 11.013700000047685,
+      "heightM": 17.36508386116475,
+      "streaming": true
+     },
+     {
+      "t": 12.02,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 13.029,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 14.115900000035763,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 15.063700000047684,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 16.053,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 17.088600000023842,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 18.06030000001192,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 19.025,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 20.007700000047684,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 21.072900000035762,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 22.007200000047682,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 23.07680000001192,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 24.08090000003576,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 25.034900000035762,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 26.064400000035764,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 27.019700000047685,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 28.020400000035764,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 29.086,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 30.08380000001192,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 31.060400000035763,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 32.051900000035765,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 33.05130000001192,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 34.032,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 35.099,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 36.010400000035766,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 37.04120000004768,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 38.00670000004769,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 39.08720000004768,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     }
+    ]
+   },
+   "previewDetail": {
+    "representation": "preview-128",
+    "faceTexels": 128,
+    "limitation": null
+   }
+  },
+  "cardinal": {
+   "entity": "umn-cardinal-orb",
+   "marker": [
+    -255060.70420898977,
+    -4512633.508409398,
+    4485507.054418583
+   ],
+   "markerGeodetic": {
+    "longitudeDeg": -93.235,
+    "latitudeDeg": 44.97399999999999,
+    "heightMeters": 286.13653790205717
+   },
+   "radiusMeters": 2,
+   "contentDifference": 0,
+   "fovDeg": 59.99999999999999,
+   "markerSettle": {
+    "settled": true,
+    "seconds": 5.005900000035763,
+    "travelM": 0,
+    "history": [
+     {
+      "t": 0.10230000001192092,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 1.019300000011921,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 2.042,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 3.065100000023842,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 4.088100000023842,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 5.005800000011921,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     }
+    ]
+   },
+   "previewDetail": {
+    "representation": "preview-128",
+    "faceTexels": 128,
+    "limitation": null
+   }
+  }
+ },
+ "correctness": {
+  "probes": 67,
+  "measured": 67,
+  "failedProbes": [],
+  "interiorMaxDeg": 0.0003643279723189081,
+  "worst": {
+   "segment": "orbit-clockwise",
+   "t": 15.516,
+   "frameEye": [
+    -254962.93424617115,
+    -4512652.554360429,
+    4485497.71171449
+   ],
+   "distanceM": 100.04498987958817,
+   "effectiveRadiusM": 2,
+   "projectedDiameterPx": 31.162894387578632,
+   "windowGain": 50.012498437907745,
+   "contentPerPixelDeg": 3.67644473614077,
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "ray": {
+    "order": "bottom-up",
+    "maxDeg": 0.00008225158558160465,
+    "pixels": 700,
+    "orb": {
+     "pixels": 616,
+     "maxDeg": 0.00007597990294082512,
+     "meanDeg": 0.00005055565580156027,
+     "p99Deg": 0.00007505615908254302
+    }
+   },
+   "interior": {
+    "pixels": 616,
+    "maxDeg": 0.0003643279723189081,
+    "meanDeg": 0.00022377861225685087,
+    "p99Deg": 0.00034040609084105285,
+    "maxAt": [
+     720,
+     438
+    ]
+   },
+   "endToEnd": {
+    "pixels": 616,
+    "maxDeg": 0.0019168264040491058,
+    "meanDeg": 0.0015190879946839779,
+    "p99Deg": 0.0018831695027403483
+   },
+   "coverage": {
+    "edgePixels": 208,
+    "gpuOnlyPixels": 0,
+    "cpuOnlyPixels": 0,
+    "drawnOutsideOrbPixels": 0
+   }
+  },
+  "rayMaxDeg": 0.00013061492992077228,
+  "endToEnd": {
+   "maxDeg": 0.0028032661569149285,
+   "windowGain": 25.4632152196738,
+   "contentPerPixelDeg": 1.8718141761266824,
+   "pixelShare": 0.0014976198987421314,
+   "segment": "look-near",
+   "t": 59.514300000000006
+  },
+  "readbackRowOrder": [
+   "bottom-up"
+  ],
+  "coverage": {
+   "edgePixels": 16878,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 65
+  },
+  "bySegment": {
+   "orbit-clockwise": {
+    "probes": 20,
+    "maxDeg": 0.0003643279723189081,
+    "minDiameterPx": 31.16289438717342,
+    "maxDiameterPx": 31.162894387725498
+   },
+   "orbit-counterclockwise": {
+    "probes": 20,
+    "maxDeg": 0.00032428431812370494,
+    "minDiameterPx": 31.16289438736639,
+    "maxDiameterPx": 31.162894387902835
+   },
+   "near-far": {
+    "probes": 10,
+    "maxDeg": 0.00024139557423307945,
+    "minDiameterPx": 23.999999999999996,
+    "maxDiameterPx": 91.55289161588074
+   },
+   "look-above": {
+    "probes": 3,
+    "maxDeg": 0.00030518889156455706,
+    "minDiameterPx": 28.939469912405826,
+    "maxDiameterPx": 28.95308871853609
+   },
+   "look-below": {
+    "probes": 4,
+    "maxDeg": 0.00017211853289342602,
+    "minDiameterPx": 30.81764486168572,
+    "maxDiameterPx": 30.8237705997054
+   },
+   "look-near": {
+    "probes": 3,
+    "maxDeg": 0.00011509792364676052,
+    "minDiameterPx": 61.131313352094175,
+    "maxDiameterPx": 61.17236120192358
+   },
+   "stop": {
+    "probes": 0,
+    "maxDeg": 0,
+    "minDiameterPx": null,
+    "maxDiameterPx": 0
+   },
+   "restart": {
+    "probes": 7,
+    "maxDeg": 0.00010341050411796101,
+    "minDiameterPx": 61.14295984294974,
+    "maxDiameterPx": 61.142959844151555
+   }
+  },
+  "correlation": {
+   "frames": 3881,
+   "orbDrawFrames": 3881,
+   "staleUniformFrames": 0,
+   "missingDrawFrames": 0,
+   "multipleDrawFrames": 0,
+   "maxDrawVsLiveEyeM": 0.00000702777094247428,
+   "worstDrawVsLive": {
+    "segment": "orbit-counterclockwise",
+    "t": 22.0824,
+    "frameId": 3509,
+    "drawsThisFrame": 1,
+    "activeCameras": 0
+   },
+   "maxLiveVsPlannedEyeM": 0.6717262871455,
+   "markerTravelM": 0.4186333739367611,
+   "staleSegments": {}
+  },
+  "frames": 3896
+ },
+ "negativeControl": {
+  "delayFrames": 1,
+  "probes": 8,
+  "measured": 8,
+  "interiorMaxDeg": 18.23333502948582,
+  "rejectedByDirections": true,
+  "staleUniformFrames": 240,
+  "correlation": {
+   "frames": 240,
+   "orbDrawFrames": 240,
+   "staleUniformFrames": 240,
+   "missingDrawFrames": 0,
+   "multipleDrawFrames": 0,
+   "maxDrawVsLiveEyeM": 0.000006650566566063543,
+   "worstDrawVsLive": {
+    "segment": "control",
+    "t": 0.516699999999997,
+    "frameId": 6136,
+    "drawsThisFrame": 1,
+    "activeCameras": 0
+   },
+   "maxLiveVsPlannedEyeM": 0.33597654418366135,
+   "markerTravelM": 0,
+   "staleSegments": {
+    "control": 240
+   }
+  }
+ },
+ "pointerDrags": [
+  {
+   "button": "left",
+   "cameraMoved": true,
+   "phaseAfter": "overview",
+   "before": {
+    "center": {
+     "x": -255060.70420898977,
+     "y": -4512633.508409398,
+     "z": 4485507.0544185825
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 1.0471975511965976
+   },
+   "after": {
+    "center": {
+     "x": -255040.34724610337,
+     "y": -4512638.2914863005,
+     "z": 4485503.424392895
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 1.0471975511965976
+   },
+   "probe": {
+    "segment": "drag-left",
+    "t": 0,
+    "frameEye": [
+     -255044.44214031365,
+     -4512710.745812106,
+     4485434.557837052
+    ],
+    "distanceM": 107.17194403595596,
+    "effectiveRadiusM": 2,
+    "projectedDiameterPx": 29.0905561307911,
+    "windowGain": 53.576640405231814,
+    "contentPerPixelDeg": 3.9384466633369346,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.0001366289108551454,
+     "pixels": 645,
+     "orb": {
+      "pixels": 564,
+      "maxDeg": 0.00013558955507267742,
+      "meanDeg": 0.00010365265909674667,
+      "p99Deg": 0.00013439465131094385
+     }
+    },
+    "interior": {
+     "pixels": 564,
+     "maxDeg": 0.0002579929053350915,
+     "meanDeg": 0.00014001157319390214,
+     "p99Deg": 0.00024050742567124927,
+     "maxAt": [
+      577,
+      445
+     ]
+    },
+    "endToEnd": {
+     "pixels": 564,
+     "maxDeg": 0.006959666710897528,
+     "meanDeg": 0.004485244860197151,
+     "p99Deg": 0.006810857453995395
+    },
+    "coverage": {
+     "edgePixels": 198,
+     "gpuOnlyPixels": 0,
+     "cpuOnlyPixels": 0,
+     "drawnOutsideOrbPixels": 0
+    }
+   }
+  },
+  {
+   "button": "right",
+   "cameraMoved": true,
+   "phaseAfter": "overview",
+   "before": {
+    "center": {
+     "x": -255040.34724610337,
+     "y": -4512638.2914863005,
+     "z": 4485503.424392895
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 1.0471975511965976
+   },
+   "after": {
+    "center": {
+     "x": -255040.34724610302,
+     "y": -4512638.291486296,
+     "z": 4485503.424392918
+    },
+    "yaw": -0.8206469274849457,
+    "pitch": 1.5533430342749532,
+    "radius": 100.04498987955368,
+    "fov": 1.0471975511965976
+   },
+   "probe": {
+    "segment": "drag-right",
+    "t": 0,
+    "frameEye": [
+     -254970.0638811742,
+     -4512691.618645823,
+     4485456.249583209
+    ],
+    "distanceM": 119.05292899087355,
+    "effectiveRadiusM": 2,
+    "projectedDiameterPx": 26.187440158343165,
+    "windowGain": 59.51806427738133,
+    "contentPerPixelDeg": 4.375203818092248,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.00010483457194626966,
+     "pixels": 492,
+     "orb": {
+      "pixels": 427,
+      "maxDeg": 0.00010003182210615086,
+      "meanDeg": 0.00006276245190597237,
+      "p99Deg": 0.00009425266478322674
+     }
+    },
+    "interior": {
+     "pixels": 427,
+     "maxDeg": 0.00016883743055337656,
+     "meanDeg": 0.00006325248853009029,
+     "p99Deg": 0.00015547952562461746,
+     "maxAt": [
+      651,
+      457
+     ]
+    },
+    "endToEnd": {
+     "pixels": 427,
+     "maxDeg": 0.0038184535053178447,
+     "meanDeg": 0.002893452424510899,
+     "p99Deg": 0.0037689240736800745
+    },
+    "coverage": {
+     "edgePixels": 171,
+     "gpuOnlyPixels": 0,
+     "cpuOnlyPixels": 0,
+     "drawnOutsideOrbPixels": 0
+    }
+   }
+  }
+ ],
+ "colour": [
+  {
+   "source": "photograph",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/photograph-north-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414831862,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.149590675872112,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 1424,
+     "correctError": 6.2449686356878,
+     "alternativeError": 57.55862934328251,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 2919,
+     "correctError": 3.671856224397114,
+     "alternativeError": 70.39890004193138,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 3236,
+     "correctError": 3.6918229332322325,
+     "alternativeError": 57.37355814963058,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 2120,
+     "correctError": 4.625837818113704,
+     "alternativeError": 59.86472741001265,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/photograph-east-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414994455,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.305981209432241,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 3224,
+     "correctError": 4.525732043116261,
+     "alternativeError": 66.03669116340049,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 1814,
+     "correctError": 6.453714543388643,
+     "alternativeError": 56.13898096977861,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 3203,
+     "correctError": 4.474549698909449,
+     "alternativeError": 66.17750042924382,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 2912,
+     "correctError": 4.497782579724484,
+     "alternativeError": 70.0603141459191,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/photograph-north-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 95.99999999999999,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.6834447523586284,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 2172,
+     "correctError": 6.937957703088465,
+     "alternativeError": 59.931504373084444,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 4499,
+     "correctError": 4.129820121394315,
+     "alternativeError": 71.40728741431502,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 5018,
+     "correctError": 3.973234019221691,
+     "alternativeError": 58.497611728764745,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 3314,
+     "correctError": 5.413498281391516,
+     "alternativeError": 60.25215911108082,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/photograph-east-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 96,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.810488290460487,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 4991,
+     "correctError": 5.016418152481804,
+     "alternativeError": 66.41118413946855,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 2803,
+     "correctError": 6.953542952347428,
+     "alternativeError": 56.83789722063041,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 4984,
+     "correctError": 4.864169180110911,
+     "alternativeError": 66.485695082752,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 4505,
+     "correctError": 4.9331152894021955,
+     "alternativeError": 70.30153395652795,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/cardinal-north-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414831862,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.6569851996441223,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 56,
+     "correctError": 14.702379772008419,
+     "alternativeError": 65.4726301157029,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 133,
+     "correctError": 17.491771306287124,
+     "alternativeError": 63.33036206275982,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 138,
+     "correctError": 17.671899312494745,
+     "alternativeError": 72.83114398129642,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 126,
+     "correctError": 18.117048439995543,
+     "alternativeError": 59.582073976743565,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/cardinal-east-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414994455,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.63229849699505,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 127,
+     "correctError": 18.542615500857472,
+     "alternativeError": 59.11852009119758,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 109,
+     "correctError": 19.757735412183617,
+     "alternativeError": 65.96391464413094,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 127,
+     "correctError": 18.542615500857472,
+     "alternativeError": 59.122453886891975,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 133,
+     "correctError": 16.819148429088848,
+     "alternativeError": 68.033365240923,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/cardinal-north-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 95.99999999999999,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.859656281700312,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 74,
+     "correctError": 13.117956372033674,
+     "alternativeError": 74.48759450358197,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 204,
+     "correctError": 18.358751206034704,
+     "alternativeError": 67.16327772539285,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 207,
+     "correctError": 18.554860827782523,
+     "alternativeError": 74.61714971066912,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 189,
+     "correctError": 19.930981065648098,
+     "alternativeError": 64.79340094819058,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/cardinal-east-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 96,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.784649706419011,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 193,
+     "correctError": 19.41062679425555,
+     "alternativeError": 59.69915415673198,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 164,
+     "correctError": 21.0964678057654,
+     "alternativeError": 67.16952640222426,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 193,
+     "correctError": 19.41062679425555,
+     "alternativeError": 59.70184811442477,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 199,
+     "correctError": 18.639993869147514,
+     "alternativeError": 70.63724180662997,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  }
+ ],
+ "timing": {
+  "mapDetail": {
+   "automatic": "off while timing",
+   "levelsCoarserBefore": 1.75
+  },
+  "shown": {
+   "profiled": true,
+   "motion": {
+    "frames": 2863,
+    "meanMs": 22.67925253230877,
+    "p50Ms": 16.699999999982538,
+    "p95Ms": 66.60000000000582,
+    "p99Ms": 83.39999999999418,
+    "maxMs": 133.30000000001746,
+    "over33Ms": 402,
+    "over100Ms": 4
+   },
+   "renderStartDelay": {
+    "frames": 2863,
+    "meanMs": 10.536395377405865,
+    "p50Ms": 6.199999988079071,
+    "p95Ms": 29.49999998806743,
+    "p99Ms": 36,
+    "maxMs": 77.19999996424303,
+    "over33Ms": 71,
+    "over100Ms": 0
+   },
+   "bySegment": {
+    "orbit-clockwise": {
+     "frames": 829,
+     "meanMs": 24.10446320868517,
+     "p50Ms": 16.699999999982538,
+     "p95Ms": 66.70000000001164,
+     "p99Ms": 83.39999999999418,
+     "maxMs": 133.29999999998836,
+     "over33Ms": 130,
+     "over100Ms": 2
+    },
+    "orbit-counterclockwise": {
+     "frames": 910,
+     "meanMs": 21.9953846153846,
+     "p50Ms": 16.699999999982538,
+     "p95Ms": 66.60000000000582,
+     "p99Ms": 66.70000000001164,
+     "maxMs": 83.40000000002328,
+     "over33Ms": 118,
+     "over100Ms": 0
+    },
+    "near-far": {
+     "frames": 506,
+     "meanMs": 19.729051383399256,
+     "p50Ms": 16.699999999982538,
+     "p95Ms": 33.39999999999418,
+     "p99Ms": 33.39999999999418,
+     "maxMs": 33.40000000002328,
+     "over33Ms": 56,
+     "over100Ms": 0
+    },
+    "look-above": {
+     "frames": 148,
+     "meanMs": 22.63445945945942,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.60000000000582,
+     "p99Ms": 66.70000000001164,
+     "maxMs": 100,
+     "over33Ms": 24,
+     "over100Ms": 0
+    },
+    "look-below": {
+     "frames": 192,
+     "meanMs": 17.360416666666577,
+     "p50Ms": 16.699999999982538,
+     "p95Ms": 16.800000000017462,
+     "p99Ms": 33.39999999999418,
+     "maxMs": 49.90000000002328,
+     "over33Ms": 5,
+     "over100Ms": 0
+    },
+    "look-near": {
+     "frames": 125,
+     "meanMs": 26.26560000000009,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.70000000001164,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 133.30000000001746,
+     "over33Ms": 26,
+     "over100Ms": 1
+    },
+    "restart": {
+     "frames": 153,
+     "meanMs": 32.56928104575167,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 83.30000000001746,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 100.09999999997672,
+     "over33Ms": 43,
+     "over100Ms": 1
+    }
+   },
+   "firstFrameAfterResume": [
+    {
+     "segment": "restart",
+     "intervalMs": 16.60000000000582
+    }
+   ],
+   "resumeLatency": [
+    {
+     "segment": "stop",
+     "firstFrameAfterMs": 16.70000000001164
+    }
+   ],
+   "correlation": {
+    "frames": 2865,
+    "orbDrawFrames": 2865,
+    "staleUniformFrames": 0,
+    "missingDrawFrames": 0,
+    "multipleDrawFrames": 0,
+    "maxDrawVsLiveEyeM": 0.00000702106190928501,
+    "worstDrawVsLive": {
+     "segment": "orbit-clockwise",
+     "t": 6.416399999999994,
+     "frameId": 8278,
+     "drawsThisFrame": 1,
+     "activeCameras": 0
+    },
+    "maxLiveVsPlannedEyeM": 0.6717262871455,
+    "markerTravelM": 14.389002455954358,
+    "staleSegments": {}
+   },
+   "streaming": {
+    "before": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 136,
+      "activeTiles": 160
+     }
+    },
+    "after": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 136,
+      "activeTiles": 160
+     }
+    }
+   },
+   "requests": {
+    "own": 0,
+    "panoramaMedia": 0,
+    "externalByHost": {
+     "basemap.nationalmap.gov": 5832,
+     "tiles.mapterhorn.com": 2845
+    }
+   },
+   "mapDetail": {
+    "streamingStoppedBefore": true,
+    "waitedSeconds": 2.059600000023842,
+    "changesDuring": []
+   },
+   "profiler": {
+    "gpu": "measuring",
+    "frames": 2928,
+    "frame": {
+     "meanMs": 22.92715163934019,
+     "p50Ms": 16.69999998807907,
+     "p95Ms": 74.69999998807907,
+     "p99Ms": 88.69999998807907,
+     "maxMs": 148.4000000357628
+    },
+    "measuredMeanMs": 8.224180327819996,
+    "sections": [
+     {
+      "meanMs": 7.395730873966803,
+      "p50Ms": 3.800000011920929,
+      "p95Ms": 28.19999998807907,
+      "p99Ms": 32.80000001192093,
+      "maxMs": 76,
+      "section": "map",
+      "name": "map",
+      "depth": 0,
+      "shareOfFrame": 0.32257521519928506,
+      "activeFrames": 2928
+     },
+     {
+      "meanMs": 7.392315573501782,
+      "p50Ms": 3.800000011920929,
+      "p95Ms": 28.19999998807907,
+      "p99Ms": 32.80000001192093,
+      "maxMs": 76,
+      "section": "map/raster tiles",
+      "name": "raster tiles",
+      "depth": 1,
+      "shareOfFrame": 0.3224262520607868,
+      "activeFrames": 2928
+     },
+     {
+      "meanMs": 0.0030054643831617846,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0.10000002384185791,
+      "maxMs": 0.10000002384185791,
+      "section": "map/camera",
+      "name": "camera",
+      "depth": 1,
+      "shareOfFrame": 0.0001310875607419447,
+      "activeFrames": 88
+     },
+     {
+      "meanMs": 0.00030737708175117203,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0.10000002384185791,
+      "section": "map/terrain preparation",
+      "name": "terrain preparation",
+      "depth": 1,
+      "shareOfFrame": 0.000013406684205104244,
+      "activeFrames": 9
+     },
+     {
+      "meanMs": 0.00010245900010802056,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0.10000002384185791,
+      "section": "map/google tiles",
+      "name": "google tiles",
+      "depth": 1,
+      "shareOfFrame": 0.000004468893551182059,
+      "activeFrames": 3
+     },
+     {
+      "meanMs": 1.873979250284606,
+      "p50Ms": 1.835055,
+      "p95Ms": 2.368401,
+      "p99Ms": 2.883581,
+      "maxMs": 3.238909,
+      "section": "gpu",
+      "name": "gpu",
+      "depth": 0,
+      "shareOfFrame": 0.08173624354928968,
+      "activeFrames": 2923
+     },
+     {
+      "meanMs": 1.877184825464703,
+      "p50Ms": 1.835597,
+      "p95Ms": 2.368401,
+      "p99Ms": 2.883581,
+      "maxMs": 3.238909,
+      "section": "gpu/globe",
+      "name": "globe",
+      "depth": 1,
+      "shareOfFrame": 0.08173624354928968,
+      "activeFrames": 2923
+     },
+     {
+      "meanMs": 0.8284494538531929,
+      "p50Ms": 0.800000011920929,
+      "p95Ms": 1.100000023841858,
+      "p99Ms": 1.300000011920929,
+      "maxMs": 12.799999952316284,
+      "section": "render",
+      "name": "render",
+      "depth": 0,
+      "shareOfFrame": 0.036133989380158105,
+      "activeFrames": 2928
+     },
+     {
+      "meanMs": 0.43538251439811754,
+      "p50Ms": 0.40000003576278687,
+      "p95Ms": 0.699999988079071,
+      "p99Ms": 0.800000011920929,
+      "maxMs": 12.299999952316284,
+      "section": "render/draw",
+      "name": "draw",
+      "depth": 1,
+      "shareOfFrame": 0.01898982138064871,
+      "activeFrames": 2928
+     },
+     {
+      "meanMs": 0.012909836090001904,
+      "p50Ms": 0,
+      "p95Ms": 0.10000002384185791,
+      "p99Ms": 0.10000002384185791,
+      "maxMs": 0.10000002384185791,
+      "section": "render/draw/panorama uniforms",
+      "name": "panorama uniforms",
+      "depth": 2,
+      "shareOfFrame": 0.0005630806780136701,
+      "activeFrames": 378
+     },
+     {
+      "meanMs": 0.11495901682907766,
+      "p50Ms": 0.10000002384185791,
+      "p95Ms": 0.20000004768371582,
+      "p99Ms": 0.20000004768371582,
+      "maxMs": 0.5,
+      "section": "render/scenes",
+      "name": "scenes",
+      "depth": 1,
+      "shareOfFrame": 0.005014099380396736,
+      "activeFrames": 2550
+     },
+     {
+      "meanMs": 0.0015710382391520537,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0.09999996423721313,
+      "maxMs": 0.10000002384185791,
+      "section": "render/scenes/placement",
+      "name": "placement",
+      "depth": 2,
+      "shareOfFrame": 0.00006852304481016927,
+      "activeFrames": 46
+     },
+     {
+      "meanMs": 0.0008196720008641644,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0.10000002384185791,
+      "section": "render/scenes/upload",
+      "name": "upload",
+      "depth": 2,
+      "shareOfFrame": 0.000035751148409456474,
+      "activeFrames": 24
+     },
+     {
+      "meanMs": 0.1093920758757435,
+      "p50Ms": 0.10000002384185791,
+      "p95Ms": 0.19999998807907104,
+      "p99Ms": 0.20000004768371582,
+      "maxMs": 0.30000001192092896,
+      "section": "render/active meshes",
+      "name": "active meshes",
+      "depth": 1,
+      "shareOfFrame": 0.004771289412507747,
+      "activeFrames": 2525
+     },
+     {
+      "meanMs": 0.0025273223962288737,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0.10000002384185791,
+      "maxMs": 0.20000004768371582,
+      "section": "render/render targets",
+      "name": "render targets",
+      "depth": 1,
+      "shareOfFrame": 0.00011023272476168811,
+      "activeFrames": 73
+     }
+    ]
+   }
+  },
+  "hidden": {
+   "profiled": true,
+   "motion": {
+    "frames": 2838,
+    "meanMs": 22.89076814658208,
+    "p50Ms": 16.70000000001164,
+    "p95Ms": 66.69999999995343,
+    "p99Ms": 83.39999999999418,
+    "maxMs": 150.09999999997672,
+    "over33Ms": 389,
+    "over100Ms": 2
+   },
+   "renderStartDelay": {
+    "frames": 2838,
+    "meanMs": 10.689887232361293,
+    "p50Ms": 6.399999976158142,
+    "p95Ms": 30.200000011944212,
+    "p99Ms": 36.49999998806743,
+    "maxMs": 78.89999996422557,
+    "over33Ms": 84,
+    "over100Ms": 0
+   },
+   "bySegment": {
+    "orbit-clockwise": {
+     "frames": 822,
+     "meanMs": 24.329927007299247,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 83.29999999998836,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 150,
+     "over33Ms": 129,
+     "over100Ms": 1
+    },
+    "orbit-counterclockwise": {
+     "frames": 904,
+     "meanMs": 22.123008849557504,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.59999999997672,
+     "p99Ms": 66.79999999998836,
+     "maxMs": 100,
+     "over33Ms": 112,
+     "over100Ms": 0
+    },
+    "near-far": {
+     "frames": 507,
+     "meanMs": 19.72307692307699,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 33.399999999965075,
+     "p99Ms": 33.40000000002328,
+     "maxMs": 33.40000000002328,
+     "over33Ms": 50,
+     "over100Ms": 0
+    },
+    "look-above": {
+     "frames": 145,
+     "meanMs": 22.987586206896633,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.59999999997672,
+     "p99Ms": 83.29999999998836,
+     "maxMs": 83.40000000002328,
+     "over33Ms": 19,
+     "over100Ms": 0
+    },
+    "look-below": {
+     "frames": 193,
+     "meanMs": 17.270984455958487,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 16.79999999998836,
+     "p99Ms": 33.29999999998836,
+     "maxMs": 50,
+     "over33Ms": 2,
+     "over100Ms": 0
+    },
+    "look-near": {
+     "frames": 121,
+     "meanMs": 27.40826446280963,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.70000000001164,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 150.09999999997672,
+     "over33Ms": 28,
+     "over100Ms": 1
+    },
+    "restart": {
+     "frames": 146,
+     "meanMs": 34.130821917808056,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 83.29999999998836,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 83.40000000002328,
+     "over33Ms": 49,
+     "over100Ms": 0
+    }
+   },
+   "firstFrameAfterResume": [
+    {
+     "segment": "restart",
+     "intervalMs": 16.600000000034925
+    }
+   ],
+   "resumeLatency": [
+    {
+     "segment": "restart",
+     "firstFrameAfterMs": 16.600000000034925
+    }
+   ],
+   "correlation": null,
+   "streaming": {
+    "before": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 157,
+      "activeTiles": 160
+     }
+    },
+    "after": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 136,
+      "activeTiles": 160
+     }
+    }
+   },
+   "requests": {
+    "own": 0,
+    "panoramaMedia": 0,
+    "externalByHost": {
+     "basemap.nationalmap.gov": 7605,
+     "tiles.mapterhorn.com": 2919
+    }
+   },
+   "mapDetail": {
+    "streamingStoppedBefore": true,
+    "waitedSeconds": 8.0785,
+    "changesDuring": []
+   },
+   "profiler": {
+    "gpu": "measuring",
+    "frames": 2893,
+    "frame": {
+     "meanMs": 23.198409955063948,
+     "p50Ms": 16.69999998807907,
+     "p95Ms": 75.40000003576279,
+     "p99Ms": 89.30000001192093,
+     "maxMs": 162.60000002384186
+    },
+    "measuredMeanMs": 8.282163844259395,
+    "sections": [
+     {
+      "meanMs": 7.601970273114141,
+      "p50Ms": 4,
+      "p95Ms": 28.30000001192093,
+      "p99Ms": 33.30000001192093,
+      "maxMs": 77.89999997615814,
+      "section": "map",
+      "name": "map",
+      "depth": 0,
+      "shareOfFrame": 0.32769359140731613,
+      "activeFrames": 2893
+     },
+     {
+      "meanMs": 7.598133425625228,
+      "p50Ms": 4,
+      "p95Ms": 28.30000001192093,
+      "p99Ms": 33.30000001192093,
+      "maxMs": 77.89999997615814,
+      "section": "map/raster tiles",
+      "name": "raster tiles",
+      "depth": 1,
+      "shareOfFrame": 0.3275281987146124,
+      "activeFrames": 2893
+     },
+     {
+      "meanMs": 0.003422053161888769,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0.10000002384185791,
+      "maxMs": 0.10000002384185791,
+      "section": "map/camera",
+      "name": "camera",
+      "depth": 1,
+      "shareOfFrame": 0.00014751240143257206,
+      "activeFrames": 99
+     },
+     {
+      "meanMs": 0.0003110957401168829,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0.10000002384185791,
+      "section": "map/terrain preparation",
+      "name": "terrain preparation",
+      "depth": 1,
+      "shareOfFrame": 0.000013410218231313488,
+      "activeFrames": 9
+     },
+     {
+      "meanMs": 0.00010369858690664672,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0,
+      "maxMs": 0.10000002384185791,
+      "section": "map/google tiles",
+      "name": "google tiles",
+      "depth": 1,
+      "shareOfFrame": 0.00000447007303981239,
+      "activeFrames": 3
+     },
+     {
+      "meanMs": 1.857733087222028,
+      "p50Ms": 1.826555,
+      "p95Ms": 2.170009,
+      "p99Ms": 2.787874,
+      "maxMs": 3.663486,
+      "section": "gpu",
+      "name": "gpu",
+      "depth": 0,
+      "shareOfFrame": 0.08008019044497082,
+      "activeFrames": 2889
+     },
+     {
+      "meanMs": 1.8603052341063784,
+      "p50Ms": 1.826638,
+      "p95Ms": 2.170009,
+      "p99Ms": 2.787874,
+      "maxMs": 3.663486,
+      "section": "gpu/globe",
+      "name": "globe",
+      "depth": 1,
+      "shareOfFrame": 0.08008019044497082,
+      "activeFrames": 2889
+     },
+     {
+      "meanMs": 0.6801935711452551,
+      "p50Ms": 0.699999988079071,
+      "p95Ms": 0.9000000357627869,
+      "p99Ms": 1.0999999642372131,
+      "maxMs": 1.399999976158142,
+      "section": "render",
+      "name": "render",
+      "depth": 0,
+      "shareOfFrame": 0.02932069794709256,
+      "activeFrames": 2893
+     },
+     {
+      "meanMs": 0.42056688572599776,
+      "p50Ms": 0.3999999761581421,
+      "p95Ms": 0.699999988079071,
+      "p99Ms": 0.800000011920929,
+      "maxMs": 1,
+      "section": "render/draw",
+      "name": "draw",
+      "depth": 1,
+      "shareOfFrame": 0.018129125510784966,
+      "activeFrames": 2893
+     },
+     {
+      "meanMs": 0.1134116833200926,
+      "p50Ms": 0.10000002384185791,
+      "p95Ms": 0.20000004768371582,
+      "p99Ms": 0.20000004768371582,
+      "maxMs": 0.5,
+      "section": "render/active meshes",
+      "name": "active meshes",
+      "depth": 1,
+      "shareOfFrame": 0.0048887696846367755,
+      "activeFrames": 2535
+     },
+     {
+      "meanMs": 0.0016591772668880036,
+      "p50Ms": 0,
+      "p95Ms": 0,
+      "p99Ms": 0.09999996423721313,
+      "maxMs": 0.10000002384185791,
+      "section": "render/render targets",
+      "name": "render targets",
+      "depth": 1,
+      "shareOfFrame": 0.00007152116330825614,
+      "activeFrames": 48
+     }
+    ]
+   }
+  },
+  "shownUnprofiled": {
+   "profiled": false,
+   "motion": {
+    "frames": 2835,
+    "meanMs": 22.91499118165783,
+    "p50Ms": 16.70000000001164,
+    "p95Ms": 66.69999999995343,
+    "p99Ms": 83.39999999996508,
+    "maxMs": 133.29999999998836,
+    "over33Ms": 383,
+    "over100Ms": 8
+   },
+   "renderStartDelay": {
+    "frames": 2835,
+    "meanMs": 10.660776002368745,
+    "p50Ms": 6.499999976134859,
+    "p95Ms": 29.899999976158142,
+    "p99Ms": 36.50000001193257,
+    "maxMs": 78.09999996423721,
+    "over33Ms": 73,
+    "over100Ms": 0
+   },
+   "bySegment": {
+    "orbit-clockwise": {
+     "frames": 823,
+     "meanMs": 24.300486026731456,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 83.20000000001164,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 116.60000000003492,
+     "over33Ms": 120,
+     "over100Ms": 4
+    },
+    "orbit-counterclockwise": {
+     "frames": 900,
+     "meanMs": 22.221222222222195,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.60000000003492,
+     "p99Ms": 66.79999999998836,
+     "maxMs": 100.10000000003492,
+     "over33Ms": 122,
+     "over100Ms": 1
+    },
+    "near-far": {
+     "frames": 506,
+     "meanMs": 19.762055335968448,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 33.399999999965075,
+     "p99Ms": 33.40000000002328,
+     "maxMs": 33.5,
+     "over33Ms": 44,
+     "over100Ms": 0
+    },
+    "look-above": {
+     "frames": 145,
+     "meanMs": 22.988275862068885,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.60000000003492,
+     "p99Ms": 66.70000000001164,
+     "maxMs": 100.09999999997672,
+     "over33Ms": 20,
+     "over100Ms": 1
+    },
+    "look-below": {
+     "frames": 190,
+     "meanMs": 17.542631578947248,
+     "p50Ms": 16.699999999953434,
+     "p95Ms": 16.79999999998836,
+     "p99Ms": 33.40000000002328,
+     "maxMs": 66.70000000001164,
+     "over33Ms": 5,
+     "over100Ms": 0
+    },
+    "look-near": {
+     "frames": 121,
+     "meanMs": 27.40909090909091,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 66.70000000001164,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 133.29999999998836,
+     "over33Ms": 26,
+     "over100Ms": 1
+    },
+    "restart": {
+     "frames": 150,
+     "meanMs": 33.22066666666651,
+     "p50Ms": 16.70000000001164,
+     "p95Ms": 83.30000000004657,
+     "p99Ms": 83.40000000002328,
+     "maxMs": 116.59999999997672,
+     "over33Ms": 46,
+     "over100Ms": 1
+    }
+   },
+   "firstFrameAfterResume": [
+    {
+     "segment": "restart",
+     "intervalMs": 16.70000000001164
+    }
+   ],
+   "resumeLatency": [
+    {
+     "segment": "stop",
+     "firstFrameAfterMs": 16.70000000001164
+    }
+   ],
+   "correlation": {
+    "frames": 2837,
+    "orbDrawFrames": 2837,
+    "staleUniformFrames": 0,
+    "missingDrawFrames": 0,
+    "multipleDrawFrames": 0,
+    "maxDrawVsLiveEyeM": 0.00000697374615026057,
+    "worstDrawVsLive": {
+     "segment": "orbit-clockwise",
+     "t": 13.866099999999976,
+     "frameId": 15295,
+     "drawsThisFrame": 1,
+     "activeCameras": 0
+    },
+    "maxLiveVsPlannedEyeM": 0.6717263069121739,
+    "markerTravelM": 268.7714540405392,
+    "staleSegments": {}
+   },
+   "streaming": {
+    "before": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 145,
+      "activeTiles": 160
+     }
+    },
+    "after": {
+     "streaming": false,
+     "tiles": {
+      "visibleTiles": 136,
+      "activeTiles": 160
+     }
+    }
+   },
+   "requests": {
+    "own": 0,
+    "panoramaMedia": 0,
+    "externalByHost": {
+     "tiles.mapterhorn.com": 2567,
+     "basemap.nationalmap.gov": 8524
+    }
+   },
+   "mapDetail": {
+    "streamingStoppedBefore": true,
+    "waitedSeconds": 2.454199999988079,
+    "changesDuring": []
+   },
+   "profiler": null
+  },
+  "orbIncrement": {
+   "p50Ms": -2.9103830456733704e-11,
+   "p95Ms": -0.0999999999476131,
+   "p99Ms": 0,
+   "note": "Shown minus hidden on the same trace; a difference of distributions, not a cost the orb alone causes."
+  },
+  "profilingOverhead": {
+   "p50Ms": -2.9103830456733704e-11,
+   "p95Ms": -0.0999999999476131,
+   "note": "Profiled minus unprofiled, orb shown."
+  },
+  "budget": {
+   "p95Ms": 20,
+   "p99Ms": 33.3,
+   "maxIntervalMs": 100
+  },
+  "shownWithinBudget": false,
+  "hiddenWithinBudget": false
+ },
+ "navigation": {
+  "single": {
+   "immersion": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.000009080538005902103,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.000012003613779461657,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "cameraAfterExit": {
+    "centerM": 0,
+    "yawRad": 0,
+    "pitchRad": 0,
+    "radiusM": 0,
+    "fovRad": 0
+   },
+   "hudChips": {
+    "overview": {
+     "exit": false,
+     "exitText": "Cancel",
+     "credits": 0
+    },
+    "immersive": {
+     "exit": true,
+     "exitText": "Exit panorama",
+     "credits": 1
+    },
+    "afterExit": {
+     "exit": false,
+     "exitText": "Cancel",
+     "credits": 0
+    }
+   }
+  },
+  "pair": {
+   "a": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.000009364355129563911,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.000011817982874193511,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "b": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.000009128768216462492,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.00001129531702016832,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "backReturnsToA": true,
+   "cameraAfterExit": {
+    "centerM": 0,
+    "yawRad": 0,
+    "pitchRad": 0,
+    "radiusM": 0,
+    "fovRad": 0
+   },
+   "entity": "pair-photo"
+  }
+ },
+ "requests": {
+  "cold load": {
+   "own": 6,
+   "panoramaMedia": 6,
+   "externalByHost": {
+    "api.github.com": 1,
+    "tiles.mapterhorn.com": 642,
+    "basemap.nationalmap.gov": 832
+   }
+  },
+  "correctness": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 3100,
+    "tiles.mapterhorn.com": 577
+   }
+  },
+  "negative control": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 97,
+    "basemap.nationalmap.gov": 625
+   }
+  },
+  "pointer drags": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 9,
+    "basemap.nationalmap.gov": 230
+   }
+  },
+  "colour photograph": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 101,
+    "tiles.mapterhorn.com": 124
+   }
+  },
+  "load cardinal": {
+   "own": 1,
+   "panoramaMedia": 6,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 93,
+    "basemap.nationalmap.gov": 73
+   }
+  },
+  "load photograph": {
+   "own": 3,
+   "panoramaMedia": 7,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 1582,
+    "tiles.mapterhorn.com": 1165
+   }
+  },
+  "timing warm-up": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 2277,
+    "basemap.nationalmap.gov": 1369
+   }
+  },
+  "timing shown": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 5832,
+    "tiles.mapterhorn.com": 2845
+   }
+  },
+  "timing hidden": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 7605,
+    "tiles.mapterhorn.com": 2919
+   }
+  },
+  "timing shown-unprofiled": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 2567,
+    "basemap.nationalmap.gov": 8524
+   }
+  },
+  "load pair": {
+   "own": 1,
+   "panoramaMedia": 7,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 139,
+    "basemap.nationalmap.gov": 124
+   }
+  }
+ },
+ "exceptions": [],
+ "mapDetailChanges": [
+  {
+   "at": 26484.69999998808,
+   "from": 0,
+   "to": 0.25,
+   "meanFrameMs": 22.29361702153023,
+   "goalMs": 16.666666666666668,
+   "pageMs": 26485.5
+  },
+  {
+   "at": 37819.80000001192,
+   "from": 0.25,
+   "to": 0.5,
+   "meanFrameMs": 29.90588235329179,
+   "goalMs": 16.666666666666668,
+   "pageMs": 37820.19999998808
+  },
+  {
+   "at": 43030.39999997616,
+   "from": 0.5,
+   "to": 0.75,
+   "meanFrameMs": 21.104081631923208,
+   "goalMs": 16.666666666666668,
+   "pageMs": 43031
+  },
+  {
+   "at": 122417,
+   "from": 0.75,
+   "to": 1,
+   "meanFrameMs": 26.64736842168005,
+   "goalMs": 16.666666666666668,
+   "pageMs": 122417.89999997616
+  },
+  {
+   "at": 130225.89999997616,
+   "from": 1,
+   "to": 1.25,
+   "meanFrameMs": 102.11818181926554,
+   "goalMs": 16.666666666666668,
+   "pageMs": 130227.59999996424
+  },
+  {
+   "at": 135933,
+   "from": 1.25,
+   "to": 1.5,
+   "meanFrameMs": 33.07500000111759,
+   "goalMs": 16.666666666666668,
+   "pageMs": 135934.39999997616
+  },
+  {
+   "at": 141449.09999996424,
+   "from": 1.5,
+   "to": 1.75,
+   "meanFrameMs": 32.799999998461814,
+   "goalMs": 16.666666666666668,
+   "pageMs": 141450.80000001192
+  },
+  {
+   "at": 141449.09999996424,
+   "from": 1.75,
+   "to": 0,
+   "meanFrameMs": 101.88181818073446,
+   "goalMs": 16.666666666666668,
+   "pageMs": 146165.5
+  },
+  {
+   "at": 391095.39999997616,
+   "from": 0,
+   "to": 0.25,
+   "meanFrameMs": 25.348837209302324,
+   "goalMs": 16.666666666666668,
+   "pageMs": 391096.09999996424
+  },
+  {
+   "at": 396372,
+   "from": 0.25,
+   "to": 0.5,
+   "meanFrameMs": 23.4604651165563,
+   "goalMs": 16.666666666666668,
+   "pageMs": 396372.5
+  }
+ ],
+ "failures": [
+  "The globe alone, with no orb, misses the frame budget on this trace (reported separately from the orb).",
+  "With the orb shown, the frame interval misses the budget."
+ ],
+ "configuration": "apple metal-3 (Apple M5), Chrome/153.0.8010.53, WebGPU, 1440×900 at DPR 1, 60 fps cap, usgs-imagery-topo imagery with mapterhorn elevation",
+ "verdict": "automated check FAILED on apple metal-3 (Apple M5), Chrome/153.0.8010.53, WebGPU, 1440×900 at DPR 1, 60 fps cap, usgs-imagery-topo imagery with mapterhorn elevation: 2 failure(s)"
+}

@@ -1,0 +1,3419 @@
+[
+ {
+  "segment": "orbit-clockwise",
+  "t": 0.55,
+  "frameEye": [
+   -255081.9057578569,
+   -4512703.945315107,
+   4485439.244857017
+  ],
+  "distanceM": 100.04498987991089,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387478108,
+  "windowGain": 50.01249843806914,
+  "contentPerPixelDeg": 3.6764447361526336,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008253898211418177,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007682029297029661,
+    "meanDeg": 0.00004992791868193042,
+    "p99Deg": 0.00007545007761522396
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00017614208104285307,
+   "meanDeg": 0.00008164952594723386,
+   "p99Deg": 0.00016580700047102382,
+   "maxAt": [
+    707,
+    445
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021506547507001888,
+   "meanDeg": 0.0016394077016416938,
+   "p99Deg": 0.002057845403295771
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 1.5166000000000057,
+  "frameEye": [
+   -255110.1467316365,
+   -4512695.541960711,
+   4485446.093156573
+  ],
+  "distanceM": 100.0449898796926,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387546107,
+  "windowGain": 50.01249843795996,
+  "contentPerPixelDeg": 3.6764447361446084,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008417410998400646,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000790620071905387,
+    "meanDeg": 0.000050938880627380465,
+    "p99Deg": 0.00007663078783144394
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002391766602863481,
+   "meanDeg": 0.00012599559566706955,
+   "p99Deg": 0.0002126204525795163,
+   "maxAt": [
+    732,
+    455
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002131590384003061,
+   "meanDeg": 0.0016346883321436275,
+   "p99Deg": 0.002045338047986122
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 2.5165,
+  "frameEye": [
+   -255134.5835624527,
+   -4512681.094690299,
+   4485459.238239294
+  ],
+  "distanceM": 100.04498987920773,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387697136,
+  "windowGain": 50.01249843771748,
+  "contentPerPixelDeg": 3.6764447361267836,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0000845028527797558,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007909633700610216,
+    "meanDeg": 0.00005108270690737348,
+    "p99Deg": 0.00007716940018382346
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00032659051262877274,
+   "meanDeg": 0.0001759270560360808,
+   "p99Deg": 0.0003055741006612828,
+   "maxAt": [
+    710,
+    448
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002064045020257523,
+   "meanDeg": 0.0016006359869325773,
+   "p99Deg": 0.0020263057447061144
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 3.5165,
+  "frameEye": [
+   -255151.8030599535,
+   -4512662.19627986,
+   4485477.271782006
+  ],
+  "distanceM": 100.04498987991917,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438747553,
+  "windowGain": 50.01249843807327,
+  "contentPerPixelDeg": 3.676444736152938,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008349344504894771,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007686190528959648,
+    "meanDeg": 0.00005054644588417454,
+    "p99Deg": 0.00007602166437137485
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00029393411820951144,
+   "meanDeg": 0.00014708143813239438,
+   "p99Deg": 0.00026172801727099347,
+   "maxAt": [
+    718,
+    436
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002365612991857474,
+   "meanDeg": 0.0018846020111937015,
+   "p99Deg": 0.002345273804023637
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 4.5165,
+  "frameEye": [
+   -255160.11692974286,
+   -4512640.697808299,
+   4485498.427513236
+  ],
+  "distanceM": 100.0449898793834,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438764242,
+  "windowGain": 50.012498437805334,
+  "contentPerPixelDeg": 3.676444736133242,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008226582007420428,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000762389635027976,
+    "meanDeg": 0.000050698377782879335,
+    "p99Deg": 0.00007531895650104353
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00017990371706293236,
+   "meanDeg": 0.00006693753455047151,
+   "p99Deg": 0.00015224773735501732,
+   "maxAt": [
+    733,
+    446
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002119499976013253,
+   "meanDeg": 0.0016806897985429468,
+   "p99Deg": 0.0020746749869197867
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 5.516400000000002,
+  "frameEye": [
+   -255158.71198223374,
+   -4512618.705847577,
+   4485520.632361997
+  ],
+  "distanceM": 100.04498987970844,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438754117,
+  "windowGain": 50.012498437967885,
+  "contentPerPixelDeg": 3.676444736145191,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008313838723433576,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000765013601292618,
+    "meanDeg": 0.00005077361871084399,
+    "p99Deg": 0.00007560101683707554
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00020390648621390804,
+   "meanDeg": 0.00007352929413395343,
+   "p99Deg": 0.0001714231091425405,
+   "maxAt": [
+    732,
+    445
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002125361499940524,
+   "meanDeg": 0.0016768441591180825,
+   "p99Deg": 0.0020706077510046256
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 6.516300000000003,
+  "frameEye": [
+   -255147.72701406822,
+   -4512598.370643594,
+   4485541.715186183
+  ],
+  "distanceM": 100.0449898795124,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387602233,
+  "windowGain": 50.012498437869844,
+  "contentPerPixelDeg": 3.676444736137984,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008232246124713894,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000775668493699611,
+    "meanDeg": 0.000050613502068212774,
+    "p99Deg": 0.00007581031707324606
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002298401338769684,
+   "meanDeg": 0.0000969180884501263,
+   "p99Deg": 0.00020253194115273625,
+   "maxAt": [
+    722,
+    437
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021638286438882457,
+   "meanDeg": 0.0016780343246321123,
+   "p99Deg": 0.002098677748631408
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 7.516300000000003,
+  "frameEye": [
+   -255128.23478014523,
+   -4512581.680924673,
+   4485559.614230099
+  ],
+  "distanceM": 100.0449898799327,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387471315,
+  "windowGain": 50.012498438080044,
+  "contentPerPixelDeg": 3.676444736153436,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008479784416755526,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007845786737046397,
+    "meanDeg": 0.0000506023749385857,
+    "p99Deg": 0.00007689444848553217
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.000151983893330525,
+   "meanDeg": 0.000059311966226368,
+   "p99Deg": 0.00013806803234595229,
+   "maxAt": [
+    714,
+    437
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002181747636710501,
+   "meanDeg": 0.0016908991881625461,
+   "p99Deg": 0.002139609416353714
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 8.516300000000003,
+  "frameEye": [
+   -255102.1439459484,
+   -4512570.272548582,
+   4485572.5752099985
+  ],
+  "distanceM": 100.04498987911667,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387725498,
+  "windowGain": 50.012498437671944,
+  "contentPerPixelDeg": 3.676444736123436,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008704925687145247,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00008039729790065248,
+    "meanDeg": 0.0000509181444121062,
+    "p99Deg": 0.00007754864462161211
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00017988441375189914,
+   "meanDeg": 0.00008741563044359227,
+   "p99Deg": 0.0001670035550578462,
+   "maxAt": [
+    716,
+    442
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0022186048993224333,
+   "meanDeg": 0.0017103278439067153,
+   "p99Deg": 0.0021489415747183577
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 9.516300000000003,
+  "frameEye": [
+   -255072.00846411416,
+   -4512565.262246658,
+   4485579.329414864
+  ],
+  "distanceM": 100.04498987938194,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438764287,
+  "windowGain": 50.0124984378046,
+  "contentPerPixelDeg": 3.676444736133188,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008849522606359952,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000804293200861347,
+    "meanDeg": 0.00005190508768996422,
+    "p99Deg": 0.00007766899694652458
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0001986169615545979,
+   "meanDeg": 0.00011784942331713047,
+   "p99Deg": 0.00018252383784686467,
+   "maxAt": [
+    722,
+    461
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0022427806464740403,
+   "meanDeg": 0.0017461203611542104,
+   "p99Deg": 0.0021975799754688228
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 10.516200000000005,
+  "frameEye": [
+   -255040.7812808309,
+   -4512567.139930437,
+   4485579.216056136
+  ],
+  "distanceM": 100.04498988088906,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438717342,
+  "windowGain": 50.01249843855832,
+  "contentPerPixelDeg": 3.6764447361885937,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008454230038993231,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007867699239971444,
+    "meanDeg": 0.000050879266316212564,
+    "p99Deg": 0.00007648083828455101
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0001600969219272388,
+   "meanDeg": 0.00008436536778827044,
+   "p99Deg": 0.00015090837594066906,
+   "maxAt": [
+    721,
+    439
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002164670417151108,
+   "meanDeg": 0.0016730017356576205,
+   "p99Deg": 0.00208553593523953
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 11.516200000000005,
+  "frameEye": [
+   -255011.51293577132,
+   -4512575.722171631,
+   4485572.246207667
+  ],
+  "distanceM": 100.04498987945107,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438762134,
+  "windowGain": 50.01249843783918,
+  "contentPerPixelDeg": 3.6764447361357298,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008488355135206602,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007894579074544942,
+    "meanDeg": 0.00005035046275047556,
+    "p99Deg": 0.00007666432889528732
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002410786720873876,
+   "meanDeg": 0.00011869459173454426,
+   "p99Deg": 0.00022161700723073472,
+   "maxAt": [
+    730,
+    458
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002119772545607126,
+   "meanDeg": 0.0016350117107826077,
+   "p99Deg": 0.0020641565071164744
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 12.516100000000005,
+  "frameEye": [
+   -254987.07365568378,
+   -4512590.167344982,
+   4485559.103373954
+  ],
+  "distanceM": 100.044989879682,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387549404,
+  "windowGain": 50.01249843795466,
+  "contentPerPixelDeg": 3.6764447361442185,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008491958642115176,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007856868471040289,
+    "meanDeg": 0.00005059732203935365,
+    "p99Deg": 0.00007691262587212744
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00018948758996286582,
+   "meanDeg": 0.00008001390470084154,
+   "p99Deg": 0.00016818950245537737,
+   "maxAt": [
+    731,
+    447
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021805105060218313,
+   "meanDeg": 0.0016754735584040357,
+   "p99Deg": 0.002127773597536455
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 13.516200000000005,
+  "frameEye": [
+   -254969.8495812845,
+   -4512609.066375169,
+   4485541.069468007
+  ],
+  "distanceM": 100.04498987964585,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387560662,
+  "windowGain": 50.012498437936586,
+  "contentPerPixelDeg": 3.67644473614289,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008423833614538917,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007963324238519301,
+    "meanDeg": 0.00005137188381711343,
+    "p99Deg": 0.00007772541354030511
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00019319634916994458,
+   "meanDeg": 0.00007589931924336141,
+   "p99Deg": 0.00017445616390520435,
+   "maxAt": [
+    707,
+    455
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021765602957149175,
+   "meanDeg": 0.0017032058411636933,
+   "p99Deg": 0.0021256671515118134
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 14.516,
+  "frameEye": [
+   -254961.53357438953,
+   -4512630.559952959,
+   4485519.91878167
+  ],
+  "distanceM": 100.04498987956825,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438758484,
+  "windowGain": 50.012498437897776,
+  "contentPerPixelDeg": 3.676444736140037,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008173538540816319,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007642768045982568,
+    "meanDeg": 0.00005084267422846107,
+    "p99Deg": 0.00007578995324161814
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00017602032624919784,
+   "meanDeg": 0.00006625304545984234,
+   "p99Deg": 0.00015434000361967817,
+   "maxAt": [
+    709,
+    449
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002285867323276813,
+   "meanDeg": 0.0018130328794854985,
+   "p99Deg": 0.0022441812090501405
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 15.516,
+  "frameEye": [
+   -254962.93424617115,
+   -4512652.554360429,
+   4485497.71171449
+  ],
+  "distanceM": 100.04498987958817,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387578632,
+  "windowGain": 50.012498437907745,
+  "contentPerPixelDeg": 3.67644473614077,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008225158558160465,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007597990294082512,
+    "meanDeg": 0.00005055565580156027,
+    "p99Deg": 0.00007505615908254302
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0003643279723189081,
+   "meanDeg": 0.00022377861225685087,
+   "p99Deg": 0.00034040609084105285,
+   "maxAt": [
+    720,
+    438
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0019168264040491058,
+   "meanDeg": 0.0015190879946839779,
+   "p99Deg": 0.0018831695027403483
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 16.516,
+  "frameEye": [
+   -254973.91708566126,
+   -4512672.892525033,
+   4485476.626032824
+  ],
+  "distanceM": 100.04498987937136,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438764617,
+  "windowGain": 50.01249843779931,
+  "contentPerPixelDeg": 3.6764447361327988,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008375432026296033,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007806841212615173,
+    "meanDeg": 0.00005149396483098073,
+    "p99Deg": 0.00007666721161346338
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00021300217255563656,
+   "meanDeg": 0.00010182989415049599,
+   "p99Deg": 0.00019333720024353727,
+   "maxAt": [
+    716,
+    463
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021461645775681863,
+   "meanDeg": 0.0016739311081962454,
+   "p99Deg": 0.002081158755098096
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 17.516,
+  "frameEye": [
+   -254993.40701600822,
+   -4512689.583605515,
+   4485458.725750102
+  ],
+  "distanceM": 100.04498987948357,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387611214,
+  "windowGain": 50.01249843785543,
+  "contentPerPixelDeg": 3.676444736136924,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0000845900014961437,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007846943681572598,
+    "meanDeg": 0.00005014852054799287,
+    "p99Deg": 0.00007593555220716038
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002613421687863685,
+   "meanDeg": 0.00012199602204463508,
+   "p99Deg": 0.0002236052781996262,
+   "maxAt": [
+    731,
+    454
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002122562760835564,
+   "meanDeg": 0.0016378491637719437,
+   "p99Deg": 0.002066790276276048
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 18.515900000000002,
+  "frameEye": [
+   -255019.4933690796,
+   -4512700.992927801,
+   4485445.764073097
+  ],
+  "distanceM": 100.04498987973449,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387533058,
+  "windowGain": 50.01249843798092,
+  "contentPerPixelDeg": 3.6764447361461494,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008519349366286368,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00008105108753469551,
+    "meanDeg": 0.000050894502089003245,
+    "p99Deg": 0.00007651518567488785
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.000290934790148274,
+   "meanDeg": 0.00015893718326135458,
+   "p99Deg": 0.00026827479768491106,
+   "maxAt": [
+    717,
+    437
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002087461475442012,
+   "meanDeg": 0.0016070846791020146,
+   "p99Deg": 0.002009616379559523
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-clockwise",
+  "t": 19.515900000000002,
+  "frameEye": [
+   -255049.62780568626,
+   -4512706.005931223,
+   4485439.00720983
+  ],
+  "distanceM": 100.04498987984668,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438749811,
+  "windowGain": 50.012498438037014,
+  "contentPerPixelDeg": 3.676444736150273,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008275683146734986,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007867627501383677,
+    "meanDeg": 0.00005086000088407263,
+    "p99Deg": 0.00007616794593398788
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002025700950646327,
+   "meanDeg": 0.00009946773417305316,
+   "p99Deg": 0.00017543767283038195,
+   "maxAt": [
+    722,
+    460
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002188907534114348,
+   "meanDeg": 0.0016954243825591346,
+   "p99Deg": 0.0021350299924914502
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 20.515800000000002,
+  "frameEye": [
+   -255048.63955871225,
+   -4512705.9518846655,
+   4485439.117778215
+  ],
+  "distanceM": 100.04498987854736,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387902835,
+  "windowGain": 50.01249843738723,
+  "contentPerPixelDeg": 3.6764447361025065,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008396874010639188,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007855156569066514,
+    "meanDeg": 0.000051213505025165715,
+    "p99Deg": 0.0000776237880002153
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00012461828733109854,
+   "meanDeg": 0.00006254782464347319,
+   "p99Deg": 0.00010542320367963526,
+   "maxAt": [
+    724,
+    440
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0022935619919094625,
+   "meanDeg": 0.001763325364602404,
+   "p99Deg": 0.002216474832684993
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 21.515800000000002,
+  "frameEye": [
+   -255018.58946821158,
+   -4512700.725042753,
+   4485446.084976979
+  ],
+  "distanceM": 100.04498987970047,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387543655,
+  "windowGain": 50.012498437963906,
+  "contentPerPixelDeg": 3.6764447361448984,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008633146582445133,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007941700773986187,
+    "meanDeg": 0.00005056504172420547,
+    "p99Deg": 0.0000767008693668133
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00018859709139425977,
+   "meanDeg": 0.00008878425658439727,
+   "p99Deg": 0.00018189744669565785,
+   "maxAt": [
+    726,
+    438
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002150774003154827,
+   "meanDeg": 0.0016669939298240238,
+   "p99Deg": 0.00208998362223015
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 22.515800000000002,
+  "frameEye": [
+   -254992.67362451373,
+   -4512689.126675963,
+   4485459.227146027
+  ],
+  "distanceM": 100.04498988026955,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438736639,
+  "windowGain": 50.0124984382485,
+  "contentPerPixelDeg": 3.6764447361658186,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008572928243073924,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00008035798095165683,
+    "meanDeg": 0.000051320761292197065,
+    "p99Deg": 0.00007754035050785311
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002528332207805257,
+   "meanDeg": 0.00013304596644920865,
+   "p99Deg": 0.00022547238762136382,
+   "maxAt": [
+    711,
+    457
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002123698253999305,
+   "meanDeg": 0.0016367212945216484,
+   "p99Deg": 0.0020685190406686997
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 23.515699999999995,
+  "frameEye": [
+   -254973.430372648,
+   -4512672.294007099,
+   4485477.255846451
+  ],
+  "distanceM": 100.04498987958091,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438758089,
+  "windowGain": 50.012498437904114,
+  "contentPerPixelDeg": 3.676444736140503,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008392893999176044,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007845581821726982,
+    "meanDeg": 0.00005001538962868004,
+    "p99Deg": 0.00007598907523021556
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00021208757803423096,
+   "meanDeg": 0.00009030575079814848,
+   "p99Deg": 0.00018809768224812122,
+   "maxAt": [
+    711,
+    460
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021306519265175835,
+   "meanDeg": 0.0016362812059760648,
+   "p99Deg": 0.002080213319150183
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 24.515600000000006,
+  "frameEye": [
+   -254962.7401577307,
+   -4512651.873552968,
+   4485498.4076756975
+  ],
+  "distanceM": 100.04498987943488,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438762638,
+  "windowGain": 50.01249843783108,
+  "contentPerPixelDeg": 3.6764447361351342,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008278970999261796,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007667584915712105,
+    "meanDeg": 0.00005083625104350709,
+    "p99Deg": 0.00007580292529036221
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00021503288665422434,
+   "meanDeg": 0.00008191236358708889,
+   "p99Deg": 0.00017027255678540694,
+   "maxAt": [
+    726,
+    460
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002088209280882889,
+   "meanDeg": 0.0016707871709290187,
+   "p99Deg": 0.0020702897947177308
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 25.515699999999995,
+  "frameEye": [
+   -254961.6499701315,
+   -4512629.859395236,
+   4485520.616957426
+  ],
+  "distanceM": 100.04498987958654,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438757914,
+  "windowGain": 50.01249843790693,
+  "contentPerPixelDeg": 3.6764447361407098,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008212560580062714,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007677376829282029,
+    "meanDeg": 0.00005088202067834083,
+    "p99Deg": 0.00007558369497531675
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00021899191003186332,
+   "meanDeg": 0.00009939860048588985,
+   "p99Deg": 0.00019778507043577653,
+   "maxAt": [
+    710,
+    456
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0020876418689357644,
+   "meanDeg": 0.0016539060314139196,
+   "p99Deg": 0.002042010404374278
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 26.515600000000006,
+  "frameEye": [
+   -254970.2669362831,
+   -4512608.414737905,
+   4485541.701313919
+  ],
+  "distanceM": 100.04498987959776,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387575644,
+  "windowGain": 50.012498437912534,
+  "contentPerPixelDeg": 3.6764447361411214,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008190767755683884,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007681496395234316,
+    "meanDeg": 0.00005061799721054747,
+    "p99Deg": 0.00007589646725776797
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00024111117098832535,
+   "meanDeg": 0.00011428010086376608,
+   "p99Deg": 0.00021751250459810402,
+   "maxAt": [
+    731,
+    449
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0020873533996484694,
+   "meanDeg": 0.0016352179251840795,
+   "p99Deg": 0.002046101496922317
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 27.5155,
+  "frameEye": [
+   -254987.74653715658,
+   -4512589.634003025,
+   4485559.601679084
+  ],
+  "distanceM": 100.04498987965901,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387556566,
+  "windowGain": 50.01249843794317,
+  "contentPerPixelDeg": 3.6764447361433743,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008526517892176059,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000781386117868135,
+    "meanDeg": 0.00005056017181559288,
+    "p99Deg": 0.00007588612959776528
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00014885043394877637,
+   "meanDeg": 0.00005557847690310631,
+   "p99Deg": 0.00012480251500233608,
+   "maxAt": [
+    711,
+    446
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021816151422401945,
+   "meanDeg": 0.0017253242717773988,
+   "p99Deg": 0.0021515362719615747
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 28.5155,
+  "frameEye": [
+   -255012.38083244459,
+   -4512575.354063301,
+   4485572.567190692
+  ],
+  "distanceM": 100.04498987930636,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387666412,
+  "windowGain": 50.01249843776681,
+  "contentPerPixelDeg": 3.6764447361304096,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008469787119183198,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007762900953006448,
+    "meanDeg": 0.000050346907264627665,
+    "p99Deg": 0.00007591502380537912
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00017101303339615628,
+   "meanDeg": 0.0000745184082605072,
+   "p99Deg": 0.00014765851632165194,
+   "maxAt": [
+    726,
+    461
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021468304074555443,
+   "meanDeg": 0.0016646562042972944,
+   "p99Deg": 0.002101401572970008
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 29.5155,
+  "frameEye": [
+   -255041.75711906125,
+   -4512566.97478368,
+   4485579.326712253
+  ],
+  "distanceM": 100.04498987979818,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387513216,
+  "windowGain": 50.01249843801277,
+  "contentPerPixelDeg": 3.67644473614849,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0000851366694437612,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007934830538606225,
+    "meanDeg": 0.000050846771822679405,
+    "p99Deg": 0.00007637279714451247
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00012005231086303424,
+   "meanDeg": 0.000050644313199982285,
+   "p99Deg": 0.00010370556286068686,
+   "maxAt": [
+    730,
+    457
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0022666707991950445,
+   "meanDeg": 0.0017957719122786544,
+   "p99Deg": 0.002233581231669878
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 30.51540000000001,
+  "frameEye": [
+   -255072.99672571113,
+   -4512565.31620518,
+   4485579.218934217
+  ],
+  "distanceM": 100.04498987925936,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387681053,
+  "windowGain": 50.012498437743304,
+  "contentPerPixelDeg": 3.6764447361286816,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008631720557906334,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000810929801581913,
+    "meanDeg": 0.000051213351096259175,
+    "p99Deg": 0.00007736355685713894
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00013884073177996805,
+   "meanDeg": 0.00006958448503370973,
+   "p99Deg": 0.00012827432310003381,
+   "maxAt": [
+    720,
+    460
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021964962953648685,
+   "meanDeg": 0.0017248300093843988,
+   "p99Deg": 0.002148687042622217
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 31.51540000000001,
+  "frameEye": [
+   -255103.04789909936,
+   -4512570.540351999,
+   4485572.254385266
+  ],
+  "distanceM": 100.04498988021189,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387384355,
+  "windowGain": 50.01249843821966,
+  "contentPerPixelDeg": 3.676444736163699,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.000085729302321566,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000790598449993131,
+    "meanDeg": 0.000051080173847303285,
+    "p99Deg": 0.00007690694367544391
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00013816738863764086,
+   "meanDeg": 0.000047468291983058886,
+   "p99Deg": 0.00012086657382336916,
+   "maxAt": [
+    733,
+    447
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002296763557313403,
+   "meanDeg": 0.0018045469599182937,
+   "p99Deg": 0.0022536377994612296
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 32.5153,
+  "frameEye": [
+   -255128.9636437092,
+   -4512582.134913458,
+   4485559.116050201
+  ],
+  "distanceM": 100.04498987936978,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438764666,
+  "windowGain": 50.01249843779853,
+  "contentPerPixelDeg": 3.6764447361327415,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008695455794773163,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00008120804569996702,
+    "meanDeg": 0.00005121229915474263,
+    "p99Deg": 0.00007865469569325716
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00032428431812370494,
+   "meanDeg": 0.00018993412902523632,
+   "p99Deg": 0.0003049496202612208,
+   "maxAt": [
+    730,
+    458
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002069515521580077,
+   "meanDeg": 0.0015792184901002005,
+   "p99Deg": 0.0020287155455069876
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 33.5153,
+  "frameEye": [
+   -255148.2122868519,
+   -4512598.96723313,
+   4485541.087394517
+  ],
+  "distanceM": 100.04498987947404,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387614184,
+  "windowGain": 50.012498437850674,
+  "contentPerPixelDeg": 3.676444736136575,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008384336632375355,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007973886746806606,
+    "meanDeg": 0.00005114879521819747,
+    "p99Deg": 0.00007753277745337426
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.0002912599450517412,
+   "meanDeg": 0.00013389051756143791,
+   "p99Deg": 0.0002521551968142324,
+   "maxAt": [
+    730,
+    456
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0021012790835222023,
+   "meanDeg": 0.0016471063748628684,
+   "p99Deg": 0.002046666617984769
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 34.5152,
+  "frameEye": [
+   -255158.90619291458,
+   -4512619.386634352,
+   4485519.9364146525
+  ],
+  "distanceM": 100.0449898792665,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438767883,
+  "windowGain": 50.01249843774688,
+  "contentPerPixelDeg": 3.676444736128945,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008207900191893952,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007691994167933291,
+    "meanDeg": 0.00005095573366700762,
+    "p99Deg": 0.00007552749314301726
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00010722615305074466,
+   "meanDeg": 0.0000317801767620667,
+   "p99Deg": 0.00008692782508421929,
+   "maxAt": [
+    710,
+    449
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002202208907512095,
+   "meanDeg": 0.001749852209389096,
+   "p99Deg": 0.0021663710363181076
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 35.5153,
+  "frameEye": [
+   -255160.00030697754,
+   -4512641.40058362,
+   4485497.72711938
+  ],
+  "distanceM": 100.04498987950674,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387604,
+  "windowGain": 50.012498437867016,
+  "contentPerPixelDeg": 3.6764447361377757,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008146619160959509,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007681533386029258,
+    "meanDeg": 0.00005086552698035519,
+    "p99Deg": 0.00007559032038784706
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00020914910582481614,
+   "meanDeg": 0.000099233097113808,
+   "p99Deg": 0.00019549918497267562,
+   "maxAt": [
+    707,
+    454
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002065645900738386,
+   "meanDeg": 0.0016534218995397463,
+   "p99Deg": 0.0020385161487487123
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 36.5152,
+  "frameEye": [
+   -255151.38711677626,
+   -4512662.845897413,
+   4485476.641887738
+  ],
+  "distanceM": 100.04498987981646,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387507524,
+  "windowGain": 50.01249843802191,
+  "contentPerPixelDeg": 3.676444736149162,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008244452793484708,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007708984404001654,
+    "meanDeg": 0.00005091117275056419,
+    "p99Deg": 0.00007606270065037911
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00020191252500292828,
+   "meanDeg": 0.00006409811766060123,
+   "p99Deg": 0.00015234751823762566,
+   "maxAt": [
+    723,
+    437
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002167862572893288,
+   "meanDeg": 0.001693324889386356,
+   "p99Deg": 0.002111765020128787
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 37.5152,
+  "frameEye": [
+   -255133.90863202093,
+   -4512681.629770113,
+   4485458.738302312
+  ],
+  "distanceM": 100.04498987954892,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.16289438759086,
+  "windowGain": 50.01249843788811,
+  "contentPerPixelDeg": 3.676444736139327,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008449830227284815,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007783773235928877,
+    "meanDeg": 0.00005093309824925232,
+    "p99Deg": 0.00007621809911683774
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00016650436201763849,
+   "meanDeg": 0.00007158619261209252,
+   "p99Deg": 0.00014843096263045824,
+   "maxAt": [
+    726,
+    445
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002221574014175247,
+   "meanDeg": 0.0017314515459619798,
+   "p99Deg": 0.0021586240222682533
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 38.515100000000004,
+  "frameEye": [
+   -255109.27889613924,
+   -4512695.910144243,
+   4485445.772094406
+  ],
+  "distanceM": 100.0449898794731,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387614475,
+  "windowGain": 50.012498437850205,
+  "contentPerPixelDeg": 3.67644473613654,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0000839258031607154,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.0000795840066007019,
+    "meanDeg": 0.00005133539510526217,
+    "p99Deg": 0.00007782801748672205
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.000256410871320838,
+   "meanDeg": 0.00012256578868760846,
+   "p99Deg": 0.00022048084122788943,
+   "maxAt": [
+    714,
+    462
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.002130028698823528,
+   "meanDeg": 0.0016576945851853103,
+   "p99Deg": 0.002056920321986717
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "orbit-counterclockwise",
+  "t": 39.515100000000004,
+  "frameEye": [
+   -255079.90395343344,
+   -4512704.2919901125,
+   4485439.009914659
+  ],
+  "distanceM": 100.04498987874798,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 31.162894387840343,
+  "windowGain": 50.01249843748757,
+  "contentPerPixelDeg": 3.676444736109883,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008440412845281364,
+   "pixels": 700,
+   "orb": {
+    "pixels": 616,
+    "maxDeg": 0.00007947517483267525,
+    "meanDeg": 0.0000509301262550829,
+    "p99Deg": 0.000077476149902209
+   }
+  },
+  "interior": {
+   "pixels": 616,
+   "maxDeg": 0.00014743667511233399,
+   "meanDeg": 0.000059610238582897816,
+   "p99Deg": 0.0001270173014723607,
+   "maxAt": [
+    717,
+    462
+   ]
+  },
+  "endToEnd": {
+   "pixels": 616,
+   "maxDeg": 0.0022180693699366217,
+   "meanDeg": 0.0017014207624437001,
+   "p99Deg": 0.002144845924895961
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 40.515,
+  "frameEye": [
+   -255062.1922458915,
+   -4512659.835338923,
+   4485484.742566941
+  ],
+  "distanceM": 34.54186149817199,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 90.2583508358104,
+  "windowGain": 17.24195606477769,
+  "contentPerPixelDeg": 1.2674651456139934,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00013302301823761825,
+   "pixels": 4000,
+   "orb": {
+    "pixels": 5996,
+    "maxDeg": 0.00013061492992077228,
+    "meanDeg": 0.0000843313581376581,
+    "p99Deg": 0.00012657377245178057
+   }
+  },
+  "interior": {
+   "pixels": 5996,
+   "maxDeg": 0.00006116453538671208,
+   "meanDeg": 0.000025658156148398875,
+   "p99Deg": 0.00005387348967967167,
+   "maxAt": [
+    704,
+    481
+   ]
+  },
+  "endToEnd": {
+   "pixels": 5996,
+   "maxDeg": 0.0012292761764229959,
+   "meanDeg": 0.0009794462685368762,
+   "p99Deg": 0.0011915061975798222
+  },
+  "coverage": {
+   "edgePixels": 604,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 41.515,
+  "frameEye": [
+   -255063.43553559022,
+   -4512681.832105428,
+   4485462.542075728
+  ],
+  "distanceM": 65.75704075989394,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 47.41228342388393,
+  "windowGain": 32.86330936431369,
+  "contentPerPixelDeg": 2.4157989402308937,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010673636818126455,
+   "pixels": 1672,
+   "orb": {
+    "pixels": 1560,
+    "maxDeg": 0.0001019567435373153,
+    "meanDeg": 0.00006752234766819391,
+    "p99Deg": 0.00010015352263651402
+   }
+  },
+  "interior": {
+   "pixels": 1560,
+   "maxDeg": 0.00014273381927482664,
+   "meanDeg": 0.00007164835354977049,
+   "p99Deg": 0.0001293877961373075,
+   "maxAt": [
+    725,
+    464
+   ]
+  },
+  "endToEnd": {
+   "pixels": 1560,
+   "maxDeg": 0.001775434511712401,
+   "meanDeg": 0.0014268236322226085,
+   "p99Deg": 0.0017426288779847246
+  },
+  "coverage": {
+   "edgePixels": 300,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 42.515,
+  "frameEye": [
+   -255065.4275399054,
+   -4512717.075423091,
+   4485426.972349424
+  ],
+  "distanceM": 115.83994748520946,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 26.913785108734178,
+  "windowGain": 57.911340498593376,
+  "contentPerPixelDeg": 4.25709271859797,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010755943390892071,
+   "pixels": 524,
+   "orb": {
+    "pixels": 448,
+    "maxDeg": 0.00010111788124886116,
+    "meanDeg": 0.00006560863615150817,
+    "p99Deg": 0.00009901369080760134
+   }
+  },
+  "interior": {
+   "pixels": 448,
+   "maxDeg": 0.00017989101716403566,
+   "meanDeg": 0.0001133227209573795,
+   "p99Deg": 0.0001586449333059394,
+   "maxAt": [
+    714,
+    456
+   ]
+  },
+  "endToEnd": {
+   "pixels": 448,
+   "maxDeg": 0.003274862479131379,
+   "meanDeg": 0.002627423916104275,
+   "p99Deg": 0.0032457864921879884
+  },
+  "coverage": {
+   "edgePixels": 184,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 43.51490000000001,
+  "frameEye": [
+   -255067.4072103228,
+   -4512752.100524621,
+   4485391.622860281
+  ],
+  "distanceM": 165.630506466049,
+  "effectiveRadiusM": 2.550048466511665,
+  "projectedDiameterPx": 23.999999999999996,
+  "windowGain": 64.94420682401163,
+  "contentPerPixelDeg": 4.774082374976898,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008011521489817383,
+   "pixels": 392,
+   "orb": {
+    "pixels": 332,
+    "maxDeg": 0.00007359902724992161,
+    "meanDeg": 0.00004860175256339035,
+    "p99Deg": 0.00007228133011667867
+   }
+  },
+  "interior": {
+   "pixels": 332,
+   "maxDeg": 0.00017800053675869583,
+   "meanDeg": 0.00008679836441165338,
+   "p99Deg": 0.00015441383288401366,
+   "maxAt": [
+    720,
+    455
+   ]
+  },
+  "endToEnd": {
+   "pixels": 332,
+   "maxDeg": 0.002871057547011831,
+   "meanDeg": 0.0022172001290076512,
+   "p99Deg": 0.0028289156536307047
+  },
+  "coverage": {
+   "edgePixels": 160,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 44.51490000000001,
+  "frameEye": [
+   -255068.61876288822,
+   -4512773.535785378,
+   4485369.989075237
+  ],
+  "distanceM": 196.1051109329217,
+  "effectiveRadiusM": 3.0192356956422333,
+  "projectedDiameterPx": 23.999999999999996,
+  "windowGain": 64.94420682401164,
+  "contentPerPixelDeg": 4.7740823749769,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008007765032828864,
+   "pixels": 392,
+   "orb": {
+    "pixels": 332,
+    "maxDeg": 0.00007275517068790616,
+    "meanDeg": 0.00004800924965772612,
+    "p99Deg": 0.00007126610030489906
+   }
+  },
+  "interior": {
+   "pixels": 332,
+   "maxDeg": 0.00016198026690832334,
+   "meanDeg": 0.0000935009760193878,
+   "p99Deg": 0.00015199321382033197,
+   "maxAt": [
+    716,
+    443
+   ]
+  },
+  "endToEnd": {
+   "pixels": 332,
+   "maxDeg": 0.0029113793502575564,
+   "meanDeg": 0.0022195058950145036,
+   "p99Deg": 0.0028136339193812095
+  },
+  "coverage": {
+   "edgePixels": 160,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 45.51490000000001,
+  "frameEye": [
+   -255068.59921341387,
+   -4512773.18990845,
+   4485370.338155532
+  ],
+  "distanceM": 195.6133657368571,
+  "effectiveRadiusM": 3.0116647830736842,
+  "projectedDiameterPx": 24,
+  "windowGain": 64.94420682401163,
+  "contentPerPixelDeg": 4.774082374976898,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00007826111702709788,
+   "pixels": 392,
+   "orb": {
+    "pixels": 332,
+    "maxDeg": 0.00007318770055734461,
+    "meanDeg": 0.000047834802960716,
+    "p99Deg": 0.00007052309665850988
+   }
+  },
+  "interior": {
+   "pixels": 332,
+   "maxDeg": 0.0001367549649311067,
+   "meanDeg": 0.00004417908627762028,
+   "p99Deg": 0.00012278003810222617,
+   "maxAt": [
+    729,
+    448
+   ]
+  },
+  "endToEnd": {
+   "pixels": 332,
+   "maxDeg": 0.002890010060331622,
+   "meanDeg": 0.00223891066281106,
+   "p99Deg": 0.002790388441816484
+  },
+  "coverage": {
+   "edgePixels": 160,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 46.5148,
+  "frameEye": [
+   -255067.35620204257,
+   -4512751.198066223,
+   4485392.533676861
+  ],
+  "distanceM": 164.34751175486736,
+  "effectiveRadiusM": 2.530295470728476,
+  "projectedDiameterPx": 24,
+  "windowGain": 64.94420682401163,
+  "contentPerPixelDeg": 4.774082374976898,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0000805526403069455,
+   "pixels": 392,
+   "orb": {
+    "pixels": 332,
+    "maxDeg": 0.00007348784752884705,
+    "meanDeg": 0.00004780994925400292,
+    "p99Deg": 0.00007132120822579242
+   }
+  },
+  "interior": {
+   "pixels": 332,
+   "maxDeg": 0.00022325690426221097,
+   "meanDeg": 0.00011313571510167168,
+   "p99Deg": 0.00019910944763272445,
+   "maxAt": [
+    722,
+    442
+   ]
+  },
+  "endToEnd": {
+   "pixels": 332,
+   "maxDeg": 0.002854459105852306,
+   "meanDeg": 0.0021603945859099438,
+   "p99Deg": 0.0027555416386910005
+  },
+  "coverage": {
+   "edgePixels": 160,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 47.5148,
+  "frameEye": [
+   -255065.36427647746,
+   -4512715.956141838,
+   4485428.101996985
+  ],
+  "distanceM": 114.24898113212993,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 27.288571177876346,
+  "windowGain": 57.11573708210762,
+  "contentPerPixelDeg": 4.198607498223984,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010847181912302392,
+   "pixels": 540,
+   "orb": {
+    "pixels": 468,
+    "maxDeg": 0.00010189414962229369,
+    "meanDeg": 0.00006694808221764697,
+    "p99Deg": 0.00009963800562376066
+   }
+  },
+  "interior": {
+   "pixels": 468,
+   "maxDeg": 0.00024139557423307945,
+   "meanDeg": 0.0001297304780661692,
+   "p99Deg": 0.0002248096255808727,
+   "maxAt": [
+    710,
+    444
+   ]
+  },
+  "endToEnd": {
+   "pixels": 468,
+   "maxDeg": 0.003481329878798037,
+   "meanDeg": 0.002771748861220157,
+   "p99Deg": 0.003415457969508624
+  },
+  "coverage": {
+   "edgePixels": 180,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 48.5147,
+  "frameEye": [
+   -255063.38452265304,
+   -4512680.929564638,
+   4485463.452975465
+  ],
+  "distanceM": 64.47507958641691,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 48.35498418338967,
+  "windowGain": 32.22202619201186,
+  "contentPerPixelDeg": 2.368657881159193,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010711016555849146,
+   "pixels": 1748,
+   "orb": {
+    "pixels": 1624,
+    "maxDeg": 0.0001020350362595599,
+    "meanDeg": 0.00006683262435147498,
+    "p99Deg": 0.00010027405114752634
+   }
+  },
+  "interior": {
+   "pixels": 1624,
+   "maxDeg": 0.00007767648429632794,
+   "meanDeg": 0.00003258620291576055,
+   "p99Deg": 0.00006271605683379657,
+   "maxAt": [
+    711,
+    468
+   ]
+  },
+  "endToEnd": {
+   "pixels": 1624,
+   "maxDeg": 0.0018175920799998197,
+   "meanDeg": 0.001450546617140204,
+   "p99Deg": 0.0017809490071183055
+  },
+  "coverage": {
+   "edgePixels": 320,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "near-far",
+  "t": 49.5147,
+  "frameEye": [
+   -255062.17275636594,
+   -4512659.490522632,
+   4485485.0905767735
+  ],
+  "distanceM": 34.053446031006466,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 91.55289161588074,
+  "windowGain": 16.997332044961276,
+  "contentPerPixelDeg": 1.249482706862124,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.000014738653486049494,
+   "pixels": 4000,
+   "orb": {
+    "pixels": 6180,
+    "maxDeg": 0.000014023506970452777,
+    "meanDeg": 0.000005899249223615275,
+    "p99Deg": 0.000011480741150442557
+   }
+  },
+  "interior": {
+   "pixels": 6180,
+   "maxDeg": 0.00007527409448561457,
+   "meanDeg": 0.00004023132241670264,
+   "p99Deg": 0.00006784617935108874,
+   "maxAt": [
+    678,
+    463
+   ]
+  },
+  "endToEnd": {
+   "pixels": 6180,
+   "maxDeg": 0.00011950660016007527,
+   "meanDeg": 0.00003444338185934422,
+   "p99Deg": 0.0000794875940815664
+  },
+  "coverage": {
+   "edgePixels": 592,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-above",
+  "t": 50.51460000000001,
+  "frameEye": [
+   -255135.71599400922,
+   -4512707.612973195,
+   4485485.121518512
+  ],
+  "distanceM": 107.70007601140718,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 28.94790392992634,
+  "windowGain": 53.840752160568115,
+  "contentPerPixelDeg": 3.9578616556485975,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008630255886885738,
+   "pixels": 692,
+   "orb": {
+    "pixels": 609,
+    "maxDeg": 0.00008602283162510583,
+    "meanDeg": 0.00004154156949906005,
+    "p99Deg": 0.00008094628384961915
+   }
+  },
+  "interior": {
+   "pixels": 609,
+   "maxDeg": 0.00016287706089860012,
+   "meanDeg": 0.0000699521504650307,
+   "p99Deg": 0.00012289801797320466,
+   "maxAt": [
+    495,
+    571
+   ]
+  },
+  "endToEnd": {
+   "pixels": 609,
+   "maxDeg": 0.003386873787344699,
+   "meanDeg": 0.0017947669770744402,
+   "p99Deg": 0.0032953927913549983
+  },
+  "coverage": {
+   "edgePixels": 205,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-above",
+  "t": 51.51460000000001,
+  "frameEye": [
+   -255135.71739043947,
+   -4512707.63445855,
+   4485485.04488142
+  ],
+  "distanceM": 107.73146374348349,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 28.939469912405826,
+  "windowGain": 53.85644873251831,
+  "contentPerPixelDeg": 3.9590155188052916,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00011354065584020015,
+   "pixels": 615,
+   "orb": {
+    "pixels": 542,
+    "maxDeg": 0.00010882630796157407,
+    "meanDeg": 0.00006249077654677967,
+    "p99Deg": 0.00010642986605798327
+   }
+  },
+  "interior": {
+   "pixels": 542,
+   "maxDeg": 0.00030518889156455706,
+   "meanDeg": 0.00016952268996261546,
+   "p99Deg": 0.0002786725791380705,
+   "maxAt": [
+    658,
+    393
+   ]
+  },
+  "endToEnd": {
+   "pixels": 542,
+   "maxDeg": 0.0038175135187069067,
+   "meanDeg": 0.0026146898440365246,
+   "p99Deg": 0.0036813785114835243
+  },
+  "coverage": {
+   "edgePixels": 189,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-above",
+  "t": 52.5145,
+  "frameEye": [
+   -255135.7132364777,
+   -4512707.549372912,
+   4485484.992370651
+  ],
+  "distanceM": 107.68078956729748,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 28.95308871853609,
+  "windowGain": 53.83110727506122,
+  "contentPerPixelDeg": 3.9571526551055323,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010626359029629682,
+   "pixels": 708,
+   "orb": {
+    "pixels": 619,
+    "maxDeg": 0.00010501780147867339,
+    "meanDeg": 0.00007005847852856547,
+    "p99Deg": 0.00009497575204486779
+   }
+  },
+  "interior": {
+   "pixels": 619,
+   "maxDeg": 0.00027091195435194744,
+   "meanDeg": 0.00015891158713134378,
+   "p99Deg": 0.0002624259913186408,
+   "maxAt": [
+    971,
+    459
+   ]
+  },
+  "endToEnd": {
+   "pixels": 619,
+   "maxDeg": 0.0038596308364488656,
+   "meanDeg": 0.0029871067316656376,
+   "p99Deg": 0.003754700966494926
+  },
+  "coverage": {
+   "edgePixels": 215,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-below",
+  "t": 53.5145,
+  "frameEye": [
+   -254992.31708925776,
+   -4512676.61624327,
+   4485446.23906427
+  ],
+  "distanceM": 101.16121196745715,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 30.819040153719378,
+  "windowGain": 50.570719805844156,
+  "contentPerPixelDeg": 3.7174798788321333,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010448848185837456,
+   "pixels": 730,
+   "orb": {
+    "pixels": 650,
+    "maxDeg": 0.00010448848185573373,
+    "meanDeg": 0.000046092453086426476,
+    "p99Deg": 0.00009731669526619726
+   }
+  },
+  "interior": {
+   "pixels": 650,
+   "maxDeg": 0.00017211853289342602,
+   "meanDeg": 0.0000682536228902081,
+   "p99Deg": 0.0001527211801154757,
+   "maxAt": [
+    621,
+    334
+   ]
+  },
+  "endToEnd": {
+   "pixels": 650,
+   "maxDeg": 0.004057745850620494,
+   "meanDeg": 0.001848662442530415,
+   "p99Deg": 0.003786808457498724
+  },
+  "coverage": {
+   "edgePixels": 208,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-below",
+  "t": 54.5145,
+  "frameEye": [
+   -254992.31568618276,
+   -4512676.594938359,
+   4485446.217928998
+  ],
+  "distanceM": 101.16579211736176,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 30.81764486168572,
+  "windowGain": 50.573010328467824,
+  "contentPerPixelDeg": 3.717648256339872,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00011022865769965804,
+   "pixels": 812,
+   "orb": {
+    "pixels": 714,
+    "maxDeg": 0.0001031445431112713,
+    "meanDeg": 0.00007518290955565361,
+    "p99Deg": 0.00010015000398564239
+   }
+  },
+  "interior": {
+   "pixels": 714,
+   "maxDeg": 0.00011144496704056106,
+   "meanDeg": 0.000048922300522418206,
+   "p99Deg": 0.0000939886216000177,
+   "maxAt": [
+    486,
+    319
+   ]
+  },
+  "endToEnd": {
+   "pixels": 714,
+   "maxDeg": 0.0038280679675074436,
+   "meanDeg": 0.0030522756473788963,
+   "p99Deg": 0.003795084202586831
+  },
+  "coverage": {
+   "edgePixels": 232,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-below",
+  "t": 55.5145,
+  "frameEye": [
+   -254992.32152104,
+   -4512676.690382109,
+   4485446.3125448655
+  ],
+  "distanceM": 101.14568701253495,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 30.8237705997054,
+  "windowGain": 50.562955810646784,
+  "contentPerPixelDeg": 3.7169091435126362,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.0001100622624985725,
+   "pixels": 813,
+   "orb": {
+    "pixels": 722,
+    "maxDeg": 0.00010611116350417893,
+    "meanDeg": 0.00006592133906310369,
+    "p99Deg": 0.00010326623045081614
+   }
+  },
+  "interior": {
+   "pixels": 722,
+   "maxDeg": 0.00016231316147340288,
+   "meanDeg": 0.000087181699401457,
+   "p99Deg": 0.0001459920834921868,
+   "maxAt": [
+    940,
+    318
+   ]
+  },
+  "endToEnd": {
+   "pixels": 722,
+   "maxDeg": 0.003726033074951551,
+   "meanDeg": 0.002567374192412716,
+   "p99Deg": 0.0036401762206366706
+  },
+  "coverage": {
+   "edgePixels": 225,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-below",
+  "t": 56.51440000000001,
+  "frameEye": [
+   -254992.31932136626,
+   -4512676.652593223,
+   4485446.275083406
+  ],
+  "distanceM": 101.15355178087316,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 30.821374027258774,
+  "windowGain": 50.56688896374232,
+  "contentPerPixelDeg": 3.7171982716395275,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00011386100021162319,
+   "pixels": 721,
+   "orb": {
+    "pixels": 637,
+    "maxDeg": 0.00011288293178554494,
+    "meanDeg": 0.00006120664893243177,
+    "p99Deg": 0.0001042788108613177
+   }
+  },
+  "interior": {
+   "pixels": 637,
+   "maxDeg": 0.00012976458626345644,
+   "meanDeg": 0.00005775146693523124,
+   "p99Deg": 0.00011874432376702644,
+   "maxAt": [
+    808,
+    327
+   ]
+  },
+  "endToEnd": {
+   "pixels": 637,
+   "maxDeg": 0.004248961505759956,
+   "meanDeg": 0.002508393130212812,
+   "p99Deg": 0.004173458377760294
+  },
+  "coverage": {
+   "edgePixels": 212,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-near",
+  "t": 57.51440000000001,
+  "frameEye": [
+   -255103.3453860475,
+   -4512620.608262615,
+   4485531.879949989
+  ],
+  "distanceM": 50.99990958262598,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.131313352094175,
+  "windowGain": 25.48033936899205,
+  "contentPerPixelDeg": 1.8730729812371716,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00010145652256303512,
+   "pixels": 3767,
+   "orb": {
+    "pixels": 3526,
+    "maxDeg": 0.00009953847116223535,
+    "meanDeg": 0.0000706434432680121,
+    "p99Deg": 0.00009627631944940872
+   }
+  },
+  "interior": {
+   "pixels": 3526,
+   "maxDeg": 0.00011509792364676052,
+   "meanDeg": 0.000046022510148947304,
+   "p99Deg": 0.00009607198914178654,
+   "maxAt": [
+    366,
+    427
+   ]
+  },
+  "endToEnd": {
+   "pixels": 3526,
+   "maxDeg": 0.0020899047261883096,
+   "meanDeg": 0.0013733099878160146,
+   "p99Deg": 0.002021978348990226
+  },
+  "coverage": {
+   "edgePixels": 456,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 65
+  }
+ },
+ {
+  "segment": "look-near",
+  "t": 58.51440000000001,
+  "frameEye": [
+   -255103.34168525628,
+   -4512620.541404131,
+   4485531.841749285
+  ],
+  "distanceM": 50.99518968779402,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.13697140281873,
+  "windowGain": 25.477977604659344,
+  "contentPerPixelDeg": 1.8728993667143985,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00011727035085134524,
+   "pixels": 2955,
+   "orb": {
+    "pixels": 2785,
+    "maxDeg": 0.00011507982184948998,
+    "meanDeg": 0.00007242347743154472,
+    "p99Deg": 0.00010988226822964424
+   }
+  },
+  "interior": {
+   "pixels": 2785,
+   "maxDeg": 0.00009135441936501196,
+   "meanDeg": 0.00003376405543973014,
+   "p99Deg": 0.00007801291204414454,
+   "maxAt": [
+    824,
+    517
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2785,
+   "maxDeg": 0.002101977605537255,
+   "meanDeg": 0.0014170732835870384,
+   "p99Deg": 0.0020169241209950545
+  },
+  "coverage": {
+   "edgePixels": 418,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "look-near",
+  "t": 59.514300000000006,
+  "frameEye": [
+   -255103.34213014337,
+   -4512620.549527497,
+   4485531.78448888
+  ],
+  "distanceM": 50.9656876466286,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.17236120192358,
+  "windowGain": 25.4632152196738,
+  "contentPerPixelDeg": 1.8718141761266824,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00012876216620951405,
+   "pixels": 3513,
+   "orb": {
+    "pixels": 3293,
+    "maxDeg": 0.00012876216620900789,
+    "meanDeg": 0.0000954940236343996,
+    "p99Deg": 0.0001229755889319915
+   }
+  },
+  "interior": {
+   "pixels": 3293,
+   "maxDeg": 0.0000819615931654538,
+   "meanDeg": 0.000024089238080433775,
+   "p99Deg": 0.000058488162926676924,
+   "maxAt": [
+    1019,
+    345
+   ]
+  },
+  "endToEnd": {
+   "pixels": 3293,
+   "maxDeg": 0.0028032661569149285,
+   "meanDeg": 0.0018769663706306643,
+   "p99Deg": 0.002719278603022269
+  },
+  "coverage": {
+   "edgePixels": 494,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 62.014199999999995,
+  "frameEye": [
+   -255103.22381313448,
+   -4512620.4400677625,
+   4485531.980343047
+  ],
+  "distanceM": 50.99019513652522,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.14295984309185,
+  "windowGain": 25.475478406012908,
+  "contentPerPixelDeg": 1.8727156493238415,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008588849674080912,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008421126274433411,
+    "meanDeg": 0.00005348832299912157,
+    "p99Deg": 0.00008069981347543084
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.000060409042423370064,
+   "meanDeg": 0.000016571243218444833,
+   "p99Deg": 0.00004721408138124869,
+   "maxAt": [
+    698,
+    447
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0011756085392194144,
+   "meanDeg": 0.0009063275425311944,
+   "p99Deg": 0.001125549147133894
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 62.0642,
+  "frameEye": [
+   -255102.79656803655,
+   -4512619.987785531,
+   4485532.459655054
+  ],
+  "distanceM": 50.99019513576671,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.142959844001396,
+  "windowGain": 25.47547840563336,
+  "contentPerPixelDeg": 1.8727156492959405,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008639528308345272,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008487935484820549,
+    "meanDeg": 0.00005346122764126369,
+    "p99Deg": 0.00008102035492017222
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.00008925624361400618,
+   "meanDeg": 0.00003423396966481304,
+   "p99Deg": 0.00007043764851484034,
+   "maxAt": [
+    737,
+    460
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0011527656330729131,
+   "meanDeg": 0.0008971824551944659,
+   "p99Deg": 0.0011152307365926352
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 62.514199999999995,
+  "frameEye": [
+   -255098.50192974176,
+   -4512616.159014542,
+   4485536.555788112
+  ],
+  "distanceM": 50.990195135641486,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.142959844151555,
+  "windowGain": 25.4754784055707,
+  "contentPerPixelDeg": 1.8727156492913346,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008858753827396206,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008588567743468396,
+    "meanDeg": 0.00005452357244347411,
+    "p99Deg": 0.00008277587675306202
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.00010341050411796101,
+   "meanDeg": 0.000040300725309301725,
+   "p99Deg": 0.00008743533015152948,
+   "maxAt": [
+    712,
+    475
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0012460485201905348,
+   "meanDeg": 0.0009517861128371151,
+   "p99Deg": 0.0011893893966759778
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 63.514100000000006,
+  "frameEye": [
+   -255086.4359309505,
+   -4512609.493119421,
+   4485543.948108183
+  ],
+  "distanceM": 50.99019513589222,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.142959843850896,
+  "windowGain": 25.475478405696165,
+  "contentPerPixelDeg": 1.8727156493005575,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008644380141726792,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008253044026424655,
+    "meanDeg": 0.000053526937644066294,
+    "p99Deg": 0.00008029111743593707
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.00004792920682234693,
+   "meanDeg": 0.000015180359580043914,
+   "p99Deg": 0.000039822576482130884,
+   "maxAt": [
+    734,
+    429
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0011426891014350066,
+   "meanDeg": 0.0009001579313166052,
+   "p99Deg": 0.0011083603747118003
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 64.5141,
+  "frameEye": [
+   -255071.88929969404,
+   -4512605.870900609,
+   4485548.419402011
+  ],
+  "distanceM": 50.99019513664374,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.14295984294974,
+  "windowGain": 25.475478406072213,
+  "contentPerPixelDeg": 1.872715649328201,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008659344850965413,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008328298862593682,
+    "meanDeg": 0.00005364488923821884,
+    "p99Deg": 0.00008072089006620005
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.00004800153539246062,
+   "meanDeg": 0.000020912031334761573,
+   "p99Deg": 0.000041658608190944994,
+   "maxAt": [
+    703,
+    436
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0011431830261271502,
+   "meanDeg": 0.0009052348015669455,
+   "p99Deg": 0.0011078958729717494
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 65.5141,
+  "frameEye": [
+   -255056.28700230859,
+   -4512605.647725453,
+   4485549.53112485
+  ],
+  "distanceM": 50.99019513583208,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.14295984392301,
+  "windowGain": 25.475478405666067,
+  "contentPerPixelDeg": 1.872715649298345,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008763936513644199,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008732966226392793,
+    "meanDeg": 0.000054634804866340526,
+    "p99Deg": 0.00008206327377485223
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.0000825963067215724,
+   "meanDeg": 0.000040548754938567645,
+   "p99Deg": 0.00007389396917413514,
+   "maxAt": [
+    692,
+    444
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0012380735579482706,
+   "meanDeg": 0.0009669095327068414,
+   "p99Deg": 0.0011893805675682381
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ },
+ {
+  "segment": "restart",
+  "t": 66.514,
+  "frameEye": [
+   -255041.15773936908,
+   -4512608.844956837,
+   4485547.174857678
+  ],
+  "distanceM": 50.99019513589586,
+  "effectiveRadiusM": 2,
+  "projectedDiameterPx": 61.14295984384653,
+  "windowGain": 25.475478405697984,
+  "contentPerPixelDeg": 1.8727156493006911,
+  "viewport": {
+   "width": 1440,
+   "height": 900
+  },
+  "ray": {
+   "order": "bottom-up",
+   "maxDeg": 0.00008886416201515839,
+   "pixels": 2828,
+   "orb": {
+    "pixels": 2660,
+    "maxDeg": 0.00008695350912717672,
+    "meanDeg": 0.00005536364392648223,
+    "p99Deg": 0.00008300822386993905
+   }
+  },
+  "interior": {
+   "pixels": 2660,
+   "maxDeg": 0.000054762874788927056,
+   "meanDeg": 0.00002282271115997208,
+   "p99Deg": 0.00004384984013240639,
+   "maxAt": [
+    739,
+    455
+   ]
+  },
+  "endToEnd": {
+   "pixels": 2660,
+   "maxDeg": 0.0011856038804891158,
+   "meanDeg": 0.0009457202734697932,
+   "p99Deg": 0.0011590526019397093
+  },
+  "coverage": {
+   "edgePixels": 412,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 0
+  }
+ }
+]
