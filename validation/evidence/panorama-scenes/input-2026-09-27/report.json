@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-09-27T07:11:22.434Z",
+  "config": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "userAgentSuffix": "foss-earth-check/1.0",
+    "sceneId": "campus-pair",
+    "manifest": "examples/panorama-scenes/campus-pair.scene.json",
+    "colourLevels": 20,
+    "edgePx": 0.75,
+    "ringSlackPx": 1,
+    "dragStepPx": 20,
+    "dragSteps": 10,
+    "stillBeforeReleaseMs": 250,
+    "swipeDeltaPx": 20,
+    "keyHoldMs": 500,
+    "angleToleranceDeg": 0.01
+  },
+  "inputs": {
+    "commit": "98e22744681b12b1e79c2f40f48d4421edf7b7a6",
+    "uncommittedFiles": 0
+  },
+  "browser": {
+    "product": "Chrome/153.0.8010.53"
+  },
+  "environment": {
+    "renderer": "webgpu",
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "isFallbackAdapter": false
+    },
+    "inputMode": "trackpad"
+  },
+  "outline": [
+    {
+      "id": "pair-photo",
+      "centre": {
+        "x": 863.0623807908551,
+        "y": 751.9993364150514
+      },
+      "outline": {
+        "color": "#ffffff",
+        "widthPx": 2
+      },
+      "styledRing": {
+        "from": 0.75,
+        "to": 1.25,
+        "pixels": 45,
+        "share": 1
+      },
+      "styledPast": {
+        "from": 3,
+        "to": 6,
+        "pixels": 344,
+        "share": 0
+      },
+      "unstyledRing": {
+        "from": 0.75,
+        "to": 1.25,
+        "pixels": 35,
+        "share": 0
+      }
+    },
+    {
+      "id": "pair-grid",
+      "centre": {
+        "x": 578.5291775977743,
+        "y": 745.977808187862
+      },
+      "outline": {
+        "color": "#facc15",
+        "widthPx": 3
+      },
+      "styledRing": {
+        "from": 0.75,
+        "to": 2.25,
+        "pixels": 147,
+        "share": 1
+      },
+      "styledPast": {
+        "from": 4,
+        "to": 7,
+        "pixels": 360,
+        "share": 0
+      },
+      "unstyledRing": {
+        "from": 0.75,
+        "to": 2.25,
+        "pixels": 141,
+        "share": 0
+      }
+    }
+  ],
+  "hover": {
+    "orb": "pair-photo",
+    "before": 2.774848082335367,
+    "over": {
+      "hovered": "pair-photo",
+      "radiusM": 3.468560102919209,
+      "cursor": "pointer"
+    },
+    "away": {
+      "hovered": null,
+      "radiusM": 2.774848082335367,
+      "cursor": "auto"
+    }
+  },
+  "hud": {
+    "close": {
+      "left": 993.734375,
+      "right": 1023.734375,
+      "top": 852,
+      "bottom": 880,
+      "label": "Exit panorama"
+    },
+    "map": false,
+    "credits": [
+      {
+        "left": 1026.734375,
+        "right": 1424,
+        "top": 852,
+        "bottom": 880,
+        "text": "Buikslotermeerplein by Greg Zaal, Poly Haven · CC0-1.0"
+      }
+    ],
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "drag": {
+    "startHeadingDeg": 89.91044361199721,
+    "dragSensitivity": 0.15,
+    "duringDeg": [
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      30
+    ],
+    "expectedDeg": [
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      30
+    ],
+    "afterReleaseDeg": 30,
+    "afterHoverDeg": 30
+  },
+  "wheel": {
+    "swipeSensitivity": 0.15,
+    "zoom": {
+      "pinchGain": 1,
+      "zoomPerNotch": 0.1
+    },
+    "start": {
+      "headingDeg": 119.91044361199721,
+      "pitchDeg": 0,
+      "verticalFovDeg": 59.99999999999999
+    },
+    "afterSwipe": {
+      "headingDeg": 128.9104436119972,
+      "pitchDeg": -6,
+      "verticalFovDeg": 59.99999999999999
+    },
+    "afterPinch": {
+      "headingDeg": 128.9104436119972,
+      "pitchDeg": -6,
+      "verticalFovDeg": 50.599680255568636
+    },
+    "afterMouseWheel": {
+      "headingDeg": 128.9104436119972,
+      "pitchDeg": -6,
+      "verticalFovDeg": 46.313914936875975
+    }
+  },
+  "keys": {
+    "lookRate": 90,
+    "heldMs": 504.0197499999995,
+    "turnedDeg": 44.037000001072784,
+    "afterKeyUpDeg": 44.037000001072784
+  },
+  "hudAfterClose": {
+    "close": null,
+    "map": true,
+    "credits": [],
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "exceptions": [],
+  "failures": [],
+  "passed": true
+}
