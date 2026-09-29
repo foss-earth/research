@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-09-28T06:11:34.986Z",
+  "browser": "Chrome/153.0.8010.53",
+  "sources": {
+    "scripts/validation/panorama-webgl.mjs": "afae3fea8e2aeb38f5651f81f3c6e8eca9f1e9983cf7bc1eeb99f387311587ee",
+    "scripts/validation/panoramaWebglCheck.ts": "53a26863e860f2a55a5d197fdd4ad379b5a6248c4d0a437618b9c36227c69801",
+    "src/engine/babylon/panorama/panoramaRenderer.ts": "b32321c41414ff14e514624eb8cf9967a07babd56ae1a15c795825cbbbcaa157",
+    "src/engine/babylon/panorama/panoramaShadersWebGL.ts": "a829a5960890ded2ed85967c9827529a1c2002fa8a2b45f929cd391a83f8ce8c",
+    "src/engine/babylon/panorama/panoramaTextures.ts": "b4d3f341504c6d47e939d66be977be28262095a2f35f5da206b29f592ec9219f",
+    "src/engine/babylon/panorama/panoramaWebGlTextures.ts": "e5c4b3131b9e7c708157314212b7a0fb1961eefb72bfde9c2529aa4e01137e29"
+  },
+  "results": [
+    {
+      "backend": "webgl1",
+      "done": true,
+      "ok": true,
+      "report": {
+        "backend": "webgl1",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "orbPixel": [
+          220,
+          32,
+          220
+        ],
+        "occluded": [
+          64,
+          64,
+          64
+        ],
+        "maxUploadedPerFrame": 16384,
+        "uploadAllowance": 16384,
+        "npotMipLevels": 1,
+        "steadyFrames": 120,
+        "cpuRenderP50Ms": 1.600000023841858,
+        "cpuRenderP95Ms": 2.399999976158142,
+        "glError": 0
+      },
+      "errors": []
+    },
+    {
+      "backend": "webgl2",
+      "done": true,
+      "ok": true,
+      "report": {
+        "backend": "webgl2",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "orbPixel": [
+          220,
+          32,
+          220
+        ],
+        "occluded": [
+          64,
+          64,
+          64
+        ],
+        "maxUploadedPerFrame": 16384,
+        "uploadAllowance": 16384,
+        "npotMipLevels": 9,
+        "steadyFrames": 120,
+        "cpuRenderP50Ms": 1.899999976158142,
+        "cpuRenderP95Ms": 2.400000035762787,
+        "glError": 0
+      },
+      "errors": []
+    }
+  ]
+}
