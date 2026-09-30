@@ -4,6 +4,12 @@ Review date: 2026-09-28. Status: findings and candidates for selection, **not an
 implementation plan approved for execution**. No runtime changes or new performance
 runs were made for this review. The subsequent documentation task records the review.
 
+**Update 2026-09-29:** candidates 3, 5, 6 and 7 are implemented behind switches, off by
+default, and are waiting for device trials. See
+[Work-saving rendering experiments](validation/panorama-experiments.md) for what each does,
+how to turn it on, and the headless A/B results on the UMN tour. The rest of this review is
+unchanged.
+
 The release requirement is a usable tour on inexpensive and older devices while
 preserving the richer experience on capable hardware. The user reports that 360
 images appear to be the largest slowdown in Android Firefox without WebGPU, and
