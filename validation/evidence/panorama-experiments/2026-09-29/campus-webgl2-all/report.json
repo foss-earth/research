@@ -1,0 +1,1331 @@
+{
+ "generatedAt": "2026-09-29T23:47:07.200Z",
+ "config": {
+  "landscape": {
+   "width": 1440,
+   "height": 900
+  },
+  "portrait": {
+   "width": 720,
+   "height": 1280
+  },
+  "dpr": 1,
+  "scale": 1,
+  "fps": 60,
+  "toleranceDeg": 0.01,
+  "rayToleranceDeg": 0.002,
+  "endToEndPixelShare": 0.1,
+  "budget": {
+   "p95Ms": 20,
+   "p99Ms": 33.3,
+   "maxIntervalMs": 100
+  },
+  "previewFovDeg": 90,
+  "probeEverySeconds": 1,
+  "colourStepCssPx": 1,
+  "colourDistinctLevels": 24,
+  "colourMinimumDistinctPixels": 20,
+  "userAgentSuffix": "foss-earth-check/1.0",
+  "query": "set.renderer.experiments.all=1&renderer=webgl2",
+  "suspendedMs": 2000,
+  "preventIdleSleep": "caffeinate -i, for this process's lifetime",
+  "trace": [
+   {
+    "name": "orbit-clockwise",
+    "type": "orbit",
+    "seconds": 20,
+    "fromBearingDeg": 180,
+    "turnDeg": 360,
+    "distanceM": 100,
+    "heightM": 3
+   },
+   {
+    "name": "orbit-counterclockwise",
+    "type": "orbit",
+    "seconds": 20,
+    "fromBearingDeg": 180,
+    "turnDeg": -360,
+    "distanceM": 100,
+    "heightM": 3
+   },
+   {
+    "name": "near-far",
+    "type": "sweep",
+    "seconds": 10,
+    "bearingDeg": 180,
+    "nearM": 30,
+    "farM": 200,
+    "heightM": 3
+   },
+   {
+    "name": "look-above",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 225,
+    "distanceM": 100,
+    "heightM": 40,
+    "yawAmplitudeDeg": 20,
+    "pitchAmplitudeDeg": 8
+   },
+   {
+    "name": "look-below",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 135,
+    "distanceM": 100,
+    "heightM": -15,
+    "yawAmplitudeDeg": 20,
+    "pitchAmplitudeDeg": 4
+   },
+   {
+    "name": "look-near",
+    "type": "look",
+    "seconds": 3.3333333333333335,
+    "bearingDeg": 300,
+    "distanceM": 50,
+    "heightM": 10,
+    "yawAmplitudeDeg": 25,
+    "pitchAmplitudeDeg": 10
+   },
+   {
+    "name": "stop",
+    "type": "stop",
+    "seconds": 2
+   },
+   {
+    "name": "restart",
+    "type": "orbit",
+    "seconds": 5,
+    "fromBearingDeg": 300,
+    "turnDeg": 90,
+    "distanceM": 50,
+    "heightM": 10
+   }
+  ],
+  "controlTrace": [
+   {
+    "name": "control",
+    "type": "orbit",
+    "seconds": 4,
+    "fromBearingDeg": 180,
+    "turnDeg": 90,
+    "distanceM": 100,
+    "heightM": 3
+   }
+  ],
+  "views": [
+   {
+    "name": "north",
+    "note": "south of the marker, looking north",
+    "pose": {
+     "bearingDeg": 180,
+     "distanceM": 40,
+     "heightM": 3
+    }
+   },
+   {
+    "name": "east",
+    "note": "west of the marker, looking east",
+    "pose": {
+     "bearingDeg": 270,
+     "distanceM": 40,
+     "heightM": 3
+    }
+   }
+  ]
+ },
+ "inputs": {
+  "commit": "5900583d6cf555f9945de03ba1d0c4b097cacc39",
+  "uncommittedFiles": 20,
+  "files": {
+   "examples/panorama-scenes/umn-single.scene.json": "06fe28cb0066785e9bd475811b1be5a0e2a4e8fc9bce567a689a1fce6ee1228d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/px.jpg": "3281579dfce9b4815d5803f63bdaea061f75cb89a4d0daa5b0c934a731447428",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/nx.jpg": "9a6b9dde896f937f6cc8407f219ce26596e37802e21f5b509c2d8c37f3b7da96",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/py.jpg": "66b02f26c29be4de7f93120b6ad018c550340c856bad12ccf9743bad8cf8e8ca",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/ny.jpg": "a92bfbaa13f204827e9161b2686e2f926ca5fcf6ee0915b52c029926861e96b9",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/pz.jpg": "f0bcf2c0c6af6e1224c5c62b9c6138e3f7906443dc674a26ed40bc747d5895c3",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-32/nz.jpg": "073e7242e1c06a567c4053c32e28fa4b19b81b889c6c2e1d810e22223cc4432d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/px.jpg": "d2180df6785dab034c5fd7637d08b2ffb9f5ed3bbf4a6507805b1874a9d94391",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/nx.jpg": "bfcb067dcd8b73c73f5a9c99ddb09193f24aeeffda727566bf45505a330257d5",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/py.jpg": "edd33028946192a22a2b5e4c361b697ae253f08949f7b7873b59119c7ae0f733",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/ny.jpg": "64b8259724a94778a9442f0f02f7721adafdce3af314d7a5523db01f8794557d",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/pz.jpg": "15cb8fd2df0f4c65b9106ed5f80e5d63035ae7179a54467cfe0b54f4798f5014",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-64/nz.jpg": "222d7f96d222cb7e82722ae891b1fa66d4257c93f98ad90ad73d73115d1ae646",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/px.jpg": "82655a0a021dd9e1851d8284e250f31aaa1fcfb36717c37915f2a047f2eae6f4",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/nx.jpg": "e58ddd5a80983cb41bdb05ef9f639109f935f6d2e7f34728398d6462367b8b11",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/py.jpg": "35fbf630be1367a5ab4dce359b2d0a74b7054d11ad4edf4e64405de14acae0bf",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/ny.jpg": "2123050dac37a7f945ba301223b803099c1814c256c580b719a38f70f66f4a72",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/pz.jpg": "fbcce3edff81376780336ecd836ecbe66d15334b92a3eb395502d31a992fe7e5",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/preview-128/nz.jpg": "ab06248dfe9fa426ff0d80793c1acc29dd04ca046e7c536fd28f02768edd1572",
+   "examples/panorama-scenes/media/buikslotermeerplein-512/immersion-512.jpg": "dc06da6dc608b7ea257b08f132548c2207b0348eed2d90b207821c5a4d003b38",
+   "examples/panorama-scenes/umn-cardinal.scene.json": "0767985198227d5bef1769e27a6b56391109a3d57bf3b03be4f73f735bf958bc",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/px.jpg": "d4416b3945fc7a0be82c5a05902eb8865ac9b269e6db29b372312edea5925eaa",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/nx.jpg": "e46bd4a1cf09dedc3a0881ebde639dab696c9df8e57dbed77b99decc2441b343",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/py.jpg": "e4deccaa6a57f694f4d17ed4adeebd4a2c2553f1c0d53b104ae351246ab8b3ca",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/ny.jpg": "d81621addd55e04c16a27fb1f1bfe53083ea74159f06f8a15f476913a6c6731b",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/pz.jpg": "fd35d6bdc8cb805d7d8714492ddf2ea17f7fc55ab895d880104296832c9687db",
+   "examples/panorama-scenes/media/cardinal-grid/preview-32/nz.jpg": "0a13cce9c468cb0e30ba61143f0f76041d9449266535fab8abd6ab7d32b8efcc",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/px.jpg": "be7020ff76da8b4968c5c445a6889da2a0e429a733108c2da5dfac574a8d7bd2",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/nx.jpg": "b120eceeec89a86703ecab739dd454bdecf5b9b36df59bd9dfb2457f81262ba7",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/py.jpg": "939d8332acfec1a7e034c9c45f50f2e6d937d57885023f748376c04bf6f0a3c7",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/ny.jpg": "defbb1c521941892a1abf638094ad558836efddfaa07f33ca4d6ed10cf15d3f0",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/pz.jpg": "e119b3bd43c721512cdce672ff8e1a328f458cdff76f7fff9104f0e3ad43cf09",
+   "examples/panorama-scenes/media/cardinal-grid/preview-64/nz.jpg": "b0e94fd347b9ffa55d810bdf8790e299c34694990e6c17bd396b531e18bb41ce",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/px.jpg": "cd9a3d7b11f354782591d2b0f8037b03686bc6d6343ca2a9c1e351b0a153dc3e",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/nx.jpg": "96933450fb8abe69711de986cbf6a07abe0ca01226bce34813f70285690cbc2e",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/py.jpg": "adf71f21caf4aeb779d2122d699d4591031f082254dd5370ee6d3f9853226258",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/ny.jpg": "733b668cc1efe73b40aba20fc1828a02687359042a1ecdef7f9fd8dff9e8a794",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/pz.jpg": "55e6d3b2da7cc3fe9264b7139768645fd46ccee0898c92f32bd6fc48edd72fec",
+   "examples/panorama-scenes/media/cardinal-grid/preview-128/nz.jpg": "be07d7197e8547d20cb59368f225e3a4dc6db172d6184736fc69d6bc956e0a11",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/px.jpg": "987efbac121dc055f23a9c80503aa7757a507608551e30ceda42c8343c04dc2f",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/nx.jpg": "f7b32335f8eb6a69b1017a902a8e98e6710d7d65be94602ddc4ba182463bcf1d",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/py.jpg": "e7af5ea6456058a4a92754271592cea0f9e055ad69fbd1f79fecdf72637b703a",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/ny.jpg": "5a1a68341edc687a43508a433f816693d28f7a59a538f5da16888fdefeb47c16",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/pz.jpg": "cbe8d145369599eec0509c1dd73b38f3cadc0285d3add61b51dd9bf0291b98ae",
+   "examples/panorama-scenes/media/cardinal-grid/preview-256/nz.jpg": "0a85a409f6df2ba22d815dae1241ae29d8c4d92f304f1692f85e8cee7e6cfd45",
+   "examples/panorama-scenes/media/cardinal-grid/immersion-1024.jpg": "873e50ac8bddaac82fe7ef09f657ab91b799ac8c4eff22d1c8fa6257a473867f",
+   "examples/panorama-scenes/media/cardinal-grid/immersion-2048.jpg": "076d49e6cce75ea184706fed939769877779e98c39559e4dfff8189ba3372dea",
+   "examples/panorama-scenes/campus-pair.scene.json": "e19724fce7ba3589fe1a57acd5c0160d87611f8026bb86431647f2f58a12f7fd",
+   "scripts/validation/panorama-campus.mjs": "b55b2d976ea3648a0a1f5b09390f0ac649da6abae882813b7b481f59a6eb7795",
+   "scripts/validation/panoramaCampusAgent.js": "f1d2e962ef0f55260c2c692849ffb07f0451f90bb8fd25d9c81df94505164ce4"
+  }
+ },
+ "browser": {
+  "product": "Chrome/154.0.8037.58",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 foss-earth-check/1.0",
+  "gpu": {
+   "devices": [
+    {
+     "vendorId": 4203,
+     "deviceId": 0,
+     "vendorString": "Google Inc. (Apple)",
+     "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+     "driverVendor": "Apple",
+     "driverVersion": "27.0"
+    }
+   ],
+   "auxAttributes": {
+    "amdSwitchable": false,
+    "canSupportThreadedTextureMailbox": false,
+    "directRenderingVersion": "",
+    "displayType": "ANGLE_METAL",
+    "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_IMG_texture_compression_pvrtc GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_NV_fence GL_NV_framebuffer_blit GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_QCOM_render_shared_exponent ",
+    "glImplementationParts": "(gl=egl-angle,angle=metal)",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+    "glResetNotificationStrategy": 33362,
+    "glVendor": "Google Inc. (Apple)",
+    "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28731 git hash: 1ff8799c596d)",
+    "glWsExtensions": "",
+    "glWsVendor": "",
+    "glWsVersion": "",
+    "inProcessGpu": false,
+    "initializationTime": 0.035493,
+    "isAsan": false,
+    "isClangCoverage": false,
+    "jpegDecodeAcceleratorSupported": false,
+    "maxMsaaSamples": "8",
+    "optimus": false,
+    "passthroughCmdDecoder": true,
+    "pixelShaderVersion": "3.00",
+    "processCrashCount": 0,
+    "sandboxed": true,
+    "skiaBackendType": "GraphiteDawnMetal",
+    "subpixelFontRendering": true,
+    "targetCpuBits": 64,
+    "vertexShaderVersion": "3.00",
+    "visibilityCallbackCallCount": 0
+   },
+   "featureStatus": {
+    "2d_canvas": "enabled",
+    "direct_rendering_display_compositor": "disabled_off_ok",
+    "gpu_compositing": "enabled",
+    "multiple_raster_threads": "enabled_on",
+    "opengl": "enabled_on",
+    "rasterization": "enabled",
+    "raw_draw": "disabled_off_ok",
+    "skia_graphite": "enabled_on",
+    "trees_in_viz": "disabled_off",
+    "video_decode": "enabled",
+    "video_encode": "enabled",
+    "webgl": "enabled",
+    "webgpu": "enabled",
+    "webnn": "disabled_off"
+   },
+   "driverBugWorkarounds": [
+    "disable_2d_canvas_auto_flush",
+    "enable_webgl_timer_query_extensions",
+    "disabled_extension_GL_KHR_blend_equation_advanced",
+    "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+   ],
+   "videoDecoding": [],
+   "videoEncoding": []
+  }
+ },
+ "coldLoad": {
+  "appMs": 414,
+  "sceneMs": 464.69999998807907,
+  "previewReadyMs": 464.69999998807907,
+  "markerPlacedMs": 825.2999999523163,
+  "pollIntervalMs": 50,
+  "note": "Page time from navigation, with an empty browser profile and cache."
+ },
+ "environment": {
+  "adapter": {
+   "vendor": "apple",
+   "architecture": "metal-3",
+   "device": "0x0000",
+   "description": "Apple M5",
+   "isFallbackAdapter": false
+  },
+  "renderer": "webgl2",
+  "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+  "map": {
+   "mode": "raster-basemap",
+   "basemap": "usgs-imagery-topo",
+   "basemapProvider": "USGS The National Map",
+   "elevation": "mapterhorn"
+  },
+  "gpuTiming": true,
+  "devicePixelRatio": 1
+ },
+ "hardwareVerified": true,
+ "scene": {
+  "photograph": {
+   "entity": "umn-test-orb",
+   "marker": [
+    -255060.70420898977,
+    -4512633.508409398,
+    4485507.054418583
+   ],
+   "markerGeodetic": {
+    "longitudeDeg": -93.235,
+    "latitudeDeg": 44.97399999999999,
+    "heightMeters": 286.13653790205717
+   },
+   "radiusMeters": 2,
+   "contentDifference": 0,
+   "fovDeg": 45.83662361046586,
+   "markerSettle": {
+    "settled": true,
+    "seconds": 14.590599999964237,
+    "travelM": 0.39372257746040196,
+    "history": [
+     {
+      "t": 0.1580999999642372,
+      "heightM": 285.74281532596797,
+      "streaming": true
+     },
+     {
+      "t": 1.0721999999880791,
+      "heightM": 285.71790452767164,
+      "streaming": true
+     },
+     {
+      "t": 2.087199999988079,
+      "heightM": 285.71790452767164,
+      "streaming": true
+     },
+     {
+      "t": 3.0960999999642373,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 4.0540999999642375,
+      "heightM": 214.56751239672303,
+      "streaming": true
+     },
+     {
+      "t": 5.061699999988079,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 6.112399999976158,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 7.0983999999761584,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 8.07819999998808,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 9.047199999988079,
+      "heightM": 275.2508096732199,
+      "streaming": true
+     },
+     {
+      "t": 10.072599999964238,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 11.054899999976158,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 12.023299999952316,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 13.004099999964238,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 14.06969999998808,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     }
+    ]
+   },
+   "previewDetail": {
+    "representation": "preview-128",
+    "faceTexels": 128,
+    "limitation": null
+   }
+  },
+  "cardinal": {
+   "entity": "umn-cardinal-orb",
+   "marker": [
+    -255060.70420898977,
+    -4512633.508409398,
+    4485507.054418583
+   ],
+   "markerGeodetic": {
+    "longitudeDeg": -93.235,
+    "latitudeDeg": 44.97399999999999,
+    "heightMeters": 286.13653790205717
+   },
+   "radiusMeters": 2,
+   "contentDifference": 0,
+   "fovDeg": 59.99999999999999,
+   "markerSettle": {
+    "settled": true,
+    "seconds": 5.582300000011921,
+    "travelM": 0,
+    "history": [
+     {
+      "t": 0.10289999997615815,
+      "heightM": 286.13653790205717,
+      "streaming": true
+     },
+     {
+      "t": 1.0368000000119209,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 2.016300000011921,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 3.000100000023842,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 4.099100000023842,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     },
+     {
+      "t": 5.0636000000238415,
+      "heightM": 286.13653790205717,
+      "streaming": false
+     }
+    ]
+   },
+   "previewDetail": {
+    "representation": "preview-128",
+    "faceTexels": 128,
+    "limitation": null
+   }
+  }
+ },
+ "correctness": {
+  "probes": 67,
+  "measured": 67,
+  "failedProbes": [],
+  "interiorMaxDeg": 0.00048343336160580874,
+  "worst": {
+   "segment": "near-far",
+   "t": 45.5648,
+   "frameEye": [
+    -255068.55147341097,
+    -4512772.34527369,
+    4485371.190612944
+   ],
+   "distanceM": 194.41252050309814,
+   "effectiveRadiusM": 2.191901208173433,
+   "projectedDiameterPx": 24,
+   "windowGain": 88.69020332939559,
+   "contentPerPixelDeg": 4.774344820717595,
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "ray": {
+    "order": "bottom-up",
+    "maxDeg": 0.000036196484385905196,
+    "pixels": 392,
+    "orb": {
+     "pixels": 332,
+     "maxDeg": 0.0000310138033175161,
+     "meanDeg": 0.00001950158515374017,
+     "p99Deg": 0.000030327381325964118
+    }
+   },
+   "interior": {
+    "pixels": 332,
+    "maxDeg": 0.00048343336160580874,
+    "meanDeg": 0.00024489205443143465,
+    "p99Deg": 0.0004518592210829594,
+    "maxAt": [
+     720,
+     440
+    ]
+   },
+   "endToEnd": {
+    "pixels": 332,
+    "maxDeg": 0.002006740481996145,
+    "meanDeg": 0.001415786427281121,
+    "p99Deg": 0.001914517145850273
+   },
+   "coverage": {
+    "edgePixels": 160,
+    "gpuOnlyPixels": 0,
+    "cpuOnlyPixels": 0,
+    "drawnOutsideOrbPixels": 0
+   }
+  },
+  "rayMaxDeg": 0.00012810069976595904,
+  "endToEnd": {
+   "maxDeg": 0.006831063870297903,
+   "windowGain": 53.833463025806935,
+   "contentPerPixelDeg": 2.8979470756649697,
+   "pixelShare": 0.002357207944776021,
+   "segment": "look-above",
+   "t": 52.531200000000005
+  },
+  "readbackRowOrder": [
+   "bottom-up"
+  ],
+  "coverage": {
+   "edgePixels": 22981,
+   "gpuOnlyPixels": 0,
+   "cpuOnlyPixels": 0,
+   "drawnOutsideOrbPixels": 214
+  },
+  "bySegment": {
+   "orbit-clockwise": {
+    "probes": 20,
+    "maxDeg": 0.00031121875194679263,
+    "minDiameterPx": 42.55485818078115,
+    "maxDiameterPx": 42.554858181458464
+   },
+   "orbit-counterclockwise": {
+    "probes": 20,
+    "maxDeg": 0.0002941741466436132,
+    "minDiameterPx": 42.55485818079171,
+    "maxDiameterPx": 42.55485818169878
+   },
+   "near-far": {
+    "probes": 10,
+    "maxDeg": 0.00048343336160580874,
+    "minDiameterPx": 24,
+    "maxDiameterPx": 95.99999999999999
+   },
+   "look-above": {
+    "probes": 3,
+    "maxDeg": 0.00016390098190406587,
+    "minDiameterPx": 39.52186746373045,
+    "maxDiameterPx": 39.53550242090044
+   },
+   "look-below": {
+    "probes": 4,
+    "maxDeg": 0.0002320788813491102,
+    "minDiameterPx": 42.083470937080094,
+    "maxDiameterPx": 42.09208090006039
+   },
+   "look-near": {
+    "probes": 3,
+    "maxDeg": 0.00012959750485572893,
+    "minDiameterPx": 83.48016839249534,
+    "maxDiameterPx": 83.53433083497725
+   },
+   "stop": {
+    "probes": 0,
+    "maxDeg": 0,
+    "minDiameterPx": null,
+    "maxDiameterPx": 0
+   },
+   "restart": {
+    "probes": 7,
+    "maxDeg": 0.00013655377465201637,
+    "minDiameterPx": 83.49449035466216,
+    "maxDiameterPx": 83.4944903574907
+   }
+  },
+  "correlation": {
+   "frames": 2172,
+   "orbDrawFrames": 2172,
+   "staleUniformFrames": 0,
+   "missingDrawFrames": 0,
+   "multipleDrawFrames": 0,
+   "maxDrawVsLiveEyeM": 0.00000702777094247428,
+   "worstDrawVsLive": {
+    "segment": "orbit-counterclockwise",
+    "t": 22.0824,
+    "frameId": 1498,
+    "drawsThisFrame": 1,
+    "activeCameras": 0
+   },
+   "maxLiveVsPlannedEyeM": 0.6716705675449518,
+   "markerTravelM": 268.7714540405392,
+   "staleSegments": {}
+  },
+  "frames": 2236
+ },
+ "negativeControl": {
+  "delayFrames": 1,
+  "probes": 8,
+  "measured": 8,
+  "interiorMaxDeg": 51.146000881139635,
+  "rejectedByDirections": true,
+  "staleUniformFrames": 144,
+  "correlation": {
+   "frames": 145,
+   "orbDrawFrames": 145,
+   "staleUniformFrames": 144,
+   "missingDrawFrames": 0,
+   "multipleDrawFrames": 0,
+   "maxDrawVsLiveEyeM": 0.000006633250368616738,
+   "worstDrawVsLive": {
+    "segment": "control",
+    "t": 3.5831000000000057,
+    "frameId": 3112,
+    "drawsThisFrame": 1,
+    "activeCameras": 0
+   },
+   "maxLiveVsPlannedEyeM": 0.33597654418366135,
+   "markerTravelM": 10.885728229892711,
+   "staleSegments": {
+    "control": 144
+   }
+  }
+ },
+ "pointerDrags": [
+  {
+   "button": "left",
+   "cameraMoved": true,
+   "phaseAfter": "overview",
+   "before": {
+    "center": {
+     "x": -255060.70420898977,
+     "y": -4512633.508409398,
+     "z": 4485507.054418583
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 0.8
+   },
+   "after": {
+    "center": {
+     "x": -255049.59982580098,
+     "y": -4512636.117510456,
+     "z": 4485505.074300103
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 0.8
+   },
+   "probe": {
+    "segment": "drag-left",
+    "t": 0,
+    "frameEye": [
+     -255053.69487148625,
+     -4512708.571852963,
+     4485436.20777084
+    ],
+    "distanceM": 103.45481558934526,
+    "effectiveRadiusM": 2,
+    "projectedDiameterPx": 41.152268570752405,
+    "windowGain": 51.7177408357747,
+    "contentPerPixelDeg": 2.784054143854431,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.00010346576751026254,
+     "pixels": 1273,
+     "orb": {
+      "pixels": 1167,
+      "maxDeg": 0.00010346576750976372,
+      "meanDeg": 0.00005881259012191198,
+      "p99Deg": 0.00010176819930741365
+     }
+    },
+    "interior": {
+     "pixels": 1167,
+     "maxDeg": 0.000224534661189542,
+     "meanDeg": 0.00011084176149594893,
+     "p99Deg": 0.0001987370312597569,
+     "maxAt": [
+      597,
+      431
+     ]
+    },
+    "endToEnd": {
+     "pixels": 1167,
+     "maxDeg": 0.005265095961062653,
+     "meanDeg": 0.0024181971805149107,
+     "p99Deg": 0.005050550407892021
+    },
+    "coverage": {
+     "edgePixels": 271,
+     "gpuOnlyPixels": 0,
+     "cpuOnlyPixels": 0,
+     "drawnOutsideOrbPixels": 0
+    }
+   }
+  },
+  {
+   "button": "right",
+   "cameraMoved": true,
+   "phaseAfter": "overview",
+   "before": {
+    "center": {
+     "x": -255049.59982580098,
+     "y": -4512636.117510456,
+     "z": 4485505.074300103
+    },
+    "yaw": 0,
+    "pitch": 1.5408053219380187,
+    "radius": 100.04498987955368,
+    "fov": 0.8
+   },
+   "after": {
+    "center": {
+     "x": -255049.59982580072,
+     "y": -4512636.11751045,
+     "z": 4485505.074300151
+    },
+    "yaw": -0.4406208753168892,
+    "pitch": 1.5533430342749532,
+    "radius": 100.04498987955368,
+    "fov": 0.8
+   },
+   "probe": {
+    "segment": "drag-right",
+    "t": 0,
+    "frameEye": [
+     -255010.6712389331,
+     -4512703.392276789,
+     4485442.084849142
+    ],
+    "distanceM": 107.74088345530149,
+    "effectiveRadiusM": 2,
+    "projectedDiameterPx": 39.515179563537444,
+    "windowGain": 53.86115940018572,
+    "contentPerPixelDeg": 2.8994380187072006,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    },
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.00012537363900663582,
+     "pixels": 1156,
+     "orb": {
+      "pixels": 1054,
+      "maxDeg": 0.00012454815425785526,
+      "meanDeg": 0.00008251826345204337,
+      "p99Deg": 0.00012273762089382427
+     }
+    },
+    "interior": {
+     "pixels": 1054,
+     "maxDeg": 0.00021253005409629686,
+     "meanDeg": 0.00010361060899318407,
+     "p99Deg": 0.00019418934580854718,
+     "maxAt": [
+      642,
+      452
+     ]
+    },
+    "endToEnd": {
+     "pixels": 1054,
+     "maxDeg": 0.006484975063677601,
+     "meanDeg": 0.003416539962668298,
+     "p99Deg": 0.0061482398563291575
+    },
+    "coverage": {
+     "edgePixels": 260,
+     "gpuOnlyPixels": 0,
+     "cpuOnlyPixels": 0,
+     "drawnOutsideOrbPixels": 0
+    }
+   }
+  }
+ ],
+ "colour": [
+  {
+   "source": "photograph",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/photograph-north-landscape.png",
+   "representation": "preview-128",
+   "samples": 6657,
+   "orbDiameterCssPx": 96,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.578587436198373,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 2178,
+     "correctError": 6.7672637425717195,
+     "alternativeError": 60.08728394509988,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 4512,
+     "correctError": 4.1365485588714765,
+     "alternativeError": 71.12566650480213,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 5030,
+     "correctError": 3.9532318626263154,
+     "alternativeError": 58.351381008706674,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 3325,
+     "correctError": 5.233294762941501,
+     "alternativeError": 60.36546011668061,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/photograph-east-landscape.png",
+   "representation": "preview-128",
+   "samples": 6657,
+   "orbDiameterCssPx": 96,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.901158376232073,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 5003,
+     "correctError": 5.103570055120231,
+     "alternativeError": 66.68619175171554,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 2817,
+     "correctError": 7.162139194869465,
+     "alternativeError": 57.21796861375928,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 4995,
+     "correctError": 4.946856717745379,
+     "alternativeError": 66.80454138694891,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 4516,
+     "correctError": 4.999378735124207,
+     "alternativeError": 70.66902902433138,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/photograph-north-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 95.99999999999999,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.5786380273285765,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 2168,
+     "correctError": 6.775985410993406,
+     "alternativeError": 60.12822973528581,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 4502,
+     "correctError": 4.133679841957207,
+     "alternativeError": 71.14740983355527,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 5016,
+     "correctError": 3.944153697779896,
+     "alternativeError": 58.36797014585378,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 3311,
+     "correctError": 5.232124024981552,
+     "alternativeError": 60.396934260536064,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "photograph",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/photograph-east-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 95.99999999999999,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 4.901985798683577,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 4991,
+     "correctError": 5.103043875331901,
+     "alternativeError": 66.67786417637494,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 2806,
+     "correctError": 7.179216422839876,
+     "alternativeError": 57.27463860133293,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 4979,
+     "correctError": 4.9443046224552925,
+     "alternativeError": 66.831909390047,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 4509,
+     "correctError": 4.998971427327491,
+     "alternativeError": 70.65521791198854,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/cardinal-north-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414831862,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.582523972544607,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 56,
+     "correctError": 13.630289628644553,
+     "alternativeError": 65.18802519119062,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 133,
+     "correctError": 16.411795794330782,
+     "alternativeError": 65.48164575003015,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 138,
+     "correctError": 16.532567895873786,
+     "alternativeError": 75.50327313756058,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 126,
+     "correctError": 16.9871426094724,
+     "alternativeError": 62.88010357920751,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "landscape",
+   "viewport": {
+    "width": 1440,
+    "height": 900
+   },
+   "screenshot": "screenshots/cardinal-east-landscape.png",
+   "representation": "preview-128",
+   "samples": 4276,
+   "orbDiameterCssPx": 77.72399414994455,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.620668086156896,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 127,
+     "correctError": 18.595500767075283,
+     "alternativeError": 59.62386791261797,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 109,
+     "correctError": 19.895806624504694,
+     "alternativeError": 65.76361261273422,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 127,
+     "correctError": 18.595500767075283,
+     "alternativeError": 59.626841707195744,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 133,
+     "correctError": 16.97213590376399,
+     "alternativeError": 66.9415827668286,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "north",
+   "note": "south of the marker, looking north",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/cardinal-north-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 95.99999999999999,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.728791051227132,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 74,
+     "correctError": 12.711872107054731,
+     "alternativeError": 74.64741228557327,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 204,
+     "correctError": 17.796743982753593,
+     "alternativeError": 68.55630072471213,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 207,
+     "correctError": 18.01052655297327,
+     "alternativeError": 76.21614901535011,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 189,
+     "correctError": 19.462785188580323,
+     "alternativeError": 67.31603102316244,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  },
+  {
+   "source": "cardinal",
+   "view": "east",
+   "note": "west of the marker, looking east",
+   "orientation": "portrait",
+   "viewport": {
+    "width": 720,
+    "height": 1280
+   },
+   "screenshot": "screenshots/cardinal-east-portrait.png",
+   "representation": "preview-128",
+   "samples": 6641,
+   "orbDiameterCssPx": 96,
+   "markerMovedM": 0,
+   "meanAbsoluteError": 3.8967201670148754,
+   "alternatives": {
+    "mirrored": {
+     "distinctPixels": 193,
+     "correctError": 19.721774869931732,
+     "alternativeError": 60.20808196319916,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 90°": {
+     "distinctPixels": 164,
+     "correctError": 21.486667344028056,
+     "alternativeError": 66.91224302147491,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 180°": {
+     "distinctPixels": 193,
+     "correctError": 19.721774869931732,
+     "alternativeError": 60.21077592089193,
+     "distinguishable": true,
+     "rejected": true
+    },
+    "turned 270°": {
+     "distinctPixels": 199,
+     "correctError": 18.95020808416159,
+     "alternativeError": 70.20324700931629,
+     "distinguishable": true,
+     "rejected": true
+    }
+   },
+   "notRejected": [],
+   "indistinguishable": [],
+   "passed": true
+  }
+ ],
+ "navigation": {
+  "single": {
+   "immersion": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.000011420623160397308,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.00000735662848945026,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "cameraAfterExit": {
+    "centerM": 0,
+    "yawRad": 2.1081100529759254e-8,
+    "pitchRad": 0,
+    "radiusM": 0,
+    "fovRad": 0
+   },
+   "facedDeg": 359.99999879214874,
+   "hudChips": {
+    "overview": {
+     "exit": false,
+     "exitText": null,
+     "credits": 0
+    },
+    "immersive": {
+     "exit": true,
+     "exitText": "360: UMN — test panorama",
+     "credits": 1
+    },
+    "afterExit": {
+     "exit": false,
+     "exitText": null,
+     "credits": 0
+    }
+   }
+  },
+  "pair": {
+   "a": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.00000984461839753972,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.000006173739688062388,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "b": {
+    "ray": {
+     "order": "bottom-up",
+     "maxDeg": 0.00000887706198091521,
+     "pixels": 4000
+    },
+    "pixels": 81000,
+    "maxDeg": 0.000006173739688062388,
+    "viewport": {
+     "width": 1440,
+     "height": 900
+    }
+   },
+   "backReturnsToA": true,
+   "cameraAfterExit": {
+    "centerM": 0,
+    "yawRad": 3.264074098416083e-13,
+    "pitchRad": 0,
+    "radiusM": 0,
+    "fovRad": 0
+   },
+   "facedDeg": 1.8701484805205837e-11,
+   "entity": "pair-photo"
+  }
+ },
+ "requests": {
+  "cold load": {
+   "own": 6,
+   "panoramaMedia": 12,
+   "externalByHost": {
+    "api.github.com": 1,
+    "tiles.mapterhorn.com": 739,
+    "basemap.nationalmap.gov": 552
+   }
+  },
+  "correctness": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 3398,
+    "tiles.mapterhorn.com": 4259
+   }
+  },
+  "negative control": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 331,
+    "tiles.mapterhorn.com": 617
+   }
+  },
+  "pointer drags": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 559,
+    "tiles.mapterhorn.com": 265
+   }
+  },
+  "colour photograph": {
+   "own": 0,
+   "panoramaMedia": 0,
+   "externalByHost": {
+    "basemap.nationalmap.gov": 638,
+    "tiles.mapterhorn.com": 1183
+   }
+  },
+  "load cardinal": {
+   "own": 1,
+   "panoramaMedia": 12,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 1107,
+    "basemap.nationalmap.gov": 737
+   }
+  },
+  "load photograph": {
+   "own": 2,
+   "panoramaMedia": 1,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 170,
+    "basemap.nationalmap.gov": 144
+   }
+  },
+  "load pair": {
+   "own": 1,
+   "panoramaMedia": 1,
+   "externalByHost": {
+    "tiles.mapterhorn.com": 361,
+    "basemap.nationalmap.gov": 93
+   }
+  }
+ },
+ "exceptions": [],
+ "mapDetailChanges": [],
+ "failures": [],
+ "configuration": "apple metal-3 (Apple M5), Chrome/154.0.8037.58, webgl2 (ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)), 1440×900 at DPR 1, 60 fps cap, usgs-imagery-topo imagery with mapterhorn elevation",
+ "verdict": "automated check passed on apple metal-3 (Apple M5), Chrome/154.0.8037.58, webgl2 (ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)), 1440×900 at DPR 1, 60 fps cap, usgs-imagery-topo imagery with mapterhorn elevation; manual acceptance pending"
+}
