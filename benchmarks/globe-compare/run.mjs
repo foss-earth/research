@@ -173,22 +173,24 @@ const browser = await chromium.launch({
 });
 
 const runsOut = [];
-for (let run = 1; run <= runs; run += 1) {
-  const results = [];
-  for (const target of targets) {
-    process.stderr.write(`run ${run}/${runs} ${target.name}\n`);
-    try {
-      results.push(await runTarget(browser, target));
-    } catch (error) {
-      results.push({ name: target.name, error: String(error) });
+try {
+  for (let run = 1; run <= runs; run += 1) {
+    const results = [];
+    for (const target of targets) {
+      process.stderr.write(`run ${run}/${runs} ${target.name}\n`);
+      try {
+        results.push(await runTarget(browser, target));
+      } catch (error) {
+        results.push({ name: target.name, error: String(error) });
+      }
+      process.stderr.write(`${JSON.stringify(results.at(-1))}\n`);
     }
-    process.stderr.write(`${JSON.stringify(results.at(-1))}\n`);
+    runsOut.push({ run, results });
   }
-  runsOut.push({ run, results });
+} finally {
+  await browser.close();
+  server.close();
 }
-
-await browser.close();
-server.close();
 process.stdout.write(`${JSON.stringify({
   validOnlyWhenMachineIsIdle: true,
   headless,
