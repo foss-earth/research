@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="352" viewBox="0 0 760 352" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Haar details by level</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Quantized details of the step into each level, full-resolution step 12, mean over 6 panoramas and 7</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">representations. Levels are counted from the finest (0) toward the coarse sphere.</text>
+<line x1="16" y1="84" x2="34" y2="84" class="line" stroke="var(--s1)"/><circle cx="25" cy="84" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="88" class="" text-anchor="start">luma</text>
+<line x1="86.88" y1="84" x2="104.88" y2="84" class="line" stroke="var(--s2)"/><circle cx="95.88" cy="84" r="4" class="dot" fill="var(--s2)"/>
+<text x="110.88" y="88" class="" text-anchor="start">chroma</text>
+<text x="16" y="116" class="panel-title" text-anchor="start">Share of details that are zero</text>
+<line x1="60" y1="310" x2="362" y2="310" class="grid"/>
+<text x="54" y="314" class="tick" text-anchor="end">0%</text>
+<line x1="60" y1="265.5" x2="362" y2="265.5" class="grid"/>
+<text x="54" y="269.5" class="tick" text-anchor="end">25%</text>
+<line x1="60" y1="221" x2="362" y2="221" class="grid"/>
+<text x="54" y="225" class="tick" text-anchor="end">50%</text>
+<line x1="60" y1="176.5" x2="362" y2="176.5" class="grid"/>
+<text x="54" y="180.5" class="tick" text-anchor="end">75%</text>
+<line x1="60" y1="132" x2="362" y2="132" class="grid"/>
+<text x="54" y="136" class="tick" text-anchor="end">100%</text>
+<line x1="60" y1="310" x2="362" y2="310" class="axis"/>
+<line x1="71.19" y1="310" x2="71.19" y2="314" class="axis"/>
+<text x="71.19" y="326" class="tick" text-anchor="middle">−5</text>
+<line x1="127.11" y1="310" x2="127.11" y2="314" class="axis"/>
+<text x="127.11" y="326" class="tick" text-anchor="middle">−4</text>
+<line x1="183.04" y1="310" x2="183.04" y2="314" class="axis"/>
+<text x="183.04" y="326" class="tick" text-anchor="middle">−3</text>
+<line x1="238.96" y1="310" x2="238.96" y2="314" class="axis"/>
+<text x="238.96" y="326" class="tick" text-anchor="middle">−2</text>
+<line x1="294.89" y1="310" x2="294.89" y2="314" class="axis"/>
+<text x="294.89" y="326" class="tick" text-anchor="middle">−1</text>
+<line x1="350.81" y1="310" x2="350.81" y2="314" class="axis"/>
+<text x="350.81" y="326" class="tick" text-anchor="middle">finest</text>
+<text x="211" y="341" class="tick" text-anchor="middle">level</text>
+<path d="M71.19 305.53 L127.11 297.29 L183.04 277.82 L238.96 250.45 L294.89 223.93 L350.81 195.32" class="line" stroke="var(--s1)"><title>luma</title></path>
+<circle cx="71.19" cy="305.53" r="4" class="dot" fill="var(--s1)"><title>luma: 0, 0.03</title></circle>
+<circle cx="127.11" cy="297.29" r="4" class="dot" fill="var(--s1)"><title>luma: 1, 0.07</title></circle>
+<circle cx="183.04" cy="277.82" r="4" class="dot" fill="var(--s1)"><title>luma: 2, 0.18</title></circle>
+<circle cx="238.96" cy="250.45" r="4" class="dot" fill="var(--s1)"><title>luma: 3, 0.33</title></circle>
+<circle cx="294.89" cy="223.93" r="4" class="dot" fill="var(--s1)"><title>luma: 4, 0.48</title></circle>
+<circle cx="350.81" cy="195.32" r="4" class="dot" fill="var(--s1)"><title>luma: 5, 0.64</title></circle>
+<path d="M71.19 272.73 L127.11 238.56 L183.04 201.35 L238.96 170.47 L294.89 146.98 L350.81 134.27" class="line" stroke="var(--s2)"><title>chroma</title></path>
+<circle cx="71.19" cy="272.73" r="4" class="dot" fill="var(--s2)"><title>chroma: 0, 0.21</title></circle>
+<circle cx="127.11" cy="238.56" r="4" class="dot" fill="var(--s2)"><title>chroma: 1, 0.4</title></circle>
+<circle cx="183.04" cy="201.35" r="4" class="dot" fill="var(--s2)"><title>chroma: 2, 0.61</title></circle>
+<circle cx="238.96" cy="170.47" r="4" class="dot" fill="var(--s2)"><title>chroma: 3, 0.78</title></circle>
+<circle cx="294.89" cy="146.98" r="4" class="dot" fill="var(--s2)"><title>chroma: 4, 0.92</title></circle>
+<circle cx="350.81" cy="134.27" r="4" class="dot" fill="var(--s2)"><title>chroma: 5, 0.99</title></circle>
+<text x="388" y="116" class="panel-title" text-anchor="start">Entropy, bits per detail</text>
+<line x1="432" y1="310" x2="734" y2="310" class="grid"/>
+<text x="426" y="314" class="tick" text-anchor="end">0</text>
+<line x1="432" y1="265.5" x2="734" y2="265.5" class="grid"/>
+<text x="426" y="269.5" class="tick" text-anchor="end">2</text>
+<line x1="432" y1="221" x2="734" y2="221" class="grid"/>
+<text x="426" y="225" class="tick" text-anchor="end">4</text>
+<line x1="432" y1="176.5" x2="734" y2="176.5" class="grid"/>
+<text x="426" y="180.5" class="tick" text-anchor="end">6</text>
+<line x1="432" y1="132" x2="734" y2="132" class="grid"/>
+<text x="426" y="136" class="tick" text-anchor="end">8</text>
+<line x1="432" y1="310" x2="734" y2="310" class="axis"/>
+<line x1="443.19" y1="310" x2="443.19" y2="314" class="axis"/>
+<text x="443.19" y="326" class="tick" text-anchor="middle">−5</text>
+<line x1="499.11" y1="310" x2="499.11" y2="314" class="axis"/>
+<text x="499.11" y="326" class="tick" text-anchor="middle">−4</text>
+<line x1="555.04" y1="310" x2="555.04" y2="314" class="axis"/>
+<text x="555.04" y="326" class="tick" text-anchor="middle">−3</text>
+<line x1="610.96" y1="310" x2="610.96" y2="314" class="axis"/>
+<text x="610.96" y="326" class="tick" text-anchor="middle">−2</text>
+<line x1="666.89" y1="310" x2="666.89" y2="314" class="axis"/>
+<text x="666.89" y="326" class="tick" text-anchor="middle">−1</text>
+<line x1="722.81" y1="310" x2="722.81" y2="314" class="axis"/>
+<text x="722.81" y="326" class="tick" text-anchor="middle">finest</text>
+<text x="583" y="341" class="tick" text-anchor="middle">level</text>
+<path d="M443.19 151.55 L499.11 174.91 L555.04 200.76 L610.96 225.98 L666.89 248.44 L722.81 269.63" class="line" stroke="var(--s1)"><title>luma</title></path>
+<circle cx="443.19" cy="151.55" r="4" class="dot" fill="var(--s1)"><title>luma: 0, 7.12</title></circle>
+<circle cx="499.11" cy="174.91" r="4" class="dot" fill="var(--s1)"><title>luma: 1, 6.07</title></circle>
+<circle cx="555.04" cy="200.76" r="4" class="dot" fill="var(--s1)"><title>luma: 2, 4.91</title></circle>
+<circle cx="610.96" cy="225.98" r="4" class="dot" fill="var(--s1)"><title>luma: 3, 3.78</title></circle>
+<circle cx="666.89" cy="248.44" r="4" class="dot" fill="var(--s1)"><title>luma: 4, 2.77</title></circle>
+<circle cx="722.81" cy="269.63" r="4" class="dot" fill="var(--s1)"><title>luma: 5, 1.81</title></circle>
+<path d="M443.19 212.45 L499.11 239.89 L555.04 264.31 L610.96 283.54 L666.89 298.45 L722.81 307.68" class="line" stroke="var(--s2)"><title>chroma</title></path>
+<circle cx="443.19" cy="212.45" r="4" class="dot" fill="var(--s2)"><title>chroma: 0, 4.38</title></circle>
+<circle cx="499.11" cy="239.89" r="4" class="dot" fill="var(--s2)"><title>chroma: 1, 3.15</title></circle>
+<circle cx="555.04" cy="264.31" r="4" class="dot" fill="var(--s2)"><title>chroma: 2, 2.05</title></circle>
+<circle cx="610.96" cy="283.54" r="4" class="dot" fill="var(--s2)"><title>chroma: 3, 1.19</title></circle>
+<circle cx="666.89" cy="298.45" r="4" class="dot" fill="var(--s2)"><title>chroma: 4, 0.52</title></circle>
+<circle cx="722.81" cy="307.68" r="4" class="dot" fill="var(--s2)"><title>chroma: 5, 0.1</title></circle>
+</svg>

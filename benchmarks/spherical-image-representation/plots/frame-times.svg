@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="543" viewBox="0 0 760 543" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Main-thread work per frame while detail arrives</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Time spent in a frame's uploads, decoding and render call, on this desktop, headless Chrome, WebGL 2 (the</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">other backends are in results/tables.md). Dot: median; band: 95th to 99th percentile; whisker: the worst</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">frame. The line at 16.7 ms is one frame at 60 Hz.</text>
+<text x="16" y="107" class="panel-title" text-anchor="start">Nothing else running: the processor idles between frames</text>
+<line x1="416" y1="117" x2="416" y2="285" class="grid"/>
+<text x="416" y="300" class="tick" text-anchor="middle">0.01</text>
+<line x1="469.94" y1="117" x2="469.94" y2="285" class="grid"/>
+<text x="469.94" y="300" class="tick" text-anchor="middle">0.1</text>
+<line x1="523.88" y1="117" x2="523.88" y2="285" class="grid"/>
+<text x="523.88" y="300" class="tick" text-anchor="middle">1</text>
+<line x1="589.84" y1="117" x2="589.84" y2="285" class="axis"/>
+<text x="589.84" y="300" class="tick" text-anchor="middle">16.7</text>
+<line x1="631.76" y1="117" x2="631.76" y2="285" class="grid"/>
+<text x="631.76" y="300" class="tick" text-anchor="middle">100</text>
+<text x="408" y="133" class="" text-anchor="end">No uploads</text>
+<line x1="483.05" y1="129" x2="493.21" y2="129" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="489.96" y="125" width="2.37" height="8" rx="3" fill="var(--s1)"><title>No uploads: worst 0.3 ms</title></rect>
+<circle cx="483.05" cy="129" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="133" class="value" text-anchor="start">worst 0.3 ms</text>
+<text x="408" y="157" class="" text-anchor="end">One decoded tile uploaded per frame</text>
+<line x1="492.77" y1="153" x2="515.86" y2="153" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="499.29" y="149" width="2" height="8" rx="3" fill="var(--s1)"><title>One decoded tile uploaded per frame: worst 0.7 ms</title></rect>
+<circle cx="492.77" cy="153" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="157" class="value" text-anchor="start">worst 0.7 ms</text>
+<text x="408" y="181" class="" text-anchor="end">Four decoded tiles uploaded per frame</text>
+<line x1="502.99" y1="177" x2="513.06" y2="177" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="510.3" y="173" width="2" height="8" rx="3" fill="var(--s1)"><title>Four decoded tiles uploaded per frame: worst 0.6 ms</title></rect>
+<circle cx="502.99" cy="177" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="181" class="value" text-anchor="start">worst 0.6 ms</text>
+<text x="408" y="205" class="" text-anchor="end">One residual tile decoded in JavaScript and uploaded per frame</text>
+<line x1="549.1" y1="201" x2="574.42" y2="201" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="552.41" y="197" width="2" height="8" rx="3" fill="var(--s1)"><title>One residual tile decoded in JavaScript and uploaded per frame: worst 8.7 ms</title></rect>
+<circle cx="549.1" cy="201" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="205" class="value" text-anchor="start">worst 8.7 ms</text>
+<text x="408" y="229" class="" text-anchor="end">One JPEG tile decoded by the browser and uploaded per frame</text>
+<line x1="542.88" y1="225" x2="555.55" y2="225" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="550.98" y="221" width="2.55" height="8" rx="3" fill="var(--s1)"><title>One JPEG tile decoded by the browser and uploaded per frame: worst 3.9 ms</title></rect>
+<circle cx="542.88" cy="225" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="229" class="value" text-anchor="start">worst 3.9 ms</text>
+<text x="408" y="253" class="" text-anchor="end">The whole 2056 × 1542 atlas uploaded at once, every 60th frame</text>
+<line x1="484.35" y1="249" x2="548.17" y2="249" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="492.32" y="245" width="45.06" height="8" rx="3" fill="var(--s1)"><title>The whole 2056 × 1542 atlas uploaded at once, every 60th frame: worst 2.8 ms</title></rect>
+<circle cx="484.35" cy="249" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="253" class="value" text-anchor="start">worst 2.8 ms</text>
+<text x="408" y="277" class="" text-anchor="end">A new 6144 × 3072 texture filled at once, twice</text>
+<line x1="484.98" y1="273" x2="590.01" y2="273" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="494.06" y="269" width="4.2" height="8" rx="3" fill="var(--s1)"><title>A new 6144 × 3072 texture filled at once, twice: worst 17 ms</title></rect>
+<circle cx="484.98" cy="273" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="277" class="value" text-anchor="start">worst 17 ms</text>
+<text x="16" y="319" class="panel-title" text-anchor="start">One other core kept busy: the processor stays awake</text>
+<line x1="416" y1="329" x2="416" y2="497" class="grid"/>
+<text x="416" y="512" class="tick" text-anchor="middle">0.01</text>
+<line x1="469.94" y1="329" x2="469.94" y2="497" class="grid"/>
+<text x="469.94" y="512" class="tick" text-anchor="middle">0.1</text>
+<line x1="523.88" y1="329" x2="523.88" y2="497" class="grid"/>
+<text x="523.88" y="512" class="tick" text-anchor="middle">1</text>
+<line x1="589.84" y1="329" x2="589.84" y2="497" class="axis"/>
+<text x="589.84" y="512" class="tick" text-anchor="middle">16.7</text>
+<line x1="631.76" y1="329" x2="631.76" y2="497" class="grid"/>
+<text x="631.76" y="512" class="tick" text-anchor="middle">100</text>
+<text x="408" y="345" class="" text-anchor="end">No uploads</text>
+<line x1="425.5" y1="341" x2="455.94" y2="341" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="448.48" y="337" width="7.46" height="8" rx="3" fill="var(--s1)"><title>No uploads: worst 0.1 ms</title></rect>
+<circle cx="425.5" cy="341" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="345" class="value" text-anchor="start">worst 0.1 ms</text>
+<text x="408" y="369" class="" text-anchor="end">One decoded tile uploaded per frame</text>
+<line x1="432.24" y1="365" x2="480.21" y2="365" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="455.94" y="361" width="7.27" height="8" rx="3" fill="var(--s1)"><title>One decoded tile uploaded per frame: worst 0.2 ms</title></rect>
+<circle cx="432.24" cy="365" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="369" class="value" text-anchor="start">worst 0.2 ms</text>
+<text x="408" y="393" class="" text-anchor="end">Four decoded tiles uploaded per frame</text>
+<line x1="451.23" y1="389" x2="477.82" y2="389" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="461.59" y="385" width="11.63" height="8" rx="3" fill="var(--s1)"><title>Four decoded tiles uploaded per frame: worst 0.1 ms</title></rect>
+<circle cx="451.23" cy="389" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="393" class="value" text-anchor="start">worst 0.1 ms</text>
+<text x="408" y="417" class="" text-anchor="end">One residual tile decoded in JavaScript and uploaded per frame</text>
+<line x1="504.91" y1="413" x2="544.92" y2="413" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="508.79" y="409" width="2" height="8" rx="3" fill="var(--s1)"><title>One residual tile decoded in JavaScript and uploaded per frame: worst 2.5 ms</title></rect>
+<circle cx="504.91" cy="413" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="417" class="value" text-anchor="start">worst 2.5 ms</text>
+<text x="408" y="441" class="" text-anchor="end">One JPEG tile decoded by the browser and uploaded per frame</text>
+<line x1="504.65" y1="437" x2="515.69" y2="437" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="510.09" y="433" width="4.76" height="8" rx="3" fill="var(--s1)"><title>One JPEG tile decoded by the browser and uploaded per frame: worst 0.7 ms</title></rect>
+<circle cx="504.65" cy="437" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="441" class="value" text-anchor="start">worst 0.7 ms</text>
+<text x="408" y="465" class="" text-anchor="end">The whole 2056 × 1542 atlas uploaded at once, every 60th frame</text>
+<line x1="432.24" y1="461" x2="518.06" y2="461" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="455.94" y="457" width="36.84" height="8" rx="3" fill="var(--s1)"><title>The whole 2056 × 1542 atlas uploaded at once, every 60th frame: worst 0.8 ms</title></rect>
+<circle cx="432.24" cy="461" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="465" class="value" text-anchor="start">worst 0.8 ms</text>
+<text x="408" y="489" class="" text-anchor="end">A new 6144 × 3072 texture filled at once, twice</text>
+<line x1="425.5" y1="485" x2="566.28" y2="485" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="448.48" y="481" width="2.76" height="8" rx="3" fill="var(--s1)"><title>A new 6144 × 3072 texture filled at once, twice: worst 6.1 ms</title></rect>
+<circle cx="425.5" cy="485" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="658" y="489" class="value" text-anchor="start">worst 6.1 ms</text>
+<text x="532" y="528" class="tick" text-anchor="middle">milliseconds (log scale)</text>
+</svg>

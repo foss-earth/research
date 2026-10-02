@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="392" viewBox="0 0 760 392" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">The same samples under four codecs</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Cubemap, 768 px faces. View PSNR against bytes for the whole sphere, mean of 6 panoramas. AVIF is macOS's</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">encoder through sips, at three qualities.</text>
+<line x1="16" y1="84" x2="34" y2="84" class="line" stroke="var(--s1)"/><circle cx="25" cy="84" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="88" class="" text-anchor="start">JPEG 4:2:0</text>
+<line x1="127.2" y1="84" x2="145.2" y2="84" class="line" stroke="var(--s2)"/><circle cx="136.2" cy="84" r="4" class="dot" fill="var(--s2)"/>
+<text x="151.2" y="88" class="" text-anchor="start">WebP</text>
+<line x1="198.08" y1="84" x2="216.08" y2="84" class="line" stroke="var(--s3)"/><circle cx="207.08" cy="84" r="4" class="dot" fill="var(--s3)"/>
+<text x="222.08" y="88" class="" text-anchor="start">AVIF</text>
+<line x1="268.96" y1="84" x2="286.96" y2="84" class="line" stroke="var(--quiet)"/><circle cx="277.96" cy="84" r="4" class="dot" fill="var(--quiet)"/>
+<text x="292.96" y="88" class="" text-anchor="start">JPEG 4:4:4</text>
+<line x1="60" y1="350" x2="734" y2="350" class="grid"/>
+<text x="54" y="354" class="tick" text-anchor="end">29</text>
+<line x1="60" y1="312.67" x2="734" y2="312.67" class="grid"/>
+<text x="54" y="316.67" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="275.33" x2="734" y2="275.33" class="grid"/>
+<text x="54" y="279.33" class="tick" text-anchor="end">31</text>
+<line x1="60" y1="238" x2="734" y2="238" class="grid"/>
+<text x="54" y="242" class="tick" text-anchor="end">32</text>
+<line x1="60" y1="200.67" x2="734" y2="200.67" class="grid"/>
+<text x="54" y="204.67" class="tick" text-anchor="end">33</text>
+<line x1="60" y1="163.33" x2="734" y2="163.33" class="grid"/>
+<text x="54" y="167.33" class="tick" text-anchor="end">34</text>
+<line x1="60" y1="126" x2="734" y2="126" class="grid"/>
+<text x="54" y="130" class="tick" text-anchor="end">35</text>
+<line x1="60" y1="350" x2="734" y2="350" class="axis"/>
+<line x1="142.49" y1="350" x2="142.49" y2="354" class="axis"/>
+<text x="142.49" y="366" class="tick" text-anchor="middle">256 KiB</text>
+<line x1="304.82" y1="350" x2="304.82" y2="354" class="axis"/>
+<text x="304.82" y="366" class="tick" text-anchor="middle">512 KiB</text>
+<line x1="467.15" y1="350" x2="467.15" y2="354" class="axis"/>
+<text x="467.15" y="366" class="tick" text-anchor="middle">1024 KiB</text>
+<line x1="629.48" y1="350" x2="629.48" y2="354" class="axis"/>
+<text x="629.48" y="366" class="tick" text-anchor="middle">2048 KiB</text>
+<text x="397" y="381" class="tick" text-anchor="middle">bytes for the whole sphere (log scale)</text>
+<text x="16" y="116" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M282.39 267.19 L352.1 231.82 L419.49 196.98 L452.56 182.76 L491.65 167.96 L566 147.45" class="line" stroke="var(--quiet)"><title>JPEG 4:4:4</title></path>
+<circle cx="282.39" cy="267.19" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 465 KiB, 31.22 dB</title></circle>
+<circle cx="352.1" cy="231.82" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 627 KiB, 32.17 dB</title></circle>
+<circle cx="419.49" cy="196.98" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 835 KiB, 33.10 dB</title></circle>
+<circle cx="452.56" cy="182.76" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 962 KiB, 33.48 dB</title></circle>
+<circle cx="491.65" cy="167.96" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 1137 KiB, 33.88 dB</title></circle>
+<circle cx="566" cy="147.45" r="3" class="dot" fill="var(--quiet)"><title>JPEG 4:4:4: 1562 KiB, 34.43 dB</title></circle>
+<path d="M237.93 303.74 L305.84 271.5 L371.65 239.31 L441.27 209.23 L513.95 184.74" class="line" stroke="var(--s1)"><title>JPEG 4:2:0</title></path>
+<circle cx="237.93" cy="303.74" r="4" class="dot" fill="var(--s1)"><title>JPEG 4:2:0: 385 KiB, 30.24 dB</title></circle>
+<circle cx="305.84" cy="271.5" r="4" class="dot" fill="var(--s1)"><title>JPEG 4:2:0: 514 KiB, 31.10 dB</title></circle>
+<circle cx="371.65" cy="239.31" r="4" class="dot" fill="var(--s1)"><title>JPEG 4:2:0: 681 KiB, 31.96 dB</title></circle>
+<circle cx="441.27" cy="209.23" r="4" class="dot" fill="var(--s1)"><title>JPEG 4:2:0: 917 KiB, 32.77 dB</title></circle>
+<circle cx="513.95" cy="184.74" r="4" class="dot" fill="var(--s1)"><title>JPEG 4:2:0: 1251 KiB, 33.43 dB</title></circle>
+<path d="M235.71 286.23 L295.01 255.11 L334.36 237.92 L416.3 208.34 L489.15 188.13" class="line" stroke="var(--s2)"><title>WebP</title></path>
+<circle cx="235.71" cy="286.23" r="4" class="dot" fill="var(--s2)"><title>WebP: 381 KiB, 30.71 dB</title></circle>
+<circle cx="295.01" cy="255.11" r="4" class="dot" fill="var(--s2)"><title>WebP: 491 KiB, 31.54 dB</title></circle>
+<circle cx="334.36" cy="237.92" r="4" class="dot" fill="var(--s2)"><title>WebP: 581 KiB, 32.00 dB</title></circle>
+<circle cx="416.3" cy="208.34" r="4" class="dot" fill="var(--s2)"><title>WebP: 824 KiB, 32.79 dB</title></circle>
+<circle cx="489.15" cy="188.13" r="4" class="dot" fill="var(--s2)"><title>WebP: 1125 KiB, 33.34 dB</title></circle>
+<path d="M139.22 315.39 L307.36 245.43 L419.91 214.36" class="line" stroke="var(--s3)"><title>AVIF</title></path>
+<circle cx="139.22" cy="315.39" r="4" class="dot" fill="var(--s3)"><title>AVIF: 252 KiB, 29.93 dB</title></circle>
+<circle cx="307.36" cy="245.43" r="4" class="dot" fill="var(--s3)"><title>AVIF: 518 KiB, 31.80 dB</title></circle>
+<circle cx="419.91" cy="214.36" r="4" class="dot" fill="var(--s3)"><title>AVIF: 837 KiB, 32.63 dB</title></circle>
+</svg>

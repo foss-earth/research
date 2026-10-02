@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="382" viewBox="0 0 760 382" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Decoded memory against quality of the view</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Texture bytes a client holds (four per sample received) against what the view shows. Cubemap, Haar residual</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">tiles, mean of 12 views of 6 panoramas.</text>
+<line x1="16" y1="84" x2="34" y2="84" class="line" stroke="var(--s1)"/><circle cx="25" cy="84" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="88" class="" text-anchor="start">the view first, level by level</text>
+<line x1="261.6" y1="84" x2="279.6" y2="84" class="line" stroke="var(--quiet)"/><circle cx="270.6" cy="84" r="4" class="dot" fill="var(--quiet)"/>
+<text x="285.6" y="88" class="" text-anchor="start">level by level, whole sphere</text>
+<line x1="60" y1="340" x2="734" y2="340" class="grid"/>
+<text x="54" y="344" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="309.43" x2="734" y2="309.43" class="grid"/>
+<text x="54" y="313.43" class="tick" text-anchor="end">22</text>
+<line x1="60" y1="278.86" x2="734" y2="278.86" class="grid"/>
+<text x="54" y="282.86" class="tick" text-anchor="end">24</text>
+<line x1="60" y1="248.29" x2="734" y2="248.29" class="grid"/>
+<text x="54" y="252.29" class="tick" text-anchor="end">26</text>
+<line x1="60" y1="217.71" x2="734" y2="217.71" class="grid"/>
+<text x="54" y="221.71" class="tick" text-anchor="end">28</text>
+<line x1="60" y1="187.14" x2="734" y2="187.14" class="grid"/>
+<text x="54" y="191.14" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="156.57" x2="734" y2="156.57" class="grid"/>
+<text x="54" y="160.57" class="tick" text-anchor="end">32</text>
+<line x1="60" y1="126" x2="734" y2="126" class="grid"/>
+<text x="54" y="130" class="tick" text-anchor="end">34</text>
+<line x1="60" y1="340" x2="734" y2="340" class="axis"/>
+<line x1="108.4" y1="340" x2="108.4" y2="344" class="axis"/>
+<text x="108.4" y="356" class="tick" text-anchor="middle">0.0625 MiB</text>
+<line x1="258.75" y1="340" x2="258.75" y2="344" class="axis"/>
+<text x="258.75" y="356" class="tick" text-anchor="middle">0.25 MiB</text>
+<line x1="409.1" y1="340" x2="409.1" y2="344" class="axis"/>
+<text x="409.1" y="356" class="tick" text-anchor="middle">1 MiB</text>
+<line x1="559.45" y1="340" x2="559.45" y2="344" class="axis"/>
+<text x="559.45" y="356" class="tick" text-anchor="middle">4 MiB</text>
+<line x1="709.8" y1="340" x2="709.8" y2="344" class="axis"/>
+<text x="709.8" y="356" class="tick" text-anchor="middle">16 MiB</text>
+<text x="397" y="371" class="tick" text-anchor="middle">decoded samples held, RGBA8 (log scale)</text>
+<text x="16" y="116" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M121.18 311.53 L249.01 294.8 L370.2 273.47 L509.85 240.59 L615.75 206.48 L692.23 167.61 L722.47 141.63" class="line" stroke="var(--quiet)"><title>level by level, whole sphere</title></path>
+<circle cx="121.18" cy="311.53" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 0.07 MiB, 21.86 dB</title></circle>
+<circle cx="249.01" cy="294.8" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 0.23 MiB, 22.96 dB</title></circle>
+<circle cx="370.2" cy="273.47" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 0.70 MiB, 24.35 dB</title></circle>
+<circle cx="509.85" cy="240.59" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 2.53 MiB, 26.50 dB</title></circle>
+<circle cx="615.75" cy="206.48" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 6.72 MiB, 28.74 dB</title></circle>
+<circle cx="692.23" cy="167.61" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 13.61 MiB, 31.28 dB</title></circle>
+<circle cx="722.47" cy="141.63" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 17.98 MiB, 32.98 dB</title></circle>
+<path d="M189.4 303.58 L318.01 271.03 L447.57 227.11 L545.94 181.14 L630.34 143.04 L691.54 141.63 L722.47 141.63" class="line" stroke="var(--s1)"><title>the view first, level by level</title></path>
+<circle cx="189.4" cy="303.58" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 0.13 MiB, 22.38 dB</title></circle>
+<circle cx="318.01" cy="271.03" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 0.43 MiB, 24.51 dB</title></circle>
+<circle cx="447.57" cy="227.11" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 1.43 MiB, 27.39 dB</title></circle>
+<circle cx="545.94" cy="181.14" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 3.53 MiB, 30.39 dB</title></circle>
+<circle cx="630.34" cy="143.04" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 7.69 MiB, 32.89 dB</title></circle>
+<circle cx="691.54" cy="141.63" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 13.52 MiB, 32.98 dB</title></circle>
+<circle cx="722.47" cy="141.63" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 17.98 MiB, 32.98 dB</title></circle>
+</svg>

@@ -1,0 +1,94 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-02T04:49:41.113Z",
+  "commit": "4866615084cdc1481de12eb092000e8f56c39e23",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/spherical-image-representation/run-network.mjs",
+  "sha256": "6124a718ac57e2b235ab3212a797741099eb0891125e9c751655d267d507c6a2"
+ },
+ "configuration": {
+  "viewport": {
+   "size": 512,
+   "fovDeg": 75,
+   "raysPerPixel": 4
+  },
+  "profiles": [
+   {
+    "id": "fast",
+    "megabitsPerSecond": 50,
+    "roundTripMs": 20
+   },
+   {
+    "id": "moderate-mobile",
+    "megabitsPerSecond": 10,
+    "roundTripMs": 50
+   },
+   {
+    "id": "constrained-mobile",
+    "megabitsPerSecond": 2,
+    "roundTripMs": 100
+   },
+   {
+    "id": "very-constrained",
+    "megabitsPerSecond": 0.75,
+    "roundTripMs": 150
+   }
+  ],
+  "traces": [
+   {
+    "id": "stationary",
+    "description": "enters and looks forward",
+    "duration": 10
+   },
+   {
+    "id": "slow-turn",
+    "description": "a full turn along the horizon in 20 s",
+    "duration": 20
+   },
+   {
+    "id": "quick-turn",
+    "description": "looks forward for 2 s, turns 180° in 0.6 s, stays",
+    "duration": 10
+   },
+   {
+    "id": "explore",
+    "description": "turns steadily while looking up and down",
+    "duration": 16
+   }
+  ],
+  "model": {
+   "concurrency": 2,
+   "sharing": "equal",
+   "responseOverheadBytes": 300,
+   "schedulerStepSeconds": 0.05,
+   "judgedEverySeconds": 0.25,
+   "assumptions": "see lib/network.mjs"
+  },
+  "thresholds": {
+   "acceptableShortfallDb": 3,
+   "highShortfallDb": 1,
+   "shortfall": "below what the same scheme shows for the same view with everything arrived",
+   "deficit": "below the uncompressed equirectangular control at 2560 × 1280"
+  },
+  "tile": 256,
+  "delta": 12,
+  "quality": 80,
+  "codecs": {
+   "cjpeg": "libjpeg-turbo version 3.2.0",
+   "cwebp": "1.6.0",
+   "sips": "sips-316",
+   "zlib": "1.2.12",
+   "brotli": "1.2.0",
+   "zstd": "1.5.7"
+  }
+ }
+}

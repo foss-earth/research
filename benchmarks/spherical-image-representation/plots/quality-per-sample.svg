@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="422" viewBox="0 0 760 422" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Quality at one million samples, relative to equirectangular</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Difference in view PSNR at equal sample count, interpolated between measured resolutions; and the share of</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">samples saved or added to match equirectangular's quality at one million samples.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">Linear reconstruction</text>
+<line x1="172" y1="100" x2="172" y2="340" class="grid"/>
+<text x="172" y="355" class="tick" text-anchor="middle">0</text>
+<line x1="220" y1="100" x2="220" y2="340" class="grid"/>
+<text x="220" y="355" class="tick" text-anchor="middle">+1</text>
+<line x1="268" y1="100" x2="268" y2="340" class="grid"/>
+<text x="268" y="355" class="tick" text-anchor="middle">+2</text>
+<text x="140" y="116" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M172 104 H236.2 Q240.2 104 240.2 108 V116 Q240.2 120 236.2 120 H172 Z" fill="var(--s1)"><title>Icosahedral hexagon: +1.42 dB, −27%</title></path>
+<text x="246.2" y="116" class="value" text-anchor="start">+1.42 dB, −27%</text>
+<text x="140" y="140" class="" text-anchor="end">QSC cube</text>
+<path d="M172 128 H207.22 Q211.22 128 211.22 132 V140 Q211.22 144 207.22 144 H172 Z" fill="var(--s1)"><title>QSC cube: +0.82 dB, −22%</title></path>
+<text x="217.22" y="140" class="value" text-anchor="start">+0.82 dB, −22%</text>
+<text x="140" y="164" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M172 152 H206.79 Q210.79 152 210.79 156 V164 Q210.79 168 206.79 168 H172 Z" fill="var(--s1)"><title>Equi-angular cube: +0.81 dB, −22%</title></path>
+<text x="216.79" y="164" class="value" text-anchor="start">+0.81 dB, −22%</text>
+<text x="140" y="188" class="" text-anchor="end">HEALPix</text>
+<path d="M172 176 H205.46 Q209.46 176 209.46 180 V188 Q209.46 192 205.46 192 H172 Z" fill="var(--s1)"><title>HEALPix: +0.78 dB, −22%</title></path>
+<text x="215.46" y="188" class="value" text-anchor="start">+0.78 dB, −22%</text>
+<text x="140" y="212" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M172 200 H198.42 Q202.42 200 202.42 204 V212 Q202.42 216 198.42 216 H172 Z" fill="var(--s1)"><title>Icosahedral rhombus: +0.63 dB, −14%</title></path>
+<text x="208.42" y="212" class="value" text-anchor="start">+0.63 dB, −14%</text>
+<text x="140" y="236" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M172 224 H184.63 Q188.63 224 188.63 228 V236 Q188.63 240 184.63 240 H172 Z" fill="var(--s1)"><title>Octahedral (L1): +0.35 dB, −11%</title></path>
+<text x="194.63" y="236" class="value" text-anchor="start">+0.35 dB, −11%</text>
+<text x="140" y="260" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M172 248 H182.26 Q186.26 248 186.26 252 V260 Q186.26 264 182.26 264 H172 Z" fill="var(--s1)"><title>Icosahedral triangle: +0.30 dB, −9%</title></path>
+<text x="192.26" y="260" class="value" text-anchor="start">+0.30 dB, −9%</text>
+<text x="140" y="284" class="" text-anchor="end">Cubemap</text>
+<path d="M172 272 H182.15 Q186.15 272 186.15 276 V284 Q186.15 288 182.15 288 H172 Z" fill="var(--s1)"><title>Cubemap: +0.29 dB, −9%</title></path>
+<text x="192.15" y="284" class="value" text-anchor="start">+0.29 dB, −9%</text>
+<text x="140" y="308" class="" text-anchor="end">TOAST</text>
+<path d="M172 296 H177.38 Q181.38 296 181.38 300 V308 Q181.38 312 177.38 312 H172 Z" fill="var(--s1)"><title>TOAST: +0.20 dB, −7%</title></path>
+<text x="187.38" y="308" class="value" text-anchor="start">+0.20 dB, −7%</text>
+<text x="140" y="332" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M172 320 H174.55 Q178.55 320 178.55 324 V332 Q178.55 336 174.55 336 H172 Z" fill="var(--s1)"><title>Octahedral equal-area: +0.14 dB, −4%</title></path>
+<text x="184.55" y="332" class="value" text-anchor="start">+0.14 dB, −4%</text>
+<line x1="172" y1="100" x2="172" y2="340" class="axis"/>
+<text x="208" y="371" class="tick" text-anchor="middle">dB against equirectangular</text>
+<text x="388" y="90" class="panel-title" text-anchor="start">Nearest sample</text>
+<line x1="544" y1="100" x2="544" y2="340" class="grid"/>
+<text x="544" y="355" class="tick" text-anchor="middle">0</text>
+<line x1="592" y1="100" x2="592" y2="340" class="grid"/>
+<text x="592" y="355" class="tick" text-anchor="middle">+1</text>
+<line x1="640" y1="100" x2="640" y2="340" class="grid"/>
+<text x="640" y="355" class="tick" text-anchor="middle">+2</text>
+<text x="512" y="116" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M544 104 H610.88 Q614.88 104 614.88 108 V116 Q614.88 120 610.88 120 H544 Z" fill="var(--s1)"><title>Icosahedral hexagon: +1.48 dB, −26%</title></path>
+<text x="620.88" y="116" class="value" text-anchor="start">+1.48 dB, −26%</text>
+<text x="512" y="140" class="" text-anchor="end">HEALPix</text>
+<path d="M544 128 H589.29 Q593.29 128 593.29 132 V140 Q593.29 144 589.29 144 H544 Z" fill="var(--s1)"><title>HEALPix: +1.03 dB, −25%</title></path>
+<text x="599.29" y="140" class="value" text-anchor="start">+1.03 dB, −25%</text>
+<text x="512" y="164" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M544 152 H587.01 Q591.01 152 591.01 156 V164 Q591.01 168 587.01 168 H544 Z" fill="var(--s1)"><title>Icosahedral rhombus: +0.98 dB, −19%</title></path>
+<text x="597.01" y="164" class="value" text-anchor="start">+0.98 dB, −19%</text>
+<text x="512" y="188" class="" text-anchor="end">QSC cube</text>
+<path d="M544 176 H585.07 Q589.07 176 589.07 180 V188 Q589.07 192 585.07 192 H544 Z" fill="var(--s1)"><title>QSC cube: +0.94 dB, −24%</title></path>
+<text x="595.07" y="188" class="value" text-anchor="start">+0.94 dB, −24%</text>
+<text x="512" y="212" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M544 200 H584.76 Q588.76 200 588.76 204 V212 Q588.76 216 584.76 216 H544 Z" fill="var(--s1)"><title>Equi-angular cube: +0.93 dB, −23%</title></path>
+<text x="594.76" y="212" class="value" text-anchor="start">+0.93 dB, −23%</text>
+<text x="512" y="236" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M544 224 H569.96 Q573.96 224 573.96 228 V236 Q573.96 240 569.96 240 H544 Z" fill="var(--s1)"><title>Octahedral (L1): +0.62 dB, −17%</title></path>
+<text x="579.96" y="236" class="value" text-anchor="start">+0.62 dB, −17%</text>
+<text x="512" y="260" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M544 248 H563.39 Q567.39 248 567.39 252 V260 Q567.39 264 563.39 264 H544 Z" fill="var(--s1)"><title>Icosahedral triangle: +0.49 dB, −13%</title></path>
+<text x="573.39" y="260" class="value" text-anchor="start">+0.49 dB, −13%</text>
+<text x="512" y="284" class="" text-anchor="end">TOAST</text>
+<path d="M544 272 H562.6 Q566.6 272 566.6 276 V284 Q566.6 288 562.6 288 H544 Z" fill="var(--s1)"><title>TOAST: +0.47 dB, −14%</title></path>
+<text x="572.6" y="284" class="value" text-anchor="start">+0.47 dB, −14%</text>
+<text x="512" y="308" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M544 296 H562.54 Q566.54 296 566.54 300 V308 Q566.54 312 562.54 312 H544 Z" fill="var(--s1)"><title>Octahedral equal-area: +0.47 dB, −13%</title></path>
+<text x="572.54" y="308" class="value" text-anchor="start">+0.47 dB, −13%</text>
+<text x="512" y="332" class="" text-anchor="end">Cubemap</text>
+<path d="M544 320 H557.22 Q561.22 320 561.22 324 V332 Q561.22 336 557.22 336 H544 Z" fill="var(--s1)"><title>Cubemap: +0.36 dB, −10%</title></path>
+<text x="567.22" y="332" class="value" text-anchor="start">+0.36 dB, −10%</text>
+<line x1="544" y1="100" x2="544" y2="340" class="axis"/>
+<text x="580" y="371" class="tick" text-anchor="middle">dB against equirectangular</text>
+<text x="16" y="388" class="note" text-anchor="start">The percentage is the change in sample count for equal quality. Linear reconstruction is bilinear in a chart; for</text>
+<text x="16" y="403" class="note" text-anchor="start">hexagon cells it is barycentric between the three nearest samples.</text>
+</svg>

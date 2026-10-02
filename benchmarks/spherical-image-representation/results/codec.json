@@ -1,0 +1,211 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-02T03:56:50.626Z",
+  "commit": "4866615084cdc1481de12eb092000e8f56c39e23",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/spherical-image-representation/run-codec.mjs",
+  "sha256": "b115a452ef7bad14a0a42af1ab29a30a3a0490bdc9d49ed330d3b9687df25449"
+ },
+ "configuration": {
+  "viewport": {
+   "size": 512,
+   "fovDeg": 75,
+   "raysPerPixel": 4
+  },
+  "views": [
+   {
+    "id": "horizon-0",
+    "group": "horizon",
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0
+   },
+   {
+    "id": "horizon-120",
+    "group": "horizon",
+    "yaw": 120,
+    "pitch": 0,
+    "roll": 0
+   },
+   {
+    "id": "horizon-240",
+    "group": "horizon",
+    "yaw": 240,
+    "pitch": 0,
+    "roll": 0
+   },
+   {
+    "id": "mid-35-30",
+    "group": "mid",
+    "yaw": 30,
+    "pitch": 35,
+    "roll": 0
+   },
+   {
+    "id": "mid-35-270",
+    "group": "mid",
+    "yaw": 270,
+    "pitch": 35,
+    "roll": 0
+   },
+   {
+    "id": "mid--35-150",
+    "group": "mid",
+    "yaw": 150,
+    "pitch": -35,
+    "roll": 0
+   },
+   {
+    "id": "mid--35-270",
+    "group": "mid",
+    "yaw": 270,
+    "pitch": -35,
+    "roll": 0
+   },
+   {
+    "id": "pole-90-0",
+    "group": "pole",
+    "yaw": 0,
+    "pitch": 90,
+    "roll": 0
+   },
+   {
+    "id": "pole--90-0",
+    "group": "pole",
+    "yaw": 0,
+    "pitch": -90,
+    "roll": 0
+   },
+   {
+    "id": "random-0",
+    "group": "random",
+    "yaw": 33.0698860064149,
+    "pitch": -21.124510638108344,
+    "roll": 23.12338124960661
+   },
+   {
+    "id": "random-1",
+    "group": "random",
+    "yaw": -54.64665088802577,
+    "pitch": 81.34560295096736,
+    "roll": 21.323417499661446
+   },
+   {
+    "id": "random-2",
+    "group": "random",
+    "yaw": -3.106295848265282,
+    "pitch": 72.21074121737513,
+    "roll": 297.2185620479286
+   }
+  ],
+  "qualities": {
+   "jpeg": [
+    40,
+    60,
+    75,
+    85,
+    92
+   ],
+   "jpeg444": [
+    40,
+    60,
+    75,
+    80,
+    85,
+    92
+   ],
+   "jpegjs": [
+    80
+   ],
+   "webp": [
+    40,
+    60,
+    75,
+    85,
+    92
+   ],
+   "avif": [
+    35,
+    55,
+    75
+   ],
+   "jp2": [
+    35,
+    55,
+    75
+   ]
+  },
+  "resolutions": {
+   "equirect": [
+    1280,
+    640
+   ],
+   "cube": [
+    768,
+    384
+   ],
+   "eac": [
+    768,
+    384
+   ],
+   "qsc": [
+    768,
+    384
+   ],
+   "oct": [
+    1792,
+    896
+   ],
+   "oct-ea": [
+    1792,
+    896
+   ],
+   "toast": [
+    2048,
+    1024
+   ],
+   "healpix": [
+    512,
+    256
+   ],
+   "ico-rhombus": [
+    512,
+    256
+   ],
+   "ico-hex": [
+    512,
+    256
+   ],
+   "ico-tri": [
+    512,
+    256
+   ]
+  },
+  "layout": "each chart compressed as one image; triangle cells as a 2W × H image, each cell's lower triangle then its upper along the row",
+  "codecs": {
+   "cjpeg": "libjpeg-turbo version 3.2.0",
+   "cwebp": "1.6.0",
+   "sips": "sips-316",
+   "zlib": "1.2.12",
+   "brotli": "1.2.0",
+   "zstd": "1.5.7"
+  },
+  "settings": {
+   "jpeg": "cjpeg -quality q -optimize -sample 2x2",
+   "jpeg444": "cjpeg -quality q -optimize -sample 1x1",
+   "jpegjs": "jpeg-js as scripts/prepare-panorama.mjs calls it: 4:4:4, standard Huffman tables",
+   "webp": "cwebp -q q -m 4",
+   "avif": "sips -s format avif -s formatOptions q",
+   "png": "scripts/lib/panoramaImage.mjs encodePng"
+  }
+ }
+}

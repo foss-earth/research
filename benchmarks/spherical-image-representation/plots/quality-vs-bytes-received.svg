@@ -1,0 +1,303 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="696" viewBox="0 0 760 696" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Quality of the view against bytes received, by order of sending</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">What a 512 × 512, 75° view shows after a given number of bytes, drawn from the finest level that has arrived</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">in each direction. Mean of 12 views of 6 panoramas. 256-cell tiles except the last panel.</text>
+<line x1="16" y1="84" x2="34" y2="84" class="line" stroke="var(--s1)"/><circle cx="25" cy="84" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="88" class="" text-anchor="start">the view first, level by level</text>
+<line x1="261.6" y1="84" x2="279.6" y2="84" class="line" stroke="var(--s2)"/><circle cx="270.6" cy="84" r="4" class="dot" fill="var(--s2)"/>
+<text x="285.6" y="88" class="" text-anchor="start">most error removed per byte, whole sphere</text>
+<line x1="16" y1="104" x2="34" y2="104" class="line" stroke="var(--s3)"/><circle cx="25" cy="104" r="4" class="dot" fill="var(--s3)"/>
+<text x="40" y="108" class="" text-anchor="start">coarse sphere, then the finest level under the view</text>
+<line x1="402.72" y1="104" x2="420.72" y2="104" class="line" stroke="var(--quiet)"/><circle cx="411.72" cy="104" r="4" class="dot" fill="var(--quiet)"/>
+<text x="426.72" y="108" class="" text-anchor="start">level by level, whole sphere</text>
+<text x="16" y="136" class="panel-title" text-anchor="start">Cubemap, Haar residual tiles</text>
+<line x1="60" y1="340" x2="362" y2="340" class="grid"/>
+<text x="54" y="344" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="315.14" x2="362" y2="315.14" class="grid"/>
+<text x="54" y="319.14" class="tick" text-anchor="end">22</text>
+<line x1="60" y1="290.29" x2="362" y2="290.29" class="grid"/>
+<text x="54" y="294.29" class="tick" text-anchor="end">24</text>
+<line x1="60" y1="265.43" x2="362" y2="265.43" class="grid"/>
+<text x="54" y="269.43" class="tick" text-anchor="end">26</text>
+<line x1="60" y1="240.57" x2="362" y2="240.57" class="grid"/>
+<text x="54" y="244.57" class="tick" text-anchor="end">28</text>
+<line x1="60" y1="215.71" x2="362" y2="215.71" class="grid"/>
+<text x="54" y="219.71" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="190.86" x2="362" y2="190.86" class="grid"/>
+<text x="54" y="194.86" class="tick" text-anchor="end">32</text>
+<line x1="60" y1="166" x2="362" y2="166" class="grid"/>
+<text x="54" y="170" class="tick" text-anchor="end">34</text>
+<line x1="60" y1="340" x2="362" y2="340" class="axis"/>
+<line x1="74.31" y1="340" x2="74.31" y2="344" class="axis"/>
+<text x="74.31" y="356" class="tick" text-anchor="middle">8</text>
+<line x1="143.26" y1="340" x2="143.26" y2="344" class="axis"/>
+<text x="143.26" y="356" class="tick" text-anchor="middle">32</text>
+<line x1="212.22" y1="340" x2="212.22" y2="344" class="axis"/>
+<text x="212.22" y="356" class="tick" text-anchor="middle">128</text>
+<line x1="281.17" y1="340" x2="281.17" y2="344" class="axis"/>
+<text x="281.17" y="356" class="tick" text-anchor="middle">512</text>
+<line x1="350.13" y1="340" x2="350.13" y2="344" class="axis"/>
+<text x="350.13" y="356" class="tick" text-anchor="middle">2048</text>
+<text x="211" y="371" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="16" y="156" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M143.26 316.85 L177.74 303.25 L212.22 285.91 L246.7 259.17 L281.17 231.43 L315.65 199.84 L350.13 178.71" class="line" stroke="var(--quiet)"><title>level by level, whole sphere</title></path>
+<circle cx="143.26" cy="316.85" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 32 KiB, 21.86 dB</title></circle>
+<circle cx="177.74" cy="303.25" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 64 KiB, 22.96 dB</title></circle>
+<circle cx="212.22" cy="285.91" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 128 KiB, 24.35 dB</title></circle>
+<circle cx="246.7" cy="259.17" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 256 KiB, 26.50 dB</title></circle>
+<circle cx="281.17" cy="231.43" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 512 KiB, 28.74 dB</title></circle>
+<circle cx="315.65" cy="199.84" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 1024 KiB, 31.28 dB</title></circle>
+<circle cx="350.13" cy="178.71" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 2048 KiB, 32.98 dB</title></circle>
+<path d="M143.26 310.39 L177.74 283.92 L212.22 248.21 L246.7 210.83 L281.17 179.85 L315.65 178.71 L350.13 178.71" class="line" stroke="var(--s1)"><title>the view first, level by level</title></path>
+<circle cx="143.26" cy="310.39" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 32 KiB, 22.38 dB</title></circle>
+<circle cx="177.74" cy="283.92" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 64 KiB, 24.51 dB</title></circle>
+<circle cx="212.22" cy="248.21" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 128 KiB, 27.39 dB</title></circle>
+<circle cx="246.7" cy="210.83" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 256 KiB, 30.39 dB</title></circle>
+<circle cx="281.17" cy="179.85" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 512 KiB, 32.89 dB</title></circle>
+<circle cx="315.65" cy="178.71" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 1024 KiB, 32.98 dB</title></circle>
+<circle cx="350.13" cy="178.71" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 2048 KiB, 32.98 dB</title></circle>
+<path d="M143.26 316.69 L177.74 305.09 L212.22 287.05 L246.7 258.67 L281.17 231.16 L315.65 196.37 L350.13 178.71" class="line" stroke="var(--s2)"><title>most error removed per byte, whole sphere</title></path>
+<circle cx="143.26" cy="316.69" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 32 KiB, 21.88 dB</title></circle>
+<circle cx="177.74" cy="305.09" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 64 KiB, 22.81 dB</title></circle>
+<circle cx="212.22" cy="287.05" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 128 KiB, 24.26 dB</title></circle>
+<circle cx="246.7" cy="258.67" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 256 KiB, 26.54 dB</title></circle>
+<circle cx="281.17" cy="231.16" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 512 KiB, 28.76 dB</title></circle>
+<circle cx="315.65" cy="196.37" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 1024 KiB, 31.56 dB</title></circle>
+<circle cx="350.13" cy="178.71" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 2048 KiB, 32.98 dB</title></circle>
+<text x="388" y="136" class="panel-title" text-anchor="start">Cubemap, JPEG residual tiles</text>
+<line x1="432" y1="340" x2="734" y2="340" class="grid"/>
+<text x="426" y="344" class="tick" text-anchor="end">20</text>
+<line x1="432" y1="315.14" x2="734" y2="315.14" class="grid"/>
+<text x="426" y="319.14" class="tick" text-anchor="end">22</text>
+<line x1="432" y1="290.29" x2="734" y2="290.29" class="grid"/>
+<text x="426" y="294.29" class="tick" text-anchor="end">24</text>
+<line x1="432" y1="265.43" x2="734" y2="265.43" class="grid"/>
+<text x="426" y="269.43" class="tick" text-anchor="end">26</text>
+<line x1="432" y1="240.57" x2="734" y2="240.57" class="grid"/>
+<text x="426" y="244.57" class="tick" text-anchor="end">28</text>
+<line x1="432" y1="215.71" x2="734" y2="215.71" class="grid"/>
+<text x="426" y="219.71" class="tick" text-anchor="end">30</text>
+<line x1="432" y1="190.86" x2="734" y2="190.86" class="grid"/>
+<text x="426" y="194.86" class="tick" text-anchor="end">32</text>
+<line x1="432" y1="166" x2="734" y2="166" class="grid"/>
+<text x="426" y="170" class="tick" text-anchor="end">34</text>
+<line x1="432" y1="340" x2="734" y2="340" class="axis"/>
+<line x1="446.31" y1="340" x2="446.31" y2="344" class="axis"/>
+<text x="446.31" y="356" class="tick" text-anchor="middle">8</text>
+<line x1="515.26" y1="340" x2="515.26" y2="344" class="axis"/>
+<text x="515.26" y="356" class="tick" text-anchor="middle">32</text>
+<line x1="584.22" y1="340" x2="584.22" y2="344" class="axis"/>
+<text x="584.22" y="356" class="tick" text-anchor="middle">128</text>
+<line x1="653.17" y1="340" x2="653.17" y2="344" class="axis"/>
+<text x="653.17" y="356" class="tick" text-anchor="middle">512</text>
+<line x1="722.13" y1="340" x2="722.13" y2="344" class="axis"/>
+<text x="722.13" y="356" class="tick" text-anchor="middle">2048</text>
+<text x="583" y="371" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="388" y="156" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M446.31 325.34 L480.79 313.93 L515.26 301.82 L549.74 286.95 L584.22 269.11 L618.7 244.99 L653.17 222.18 L687.65 189.05 L722.13 186.88" class="line" stroke="var(--quiet)"><title>level by level, whole sphere</title></path>
+<circle cx="446.31" cy="325.34" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 8 KiB, 21.18 dB</title></circle>
+<circle cx="480.79" cy="313.93" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 16 KiB, 22.10 dB</title></circle>
+<circle cx="515.26" cy="301.82" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 32 KiB, 23.07 dB</title></circle>
+<circle cx="549.74" cy="286.95" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 64 KiB, 24.27 dB</title></circle>
+<circle cx="584.22" cy="269.11" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 128 KiB, 25.70 dB</title></circle>
+<circle cx="618.7" cy="244.99" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 256 KiB, 27.64 dB</title></circle>
+<circle cx="653.17" cy="222.18" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 512 KiB, 29.48 dB</title></circle>
+<circle cx="687.65" cy="189.05" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 1024 KiB, 32.15 dB</title></circle>
+<circle cx="722.13" cy="186.88" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 2048 KiB, 32.32 dB</title></circle>
+<path d="M446.31 314.56 L480.79 299.05 L515.26 278.65 L549.74 253.94 L584.22 220.59 L618.7 191.08 L653.17 186.88 L687.65 186.88 L722.13 186.88" class="line" stroke="var(--s1)"><title>the view first, level by level</title></path>
+<circle cx="446.31" cy="314.56" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 8 KiB, 22.05 dB</title></circle>
+<circle cx="480.79" cy="299.05" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 16 KiB, 23.29 dB</title></circle>
+<circle cx="515.26" cy="278.65" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 32 KiB, 24.94 dB</title></circle>
+<circle cx="549.74" cy="253.94" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 64 KiB, 26.92 dB</title></circle>
+<circle cx="584.22" cy="220.59" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 128 KiB, 29.61 dB</title></circle>
+<circle cx="618.7" cy="191.08" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 256 KiB, 31.98 dB</title></circle>
+<circle cx="653.17" cy="186.88" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 512 KiB, 32.32 dB</title></circle>
+<circle cx="687.65" cy="186.88" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 1024 KiB, 32.32 dB</title></circle>
+<circle cx="722.13" cy="186.88" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 2048 KiB, 32.32 dB</title></circle>
+<path d="M446.31 325.06 L480.79 316.47 L515.26 303.28 L549.74 287.7 L584.22 269.88 L618.7 243.87 L653.17 218.48 L687.65 188.23 L722.13 186.88" class="line" stroke="var(--s2)"><title>most error removed per byte, whole sphere</title></path>
+<circle cx="446.31" cy="325.06" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 8 KiB, 21.20 dB</title></circle>
+<circle cx="480.79" cy="316.47" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 16 KiB, 21.89 dB</title></circle>
+<circle cx="515.26" cy="303.28" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 32 KiB, 22.95 dB</title></circle>
+<circle cx="549.74" cy="287.7" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 64 KiB, 24.21 dB</title></circle>
+<circle cx="584.22" cy="269.88" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 128 KiB, 25.64 dB</title></circle>
+<circle cx="618.7" cy="243.87" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 256 KiB, 27.73 dB</title></circle>
+<circle cx="653.17" cy="218.48" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 512 KiB, 29.78 dB</title></circle>
+<circle cx="687.65" cy="188.23" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 1024 KiB, 32.21 dB</title></circle>
+<circle cx="722.13" cy="186.88" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 2048 KiB, 32.32 dB</title></circle>
+<text x="16" y="400" class="panel-title" text-anchor="start">Cubemap, JPEG tiles (replacement)</text>
+<line x1="60" y1="604" x2="362" y2="604" class="grid"/>
+<text x="54" y="608" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="579.14" x2="362" y2="579.14" class="grid"/>
+<text x="54" y="583.14" class="tick" text-anchor="end">22</text>
+<line x1="60" y1="554.29" x2="362" y2="554.29" class="grid"/>
+<text x="54" y="558.29" class="tick" text-anchor="end">24</text>
+<line x1="60" y1="529.43" x2="362" y2="529.43" class="grid"/>
+<text x="54" y="533.43" class="tick" text-anchor="end">26</text>
+<line x1="60" y1="504.57" x2="362" y2="504.57" class="grid"/>
+<text x="54" y="508.57" class="tick" text-anchor="end">28</text>
+<line x1="60" y1="479.71" x2="362" y2="479.71" class="grid"/>
+<text x="54" y="483.71" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="454.86" x2="362" y2="454.86" class="grid"/>
+<text x="54" y="458.86" class="tick" text-anchor="end">32</text>
+<line x1="60" y1="430" x2="362" y2="430" class="grid"/>
+<text x="54" y="434" class="tick" text-anchor="end">34</text>
+<line x1="60" y1="604" x2="362" y2="604" class="axis"/>
+<line x1="74.31" y1="604" x2="74.31" y2="608" class="axis"/>
+<text x="74.31" y="620" class="tick" text-anchor="middle">8</text>
+<line x1="143.26" y1="604" x2="143.26" y2="608" class="axis"/>
+<text x="143.26" y="620" class="tick" text-anchor="middle">32</text>
+<line x1="212.22" y1="604" x2="212.22" y2="608" class="axis"/>
+<text x="212.22" y="620" class="tick" text-anchor="middle">128</text>
+<line x1="281.17" y1="604" x2="281.17" y2="608" class="axis"/>
+<text x="281.17" y="620" class="tick" text-anchor="middle">512</text>
+<line x1="350.13" y1="604" x2="350.13" y2="608" class="axis"/>
+<text x="350.13" y="620" class="tick" text-anchor="middle">2048</text>
+<text x="211" y="635" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="16" y="420" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M74.31 590.54 L108.79 578.56 L143.26 568.64 L177.74 553.97 L212.22 537.4 L246.7 518.72 L281.17 492.08 L315.65 463.07 L350.13 450.6" class="line" stroke="var(--quiet)"><title>level by level, whole sphere</title></path>
+<circle cx="74.31" cy="590.54" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 8 KiB, 21.08 dB</title></circle>
+<circle cx="108.79" cy="578.56" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 16 KiB, 22.05 dB</title></circle>
+<circle cx="143.26" cy="568.64" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 32 KiB, 22.85 dB</title></circle>
+<circle cx="177.74" cy="553.97" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 64 KiB, 24.03 dB</title></circle>
+<circle cx="212.22" cy="537.4" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 128 KiB, 25.36 dB</title></circle>
+<circle cx="246.7" cy="518.72" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 256 KiB, 26.86 dB</title></circle>
+<circle cx="281.17" cy="492.08" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 512 KiB, 29.01 dB</title></circle>
+<circle cx="315.65" cy="463.07" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 1024 KiB, 31.34 dB</title></circle>
+<circle cx="350.13" cy="450.6" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 2048 KiB, 32.34 dB</title></circle>
+<path d="M74.31 580.92 L108.79 565.81 L143.26 546 L177.74 524.85 L212.22 492.88 L246.7 462.53 L281.17 450.6 L315.65 450.6 L350.13 450.6" class="line" stroke="var(--s1)"><title>the view first, level by level</title></path>
+<circle cx="74.31" cy="580.92" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 8 KiB, 21.86 dB</title></circle>
+<circle cx="108.79" cy="565.81" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 16 KiB, 23.07 dB</title></circle>
+<circle cx="143.26" cy="546" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 32 KiB, 24.67 dB</title></circle>
+<circle cx="177.74" cy="524.85" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 64 KiB, 26.37 dB</title></circle>
+<circle cx="212.22" cy="492.88" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 128 KiB, 28.94 dB</title></circle>
+<circle cx="246.7" cy="462.53" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 256 KiB, 31.38 dB</title></circle>
+<circle cx="281.17" cy="450.6" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 512 KiB, 32.34 dB</title></circle>
+<circle cx="315.65" cy="450.6" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 1024 KiB, 32.34 dB</title></circle>
+<circle cx="350.13" cy="450.6" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 2048 KiB, 32.34 dB</title></circle>
+<path d="M74.31 590.87 L108.79 582.21 L143.26 571.46 L177.74 556.83 L212.22 537.62 L246.7 517.25 L281.17 489.65 L315.65 461.04 L350.13 450.6" class="line" stroke="var(--s2)"><title>most error removed per byte, whole sphere</title></path>
+<circle cx="74.31" cy="590.87" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 8 KiB, 21.06 dB</title></circle>
+<circle cx="108.79" cy="582.21" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 16 KiB, 21.75 dB</title></circle>
+<circle cx="143.26" cy="571.46" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 32 KiB, 22.62 dB</title></circle>
+<circle cx="177.74" cy="556.83" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 64 KiB, 23.80 dB</title></circle>
+<circle cx="212.22" cy="537.62" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 128 KiB, 25.34 dB</title></circle>
+<circle cx="246.7" cy="517.25" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 256 KiB, 26.98 dB</title></circle>
+<circle cx="281.17" cy="489.65" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 512 KiB, 29.20 dB</title></circle>
+<circle cx="315.65" cy="461.04" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 1024 KiB, 31.50 dB</title></circle>
+<circle cx="350.13" cy="450.6" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 2048 KiB, 32.34 dB</title></circle>
+<path d="M74.31 591.49 L108.79 586.25 L143.26 565.24 L177.74 529.35 L212.22 490.09 L246.7 451.41 L281.17 450.6 L315.65 450.6 L350.13 450.6" class="line" stroke="var(--s3)"><title>coarse sphere, then the finest level under the view</title></path>
+<circle cx="74.31" cy="591.49" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 8 KiB, 21.01 dB</title></circle>
+<circle cx="108.79" cy="586.25" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 16 KiB, 21.43 dB</title></circle>
+<circle cx="143.26" cy="565.24" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 32 KiB, 23.12 dB</title></circle>
+<circle cx="177.74" cy="529.35" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 64 KiB, 26.01 dB</title></circle>
+<circle cx="212.22" cy="490.09" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 128 KiB, 29.17 dB</title></circle>
+<circle cx="246.7" cy="451.41" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 256 KiB, 32.28 dB</title></circle>
+<circle cx="281.17" cy="450.6" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 512 KiB, 32.34 dB</title></circle>
+<circle cx="315.65" cy="450.6" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 1024 KiB, 32.34 dB</title></circle>
+<circle cx="350.13" cy="450.6" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 2048 KiB, 32.34 dB</title></circle>
+<text x="388" y="400" class="panel-title" text-anchor="start">Equirectangular, one JPEG per level</text>
+<line x1="432" y1="604" x2="734" y2="604" class="grid"/>
+<text x="426" y="608" class="tick" text-anchor="end">20</text>
+<line x1="432" y1="579.14" x2="734" y2="579.14" class="grid"/>
+<text x="426" y="583.14" class="tick" text-anchor="end">22</text>
+<line x1="432" y1="554.29" x2="734" y2="554.29" class="grid"/>
+<text x="426" y="558.29" class="tick" text-anchor="end">24</text>
+<line x1="432" y1="529.43" x2="734" y2="529.43" class="grid"/>
+<text x="426" y="533.43" class="tick" text-anchor="end">26</text>
+<line x1="432" y1="504.57" x2="734" y2="504.57" class="grid"/>
+<text x="426" y="508.57" class="tick" text-anchor="end">28</text>
+<line x1="432" y1="479.71" x2="734" y2="479.71" class="grid"/>
+<text x="426" y="483.71" class="tick" text-anchor="end">30</text>
+<line x1="432" y1="454.86" x2="734" y2="454.86" class="grid"/>
+<text x="426" y="458.86" class="tick" text-anchor="end">32</text>
+<line x1="432" y1="430" x2="734" y2="430" class="grid"/>
+<text x="426" y="434" class="tick" text-anchor="end">34</text>
+<line x1="432" y1="604" x2="734" y2="604" class="axis"/>
+<line x1="446.31" y1="604" x2="446.31" y2="608" class="axis"/>
+<text x="446.31" y="620" class="tick" text-anchor="middle">8</text>
+<line x1="515.26" y1="604" x2="515.26" y2="608" class="axis"/>
+<text x="515.26" y="620" class="tick" text-anchor="middle">32</text>
+<line x1="584.22" y1="604" x2="584.22" y2="608" class="axis"/>
+<text x="584.22" y="620" class="tick" text-anchor="middle">128</text>
+<line x1="653.17" y1="604" x2="653.17" y2="608" class="axis"/>
+<text x="653.17" y="620" class="tick" text-anchor="middle">512</text>
+<line x1="722.13" y1="604" x2="722.13" y2="608" class="axis"/>
+<text x="722.13" y="620" class="tick" text-anchor="middle">2048</text>
+<text x="583" y="635" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="388" y="420" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M446.31 593.99 L480.79 586.59 L515.26 573.97 L549.74 564.88 L584.22 548.7 L618.7 536.67 L653.17 502.67 L687.65 494.85 L722.13 457.26" class="line" stroke="var(--quiet)"><title>level by level, whole sphere</title></path>
+<circle cx="446.31" cy="593.99" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 8 KiB, 20.81 dB</title></circle>
+<circle cx="480.79" cy="586.59" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 16 KiB, 21.40 dB</title></circle>
+<circle cx="515.26" cy="573.97" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 32 KiB, 22.42 dB</title></circle>
+<circle cx="549.74" cy="564.88" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 64 KiB, 23.15 dB</title></circle>
+<circle cx="584.22" cy="548.7" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 128 KiB, 24.45 dB</title></circle>
+<circle cx="618.7" cy="536.67" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 256 KiB, 25.42 dB</title></circle>
+<circle cx="653.17" cy="502.67" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 512 KiB, 28.15 dB</title></circle>
+<circle cx="687.65" cy="494.85" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 1024 KiB, 28.78 dB</title></circle>
+<circle cx="722.13" cy="457.26" r="3" class="dot" fill="var(--quiet)"><title>level by level, whole sphere: 2048 KiB, 31.81 dB</title></circle>
+<path d="M446.31 593.99 L480.79 586.59 L515.26 573.97 L549.74 564.88 L584.22 548.7 L618.7 536.67 L653.17 502.67 L687.65 494.85 L722.13 457.26" class="line" stroke="var(--s1)"><title>the view first, level by level</title></path>
+<circle cx="446.31" cy="593.99" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 8 KiB, 20.81 dB</title></circle>
+<circle cx="480.79" cy="586.59" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 16 KiB, 21.40 dB</title></circle>
+<circle cx="515.26" cy="573.97" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 32 KiB, 22.42 dB</title></circle>
+<circle cx="549.74" cy="564.88" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 64 KiB, 23.15 dB</title></circle>
+<circle cx="584.22" cy="548.7" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 128 KiB, 24.45 dB</title></circle>
+<circle cx="618.7" cy="536.67" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 256 KiB, 25.42 dB</title></circle>
+<circle cx="653.17" cy="502.67" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 512 KiB, 28.15 dB</title></circle>
+<circle cx="687.65" cy="494.85" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 1024 KiB, 28.78 dB</title></circle>
+<circle cx="722.13" cy="457.26" r="4" class="dot" fill="var(--s1)"><title>the view first, level by level: 2048 KiB, 31.81 dB</title></circle>
+<path d="M446.31 593.99 L480.79 586.59 L515.26 573.97 L549.74 564.88 L584.22 548.7 L618.7 536.67 L653.17 502.67 L687.65 494.85 L722.13 457.26" class="line" stroke="var(--s2)"><title>most error removed per byte, whole sphere</title></path>
+<circle cx="446.31" cy="593.99" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 8 KiB, 20.81 dB</title></circle>
+<circle cx="480.79" cy="586.59" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 16 KiB, 21.40 dB</title></circle>
+<circle cx="515.26" cy="573.97" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 32 KiB, 22.42 dB</title></circle>
+<circle cx="549.74" cy="564.88" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 64 KiB, 23.15 dB</title></circle>
+<circle cx="584.22" cy="548.7" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 128 KiB, 24.45 dB</title></circle>
+<circle cx="618.7" cy="536.67" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 256 KiB, 25.42 dB</title></circle>
+<circle cx="653.17" cy="502.67" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 512 KiB, 28.15 dB</title></circle>
+<circle cx="687.65" cy="494.85" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 1024 KiB, 28.78 dB</title></circle>
+<circle cx="722.13" cy="457.26" r="4" class="dot" fill="var(--s2)"><title>most error removed per byte, whole sphere: 2048 KiB, 31.81 dB</title></circle>
+<path d="M446.31 593.99 L480.79 593.99 L515.26 593.99 L549.74 593.99 L584.22 593.99 L618.7 593.99 L653.17 567.27 L687.65 457.26 L722.13 457.26" class="line" stroke="var(--s3)"><title>coarse sphere, then the finest level under the view</title></path>
+<circle cx="446.31" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 8 KiB, 20.81 dB</title></circle>
+<circle cx="480.79" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 16 KiB, 20.81 dB</title></circle>
+<circle cx="515.26" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 32 KiB, 20.81 dB</title></circle>
+<circle cx="549.74" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 64 KiB, 20.81 dB</title></circle>
+<circle cx="584.22" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 128 KiB, 20.81 dB</title></circle>
+<circle cx="618.7" cy="593.99" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 256 KiB, 20.81 dB</title></circle>
+<circle cx="653.17" cy="567.27" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 512 KiB, 22.96 dB</title></circle>
+<circle cx="687.65" cy="457.26" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 1024 KiB, 31.81 dB</title></circle>
+<circle cx="722.13" cy="457.26" r="4" class="dot" fill="var(--s3)"><title>coarse sphere, then the finest level under the view: 2048 KiB, 31.81 dB</title></circle>
+<text x="16" y="662" class="note" text-anchor="start">With the view first, a view reaches a given quality with a fraction of the bytes; the rest of the sphere then holds</text>
+<text x="16" y="677" class="note" text-anchor="start">only its coarse level.</text>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="362" viewBox="0 0 760 362" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">What a turn would reveal</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">The same bytes, sent with one view first: quality of that view, and of the view facing the opposite way,</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">which has received nothing but what the whole sphere got. Cubemap, mean of 12 views of 6 panoramas.</text>
+<line x1="16" y1="84" x2="34" y2="84" class="line" stroke="var(--s1)"/><circle cx="25" cy="84" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="88" class="" text-anchor="start">the view the bytes were ordered for</text>
+<line x1="295.2" y1="84" x2="313.2" y2="84" class="line" stroke="var(--s2)"/><circle cx="304.2" cy="84" r="4" class="dot" fill="var(--s2)"/>
+<text x="319.2" y="88" class="" text-anchor="start">the opposite view</text>
+<text x="16" y="116" class="panel-title" text-anchor="start">Haar residual tiles, the view first</text>
+<line x1="60" y1="320" x2="362" y2="320" class="grid"/>
+<text x="54" y="324" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="295.14" x2="362" y2="295.14" class="grid"/>
+<text x="54" y="299.14" class="tick" text-anchor="end">22</text>
+<line x1="60" y1="270.29" x2="362" y2="270.29" class="grid"/>
+<text x="54" y="274.29" class="tick" text-anchor="end">24</text>
+<line x1="60" y1="245.43" x2="362" y2="245.43" class="grid"/>
+<text x="54" y="249.43" class="tick" text-anchor="end">26</text>
+<line x1="60" y1="220.57" x2="362" y2="220.57" class="grid"/>
+<text x="54" y="224.57" class="tick" text-anchor="end">28</text>
+<line x1="60" y1="195.71" x2="362" y2="195.71" class="grid"/>
+<text x="54" y="199.71" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="170.86" x2="362" y2="170.86" class="grid"/>
+<text x="54" y="174.86" class="tick" text-anchor="end">32</text>
+<line x1="60" y1="146" x2="362" y2="146" class="grid"/>
+<text x="54" y="150" class="tick" text-anchor="end">34</text>
+<line x1="60" y1="320" x2="362" y2="320" class="axis"/>
+<line x1="74.31" y1="320" x2="74.31" y2="324" class="axis"/>
+<text x="74.31" y="336" class="tick" text-anchor="middle">8</text>
+<line x1="143.26" y1="320" x2="143.26" y2="324" class="axis"/>
+<text x="143.26" y="336" class="tick" text-anchor="middle">32</text>
+<line x1="212.22" y1="320" x2="212.22" y2="324" class="axis"/>
+<text x="212.22" y="336" class="tick" text-anchor="middle">128</text>
+<line x1="281.17" y1="320" x2="281.17" y2="324" class="axis"/>
+<text x="281.17" y="336" class="tick" text-anchor="middle">512</text>
+<line x1="350.13" y1="320" x2="350.13" y2="324" class="axis"/>
+<text x="350.13" y="336" class="tick" text-anchor="middle">2048</text>
+<text x="211" y="351" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="16" y="136" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M143.26 290.39 L177.74 263.92 L212.22 228.21 L246.7 190.83 L281.17 159.85 L315.65 158.71 L350.13 158.71" class="line" stroke="var(--s1)"><title>the view the bytes were ordered for</title></path>
+<circle cx="143.26" cy="290.39" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 32 KiB, 22.38 dB</title></circle>
+<circle cx="177.74" cy="263.92" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 64 KiB, 24.51 dB</title></circle>
+<circle cx="212.22" cy="228.21" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 128 KiB, 27.39 dB</title></circle>
+<circle cx="246.7" cy="190.83" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 256 KiB, 30.39 dB</title></circle>
+<circle cx="281.17" cy="159.85" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 512 KiB, 32.89 dB</title></circle>
+<circle cx="315.65" cy="158.71" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 1024 KiB, 32.98 dB</title></circle>
+<circle cx="350.13" cy="158.71" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 2048 KiB, 32.98 dB</title></circle>
+<path d="M143.26 311.06 L177.74 310.92 L212.22 309.38 L246.7 290.44 L281.17 256 L315.65 199.51 L350.13 172.49" class="line" stroke="var(--s2)"><title>the opposite view</title></path>
+<circle cx="143.26" cy="311.06" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 32 KiB, 20.72 dB</title></circle>
+<circle cx="177.74" cy="310.92" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 64 KiB, 20.73 dB</title></circle>
+<circle cx="212.22" cy="309.38" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 128 KiB, 20.85 dB</title></circle>
+<circle cx="246.7" cy="290.44" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 256 KiB, 22.38 dB</title></circle>
+<circle cx="281.17" cy="256" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 512 KiB, 25.15 dB</title></circle>
+<circle cx="315.65" cy="199.51" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 1024 KiB, 29.69 dB</title></circle>
+<circle cx="350.13" cy="172.49" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 2048 KiB, 31.87 dB</title></circle>
+<text x="388" y="116" class="panel-title" text-anchor="start">JPEG tiles, finest level under the view</text>
+<line x1="432" y1="320" x2="734" y2="320" class="grid"/>
+<text x="426" y="324" class="tick" text-anchor="end">20</text>
+<line x1="432" y1="295.14" x2="734" y2="295.14" class="grid"/>
+<text x="426" y="299.14" class="tick" text-anchor="end">22</text>
+<line x1="432" y1="270.29" x2="734" y2="270.29" class="grid"/>
+<text x="426" y="274.29" class="tick" text-anchor="end">24</text>
+<line x1="432" y1="245.43" x2="734" y2="245.43" class="grid"/>
+<text x="426" y="249.43" class="tick" text-anchor="end">26</text>
+<line x1="432" y1="220.57" x2="734" y2="220.57" class="grid"/>
+<text x="426" y="224.57" class="tick" text-anchor="end">28</text>
+<line x1="432" y1="195.71" x2="734" y2="195.71" class="grid"/>
+<text x="426" y="199.71" class="tick" text-anchor="end">30</text>
+<line x1="432" y1="170.86" x2="734" y2="170.86" class="grid"/>
+<text x="426" y="174.86" class="tick" text-anchor="end">32</text>
+<line x1="432" y1="146" x2="734" y2="146" class="grid"/>
+<text x="426" y="150" class="tick" text-anchor="end">34</text>
+<line x1="432" y1="320" x2="734" y2="320" class="axis"/>
+<line x1="446.31" y1="320" x2="446.31" y2="324" class="axis"/>
+<text x="446.31" y="336" class="tick" text-anchor="middle">8</text>
+<line x1="515.26" y1="320" x2="515.26" y2="324" class="axis"/>
+<text x="515.26" y="336" class="tick" text-anchor="middle">32</text>
+<line x1="584.22" y1="320" x2="584.22" y2="324" class="axis"/>
+<text x="584.22" y="336" class="tick" text-anchor="middle">128</text>
+<line x1="653.17" y1="320" x2="653.17" y2="324" class="axis"/>
+<text x="653.17" y="336" class="tick" text-anchor="middle">512</text>
+<line x1="722.13" y1="320" x2="722.13" y2="324" class="axis"/>
+<text x="722.13" y="336" class="tick" text-anchor="middle">2048</text>
+<text x="583" y="351" class="tick" text-anchor="middle">KiB received (log scale)</text>
+<text x="388" y="136" class="tick" text-anchor="start">PSNR of the view, dB</text>
+<path d="M446.31 307.49 L480.79 302.25 L515.26 281.24 L549.74 245.35 L584.22 206.09 L618.7 167.41 L653.17 166.6 L687.65 166.6 L722.13 166.6" class="line" stroke="var(--s1)"><title>the view the bytes were ordered for</title></path>
+<circle cx="446.31" cy="307.49" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 8 KiB, 21.01 dB</title></circle>
+<circle cx="480.79" cy="302.25" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 16 KiB, 21.43 dB</title></circle>
+<circle cx="515.26" cy="281.24" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 32 KiB, 23.12 dB</title></circle>
+<circle cx="549.74" cy="245.35" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 64 KiB, 26.01 dB</title></circle>
+<circle cx="584.22" cy="206.09" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 128 KiB, 29.17 dB</title></circle>
+<circle cx="618.7" cy="167.41" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 256 KiB, 32.28 dB</title></circle>
+<circle cx="653.17" cy="166.6" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 512 KiB, 32.34 dB</title></circle>
+<circle cx="687.65" cy="166.6" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 1024 KiB, 32.34 dB</title></circle>
+<circle cx="722.13" cy="166.6" r="4" class="dot" fill="var(--s1)"><title>the view the bytes were ordered for: 2048 KiB, 32.34 dB</title></circle>
+<path d="M446.31 318.33 L480.79 318.33 L515.26 318.33 L549.74 317.21 L584.22 307.07 L618.7 281.53 L653.17 232.22 L687.65 198.91 L722.13 180.88" class="line" stroke="var(--s2)"><title>the opposite view</title></path>
+<circle cx="446.31" cy="318.33" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 8 KiB, 20.13 dB</title></circle>
+<circle cx="480.79" cy="318.33" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 16 KiB, 20.13 dB</title></circle>
+<circle cx="515.26" cy="318.33" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 32 KiB, 20.13 dB</title></circle>
+<circle cx="549.74" cy="317.21" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 64 KiB, 20.22 dB</title></circle>
+<circle cx="584.22" cy="307.07" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 128 KiB, 21.04 dB</title></circle>
+<circle cx="618.7" cy="281.53" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 256 KiB, 23.09 dB</title></circle>
+<circle cx="653.17" cy="232.22" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 512 KiB, 27.06 dB</title></circle>
+<circle cx="687.65" cy="198.91" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 1024 KiB, 29.74 dB</title></circle>
+<circle cx="722.13" cy="180.88" r="4" class="dot" fill="var(--s2)"><title>the opposite view: 2048 KiB, 31.19 dB</title></circle>
+</svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="497" viewBox="0 0 760 497" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">GPU time to draw the panorama once more</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">A 1080 × 2400 view on this desktop GPU, headless Chrome. The extra GPU time per additional blended copy of</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">the panorama in the frame, which isolates the panorama from the frame's fixed cost. WebGL 1's timer gave no</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">usable reading.</text>
+<text x="16" y="107" class="panel-title" text-anchor="start">WebGL 2</text>
+<line x1="252" y1="117" x2="252" y2="429" class="grid"/>
+<text x="252" y="444" class="tick" text-anchor="middle">0</text>
+<line x1="290.5" y1="117" x2="290.5" y2="429" class="grid"/>
+<text x="290.5" y="444" class="tick" text-anchor="middle">0.2</text>
+<line x1="329" y1="117" x2="329" y2="429" class="grid"/>
+<text x="329" y="444" class="tick" text-anchor="middle">0.4</text>
+<line x1="367.5" y1="117" x2="367.5" y2="429" class="grid"/>
+<text x="367.5" y="444" class="tick" text-anchor="middle">0.6</text>
+<line x1="406" y1="117" x2="406" y2="429" class="grid"/>
+<text x="406" y="444" class="tick" text-anchor="middle">0.8</text>
+<text x="244" y="133" class="" text-anchor="end">ray lookup, equirect</text>
+<path d="M252 121 H345.01 Q349.01 121 349.01 125 V133 Q349.01 137 345.01 137 H252 Z" fill="var(--s1)"><title>ray lookup, equirect: 0.504</title></path>
+<text x="355.01" y="133" class="value" text-anchor="start">0.504</text>
+<text x="244" y="157" class="" text-anchor="end">ray lookup, cube</text>
+<path d="M252 145 H307.74 Q311.74 145 311.74 149 V157 Q311.74 161 307.74 161 H252 Z" fill="var(--s1)"><title>ray lookup, cube: 0.310</title></path>
+<text x="317.74" y="157" class="value" text-anchor="start">0.310</text>
+<text x="244" y="181" class="" text-anchor="end">ray lookup, eac</text>
+<path d="M252 169 H351.46 Q355.46 169 355.46 173 V181 Q355.46 185 351.46 185 H252 Z" fill="var(--s1)"><title>ray lookup, eac: 0.537</title></path>
+<text x="361.46" y="181" class="value" text-anchor="start">0.537</text>
+<text x="244" y="205" class="" text-anchor="end">ray lookup, oct-ea</text>
+<path d="M252 193 H335.61 Q339.61 193 339.61 197 V205 Q339.61 209 335.61 209 H252 Z" fill="var(--s1)"><title>ray lookup, oct-ea: 0.455</title></path>
+<text x="345.61" y="205" class="value" text-anchor="start">0.455</text>
+<text x="244" y="229" class="" text-anchor="end">ray lookup, healpix</text>
+<path d="M252 217 H370.25 Q374.25 217 374.25 221 V229 Q374.25 233 370.25 233 H252 Z" fill="var(--s1)"><title>ray lookup, healpix: 0.635</title></path>
+<text x="380.25" y="229" class="value" text-anchor="start">0.635</text>
+<text x="244" y="253" class="" text-anchor="end">mesh patches, equirect</text>
+<path d="M252 241 H306.54 Q310.54 241 310.54 245 V253 Q310.54 257 306.54 257 H252 Z" fill="var(--s2)"><title>mesh patches, equirect: 0.304</title></path>
+<text x="316.54" y="253" class="value" text-anchor="start">0.304</text>
+<text x="244" y="277" class="" text-anchor="end">mesh patches, cube</text>
+<path d="M252 265 H302.16 Q306.16 265 306.16 269 V277 Q306.16 281 302.16 281 H252 Z" fill="var(--s2)"><title>mesh patches, cube: 0.281</title></path>
+<text x="312.16" y="277" class="value" text-anchor="start">0.281</text>
+<text x="244" y="301" class="" text-anchor="end">mesh patches, eac</text>
+<path d="M252 289 H301.17 Q305.17 289 305.17 293 V301 Q305.17 305 301.17 305 H252 Z" fill="var(--s2)"><title>mesh patches, eac: 0.276</title></path>
+<text x="311.17" y="301" class="value" text-anchor="start">0.276</text>
+<text x="244" y="325" class="" text-anchor="end">mesh patches, oct-ea</text>
+<path d="M252 313 H308 Q312 313 312 317 V325 Q312 329 308 329 H252 Z" fill="var(--s2)"><title>mesh patches, oct-ea: 0.312</title></path>
+<text x="318" y="325" class="value" text-anchor="start">0.312</text>
+<text x="244" y="349" class="" text-anchor="end">mesh patches, toast</text>
+<path d="M252 337 H300.07 Q304.07 337 304.07 341 V349 Q304.07 353 300.07 353 H252 Z" fill="var(--s2)"><title>mesh patches, toast: 0.271</title></path>
+<text x="310.07" y="349" class="value" text-anchor="start">0.271</text>
+<text x="244" y="373" class="" text-anchor="end">mesh patches, healpix</text>
+<path d="M252 361 H323.83 Q327.83 361 327.83 365 V373 Q327.83 377 323.83 377 H252 Z" fill="var(--s2)"><title>mesh patches, healpix: 0.394</title></path>
+<text x="333.83" y="373" class="value" text-anchor="start">0.394</text>
+<text x="244" y="397" class="" text-anchor="end">mesh patches, ico-rhombus</text>
+<path d="M252 385 H300.6 Q304.6 385 304.6 389 V397 Q304.6 401 300.6 401 H252 Z" fill="var(--s2)"><title>mesh patches, ico-rhombus: 0.273</title></path>
+<text x="310.6" y="397" class="value" text-anchor="start">0.273</text>
+<text x="244" y="421" class="" text-anchor="end">mesh patches, cube, 6 textures</text>
+<path d="M252 409 H302.09 Q306.09 409 306.09 413 V421 Q306.09 425 302.09 425 H252 Z" fill="var(--s2)"><title>mesh patches, cube, 6 textures: 0.281</title></path>
+<text x="312.09" y="421" class="value" text-anchor="start">0.281</text>
+<line x1="252" y1="117" x2="252" y2="429" class="axis"/>
+<text x="329" y="460" class="tick" text-anchor="middle">ms per copy</text>
+<text x="484" y="107" class="panel-title" text-anchor="start">WebGPU</text>
+<line x1="492" y1="117" x2="492" y2="429" class="grid"/>
+<text x="492" y="444" class="tick" text-anchor="middle">0</text>
+<line x1="539.5" y1="117" x2="539.5" y2="429" class="grid"/>
+<text x="539.5" y="444" class="tick" text-anchor="middle">0.2</text>
+<line x1="587" y1="117" x2="587" y2="429" class="grid"/>
+<text x="587" y="444" class="tick" text-anchor="middle">0.4</text>
+<line x1="634.5" y1="117" x2="634.5" y2="429" class="grid"/>
+<text x="634.5" y="444" class="tick" text-anchor="middle">0.6</text>
+<line x1="682" y1="117" x2="682" y2="429" class="grid"/>
+<text x="682" y="444" class="tick" text-anchor="middle">0.8</text>
+<text x="484" y="133" class="" text-anchor="end"></text>
+<path d="M492 121 H605.2 Q609.2 121 609.2 125 V133 Q609.2 137 605.2 137 H492 Z" fill="var(--s1)"><title>: 0.493</title></path>
+<text x="615.2" y="133" class="value" text-anchor="start">0.493</text>
+<text x="484" y="157" class="" text-anchor="end"></text>
+<path d="M492 145 H552.7 Q556.7 145 556.7 149 V157 Q556.7 161 552.7 161 H492 Z" fill="var(--s1)"><title>: 0.272</title></path>
+<text x="562.7" y="157" class="value" text-anchor="start">0.272</text>
+<text x="484" y="181" class="" text-anchor="end"></text>
+<path d="M492 169 H615.37 Q619.37 169 619.37 173 V181 Q619.37 185 615.37 185 H492 Z" fill="var(--s1)"><title>: 0.536</title></path>
+<text x="625.37" y="181" class="value" text-anchor="start">0.536</text>
+<text x="484" y="205" class="" text-anchor="end"></text>
+<path d="M492 193 H589.22 Q593.22 193 593.22 197 V205 Q593.22 209 589.22 209 H492 Z" fill="var(--s1)"><title>: 0.426</title></path>
+<text x="599.22" y="205" class="value" text-anchor="start">0.426</text>
+<text x="484" y="229" class="" text-anchor="end"></text>
+<path d="M492 217 H643.3 Q647.3 217 647.3 221 V229 Q647.3 233 643.3 233 H492 Z" fill="var(--s1)"><title>: 0.654</title></path>
+<text x="653.3" y="229" class="value" text-anchor="start">0.654</text>
+<text x="484" y="253" class="" text-anchor="end"></text>
+<path d="M492 241 H545.34 Q549.34 241 549.34 245 V253 Q549.34 257 545.34 257 H492 Z" fill="var(--s2)"><title>: 0.241</title></path>
+<text x="555.34" y="253" class="value" text-anchor="start">0.241</text>
+<text x="484" y="277" class="" text-anchor="end"></text>
+<path d="M492 265 H539.09 Q543.09 265 543.09 269 V277 Q543.09 281 539.09 281 H492 Z" fill="var(--s2)"><title>: 0.215</title></path>
+<text x="549.09" y="277" class="value" text-anchor="start">0.215</text>
+<text x="484" y="301" class="" text-anchor="end"></text>
+<path d="M492 289 H538.79 Q542.79 289 542.79 293 V301 Q542.79 305 538.79 305 H492 Z" fill="var(--s2)"><title>: 0.214</title></path>
+<text x="548.79" y="301" class="value" text-anchor="start">0.214</text>
+<text x="484" y="325" class="" text-anchor="end"></text>
+<path d="M492 313 H547.26 Q551.26 313 551.26 317 V325 Q551.26 329 547.26 329 H492 Z" fill="var(--s2)"><title>: 0.250</title></path>
+<text x="557.26" y="325" class="value" text-anchor="start">0.250</text>
+<text x="484" y="349" class="" text-anchor="end"></text>
+<path d="M492 337 H537.93 Q541.93 337 541.93 341 V349 Q541.93 353 537.93 353 H492 Z" fill="var(--s2)"><title>: 0.210</title></path>
+<text x="547.93" y="349" class="value" text-anchor="start">0.210</text>
+<text x="484" y="373" class="" text-anchor="end"></text>
+<path d="M492 361 H566.27 Q570.27 361 570.27 365 V373 Q570.27 377 566.27 377 H492 Z" fill="var(--s2)"><title>: 0.330</title></path>
+<text x="576.27" y="373" class="value" text-anchor="start">0.330</text>
+<text x="484" y="397" class="" text-anchor="end"></text>
+<path d="M492 385 H538.72 Q542.72 385 542.72 389 V397 Q542.72 401 538.72 401 H492 Z" fill="var(--s2)"><title>: 0.214</title></path>
+<text x="548.72" y="397" class="value" text-anchor="start">0.214</text>
+<text x="484" y="421" class="" text-anchor="end"></text>
+<path d="M492 409 H539.91 Q543.91 409 543.91 413 V421 Q543.91 425 539.91 425 H492 Z" fill="var(--s2)"><title>: 0.219</title></path>
+<text x="549.91" y="421" class="value" text-anchor="start">0.219</text>
+<line x1="492" y1="117" x2="492" y2="429" class="axis"/>
+<text x="587" y="460" class="tick" text-anchor="middle">ms per copy</text>
+<rect x="19" y="465" width="12" height="12" rx="2" fill="var(--s1)"/>
+<text x="40" y="475" class="" text-anchor="start">ray lookup: one triangle, the map in the pixel shader</text>
+<rect x="419.16" y="465" width="12" height="12" rx="2" fill="var(--s2)"/>
+<text x="440.16" y="475" class="" text-anchor="start">mesh patches: the map at the vertices</text>
+</svg>

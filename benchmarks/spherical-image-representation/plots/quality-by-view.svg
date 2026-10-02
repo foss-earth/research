@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="386" viewBox="0 0 760 386" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">The same comparison by where the camera looks</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Difference in view PSNR from equirectangular at one million samples, linear reconstruction, for views along</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">the horizon and views at the poles.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">Six views along the horizon</text>
+<line x1="165.78" y1="100" x2="165.78" y2="340" class="grid"/>
+<text x="165.78" y="355" class="tick" text-anchor="middle">−1</text>
+<line x1="201.33" y1="100" x2="201.33" y2="340" class="grid"/>
+<text x="201.33" y="355" class="tick" text-anchor="middle">0</text>
+<line x1="236.89" y1="100" x2="236.89" y2="340" class="grid"/>
+<text x="236.89" y="355" class="tick" text-anchor="middle">+1</text>
+<line x1="272.44" y1="100" x2="272.44" y2="340" class="grid"/>
+<text x="272.44" y="355" class="tick" text-anchor="middle">+2</text>
+<line x1="308" y1="100" x2="308" y2="340" class="grid"/>
+<text x="308" y="355" class="tick" text-anchor="middle">+3</text>
+<text x="140" y="116" class="" text-anchor="end">Cubemap</text>
+<path d="M201.33 104 H223.74 Q227.74 104 227.74 108 V116 Q227.74 120 223.74 120 H201.33 Z" fill="var(--s1)"><title>Cubemap: +0.74 dB</title></path>
+<text x="233.74" y="116" class="value" text-anchor="start">+0.74 dB</text>
+<text x="140" y="140" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M201.33 128 H246.49 Q250.49 128 250.49 132 V140 Q250.49 144 246.49 144 H201.33 Z" fill="var(--s1)"><title>Equi-angular cube: +1.38 dB</title></path>
+<text x="256.49" y="140" class="value" text-anchor="start">+1.38 dB</text>
+<text x="140" y="164" class="" text-anchor="end">QSC cube</text>
+<path d="M201.33 152 H247.94 Q251.94 152 251.94 156 V164 Q251.94 168 247.94 168 H201.33 Z" fill="var(--s1)"><title>QSC cube: +1.42 dB</title></path>
+<text x="257.94" y="164" class="value" text-anchor="start">+1.42 dB</text>
+<text x="140" y="188" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M201.33 176 H228.46 Q232.46 176 232.46 180 V188 Q232.46 192 228.46 192 H201.33 Z" fill="var(--s1)"><title>Octahedral (L1): +0.88 dB</title></path>
+<text x="238.46" y="188" class="value" text-anchor="start">+0.88 dB</text>
+<text x="140" y="212" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M201.33 200 H216.98 Q220.98 200 220.98 204 V212 Q220.98 216 216.98 216 H201.33 Z" fill="var(--s1)"><title>Octahedral equal-area: +0.55 dB</title></path>
+<text x="226.98" y="212" class="value" text-anchor="start">+0.55 dB</text>
+<text x="140" y="236" class="" text-anchor="end">TOAST</text>
+<path d="M201.33 224 H219.5 Q223.5 224 223.5 228 V236 Q223.5 240 219.5 240 H201.33 Z" fill="var(--s1)"><title>TOAST: +0.62 dB</title></path>
+<text x="229.5" y="236" class="value" text-anchor="start">+0.62 dB</text>
+<text x="140" y="260" class="" text-anchor="end">HEALPix</text>
+<path d="M201.33 248 H255.35 Q259.35 248 259.35 252 V260 Q259.35 264 255.35 264 H201.33 Z" fill="var(--s1)"><title>HEALPix: +1.63 dB</title></path>
+<text x="265.35" y="260" class="value" text-anchor="start">+1.63 dB</text>
+<text x="140" y="284" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M201.33 272 H240.89 Q244.89 272 244.89 276 V284 Q244.89 288 240.89 288 H201.33 Z" fill="var(--s1)"><title>Icosahedral rhombus: +1.23 dB</title></path>
+<text x="250.89" y="284" class="value" text-anchor="start">+1.23 dB</text>
+<text x="140" y="308" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M201.33 296 H273.42 Q277.42 296 277.42 300 V308 Q277.42 312 273.42 312 H201.33 Z" fill="var(--s1)"><title>Icosahedral hexagon: +2.14 dB</title></path>
+<text x="283.42" y="308" class="value" text-anchor="start">+2.14 dB</text>
+<text x="140" y="332" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M201.33 320 H230.3 Q234.3 320 234.3 324 V332 Q234.3 336 230.3 336 H201.33 Z" fill="var(--s1)"><title>Icosahedral triangle: +0.93 dB</title></path>
+<text x="240.3" y="332" class="value" text-anchor="start">+0.93 dB</text>
+<line x1="201.33" y1="100" x2="201.33" y2="340" class="axis"/>
+<text x="228" y="371" class="tick" text-anchor="middle">dB against equirectangular</text>
+<text x="388" y="90" class="panel-title" text-anchor="start">Four views at and near the poles</text>
+<line x1="537.78" y1="100" x2="537.78" y2="340" class="grid"/>
+<text x="537.78" y="355" class="tick" text-anchor="middle">−1</text>
+<line x1="573.33" y1="100" x2="573.33" y2="340" class="grid"/>
+<text x="573.33" y="355" class="tick" text-anchor="middle">0</text>
+<line x1="608.89" y1="100" x2="608.89" y2="340" class="grid"/>
+<text x="608.89" y="355" class="tick" text-anchor="middle">+1</text>
+<line x1="644.44" y1="100" x2="644.44" y2="340" class="grid"/>
+<text x="644.44" y="355" class="tick" text-anchor="middle">+2</text>
+<line x1="680" y1="100" x2="680" y2="340" class="grid"/>
+<text x="680" y="355" class="tick" text-anchor="middle">+3</text>
+<text x="512" y="116" class="" text-anchor="end">Cubemap</text>
+<path d="M573.33 104 H554.66 Q550.66 104 550.66 108 V116 Q550.66 120 554.66 120 H573.33 Z" fill="var(--s8)"><title>Cubemap: −0.64 dB</title></path>
+<text x="579.33" y="116" class="value" text-anchor="start">−0.64 dB</text>
+<text x="512" y="140" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M573.33 128 H571.31 Q567.31 128 567.31 132 V140 Q567.31 144 571.31 144 H573.33 Z" fill="var(--s8)"><title>Equi-angular cube: −0.17 dB</title></path>
+<text x="579.33" y="140" class="value" text-anchor="start">−0.17 dB</text>
+<text x="512" y="164" class="" text-anchor="end">QSC cube</text>
+<path d="M573.33 152 H570.75 Q566.75 152 566.75 156 V164 Q566.75 168 570.75 168 H573.33 Z" fill="var(--s8)"><title>QSC cube: −0.19 dB</title></path>
+<text x="579.33" y="164" class="value" text-anchor="start">−0.19 dB</text>
+<text x="512" y="188" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M573.33 176 H554.62 Q550.62 176 550.62 180 V188 Q550.62 192 554.62 192 H573.33 Z" fill="var(--s8)"><title>Octahedral (L1): −0.64 dB</title></path>
+<text x="579.33" y="188" class="value" text-anchor="start">−0.64 dB</text>
+<text x="512" y="212" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M573.33 200 H558.38 Q554.38 200 554.38 204 V212 Q554.38 216 558.38 216 H573.33 Z" fill="var(--s8)"><title>Octahedral equal-area: −0.53 dB</title></path>
+<text x="579.33" y="212" class="value" text-anchor="start">−0.53 dB</text>
+<text x="512" y="236" class="" text-anchor="end">TOAST</text>
+<path d="M573.33 224 H561.49 Q557.49 224 557.49 228 V236 Q557.49 240 561.49 240 H573.33 Z" fill="var(--s8)"><title>TOAST: −0.45 dB</title></path>
+<text x="579.33" y="236" class="value" text-anchor="start">−0.45 dB</text>
+<text x="512" y="260" class="" text-anchor="end">HEALPix</text>
+<path d="M573.33 248 H558.36 Q554.36 248 554.36 252 V260 Q554.36 264 558.36 264 H573.33 Z" fill="var(--s8)"><title>HEALPix: −0.53 dB</title></path>
+<text x="579.33" y="260" class="value" text-anchor="start">−0.53 dB</text>
+<text x="512" y="284" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M573.33 272 H564.37 Q560.37 272 560.37 276 V284 Q560.37 288 564.37 288 H573.33 Z" fill="var(--s8)"><title>Icosahedral rhombus: −0.36 dB</title></path>
+<text x="579.33" y="284" class="value" text-anchor="start">−0.36 dB</text>
+<text x="512" y="308" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M573.33 296 H578.25 Q582.25 296 582.25 300 V308 Q582.25 312 578.25 312 H573.33 Z" fill="var(--s1)"><title>Icosahedral hexagon: +0.25 dB</title></path>
+<text x="588.25" y="308" class="value" text-anchor="start">+0.25 dB</text>
+<text x="512" y="332" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M573.33 320 H551.22 Q547.22 320 547.22 324 V332 Q547.22 336 551.22 336 H573.33 Z" fill="var(--s8)"><title>Icosahedral triangle: −0.73 dB</title></path>
+<text x="579.33" y="332" class="value" text-anchor="start">−0.73 dB</text>
+<line x1="573.33" y1="100" x2="573.33" y2="340" class="axis"/>
+<text x="600" y="371" class="tick" text-anchor="middle">dB against equirectangular</text>
+</svg>

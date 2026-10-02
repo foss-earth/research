@@ -1,0 +1,40 @@
+backend,variant,architecture,representation,drawCalls,triangles,textures,textureMiB,cpuRenderMsMedian,cpuRenderMsP95,cpuRenderMsP99,gpuTimer,gpuMs,gpuReadings,gpuDistinctReadings,gpuMsWith8Copies,gpuMsPerCopy,cpuRenderMsPerCopy,frameIntervalMsMedian,frameIntervalMsP99,shaderTextureFetches,shaderInverseTrigonometric,shaderSquareRoots,shaderBranches,mappingErrorWorstPitches,mappingErrorMeanPitches,psnrAgainstFirstVariant,psnrAgainstSameRepresentation
+webgl1,"ray lookup, equirect",ray lookup,equirect,1,1,1,12.52931,0.23,0.36,0.54,stale,,240,1,,,0.003571434,16.67,18.595,1,2,0,0,,,100,
+webgl1,"ray lookup, cube",ray lookup,cube,1,1,1,13.5,0.19,0.27,0.32,stale,,240,1,,,0.004285719,16.655,18.675,1,0,0,0,,,31.86573,
+webgl1,"ray lookup, eac",ray lookup,eac,1,1,1,13.5,0.12,0.23,0.255,stale,,240,1,,,0.01428572,16.65,18.63,1,2,0,0,,,31.44623,
+webgl1,"ray lookup, oct-ea",ray lookup,oct-ea,1,1,1,12.27736,0.155,0.22,0.25,stale,,240,1,,,0.009285722,16.665,18.345,1,1,1,4,,,30.0114,
+webgl1,"ray lookup, healpix",ray lookup,healpix,1,1,1,12.09393,0.155,0.225,0.25,stale,,240,1,,,0.009285714,16.66,18.575,1,1,1,2,,,31.58267,
+webgl1,"mesh patches, equirect",mesh patches,equirect,1,36864,1,12.52931,0.15,0.21,0.245,stale,,240,1,,,0.00714285,16.66,18.46,1,0,0,0,0.1367077,0.03856637,56.57975,56.57975
+webgl1,"mesh patches, cube",mesh patches,cube,1,12288,1,13.5704,0.15,0.205,0.245,stale,,240,1,,,0.006428574,16.67,18.38,1,0,0,0,0.2482533,0.09418661,31.2731,40.11409
+webgl1,"mesh patches, eac",mesh patches,eac,1,12288,1,13.5704,0.14,0.205,0.235,stale,,240,1,,,0.006428574,16.66,18.49,1,0,0,0,0.2177107,0.04969873,31.35228,46.08745
+webgl1,"mesh patches, oct-ea",mesh patches,oct-ea,1,32768,1,12.27736,0.135,0.185,0.21,stale,,240,1,,,0.007857144,16.665,18.56,1,0,0,0,1.13228,0.02967051,29.9928,50.89436
+webgl1,"mesh patches, toast",mesh patches,toast,1,2048,1,16.03127,0.145,0.205,0.235,stale,,240,1,,,0.005000004,16.665,18.57,1,0,0,0,0.01756767,0.005293321,29.53627,
+webgl1,"mesh patches, healpix",mesh patches,healpix,1,98304,1,12.09393,0.155,0.21,0.23,stale,,240,1,,,0.01142858,16.66,18.09,1,0,0,0,0.647362,0.01192196,31.5819,60.22937
+webgl1,"mesh patches, ico-rhombus",mesh patches,ico-rhombus,1,5120,1,10.07828,0.18,0.225,0.245,stale,,240,1,,,0.005714289,16.67,17.09,1,0,0,0,0.002198701,0.0008218165,30.96401,
+webgl1,"mesh patches, cube, one texture per face",mesh patches,cube,6,12288,6,13.5,0.265,0.375,0.5,stale,,240,1,,,0.04071429,16.67,17.075,1,0,0,0,,,31.2741,40.12286
+webgl2,"ray lookup, equirect",ray lookup,equirect,1,1,1,12.52931,0.3200001,0.455,0.575,"WebGL disjoint timer query, whole frames",0.5965791,240,95,4.124143,0.5039376,-8.514949e-9,16.665,18.54,1,2,0,0,,,100,
+webgl2,"ray lookup, cube",ray lookup,cube,1,1,1,13.5,0.245,0.345,0.385,"WebGL disjoint timer query, whole frames",0.4341771,240,105,2.606645,0.3103526,0.00285714,16.665,18.615,1,0,0,0,,,31.86573,
+webgl2,"ray lookup, eac",ray lookup,eac,1,1,1,13.5,0.21,0.29,0.33,"WebGL disjoint timer query, whole frames",0.641908,240,99,4.404053,0.5374493,0.00714285,16.665,18.57,1,2,0,0,,,31.44623,
+webgl2,"ray lookup, oct-ea",ray lookup,oct-ea,1,1,1,12.27736,0.18,0.245,0.26,"WebGL disjoint timer query, whole frames",0.5419001,240,95,3.727708,0.4551154,0.009285714,16.66,18.53,1,1,1,4,,,30.0114,
+webgl2,"ray lookup, healpix",ray lookup,healpix,1,1,1,12.09393,0.175,0.235,0.255,"WebGL disjoint timer query, whole frames",0.7683092,240,90,5.213829,0.6350742,0.01071428,16.66,18.635,1,1,1,2,,,31.58267,
+webgl2,"mesh patches, equirect",mesh patches,equirect,1,36864,1,12.52931,0.17,0.24,0.29,"WebGL disjoint timer query, whole frames",0.4245054,240,112,2.553059,0.3040791,0.01142857,16.66,18.595,1,0,0,0,0.1367077,0.03856637,56.57975,56.57975
+webgl2,"mesh patches, cube",mesh patches,cube,1,12288,1,13.5704,0.16,0.22,0.26,"WebGL disjoint timer query, whole frames",0.4209961,240,115,2.390515,0.2813599,0.01071428,16.66,18.655,1,0,0,0,0.2482533,0.09418661,31.2731,40.11409
+webgl2,"mesh patches, eac",mesh patches,eac,1,12288,1,13.5704,0.18,0.245,0.275,"WebGL disjoint timer query, whole frames",0.4136877,240,117,2.347149,0.2762088,0.003571425,16.66,18.61,1,0,0,0,0.2177107,0.04969873,31.35228,46.08745
+webgl2,"mesh patches, oct-ea",mesh patches,oct-ea,1,32768,1,12.27736,0.145,0.195,0.22,"WebGL disjoint timer query, whole frames",0.4483747,240,111,2.630139,0.3116807,0.007857144,16.665,18.515,1,0,0,0,1.13228,0.02967051,29.9928,50.89436
+webgl2,"mesh patches, toast",mesh patches,toast,1,2048,1,16.03127,0.145,0.205,0.25,"WebGL disjoint timer query, whole frames",0.4125495,240,116,2.306157,0.2705153,0.00857142,16.66,18.425,1,0,0,0,0.01756767,0.005293321,29.53627,
+webgl2,"mesh patches, healpix",mesh patches,healpix,1,98304,1,12.09393,0.22,0.315,0.3699999,"WebGL disjoint timer query, whole frames",0.5161402,240,116,3.273536,0.3939137,0.002142855,16.675,18.65,1,0,0,0,0.647362,0.01192196,31.5819,60.22937
+webgl2,"mesh patches, ico-rhombus",mesh patches,ico-rhombus,1,5120,1,10.07828,0.155,0.22,0.235,"WebGL disjoint timer query, whole frames",0.4056527,240,109,2.318548,0.2732708,0.00857142,16.685,18.655,1,0,0,0,0.002198701,0.0008218165,30.96401,
+webgl2,"mesh patches, cube, one texture per face",mesh patches,cube,6,12288,6,13.5,0.23,0.325,0.345,"WebGL disjoint timer query, whole frames",0.4159247,240,117,2.382704,0.2809685,0.04,16.705,18.505,1,0,0,0,,,31.2741,40.12286
+webgpu,"ray lookup, equirect",ray lookup,equirect,1,1,1,12.52931,0.485,0.665,0.735,WebGPU render-pass timestamps,0.5517242,240,240,4.005961,0.4934624,0.0007142935,16.66,18.35,1,2,0,0,,,100,
+webgpu,"ray lookup, cube",ray lookup,cube,1,1,1,13.5,0.42,0.555,0.62,WebGPU render-pass timestamps,0.4264347,240,240,2.333407,0.2724246,0.002857149,16.655,18.58,1,0,0,0,,,31.86563,
+webgpu,"ray lookup, eac",ray lookup,eac,1,1,1,13.5,0.335,0.43,0.465,WebGPU render-pass timestamps,0.5994883,240,240,4.35355,0.5362945,0.01071428,16.655,18.27,1,2,0,0,,,31.44613,
+webgpu,"ray lookup, oct-ea",ray lookup,oct-ea,1,1,1,12.27736,0.33,0.42,0.455,WebGPU render-pass timestamps,0.5068757,240,240,3.490181,0.4261865,0.01357142,16.655,18.43,1,1,1,4,,,30.01141,
+webgpu,"ray lookup, healpix",ray lookup,healpix,1,1,1,12.09393,0.325,0.405,0.46,WebGPU render-pass timestamps,0.7282043,240,240,5.305378,0.653882,0.01428571,16.66,18.05,1,1,1,2,,,31.58353,
+webgpu,"mesh patches, equirect",mesh patches,equirect,1,36864,1,12.52931,0.34,0.445,0.5,WebGPU render-pass timestamps,0.4454089,240,240,2.135552,0.241449,0.01214286,16.66,17.845,1,0,0,0,0.1367077,0.03856637,56.59438,56.59438
+webgpu,"mesh patches, cube",mesh patches,cube,1,12288,1,13.5704,0.335,0.445,0.49,WebGPU render-pass timestamps,0.4481752,240,240,1.953903,0.215104,0.01142857,16.66,18.56,1,0,0,0,0.2482533,0.09418661,31.27328,40.11473
+webgpu,"mesh patches, eac",mesh patches,eac,1,12288,1,13.5704,0.32,0.41,0.455,WebGPU render-pass timestamps,0.4537631,240,240,1.950677,0.2138448,0.01071428,16.66,18.625,1,0,0,0,0.2177107,0.04969873,31.35209,46.08445
+webgpu,"mesh patches, oct-ea",mesh patches,oct-ea,1,32768,1,12.27736,0.305,0.4,0.455,WebGPU render-pass timestamps,0.4652792,240,240,2.212026,0.2495353,0.01071428,16.665,18.605,1,0,0,0,1.13228,0.02967051,29.99279,50.89395
+webgpu,"mesh patches, toast",mesh patches,toast,1,2048,1,16.03127,0.3,0.39,0.43,WebGPU render-pass timestamps,0.441308,240,240,1.91296,0.210236,0.01071429,16.66,18.455,1,0,0,0,0.01756767,0.005293321,29.53638,
+webgpu,"mesh patches, healpix",mesh patches,healpix,1,98304,1,12.09393,0.3,0.395,0.485,WebGPU render-pass timestamps,0.537173,240,240,2.844211,0.3295768,0.01071428,16.68,18.585,1,0,0,0,0.647362,0.01192196,31.58187,61.10017
+webgpu,"mesh patches, ico-rhombus",mesh patches,ico-rhombus,1,5120,1,10.07828,0.295,0.38,0.445,WebGPU render-pass timestamps,0.4420295,240,240,1.93704,0.213573,0.009285714,16.66,18.605,1,0,0,0,0.002198701,0.0008218165,30.96391,
+webgpu,"mesh patches, cube, one texture per face",mesh patches,cube,6,12288,6,13.5,0.36,0.48,0.535,WebGPU render-pass timestamps,0.4514299,240,240,1.981445,0.2185736,0.04928571,16.665,18.565,1,0,0,0,,,31.27417,40.1234

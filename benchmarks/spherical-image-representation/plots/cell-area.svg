@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="404" viewBox="0 0 760 404" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Cell areas</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Solid angle of a cell relative to an equal share of the sphere. Band: 1st to 99th percentile of cells;</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">whiskers: smallest and largest; dot: median. About 800,000 cells each.</text>
+<line x1="166" y1="82" x2="166" y2="322" class="grid"/>
+<text x="166" y="337" class="tick" text-anchor="middle">0.003</text>
+<line x1="231.88" y1="82" x2="231.88" y2="322" class="grid"/>
+<text x="231.88" y="337" class="tick" text-anchor="middle">0.01</text>
+<line x1="292" y1="82" x2="292" y2="322" class="grid"/>
+<text x="292" y="337" class="tick" text-anchor="middle">0.03</text>
+<line x1="357.88" y1="82" x2="357.88" y2="322" class="grid"/>
+<text x="357.88" y="337" class="tick" text-anchor="middle">0.1</text>
+<line x1="418" y1="82" x2="418" y2="322" class="grid"/>
+<text x="418" y="337" class="tick" text-anchor="middle">0.3</text>
+<line x1="483.88" y1="82" x2="483.88" y2="322" class="axis"/>
+<text x="483.88" y="337" class="tick" text-anchor="middle">1</text>
+<line x1="544" y1="82" x2="544" y2="322" class="grid"/>
+<text x="544" y="337" class="tick" text-anchor="middle">3</text>
+<text x="158" y="98" class="" text-anchor="end">Equirectangular</text>
+<line x1="180.41" y1="94" x2="508.59" y2="94" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="286.89" y="90" width="221.69" height="8" rx="3" fill="var(--s1)"><title>Equirectangular: largest ÷ smallest 402 here</title></rect>
+<circle cx="489.63" cy="94" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="98" class="value" text-anchor="start">largest ÷ smallest 402 here</text>
+<text x="158" y="122" class="" text-anchor="end">Cubemap</text>
+<line x1="429.41" y1="118" x2="519.29" y2="118" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="436.87" y="114" width="81.38" height="8" rx="3" fill="var(--s1)"><title>Cubemap: largest ÷ smallest 5.17</title></rect>
+<circle cx="478.85" cy="118" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="122" class="value" text-anchor="start">largest ÷ smallest 5.17</text>
+<text x="158" y="146" class="" text-anchor="end">Equi-angular cube</text>
+<line x1="474" y1="142" x2="492.85" y2="142" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="474.81" y="138" width="17.83" height="8" rx="3" fill="var(--s1)"><title>Equi-angular cube: largest ÷ smallest 1.41</title></rect>
+<circle cx="483.23" cy="142" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="146" class="value" text-anchor="start">largest ÷ smallest 1.41</text>
+<text x="158" y="170" class="" text-anchor="end">QSC cube</text>
+<line x1="483.19" y1="166" x2="483.94" y2="166" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="483.88" y="162" width="2" height="8" rx="3" fill="var(--s1)"><title>QSC cube: equal area</title></rect>
+<circle cx="483.88" cy="166" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="170" class="value" text-anchor="start">equal area</text>
+<text x="158" y="194" class="" text-anchor="end">Octahedral (L1)</text>
+<line x1="421.49" y1="190" x2="511.42" y2="190" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="430.73" y="186" width="80.01" height="8" rx="3" fill="var(--s1)"><title>Octahedral (L1): largest ÷ smallest 5.17</title></rect>
+<circle cx="483.01" cy="190" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="194" class="value" text-anchor="start">largest ÷ smallest 5.17</text>
+<text x="158" y="218" class="" text-anchor="end">Octahedral equal-area</text>
+<line x1="483.48" y1="214" x2="483.91" y2="214" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="483.88" y="210" width="2" height="8" rx="3" fill="var(--s1)"><title>Octahedral equal-area: equal area</title></rect>
+<circle cx="483.88" cy="214" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="218" class="value" text-anchor="start">equal area</text>
+<text x="158" y="242" class="" text-anchor="end">TOAST</text>
+<line x1="470.66" y1="238" x2="511.42" y2="238" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="470.82" y="234" width="39.76" height="8" rx="3" fill="var(--s1)"><title>TOAST: largest ÷ smallest 2.11</title></rect>
+<circle cx="476.6" cy="238" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="242" class="value" text-anchor="start">largest ÷ smallest 2.11</text>
+<text x="158" y="266" class="" text-anchor="end">HEALPix</text>
+<line x1="483.48" y1="262" x2="483.91" y2="262" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="483.88" y="258" width="2" height="8" rx="3" fill="var(--s1)"><title>HEALPix: equal area</title></rect>
+<circle cx="483.88" cy="262" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="266" class="value" text-anchor="start">equal area</text>
+<text x="158" y="290" class="" text-anchor="end">Icosahedral rhombus</text>
+<line x1="479.78" y1="286" x2="494.16" y2="286" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="479.83" y="282" width="14.09" height="8" rx="3" fill="var(--s1)"><title>Icosahedral rhombus: largest ÷ smallest 1.30</title></rect>
+<circle cx="481.18" cy="286" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="290" class="value" text-anchor="start">largest ÷ smallest 1.30</text>
+<text x="158" y="314" class="" text-anchor="end">Icosahedral triangle</text>
+<line x1="479.78" y1="310" x2="494.16" y2="310" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="479.83" y="306" width="14.09" height="8" rx="3" fill="var(--s1)"><title>Icosahedral triangle: largest ÷ smallest 1.30</title></rect>
+<circle cx="481.17" cy="310" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="554" y="314" class="value" text-anchor="start">largest ÷ smallest 1.30</text>
+<text x="355" y="353" class="tick" text-anchor="middle">cell area ÷ mean cell area (log scale)</text>
+<text x="16" y="370" class="note" text-anchor="start">Equirectangular cells shrink without limit toward the poles, so its ratio grows with resolution. The others' ratios</text>
+<text x="16" y="385" class="note" text-anchor="start">are properties of the map and do not.</text>
+</svg>

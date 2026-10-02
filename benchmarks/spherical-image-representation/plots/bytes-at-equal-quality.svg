@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="439" viewBox="0 0 760 439" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Bytes for equal view quality, relative to equirectangular</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">For each panorama, the quality equirectangular reaches at 2560 × 1280 and quality 75 is the target; each</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">representation's bytes to reach it are read off its own best curve with the same codec. Geometric mean over</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">6 panoramas.</text>
+<text x="16" y="107" class="panel-title" text-anchor="start">JPEG 4:2:0, matched by PSNR</text>
+<line x1="148" y1="117" x2="148" y2="357" class="grid"/>
+<text x="148" y="372" class="tick" text-anchor="middle">0.6×</text>
+<line x1="189" y1="117" x2="189" y2="357" class="grid"/>
+<text x="189" y="372" class="tick" text-anchor="middle">0.8×</text>
+<line x1="230" y1="117" x2="230" y2="357" class="grid"/>
+<text x="230" y="372" class="tick" text-anchor="middle">1×</text>
+<line x1="271" y1="117" x2="271" y2="357" class="grid"/>
+<text x="271" y="372" class="tick" text-anchor="middle">1.2×</text>
+<line x1="312" y1="117" x2="312" y2="357" class="grid"/>
+<text x="312" y="372" class="tick" text-anchor="middle">1.4×</text>
+<text x="140" y="133" class="" text-anchor="end">QSC cube</text>
+<path d="M230 121 H192.06 Q188.06 121 188.06 125 V133 Q188.06 137 192.06 137 H230 Z" fill="var(--s1)"><title>QSC cube: 0.80×</title></path>
+<text x="236" y="133" class="value" text-anchor="start">0.80×</text>
+<text x="140" y="157" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M230 145 H192.85 Q188.85 145 188.85 149 V157 Q188.85 161 192.85 161 H230 Z" fill="var(--s1)"><title>Equi-angular cube: 0.80×</title></path>
+<text x="236" y="157" class="value" text-anchor="start">0.80×</text>
+<text x="140" y="181" class="" text-anchor="end">Cubemap</text>
+<path d="M230 169 H219.49 Q215.49 169 215.49 173 V181 Q215.49 185 219.49 185 H230 Z" fill="var(--s1)"><title>Cubemap: 0.93×</title></path>
+<text x="236" y="181" class="value" text-anchor="start">0.93×</text>
+<text x="140" y="205" class="" text-anchor="end">HEALPix</text>
+<path d="M230 193 H220.38 Q216.38 193 216.38 197 V205 Q216.38 209 220.38 209 H230 Z" fill="var(--s1)"><title>HEALPix: 0.93×</title></path>
+<text x="236" y="205" class="value" text-anchor="start">0.93×</text>
+<text x="140" y="229" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M230 217 H230.5 Q234.5 217 234.5 221 V229 Q234.5 233 230.5 233 H230 Z" fill="var(--s8)"><title>Icosahedral hexagon: 1.02×</title></path>
+<text x="240.5" y="229" class="value" text-anchor="start">1.02×</text>
+<text x="140" y="253" class="" text-anchor="end">TOAST</text>
+<path d="M230 241 H231.57 Q235.57 241 235.57 245 V253 Q235.57 257 231.57 257 H230 Z" fill="var(--s8)"><title>TOAST: 1.03×</title></path>
+<text x="241.57" y="253" class="value" text-anchor="start">1.03×</text>
+<text x="140" y="277" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M230 265 H237.41 Q241.41 265 241.41 269 V277 Q241.41 281 237.41 281 H230 Z" fill="var(--s8)"><title>Icosahedral triangle: 1.06×</title></path>
+<text x="247.41" y="277" class="value" text-anchor="start">1.06×</text>
+<text x="140" y="301" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M230 289 H252.96 Q256.96 289 256.96 293 V301 Q256.96 305 252.96 305 H230 Z" fill="var(--s8)"><title>Octahedral (L1): 1.13×</title></path>
+<text x="262.96" y="301" class="value" text-anchor="start">1.13×</text>
+<text x="140" y="325" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M230 313 H266.07 Q270.07 313 270.07 317 V325 Q270.07 329 266.07 329 H230 Z" fill="var(--s8)"><title>Octahedral equal-area: 1.20×</title></path>
+<text x="276.07" y="325" class="value" text-anchor="start">1.20×</text>
+<text x="140" y="349" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M230 337 H272.62 Q276.62 337 276.62 341 V349 Q276.62 353 272.62 353 H230 Z" fill="var(--s8)"><title>Icosahedral rhombus: 1.23×</title></path>
+<text x="282.62" y="349" class="value" text-anchor="start">1.23×</text>
+<line x1="230" y1="117" x2="230" y2="357" class="axis"/>
+<text x="230" y="388" class="tick" text-anchor="middle">bytes ÷ equirectangular's</text>
+<text x="388" y="107" class="panel-title" text-anchor="start">JPEG 4:2:0, matched by SSIM</text>
+<line x1="520" y1="117" x2="520" y2="357" class="grid"/>
+<text x="520" y="372" class="tick" text-anchor="middle">0.6×</text>
+<line x1="561" y1="117" x2="561" y2="357" class="grid"/>
+<text x="561" y="372" class="tick" text-anchor="middle">0.8×</text>
+<line x1="602" y1="117" x2="602" y2="357" class="grid"/>
+<text x="602" y="372" class="tick" text-anchor="middle">1×</text>
+<line x1="643" y1="117" x2="643" y2="357" class="grid"/>
+<text x="643" y="372" class="tick" text-anchor="middle">1.2×</text>
+<line x1="684" y1="117" x2="684" y2="357" class="grid"/>
+<text x="684" y="372" class="tick" text-anchor="middle">1.4×</text>
+<text x="512" y="133" class="" text-anchor="end">Equi-angular cube</text>
+<path d="M602 121 H555.45 Q551.45 121 551.45 125 V133 Q551.45 137 555.45 137 H602 Z" fill="var(--s1)"><title>Equi-angular cube: 0.75×</title></path>
+<text x="608" y="133" class="value" text-anchor="start">0.75×</text>
+<text x="512" y="157" class="" text-anchor="end">QSC cube</text>
+<path d="M602 145 H555.92 Q551.92 145 551.92 149 V157 Q551.92 161 555.92 161 H602 Z" fill="var(--s1)"><title>QSC cube: 0.76×</title></path>
+<text x="608" y="157" class="value" text-anchor="start">0.76×</text>
+<text x="512" y="181" class="" text-anchor="end">Cubemap</text>
+<path d="M602 169 H578.46 Q574.46 169 574.46 173 V181 Q574.46 185 578.46 185 H602 Z" fill="var(--s1)"><title>Cubemap: 0.87×</title></path>
+<text x="608" y="181" class="value" text-anchor="start">0.87×</text>
+<text x="512" y="205" class="" text-anchor="end">HEALPix</text>
+<path d="M602 193 H587.39 Q583.39 193 583.39 197 V205 Q583.39 209 587.39 209 H602 Z" fill="var(--s1)"><title>HEALPix: 0.91×</title></path>
+<text x="608" y="205" class="value" text-anchor="start">0.91×</text>
+<text x="512" y="229" class="" text-anchor="end">TOAST</text>
+<path d="M602 217 H602 Q605.51 217 605.51 220.51 V229.49 Q605.51 233 602 233 H602 Z" fill="var(--s8)"><title>TOAST: 1.02×</title></path>
+<text x="611.51" y="229" class="value" text-anchor="start">1.02×</text>
+<text x="512" y="253" class="" text-anchor="end">Icosahedral triangle</text>
+<path d="M602 241 H603.72 Q607.72 241 607.72 245 V253 Q607.72 257 603.72 257 H602 Z" fill="var(--s8)"><title>Icosahedral triangle: 1.03×</title></path>
+<text x="613.72" y="253" class="value" text-anchor="start">1.03×</text>
+<text x="512" y="277" class="" text-anchor="end">Icosahedral hexagon</text>
+<path d="M602 265 H605.36 Q609.36 265 609.36 269 V277 Q609.36 281 605.36 281 H602 Z" fill="var(--s8)"><title>Icosahedral hexagon: 1.04×</title></path>
+<text x="615.36" y="277" class="value" text-anchor="start">1.04×</text>
+<text x="512" y="301" class="" text-anchor="end">Octahedral equal-area</text>
+<path d="M602 289 H639.58 Q643.58 289 643.58 293 V301 Q643.58 305 639.58 305 H602 Z" fill="var(--s8)"><title>Octahedral equal-area: 1.20×</title></path>
+<text x="649.58" y="301" class="value" text-anchor="start">1.20×</text>
+<text x="512" y="325" class="" text-anchor="end">Octahedral (L1)</text>
+<path d="M602 313 H654.58 Q658.58 313 658.58 317 V325 Q658.58 329 654.58 329 H602 Z" fill="var(--s8)"><title>Octahedral (L1): 1.28×</title></path>
+<text x="664.58" y="325" class="value" text-anchor="start">1.28×</text>
+<text x="512" y="349" class="" text-anchor="end">Icosahedral rhombus</text>
+<path d="M602 337 H680 Q684 337 684 341 V349 Q684 353 680 353 H602 Z" fill="var(--s8)"><title>Icosahedral rhombus: 1.41×</title></path>
+<text x="690" y="349" class="value" text-anchor="start">1.41×</text>
+<line x1="602" y1="117" x2="602" y2="357" class="axis"/>
+<text x="602" y="388" class="tick" text-anchor="middle">bytes ÷ equirectangular's</text>
+<text x="16" y="405" class="note" text-anchor="start">Below 1× needs fewer bytes than equirectangular. Triangle cells are stored two to a rhombus cell, side by side in a</text>
+<text x="16" y="420" class="note" text-anchor="start">row, which is how a square-image codec has to be given them.</text>
+</svg>

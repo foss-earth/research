@@ -1,0 +1,18 @@
+measuredWith,operation,runsIn,samples,encodedBytes,count,median,p95,p99,max,mean,megasamplesPerSecond
+webgl1,JPEG tile 256²: createImageBitmap,browser native,65536,12875.79,72,0.215,0.27,1.875,1.875,0.2236806,304.8186
+webgl1,JPEG tile 256²: ImageBitmap to RGBA bytes,browser native,65536,,72,0.065,0.08499998,0.105,0.105,0.06680556,1008.246
+webgl1,WebP tile 256²: createImageBitmap,browser native,65536,11027.5,72,0.695,1.135,1.2,1.2,0.5890278,94.2964
+webgl1,WebP tile 256²: ImageBitmap to RGBA bytes,browser native,65536,,72,0.06999999,0.09000003,0.105,0.105,0.06895833,936.2287
+webgl1,"JPEG, whole equirectangular 2560 × 1280: createImageBitmap",browser native,3276800,811726,60,8.855,9.21,9.32,9.32,8.811417,370.0508
+webgl1,"JPEG, whole equirectangular 2560 × 1280: ImageBitmap to RGBA bytes",browser native,3276800,,60,3.685,3.92,3.95,3.95,3.683333,889.2266
+webgl1,"JPEG, the source 6144 × 3072: createImageBitmap",browser native,18874368,3830737,60,44.64,45.03,45.08,45.08,44.59333,422.8129
+webgl1,"JPEG, the source 6144 × 3072: ImageBitmap to RGBA bytes",browser native,18874368,,60,20.125,21.065,21.245,21.245,20.17692,937.8568
+webgl1,inflate one residual tile: DecompressionStream,browser native,65536,,300,0.175,0.235,0.94,2.305,0.1825833,374.4914
+webgl1,unpack integers,JavaScript,65536,,300,0.155,0.19,0.2,0.21,0.1425333,422.8128
+webgl1,"inverse transform, equal areas",JavaScript,65536,,300,0.115,0.12,0.12,0.135,0.1137667,569.8782
+webgl1,Y′CbCr to RGBA,JavaScript,65536,,300,0.15,0.155,0.165,0.165,0.1484167,436.9067
+webgl1,"residual tile, whole decode",JavaScript + native inflate,65536,,300,0.61,0.71,0.875,1.445,0.6001833,107.4361
+webgl1,unpack integers,WebAssembly,65536,,300,0.06999999,0.07500005,0.08000004,0.08499998,0.07071667,936.2287
+webgl1,"inverse transform, equal areas",WebAssembly,65536,,300,0.04500002,0.05000001,0.05500001,0.07999998,0.04481667,1456.355
+webgl1,Y′CbCr to RGBA,WebAssembly,65536,,300,0.135,0.14,0.145,0.15,0.1366833,485.4519
+webgl1,"residual tile, whole decode",WebAssembly + native inflate,65536,,300,0.43,0.515,1.325,1.52,0.4429333,152.4093

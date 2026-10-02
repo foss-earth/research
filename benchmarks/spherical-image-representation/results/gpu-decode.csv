@@ -1,0 +1,18 @@
+measuredWith,operation,runsIn,samples,encodedBytes,count,median,p95,p99,max,mean,megasamplesPerSecond
+webgl1,JPEG tile 256²: createImageBitmap,browser native,65536,12875.79,72,0.325,0.665,1.855,1.855,0.3758333,201.6492
+webgl1,JPEG tile 256²: ImageBitmap to RGBA bytes,browser native,65536,,72,0.13,0.19,0.64,0.64,0.1278472,504.1231
+webgl1,WebP tile 256²: createImageBitmap,browser native,65536,11027.5,72,0.735,1.175,1.24,1.24,0.6165972,89.16462
+webgl1,WebP tile 256²: ImageBitmap to RGBA bytes,browser native,65536,,72,0.06999999,0.08000004,0.09000003,0.09000003,0.06951389,936.2287
+webgl1,"JPEG, whole equirectangular 2560 × 1280: createImageBitmap",browser native,3276800,811726,60,8.58,8.955,8.975,8.975,8.464083,381.9114
+webgl1,"JPEG, whole equirectangular 2560 × 1280: ImageBitmap to RGBA bytes",browser native,3276800,,60,3.51,3.905,3.95,3.95,3.537167,933.5613
+webgl1,"JPEG, the source 6144 × 3072: createImageBitmap",browser native,18874368,3830737,60,43.19,44.51,44.66,44.66,43.2325,437.0078
+webgl1,"JPEG, the source 6144 × 3072: ImageBitmap to RGBA bytes",browser native,18874368,,60,19.645,20.575,20.61,20.61,19.62642,960.7721
+webgl1,inflate one residual tile: DecompressionStream,browser native,65536,,300,0.18,0.23,0.925,1.155,0.1816,364.0889
+webgl1,unpack integers,JavaScript,65536,,300,0.145,0.18,0.195,0.225,0.1351,451.9725
+webgl1,"inverse transform, equal areas",JavaScript,65536,,300,0.11,0.1199999,0.125,0.13,0.1109,595.7817
+webgl1,Y′CbCr to RGBA,JavaScript,65536,,300,0.145,0.15,0.16,0.175,0.1435833,451.9725
+webgl1,"residual tile, whole decode",JavaScript + native inflate,65536,,300,0.59,0.685,0.935,1.555,0.5777833,111.078
+webgl1,unpack integers,WebAssembly,65536,,300,0.065,0.07000005,0.07500005,0.09000003,0.06673333,1008.246
+webgl1,"inverse transform, equal areas",WebAssembly,65536,,300,0.04500002,0.05000001,0.05000001,0.06999999,0.04381667,1456.355
+webgl1,Y′CbCr to RGBA,WebAssembly,65536,,300,0.135,0.145,0.16,0.1799999,0.1358,485.4519
+webgl1,"residual tile, whole decode",WebAssembly + native inflate,65536,,300,0.42,0.495,1.23,1.295,0.4283,156.0381

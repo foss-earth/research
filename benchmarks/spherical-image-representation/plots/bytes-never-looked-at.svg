@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="384" viewBox="0 0 760 384" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Bytes received that were never looked at</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Constrained mobile (2 Mbit/s, 100 ms). Bytes received during the trace, each file's bytes split by the share</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">of its cells that some moment's view covered. Cubemap except the last rows; mean of 3 panoramas.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">Looking forward, 10 s</text>
+<line x1="316" y1="100" x2="316" y2="316" class="grid"/>
+<text x="316" y="331" class="tick" text-anchor="middle">0</text>
+<line x1="362.25" y1="100" x2="362.25" y2="316" class="grid"/>
+<text x="362.25" y="331" class="tick" text-anchor="middle">500</text>
+<line x1="408.5" y1="100" x2="408.5" y2="316" class="grid"/>
+<text x="408.5" y="331" class="tick" text-anchor="middle">1000</text>
+<line x1="454.75" y1="100" x2="454.75" y2="316" class="grid"/>
+<text x="454.75" y="331" class="tick" text-anchor="middle">1500</text>
+<text x="308" y="116" class="" text-anchor="end">Haar residual tiles, the view only</text>
+<rect x="316" y="105" width="9.56" height="14" rx="2" fill="var(--s1)"><title>Haar residual tiles, the view only, looked at: 103 KiB</title></rect>
+<rect x="327.56" y="105" width="6.13" height="14" rx="2" fill="var(--s2)"><title>Haar residual tiles, the view only, never looked at: 88 KiB</title></rect>
+<text x="339.69" y="116" class="value" text-anchor="start">46%</text>
+<text x="308" y="140" class="" text-anchor="end">Haar residual tiles, the view, then the rest</text>
+<rect x="316" y="129" width="9.56" height="14" rx="2" fill="var(--s1)"><title>Haar residual tiles, the view, then the rest, looked at: 103 KiB</title></rect>
+<rect x="327.56" y="129" width="96.08" height="14" rx="2" fill="var(--s2)"><title>Haar residual tiles, the view, then the rest, never looked at: 1060 KiB</title></rect>
+<text x="429.64" y="140" class="value" text-anchor="start">91%</text>
+<text x="308" y="164" class="" text-anchor="end">Haar residual tiles, whole sphere by level</text>
+<rect x="316" y="153" width="9.56" height="14" rx="2" fill="var(--s1)"><title>Haar residual tiles, whole sphere by level, looked at: 103 KiB</title></rect>
+<rect x="327.56" y="153" width="96.08" height="14" rx="2" fill="var(--s2)"><title>Haar residual tiles, whole sphere by level, never looked at: 1060 KiB</title></rect>
+<text x="429.64" y="164" class="value" text-anchor="start">91%</text>
+<text x="308" y="188" class="" text-anchor="end">JPEG residual tiles, the view only</text>
+<rect x="316" y="177" width="7.73" height="14" rx="2" fill="var(--s1)"><title>JPEG residual tiles, the view only, looked at: 84 KiB</title></rect>
+<rect x="325.73" y="177" width="3.37" height="14" rx="2" fill="var(--s2)"><title>JPEG residual tiles, the view only, never looked at: 58 KiB</title></rect>
+<text x="335.1" y="188" class="value" text-anchor="start">41%</text>
+<text x="308" y="212" class="" text-anchor="end">JPEG tiles, the view only, every level</text>
+<rect x="316" y="201" width="9.37" height="14" rx="2" fill="var(--s1)"><title>JPEG tiles, the view only, every level, looked at: 101 KiB</title></rect>
+<rect x="327.37" y="201" width="4.44" height="14" rx="2" fill="var(--s2)"><title>JPEG tiles, the view only, every level, never looked at: 70 KiB</title></rect>
+<text x="337.8" y="212" class="value" text-anchor="start">41%</text>
+<text x="308" y="236" class="" text-anchor="end">JPEG tiles, finest level under the view</text>
+<rect x="316" y="225" width="6.77" height="14" rx="2" fill="var(--s1)"><title>JPEG tiles, finest level under the view, looked at: 73 KiB</title></rect>
+<rect x="324.77" y="225" width="2.6" height="14" rx="2" fill="var(--s2)"><title>JPEG tiles, finest level under the view, never looked at: 50 KiB</title></rect>
+<text x="333.37" y="236" class="value" text-anchor="start">40%</text>
+<text x="308" y="260" class="" text-anchor="end">JPEG tiles, whole sphere by level</text>
+<rect x="316" y="249" width="9.37" height="14" rx="2" fill="var(--s1)"><title>JPEG tiles, whole sphere by level, looked at: 101 KiB</title></rect>
+<rect x="327.37" y="249" width="88.2" height="14" rx="2" fill="var(--s2)"><title>JPEG tiles, whole sphere by level, never looked at: 975 KiB</title></rect>
+<text x="421.57" y="260" class="value" text-anchor="start">91%</text>
+<text x="308" y="284" class="" text-anchor="end">Whole equirectangular JPEG, full size at once</text>
+<rect x="316" y="273" width="5.28" height="14" rx="2" fill="var(--s1)"><title>Whole equirectangular JPEG, full size at once, looked at: 57 KiB</title></rect>
+<rect x="323.28" y="273" width="56.78" height="14" rx="2" fill="var(--s2)"><title>Whole equirectangular JPEG, full size at once, never looked at: 635 KiB</title></rect>
+<text x="386.06" y="284" class="value" text-anchor="start">92%</text>
+<text x="308" y="308" class="" text-anchor="end">Whole equirectangular JPEG, every size in turn</text>
+<rect x="316" y="297" width="7.22" height="14" rx="2" fill="var(--s1)"><title>Whole equirectangular JPEG, every size in turn, looked at: 78 KiB</title></rect>
+<rect x="325.22" y="297" width="78.3" height="14" rx="2" fill="var(--s2)"><title>Whole equirectangular JPEG, every size in turn, never looked at: 868 KiB</title></rect>
+<text x="409.53" y="308" class="value" text-anchor="start">92%</text>
+<line x1="316" y1="100" x2="316" y2="316" class="axis"/>
+<text x="390" y="347" class="tick" text-anchor="middle">KiB received</text>
+<text x="530" y="90" class="panel-title" text-anchor="start">A slow full turn, 20 s</text>
+<line x1="538" y1="100" x2="538" y2="316" class="grid"/>
+<text x="538" y="331" class="tick" text-anchor="middle">0</text>
+<line x1="584.25" y1="100" x2="584.25" y2="316" class="grid"/>
+<text x="584.25" y="331" class="tick" text-anchor="middle">500</text>
+<line x1="630.5" y1="100" x2="630.5" y2="316" class="grid"/>
+<text x="630.5" y="331" class="tick" text-anchor="middle">1000</text>
+<line x1="676.75" y1="100" x2="676.75" y2="316" class="grid"/>
+<text x="676.75" y="331" class="tick" text-anchor="middle">1500</text>
+<text x="530" y="116" class="" text-anchor="end"></text>
+<rect x="538" y="105" width="62.07" height="14" rx="2" fill="var(--s1)"><title>, looked at: 671 KiB</title></rect>
+<rect x="602.07" y="105" width="30.37" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 350 KiB</title></rect>
+<text x="638.44" y="116" class="value" text-anchor="start">34%</text>
+<text x="530" y="140" class="" text-anchor="end"></text>
+<rect x="538" y="129" width="63.86" height="14" rx="2" fill="var(--s1)"><title>, looked at: 690 KiB</title></rect>
+<rect x="603.86" y="129" width="44.39" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 501 KiB</title></rect>
+<text x="654.25" y="140" class="value" text-anchor="start">42%</text>
+<text x="530" y="164" class="" text-anchor="end"></text>
+<rect x="538" y="153" width="62.07" height="14" rx="2" fill="var(--s1)"><title>, looked at: 671 KiB</title></rect>
+<rect x="602.07" y="153" width="43.57" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 493 KiB</title></rect>
+<text x="651.64" y="164" class="value" text-anchor="start">42%</text>
+<text x="530" y="188" class="" text-anchor="end"></text>
+<rect x="538" y="177" width="48.5" height="14" rx="2" fill="var(--s1)"><title>, looked at: 524 KiB</title></rect>
+<rect x="588.5" y="177" width="20.49" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 243 KiB</title></rect>
+<text x="614.99" y="188" class="value" text-anchor="start">32%</text>
+<text x="530" y="212" class="" text-anchor="end"></text>
+<rect x="538" y="201" width="58.88" height="14" rx="2" fill="var(--s1)"><title>, looked at: 637 KiB</title></rect>
+<rect x="598.88" y="201" width="24.67" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 288 KiB</title></rect>
+<text x="629.55" y="212" class="value" text-anchor="start">31%</text>
+<text x="530" y="236" class="" text-anchor="end"></text>
+<rect x="538" y="225" width="42.24" height="14" rx="2" fill="var(--s1)"><title>, looked at: 457 KiB</title></rect>
+<rect x="582.24" y="225" width="13.78" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 171 KiB</title></rect>
+<text x="602.02" y="236" class="value" text-anchor="start">27%</text>
+<text x="530" y="260" class="" text-anchor="end"></text>
+<rect x="538" y="249" width="58.88" height="14" rx="2" fill="var(--s1)"><title>, looked at: 637 KiB</title></rect>
+<rect x="598.88" y="249" width="38.69" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 440 KiB</title></rect>
+<text x="643.57" y="260" class="value" text-anchor="start">41%</text>
+<text x="530" y="284" class="" text-anchor="end"></text>
+<rect x="538" y="273" width="26.73" height="14" rx="2" fill="var(--s1)"><title>, looked at: 289 KiB</title></rect>
+<rect x="566.73" y="273" width="35.33" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 404 KiB</title></rect>
+<text x="608.06" y="284" class="value" text-anchor="start">58%</text>
+<text x="530" y="308" class="" text-anchor="end"></text>
+<rect x="538" y="297" width="36.56" height="14" rx="2" fill="var(--s1)"><title>, looked at: 395 KiB</title></rect>
+<rect x="576.56" y="297" width="48.97" height="14" rx="2" fill="var(--s2)"><title>, never looked at: 551 KiB</title></rect>
+<text x="631.53" y="308" class="value" text-anchor="start">58%</text>
+<line x1="538" y1="100" x2="538" y2="316" class="axis"/>
+<text x="612" y="347" class="tick" text-anchor="middle">KiB received</text>
+<rect x="19" y="352" width="12" height="12" rx="2" fill="var(--s1)"/>
+<text x="40" y="362" class="" text-anchor="start">for cells a view covered</text>
+<rect x="224.28" y="352" width="12" height="12" rx="2" fill="var(--s2)"/>
+<text x="245.28" y="362" class="" text-anchor="start">for cells no view covered; the percentage is their share</text>
+</svg>

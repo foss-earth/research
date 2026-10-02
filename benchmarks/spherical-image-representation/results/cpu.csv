@@ -1,0 +1,45 @@
+operation,runsIn,samples,medianMs,p95Ms,p99Ms,medianMsLowestRound,medianMsHighestRound,megasamplesPerSecond,nanosecondsPerSample,temporaryBytes,note
+inflate one residual tile,native,65536,0.075958,0.117334,0.158959,0.072416,0.079542,862.7926,1.159027,147456,"zlib, native code; a browser's DecompressionStream is the counterpart"
+unpack integers,JavaScript,65536,0.176292,0.187625,0.229791,0.172167,0.177833,371.7469,2.690002,589824,
+"inverse transform, equal areas",JavaScript,65536,0.10275,0.106167,0.115958,0.102708,0.102792,637.82,1.567841,786432,
+"inverse transform, area-weighted",JavaScript,65536,0.160208,0.169209,0.181042,0.16,0.160375,409.0682,2.44458,1048576,needs every child cell's area
+Y′CbCr to RGBA,JavaScript,65536,0.146292,0.15375,0.169458,0.135541,0.157167,447.9808,2.232239,262144,
+"residual tile 256², whole decode",JavaScript + native inflate,65536,0.569833,0.735083,0.756584,0.569084,0.574167,115.0091,8.694962,1785856,
+unpack integers,WebAssembly,65536,0.068875,0.071708,0.076666,0.059708,0.06975,951.5209,1.050949,589824,
+"inverse transform, equal areas",WebAssembly,65536,0.043334,0.04625,0.0535,0.043083,0.043417,1512.346,0.6612244,786432,
+Y′CbCr to RGBA,WebAssembly,65536,0.124834,0.128417,0.141916,0.122667,0.134792,524.9852,1.904816,262144,
+"residual tile 256², whole decode",WebAssembly + native inflate,65536,0.342625,0.462917,0.492833,0.332667,0.3435,191.2762,5.228043,1785856,includes copying the tile into and out of the module's memory
+"JPEG tile decode, jpeg-js",JavaScript,65536,1.397,1.822625,1.9065,1.395125,1.4115,46.91195,21.31653,262144,"a pure-JavaScript decoder; browsers decode natively, see run-gpu.mjs"
+copy a tile into an atlas,JavaScript,65536,0.011167,0.016125,0.025375,0.011125,0.01475,5868.72,0.1703949,0,
+"residual tile 64², whole decode",JavaScript + native inflate,4096,0.032125,0.045792,0.048292,0.030708,0.033083,127.5019,7.843018,102400,
+"residual tile 64², whole decode",WebAssembly + native inflate,4096,0.020459,0.027333,0.033917,0.020375,0.0205,200.2053,4.994873,102400,
+"residual tile 128², whole decode",JavaScript + native inflate,16384,0.118,0.163459,0.177834,0.117167,0.118625,138.8475,7.202148,409600,
+"residual tile 128², whole decode",WebAssembly + native inflate,16384,0.074625,0.098667,0.111584,0.074,0.076583,219.5511,4.554749,409600,
+"residual tile 512², whole decode",JavaScript + native inflate,262144,2.243875,2.805125,2.851417,2.227084,2.249583,116.8265,8.559704,6553600,
+"residual tile 512², whole decode",WebAssembly + native inflate,262144,1.36175,1.763167,1.815334,1.338375,1.364333,192.5052,5.194664,6553600,
+"cell areas of one tile, cube",JavaScript,65536,3.38225,3.578542,4.304458,2.107833,3.471958,19.37645,51.60904,262144,
+"cell areas of one tile, equirect",JavaScript,65536,4.048667,4.149,4.293708,4.04175,4.050333,16.18706,61.77776,262144,
+"cell areas of one tile, ico-rhombus",JavaScript,65536,20.34483,20.65696,22.36346,19.35571,20.44792,3.22126,310.4375,262144,
+"cell areas of one tile, toast",JavaScript,65536,20.17854,20.35904,24.27979,20.01638,20.23137,3.247807,307.9001,262144,
+"direction to chart position, equirect",JavaScript,65536,1.80525,1.869583,1.903084,1.499042,1.834709,36.30301,27.54593,0,
+"chart position to direction, equirect",JavaScript,65536,1.579917,1.624,1.643833,0.8405,1.580416,41.48066,24.10762,0,
+"direction to chart position, cube",JavaScript,65536,1.776958,1.843334,1.977334,1.482459,1.799875,36.88101,27.11423,0,
+"chart position to direction, cube",JavaScript,65536,1.074041,1.115875,1.13575,0.820125,1.075125,61.01815,16.38857,0,
+"direction to chart position, eac",JavaScript,65536,2.605167,2.666708,2.723875,2.601458,2.652417,25.15616,39.75169,0,
+"chart position to direction, eac",JavaScript,65536,1.442834,1.489916,1.508291,1.440583,1.448834,45.42172,22.0159,0,
+"direction to chart position, qsc",JavaScript,65536,3.000125,3.098417,3.131167,2.972625,3.111958,21.84442,45.77827,0,
+"chart position to direction, qsc",JavaScript,65536,1.945041,2.008292,2.038875,1.939625,1.94775,33.69389,29.67897,0,
+"direction to chart position, oct",JavaScript,65536,1.006583,1.046584,1.079333,0.99975,1.009875,65.1074,15.35924,0,
+"chart position to direction, oct",JavaScript,65536,0.558334,0.589792,0.603417,0.557542,0.558792,117.3778,8.519501,0,
+"direction to chart position, oct-ea",JavaScript,65536,1.945959,1.993125,2.037,1.935084,1.955833,33.678,29.69298,0,
+"chart position to direction, oct-ea",JavaScript,65536,1.08625,1.132625,1.183875,1.0795,1.089958,60.33234,16.57486,0,
+"direction to chart position, toast",JavaScript,65536,42.99262,43.23771,43.34983,42.55862,43.03575,1.524354,656.0154,0,walks 16 levels of the triangle hierarchy
+"chart position to direction, toast",JavaScript,65536,18.09783,18.225,18.58204,17.94262,18.13458,3.621207,276.151,0,
+"direction to chart position, healpix",JavaScript,65536,2.34375,2.399958,2.457209,2.327291,2.34725,27.96203,35.76279,0,
+"chart position to direction, healpix",JavaScript,65536,1.232541,1.27575,1.316417,1.230542,1.234542,53.17146,18.80708,0,
+"direction to chart position, ico-rhombus",JavaScript,65536,55.89308,56.21679,57.5515,55.86538,56.13892,1.172524,852.8608,0,walks 16 levels of the triangle hierarchy
+"chart position to direction, ico-rhombus",JavaScript,65536,18.00504,18.11896,18.22246,17.958,18.01575,3.63987,274.7351,0,
+"reproject a tile, healpix to cube",JavaScript,65536,3.430208,3.523916,3.56225,2.737584,3.489292,19.10555,52.34082,262144,"bilinear, in sRGB bytes, into RGBA"
+"reproject a tile, healpix to equirect",JavaScript,65536,5.492458,5.660583,5.71625,5.483334,5.582583,11.932,83.80826,262144,"bilinear, in sRGB bytes, into RGBA"
+"reproject a tile, cube to equirect",JavaScript,65536,2.979834,3.042,3.076875,2.975667,3.168833,21.99317,45.46866,262144,"bilinear, in sRGB bytes, into RGBA"
+"reproject a tile, cube to healpix",JavaScript,65536,2.499709,2.558792,2.645875,2.488,2.514916,26.21745,38.14253,262144,"bilinear, in sRGB bytes, into RGBA"

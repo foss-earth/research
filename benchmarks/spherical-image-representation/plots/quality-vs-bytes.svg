@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="621" viewBox="0 0 760 621" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">View quality against bytes: each representation as JPEG</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Every chart compressed whole with libjpeg-turbo, 4:2:0, at five qualities and two resolutions; each setting</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">is averaged over the 6 panoramas and the best at each size is drawn. View PSNR against the source, 12 views.</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">Equirectangular in grey in every panel.</text>
+<text x="16" y="107" class="panel-title" text-anchor="start">Cubed spheres</text>
+<line x1="60" y1="311" x2="288" y2="311" class="grid"/>
+<text x="54" y="315" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="276.2" x2="288" y2="276.2" class="grid"/>
+<text x="54" y="280.2" class="tick" text-anchor="end">27</text>
+<line x1="60" y1="241.4" x2="288" y2="241.4" class="grid"/>
+<text x="54" y="245.4" class="tick" text-anchor="end">29</text>
+<line x1="60" y1="206.6" x2="288" y2="206.6" class="grid"/>
+<text x="54" y="210.6" class="tick" text-anchor="end">31</text>
+<line x1="60" y1="171.8" x2="288" y2="171.8" class="grid"/>
+<text x="54" y="175.8" class="tick" text-anchor="end">33</text>
+<line x1="60" y1="137" x2="288" y2="137" class="grid"/>
+<text x="54" y="141" class="tick" text-anchor="end">35</text>
+<line x1="60" y1="311" x2="288" y2="311" class="axis"/>
+<line x1="63.7" y1="311" x2="63.7" y2="315" class="axis"/>
+<text x="63.7" y="327" class="tick" text-anchor="middle">64</text>
+<line x1="103.44" y1="311" x2="103.44" y2="315" class="axis"/>
+<text x="103.44" y="327" class="tick" text-anchor="middle">128</text>
+<line x1="143.18" y1="311" x2="143.18" y2="315" class="axis"/>
+<text x="143.18" y="327" class="tick" text-anchor="middle">256</text>
+<line x1="182.93" y1="311" x2="182.93" y2="315" class="axis"/>
+<text x="182.93" y="327" class="tick" text-anchor="middle">512</text>
+<line x1="222.67" y1="311" x2="222.67" y2="315" class="axis"/>
+<text x="222.67" y="327" class="tick" text-anchor="middle">1024</text>
+<line x1="262.41" y1="311" x2="262.41" y2="315" class="axis"/>
+<text x="262.41" y="327" class="tick" text-anchor="middle">2048</text>
+<text x="174" y="342" class="tick" text-anchor="middle">KiB for the whole sphere (log scale)</text>
+<text x="16" y="127" class="tick" text-anchor="start">PSNR, dB</text>
+<path d="M85.96 294.55 L103.3 285.52 L119.99 276.94 L137.19 269.17 L154.8 263.55 L161.3 227.57 L177.66 213.03 L193.57 198.78 L210.42 185.51 L228.02 174.84" class="line" stroke="var(--quiet)"><title>Equirectangular</title></path>
+<circle cx="85.96" cy="294.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 94 KiB, 25.95 dB</title></circle>
+<circle cx="103.3" cy="285.52" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 128 KiB, 26.46 dB</title></circle>
+<circle cx="119.99" cy="276.94" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 171 KiB, 26.96 dB</title></circle>
+<circle cx="137.19" cy="269.17" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 231 KiB, 27.40 dB</title></circle>
+<circle cx="154.8" cy="263.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 313 KiB, 27.73 dB</title></circle>
+<circle cx="161.3" cy="227.57" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 351 KiB, 29.79 dB</title></circle>
+<circle cx="177.66" cy="213.03" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 467 KiB, 30.63 dB</title></circle>
+<circle cx="193.57" cy="198.78" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 616 KiB, 31.45 dB</title></circle>
+<circle cx="210.42" cy="185.51" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 827 KiB, 32.21 dB</title></circle>
+<circle cx="228.02" cy="174.84" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 1124 KiB, 32.83 dB</title></circle>
+<path d="M92.38 289.76 L109.95 280.13 L126.82 271.02 L144.06 262.85 L161.52 256.83 L166.55 219.84 L183.18 204.82 L199.29 189.81 L216.33 175.79 L234.13 164.37" class="line" stroke="var(--s1)"><title>Cubemap</title></path>
+<circle cx="92.38" cy="289.76" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 106 KiB, 26.22 dB</title></circle>
+<circle cx="109.95" cy="280.13" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 143 KiB, 26.77 dB</title></circle>
+<circle cx="126.82" cy="271.02" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 192 KiB, 27.30 dB</title></circle>
+<circle cx="144.06" cy="262.85" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 260 KiB, 27.77 dB</title></circle>
+<circle cx="161.52" cy="256.83" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 352 KiB, 28.11 dB</title></circle>
+<circle cx="166.55" cy="219.84" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 385 KiB, 30.24 dB</title></circle>
+<circle cx="183.18" cy="204.82" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 514 KiB, 31.10 dB</title></circle>
+<circle cx="199.29" cy="189.81" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 681 KiB, 31.96 dB</title></circle>
+<circle cx="216.33" cy="175.79" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 917 KiB, 32.77 dB</title></circle>
+<circle cx="234.13" cy="164.37" r="4" class="dot" fill="var(--s1)"><title>Cubemap: 1251 KiB, 33.43 dB</title></circle>
+<path d="M93.46 283.99 L111.05 273.93 L127.88 264.4 L145.03 255.74 L162.46 249.26 L167.22 211.72 L183.94 195.58 L200.15 179.61 L217.18 164.47 L234.98 151.79" class="line" stroke="var(--s2)"><title>Equi-angular cube</title></path>
+<circle cx="93.46" cy="283.99" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 108 KiB, 26.55 dB</title></circle>
+<circle cx="111.05" cy="273.93" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 146 KiB, 27.13 dB</title></circle>
+<circle cx="127.88" cy="264.4" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 196 KiB, 27.68 dB</title></circle>
+<circle cx="145.03" cy="255.74" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 264 KiB, 28.18 dB</title></circle>
+<circle cx="162.46" cy="249.26" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 358 KiB, 28.55 dB</title></circle>
+<circle cx="167.22" cy="211.72" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 389 KiB, 30.71 dB</title></circle>
+<circle cx="183.94" cy="195.58" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 521 KiB, 31.63 dB</title></circle>
+<circle cx="200.15" cy="179.61" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 691 KiB, 32.55 dB</title></circle>
+<circle cx="217.18" cy="164.47" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 931 KiB, 33.42 dB</title></circle>
+<circle cx="234.98" cy="151.79" r="4" class="dot" fill="var(--s2)"><title>Equi-angular cube: 1269 KiB, 34.15 dB</title></circle>
+<path d="M93.45 283.82 L110.98 273.71 L127.74 264.35 L144.92 255.65 L162.37 249.21 L167.37 211.12 L184.07 194.96 L200.22 179.12 L217.19 164.24 L234.94 151.93" class="line" stroke="var(--s8)"><title>QSC cube</title></path>
+<circle cx="93.45" cy="283.82" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 108 KiB, 26.56 dB</title></circle>
+<circle cx="110.98" cy="273.71" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 146 KiB, 27.14 dB</title></circle>
+<circle cx="127.74" cy="264.35" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 196 KiB, 27.68 dB</title></circle>
+<circle cx="144.92" cy="255.65" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 264 KiB, 28.18 dB</title></circle>
+<circle cx="162.37" cy="249.21" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 358 KiB, 28.55 dB</title></circle>
+<circle cx="167.37" cy="211.12" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 390 KiB, 30.74 dB</title></circle>
+<circle cx="184.07" cy="194.96" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 522 KiB, 31.67 dB</title></circle>
+<circle cx="200.22" cy="179.12" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 692 KiB, 32.58 dB</title></circle>
+<circle cx="217.19" cy="164.24" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 931 KiB, 33.43 dB</title></circle>
+<circle cx="234.94" cy="151.93" r="4" class="dot" fill="var(--s8)"><title>QSC cube: 1268 KiB, 34.14 dB</title></circle>
+<text x="242.98" y="155.79" class="value" text-anchor="start">Equi-angular</text>
+<text x="242.94" y="168.79" class="value" text-anchor="start">QSC</text>
+<text x="242.13" y="181.79" class="value" text-anchor="start">Cubemap</text>
+<text x="388" y="107" class="panel-title" text-anchor="start">Octahedral squares</text>
+<line x1="432" y1="311" x2="660" y2="311" class="grid"/>
+<text x="426" y="315" class="tick" text-anchor="end">25</text>
+<line x1="432" y1="276.2" x2="660" y2="276.2" class="grid"/>
+<text x="426" y="280.2" class="tick" text-anchor="end">27</text>
+<line x1="432" y1="241.4" x2="660" y2="241.4" class="grid"/>
+<text x="426" y="245.4" class="tick" text-anchor="end">29</text>
+<line x1="432" y1="206.6" x2="660" y2="206.6" class="grid"/>
+<text x="426" y="210.6" class="tick" text-anchor="end">31</text>
+<line x1="432" y1="171.8" x2="660" y2="171.8" class="grid"/>
+<text x="426" y="175.8" class="tick" text-anchor="end">33</text>
+<line x1="432" y1="137" x2="660" y2="137" class="grid"/>
+<text x="426" y="141" class="tick" text-anchor="end">35</text>
+<line x1="432" y1="311" x2="660" y2="311" class="axis"/>
+<line x1="435.7" y1="311" x2="435.7" y2="315" class="axis"/>
+<text x="435.7" y="327" class="tick" text-anchor="middle">64</text>
+<line x1="475.44" y1="311" x2="475.44" y2="315" class="axis"/>
+<text x="475.44" y="327" class="tick" text-anchor="middle">128</text>
+<line x1="515.18" y1="311" x2="515.18" y2="315" class="axis"/>
+<text x="515.18" y="327" class="tick" text-anchor="middle">256</text>
+<line x1="554.93" y1="311" x2="554.93" y2="315" class="axis"/>
+<text x="554.93" y="327" class="tick" text-anchor="middle">512</text>
+<line x1="594.67" y1="311" x2="594.67" y2="315" class="axis"/>
+<text x="594.67" y="327" class="tick" text-anchor="middle">1024</text>
+<line x1="634.41" y1="311" x2="634.41" y2="315" class="axis"/>
+<text x="634.41" y="327" class="tick" text-anchor="middle">2048</text>
+<text x="546" y="342" class="tick" text-anchor="middle">KiB for the whole sphere (log scale)</text>
+<text x="388" y="127" class="tick" text-anchor="start">PSNR, dB</text>
+<path d="M457.96 294.55 L475.3 285.52 L491.99 276.94 L509.19 269.17 L526.8 263.55 L533.3 227.57 L549.66 213.03 L565.57 198.78 L582.42 185.51 L600.02 174.84" class="line" stroke="var(--quiet)"><title>Equirectangular</title></path>
+<circle cx="457.96" cy="294.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 94 KiB, 25.95 dB</title></circle>
+<circle cx="475.3" cy="285.52" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 128 KiB, 26.46 dB</title></circle>
+<circle cx="491.99" cy="276.94" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 171 KiB, 26.96 dB</title></circle>
+<circle cx="509.19" cy="269.17" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 231 KiB, 27.40 dB</title></circle>
+<circle cx="526.8" cy="263.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 313 KiB, 27.73 dB</title></circle>
+<circle cx="533.3" cy="227.57" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 351 KiB, 29.79 dB</title></circle>
+<circle cx="549.66" cy="213.03" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 467 KiB, 30.63 dB</title></circle>
+<circle cx="565.57" cy="198.78" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 616 KiB, 31.45 dB</title></circle>
+<circle cx="582.42" cy="185.51" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 827 KiB, 32.21 dB</title></circle>
+<circle cx="600.02" cy="174.84" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 1124 KiB, 32.83 dB</title></circle>
+<path d="M462.33 297.04 L479.97 287.22 L497.18 277.86 L514.72 269.38 L532.2 263.19 L537.14 231.73 L553.87 216.98 L570.33 202.22 L587.67 188.41 L605.59 177.25" class="line" stroke="var(--s4)"><title>Octahedral equal-area</title></path>
+<circle cx="462.33" cy="297.04" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 102 KiB, 25.80 dB</title></circle>
+<circle cx="479.97" cy="287.22" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 139 KiB, 26.37 dB</title></circle>
+<circle cx="497.18" cy="277.86" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 187 KiB, 26.90 dB</title></circle>
+<circle cx="514.72" cy="269.38" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 254 KiB, 27.39 dB</title></circle>
+<circle cx="532.2" cy="263.19" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 344 KiB, 27.75 dB</title></circle>
+<circle cx="537.14" cy="231.73" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 375 KiB, 29.56 dB</title></circle>
+<circle cx="553.87" cy="216.98" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 503 KiB, 30.40 dB</title></circle>
+<circle cx="570.33" cy="202.22" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 670 KiB, 31.25 dB</title></circle>
+<circle cx="587.67" cy="188.41" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 906 KiB, 32.05 dB</title></circle>
+<circle cx="605.59" cy="177.25" r="4" class="dot" fill="var(--s4)"><title>Octahedral equal-area: 1239 KiB, 32.69 dB</title></circle>
+<path d="M477.28 284.42 L494.74 273.93 L511.78 263.59 L529.22 254.19 L546.77 247.2 L551.07 213.9 L567.49 197.77 L583.67 181.55 L600.85 165.99 L618.77 153.25" class="line" stroke="var(--s5)"><title>TOAST</title></path>
+<circle cx="477.28" cy="284.42" r="4" class="dot" fill="var(--s5)"><title>TOAST: 132 KiB, 26.53 dB</title></circle>
+<circle cx="494.74" cy="273.93" r="4" class="dot" fill="var(--s5)"><title>TOAST: 179 KiB, 27.13 dB</title></circle>
+<circle cx="511.78" cy="263.59" r="4" class="dot" fill="var(--s5)"><title>TOAST: 241 KiB, 27.72 dB</title></circle>
+<circle cx="529.22" cy="254.19" r="4" class="dot" fill="var(--s5)"><title>TOAST: 327 KiB, 28.26 dB</title></circle>
+<circle cx="546.77" cy="247.2" r="4" class="dot" fill="var(--s5)"><title>TOAST: 444 KiB, 28.67 dB</title></circle>
+<circle cx="551.07" cy="213.9" r="4" class="dot" fill="var(--s5)"><title>TOAST: 479 KiB, 30.58 dB</title></circle>
+<circle cx="567.49" cy="197.77" r="4" class="dot" fill="var(--s5)"><title>TOAST: 637 KiB, 31.51 dB</title></circle>
+<circle cx="583.67" cy="181.55" r="4" class="dot" fill="var(--s5)"><title>TOAST: 845 KiB, 32.44 dB</title></circle>
+<circle cx="600.85" cy="165.99" r="4" class="dot" fill="var(--s5)"><title>TOAST: 1141 KiB, 33.33 dB</title></circle>
+<circle cx="618.77" cy="153.25" r="4" class="dot" fill="var(--s5)"><title>TOAST: 1559 KiB, 34.07 dB</title></circle>
+<path d="M463.32 294.42 L480.83 284.64 L497.9 275.11 L515.37 266.39 L532.85 259.97 L537.38 229.64 L554 214.58 L570.36 199.51 L587.59 185.26 L605.42 173.77" class="line" stroke="var(--s8)"><title>Octahedral (L1)</title></path>
+<circle cx="463.32" cy="294.42" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 104 KiB, 25.95 dB</title></circle>
+<circle cx="480.83" cy="284.64" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 141 KiB, 26.51 dB</title></circle>
+<circle cx="497.9" cy="275.11" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 189 KiB, 27.06 dB</title></circle>
+<circle cx="515.37" cy="266.39" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 257 KiB, 27.56 dB</title></circle>
+<circle cx="532.85" cy="259.97" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 348 KiB, 27.93 dB</title></circle>
+<circle cx="537.38" cy="229.64" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 377 KiB, 29.68 dB</title></circle>
+<circle cx="554" cy="214.58" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 504 KiB, 30.54 dB</title></circle>
+<circle cx="570.36" cy="199.51" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 670 KiB, 31.41 dB</title></circle>
+<circle cx="587.59" cy="185.26" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 905 KiB, 32.23 dB</title></circle>
+<circle cx="605.42" cy="173.77" r="4" class="dot" fill="var(--s8)"><title>Octahedral (L1): 1235 KiB, 32.89 dB</title></circle>
+<text x="626.77" y="157.25" class="value" text-anchor="start">TOAST</text>
+<text x="613.42" y="177.77" class="value" text-anchor="start">L1</text>
+<text x="613.59" y="190.77" class="value" text-anchor="start">equal-area</text>
+<text x="16" y="371" class="panel-title" text-anchor="start">HEALPix</text>
+<line x1="60" y1="575" x2="288" y2="575" class="grid"/>
+<text x="54" y="579" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="540.2" x2="288" y2="540.2" class="grid"/>
+<text x="54" y="544.2" class="tick" text-anchor="end">27</text>
+<line x1="60" y1="505.4" x2="288" y2="505.4" class="grid"/>
+<text x="54" y="509.4" class="tick" text-anchor="end">29</text>
+<line x1="60" y1="470.6" x2="288" y2="470.6" class="grid"/>
+<text x="54" y="474.6" class="tick" text-anchor="end">31</text>
+<line x1="60" y1="435.8" x2="288" y2="435.8" class="grid"/>
+<text x="54" y="439.8" class="tick" text-anchor="end">33</text>
+<line x1="60" y1="401" x2="288" y2="401" class="grid"/>
+<text x="54" y="405" class="tick" text-anchor="end">35</text>
+<line x1="60" y1="575" x2="288" y2="575" class="axis"/>
+<line x1="63.7" y1="575" x2="63.7" y2="579" class="axis"/>
+<text x="63.7" y="591" class="tick" text-anchor="middle">64</text>
+<line x1="103.44" y1="575" x2="103.44" y2="579" class="axis"/>
+<text x="103.44" y="591" class="tick" text-anchor="middle">128</text>
+<line x1="143.18" y1="575" x2="143.18" y2="579" class="axis"/>
+<text x="143.18" y="591" class="tick" text-anchor="middle">256</text>
+<line x1="182.93" y1="575" x2="182.93" y2="579" class="axis"/>
+<text x="182.93" y="591" class="tick" text-anchor="middle">512</text>
+<line x1="222.67" y1="575" x2="222.67" y2="579" class="axis"/>
+<text x="222.67" y="591" class="tick" text-anchor="middle">1024</text>
+<line x1="262.41" y1="575" x2="262.41" y2="579" class="axis"/>
+<text x="262.41" y="591" class="tick" text-anchor="middle">2048</text>
+<text x="174" y="606" class="tick" text-anchor="middle">KiB for the whole sphere (log scale)</text>
+<text x="16" y="391" class="tick" text-anchor="start">PSNR, dB</text>
+<path d="M85.96 558.55 L103.3 549.52 L119.99 540.94 L137.19 533.17 L154.8 527.55 L161.3 491.57 L177.66 477.03 L193.57 462.78 L210.42 449.51 L228.02 438.84" class="line" stroke="var(--quiet)"><title>Equirectangular</title></path>
+<circle cx="85.96" cy="558.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 94 KiB, 25.95 dB</title></circle>
+<circle cx="103.3" cy="549.52" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 128 KiB, 26.46 dB</title></circle>
+<circle cx="119.99" cy="540.94" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 171 KiB, 26.96 dB</title></circle>
+<circle cx="137.19" cy="533.17" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 231 KiB, 27.40 dB</title></circle>
+<circle cx="154.8" cy="527.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 313 KiB, 27.73 dB</title></circle>
+<circle cx="161.3" cy="491.57" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 351 KiB, 29.79 dB</title></circle>
+<circle cx="177.66" cy="477.03" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 467 KiB, 30.63 dB</title></circle>
+<circle cx="193.57" cy="462.78" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 616 KiB, 31.45 dB</title></circle>
+<circle cx="210.42" cy="449.51" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 827 KiB, 32.21 dB</title></circle>
+<circle cx="228.02" cy="438.84" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 1124 KiB, 32.83 dB</title></circle>
+<path d="M90 555.78 L107.36 545.63 L124.25 535.8 L141.6 526.87 L158.97 520.28 L163.41 486.79 L180.22 470.9 L196.54 455.18 L213.75 440.34 L231.58 428.1" class="line" stroke="var(--s3)"><title>HEALPix</title></path>
+<circle cx="90" cy="555.78" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 101 KiB, 26.10 dB</title></circle>
+<circle cx="107.36" cy="545.63" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 137 KiB, 26.69 dB</title></circle>
+<circle cx="124.25" cy="535.8" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 184 KiB, 27.25 dB</title></circle>
+<circle cx="141.6" cy="526.87" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 249 KiB, 27.77 dB</title></circle>
+<circle cx="158.97" cy="520.28" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 337 KiB, 28.14 dB</title></circle>
+<circle cx="163.41" cy="486.79" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 364 KiB, 30.07 dB</title></circle>
+<circle cx="180.22" cy="470.9" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 488 KiB, 30.98 dB</title></circle>
+<circle cx="196.54" cy="455.18" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 649 KiB, 31.89 dB</title></circle>
+<circle cx="213.75" cy="440.34" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 877 KiB, 32.74 dB</title></circle>
+<circle cx="231.58" cy="428.1" r="4" class="dot" fill="var(--s3)"><title>HEALPix: 1196 KiB, 33.44 dB</title></circle>
+<text x="239.58" y="432.1" class="value" text-anchor="start">HEALPix</text>
+<text x="388" y="371" class="panel-title" text-anchor="start">Icosahedral</text>
+<line x1="432" y1="575" x2="660" y2="575" class="grid"/>
+<text x="426" y="579" class="tick" text-anchor="end">25</text>
+<line x1="432" y1="540.2" x2="660" y2="540.2" class="grid"/>
+<text x="426" y="544.2" class="tick" text-anchor="end">27</text>
+<line x1="432" y1="505.4" x2="660" y2="505.4" class="grid"/>
+<text x="426" y="509.4" class="tick" text-anchor="end">29</text>
+<line x1="432" y1="470.6" x2="660" y2="470.6" class="grid"/>
+<text x="426" y="474.6" class="tick" text-anchor="end">31</text>
+<line x1="432" y1="435.8" x2="660" y2="435.8" class="grid"/>
+<text x="426" y="439.8" class="tick" text-anchor="end">33</text>
+<line x1="432" y1="401" x2="660" y2="401" class="grid"/>
+<text x="426" y="405" class="tick" text-anchor="end">35</text>
+<line x1="432" y1="575" x2="660" y2="575" class="axis"/>
+<line x1="435.7" y1="575" x2="435.7" y2="579" class="axis"/>
+<text x="435.7" y="591" class="tick" text-anchor="middle">64</text>
+<line x1="475.44" y1="575" x2="475.44" y2="579" class="axis"/>
+<text x="475.44" y="591" class="tick" text-anchor="middle">128</text>
+<line x1="515.18" y1="575" x2="515.18" y2="579" class="axis"/>
+<text x="515.18" y="591" class="tick" text-anchor="middle">256</text>
+<line x1="554.93" y1="575" x2="554.93" y2="579" class="axis"/>
+<text x="554.93" y="591" class="tick" text-anchor="middle">512</text>
+<line x1="594.67" y1="575" x2="594.67" y2="579" class="axis"/>
+<text x="594.67" y="591" class="tick" text-anchor="middle">1024</text>
+<line x1="634.41" y1="575" x2="634.41" y2="579" class="axis"/>
+<text x="634.41" y="591" class="tick" text-anchor="middle">2048</text>
+<text x="546" y="606" class="tick" text-anchor="middle">KiB for the whole sphere (log scale)</text>
+<text x="388" y="391" class="tick" text-anchor="start">PSNR, dB</text>
+<path d="M457.96 558.55 L475.3 549.52 L491.99 540.94 L509.19 533.17 L526.8 527.55 L533.3 491.57 L549.66 477.03 L565.57 462.78 L582.42 449.51 L600.02 438.84" class="line" stroke="var(--quiet)"><title>Equirectangular</title></path>
+<circle cx="457.96" cy="558.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 94 KiB, 25.95 dB</title></circle>
+<circle cx="475.3" cy="549.52" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 128 KiB, 26.46 dB</title></circle>
+<circle cx="491.99" cy="540.94" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 171 KiB, 26.96 dB</title></circle>
+<circle cx="509.19" cy="533.17" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 231 KiB, 27.40 dB</title></circle>
+<circle cx="526.8" cy="527.55" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 313 KiB, 27.73 dB</title></circle>
+<circle cx="533.3" cy="491.57" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 351 KiB, 29.79 dB</title></circle>
+<circle cx="549.66" cy="477.03" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 467 KiB, 30.63 dB</title></circle>
+<circle cx="565.57" cy="462.78" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 616 KiB, 31.45 dB</title></circle>
+<circle cx="582.42" cy="449.51" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 827 KiB, 32.21 dB</title></circle>
+<circle cx="600.02" cy="438.84" r="3" class="dot" fill="var(--quiet)"><title>Equirectangular: 1124 KiB, 32.83 dB</title></circle>
+<path d="M452.79 566.37 L470.18 556.86 L487.13 547.7 L504.49 539.5 L521.83 533.33 L526.45 503.69 L543.49 489.26 L560.15 474.78 L577.56 460.98 L595.33 450.02" class="line" stroke="var(--s6)"><title>Icosahedral rhombus</title></path>
+<circle cx="452.79" cy="566.37" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 86 KiB, 25.50 dB</title></circle>
+<circle cx="470.18" cy="556.86" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 117 KiB, 26.04 dB</title></circle>
+<circle cx="487.13" cy="547.7" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 157 KiB, 26.57 dB</title></circle>
+<circle cx="504.49" cy="539.5" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 212 KiB, 27.04 dB</title></circle>
+<circle cx="521.83" cy="533.33" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 287 KiB, 27.39 dB</title></circle>
+<circle cx="526.45" cy="503.69" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 312 KiB, 29.10 dB</title></circle>
+<circle cx="543.49" cy="489.26" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 419 KiB, 29.93 dB</title></circle>
+<circle cx="560.15" cy="474.78" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 561 KiB, 30.76 dB</title></circle>
+<circle cx="577.56" cy="460.98" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 760 KiB, 31.55 dB</title></circle>
+<circle cx="595.33" cy="450.02" r="4" class="dot" fill="var(--s6)"><title>Icosahedral rhombus: 1036 KiB, 32.18 dB</title></circle>
+<path d="M453.29 564.58 L471.04 553.93 L488.24 543.37 L505.49 533.81 L522.57 526.63 L526.9 500.69 L544.22 484.29 L561.18 467.14 L578.64 450.59 L596.17 437.3" class="line" stroke="var(--s7)"><title>Icosahedral hexagon</title></path>
+<circle cx="453.29" cy="564.58" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 87 KiB, 25.60 dB</title></circle>
+<circle cx="471.04" cy="553.93" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 119 KiB, 26.21 dB</title></circle>
+<circle cx="488.24" cy="543.37" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 160 KiB, 26.82 dB</title></circle>
+<circle cx="505.49" cy="533.81" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 216 KiB, 27.37 dB</title></circle>
+<circle cx="522.57" cy="526.63" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 291 KiB, 27.78 dB</title></circle>
+<circle cx="526.9" cy="500.69" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 314 KiB, 29.27 dB</title></circle>
+<circle cx="544.22" cy="484.29" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 425 KiB, 30.21 dB</title></circle>
+<circle cx="561.18" cy="467.14" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 571 KiB, 31.20 dB</title></circle>
+<circle cx="578.64" cy="450.59" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 774 KiB, 32.15 dB</title></circle>
+<circle cx="596.17" cy="437.3" r="4" class="dot" fill="var(--s7)"><title>Icosahedral hexagon: 1051 KiB, 32.91 dB</title></circle>
+<path d="M489.15 543.54 L507.27 531.6 L524.99 519.59 L542.5 509 L559.78 501.27 L561.71 469.23 L578.71 451.71 L595.78 433.39 L613.54 415.93 L631.57 401.76" class="line" stroke="var(--s8)"><title>Icosahedral triangle</title></path>
+<circle cx="489.15" cy="543.54" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 163 KiB, 26.81 dB</title></circle>
+<circle cx="507.27" cy="531.6" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 223 KiB, 27.49 dB</title></circle>
+<circle cx="524.99" cy="519.59" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 304 KiB, 28.18 dB</title></circle>
+<circle cx="542.5" cy="509" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 412 KiB, 28.79 dB</title></circle>
+<circle cx="559.78" cy="501.27" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 557 KiB, 29.24 dB</title></circle>
+<circle cx="561.71" cy="469.23" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 576 KiB, 31.08 dB</title></circle>
+<circle cx="578.71" cy="451.71" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 775 KiB, 32.09 dB</title></circle>
+<circle cx="595.78" cy="433.39" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 1044 KiB, 33.14 dB</title></circle>
+<circle cx="613.54" cy="415.93" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 1423 KiB, 34.14 dB</title></circle>
+<circle cx="631.57" cy="401.76" r="4" class="dot" fill="var(--s8)"><title>Icosahedral triangle: 1949 KiB, 34.96 dB</title></circle>
+<text x="639.57" y="405.76" class="value" text-anchor="start">triangle</text>
+<text x="604.17" y="441.3" class="value" text-anchor="start">hexagon</text>
+<text x="603.33" y="454.3" class="value" text-anchor="start">rhombus</text>
+</svg>

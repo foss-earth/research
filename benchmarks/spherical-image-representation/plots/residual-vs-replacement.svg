@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="388" viewBox="0 0 760 388" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Bytes to bring the whole sphere to full resolution, at equal quality</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Relative to a pyramid of JPEG tiles at quality 80 with every level sent. Each scheme's quality setting is</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">interpolated to match that pyramid's view quality, by PSNR (left) and by SSIM (right). Geometric mean over 6</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">panoramas and 7 representations.</text>
+<text x="16" y="107" class="panel-title" text-anchor="start">Matched by PSNR</text>
+<line x1="284" y1="117" x2="284" y2="261" class="grid"/>
+<text x="284" y="276" class="tick" text-anchor="middle">0×</text>
+<line x1="337.75" y1="117" x2="337.75" y2="261" class="grid"/>
+<text x="337.75" y="276" class="tick" text-anchor="middle">0.5×</text>
+<line x1="391.5" y1="117" x2="391.5" y2="261" class="grid"/>
+<text x="391.5" y="276" class="tick" text-anchor="middle">1×</text>
+<line x1="445.25" y1="117" x2="445.25" y2="261" class="grid"/>
+<text x="445.25" y="276" class="tick" text-anchor="middle">1.5×</text>
+<text x="276" y="133" class="" text-anchor="end">JPEG tiles, every level</text>
+<path d="M284 121 H387.5 Q391.5 121 391.5 125 V133 Q391.5 137 387.5 137 H284 Z" fill="var(--s1)"><title>JPEG tiles, every level: 1.00×</title></path>
+<text x="397.5" y="133" class="value" text-anchor="start">1.00×</text>
+<text x="276" y="157" class="" text-anchor="end">JPEG tiles, coarse sphere + finest level only</text>
+<path d="M284 145 H357.6 Q361.6 145 361.6 149 V157 Q361.6 161 357.6 161 H284 Z" fill="var(--s1)"><title>JPEG tiles, coarse sphere + finest level only: 0.72×</title></path>
+<text x="367.6" y="157" class="value" text-anchor="start">0.72×</text>
+<text x="276" y="181" class="" text-anchor="end">WebP tiles, every level</text>
+<path d="M284 169 H367.9 Q371.9 169 371.9 173 V181 Q371.9 185 367.9 185 H284 Z" fill="var(--s1)"><title>WebP tiles, every level: 0.82×</title></path>
+<text x="377.9" y="181" class="value" text-anchor="start">0.82×</text>
+<text x="276" y="205" class="" text-anchor="end">JPEG residual tiles</text>
+<path d="M284 193 H368.86 Q372.86 193 372.86 197 V205 Q372.86 209 368.86 209 H284 Z" fill="var(--s1)"><title>JPEG residual tiles: 0.83×</title></path>
+<text x="378.86" y="205" class="value" text-anchor="start">0.83×</text>
+<text x="276" y="229" class="" text-anchor="end">Haar tiles coded alone, every level</text>
+<path d="M284 217 H416.37 Q420.37 217 420.37 221 V229 Q420.37 233 416.37 233 H284 Z" fill="var(--s1)"><title>Haar tiles coded alone, every level: 1.27×</title></path>
+<text x="426.37" y="229" class="value" text-anchor="start">1.27×</text>
+<text x="276" y="253" class="" text-anchor="end">Haar residual</text>
+<path d="M284 241 H373.48 Q377.48 241 377.48 245 V253 Q377.48 257 373.48 257 H284 Z" fill="var(--s1)"><title>Haar residual: 0.87×</title></path>
+<text x="383.48" y="253" class="value" text-anchor="start">0.87×</text>
+<line x1="284" y1="117" x2="284" y2="261" class="axis"/>
+<text x="370" y="292" class="tick" text-anchor="middle">bytes ÷ the JPEG pyramid's</text>
+<text x="510" y="107" class="panel-title" text-anchor="start">Matched by SSIM</text>
+<line x1="522" y1="117" x2="522" y2="261" class="grid"/>
+<text x="522" y="276" class="tick" text-anchor="middle">0×</text>
+<line x1="575.75" y1="117" x2="575.75" y2="261" class="grid"/>
+<text x="575.75" y="276" class="tick" text-anchor="middle">0.5×</text>
+<line x1="629.5" y1="117" x2="629.5" y2="261" class="grid"/>
+<text x="629.5" y="276" class="tick" text-anchor="middle">1×</text>
+<line x1="683.25" y1="117" x2="683.25" y2="261" class="grid"/>
+<text x="683.25" y="276" class="tick" text-anchor="middle">1.5×</text>
+<text x="514" y="133" class="" text-anchor="end"></text>
+<path d="M522 121 H625.5 Q629.5 121 629.5 125 V133 Q629.5 137 625.5 137 H522 Z" fill="var(--s1)"><title>: 1.00×</title></path>
+<text x="635.5" y="133" class="value" text-anchor="start">1.00×</text>
+<text x="514" y="157" class="" text-anchor="end"></text>
+<path d="M522 145 H595.6 Q599.6 145 599.6 149 V157 Q599.6 161 595.6 161 H522 Z" fill="var(--s1)"><title>: 0.72×</title></path>
+<text x="605.6" y="157" class="value" text-anchor="start">0.72×</text>
+<text x="514" y="181" class="" text-anchor="end"></text>
+<path d="M522 169 H616.01 Q620.01 169 620.01 173 V181 Q620.01 185 616.01 185 H522 Z" fill="var(--s1)"><title>: 0.91×</title></path>
+<text x="626.01" y="181" class="value" text-anchor="start">0.91×</text>
+<text x="514" y="205" class="" text-anchor="end"></text>
+<path d="M522 193 H607.01 Q611.01 193 611.01 197 V205 Q611.01 209 607.01 209 H522 Z" fill="var(--s1)"><title>: 0.83×</title></path>
+<text x="617.01" y="205" class="value" text-anchor="start">0.83×</text>
+<text x="514" y="229" class="" text-anchor="end"></text>
+<path d="M522 217 H676.05 Q680.05 217 680.05 221 V229 Q680.05 233 676.05 233 H522 Z" fill="var(--s1)"><title>: 1.47×</title></path>
+<text x="686.05" y="229" class="value" text-anchor="start">1.47×</text>
+<text x="514" y="253" class="" text-anchor="end"></text>
+<path d="M522 241 H626.79 Q630.79 241 630.79 245 V253 Q630.79 257 626.79 257 H522 Z" fill="var(--s1)"><title>: 1.01×</title></path>
+<text x="636.79" y="253" class="value" text-anchor="start">1.01×</text>
+<line x1="522" y1="117" x2="522" y2="261" class="axis"/>
+<text x="608" y="292" class="tick" text-anchor="middle">bytes ÷ the JPEG pyramid's</text>
+<text x="16" y="309" class="note" text-anchor="start">Haar: the area-weighted transform of lib/hierarchy.mjs, uniformly quantized, zigzag bytes, deflate. Residual: only the</text>
+<text x="16" y="324" class="note" text-anchor="start">difference from the level above is sent. JPEG residual: each tile is the difference from its enlarged parent, as a</text>
+<text x="16" y="339" class="note" text-anchor="start">JPEG.</text>
+<text x="16" y="354" class="note" text-anchor="start">The two panels disagree about Haar because its flat quantization suits PSNR and JPEG's tables suit SSIM. Neither is a</text>
+<text x="16" y="369" class="note" text-anchor="start">perceptual study.</text>
+</svg>

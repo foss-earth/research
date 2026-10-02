@@ -1,0 +1,22 @@
+backend,scenario,cpuFrameWorkMsMedian,cpuFrameWorkMsP95,cpuFrameWorkMsP99,cpuFrameWorkMsMax,frameIntervalMsMedian,frameIntervalMsP95,frameIntervalMsP99,frameIntervalMsMax,framesOver20Ms,frames,gpuMs
+webgl1,no uploads,0.00999999,0.03000003,0.04500002,0.06999999,16.665,17.255,17.65,17.655,0,240,
+webgl1,one decoded tile uploaded per frame,0.01500005,0.03999996,0.05500001,0.11,16.665,17.26,17.5,17.605,0,240,
+webgl1,four decoded tiles uploaded per frame,0.03500003,0.06,0.07999998,0.105,16.665,17.345,17.48,17.65,0,240,
+webgl1,one residual tile decoded in JavaScript and uploaded per frame,0.44,0.505,0.53,2.44,16.665,17.23,17.605,17.665,0,240,
+webgl1,one JPEG tile decoded by the browser and uploaded per frame,0.415,0.525,0.635,0.725,16.665,17.475,17.63,17.67,0,240,
+webgl1,"the whole 2056 × 1542 atlas uploaded at once, every 60th frame",0.01499999,0.05000001,0.255,0.785,16.665,17.525,17.605,17.665,0,240,
+webgl1,"a new 6144 × 3072 texture filled at once, twice",0.01000005,0.03000003,0.06999999,6.415,16.665,17.525,17.595,17.625,0,240,
+webgl2,no uploads,0.01499999,0.04000002,0.05500001,0.05500001,16.665,17.565,18.615,18.64,0,240,0.5103135
+webgl2,one decoded tile uploaded per frame,0.02000004,0.05499995,0.07499999,0.155,16.665,17.675,18.235,18.61,0,240,0.5275726
+webgl2,four decoded tiles uploaded per frame,0.04499996,0.06999999,0.115,0.14,16.665,17.785,18.12,18.58,0,240,0.5100927
+webgl2,one residual tile decoded in JavaScript and uploaded per frame,0.445,0.525,0.565,2.455,16.665,18.075,18.505,18.655,0,240,0.52366
+webgl2,one JPEG tile decoded by the browser and uploaded per frame,0.44,0.555,0.68,0.705,16.665,17.825,18.37,18.66,0,240,0.603561
+webgl2,"the whole 2056 × 1542 atlas uploaded at once, every 60th frame",0.01999998,0.05500001,0.265,0.78,16.665,17.67,18.065,18.355,0,240,0.5255554
+webgl2,"a new 6144 × 3072 texture filled at once, twice",0.01499999,0.03999996,0.04499996,6.11,16.665,17.965,18.585,18.605,0,240,0.5622819
+webgpu,no uploads,0.02499998,0.04000002,0.05499995,0.06,16.665,16.695,17.12,17.135,0,240,0.4722386
+webgpu,one decoded tile uploaded per frame,0.04500002,0.09500003,0.125,0.165,16.665,17.035,18.095,18.615,0,240,0.4731171
+webgpu,four decoded tiles uploaded per frame,0.08000004,0.12,0.155,0.215,16.665,17.205,18.305,18.47,0,240,0.4431896
+webgpu,one residual tile decoded in JavaScript and uploaded per frame,0.495,0.565,0.645,3.125,16.665,18.025,18.56,18.65,0,240,0.5309467
+webgpu,one JPEG tile decoded by the browser and uploaded per frame,0.42,0.535,0.715,1.075,16.665,18.25,18.66,18.71,0,240,0.4464706
+webgpu,"the whole 2056 × 1542 atlas uploaded at once, every 60th frame",0.02499998,0.05000001,0.285,0.805,16.665,17.925,18.43,18.59,0,240,0.4333414
+webgpu,"a new 6144 × 3072 texture filled at once, twice",0.02499998,0.05000001,0.11,7.375,16.665,18.09,18.5,18.565,0,240,0.428496

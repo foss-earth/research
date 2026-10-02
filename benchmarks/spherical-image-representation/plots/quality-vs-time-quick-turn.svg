@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="637" viewBox="0 0 760 637" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">How far the view is from full quality over time: a quick turn</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">The person looks forward for 2 s, turns 180° in 0.6 s, and stays. Decibels below the same view drawn from</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">the uncompressed full-resolution control: lower is better, 0 is the control. A line starts when the coarse</text>
+<text x="16" y="78" class="subtitle" text-anchor="start">sphere has arrived. Mean of 3 panoramas; simulated network.</text>
+<line x1="16" y1="101" x2="34" y2="101" class="line" stroke="var(--s1)"/><circle cx="25" cy="101" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="105" class="" text-anchor="start">Haar residual tiles, the view only</text>
+<line x1="288.48" y1="101" x2="306.48" y2="101" class="line" stroke="var(--s2)"/><circle cx="297.48" cy="101" r="4" class="dot" fill="var(--s2)"/>
+<text x="312.48" y="105" class="" text-anchor="start">JPEG residual tiles, the view only</text>
+<line x1="16" y1="121" x2="34" y2="121" class="line" stroke="var(--s3)"/><circle cx="25" cy="121" r="4" class="dot" fill="var(--s3)"/>
+<text x="40" y="125" class="" text-anchor="start">JPEG tiles, finest level under the view</text>
+<line x1="322.08" y1="121" x2="340.08" y2="121" class="line" stroke="var(--quiet)"/><circle cx="331.08" cy="121" r="4" class="dot" fill="var(--quiet)"/>
+<text x="346.08" y="125" class="" text-anchor="start">whole equirectangular JPEG, full size at once</text>
+<text x="16" y="153" class="panel-title" text-anchor="start">Fast: 50 Mbit/s, 20 ms</text>
+<line x1="60" y1="337" x2="362" y2="337" class="grid"/>
+<text x="54" y="341" class="tick" text-anchor="end">0</text>
+<line x1="60" y1="298.5" x2="362" y2="298.5" class="grid"/>
+<text x="54" y="302.5" class="tick" text-anchor="end">4</text>
+<line x1="60" y1="260" x2="362" y2="260" class="grid"/>
+<text x="54" y="264" class="tick" text-anchor="end">8</text>
+<line x1="60" y1="221.5" x2="362" y2="221.5" class="grid"/>
+<text x="54" y="225.5" class="tick" text-anchor="end">12</text>
+<line x1="60" y1="183" x2="362" y2="183" class="grid"/>
+<text x="54" y="187" class="tick" text-anchor="end">16</text>
+<line x1="60" y1="337" x2="362" y2="337" class="axis"/>
+<line x1="60" y1="337" x2="60" y2="341" class="axis"/>
+<text x="60" y="353" class="tick" text-anchor="middle">0 s</text>
+<line x1="120.4" y1="337" x2="120.4" y2="341" class="axis"/>
+<text x="120.4" y="353" class="tick" text-anchor="middle">2 s</text>
+<line x1="180.8" y1="337" x2="180.8" y2="341" class="axis"/>
+<text x="180.8" y="353" class="tick" text-anchor="middle">4 s</text>
+<line x1="241.2" y1="337" x2="241.2" y2="341" class="axis"/>
+<text x="241.2" y="353" class="tick" text-anchor="middle">6 s</text>
+<line x1="301.6" y1="337" x2="301.6" y2="341" class="axis"/>
+<text x="301.6" y="353" class="tick" text-anchor="middle">8 s</text>
+<line x1="362" y1="337" x2="362" y2="341" class="axis"/>
+<text x="362" y="353" class="tick" text-anchor="middle">10 s</text>
+<text x="211" y="368" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="173" class="tick" text-anchor="start">dB below the control</text>
+<path d="M67.55 317.37 L75.1 317.37 L82.65 317.37 L90.2 317.37 L97.75 317.37 L105.3 317.37 L112.85 317.37 L120.4 317.37 L127.95 315.22 L135.5 317.46 L143.05 317.24 L150.6 317.24 L158.15 317.24 L165.7 317.24 L173.25 317.24 L180.8 317.24 L188.35 317.24 L195.9 317.24 L203.45 317.24 L211 317.24 L218.55 317.24 L226.1 317.24 L233.65 317.24 L241.2 317.24 L248.75 317.24 L256.3 317.24 L263.85 317.24 L271.4 317.24 L278.95 317.24 L286.5 317.24 L294.05 317.24 L301.6 317.24 L309.15 317.24 L316.7 317.24 L324.25 317.24 L331.8 317.24 L339.35 317.24 L346.9 317.24 L354.45 317.24 L362 317.24" class="line" stroke="var(--quiet)"><title>whole equirectangular JPEG, full size at once</title></path>
+<path d="M67.55 331.74 L75.1 331.74 L82.65 331.74 L90.2 331.74 L97.75 331.74 L105.3 331.74 L112.85 331.74 L120.4 331.74 L127.95 335.62 L135.5 324.78 L143.05 336.36 L150.6 336.36 L158.15 336.36 L165.7 336.36 L173.25 336.36 L180.8 336.36 L188.35 336.36 L195.9 336.36 L203.45 336.36 L211 336.36 L218.55 336.36 L226.1 336.36 L233.65 336.36 L241.2 336.36 L248.75 336.36 L256.3 336.36 L263.85 336.36 L271.4 336.36 L278.95 336.36 L286.5 336.36 L294.05 336.36 L301.6 336.36 L309.15 336.36 L316.7 336.36 L324.25 336.36 L331.8 336.36 L339.35 336.36 L346.9 336.36 L354.45 336.36 L362 336.36" class="line" stroke="var(--s1)"><title>Haar residual tiles, the view only</title></path>
+<path d="M67.55 326.44 L75.1 326.44 L82.65 326.44 L90.2 326.44 L97.75 326.44 L105.3 326.44 L112.85 326.44 L120.4 326.44 L127.95 327.31 L135.5 317.75 L143.05 329.36 L150.6 329.36 L158.15 329.36 L165.7 329.36 L173.25 329.36 L180.8 329.36 L188.35 329.36 L195.9 329.36 L203.45 329.36 L211 329.36 L218.55 329.36 L226.1 329.36 L233.65 329.36 L241.2 329.36 L248.75 329.36 L256.3 329.36 L263.85 329.36 L271.4 329.36 L278.95 329.36 L286.5 329.36 L294.05 329.36 L301.6 329.36 L309.15 329.36 L316.7 329.36 L324.25 329.36 L331.8 329.36 L339.35 329.36 L346.9 329.36 L354.45 329.36 L362 329.36" class="line" stroke="var(--s2)"><title>JPEG residual tiles, the view only</title></path>
+<path d="M67.55 326.57 L75.1 326.57 L82.65 326.57 L90.2 326.57 L97.75 326.57 L105.3 326.57 L112.85 326.57 L120.4 326.57 L127.95 327.15 L135.5 304.76 L143.05 329.36 L150.6 329.36 L158.15 329.36 L165.7 329.36 L173.25 329.36 L180.8 329.36 L188.35 329.36 L195.9 329.36 L203.45 329.36 L211 329.36 L218.55 329.36 L226.1 329.36 L233.65 329.36 L241.2 329.36 L248.75 329.36 L256.3 329.36 L263.85 329.36 L271.4 329.36 L278.95 329.36 L286.5 329.36 L294.05 329.36 L301.6 329.36 L309.15 329.36 L316.7 329.36 L324.25 329.36 L331.8 329.36 L339.35 329.36 L346.9 329.36 L354.45 329.36 L362 329.36" class="line" stroke="var(--s3)"><title>JPEG tiles, finest level under the view</title></path>
+<text x="388" y="153" class="panel-title" text-anchor="start">Moderate mobile: 10 Mbit/s, 50 ms</text>
+<line x1="432" y1="337" x2="734" y2="337" class="grid"/>
+<text x="426" y="341" class="tick" text-anchor="end">0</text>
+<line x1="432" y1="298.5" x2="734" y2="298.5" class="grid"/>
+<text x="426" y="302.5" class="tick" text-anchor="end">4</text>
+<line x1="432" y1="260" x2="734" y2="260" class="grid"/>
+<text x="426" y="264" class="tick" text-anchor="end">8</text>
+<line x1="432" y1="221.5" x2="734" y2="221.5" class="grid"/>
+<text x="426" y="225.5" class="tick" text-anchor="end">12</text>
+<line x1="432" y1="183" x2="734" y2="183" class="grid"/>
+<text x="426" y="187" class="tick" text-anchor="end">16</text>
+<line x1="432" y1="337" x2="734" y2="337" class="axis"/>
+<line x1="432" y1="337" x2="432" y2="341" class="axis"/>
+<text x="432" y="353" class="tick" text-anchor="middle">0 s</text>
+<line x1="492.4" y1="337" x2="492.4" y2="341" class="axis"/>
+<text x="492.4" y="353" class="tick" text-anchor="middle">2 s</text>
+<line x1="552.8" y1="337" x2="552.8" y2="341" class="axis"/>
+<text x="552.8" y="353" class="tick" text-anchor="middle">4 s</text>
+<line x1="613.2" y1="337" x2="613.2" y2="341" class="axis"/>
+<text x="613.2" y="353" class="tick" text-anchor="middle">6 s</text>
+<line x1="673.6" y1="337" x2="673.6" y2="341" class="axis"/>
+<text x="673.6" y="353" class="tick" text-anchor="middle">8 s</text>
+<line x1="734" y1="337" x2="734" y2="341" class="axis"/>
+<text x="734" y="353" class="tick" text-anchor="middle">10 s</text>
+<text x="583" y="368" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="388" y="173" class="tick" text-anchor="start">dB below the control</text>
+<path d="M439.55 200.42 L447.1 247.62 L454.65 247.62 L462.2 317.37 L469.75 317.37 L477.3 317.37 L484.85 317.37 L492.4 317.37 L499.95 315.22 L507.5 317.46 L515.05 317.24 L522.6 317.24 L530.15 317.24 L537.7 317.24 L545.25 317.24 L552.8 317.24 L560.35 317.24 L567.9 317.24 L575.45 317.24 L583 317.24 L590.55 317.24 L598.1 317.24 L605.65 317.24 L613.2 317.24 L620.75 317.24 L628.3 317.24 L635.85 317.24 L643.4 317.24 L650.95 317.24 L658.5 317.24 L666.05 317.24 L673.6 317.24 L681.15 317.24 L688.7 317.24 L696.25 317.24 L703.8 317.24 L711.35 317.24 L718.9 317.24 L726.45 317.24 L734 317.24" class="line" stroke="var(--quiet)"><title>whole equirectangular JPEG, full size at once</title></path>
+<path d="M439.55 278.29 L447.1 331.74 L454.65 331.74 L462.2 331.74 L469.75 331.74 L477.3 331.74 L484.85 331.74 L492.4 331.74 L499.95 258.91 L507.5 283.29 L515.05 327.15 L522.6 336.36 L530.15 336.36 L537.7 336.36 L545.25 336.36 L552.8 336.36 L560.35 336.36 L567.9 336.36 L575.45 336.36 L583 336.36 L590.55 336.36 L598.1 336.36 L605.65 336.36 L613.2 336.36 L620.75 336.36 L628.3 336.36 L635.85 336.36 L643.4 336.36 L650.95 336.36 L658.5 336.36 L666.05 336.36 L673.6 336.36 L681.15 336.36 L688.7 336.36 L696.25 336.36 L703.8 336.36 L711.35 336.36 L718.9 336.36 L726.45 336.36 L734 336.36" class="line" stroke="var(--s1)"><title>Haar residual tiles, the view only</title></path>
+<path d="M439.55 279.57 L447.1 326.44 L454.65 326.44 L462.2 326.44 L469.75 326.44 L477.3 326.44 L484.85 326.44 L492.4 326.44 L499.95 273.44 L507.5 284.8 L515.05 329.36 L522.6 329.36 L530.15 329.36 L537.7 329.36 L545.25 329.36 L552.8 329.36 L560.35 329.36 L567.9 329.36 L575.45 329.36 L583 329.36 L590.55 329.36 L598.1 329.36 L605.65 329.36 L613.2 329.36 L620.75 329.36 L628.3 329.36 L635.85 329.36 L643.4 329.36 L650.95 329.36 L658.5 329.36 L666.05 329.36 L673.6 329.36 L681.15 329.36 L688.7 329.36 L696.25 329.36 L703.8 329.36 L711.35 329.36 L718.9 329.36 L726.45 329.36 L734 329.36" class="line" stroke="var(--s2)"><title>JPEG residual tiles, the view only</title></path>
+<path d="M439.55 314.89 L447.1 326.57 L454.65 326.57 L462.2 326.57 L469.75 326.57 L477.3 326.57 L484.85 326.57 L492.4 326.57 L499.95 224.87 L507.5 277.23 L515.05 329.36 L522.6 329.36 L530.15 329.36 L537.7 329.36 L545.25 329.36 L552.8 329.36 L560.35 329.36 L567.9 329.36 L575.45 329.36 L583 329.36 L590.55 329.36 L598.1 329.36 L605.65 329.36 L613.2 329.36 L620.75 329.36 L628.3 329.36 L635.85 329.36 L643.4 329.36 L650.95 329.36 L658.5 329.36 L666.05 329.36 L673.6 329.36 L681.15 329.36 L688.7 329.36 L696.25 329.36 L703.8 329.36 L711.35 329.36 L718.9 329.36 L726.45 329.36 L734 329.36" class="line" stroke="var(--s3)"><title>JPEG tiles, finest level under the view</title></path>
+<text x="16" y="397" class="panel-title" text-anchor="start">Constrained mobile: 2 Mbit/s, 100 ms</text>
+<line x1="60" y1="581" x2="362" y2="581" class="grid"/>
+<text x="54" y="585" class="tick" text-anchor="end">0</text>
+<line x1="60" y1="542.5" x2="362" y2="542.5" class="grid"/>
+<text x="54" y="546.5" class="tick" text-anchor="end">4</text>
+<line x1="60" y1="504" x2="362" y2="504" class="grid"/>
+<text x="54" y="508" class="tick" text-anchor="end">8</text>
+<line x1="60" y1="465.5" x2="362" y2="465.5" class="grid"/>
+<text x="54" y="469.5" class="tick" text-anchor="end">12</text>
+<line x1="60" y1="427" x2="362" y2="427" class="grid"/>
+<text x="54" y="431" class="tick" text-anchor="end">16</text>
+<line x1="60" y1="581" x2="362" y2="581" class="axis"/>
+<line x1="60" y1="581" x2="60" y2="585" class="axis"/>
+<text x="60" y="597" class="tick" text-anchor="middle">0 s</text>
+<line x1="120.4" y1="581" x2="120.4" y2="585" class="axis"/>
+<text x="120.4" y="597" class="tick" text-anchor="middle">2 s</text>
+<line x1="180.8" y1="581" x2="180.8" y2="585" class="axis"/>
+<text x="180.8" y="597" class="tick" text-anchor="middle">4 s</text>
+<line x1="241.2" y1="581" x2="241.2" y2="585" class="axis"/>
+<text x="241.2" y="597" class="tick" text-anchor="middle">6 s</text>
+<line x1="301.6" y1="581" x2="301.6" y2="585" class="axis"/>
+<text x="301.6" y="597" class="tick" text-anchor="middle">8 s</text>
+<line x1="362" y1="581" x2="362" y2="585" class="axis"/>
+<text x="362" y="597" class="tick" text-anchor="middle">10 s</text>
+<text x="211" y="612" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="417" class="tick" text-anchor="start">dB below the control</text>
+<path d="M67.55 444.42 L75.1 444.42 L82.65 444.42 L90.2 444.42 L97.75 444.42 L105.3 491.62 L112.85 491.62 L120.4 491.62 L127.95 490.24 L135.5 498.87 L143.05 498.61 L150.6 498.61 L158.15 498.61 L165.7 529.76 L173.25 529.76 L180.8 529.76 L188.35 561.24 L195.9 561.24 L203.45 561.24 L211 561.24 L218.55 561.24 L226.1 561.24 L233.65 561.24 L241.2 561.24 L248.75 561.24 L256.3 561.24 L263.85 561.24 L271.4 561.24 L278.95 561.24 L286.5 561.24 L294.05 561.24 L301.6 561.24 L309.15 561.24 L316.7 561.24 L324.25 561.24 L331.8 561.24 L339.35 561.24 L346.9 561.24 L354.45 561.24 L362 561.24" class="line" stroke="var(--quiet)"><title>whole equirectangular JPEG, full size at once</title></path>
+<path d="M67.55 451.03 L75.1 494.12 L82.65 531.24 L90.2 560.34 L97.75 566.43 L105.3 575.74 L112.85 575.74 L120.4 575.74 L127.95 458.95 L135.5 460.94 L143.05 500.37 L150.6 522.51 L158.15 542.92 L165.7 561.24 L173.25 576.8 L180.8 580.36 L188.35 580.36 L195.9 580.36 L203.45 580.36 L211 580.36 L218.55 580.36 L226.1 580.36 L233.65 580.36 L241.2 580.36 L248.75 580.36 L256.3 580.36 L263.85 580.36 L271.4 580.36 L278.95 580.36 L286.5 580.36 L294.05 580.36 L301.6 580.36 L309.15 580.36 L316.7 580.36 L324.25 580.36 L331.8 580.36 L339.35 580.36 L346.9 580.36 L354.45 580.36 L362 580.36" class="line" stroke="var(--s1)"><title>Haar residual tiles, the view only</title></path>
+<path d="M67.55 463.83 L75.1 511.7 L82.65 541.47 L90.2 564.64 L97.75 570.44 L105.3 570.44 L112.85 570.44 L120.4 570.44 L127.95 471.95 L135.5 465.18 L143.05 507.02 L150.6 546.03 L158.15 559.09 L165.7 573.36 L173.25 573.36 L180.8 573.36 L188.35 573.36 L195.9 573.36 L203.45 573.36 L211 573.36 L218.55 573.36 L226.1 573.36 L233.65 573.36 L241.2 573.36 L248.75 573.36 L256.3 573.36 L263.85 573.36 L271.4 573.36 L278.95 573.36 L286.5 573.36 L294.05 573.36 L301.6 573.36 L309.15 573.36 L316.7 573.36 L324.25 573.36 L331.8 573.36 L339.35 573.36 L346.9 573.36 L354.45 573.36 L362 573.36" class="line" stroke="var(--s2)"><title>JPEG residual tiles, the view only</title></path>
+<path d="M67.55 446.57 L75.1 505.03 L82.65 547.95 L90.2 558.89 L97.75 570.57 L105.3 570.57 L112.85 570.57 L120.4 570.57 L127.95 453.56 L135.5 453.98 L143.05 493.06 L150.6 521.39 L158.15 542.53 L165.7 573.36 L173.25 573.36 L180.8 573.36 L188.35 573.36 L195.9 573.36 L203.45 573.36 L211 573.36 L218.55 573.36 L226.1 573.36 L233.65 573.36 L241.2 573.36 L248.75 573.36 L256.3 573.36 L263.85 573.36 L271.4 573.36 L278.95 573.36 L286.5 573.36 L294.05 573.36 L301.6 573.36 L309.15 573.36 L316.7 573.36 L324.25 573.36 L331.8 573.36 L339.35 573.36 L346.9 573.36 L354.45 573.36 L362 573.36" class="line" stroke="var(--s3)"><title>JPEG tiles, finest level under the view</title></path>
+<text x="388" y="397" class="panel-title" text-anchor="start">Very constrained: 0.75 Mbit/s, 150 ms</text>
+<line x1="432" y1="581" x2="734" y2="581" class="grid"/>
+<text x="426" y="585" class="tick" text-anchor="end">0</text>
+<line x1="432" y1="542.5" x2="734" y2="542.5" class="grid"/>
+<text x="426" y="546.5" class="tick" text-anchor="end">4</text>
+<line x1="432" y1="504" x2="734" y2="504" class="grid"/>
+<text x="426" y="508" class="tick" text-anchor="end">8</text>
+<line x1="432" y1="465.5" x2="734" y2="465.5" class="grid"/>
+<text x="426" y="469.5" class="tick" text-anchor="end">12</text>
+<line x1="432" y1="427" x2="734" y2="427" class="grid"/>
+<text x="426" y="431" class="tick" text-anchor="end">16</text>
+<line x1="432" y1="581" x2="734" y2="581" class="axis"/>
+<line x1="432" y1="581" x2="432" y2="585" class="axis"/>
+<text x="432" y="597" class="tick" text-anchor="middle">0 s</text>
+<line x1="492.4" y1="581" x2="492.4" y2="585" class="axis"/>
+<text x="492.4" y="597" class="tick" text-anchor="middle">2 s</text>
+<line x1="552.8" y1="581" x2="552.8" y2="585" class="axis"/>
+<text x="552.8" y="597" class="tick" text-anchor="middle">4 s</text>
+<line x1="613.2" y1="581" x2="613.2" y2="585" class="axis"/>
+<text x="613.2" y="597" class="tick" text-anchor="middle">6 s</text>
+<line x1="673.6" y1="581" x2="673.6" y2="585" class="axis"/>
+<text x="673.6" y="597" class="tick" text-anchor="middle">8 s</text>
+<line x1="734" y1="581" x2="734" y2="585" class="axis"/>
+<text x="734" y="597" class="tick" text-anchor="middle">10 s</text>
+<text x="583" y="612" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="388" y="417" class="tick" text-anchor="start">dB below the control</text>
+<path d="M439.55 444.42 L447.1 444.42 L454.65 444.42 L462.2 444.42 L469.75 444.42 L477.3 444.42 L484.85 444.42 L492.4 444.42 L499.95 440.6 L507.5 450.23 L515.05 451.64 L522.6 451.64 L530.15 451.64 L537.7 451.64 L545.25 498.61 L552.8 498.61 L560.35 498.61 L567.9 498.61 L575.45 498.61 L583 498.61 L590.55 498.61 L598.1 498.61 L605.65 498.61 L613.2 498.61 L620.75 498.61 L628.3 498.61 L635.85 498.61 L643.4 498.61 L650.95 498.61 L658.5 498.61 L666.05 498.61 L673.6 498.61 L681.15 498.61 L688.7 498.61 L696.25 498.61 L703.8 498.61 L711.35 529.76 L718.9 529.76 L726.45 529.76 L734 529.76" class="line" stroke="var(--quiet)"><title>whole equirectangular JPEG, full size at once</title></path>
+<path d="M447.1 451.03 L454.65 458.79 L462.2 489.56 L469.75 495.31 L477.3 529.19 L484.85 529.19 L492.4 533.45 L499.95 458.12 L507.5 459.5 L515.05 475.7 L522.6 475.7 L530.15 500.37 L537.7 515.81 L545.25 515.81 L552.8 515.81 L560.35 533.16 L567.9 533.16 L575.45 542.92 L583 556.71 L590.55 562.74 L598.1 573.36 L605.65 576.8 L613.2 580.36 L620.75 580.36 L628.3 580.36 L635.85 580.36 L643.4 580.36 L650.95 580.36 L658.5 580.36 L666.05 580.36 L673.6 580.36 L681.15 580.36 L688.7 580.36 L696.25 580.36 L703.8 580.36 L711.35 580.36 L718.9 580.36 L726.45 580.36 L734 580.36" class="line" stroke="var(--s1)"><title>Haar residual tiles, the view only</title></path>
+<path d="M439.55 446.57 L447.1 463.83 L454.65 497.07 L462.2 513.08 L469.75 533.1 L477.3 541.47 L484.85 555.14 L492.4 555.14 L499.95 453.37 L507.5 456.55 L515.05 480.74 L522.6 505.44 L530.15 509.74 L537.7 530.28 L545.25 536.73 L552.8 544.65 L560.35 546.57 L567.9 560.47 L575.45 566.31 L583 573.36 L590.55 573.36 L598.1 573.36 L605.65 573.36 L613.2 573.36 L620.75 573.36 L628.3 573.36 L635.85 573.36 L643.4 573.36 L650.95 573.36 L658.5 573.36 L666.05 573.36 L673.6 573.36 L681.15 573.36 L688.7 573.36 L696.25 573.36 L703.8 573.36 L711.35 573.36 L718.9 573.36 L726.45 573.36 L734 573.36" class="line" stroke="var(--s2)"><title>JPEG residual tiles, the view only</title></path>
+<path d="M439.55 446.57 L447.1 446.57 L454.65 448.95 L462.2 497.04 L469.75 505.03 L477.3 535.86 L484.85 545.29 L492.4 556.52 L499.95 452.73 L507.5 453.79 L515.05 453.92 L522.6 455.04 L530.15 503.36 L537.7 505.35 L545.25 514.07 L552.8 526.75 L560.35 530.21 L567.9 542.53 L575.45 573.36 L583 573.36 L590.55 573.36 L598.1 573.36 L605.65 573.36 L613.2 573.36 L620.75 573.36 L628.3 573.36 L635.85 573.36 L643.4 573.36 L650.95 573.36 L658.5 573.36 L666.05 573.36 L673.6 573.36 L681.15 573.36 L688.7 573.36 L696.25 573.36 L703.8 573.36 L711.35 573.36 L718.9 573.36 L726.45 573.36 L734 573.36" class="line" stroke="var(--s3)"><title>JPEG tiles, finest level under the view</title></path>
+</svg>
