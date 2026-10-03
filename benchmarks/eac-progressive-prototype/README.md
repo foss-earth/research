@@ -123,12 +123,17 @@ backend, WebGPU included, can run, from any network.
 
 It lives in `eac-prototype/` on the `gh-pages` branch, beside the app. The app's own
 `npm run deploy` replaces that branch without keeping it; to put it back, or to publish a
-new package, from the repository root:
+new package, from the repository root (the first command only for a new package, or when
+`build/benchmarks/eac-progressive-prototype/package` is gone):
 
 ```sh
 node benchmarks/eac-progressive-prototype/export-package.mjs --panoramas=northrop-mall,bookstore,superblock
 npx gh-pages -d build/benchmarks/eac-progressive-prototype/package -e eac-prototype --add -m "Publish the prototype's phone package"
 ```
+
+The app was deployed on 2026-10-03 and the package put back straight after from the folder
+it was first published from, the same 6,144 files; it was missing from the site for about a
+minute.
 
 To serve it from this computer instead, to a phone on the same Wi-Fi:
 
