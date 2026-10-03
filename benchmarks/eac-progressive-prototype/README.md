@@ -9,9 +9,17 @@ it has to beat, and the current whole-image path as the baseline.
 **[REPORT.md](REPORT.md) has the results and the decision.** [INVENTORY.md](INVENTORY.md)
 records what existed, the plan and what could not be run.
 
-Nothing here is used by the app. The only production code it touches is imported read-only
-by the control: the panorama uploader (`src/engine/babylon/panorama/panoramaTextures.ts`),
-so the current path uploads exactly as it does in the app. No production file was changed.
+**In production since 2026-10-03.** After its phone package was tried by hand and worked,
+the design it supports went into FOSS Earth as the scene format's `tiled-cube` representation
+(`src/scenes/tiles/`, [format](../../docs/scenes/format.md#tiled-cubes)), in both warps, with
+the person choosing in 360 image settings → Representation; the UMN tour offers both. What
+changed on the way is in [the panorama proposal](../../docs/proposals/panorama-scenes.md)
+("Built"). This folder stays as the evidence behind the defaults and is not used by the app.
+
+The prototype's code is apart from the app. The only production code it touches is imported
+read-only by the control: the panorama uploader (`src/engine/babylon/panorama/panoramaTextures.ts`),
+so the current path uploads exactly as it does in the app. No production file was changed
+while it was built.
 
 ## Running it
 

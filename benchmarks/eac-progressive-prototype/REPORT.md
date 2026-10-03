@@ -522,6 +522,16 @@ Chrome's emulation. Whether a remote static host preserves them (GitHub Pages' h
 
 ## Where this leaves it
 
+**Adopted, 2026-10-03.** The phone trial below was tried by hand afterwards and the prototype
+worked; the architecture went into production as the scene format's `tiled-cube`
+representation, with the orb's preview cube in place of the bootstrap, tiles that fade in,
+direct replacement only, and the parameters of this report's configuration. It was checked
+headlessly on this desktop's GPU on all three backends
+([scripts/validation/panorama-tiles.mjs](../../scripts/validation/panorama-tiles.mjs)). The
+differences and what that check found are in
+[the panorama proposal](../../docs/proposals/panorama-scenes.md) ("Built"). This report's
+numbers stand as measured; nothing here was rerun.
+
 **Phones, by hand.** After the report, a test by hand on an Android phone, served from this
 computer over the LAN, was tried and did not get going; the cause was not found. The package
 was then published at <https://foss-earth.github.io/eac-prototype/launcher.html> (HTTPS, so
