@@ -1,0 +1,20 @@
+{
+  "id": "default-v1",
+  "note": "The starting configuration of every experiment. Experimental defaults, taken from Phase 1 where it had one; not production recommendations.",
+  "viewport": {
+    "cssWidth": 412, "cssHeight": 915, "devicePixelRatio": 2.625, "verticalFovDeg": 75,
+    "why": "the phone viewport of benchmarks/scene-ab; Phase 1 drew at the same 1080 x 2400 with a 75 degree vertical field of view"
+  },
+  "dataset": { "projection": "eac", "tile": 192, "bootstrap": 48 },
+  "selection": { "detailRatio": 1, "marginDeg": 5, "scoutFraction": 0.5 },
+  "policy": {
+    "refinement": "direct", "payload": "replacement", "bootstrapAlone": true, "cancel": true,
+    "insurance": { "enabled": false, "maxLevel": 1, "slots": 2 }
+  },
+  "limits": {
+    "requests": 6, "inflightBytes": 4194304, "pendingTiles": 12, "decodes": 2, "uploadsPerFrame": 2,
+    "gpuSlots": 196, "decodedBytes": 33554432, "retries": 3, "retryBackoffMs": 250
+  },
+  "render": { "path": "ray" },
+  "quality": { "acceptableShortfallDb": 3, "highShortfallDb": 1, "sampleMs": 250, "why": "Phase 1's operational thresholds, kept for continuity; not validated perceptual limits" }
+}

@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="1516" viewBox="0 0 980 1516" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">Frame intervals and the main thread's work per frame while tiles arrive (not throttled)</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Band: median to 99th percentile over each run's frames; whiskers to the longest; dot at the median. Two runs per row, their medians. This</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">desktop meets its display rate either way; the long frames are what to look at.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">Frame interval, ms</text>
+<line x1="406.03" y1="100" x2="406.03" y2="748" class="grid"/>
+<text x="406.03" y="763" class="tick" text-anchor="middle">16.7</text>
+<line x1="435.6" y1="100" x2="435.6" y2="748" class="grid"/>
+<text x="435.6" y="763" class="tick" text-anchor="middle">20</text>
+<line x1="554.77" y1="100" x2="554.77" y2="748" class="grid"/>
+<text x="554.77" y="763" class="tick" text-anchor="middle">33.3</text>
+<line x1="704.4" y1="100" x2="704.4" y2="748" class="grid"/>
+<text x="704.4" y="763" class="tick" text-anchor="middle">50</text>
+<text x="338" y="116" class="" text-anchor="end">webgl1, eac-direct, stationary</text>
+<line x1="405.7" y1="112" x2="415.17" y2="112" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="108" width="5.98" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct, stationary: p99 17.3, max 17.7 ms</title></rect>
+<circle cx="405.7" cy="112" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="116" class="value" text-anchor="start">p99 17.3, max 17.7 ms</text>
+<text x="338" y="140" class="" text-anchor="end">webgl1, eac-direct-mesh, stationary</text>
+<line x1="405.7" y1="136" x2="416.87" y2="136" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="132" width="7.64" height="8" rx="3" fill="var(--s6)"><title>webgl1, eac-direct-mesh, stationary: p99 17.5, max 17.9 ms</title></rect>
+<circle cx="405.7" cy="136" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="140" class="value" text-anchor="start">p99 17.5, max 17.9 ms</text>
+<text x="338" y="164" class="" text-anchor="end">webgl1, eac-residual, stationary</text>
+<line x1="405.72" y1="160" x2="418.69" y2="160" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="156" width="9" height="8" rx="3" fill="var(--s3)"><title>webgl1, eac-residual, stationary: p99 17.7, max 18.1 ms</title></rect>
+<circle cx="405.72" cy="160" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="164" class="value" text-anchor="start">p99 17.7, max 18.1 ms</text>
+<text x="338" y="188" class="" text-anchor="end">webgl1, control, stationary</text>
+<line x1="405.72" y1="184" x2="420.37" y2="184" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="180" width="8.98" height="8" rx="3" fill="var(--s5)"><title>webgl1, control, stationary: p99 17.7, max 18.3 ms</title></rect>
+<circle cx="405.72" cy="184" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="188" class="value" text-anchor="start">p99 17.7, max 18.3 ms</text>
+<text x="338" y="212" class="" text-anchor="end">webgl1, eac-direct, explore</text>
+<line x1="405.72" y1="208" x2="422.07" y2="208" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="204" width="12.79" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct, explore: p99 18.1, max 18.5 ms</title></rect>
+<circle cx="405.72" cy="208" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="212" class="value" text-anchor="start">p99 18.1, max 18.5 ms</text>
+<text x="338" y="236" class="" text-anchor="end">webgl1, eac-direct-mesh, explore</text>
+<line x1="405.67" y1="232" x2="415.31" y2="232" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.67" y="228" width="8.6" height="8" rx="3" fill="var(--s6)"><title>webgl1, eac-direct-mesh, explore: p99 17.6, max 17.7 ms</title></rect>
+<circle cx="405.67" cy="232" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="236" class="value" text-anchor="start">p99 17.6, max 17.7 ms</text>
+<text x="338" y="260" class="" text-anchor="end">webgl1, eac-residual, explore</text>
+<line x1="405.7" y1="256" x2="415.26" y2="256" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="252" width="5.87" height="8" rx="3" fill="var(--s3)"><title>webgl1, eac-residual, explore: p99 17.3, max 17.7 ms</title></rect>
+<circle cx="405.7" cy="256" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="260" class="value" text-anchor="start">p99 17.3, max 17.7 ms</text>
+<text x="338" y="284" class="" text-anchor="end">webgl1, control, explore</text>
+<line x1="405.7" y1="280" x2="417.61" y2="280" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="276" width="6.29" height="8" rx="3" fill="var(--s5)"><title>webgl1, control, explore: p99 17.4, max 18.0 ms</title></rect>
+<circle cx="405.7" cy="280" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="284" class="value" text-anchor="start">p99 17.4, max 18.0 ms</text>
+<text x="338" y="308" class="" text-anchor="end">webgl2, eac-direct, stationary</text>
+<line x1="405.67" y1="304" x2="419.92" y2="304" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.67" y="300" width="12.66" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct, stationary: p99 18.1, max 18.3 ms</title></rect>
+<circle cx="405.67" cy="304" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="308" class="value" text-anchor="start">p99 18.1, max 18.3 ms</text>
+<text x="338" y="332" class="" text-anchor="end">webgl2, eac-direct-mesh, stationary</text>
+<line x1="405.72" y1="328" x2="414.9" y2="328" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="324" width="6.56" height="8" rx="3" fill="var(--s6)"><title>webgl2, eac-direct-mesh, stationary: p99 17.4, max 17.7 ms</title></rect>
+<circle cx="405.72" cy="328" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="332" class="value" text-anchor="start">p99 17.4, max 17.7 ms</text>
+<text x="338" y="356" class="" text-anchor="end">webgl2, eac-residual, stationary</text>
+<line x1="405.72" y1="352" x2="416.74" y2="352" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="348" width="6.38" height="8" rx="3" fill="var(--s3)"><title>webgl2, eac-residual, stationary: p99 17.4, max 17.9 ms</title></rect>
+<circle cx="405.72" cy="352" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="356" class="value" text-anchor="start">p99 17.4, max 17.9 ms</text>
+<text x="338" y="380" class="" text-anchor="end">webgl2, control, stationary</text>
+<line x1="405.76" y1="376" x2="435.26" y2="376" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.76" y="372" width="12.92" height="8" rx="3" fill="var(--s5)"><title>webgl2, control, stationary: p99 18.1, max 20.0 ms</title></rect>
+<circle cx="405.76" cy="376" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="380" class="value" text-anchor="start">p99 18.1, max 20.0 ms</text>
+<text x="338" y="404" class="" text-anchor="end">webgl2, eac-direct, explore</text>
+<line x1="405.7" y1="400" x2="427.07" y2="400" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="396" width="8.71" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct, explore: p99 17.6, max 19.0 ms</title></rect>
+<circle cx="405.7" cy="400" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="404" class="value" text-anchor="start">p99 17.6, max 19.0 ms</text>
+<text x="338" y="428" class="" text-anchor="end">webgl2, eac-direct-mesh, explore</text>
+<line x1="405.72" y1="424" x2="416.69" y2="424" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="420" width="7.17" height="8" rx="3" fill="var(--s6)"><title>webgl2, eac-direct-mesh, explore: p99 17.5, max 17.9 ms</title></rect>
+<circle cx="405.72" cy="424" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="428" class="value" text-anchor="start">p99 17.5, max 17.9 ms</text>
+<text x="338" y="452" class="" text-anchor="end">webgl2, eac-residual, explore</text>
+<line x1="405.72" y1="448" x2="419.56" y2="448" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="444" width="12.61" height="8" rx="3" fill="var(--s3)"><title>webgl2, eac-residual, explore: p99 18.1, max 18.2 ms</title></rect>
+<circle cx="405.72" cy="448" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="452" class="value" text-anchor="start">p99 18.1, max 18.2 ms</text>
+<text x="338" y="476" class="" text-anchor="end">webgl2, control, explore</text>
+<line x1="405.72" y1="472" x2="431.39" y2="472" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="468" width="6.45" height="8" rx="3" fill="var(--s5)"><title>webgl2, control, explore: p99 17.4, max 19.5 ms</title></rect>
+<circle cx="405.72" cy="472" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="476" class="value" text-anchor="start">p99 17.4, max 19.5 ms</text>
+<text x="338" y="500" class="" text-anchor="end">webgpu, eac-direct, stationary</text>
+<line x1="405.7" y1="496" x2="417.5" y2="496" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="492" width="9.09" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct, stationary: p99 17.7, max 18.0 ms</title></rect>
+<circle cx="405.7" cy="496" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="500" class="value" text-anchor="start">p99 17.7, max 18.0 ms</text>
+<text x="338" y="524" class="" text-anchor="end">webgpu, eac-direct-mesh, stationary</text>
+<line x1="405.67" y1="520" x2="415.75" y2="520" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.67" y="516" width="8.49" height="8" rx="3" fill="var(--s6)"><title>webgpu, eac-direct-mesh, stationary: p99 17.6, max 17.8 ms</title></rect>
+<circle cx="405.67" cy="520" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="524" class="value" text-anchor="start">p99 17.6, max 17.8 ms</text>
+<text x="338" y="548" class="" text-anchor="end">webgpu, eac-residual, stationary</text>
+<line x1="405.7" y1="544" x2="415.06" y2="544" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="540" width="7.17" height="8" rx="3" fill="var(--s3)"><title>webgpu, eac-residual, stationary: p99 17.5, max 17.7 ms</title></rect>
+<circle cx="405.7" cy="544" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="548" class="value" text-anchor="start">p99 17.5, max 17.7 ms</text>
+<text x="338" y="572" class="" text-anchor="end">webgpu, control, stationary</text>
+<line x1="405.7" y1="568" x2="794" y2="568" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="564" width="8.98" height="8" rx="3" fill="var(--s5)"><title>webgpu, control, stationary: p99 17.7, max 75.8 ms</title></rect>
+<circle cx="405.7" cy="568" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="572" class="value" text-anchor="start">p99 17.7, max 75.8 ms</text>
+<text x="338" y="596" class="" text-anchor="end">webgpu, eac-direct, explore</text>
+<line x1="405.72" y1="592" x2="419.11" y2="592" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="588" width="8.6" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct, explore: p99 17.6, max 18.2 ms</title></rect>
+<circle cx="405.72" cy="592" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="596" class="value" text-anchor="start">p99 17.6, max 18.2 ms</text>
+<text x="338" y="620" class="" text-anchor="end">webgpu, eac-direct-mesh, explore</text>
+<line x1="405.67" y1="616" x2="415.44" y2="616" stroke="var(--s6)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.67" y="612" width="8.42" height="8" rx="3" fill="var(--s6)"><title>webgpu, eac-direct-mesh, explore: p99 17.6, max 17.8 ms</title></rect>
+<circle cx="405.67" cy="616" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="620" class="value" text-anchor="start">p99 17.6, max 17.8 ms</text>
+<text x="338" y="644" class="" text-anchor="end">webgpu, eac-residual, explore</text>
+<line x1="405.7" y1="640" x2="417.88" y2="640" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="636" width="8.71" height="8" rx="3" fill="var(--s3)"><title>webgpu, eac-residual, explore: p99 17.6, max 18.0 ms</title></rect>
+<circle cx="405.7" cy="640" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="644" class="value" text-anchor="start">p99 17.6, max 18.0 ms</text>
+<text x="338" y="668" class="" text-anchor="end">webgpu, control, explore</text>
+<line x1="405.7" y1="664" x2="435.22" y2="664" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.7" y="660" width="8.74" height="8" rx="3" fill="var(--s5)"><title>webgpu, control, explore: p99 17.6, max 20.0 ms</title></rect>
+<circle cx="405.7" cy="664" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="668" class="value" text-anchor="start">p99 17.6, max 20.0 ms</text>
+<text x="338" y="692" class="" text-anchor="end">core busy, webgl2, eac-direct, explore</text>
+<line x1="405.72" y1="688" x2="415.06" y2="688" stroke="var(--s1)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="684" width="8.51" height="8" rx="3" fill="var(--s1)"><title>core busy, webgl2, eac-direct, explore: p99 17.6, max 17.7 ms</title></rect>
+<circle cx="405.72" cy="688" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="692" class="value" text-anchor="start">p99 17.6, max 17.7 ms</text>
+<text x="338" y="716" class="" text-anchor="end">core busy, webgl2, eac-residual, explore</text>
+<line x1="405.72" y1="712" x2="413.27" y2="712" stroke="var(--s3)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="708" width="3.58" height="8" rx="3" fill="var(--s3)"><title>core busy, webgl2, eac-residual, explore: p99 17.1, max 17.5 ms</title></rect>
+<circle cx="405.72" cy="712" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="716" class="value" text-anchor="start">p99 17.1, max 17.5 ms</text>
+<text x="338" y="740" class="" text-anchor="end">core busy, webgl2, control, explore</text>
+<line x1="405.72" y1="736" x2="414.86" y2="736" stroke="var(--s5)" stroke-width="1.5" opacity="0.55"/>
+<rect x="405.72" y="732" width="7.03" height="8" rx="3" fill="var(--s5)"><title>core busy, webgl2, control, explore: p99 17.4, max 17.7 ms</title></rect>
+<circle cx="405.72" cy="736" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="740" class="value" text-anchor="start">p99 17.4, max 17.7 ms</text>
+<text x="16" y="792" class="panel-title" text-anchor="start">The worst frame that uploaded anything: main-thread work (tick or upload pump, plus render call), ms</text>
+<line x1="346" y1="802" x2="346" y2="1450" class="grid"/>
+<text x="346" y="1465" class="tick" text-anchor="middle">0</text>
+<line x1="402" y1="802" x2="402" y2="1450" class="grid"/>
+<text x="402" y="1465" class="tick" text-anchor="middle">5</text>
+<line x1="458" y1="802" x2="458" y2="1450" class="grid"/>
+<text x="458" y="1465" class="tick" text-anchor="middle">10</text>
+<line x1="533.04" y1="802" x2="533.04" y2="1450" class="grid"/>
+<text x="533.04" y="1465" class="tick" text-anchor="middle">16.7</text>
+<line x1="570" y1="802" x2="570" y2="1450" class="grid"/>
+<text x="570" y="1465" class="tick" text-anchor="middle">20</text>
+<line x1="682" y1="802" x2="682" y2="1450" class="grid"/>
+<text x="682" y="1465" class="tick" text-anchor="middle">30</text>
+<line x1="794" y1="802" x2="794" y2="1450" class="grid"/>
+<text x="794" y="1465" class="tick" text-anchor="middle">40</text>
+<text x="338" y="818" class="" text-anchor="end">webgl1, eac-direct, stationary</text>
+<rect x="346" y="810" width="18.98" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct, stationary: 1.7 ms</title></rect>
+<circle cx="364.98" cy="814" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="818" class="value" text-anchor="start">1.7 ms</text>
+<text x="338" y="842" class="" text-anchor="end">webgl1, eac-direct-mesh, stationary</text>
+<rect x="346" y="834" width="35.64" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct-mesh, stationary: 3.2 ms</title></rect>
+<circle cx="381.64" cy="838" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="842" class="value" text-anchor="start">3.2 ms</text>
+<text x="338" y="866" class="" text-anchor="end">webgl1, eac-residual, stationary</text>
+<rect x="346" y="858" width="18.31" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-residual, stationary: 1.6 ms</title></rect>
+<circle cx="364.31" cy="862" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="866" class="value" text-anchor="start">1.6 ms</text>
+<text x="338" y="890" class="" text-anchor="end">webgl1, control, stationary</text>
+<rect x="346" y="882" width="73.53" height="8" rx="3" fill="var(--s5)"><title>webgl1, control, stationary: 6.6 ms</title></rect>
+<circle cx="419.53" cy="886" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="890" class="value" text-anchor="start">6.6 ms</text>
+<text x="338" y="914" class="" text-anchor="end">webgl1, eac-direct, explore</text>
+<rect x="346" y="906" width="30.07" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct, explore: 2.7 ms</title></rect>
+<circle cx="376.07" cy="910" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="914" class="value" text-anchor="start">2.7 ms</text>
+<text x="338" y="938" class="" text-anchor="end">webgl1, eac-direct-mesh, explore</text>
+<rect x="346" y="930" width="34.24" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-direct-mesh, explore: 3.1 ms</title></rect>
+<circle cx="380.24" cy="934" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="938" class="value" text-anchor="start">3.1 ms</text>
+<text x="338" y="962" class="" text-anchor="end">webgl1, eac-residual, explore</text>
+<rect x="346" y="954" width="34.16" height="8" rx="3" fill="var(--s1)"><title>webgl1, eac-residual, explore: 3.0 ms</title></rect>
+<circle cx="380.16" cy="958" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="962" class="value" text-anchor="start">3.0 ms</text>
+<text x="338" y="986" class="" text-anchor="end">webgl1, control, explore</text>
+<rect x="346" y="978" width="75.38" height="8" rx="3" fill="var(--s5)"><title>webgl1, control, explore: 6.7 ms</title></rect>
+<circle cx="421.38" cy="982" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="986" class="value" text-anchor="start">6.7 ms</text>
+<text x="338" y="1010" class="" text-anchor="end">webgl2, eac-direct, stationary</text>
+<rect x="346" y="1002" width="22.09" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct, stationary: 2.0 ms</title></rect>
+<circle cx="368.09" cy="1006" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1010" class="value" text-anchor="start">2.0 ms</text>
+<text x="338" y="1034" class="" text-anchor="end">webgl2, eac-direct-mesh, stationary</text>
+<rect x="346" y="1026" width="30.04" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct-mesh, stationary: 2.7 ms</title></rect>
+<circle cx="376.04" cy="1030" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1034" class="value" text-anchor="start">2.7 ms</text>
+<text x="338" y="1058" class="" text-anchor="end">webgl2, eac-residual, stationary</text>
+<rect x="346" y="1050" width="40.8" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-residual, stationary: 3.6 ms</title></rect>
+<circle cx="386.8" cy="1054" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1058" class="value" text-anchor="start">3.6 ms</text>
+<text x="338" y="1082" class="" text-anchor="end">webgl2, control, stationary</text>
+<rect x="346" y="1074" width="74.68" height="8" rx="3" fill="var(--s5)"><title>webgl2, control, stationary: 6.7 ms</title></rect>
+<circle cx="420.68" cy="1078" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1082" class="value" text-anchor="start">6.7 ms</text>
+<text x="338" y="1106" class="" text-anchor="end">webgl2, eac-direct, explore</text>
+<rect x="346" y="1098" width="37.1" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct, explore: 3.3 ms</title></rect>
+<circle cx="383.1" cy="1102" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1106" class="value" text-anchor="start">3.3 ms</text>
+<text x="338" y="1130" class="" text-anchor="end">webgl2, eac-direct-mesh, explore</text>
+<rect x="346" y="1122" width="38.61" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-direct-mesh, explore: 3.4 ms</title></rect>
+<circle cx="384.61" cy="1126" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1130" class="value" text-anchor="start">3.4 ms</text>
+<text x="338" y="1154" class="" text-anchor="end">webgl2, eac-residual, explore</text>
+<rect x="346" y="1146" width="58.55" height="8" rx="3" fill="var(--s1)"><title>webgl2, eac-residual, explore: 5.2 ms</title></rect>
+<circle cx="404.55" cy="1150" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1154" class="value" text-anchor="start">5.2 ms</text>
+<text x="338" y="1178" class="" text-anchor="end">webgl2, control, explore</text>
+<rect x="346" y="1170" width="73.16" height="8" rx="3" fill="var(--s5)"><title>webgl2, control, explore: 6.5 ms</title></rect>
+<circle cx="419.16" cy="1174" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1178" class="value" text-anchor="start">6.5 ms</text>
+<text x="338" y="1202" class="" text-anchor="end">webgpu, eac-direct, stationary</text>
+<rect x="346" y="1194" width="24.44" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct, stationary: 2.2 ms</title></rect>
+<circle cx="370.44" cy="1198" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1202" class="value" text-anchor="start">2.2 ms</text>
+<text x="338" y="1226" class="" text-anchor="end">webgpu, eac-direct-mesh, stationary</text>
+<rect x="346" y="1218" width="26.1" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct-mesh, stationary: 2.3 ms</title></rect>
+<circle cx="372.1" cy="1222" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1226" class="value" text-anchor="start">2.3 ms</text>
+<text x="338" y="1250" class="" text-anchor="end">webgpu, eac-residual, stationary</text>
+<rect x="346" y="1242" width="29.96" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-residual, stationary: 2.7 ms</title></rect>
+<circle cx="375.96" cy="1246" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1250" class="value" text-anchor="start">2.7 ms</text>
+<text x="338" y="1274" class="" text-anchor="end">webgpu, control, stationary</text>
+<rect x="346" y="1266" width="25.45" height="8" rx="3" fill="var(--s5)"><title>webgpu, control, stationary: 2.3 ms</title></rect>
+<circle cx="371.45" cy="1270" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1274" class="value" text-anchor="start">2.3 ms</text>
+<text x="338" y="1298" class="" text-anchor="end">webgpu, eac-direct, explore</text>
+<rect x="346" y="1290" width="34.44" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct, explore: 3.1 ms</title></rect>
+<circle cx="380.44" cy="1294" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1298" class="value" text-anchor="start">3.1 ms</text>
+<text x="338" y="1322" class="" text-anchor="end">webgpu, eac-direct-mesh, explore</text>
+<rect x="346" y="1314" width="37.86" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-direct-mesh, explore: 3.4 ms</title></rect>
+<circle cx="383.86" cy="1318" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1322" class="value" text-anchor="start">3.4 ms</text>
+<text x="338" y="1346" class="" text-anchor="end">webgpu, eac-residual, explore</text>
+<rect x="346" y="1338" width="40.18" height="8" rx="3" fill="var(--s1)"><title>webgpu, eac-residual, explore: 3.6 ms</title></rect>
+<circle cx="386.18" cy="1342" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1346" class="value" text-anchor="start">3.6 ms</text>
+<text x="338" y="1370" class="" text-anchor="end">webgpu, control, explore</text>
+<rect x="346" y="1362" width="13.41" height="8" rx="3" fill="var(--s5)"><title>webgpu, control, explore: 1.2 ms</title></rect>
+<circle cx="359.41" cy="1366" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1370" class="value" text-anchor="start">1.2 ms</text>
+<text x="338" y="1394" class="" text-anchor="end">core busy, webgl2, eac-direct, explore</text>
+<rect x="346" y="1386" width="15.74" height="8" rx="3" fill="var(--s1)"><title>core busy, webgl2, eac-direct, explore: 1.4 ms</title></rect>
+<circle cx="361.74" cy="1390" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1394" class="value" text-anchor="start">1.4 ms</text>
+<text x="338" y="1418" class="" text-anchor="end">core busy, webgl2, eac-residual, explore</text>
+<rect x="346" y="1410" width="16.21" height="8" rx="3" fill="var(--s1)"><title>core busy, webgl2, eac-residual, explore: 1.4 ms</title></rect>
+<circle cx="362.21" cy="1414" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1418" class="value" text-anchor="start">1.4 ms</text>
+<text x="338" y="1442" class="" text-anchor="end">core busy, webgl2, control, explore</text>
+<rect x="346" y="1434" width="76.89" height="8" rx="3" fill="var(--s5)"><title>core busy, webgl2, control, explore: 6.9 ms</title></rect>
+<circle cx="422.89" cy="1438" r="4.5" class="dot" fill="var(--ink)"/>
+<text x="804" y="1442" class="value" text-anchor="start">6.9 ms</text>
+<text x="16" y="1482" class="note" text-anchor="start">Rows: results/http.csv (sets backends and busy); every frame of the first repetition: results/http-frames.json. WebGL 1's GPU timer is invalid here and</text>
+<text x="16" y="1497" class="note" text-anchor="start">is not shown.</text>
+</svg>

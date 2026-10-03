@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="662" viewBox="0 0 980 662" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">How far the view is below its own finished picture, over time (simulation)</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Phase 1's network model with the real client; median over three panoramas and four start orientations. Lower is better. The quick turn begins</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">at 2 s and ends at 2.6 s.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">Looking forward, 2 Mbit/s</text>
+<line x1="60" y1="284" x2="466" y2="284" class="grid"/>
+<text x="54" y="288" class="tick" text-anchor="end">0</text>
+<line x1="60" y1="275.8" x2="466" y2="275.8" class="grid"/>
+<text x="54" y="279.8" class="tick" text-anchor="end">1</text>
+<line x1="60" y1="259.4" x2="466" y2="259.4" class="grid"/>
+<text x="54" y="263.4" class="tick" text-anchor="end">3</text>
+<line x1="60" y1="243" x2="466" y2="243" class="grid"/>
+<text x="54" y="247" class="tick" text-anchor="end">5</text>
+<line x1="60" y1="202" x2="466" y2="202" class="grid"/>
+<text x="54" y="206" class="tick" text-anchor="end">10</text>
+<line x1="60" y1="161" x2="466" y2="161" class="grid"/>
+<text x="54" y="165" class="tick" text-anchor="end">15</text>
+<line x1="60" y1="120" x2="466" y2="120" class="grid"/>
+<text x="54" y="124" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="284" x2="466" y2="284" class="axis"/>
+<line x1="60" y1="284" x2="60" y2="288" class="axis"/>
+<text x="60" y="300" class="tick" text-anchor="middle">0</text>
+<line x1="127.67" y1="284" x2="127.67" y2="288" class="axis"/>
+<text x="127.67" y="300" class="tick" text-anchor="middle">1</text>
+<line x1="195.33" y1="284" x2="195.33" y2="288" class="axis"/>
+<text x="195.33" y="300" class="tick" text-anchor="middle">2</text>
+<line x1="263" y1="284" x2="263" y2="288" class="axis"/>
+<text x="263" y="300" class="tick" text-anchor="middle">3</text>
+<line x1="330.67" y1="284" x2="330.67" y2="288" class="axis"/>
+<text x="330.67" y="300" class="tick" text-anchor="middle">4</text>
+<line x1="398.33" y1="284" x2="398.33" y2="288" class="axis"/>
+<text x="398.33" y="300" class="tick" text-anchor="middle">5</text>
+<line x1="466" y1="284" x2="466" y2="288" class="axis"/>
+<text x="466" y="300" class="tick" text-anchor="middle">6</text>
+<text x="263" y="315" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="110" class="tick" text-anchor="start">dB below its own finished view</text>
+<path d="M76.92 139.64 L93.83 145.42 L110.75 169.73 L127.67 206.02 L144.58 283.96 L161.5 284 L178.42 284 L195.33 284 L212.25 284 L229.17 284 L246.08 284 L263 284 L279.92 284 L296.83 284 L313.75 284 L330.67 284 L347.58 284 L364.5 284 L381.42 284 L398.33 284 L415.25 284 L432.17 284 L449.08 284 L466 284" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M76.92 139.64 L93.83 182.44 L110.75 214.42 L127.67 226.76 L144.58 235.74 L161.5 248 L178.42 267.89 L195.33 283.75 L212.25 284 L229.17 284 L246.08 284 L263 284 L279.92 284 L296.83 284 L313.75 284 L330.67 284 L347.58 284 L364.5 284 L381.42 284 L398.33 284 L415.25 284 L432.17 284 L449.08 284 L466 284" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M76.92 139.64 L93.83 187.4 L110.75 217.01 L127.67 230.17 L144.58 242.26 L161.5 258.87 L178.42 281.05 L195.33 284 L212.25 284 L229.17 284 L246.08 284 L263 284 L279.92 284 L296.83 284 L313.75 284 L330.67 284 L347.58 284 L364.5 284 L381.42 284 L398.33 284 L415.25 284 L432.17 284 L449.08 284 L466 284" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M76.92 148.41 L93.83 163.99 L110.75 188.06 L127.67 219.63 L144.58 283.18 L161.5 284 L178.42 284 L195.33 284 L212.25 284 L229.17 284 L246.08 284 L263 284 L279.92 284 L296.83 284 L313.75 284 L330.67 284 L347.58 284 L364.5 284 L381.42 284 L398.33 284 L415.25 284 L432.17 284 L449.08 284 L466 284" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<text x="496" y="90" class="panel-title" text-anchor="start">Looking forward, 0.75 Mbit/s</text>
+<line x1="540" y1="284" x2="946" y2="284" class="grid"/>
+<text x="534" y="288" class="tick" text-anchor="end">0</text>
+<line x1="540" y1="275.8" x2="946" y2="275.8" class="grid"/>
+<text x="534" y="279.8" class="tick" text-anchor="end">1</text>
+<line x1="540" y1="259.4" x2="946" y2="259.4" class="grid"/>
+<text x="534" y="263.4" class="tick" text-anchor="end">3</text>
+<line x1="540" y1="243" x2="946" y2="243" class="grid"/>
+<text x="534" y="247" class="tick" text-anchor="end">5</text>
+<line x1="540" y1="202" x2="946" y2="202" class="grid"/>
+<text x="534" y="206" class="tick" text-anchor="end">10</text>
+<line x1="540" y1="161" x2="946" y2="161" class="grid"/>
+<text x="534" y="165" class="tick" text-anchor="end">15</text>
+<line x1="540" y1="120" x2="946" y2="120" class="grid"/>
+<text x="534" y="124" class="tick" text-anchor="end">20</text>
+<line x1="540" y1="284" x2="946" y2="284" class="axis"/>
+<line x1="540" y1="284" x2="540" y2="288" class="axis"/>
+<text x="540" y="300" class="tick" text-anchor="middle">0</text>
+<line x1="607.67" y1="284" x2="607.67" y2="288" class="axis"/>
+<text x="607.67" y="300" class="tick" text-anchor="middle">1</text>
+<line x1="675.33" y1="284" x2="675.33" y2="288" class="axis"/>
+<text x="675.33" y="300" class="tick" text-anchor="middle">2</text>
+<line x1="743" y1="284" x2="743" y2="288" class="axis"/>
+<text x="743" y="300" class="tick" text-anchor="middle">3</text>
+<line x1="810.67" y1="284" x2="810.67" y2="288" class="axis"/>
+<text x="810.67" y="300" class="tick" text-anchor="middle">4</text>
+<line x1="878.33" y1="284" x2="878.33" y2="288" class="axis"/>
+<text x="878.33" y="300" class="tick" text-anchor="middle">5</text>
+<line x1="946" y1="284" x2="946" y2="288" class="axis"/>
+<text x="946" y="300" class="tick" text-anchor="middle">6</text>
+<text x="743" y="315" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="496" y="110" class="tick" text-anchor="start">dB below its own finished view</text>
+<path d="M556.92 139.64 L573.83 139.64 L590.75 141.11 L607.67 147.14 L624.58 158.09 L641.5 163.99 L658.42 179.86 L675.33 199.58 L692.25 206.76 L709.17 228.98 L726.08 283.1 L743 284 L759.92 284 L776.83 284 L793.75 284 L810.67 284 L827.58 284 L844.5 284 L861.42 284 L878.33 284 L895.25 284 L912.17 284 L929.08 284 L946 284" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M556.92 139.64 L573.83 139.64 L590.75 147.72 L607.67 170.39 L624.58 187.9 L641.5 198.35 L658.42 214.42 L675.33 217.95 L692.25 225.66 L709.17 228.2 L726.08 233.49 L743 237.92 L759.92 242.51 L776.83 251.53 L793.75 255.38 L810.67 273.63 L827.58 278.06 L844.5 281.05 L861.42 282.44 L878.33 284 L895.25 284 L912.17 284 L929.08 284 L946 284" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M556.92 139.64 L573.83 139.64 L590.75 147.31 L607.67 170.68 L624.58 193.23 L641.5 211.39 L658.42 217.58 L675.33 226.44 L692.25 231.97 L709.17 234.47 L726.08 244.64 L743 249.89 L759.92 259.28 L776.83 275.8 L793.75 278.06 L810.67 281.05 L827.58 284 L844.5 284 L861.42 284 L878.33 284 L895.25 284 L912.17 284 L929.08 284 L946 284" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M556.92 148.41 L573.83 148.45 L590.75 148.54 L607.67 159.4 L624.58 176.79 L641.5 194.09 L658.42 201.8 L675.33 219.71 L692.25 255.26 L709.17 260.1 L726.08 283.18 L743 284 L759.92 284 L776.83 284 L793.75 284 L810.67 284 L827.58 284 L844.5 284 L861.42 284 L878.33 284 L895.25 284 L912.17 284 L929.08 284 L946 284" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<text x="16" y="340" class="panel-title" text-anchor="start">Quick turn, 2 Mbit/s</text>
+<line x1="60" y1="534" x2="466" y2="534" class="grid"/>
+<text x="54" y="538" class="tick" text-anchor="end">0</text>
+<line x1="60" y1="525.8" x2="466" y2="525.8" class="grid"/>
+<text x="54" y="529.8" class="tick" text-anchor="end">1</text>
+<line x1="60" y1="509.4" x2="466" y2="509.4" class="grid"/>
+<text x="54" y="513.4" class="tick" text-anchor="end">3</text>
+<line x1="60" y1="493" x2="466" y2="493" class="grid"/>
+<text x="54" y="497" class="tick" text-anchor="end">5</text>
+<line x1="60" y1="452" x2="466" y2="452" class="grid"/>
+<text x="54" y="456" class="tick" text-anchor="end">10</text>
+<line x1="60" y1="411" x2="466" y2="411" class="grid"/>
+<text x="54" y="415" class="tick" text-anchor="end">15</text>
+<line x1="60" y1="370" x2="466" y2="370" class="grid"/>
+<text x="54" y="374" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="534" x2="466" y2="534" class="axis"/>
+<line x1="60" y1="534" x2="60" y2="538" class="axis"/>
+<text x="60" y="550" class="tick" text-anchor="middle">0</text>
+<line x1="141.2" y1="534" x2="141.2" y2="538" class="axis"/>
+<text x="141.2" y="550" class="tick" text-anchor="middle">2</text>
+<line x1="222.4" y1="534" x2="222.4" y2="538" class="axis"/>
+<text x="222.4" y="550" class="tick" text-anchor="middle">4</text>
+<line x1="303.6" y1="534" x2="303.6" y2="538" class="axis"/>
+<text x="303.6" y="550" class="tick" text-anchor="middle">6</text>
+<line x1="384.8" y1="534" x2="384.8" y2="538" class="axis"/>
+<text x="384.8" y="550" class="tick" text-anchor="middle">8</text>
+<line x1="466" y1="534" x2="466" y2="538" class="axis"/>
+<text x="466" y="550" class="tick" text-anchor="middle">10</text>
+<text x="263" y="565" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="360" class="tick" text-anchor="start">dB below its own finished view</text>
+<path d="M70.15 386.81 L80.3 395.42 L90.45 419.73 L100.6 455.03 L110.75 528.34 L120.9 534 L131.05 534 L141.2 534 L151.35 388 L161.5 395.63 L171.65 402.14 L181.8 416.37 L191.95 459.13 L202.1 504.69 L212.25 534 L222.4 534 L232.55 534 L242.7 534 L252.85 534 L263 534 L273.15 534 L283.3 534 L293.45 534 L303.6 534 L313.75 534 L323.9 534 L334.05 534 L344.2 534 L354.35 534 L364.5 534 L374.65 534 L384.8 534 L394.95 534 L405.1 534 L415.25 534 L425.4 534 L435.55 534 L445.7 534 L455.85 534 L466 534" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M70.15 386.81 L80.3 427.61 L90.45 447.78 L100.6 472.87 L110.75 481.93 L120.9 492.75 L131.05 515.59 L141.2 529.94 L151.35 395.54 L161.5 407.23 L171.65 440.85 L181.8 464.83 L191.95 482.79 L202.1 497.06 L212.25 505.1 L222.4 521.74 L232.55 530.84 L242.7 534 L252.85 534 L263 534 L273.15 534 L283.3 534 L293.45 534 L303.6 534 L313.75 534 L323.9 534 L334.05 534 L344.2 534 L354.35 534 L364.5 534 L374.65 534 L384.8 534 L394.95 534 L405.1 534 L415.25 534 L425.4 534 L435.55 534 L445.7 534 L455.85 534 L466 534" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M70.15 387.47 L80.3 427.11 L90.45 457.25 L100.6 477.13 L110.75 490.01 L120.9 504.64 L131.05 524.61 L141.2 534 L151.35 398.21 L161.5 413.34 L171.65 445.03 L181.8 470.25 L191.95 489.35 L202.1 504.23 L212.25 524.53 L222.4 531.21 L232.55 534 L242.7 534 L252.85 534 L263 534 L273.15 534 L283.3 534 L293.45 534 L303.6 534 L313.75 534 L323.9 534 L334.05 534 L344.2 534 L354.35 534 L364.5 534 L374.65 534 L384.8 534 L394.95 534 L405.1 534 L415.25 534 L425.4 534 L435.55 534 L445.7 534 L455.85 534 L466 534" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M70.15 395.83 L80.3 418.46 L90.45 442.45 L100.6 461.31 L110.75 509.85 L120.9 534 L131.05 534 L141.2 534 L151.35 397.47 L161.5 402.51 L171.65 405.96 L181.8 420.55 L191.95 447.49 L202.1 510.43 L212.25 530.6 L222.4 534 L232.55 534 L242.7 534 L252.85 534 L263 534 L273.15 534 L283.3 534 L293.45 534 L303.6 534 L313.75 534 L323.9 534 L334.05 534 L344.2 534 L354.35 534 L364.5 534 L374.65 534 L384.8 534 L394.95 534 L405.1 534 L415.25 534 L425.4 534 L435.55 534 L445.7 534 L455.85 534 L466 534" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<text x="496" y="340" class="panel-title" text-anchor="start">Quick turn, 0.75 Mbit/s</text>
+<line x1="540" y1="534" x2="946" y2="534" class="grid"/>
+<text x="534" y="538" class="tick" text-anchor="end">0</text>
+<line x1="540" y1="525.8" x2="946" y2="525.8" class="grid"/>
+<text x="534" y="529.8" class="tick" text-anchor="end">1</text>
+<line x1="540" y1="509.4" x2="946" y2="509.4" class="grid"/>
+<text x="534" y="513.4" class="tick" text-anchor="end">3</text>
+<line x1="540" y1="493" x2="946" y2="493" class="grid"/>
+<text x="534" y="497" class="tick" text-anchor="end">5</text>
+<line x1="540" y1="452" x2="946" y2="452" class="grid"/>
+<text x="534" y="456" class="tick" text-anchor="end">10</text>
+<line x1="540" y1="411" x2="946" y2="411" class="grid"/>
+<text x="534" y="415" class="tick" text-anchor="end">15</text>
+<line x1="540" y1="370" x2="946" y2="370" class="grid"/>
+<text x="534" y="374" class="tick" text-anchor="end">20</text>
+<line x1="540" y1="534" x2="946" y2="534" class="axis"/>
+<line x1="540" y1="534" x2="540" y2="538" class="axis"/>
+<text x="540" y="550" class="tick" text-anchor="middle">0</text>
+<line x1="621.2" y1="534" x2="621.2" y2="538" class="axis"/>
+<text x="621.2" y="550" class="tick" text-anchor="middle">2</text>
+<line x1="702.4" y1="534" x2="702.4" y2="538" class="axis"/>
+<text x="702.4" y="550" class="tick" text-anchor="middle">4</text>
+<line x1="783.6" y1="534" x2="783.6" y2="538" class="axis"/>
+<text x="783.6" y="550" class="tick" text-anchor="middle">6</text>
+<line x1="864.8" y1="534" x2="864.8" y2="538" class="axis"/>
+<text x="864.8" y="550" class="tick" text-anchor="middle">8</text>
+<line x1="946" y1="534" x2="946" y2="538" class="axis"/>
+<text x="946" y="550" class="tick" text-anchor="middle">10</text>
+<text x="743" y="565" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="496" y="360" class="tick" text-anchor="start">dB below its own finished view</text>
+<path d="M550.15 386.81 L560.3 386.85 L570.45 391.12 L580.6 397.14 L590.75 408.09 L600.9 413.99 L611.05 430.11 L621.2 444.37 L631.35 387.92 L641.5 395.63 L651.65 398.21 L661.8 400.13 L671.95 404.24 L682.1 409.4 L692.25 422.6 L702.4 438.96 L712.55 442.94 L722.7 460.81 L732.85 474.8 L743 482.46 L753.15 500.95 L763.3 512.56 L773.45 518.42 L783.6 533.59 L793.75 534 L803.9 534 L814.05 534 L824.2 534 L834.35 534 L844.5 534 L854.65 534 L864.8 534 L874.95 534 L885.1 534 L895.25 534 L905.4 534 L915.55 534 L925.7 534 L935.85 534 L946 534" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M550.15 386.81 L560.3 386.81 L570.45 397.72 L580.6 424.94 L590.75 437.49 L600.9 447.53 L611.05 447.78 L621.2 456.26 L631.35 395.3 L641.5 395.75 L651.65 399.68 L661.8 428.92 L671.95 434.7 L682.1 451.14 L692.25 457.08 L702.4 460.86 L712.55 466.76 L722.7 474.96 L732.85 477.87 L743 482.46 L753.15 486.69 L763.3 490.5 L773.45 493.98 L783.6 498.58 L793.75 500.83 L803.9 504.6 L814.05 511.2 L824.2 515.75 L834.35 517.64 L844.5 521.99 L854.65 530.47 L864.8 534 L874.95 534 L885.1 534 L895.25 534 L905.4 534 L915.55 534 L925.7 534 L935.85 534 L946 534" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M550.15 387.47 L560.3 387.47 L570.45 397.31 L580.6 425.51 L590.75 443.23 L600.9 448.31 L611.05 457.25 L621.2 468.73 L631.35 398.09 L641.5 395.75 L651.65 407.8 L661.8 432.77 L671.95 447 L682.1 457.74 L692.25 461.63 L702.4 467.42 L712.55 476.19 L722.7 481.07 L732.85 485.42 L743 491.44 L753.15 496.16 L763.3 500.95 L773.45 506.86 L783.6 512.07 L793.75 519.69 L803.9 521.04 L814.05 530.43 L824.2 534 L834.35 534 L844.5 534 L854.65 534 L864.8 534 L874.95 534 L885.1 534 L895.25 534 L905.4 534 L915.55 534 L925.7 534 L935.85 534 L946 534" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M550.15 395.83 L560.3 395.83 L570.45 401.69 L580.6 413.5 L590.75 428.92 L600.9 446.83 L611.05 455.77 L621.2 470.25 L631.35 397.47 L641.5 402.51 L651.65 401.32 L661.8 406.08 L671.95 409.73 L682.1 418.75 L692.25 429 L702.4 454.54 L712.55 454.54 L722.7 466.84 L732.85 474.39 L743 487.18 L753.15 497.22 L763.3 527.15 L773.45 529.45 L783.6 530.6 L793.75 534 L803.9 534 L814.05 534 L824.2 534 L834.35 534 L844.5 534 L854.65 534 L864.8 534 L874.95 534 L885.1 534 L895.25 534 L905.4 534 L915.55 534 L925.7 534 L935.85 534 L946 534" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<line x1="16" y1="588" x2="34" y2="588" class="line" stroke="var(--s1)"/><circle cx="25" cy="588" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="592" class="" text-anchor="start">EAC, finest level at once</text>
+<line x1="228" y1="588" x2="246" y2="588" class="line" stroke="var(--s2)"/><circle cx="237" cy="588" r="4" class="dot" fill="var(--s2)"/>
+<text x="252" y="592" class="" text-anchor="start">EAC, every level</text>
+<line x1="379.52" y1="588" x2="397.52" y2="588" class="line" stroke="var(--s3)"/><circle cx="388.52" cy="588" r="4" class="dot" fill="var(--s3)"/>
+<text x="403.52" y="592" class="" text-anchor="start">EAC, residual</text>
+<line x1="510.88" y1="588" x2="528.88" y2="588" class="line" stroke="var(--s4)"/><circle cx="519.88" cy="588" r="4" class="dot" fill="var(--s4)"/>
+<text x="534.88" y="592" class="" text-anchor="start">cubemap, finest level at once</text>
+<text x="16" y="628" class="note" text-anchor="start">1 dB and 3 dB are Phase 1's &quot;high&quot; and &quot;acceptable&quot;, kept for continuity; they are not validated perceptual limits. Rows: results/sim.csv; series:</text>
+<text x="16" y="643" class="note" text-anchor="start">results/sim-series.json.</text>
+</svg>

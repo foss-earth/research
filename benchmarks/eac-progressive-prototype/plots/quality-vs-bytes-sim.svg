@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="390" viewBox="0 0 980 390" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">View quality against bytes received, looking forward (simulation, 2 Mbit/s)</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Absolute PSNR of the view against the source, every quarter second, median over four start orientations; one panel per panorama.</text>
+<text x="16" y="73" class="panel-title" text-anchor="start">northrop-mall</text>
+<line x1="60" y1="246.11" x2="316" y2="246.11" class="grid"/>
+<text x="54" y="250.11" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="195" x2="316" y2="195" class="grid"/>
+<text x="54" y="199" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="143.89" x2="316" y2="143.89" class="grid"/>
+<text x="54" y="147.89" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="287" x2="316" y2="287" class="axis"/>
+<line x1="60" y1="287" x2="60" y2="291" class="axis"/>
+<text x="60" y="303" class="tick" text-anchor="middle">0</text>
+<line x1="111.2" y1="287" x2="111.2" y2="291" class="axis"/>
+<text x="111.2" y="303" class="tick" text-anchor="middle">100</text>
+<line x1="162.4" y1="287" x2="162.4" y2="291" class="axis"/>
+<text x="162.4" y="303" class="tick" text-anchor="middle">200</text>
+<line x1="213.6" y1="287" x2="213.6" y2="291" class="axis"/>
+<text x="213.6" y="303" class="tick" text-anchor="middle">300</text>
+<line x1="264.8" y1="287" x2="264.8" y2="291" class="axis"/>
+<text x="264.8" y="303" class="tick" text-anchor="middle">400</text>
+<line x1="316" y1="287" x2="316" y2="291" class="axis"/>
+<text x="316" y="303" class="tick" text-anchor="middle">500</text>
+<text x="188" y="318" class="tick" text-anchor="middle">KiB received</text>
+<text x="16" y="93" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M62.77 286.23 L82.45 275.09 L105.34 257.87 L138.45 226.23 L174.76 172.26 L191.99 148.34 L218.66 129.83 L235.47 108.21 L254.4 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27 L262.23 106.27" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M62.77 286.23 L76.16 263.03 L111.5 223.42 L138.99 196.12 L167.6 177.42 L203.32 160.35 L238.16 144.35 L246.51 134.38 L283.84 127.02 L313.1 117.67" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M62.77 286.23 L79.62 262.98 L112.76 212.63 L147.19 179 L170.4 167.04 L192.95 156 L214.19 136.89 L243.37 124.36 L269.54 115.42 L296.69 108.06 L313.66 106.83" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<text x="336" y="73" class="panel-title" text-anchor="start">bookstore</text>
+<line x1="380" y1="261.91" x2="636" y2="261.91" class="grid"/>
+<text x="374" y="265.91" class="tick" text-anchor="end">25</text>
+<line x1="380" y1="220.09" x2="636" y2="220.09" class="grid"/>
+<text x="374" y="224.09" class="tick" text-anchor="end">30</text>
+<line x1="380" y1="178.27" x2="636" y2="178.27" class="grid"/>
+<text x="374" y="182.27" class="tick" text-anchor="end">35</text>
+<line x1="380" y1="136.45" x2="636" y2="136.45" class="grid"/>
+<text x="374" y="140.45" class="tick" text-anchor="end">40</text>
+<line x1="380" y1="287" x2="636" y2="287" class="axis"/>
+<line x1="380" y1="287" x2="380" y2="291" class="axis"/>
+<text x="380" y="303" class="tick" text-anchor="middle">0</text>
+<line x1="431.2" y1="287" x2="431.2" y2="291" class="axis"/>
+<text x="431.2" y="303" class="tick" text-anchor="middle">100</text>
+<line x1="482.4" y1="287" x2="482.4" y2="291" class="axis"/>
+<text x="482.4" y="303" class="tick" text-anchor="middle">200</text>
+<line x1="533.6" y1="287" x2="533.6" y2="291" class="axis"/>
+<text x="533.6" y="303" class="tick" text-anchor="middle">300</text>
+<line x1="584.8" y1="287" x2="584.8" y2="291" class="axis"/>
+<text x="584.8" y="303" class="tick" text-anchor="middle">400</text>
+<line x1="636" y1="287" x2="636" y2="291" class="axis"/>
+<text x="636" y="303" class="tick" text-anchor="middle">500</text>
+<text x="508" y="318" class="tick" text-anchor="middle">KiB received</text>
+<text x="336" y="93" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M382.13 285.91 L403.02 263.25 L420.43 210.77 L441.34 105.84 L461.25 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13 L461.99 104.13" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M382.13 285.91 L405.73 202.15 L431.21 159.54 L448.65 146.95 L469.29 120.98 L483.49 109.86 L507.66 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13 L518.1 104.13" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M382.13 285.91 L406.59 194.21 L426.1 156.95 L440.45 139.93 L459.93 114.71 L475.71 110.03 L492.29 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27 L492.97 109.27" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<text x="656" y="73" class="panel-title" text-anchor="start">superblock</text>
+<line x1="700" y1="276.78" x2="956" y2="276.78" class="grid"/>
+<text x="694" y="280.78" class="tick" text-anchor="end">20</text>
+<line x1="700" y1="225.67" x2="956" y2="225.67" class="grid"/>
+<text x="694" y="229.67" class="tick" text-anchor="end">25</text>
+<line x1="700" y1="174.56" x2="956" y2="174.56" class="grid"/>
+<text x="694" y="178.56" class="tick" text-anchor="end">30</text>
+<line x1="700" y1="123.44" x2="956" y2="123.44" class="grid"/>
+<text x="694" y="127.44" class="tick" text-anchor="end">35</text>
+<line x1="700" y1="287" x2="956" y2="287" class="axis"/>
+<line x1="700" y1="287" x2="700" y2="291" class="axis"/>
+<text x="700" y="303" class="tick" text-anchor="middle">0</text>
+<line x1="751.2" y1="287" x2="751.2" y2="291" class="axis"/>
+<text x="751.2" y="303" class="tick" text-anchor="middle">100</text>
+<line x1="802.4" y1="287" x2="802.4" y2="291" class="axis"/>
+<text x="802.4" y="303" class="tick" text-anchor="middle">200</text>
+<line x1="853.6" y1="287" x2="853.6" y2="291" class="axis"/>
+<text x="853.6" y="303" class="tick" text-anchor="middle">300</text>
+<line x1="904.8" y1="287" x2="904.8" y2="291" class="axis"/>
+<text x="904.8" y="303" class="tick" text-anchor="middle">400</text>
+<line x1="956" y1="287" x2="956" y2="291" class="axis"/>
+<text x="956" y="303" class="tick" text-anchor="middle">500</text>
+<text x="828" y="318" class="tick" text-anchor="middle">KiB received</text>
+<text x="656" y="93" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M702.91 284.96 L728.16 271.92 L749.29 257.71 L782.3 218.46 L809 152.88 L835.2 122.88 L850.54 110.62 L865.96 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62 L874.8 110.62" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M702.91 284.96 L722.13 246.62 L757.02 212.74 L785.26 183.4 L814.94 173.38 L840.51 162.08 L866.01 144.86 L895.25 124.36 L920.99 114.24 L948.45 111.08 L953.43 110.62" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M702.91 284.96 L719.79 247.29 L750.48 207.11 L779.06 182.84 L811.92 165.66 L831.77 148.49 L858.44 125.9 L881.45 113.94 L906.49 111.13 L918.53 111.13 L938.46 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13 L951.64 111.13" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<line x1="16" y1="331" x2="34" y2="331" class="line" stroke="var(--s1)"/><circle cx="25" cy="331" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="335" class="" text-anchor="start">EAC, finest level at once</text>
+<line x1="228" y1="331" x2="246" y2="331" class="line" stroke="var(--s2)"/><circle cx="237" cy="331" r="4" class="dot" fill="var(--s2)"/>
+<text x="252" y="335" class="" text-anchor="start">EAC, every level</text>
+<line x1="379.52" y1="331" x2="397.52" y2="331" class="line" stroke="var(--s3)"/><circle cx="388.52" cy="331" r="4" class="dot" fill="var(--s3)"/>
+<text x="403.52" y="335" class="" text-anchor="start">EAC, residual</text>
+<text x="16" y="371" class="note" text-anchor="start">Series: results/sim-series.json.</text>
+</svg>

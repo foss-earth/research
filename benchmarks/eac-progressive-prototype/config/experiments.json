@@ -1,0 +1,614 @@
+{
+ "note": "Frozen experiment sets. Each varies one thing from default.json. Run counts are kept small on purpose: correct default first, one factor at a time.",
+ "simulation": {
+  "smoke": {
+   "description": "a quick check that the simulator runs",
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "constrained-mobile"
+   ],
+   "traces": [
+    [
+     "quick-turn",
+     [
+      "off-axis"
+     ]
+    ]
+   ],
+   "variants": [
+    {
+     "id": "direct"
+    }
+   ]
+  },
+  "policies": {
+   "description": "progression: the finest level the view needs at once, every level from 0, or residual differences level by level",
+   "panoramas": [
+    "northrop-mall",
+    "bookstore",
+    "superblock"
+   ],
+   "profiles": [
+    "fast",
+    "moderate-mobile",
+    "constrained-mobile",
+    "very-constrained"
+   ],
+   "traces": [
+    [
+     "stationary",
+     [
+      "face-centre",
+      "off-axis",
+      "cube-corner",
+      "up"
+     ]
+    ],
+    [
+     "quick-turn",
+     [
+      "face-centre",
+      "off-axis",
+      "cube-corner",
+      "down"
+     ]
+    ],
+    [
+     "slow-turn",
+     [
+      "face-centre"
+     ]
+    ],
+    [
+     "explore",
+     [
+      "face-centre"
+     ]
+    ]
+   ],
+   "variants": [
+    {
+     "id": "direct",
+     "config": {}
+    },
+    {
+     "id": "levels",
+     "config": {
+      "policy": {
+       "refinement": "levels"
+      }
+     }
+    },
+    {
+     "id": "residual",
+     "config": {
+      "policy": {
+       "payload": "residual"
+      }
+     }
+    }
+   ]
+  },
+  "representation": {
+   "description": "the equi-angular cube against the ordinary cubemap, same faces, tiles, encoder and client",
+   "panoramas": [
+    "northrop-mall",
+    "bookstore",
+    "superblock"
+   ],
+   "profiles": [
+    "moderate-mobile",
+    "constrained-mobile",
+    "very-constrained"
+   ],
+   "traces": [
+    [
+     "stationary",
+     [
+      "face-centre",
+      "off-axis",
+      "cube-corner",
+      "up"
+     ]
+    ],
+    [
+     "quick-turn",
+     [
+      "face-centre",
+      "off-axis",
+      "cube-corner",
+      "down"
+     ]
+    ]
+   ],
+   "variants": [
+    {
+     "id": "eac",
+     "config": {}
+    },
+    {
+     "id": "cube",
+     "config": {
+      "dataset": {
+       "projection": "cube"
+      }
+     }
+    }
+   ]
+  },
+  "insurance": {
+   "description": "policy A (the view only) against policy B (then the rest of the sphere up to a level, on a share of the requests)",
+   "panoramas": [
+    "northrop-mall",
+    "bookstore",
+    "superblock"
+   ],
+   "profiles": [
+    "moderate-mobile",
+    "constrained-mobile",
+    "very-constrained"
+   ],
+   "traces": [
+    [
+     "stationary",
+     [
+      "face-centre",
+      "off-axis"
+     ]
+    ],
+    [
+     "quick-turn",
+     [
+      "face-centre",
+      "off-axis",
+      "cube-corner"
+     ]
+    ]
+   ],
+   "variants": [
+    {
+     "id": "A",
+     "config": {}
+    },
+    {
+     "id": "B-level0-2slots",
+     "config": {
+      "policy": {
+       "insurance": {
+        "enabled": true,
+        "maxLevel": 0,
+        "slots": 2
+       }
+      }
+     }
+    },
+    {
+     "id": "B-level1-2slots",
+     "config": {
+      "policy": {
+       "insurance": {
+        "enabled": true,
+        "maxLevel": 1,
+        "slots": 2
+       }
+      }
+     }
+    },
+    {
+     "id": "B-level2-2slots",
+     "config": {
+      "policy": {
+       "insurance": {
+        "enabled": true,
+        "maxLevel": 2,
+        "slots": 2
+       }
+      }
+     }
+    },
+    {
+     "id": "B-level1-6slots",
+     "config": {
+      "policy": {
+       "insurance": {
+        "enabled": true,
+        "maxLevel": 1,
+        "slots": 6
+       }
+      }
+     }
+    }
+   ]
+  },
+  "sweeps": {
+   "description": "one parameter at a time around the default",
+   "panoramas": [
+    "northrop-mall",
+    "superblock"
+   ],
+   "profiles": [
+    "moderate-mobile",
+    "constrained-mobile",
+    "very-constrained"
+   ],
+   "traces": [
+    [
+     "stationary",
+     [
+      "off-axis"
+     ]
+    ],
+    [
+     "quick-turn",
+     [
+      "off-axis"
+     ]
+    ]
+   ],
+   "variants": [
+    {
+     "id": "default",
+     "config": {}
+    },
+    {
+     "id": "tile-96",
+     "config": {
+      "dataset": {
+       "tile": 96
+      }
+     }
+    },
+    {
+     "id": "tile-384",
+     "config": {
+      "dataset": {
+       "tile": 384
+      }
+     }
+    },
+    {
+     "id": "requests-2",
+     "config": {
+      "limits": {
+       "requests": 2
+      }
+     }
+    },
+    {
+     "id": "requests-12",
+     "config": {
+      "limits": {
+       "requests": 12,
+       "pendingTiles": 24
+      }
+     }
+    },
+    {
+     "id": "bootstrap-24",
+     "config": {
+      "dataset": {
+       "bootstrap": 24
+      }
+     }
+    },
+    {
+     "id": "bootstrap-96",
+     "config": {
+      "dataset": {
+       "bootstrap": 96
+      }
+     }
+    },
+    {
+     "id": "bootstrap-192",
+     "config": {
+      "dataset": {
+       "bootstrap": 192
+      }
+     }
+    },
+    {
+     "id": "margin-0",
+     "config": {
+      "selection": {
+       "marginDeg": 0
+      }
+     }
+    },
+    {
+     "id": "margin-15",
+     "config": {
+      "selection": {
+       "marginDeg": 15
+      }
+     }
+    },
+    {
+     "id": "no-cancel",
+     "config": {
+      "policy": {
+       "cancel": false
+      }
+     }
+    },
+    {
+     "id": "bootstrap-not-alone",
+     "config": {
+      "policy": {
+       "bootstrapAlone": false
+      }
+     }
+    },
+    {
+     "id": "detail-ratio-2",
+     "config": {
+      "selection": {
+       "detailRatio": 2
+      }
+     }
+    },
+    {
+     "id": "link-to-earliest",
+     "config": {
+      "network": {
+       "sharing": "ordered"
+      }
+     }
+    }
+   ]
+  }
+ },
+ "http": {
+  "note": "Real HTTP/2 over the loopback, Chrome's network emulation, headless Chrome on this machine's GPU. A category of its own: never pooled with the simulation.",
+  "main": {
+   "description": "the candidates and the current whole-image path, cold cache, on throttled links",
+   "backends": [
+    "webgl2"
+   ],
+   "panoramas": [
+    "northrop-mall",
+    "bookstore",
+    "superblock"
+   ],
+   "profiles": [
+    "constrained-mobile",
+    "very-constrained"
+   ],
+   "runs": [
+    [
+     "stationary",
+     "off-axis"
+    ],
+    [
+     "quick-turn",
+     "off-axis"
+    ]
+   ],
+   "repeat": 2,
+   "variants": [
+    {
+     "id": "eac-direct"
+    },
+    {
+     "id": "eac-levels",
+     "config": {
+      "policy": {
+       "refinement": "levels"
+      }
+     }
+    },
+    {
+     "id": "eac-residual",
+     "config": {
+      "policy": {
+       "payload": "residual"
+      }
+     }
+    },
+    {
+     "id": "cube-direct",
+     "config": {
+      "dataset": {
+       "projection": "cube"
+      }
+     }
+    },
+    {
+     "id": "control",
+     "control": true
+    }
+   ]
+  },
+  "backends": {
+   "description": "one dataset on WebGL 1, WebGL 2 and WebGPU, ray lookup and mesh patches, unthrottled, for frame times and uploads",
+   "backends": [
+    "webgl1",
+    "webgl2",
+    "webgpu"
+   ],
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "none"
+   ],
+   "runs": [
+    [
+     "stationary",
+     "off-axis"
+    ],
+    [
+     "explore",
+     "face-centre"
+    ]
+   ],
+   "repeat": 2,
+   "quiet": true,
+   "variants": [
+    {
+     "id": "eac-direct"
+    },
+    {
+     "id": "eac-direct-mesh",
+     "render": "mesh"
+    },
+    {
+     "id": "eac-residual",
+     "config": {
+      "policy": {
+       "payload": "residual"
+      }
+     }
+    },
+    {
+     "id": "control",
+     "control": true
+    }
+   ]
+  },
+  "busy": {
+   "description": "the same on WebGL 2 with one other core kept busy, the other state of the processor",
+   "backends": [
+    "webgl2"
+   ],
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "none"
+   ],
+   "runs": [
+    [
+     "explore",
+     "face-centre"
+    ]
+   ],
+   "repeat": 2,
+   "quiet": true,
+   "keepBusy": 1,
+   "variants": [
+    {
+     "id": "eac-direct"
+    },
+    {
+     "id": "eac-residual",
+     "config": {
+      "policy": {
+       "payload": "residual"
+      }
+     }
+    },
+    {
+     "id": "control",
+     "control": true
+    }
+   ]
+  },
+  "warm": {
+   "description": "cold, then the same page again with the browser's HTTP cache kept",
+   "backends": [
+    "webgl2"
+   ],
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "constrained-mobile"
+   ],
+   "runs": [
+    [
+     "stationary",
+     "off-axis"
+    ]
+   ],
+   "repeat": 2,
+   "warm": true,
+   "variants": [
+    {
+     "id": "eac-direct"
+    },
+    {
+     "id": "control",
+     "control": true
+    }
+   ]
+  },
+  "stress": {
+   "description": "a small GPU budget over three laps of the exploring trace: evictions, re-downloads, a steady footprint",
+   "backends": [
+    "webgl2"
+   ],
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "moderate-mobile"
+   ],
+   "runs": [
+    [
+     "explore",
+     "face-centre"
+    ]
+   ],
+   "repeat": 1,
+   "laps": 3,
+   "variants": [
+    {
+     "id": "eac-direct-64-slots",
+     "config": {
+      "limits": {
+       "gpuSlots": 64
+      }
+     }
+    },
+    {
+     "id": "eac-residual-64-slots-4MiB",
+     "config": {
+      "policy": {
+       "payload": "residual"
+      },
+      "limits": {
+       "gpuSlots": 64,
+       "decodedBytes": 4194304
+      }
+     }
+    }
+   ]
+  },
+  "failures": {
+   "description": "tile requests failing or late from the server",
+   "backends": [
+    "webgl2"
+   ],
+   "panoramas": [
+    "northrop-mall"
+   ],
+   "profiles": [
+    "constrained-mobile"
+   ],
+   "runs": [
+    [
+     "quick-turn",
+     "off-axis"
+    ]
+   ],
+   "repeat": 1,
+   "variants": [
+    {
+     "id": "eac-direct-1-in-4-fail",
+     "faults": {
+      "failEvery": 4
+     }
+    },
+    {
+     "id": "eac-direct-500ms-late",
+     "faults": {
+      "delayMs": 500
+     }
+    }
+   ]
+  }
+ }
+}

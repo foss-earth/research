@@ -1,0 +1,445 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-03T03:24:17.278Z",
+  "commit": "dc1feb4979eca0ce00884a7fc1323c4e51e9525f",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/eac-progressive-prototype/run-http.mjs",
+  "sha256": "4bc8da285ea47c1ecf0e5f377867c5dec6df210b07ac7ebf1a53787b6a8d2c35"
+ },
+ "configuration": {
+  "sets": {
+   "main": {
+    "description": "the candidates and the current whole-image path, cold cache, on throttled links",
+    "backends": [
+     "webgl2"
+    ],
+    "panoramas": [
+     "northrop-mall",
+     "bookstore",
+     "superblock"
+    ],
+    "profiles": [
+     "constrained-mobile",
+     "very-constrained"
+    ],
+    "runs": [
+     [
+      "stationary",
+      "off-axis"
+     ],
+     [
+      "quick-turn",
+      "off-axis"
+     ]
+    ],
+    "repeat": 2,
+    "variants": [
+     {
+      "id": "eac-direct"
+     },
+     {
+      "id": "eac-levels",
+      "config": {
+       "policy": {
+        "refinement": "levels"
+       }
+      }
+     },
+     {
+      "id": "eac-residual",
+      "config": {
+       "policy": {
+        "payload": "residual"
+       }
+      }
+     },
+     {
+      "id": "cube-direct",
+      "config": {
+       "dataset": {
+        "projection": "cube"
+       }
+      }
+     },
+     {
+      "id": "control",
+      "control": true
+     }
+    ]
+   },
+   "warm": {
+    "description": "cold, then the same page again with the browser's HTTP cache kept",
+    "backends": [
+     "webgl2"
+    ],
+    "panoramas": [
+     "northrop-mall"
+    ],
+    "profiles": [
+     "constrained-mobile"
+    ],
+    "runs": [
+     [
+      "stationary",
+      "off-axis"
+     ]
+    ],
+    "repeat": 2,
+    "warm": true,
+    "variants": [
+     {
+      "id": "eac-direct"
+     },
+     {
+      "id": "control",
+      "control": true
+     }
+    ]
+   },
+   "stress": {
+    "description": "a small GPU budget over three laps of the exploring trace: evictions, re-downloads, a steady footprint",
+    "backends": [
+     "webgl2"
+    ],
+    "panoramas": [
+     "northrop-mall"
+    ],
+    "profiles": [
+     "moderate-mobile"
+    ],
+    "runs": [
+     [
+      "explore",
+      "face-centre"
+     ]
+    ],
+    "repeat": 1,
+    "laps": 3,
+    "variants": [
+     {
+      "id": "eac-direct-64-slots",
+      "config": {
+       "limits": {
+        "gpuSlots": 64
+       }
+      }
+     },
+     {
+      "id": "eac-residual-64-slots-4MiB",
+      "config": {
+       "policy": {
+        "payload": "residual"
+       },
+       "limits": {
+        "gpuSlots": 64,
+        "decodedBytes": 4194304
+       }
+      }
+     }
+    ]
+   },
+   "failures": {
+    "description": "tile requests failing or late from the server",
+    "backends": [
+     "webgl2"
+    ],
+    "panoramas": [
+     "northrop-mall"
+    ],
+    "profiles": [
+     "constrained-mobile"
+    ],
+    "runs": [
+     [
+      "quick-turn",
+      "off-axis"
+     ]
+    ],
+    "repeat": 1,
+    "variants": [
+     {
+      "id": "eac-direct-1-in-4-fail",
+      "faults": {
+       "failEvery": 4
+      }
+     },
+     {
+      "id": "eac-direct-500ms-late",
+      "faults": {
+       "delayMs": 500
+      }
+     }
+    ]
+   },
+   "backends": {
+    "description": "one dataset on WebGL 1, WebGL 2 and WebGPU, ray lookup and mesh patches, unthrottled, for frame times and uploads",
+    "backends": [
+     "webgl1",
+     "webgl2",
+     "webgpu"
+    ],
+    "panoramas": [
+     "northrop-mall"
+    ],
+    "profiles": [
+     "none"
+    ],
+    "runs": [
+     [
+      "stationary",
+      "off-axis"
+     ],
+     [
+      "explore",
+      "face-centre"
+     ]
+    ],
+    "repeat": 2,
+    "quiet": true,
+    "variants": [
+     {
+      "id": "eac-direct"
+     },
+     {
+      "id": "eac-direct-mesh",
+      "render": "mesh"
+     },
+     {
+      "id": "eac-residual",
+      "config": {
+       "policy": {
+        "payload": "residual"
+       }
+      }
+     },
+     {
+      "id": "control",
+      "control": true
+     }
+    ]
+   },
+   "busy": {
+    "description": "the same on WebGL 2 with one other core kept busy, the other state of the processor",
+    "backends": [
+     "webgl2"
+    ],
+    "panoramas": [
+     "northrop-mall"
+    ],
+    "profiles": [
+     "none"
+    ],
+    "runs": [
+     [
+      "explore",
+      "face-centre"
+     ]
+    ],
+    "repeat": 2,
+    "quiet": true,
+    "keepBusy": 1,
+    "variants": [
+     {
+      "id": "eac-direct"
+     },
+     {
+      "id": "eac-residual",
+      "config": {
+       "policy": {
+        "payload": "residual"
+       }
+      }
+     },
+     {
+      "id": "control",
+      "control": true
+     }
+    ]
+   }
+  },
+  "category": "throttled real HTTP over the loopback, Chrome's network emulation; not a remote host"
+ },
+ "browser": "Chrome/154.0.8037.95",
+ "gpu": {
+  "devices": [
+   {
+    "vendorId": 4203,
+    "deviceId": 0,
+    "vendorString": "Google Inc. (Apple)",
+    "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+    "driverVendor": "Apple",
+    "driverVersion": "27.0"
+   }
+  ],
+  "auxAttributes": {
+   "amdSwitchable": false,
+   "canSupportThreadedTextureMailbox": false,
+   "directRenderingVersion": "",
+   "displayType": "ANGLE_METAL",
+   "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_IMG_texture_compression_pvrtc GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_NV_fence GL_NV_framebuffer_blit GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_QCOM_render_shared_exponent ",
+   "glImplementationParts": "(gl=egl-angle,angle=metal)",
+   "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+   "glResetNotificationStrategy": 33362,
+   "glVendor": "Google Inc. (Apple)",
+   "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28733 git hash: 802a8704ca94)",
+   "glWsExtensions": "",
+   "glWsVendor": "",
+   "glWsVersion": "",
+   "inProcessGpu": false,
+   "initializationTime": 0.031437,
+   "isAsan": false,
+   "isClangCoverage": false,
+   "jpegDecodeAcceleratorSupported": false,
+   "maxMsaaSamples": "8",
+   "optimus": false,
+   "passthroughCmdDecoder": true,
+   "pixelShaderVersion": "3.00",
+   "processCrashCount": 0,
+   "sandboxed": true,
+   "skiaBackendType": "GraphiteDawnMetal",
+   "subpixelFontRendering": true,
+   "targetCpuBits": 64,
+   "vertexShaderVersion": "3.00",
+   "visibilityCallbackCallCount": 0
+  }
+ },
+ "backends": {
+  "webgl2": {
+   "requested": "webgl2",
+   "description": "WebGL2 - Parallel shader compilation",
+   "isWebGPU": false,
+   "webGLVersion": 2,
+   "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+   "fragmentHighFloatPrecisionBits": 23,
+   "maxTextureSize": 16384,
+   "timerQuery": true,
+   "drawingBuffer": {
+    "width": 1081,
+    "height": 2401
+   },
+   "devicePixelRatio": 2.625,
+   "crossOriginIsolated": true,
+   "userAgent": "foss-earth-check/1.0"
+  },
+  "webgl1": {
+   "requested": "webgl1",
+   "description": "WebGL1 - Parallel shader compilation",
+   "isWebGPU": false,
+   "webGLVersion": 1,
+   "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+   "fragmentHighFloatPrecisionBits": 23,
+   "maxTextureSize": 16384,
+   "timerQuery": true,
+   "drawingBuffer": {
+    "width": 1081,
+    "height": 2401
+   },
+   "devicePixelRatio": 2.625,
+   "crossOriginIsolated": true,
+   "userAgent": "foss-earth-check/1.0"
+  },
+  "webgpu": {
+   "requested": "webgpu",
+   "description": "WebGPU1",
+   "isWebGPU": true,
+   "webGLVersion": null,
+   "renderer": null,
+   "fragmentHighFloatPrecisionBits": null,
+   "maxTextureSize": 8192,
+   "timerQuery": true,
+   "drawingBuffer": {
+    "width": 1081,
+    "height": 2401
+   },
+   "devicePixelRatio": 2.625,
+   "crossOriginIsolated": true,
+   "userAgent": "foss-earth-check/1.0"
+  }
+ },
+ "calibration": {
+  "constrained-mobile": {
+   "nominal": {
+    "id": "constrained-mobile",
+    "megabitsPerSecond": 2,
+    "roundTripMs": 100
+   },
+   "measured": {
+    "smallRequestMs": [
+     112.74000000953674,
+     107.47000002861023,
+     101.18500006198883,
+     108.49000000953674,
+     107.45000004768372
+    ],
+    "oneMiB": {
+     "ms": 4300.139999985695,
+     "bytes": 1048576
+    },
+    "sixQuarterMiB": {
+     "ms": 6405.850000023842,
+     "bytes": 1572864
+    },
+    "protocol": "h2"
+   }
+  },
+  "very-constrained": {
+   "nominal": {
+    "id": "very-constrained",
+    "megabitsPerSecond": 0.75,
+    "roundTripMs": 150
+   },
+   "measured": {
+    "smallRequestMs": [
+     165.82499992847443,
+     160.125,
+     160.13999998569489,
+     159.5,
+     161.1799999475479
+    ],
+    "oneMiB": {
+     "ms": 11349.71499991417,
+     "bytes": 1048576
+    },
+    "sixQuarterMiB": {
+     "ms": 16956.18500006199,
+     "bytes": 1572864
+    },
+    "protocol": "h2"
+   }
+  },
+  "moderate-mobile": {
+   "nominal": {
+    "id": "moderate-mobile",
+    "megabitsPerSecond": 10,
+    "roundTripMs": 50
+   },
+   "measured": {
+    "smallRequestMs": [
+     52.295000076293945,
+     54.99000000953674,
+     56.61500000953674,
+     55.25,
+     55.35000002384186
+    ],
+    "oneMiB": {
+     "ms": 893.9099999666214,
+     "bytes": 1048576
+    },
+    "sixQuarterMiB": {
+     "ms": 1316.460000038147,
+     "bytes": 1572864
+    },
+    "protocol": "h2"
+   }
+  }
+ }
+}

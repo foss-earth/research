@@ -1,0 +1,284 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-03T03:38:36.489Z",
+  "commit": "dc1feb4979eca0ce00884a7fc1323c4e51e9525f",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/eac-progressive-prototype/tests/check-residual.mjs",
+  "sha256": "421c512c557e2ffc16f0f77e1e9bc6f978132e3332605d6d10695f2c91d782df"
+ },
+ "configuration": {},
+ "syntheticChain": {
+  "smooth gradient": [
+   {
+    "quadrant": "0,0",
+    "level": 0,
+    "replacementPsnr": 43.8,
+    "residualPsnr": 43.8,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 1,
+    "replacementPsnr": 46.56,
+    "residualPsnr": 46.89,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 2,
+    "replacementPsnr": 48.04,
+    "residualPsnr": 48.22,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 3,
+    "replacementPsnr": 48.65,
+    "residualPsnr": 48.54,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 0,
+    "replacementPsnr": 43.8,
+    "residualPsnr": 43.8,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 1,
+    "replacementPsnr": 46.04,
+    "residualPsnr": 45.94,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 2,
+    "replacementPsnr": 48.32,
+    "residualPsnr": 47.27,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 3,
+    "replacementPsnr": 49.44,
+    "residualPsnr": 48.43,
+    "clippedShare": 0
+   }
+  ],
+  "hard edges": [
+   {
+    "quadrant": "0,0",
+    "level": 0,
+    "replacementPsnr": 18.45,
+    "residualPsnr": 18.45,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 1,
+    "replacementPsnr": 20.26,
+    "residualPsnr": 20.56,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 2,
+    "replacementPsnr": 22.68,
+    "residualPsnr": 23.06,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 3,
+    "replacementPsnr": 24.17,
+    "residualPsnr": 24.36,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 0,
+    "replacementPsnr": 18.45,
+    "residualPsnr": 18.45,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 1,
+    "replacementPsnr": 20.55,
+    "residualPsnr": 20.7,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 2,
+    "replacementPsnr": 22.57,
+    "residualPsnr": 22.95,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 3,
+    "replacementPsnr": 24.55,
+    "residualPsnr": 24.66,
+    "clippedShare": 0
+   }
+  ],
+  "detail only the finest level resolves": [
+   {
+    "quadrant": "0,0",
+    "level": 0,
+    "replacementPsnr": 49.15,
+    "residualPsnr": 49.15,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 1,
+    "replacementPsnr": 50.92,
+    "residualPsnr": 53.36,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 2,
+    "replacementPsnr": 37.36,
+    "residualPsnr": 37.47,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "0,0",
+    "level": 3,
+    "replacementPsnr": 37.13,
+    "residualPsnr": 21.23,
+    "clippedShare": 0.0196
+   },
+   {
+    "quadrant": "1,1",
+    "level": 0,
+    "replacementPsnr": 49.15,
+    "residualPsnr": 49.15,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 1,
+    "replacementPsnr": 100,
+    "residualPsnr": 100,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 2,
+    "replacementPsnr": 37.36,
+    "residualPsnr": 37.64,
+    "clippedShare": 0
+   },
+   {
+    "quadrant": "1,1",
+    "level": 3,
+    "replacementPsnr": 37.13,
+    "residualPsnr": 21.24,
+    "clippedShare": 0.0196
+   }
+  ]
+ },
+ "decoderMismatch": {
+  "decoders": "libjpeg-turbo 3.2.0 (djpeg) against macOS ImageIO (sips)",
+  "rows": [
+   {
+    "tile": 281,
+    "level": 0,
+    "psnrBetweenDecoders": 36.75,
+    "largestDifference": 38,
+    "psnrAgainstReplacementTile": 100
+   },
+   {
+    "tile": 281,
+    "level": 1,
+    "psnrBetweenDecoders": 39.08,
+    "largestDifference": 40,
+    "psnrAgainstReplacementTile": 34.27
+   },
+   {
+    "tile": 281,
+    "level": 2,
+    "psnrBetweenDecoders": 37.89,
+    "largestDifference": 34,
+    "psnrAgainstReplacementTile": 35.13
+   },
+   {
+    "tile": 281,
+    "level": 3,
+    "psnrBetweenDecoders": 38.22,
+    "largestDifference": 26,
+    "psnrAgainstReplacementTile": 38.45
+   },
+   {
+    "tile": 403,
+    "level": 0,
+    "psnrBetweenDecoders": 46.58,
+    "largestDifference": 46,
+    "psnrAgainstReplacementTile": 100
+   },
+   {
+    "tile": 403,
+    "level": 1,
+    "psnrBetweenDecoders": 54.31,
+    "largestDifference": 4,
+    "psnrAgainstReplacementTile": 46.72
+   },
+   {
+    "tile": 403,
+    "level": 2,
+    "psnrBetweenDecoders": 53.73,
+    "largestDifference": 4,
+    "psnrAgainstReplacementTile": 46.82
+   },
+   {
+    "tile": 403,
+    "level": 3,
+    "psnrBetweenDecoders": 51.43,
+    "largestDifference": 5,
+    "psnrAgainstReplacementTile": 47.39
+   },
+   {
+    "tile": 189,
+    "level": 0,
+    "psnrBetweenDecoders": 39.16,
+    "largestDifference": 52,
+    "psnrAgainstReplacementTile": 100
+   },
+   {
+    "tile": 189,
+    "level": 1,
+    "psnrBetweenDecoders": 43.19,
+    "largestDifference": 33,
+    "psnrAgainstReplacementTile": 36.21
+   },
+   {
+    "tile": 189,
+    "level": 2,
+    "psnrBetweenDecoders": 44.55,
+    "largestDifference": 30,
+    "psnrAgainstReplacementTile": 34.76
+   },
+   {
+    "tile": 189,
+    "level": 3,
+    "psnrBetweenDecoders": 44.34,
+    "largestDifference": 21,
+    "psnrAgainstReplacementTile": 35.43
+   }
+  ]
+ }
+}

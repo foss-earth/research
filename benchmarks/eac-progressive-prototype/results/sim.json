@@ -1,0 +1,434 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-02T22:59:25.146Z",
+  "commit": "dc1feb4979eca0ce00884a7fc1323c4e51e9525f",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/eac-progressive-prototype/run-sim.mjs",
+  "sha256": "1f8b9fcb8f4c244663c42d1be559ad97ed23d2bf64b765d4d325c1b87193c008"
+ },
+ "configuration": {
+  "default": {
+   "id": "default-v1",
+   "note": "The starting configuration of every experiment. Experimental defaults, taken from Phase 1 where it had one; not production recommendations.",
+   "viewport": {
+    "cssWidth": 412,
+    "cssHeight": 915,
+    "devicePixelRatio": 2.625,
+    "verticalFovDeg": 75,
+    "why": "the phone viewport of benchmarks/scene-ab; Phase 1 drew at the same 1080 x 2400 with a 75 degree vertical field of view"
+   },
+   "dataset": {
+    "projection": "eac",
+    "tile": 192,
+    "bootstrap": 48
+   },
+   "selection": {
+    "detailRatio": 1,
+    "marginDeg": 5,
+    "scoutFraction": 0.5
+   },
+   "policy": {
+    "refinement": "direct",
+    "payload": "replacement",
+    "bootstrapAlone": true,
+    "cancel": true,
+    "insurance": {
+     "enabled": false,
+     "maxLevel": 1,
+     "slots": 2
+    }
+   },
+   "limits": {
+    "requests": 6,
+    "inflightBytes": 4194304,
+    "pendingTiles": 12,
+    "decodes": 2,
+    "uploadsPerFrame": 2,
+    "gpuSlots": 196,
+    "decodedBytes": 33554432,
+    "retries": 3,
+    "retryBackoffMs": 250
+   },
+   "render": {
+    "path": "ray"
+   },
+   "quality": {
+    "acceptableShortfallDb": 3,
+    "highShortfallDb": 1,
+    "sampleMs": 250,
+    "why": "Phase 1's operational thresholds, kept for continuity; not validated perceptual limits"
+   }
+  },
+  "sets": {
+   "policies": {
+    "description": "progression: the finest level the view needs at once, every level from 0, or residual differences level by level",
+    "panoramas": [
+     "northrop-mall",
+     "bookstore",
+     "superblock"
+    ],
+    "profiles": [
+     "fast",
+     "moderate-mobile",
+     "constrained-mobile",
+     "very-constrained"
+    ],
+    "traces": [
+     [
+      "stationary",
+      [
+       "face-centre",
+       "off-axis",
+       "cube-corner",
+       "up"
+      ]
+     ],
+     [
+      "quick-turn",
+      [
+       "face-centre",
+       "off-axis",
+       "cube-corner",
+       "down"
+      ]
+     ],
+     [
+      "slow-turn",
+      [
+       "face-centre"
+      ]
+     ],
+     [
+      "explore",
+      [
+       "face-centre"
+      ]
+     ]
+    ],
+    "variants": [
+     {
+      "id": "direct",
+      "config": {}
+     },
+     {
+      "id": "levels",
+      "config": {
+       "policy": {
+        "refinement": "levels"
+       }
+      }
+     },
+     {
+      "id": "residual",
+      "config": {
+       "policy": {
+        "payload": "residual"
+       }
+      }
+     }
+    ]
+   },
+   "representation": {
+    "description": "the equi-angular cube against the ordinary cubemap, same faces, tiles, encoder and client",
+    "panoramas": [
+     "northrop-mall",
+     "bookstore",
+     "superblock"
+    ],
+    "profiles": [
+     "moderate-mobile",
+     "constrained-mobile",
+     "very-constrained"
+    ],
+    "traces": [
+     [
+      "stationary",
+      [
+       "face-centre",
+       "off-axis",
+       "cube-corner",
+       "up"
+      ]
+     ],
+     [
+      "quick-turn",
+      [
+       "face-centre",
+       "off-axis",
+       "cube-corner",
+       "down"
+      ]
+     ]
+    ],
+    "variants": [
+     {
+      "id": "eac",
+      "config": {}
+     },
+     {
+      "id": "cube",
+      "config": {
+       "dataset": {
+        "projection": "cube"
+       }
+      }
+     }
+    ]
+   },
+   "insurance": {
+    "description": "policy A (the view only) against policy B (then the rest of the sphere up to a level, on a share of the requests)",
+    "panoramas": [
+     "northrop-mall",
+     "bookstore",
+     "superblock"
+    ],
+    "profiles": [
+     "moderate-mobile",
+     "constrained-mobile",
+     "very-constrained"
+    ],
+    "traces": [
+     [
+      "stationary",
+      [
+       "face-centre",
+       "off-axis"
+      ]
+     ],
+     [
+      "quick-turn",
+      [
+       "face-centre",
+       "off-axis",
+       "cube-corner"
+      ]
+     ]
+    ],
+    "variants": [
+     {
+      "id": "A",
+      "config": {}
+     },
+     {
+      "id": "B-level0-2slots",
+      "config": {
+       "policy": {
+        "insurance": {
+         "enabled": true,
+         "maxLevel": 0,
+         "slots": 2
+        }
+       }
+      }
+     },
+     {
+      "id": "B-level1-2slots",
+      "config": {
+       "policy": {
+        "insurance": {
+         "enabled": true,
+         "maxLevel": 1,
+         "slots": 2
+        }
+       }
+      }
+     },
+     {
+      "id": "B-level2-2slots",
+      "config": {
+       "policy": {
+        "insurance": {
+         "enabled": true,
+         "maxLevel": 2,
+         "slots": 2
+        }
+       }
+      }
+     },
+     {
+      "id": "B-level1-6slots",
+      "config": {
+       "policy": {
+        "insurance": {
+         "enabled": true,
+         "maxLevel": 1,
+         "slots": 6
+        }
+       }
+      }
+     }
+    ]
+   },
+   "sweeps": {
+    "description": "one parameter at a time around the default",
+    "panoramas": [
+     "northrop-mall",
+     "superblock"
+    ],
+    "profiles": [
+     "moderate-mobile",
+     "constrained-mobile",
+     "very-constrained"
+    ],
+    "traces": [
+     [
+      "stationary",
+      [
+       "off-axis"
+      ]
+     ],
+     [
+      "quick-turn",
+      [
+       "off-axis"
+      ]
+     ]
+    ],
+    "variants": [
+     {
+      "id": "default",
+      "config": {}
+     },
+     {
+      "id": "tile-96",
+      "config": {
+       "dataset": {
+        "tile": 96
+       }
+      }
+     },
+     {
+      "id": "tile-384",
+      "config": {
+       "dataset": {
+        "tile": 384
+       }
+      }
+     },
+     {
+      "id": "requests-2",
+      "config": {
+       "limits": {
+        "requests": 2
+       }
+      }
+     },
+     {
+      "id": "requests-12",
+      "config": {
+       "limits": {
+        "requests": 12,
+        "pendingTiles": 24
+       }
+      }
+     },
+     {
+      "id": "bootstrap-24",
+      "config": {
+       "dataset": {
+        "bootstrap": 24
+       }
+      }
+     },
+     {
+      "id": "bootstrap-96",
+      "config": {
+       "dataset": {
+        "bootstrap": 96
+       }
+      }
+     },
+     {
+      "id": "bootstrap-192",
+      "config": {
+       "dataset": {
+        "bootstrap": 192
+       }
+      }
+     },
+     {
+      "id": "margin-0",
+      "config": {
+       "selection": {
+        "marginDeg": 0
+       }
+      }
+     },
+     {
+      "id": "margin-15",
+      "config": {
+       "selection": {
+        "marginDeg": 15
+       }
+      }
+     },
+     {
+      "id": "no-cancel",
+      "config": {
+       "policy": {
+        "cancel": false
+       }
+      }
+     },
+     {
+      "id": "bootstrap-not-alone",
+      "config": {
+       "policy": {
+        "bootstrapAlone": false
+       }
+      }
+     },
+     {
+      "id": "detail-ratio-2",
+      "config": {
+       "selection": {
+        "detailRatio": 2
+       }
+      }
+     },
+     {
+      "id": "link-to-earliest",
+      "config": {
+       "network": {
+        "sharing": "ordered"
+       }
+      }
+     }
+    ]
+   }
+  },
+  "profiles": [
+   {
+    "id": "fast",
+    "megabitsPerSecond": 50,
+    "roundTripMs": 20
+   },
+   {
+    "id": "moderate-mobile",
+    "megabitsPerSecond": 10,
+    "roundTripMs": 50
+   },
+   {
+    "id": "constrained-mobile",
+    "megabitsPerSecond": 2,
+    "roundTripMs": 100
+   },
+   {
+    "id": "very-constrained",
+    "megabitsPerSecond": 0.75,
+    "roundTripMs": 150
+   }
+  ],
+  "stride": 2,
+  "category": "simulation: Phase 1's network model, no browser"
+ }
+}

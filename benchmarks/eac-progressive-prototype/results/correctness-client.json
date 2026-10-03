@@ -1,0 +1,126 @@
+{
+ "environment": {
+  "generatedAt": "2026-10-03T03:38:36.951Z",
+  "commit": "dc1feb4979eca0ce00884a7fc1323c4e51e9525f",
+  "workingTreeDirty": true,
+  "node": "v26.9.0",
+  "v8": "14.6.202.34-node.32",
+  "platform": "Darwin 27.0.0 arm64",
+  "os": "27.0",
+  "cpu": "Apple M5",
+  "cores": 10,
+  "memoryGiB": 16
+ },
+ "script": {
+  "path": "benchmarks/eac-progressive-prototype/tests/check-client.mjs",
+  "sha256": "fc3e9a09d0c7178955f3a49f6c7feddaba8f56f32480d6d6889da4599b1c5834"
+ },
+ "configuration": {
+  "viewport": {
+   "width": 1082,
+   "height": 2402,
+   "verticalFovDeg": 75
+  },
+  "dataset": "northrop-mall/eac-t192"
+ },
+ "direct replacement": {
+  "firstViewCompleteMs": 4250,
+  "bootstrapMs": 120,
+  "requests": 113,
+  "bytesReceived": 936970.5,
+  "cancelled": 19,
+  "cancelledBytes": 40911.5,
+  "insuranceBytes": 0,
+  "peak": {
+   "inflightRequests": 6,
+   "inflightBytes": 76710,
+   "compressedBytes": 13280,
+   "decodedBytes": 0,
+   "pendingTiles": 3,
+   "residentTiles": 93
+  }
+ },
+ "every level": {
+  "firstViewCompleteMs": 5250,
+  "bootstrapMs": 120,
+  "requests": 119,
+  "bytesReceived": 1172776,
+  "cancelled": 11,
+  "cancelledBytes": 33254,
+  "insuranceBytes": 0,
+  "peak": {
+   "inflightRequests": 6,
+   "inflightBytes": 92082,
+   "compressedBytes": 0,
+   "decodedBytes": 0,
+   "pendingTiles": 2,
+   "residentTiles": 107
+  }
+ },
+ "residual": {
+  "firstViewCompleteMs": 4750,
+  "bootstrapMs": 120,
+  "requests": 124,
+  "bytesReceived": 1045489.8888888889,
+  "cancelled": 7,
+  "cancelledBytes": 34592.88888888889,
+  "insuranceBytes": 0,
+  "peak": {
+   "inflightRequests": 6,
+   "inflightBytes": 76477,
+   "compressedBytes": 53136,
+   "decodedBytes": 7226112,
+   "pendingTiles": 5,
+   "residentTiles": 116
+  }
+ },
+ "insurance": {
+  "firstViewCompleteMs": 4250,
+  "bootstrapMs": 120,
+  "requests": 140,
+  "bytesReceived": 1244964.5,
+  "cancelled": 19,
+  "cancelledBytes": 40911.5,
+  "insuranceBytes": 307994,
+  "peak": {
+   "inflightRequests": 6,
+   "inflightBytes": 76710,
+   "compressedBytes": 13280,
+   "decodedBytes": 0,
+   "pendingTiles": 3,
+   "residentTiles": 120
+  }
+ },
+ "one request in three failing, 400 ms late": {
+  "failures": 51,
+  "retries": 51,
+  "uploads": 106
+ },
+ "40 slots, residual, three laps": {
+  "evictions": 451,
+  "redownloads": 357,
+  "rematerialized": 0,
+  "dropped": 6,
+  "levelCapped": 4765,
+  "gpuHits": 61125,
+  "gpuMisses": 1066,
+  "peak": {
+   "inflightRequests": 6,
+   "inflightBytes": 71030,
+   "compressedBytes": 40112,
+   "decodedBytes": 4064688,
+   "pendingTiles": 6,
+   "residentTiles": 40
+  }
+ },
+ "left with requests in flight": {
+  "inFlight": 6,
+  "staleResponsesIgnored": 6
+ },
+ "quick turn at 0.75 Mbit/s": {
+  "cancelled": 26,
+  "cancelledBytes": 11250,
+  "bytesReceived": 636231,
+  "bytesNeverShown": 170844
+ }
+}

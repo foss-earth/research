@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="912" viewBox="0 0 980 912" role="img">
+<style>
+  :root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --quiet: #b5b3ab;
+    --s1: #2a78d6;
+    --s2: #eb6834;
+    --s3: #1baf7a;
+    --s4: #eda100;
+    --s5: #e87ba4;
+    --s6: #008300;
+    --s7: #4a3aa7;
+    --s8: #e34948; }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835; --quiet: #5c5b56;
+      --s1: #3987e5;
+      --s2: #d95926;
+      --s3: #199e70;
+      --s4: #c98500;
+      --s5: #d55181;
+      --s6: #008300;
+      --s7: #9085e9;
+      --s8: #e66767; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: var(--ink2); }
+  .title { font-size: 15px; font-weight: 600; fill: var(--ink); }
+  .subtitle { font-size: 12px; fill: var(--ink2); }
+  .panel-title { font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+  .tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .value { font-size: 11.5px; fill: var(--ink); font-variant-numeric: tabular-nums; }
+  .note { font-size: 11px; fill: var(--muted); }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect width="100%" height="100%" fill="var(--surface)"/>
+<text x="16" y="24" class="title" text-anchor="start">View quality over time over throttled real HTTP (loopback, Chrome's emulation, WebGL 2)</text>
+<text x="16" y="44" class="subtitle" text-anchor="start">Absolute PSNR against the source, median over two repetitions; one panorama per row. The current path shows its 64-texel preview, then the</text>
+<text x="16" y="61" class="subtitle" text-anchor="start">whole 6144 image.</text>
+<text x="16" y="90" class="panel-title" text-anchor="start">northrop-mall, stationary, 2 Mbit/s</text>
+<line x1="60" y1="274.89" x2="466" y2="274.89" class="grid"/>
+<text x="54" y="278.89" class="tick" text-anchor="end">15</text>
+<line x1="60" y1="229.33" x2="466" y2="229.33" class="grid"/>
+<text x="54" y="233.33" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="183.78" x2="466" y2="183.78" class="grid"/>
+<text x="54" y="187.78" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="138.22" x2="466" y2="138.22" class="grid"/>
+<text x="54" y="142.22" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="284" x2="466" y2="284" class="axis"/>
+<line x1="60" y1="284" x2="60" y2="288" class="axis"/>
+<text x="60" y="300" class="tick" text-anchor="middle">0</text>
+<line x1="141.2" y1="284" x2="141.2" y2="288" class="axis"/>
+<text x="141.2" y="300" class="tick" text-anchor="middle">2</text>
+<line x1="222.4" y1="284" x2="222.4" y2="288" class="axis"/>
+<text x="222.4" y="300" class="tick" text-anchor="middle">4</text>
+<line x1="303.6" y1="284" x2="303.6" y2="288" class="axis"/>
+<text x="303.6" y="300" class="tick" text-anchor="middle">6</text>
+<line x1="384.8" y1="284" x2="384.8" y2="288" class="axis"/>
+<text x="384.8" y="300" class="tick" text-anchor="middle">8</text>
+<line x1="466" y1="284" x2="466" y2="288" class="axis"/>
+<text x="466" y="300" class="tick" text-anchor="middle">10</text>
+<text x="263" y="315" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="110" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M70.15 278.62 L80.3 278.62 L90.45 263.96 L100.6 246.01 L110.75 233.07 L120.9 203.59 L131.05 183.46 L141.2 146.01 L151.35 120.64 L161.5 120.64 L171.65 120.64 L181.8 120.64 L191.95 120.64 L202.1 120.64 L212.25 120.64 L222.4 120.64 L232.55 120.64 L242.7 120.64 L252.85 120.64 L263 120.64 L273.15 120.64 L283.3 120.64 L293.45 120.64 L303.6 120.64 L313.75 120.64 L323.9 120.64 L334.05 120.64 L344.2 120.64 L354.35 120.64 L364.5 120.64 L374.65 120.64 L384.8 120.64 L394.95 120.64 L405.1 120.64 L415.25 120.64 L425.4 120.64 L435.55 120.64 L445.7 120.64 L455.85 120.64" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M70.15 278.62 L80.3 277.8 L90.45 226.6 L100.6 225.69 L110.75 195.9 L120.9 186.65 L131.05 183.05 L141.2 169.97 L151.35 158.54 L161.5 147.24 L171.65 135.63 L181.8 124.56 L191.95 122.1 L202.1 120.64 L212.25 120.64 L222.4 120.64 L232.55 120.64 L242.7 120.64 L252.85 120.64 L263 120.64 L273.15 120.64 L283.3 120.64 L293.45 120.64 L303.6 120.64 L313.75 120.64 L323.9 120.64 L334.05 120.64 L344.2 120.64 L354.35 120.64 L364.5 120.64 L374.65 120.64 L384.8 120.64 L394.95 120.64 L405.1 120.64 L415.25 120.64 L425.4 120.64 L435.55 120.64 L445.7 120.64 L455.85 120.64" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M70.15 278.62 L80.3 277.8 L90.45 226.6 L100.6 202.23 L110.75 189.52 L120.9 183.5 L131.05 168.38 L141.2 152.98 L151.35 137.04 L161.5 126.01 L171.65 121.91 L181.8 120.64 L191.95 120.64 L202.1 120.64 L212.25 120.64 L222.4 120.64 L232.55 120.64 L242.7 120.64 L252.85 120.64 L263 120.64 L273.15 120.64 L283.3 120.64 L293.45 120.64 L303.6 120.64 L313.75 120.64 L323.9 120.64 L334.05 120.64 L344.2 120.64 L354.35 120.64 L364.5 120.64 L374.65 120.64 L384.8 120.64 L394.95 120.64 L405.1 120.64 L415.25 120.64 L425.4 120.64 L435.55 120.64 L445.7 120.64 L455.85 120.64" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M70.15 280.36 L80.3 279.26 L90.45 264.78 L100.6 236.99 L110.75 213.12 L120.9 192.8 L131.05 175.3 L141.2 131.94 L151.35 131.57 L161.5 131.57 L171.65 131.57 L181.8 131.57 L191.95 131.57 L202.1 131.57 L212.25 131.57 L222.4 131.57 L232.55 131.57 L242.7 131.57 L252.85 131.57 L263 131.57 L273.15 131.57 L283.3 131.57 L293.45 131.57 L303.6 131.57 L313.75 131.57 L323.9 131.57 L334.05 131.57 L344.2 131.57 L354.35 131.57 L364.5 131.57 L374.65 131.57 L384.8 131.57 L394.95 131.57 L405.1 131.57 L415.25 131.57 L425.4 131.57 L435.55 131.57 L445.7 131.57 L455.85 131.57" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M70.15 276.72 L80.3 276.72 L90.45 276.72 L100.6 276.72 L110.75 276.72 L120.9 276.72 L131.05 276.72 L141.2 276.72 L151.35 276.72 L161.5 276.72 L171.65 276.72 L181.8 276.72 L191.95 276.72 L202.1 276.72 L212.25 276.72 L222.4 276.72 L232.55 276.72 L242.7 276.72 L252.85 276.72 L263 276.72 L273.15 276.72 L283.3 276.72 L293.45 276.72 L303.6 276.72 L313.75 276.72 L323.9 276.72 L334.05 276.72 L344.2 276.72 L354.35 276.72 L364.5 276.72 L374.65 276.72 L384.8 276.72 L394.95 276.72 L405.1 276.72 L415.25 276.72 L425.4 276.72 L435.55 276.72 L445.7 276.72 L455.85 276.72" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<text x="496" y="90" class="panel-title" text-anchor="start">northrop-mall, quick-turn, 2 Mbit/s</text>
+<line x1="540" y1="275.8" x2="946" y2="275.8" class="grid"/>
+<text x="534" y="279.8" class="tick" text-anchor="end">15</text>
+<line x1="540" y1="234.8" x2="946" y2="234.8" class="grid"/>
+<text x="534" y="238.8" class="tick" text-anchor="end">20</text>
+<line x1="540" y1="193.8" x2="946" y2="193.8" class="grid"/>
+<text x="534" y="197.8" class="tick" text-anchor="end">25</text>
+<line x1="540" y1="152.8" x2="946" y2="152.8" class="grid"/>
+<text x="534" y="156.8" class="tick" text-anchor="end">30</text>
+<line x1="540" y1="284" x2="946" y2="284" class="axis"/>
+<line x1="540" y1="284" x2="540" y2="288" class="axis"/>
+<text x="540" y="300" class="tick" text-anchor="middle">0</text>
+<line x1="621.2" y1="284" x2="621.2" y2="288" class="axis"/>
+<text x="621.2" y="300" class="tick" text-anchor="middle">2</text>
+<line x1="702.4" y1="284" x2="702.4" y2="288" class="axis"/>
+<text x="702.4" y="300" class="tick" text-anchor="middle">4</text>
+<line x1="783.6" y1="284" x2="783.6" y2="288" class="axis"/>
+<text x="783.6" y="300" class="tick" text-anchor="middle">6</text>
+<line x1="864.8" y1="284" x2="864.8" y2="288" class="axis"/>
+<text x="864.8" y="300" class="tick" text-anchor="middle">8</text>
+<line x1="946" y1="284" x2="946" y2="288" class="axis"/>
+<text x="946" y="300" class="tick" text-anchor="middle">10</text>
+<text x="743" y="315" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="496" y="110" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M550.15 279.16 L560.3 279.16 L570.45 265.96 L580.6 249.81 L590.75 237.14 L600.9 211.63 L611.05 190.85 L621.2 159.89 L631.35 241.15 L641.5 262.48 L651.65 267.72 L661.8 257.35 L671.95 241.52 L682.1 226.6 L692.25 196.14 L702.4 164.81 L712.55 134.02 L722.7 134.02 L732.85 134.02 L743 134.02 L753.15 134.02 L763.3 134.02 L773.45 134.02 L783.6 134.02 L793.75 134.02 L803.9 134.02 L814.05 134.02 L824.2 134.02 L834.35 134.02 L844.5 134.02 L854.65 134.02 L864.8 134.02 L874.95 134.02 L885.1 134.02 L895.25 134.02 L905.4 134.02 L915.55 134.02 L925.7 134.02 L935.85 134.02" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M550.15 279.16 L560.3 278.42 L570.45 232.34 L580.6 231.52 L590.75 203.72 L600.9 196.34 L611.05 193.8 L621.2 182.11 L631.35 242.1 L641.5 263.13 L651.65 244.89 L661.8 222.91 L671.95 199.87 L682.1 191.83 L692.25 183.71 L702.4 170.02 L712.55 163.05 L722.7 148.29 L732.85 142.14 L743 134.35 L753.15 134.02 L763.3 134.02 L773.45 134.02 L783.6 134.02 L793.75 134.02 L803.9 134.02 L814.05 134.02 L824.2 134.02 L834.35 134.02 L844.5 134.02 L854.65 134.02 L864.8 134.02 L874.95 134.02 L885.1 134.02 L895.25 134.02 L905.4 134.02 L915.55 134.02 L925.7 134.02 L935.85 134.02" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M550.15 279.16 L560.3 278.42 L570.45 232.34 L580.6 210.4 L590.75 200.61 L600.9 193.55 L611.05 180.27 L621.2 166.95 L631.35 241.48 L641.5 262.68 L651.65 242.88 L661.8 220.2 L671.95 194.91 L682.1 185.89 L692.25 170.18 L702.4 160.26 L712.55 143.53 L722.7 136.73 L732.85 133.69 L743 133.69 L753.15 133.69 L763.3 133.69 L773.45 133.69 L783.6 133.69 L793.75 133.69 L803.9 133.69 L814.05 133.69 L824.2 133.69 L834.35 133.69 L844.5 133.69 L854.65 133.69 L864.8 133.69 L874.95 133.69 L885.1 133.69 L895.25 133.69 L905.4 133.69 L915.55 133.69 L925.7 133.69 L935.85 133.69" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M550.15 280.72 L560.3 278.75 L570.45 265.18 L580.6 241.69 L590.75 220.2 L600.9 206.96 L611.05 186.17 L621.2 147.14 L631.35 244.03 L641.5 265.18 L651.65 271.25 L661.8 257.51 L671.95 239.93 L682.1 217.29 L692.25 171.99 L702.4 142.26 L712.55 140.25 L722.7 140.25 L732.85 140.25 L743 140.25 L753.15 140.25 L763.3 140.25 L773.45 140.25 L783.6 140.25 L793.75 140.25 L803.9 140.25 L814.05 140.25 L824.2 140.25 L834.35 140.25 L844.5 140.25 L854.65 140.25 L864.8 140.25 L874.95 140.25 L885.1 140.25 L895.25 140.25 L905.4 140.25 L915.55 140.25 L925.7 140.25 L935.85 140.25" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M550.15 277.44 L560.3 277.44 L570.45 277.44 L580.6 277.44 L590.75 277.44 L600.9 277.44 L611.05 277.44 L621.2 277.33 L631.35 236.75 L641.5 261.65 L651.65 266.6 L661.8 266.6 L671.95 266.6 L682.1 266.6 L692.25 266.6 L702.4 266.6 L712.55 266.6 L722.7 266.6 L732.85 266.6 L743 266.6 L753.15 266.6 L763.3 266.6 L773.45 266.6 L783.6 266.6 L793.75 266.6 L803.9 266.6 L814.05 266.6 L824.2 266.6 L834.35 266.6 L844.5 266.6 L854.65 266.6 L864.8 266.6 L874.95 266.6 L885.1 266.6 L895.25 266.6 L905.4 266.6 L915.55 266.6 L925.7 266.6 L935.85 266.6" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<text x="16" y="340" class="panel-title" text-anchor="start">superblock, stationary, 2 Mbit/s</text>
+<line x1="60" y1="534" x2="466" y2="534" class="grid"/>
+<text x="54" y="538" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="493" x2="466" y2="493" class="grid"/>
+<text x="54" y="497" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="452" x2="466" y2="452" class="grid"/>
+<text x="54" y="456" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="411" x2="466" y2="411" class="grid"/>
+<text x="54" y="415" class="tick" text-anchor="end">35</text>
+<line x1="60" y1="370" x2="466" y2="370" class="grid"/>
+<text x="54" y="374" class="tick" text-anchor="end">40</text>
+<line x1="60" y1="534" x2="466" y2="534" class="axis"/>
+<line x1="60" y1="534" x2="60" y2="538" class="axis"/>
+<text x="60" y="550" class="tick" text-anchor="middle">0</text>
+<line x1="141.2" y1="534" x2="141.2" y2="538" class="axis"/>
+<text x="141.2" y="550" class="tick" text-anchor="middle">2</text>
+<line x1="222.4" y1="534" x2="222.4" y2="538" class="axis"/>
+<text x="222.4" y="550" class="tick" text-anchor="middle">4</text>
+<line x1="303.6" y1="534" x2="303.6" y2="538" class="axis"/>
+<text x="303.6" y="550" class="tick" text-anchor="middle">6</text>
+<line x1="384.8" y1="534" x2="384.8" y2="538" class="axis"/>
+<text x="384.8" y="550" class="tick" text-anchor="middle">8</text>
+<line x1="466" y1="534" x2="466" y2="538" class="axis"/>
+<text x="466" y="550" class="tick" text-anchor="middle">10</text>
+<text x="263" y="565" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="360" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M70.15 528.01 L80.3 523.18 L90.45 491.32 L100.6 447.94 L110.75 373.28 L120.9 371.23 L131.05 371.23 L141.2 371.23 L151.35 371.23 L161.5 371.23 L171.65 371.23 L181.8 371.23 L191.95 371.23 L202.1 371.23 L212.25 371.23 L222.4 371.23 L232.55 371.23 L242.7 371.23 L252.85 371.23 L263 371.23 L273.15 371.23 L283.3 371.23 L293.45 371.23 L303.6 371.23 L313.75 371.23 L323.9 371.23 L334.05 371.23 L344.2 371.23 L354.35 371.23 L364.5 371.23 L374.65 371.23 L384.8 371.23 L394.95 371.23 L405.1 371.23 L415.25 371.23 L425.4 371.23 L435.55 371.23 L445.7 371.23 L455.85 371.23" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M70.15 528.01 L80.3 484.68 L90.45 468.65 L100.6 443.68 L110.75 429.82 L120.9 424.2 L131.05 400.91 L141.2 385.95 L151.35 371.23 L161.5 371.23 L171.65 371.23 L181.8 371.23 L191.95 371.23 L202.1 371.23 L212.25 371.23 L222.4 371.23 L232.55 371.23 L242.7 371.23 L252.85 371.23 L263 371.23 L273.15 371.23 L283.3 371.23 L293.45 371.23 L303.6 371.23 L313.75 371.23 L323.9 371.23 L334.05 371.23 L344.2 371.23 L354.35 371.23 L364.5 371.23 L374.65 371.23 L384.8 371.23 L394.95 371.23 L405.1 371.23 L415.25 371.23 L425.4 371.23 L435.55 371.23 L445.7 371.23 L455.85 371.23" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M70.15 528.01 L80.3 484.68 L90.45 456.18 L100.6 431.75 L110.75 427.97 L120.9 402.72 L131.05 387.14 L141.2 373.12 L151.35 373.03 L161.5 373.03 L171.65 373.03 L181.8 373.03 L191.95 373.03 L202.1 373.03 L212.25 373.03 L222.4 373.03 L232.55 373.03 L242.7 373.03 L252.85 373.03 L263 373.03 L273.15 373.03 L283.3 373.03 L293.45 373.03 L303.6 373.03 L313.75 373.03 L323.9 373.03 L334.05 373.03 L344.2 373.03 L354.35 373.03 L364.5 373.03 L374.65 373.03 L384.8 373.03 L394.95 373.03 L405.1 373.03 L415.25 373.03 L425.4 373.03 L435.55 373.03 L445.7 373.03 L455.85 373.03" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M70.15 529.65 L80.3 494.97 L90.45 479.14 L100.6 426.83 L110.75 387.38 L120.9 387.22 L131.05 387.22 L141.2 387.22 L151.35 387.22 L161.5 387.22 L171.65 387.22 L181.8 387.22 L191.95 387.22 L202.1 387.22 L212.25 387.22 L222.4 387.22 L232.55 387.22 L242.7 387.22 L252.85 387.22 L263 387.22 L273.15 387.22 L283.3 387.22 L293.45 387.22 L303.6 387.22 L313.75 387.22 L323.9 387.22 L334.05 387.22 L344.2 387.22 L354.35 387.22 L364.5 387.22 L374.65 387.22 L384.8 387.22 L394.95 387.22 L405.1 387.22 L415.25 387.22 L425.4 387.22 L435.55 387.22 L445.7 387.22 L455.85 387.22" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M70.15 523.24 L80.3 523.24 L90.45 523.24 L100.6 523.24 L110.75 523.24 L120.9 523.24 L131.05 523.24 L141.2 523.24 L151.35 523.24 L161.5 523.24 L171.65 523.24 L181.8 523.24 L191.95 523.24 L202.1 523.24 L212.25 523.24 L222.4 523.24 L232.55 523.24 L242.7 523.24 L252.85 523.24 L263 523.24 L273.15 523.24 L283.3 523.24 L293.45 523.24 L303.6 523.24 L313.75 523.24 L323.9 523.24 L334.05 523.24 L344.2 523.24 L354.35 523.24 L364.5 523.24 L374.65 523.24 L384.8 523.24 L394.95 523.24 L405.1 523.24 L415.25 523.24 L425.4 523.24 L435.55 523.24 L445.7 523.24 L455.85 523.24" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<text x="496" y="340" class="panel-title" text-anchor="start">superblock, quick-turn, 2 Mbit/s</text>
+<line x1="540" y1="506.67" x2="946" y2="506.67" class="grid"/>
+<text x="534" y="510.67" class="tick" text-anchor="end">20</text>
+<line x1="540" y1="472.5" x2="946" y2="472.5" class="grid"/>
+<text x="534" y="476.5" class="tick" text-anchor="end">25</text>
+<line x1="540" y1="438.33" x2="946" y2="438.33" class="grid"/>
+<text x="534" y="442.33" class="tick" text-anchor="end">30</text>
+<line x1="540" y1="404.17" x2="946" y2="404.17" class="grid"/>
+<text x="534" y="408.17" class="tick" text-anchor="end">35</text>
+<line x1="540" y1="370" x2="946" y2="370" class="grid"/>
+<text x="534" y="374" class="tick" text-anchor="end">40</text>
+<line x1="540" y1="534" x2="946" y2="534" class="axis"/>
+<line x1="540" y1="534" x2="540" y2="538" class="axis"/>
+<text x="540" y="550" class="tick" text-anchor="middle">0</text>
+<line x1="621.2" y1="534" x2="621.2" y2="538" class="axis"/>
+<text x="621.2" y="550" class="tick" text-anchor="middle">2</text>
+<line x1="702.4" y1="534" x2="702.4" y2="538" class="axis"/>
+<text x="702.4" y="550" class="tick" text-anchor="middle">4</text>
+<line x1="783.6" y1="534" x2="783.6" y2="538" class="axis"/>
+<text x="783.6" y="550" class="tick" text-anchor="middle">6</text>
+<line x1="864.8" y1="534" x2="864.8" y2="538" class="axis"/>
+<text x="864.8" y="550" class="tick" text-anchor="middle">8</text>
+<line x1="946" y1="534" x2="946" y2="538" class="axis"/>
+<text x="946" y="550" class="tick" text-anchor="middle">10</text>
+<text x="743" y="565" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="496" y="360" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M550.15 501.68 L560.3 497.65 L570.45 470.38 L580.6 437.65 L590.75 372.73 L600.9 371.02 L611.05 371.02 L621.2 371.02 L631.35 531.92 L641.5 522.59 L651.65 524.54 L661.8 513.43 L671.95 499.49 L682.1 489.17 L692.25 463.45 L702.4 445.2 L712.55 418.93 L722.7 407.04 L732.85 407.04 L743 407.04 L753.15 407.04 L763.3 407.04 L773.45 407.04 L783.6 407.04 L793.75 407.04 L803.9 407.04 L814.05 407.04 L824.2 407.04 L834.35 407.04 L844.5 407.04 L854.65 407.04 L864.8 407.04 L874.95 407.04 L885.1 407.04 L895.25 407.04 L905.4 407.04 L915.55 407.04 L925.7 407.04 L935.85 407.04" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M550.15 501.68 L560.3 461.63 L570.45 452.17 L580.6 429.86 L590.75 419.85 L600.9 411.27 L611.05 395.76 L621.2 382.37 L631.35 531.27 L641.5 521.56 L651.65 505.85 L661.8 489.04 L671.95 468.09 L682.1 461.29 L692.25 458.49 L702.4 449.81 L712.55 437.17 L722.7 431.5 L732.85 422.62 L743 414.31 L753.15 409.67 L763.3 407.04 L773.45 407.04 L783.6 407.04 L793.75 407.04 L803.9 407.04 L814.05 407.04 L824.2 407.04 L834.35 407.04 L844.5 407.04 L854.65 407.04 L864.8 407.04 L874.95 407.04 L885.1 407.04 L895.25 407.04 L905.4 407.04 L915.55 407.04 L925.7 407.04 L935.85 407.04" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M550.15 501.68 L560.3 462.56 L570.45 441.82 L580.6 421.46 L590.75 417.97 L600.9 396.92 L611.05 384.32 L621.2 372.7 L631.35 531.27 L641.5 521.63 L651.65 504.31 L661.8 483.16 L671.95 464.85 L682.1 458.36 L692.25 448.28 L702.4 435.12 L712.55 428.7 L722.7 414.18 L732.85 408.3 L743 406.97 L753.15 406.97 L763.3 406.97 L773.45 406.97 L783.6 406.97 L793.75 406.97 L803.9 406.97 L814.05 406.97 L824.2 406.97 L834.35 406.97 L844.5 406.97 L854.65 406.97 L864.8 406.97 L874.95 406.97 L885.1 406.97 L895.25 406.97 L905.4 406.97 L915.55 406.97 L925.7 406.97 L935.85 406.97" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M550.15 503.05 L560.3 475.78 L570.45 460.95 L580.6 417.36 L590.75 384.49 L600.9 384.35 L611.05 384.35 L621.2 384.35 L631.35 533.49 L641.5 523.89 L651.65 526.07 L661.8 517.98 L671.95 501 L682.1 487.88 L692.25 447.08 L702.4 414.14 L712.55 410.66 L722.7 410.66 L732.85 410.66 L743 410.66 L753.15 410.66 L763.3 410.66 L773.45 410.66 L783.6 410.66 L793.75 410.66 L803.9 410.66 L814.05 410.66 L824.2 410.66 L834.35 410.66 L844.5 410.66 L854.65 410.66 L864.8 410.66 L874.95 410.66 L885.1 410.66 L895.25 410.66 L905.4 410.66 L915.55 410.66 L925.7 410.66 L935.85 410.66" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M550.15 497.7 L560.3 497.7 L570.45 497.7 L580.6 497.7 L590.75 497.7 L600.9 497.7 L611.05 497.7 L621.2 497.73 L631.35 529.31 L641.5 520.41 L651.65 523.35 L661.8 523.35 L671.95 523.35 L682.1 523.35 L692.25 523.35 L702.4 523.35 L712.55 523.35 L722.7 523.35 L732.85 523.35 L743 523.35 L753.15 523.35 L763.3 523.35 L773.45 523.35 L783.6 523.35 L793.75 523.35 L803.9 523.35 L814.05 523.35 L824.2 523.35 L834.35 523.35 L844.5 523.35 L854.65 523.35 L864.8 523.35 L874.95 523.35 L885.1 523.35 L895.25 523.35 L905.4 523.35 L915.55 523.35 L925.7 523.35 L935.85 523.35" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<text x="16" y="590" class="panel-title" text-anchor="start">northrop-mall, stationary, 0.75 Mbit/s</text>
+<line x1="60" y1="774.89" x2="466" y2="774.89" class="grid"/>
+<text x="54" y="778.89" class="tick" text-anchor="end">15</text>
+<line x1="60" y1="729.33" x2="466" y2="729.33" class="grid"/>
+<text x="54" y="733.33" class="tick" text-anchor="end">20</text>
+<line x1="60" y1="683.78" x2="466" y2="683.78" class="grid"/>
+<text x="54" y="687.78" class="tick" text-anchor="end">25</text>
+<line x1="60" y1="638.22" x2="466" y2="638.22" class="grid"/>
+<text x="54" y="642.22" class="tick" text-anchor="end">30</text>
+<line x1="60" y1="784" x2="466" y2="784" class="axis"/>
+<line x1="60" y1="784" x2="60" y2="788" class="axis"/>
+<text x="60" y="800" class="tick" text-anchor="middle">0</text>
+<line x1="141.2" y1="784" x2="141.2" y2="788" class="axis"/>
+<text x="141.2" y="800" class="tick" text-anchor="middle">2</text>
+<line x1="222.4" y1="784" x2="222.4" y2="788" class="axis"/>
+<text x="222.4" y="800" class="tick" text-anchor="middle">4</text>
+<line x1="303.6" y1="784" x2="303.6" y2="788" class="axis"/>
+<text x="303.6" y="800" class="tick" text-anchor="middle">6</text>
+<line x1="384.8" y1="784" x2="384.8" y2="788" class="axis"/>
+<text x="384.8" y="800" class="tick" text-anchor="middle">8</text>
+<line x1="466" y1="784" x2="466" y2="788" class="axis"/>
+<text x="466" y="800" class="tick" text-anchor="middle">10</text>
+<text x="263" y="815" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="16" y="610" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M70.15 778.62 L80.3 778.62 L90.45 778.62 L100.6 778.62 L110.75 766.69 L120.9 766.69 L131.05 763.96 L141.2 756.39 L151.35 746.01 L161.5 741.72 L171.65 733.07 L181.8 728.42 L191.95 716.76 L202.1 705.46 L212.25 698.67 L222.4 694.89 L232.55 680.5 L242.7 662.73 L252.85 648.15 L263 643.87 L273.15 632.94 L283.3 620.64 L293.45 620.64 L303.6 620.64 L313.75 620.64 L323.9 620.64 L334.05 620.64 L344.2 620.64 L354.35 620.64 L364.5 620.64 L374.65 620.64 L384.8 620.64 L394.95 620.64 L405.1 620.64 L415.25 620.64 L425.4 620.64 L435.55 620.64 L445.7 620.64 L455.85 620.64" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M70.15 778.62 L80.3 778.62 L90.45 777.8 L100.6 777.8 L110.75 774.8 L120.9 726.6 L131.05 726.6 L141.2 725.69 L151.35 725.69 L161.5 703.64 L171.65 696.99 L181.8 694.8 L191.95 694.8 L202.1 686.69 L212.25 686.6 L222.4 686.6 L232.55 682.32 L242.7 675.49 L252.85 674.3 L263 670.2 L273.15 663 L283.3 662.28 L293.45 657.63 L303.6 651.93 L313.75 646.65 L323.9 640.96 L334.05 637.22 L344.2 634.03 L354.35 630.02 L364.5 627.29 L374.65 624.28 L384.8 623.1 L394.95 622.6 L405.1 620.64 L415.25 620.64 L425.4 620.64 L435.55 620.64 L445.7 620.64 L455.85 620.64" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M70.15 778.62 L80.3 778.62 L90.45 777.8 L100.6 777.8 L110.75 777.35 L120.9 726.6 L131.05 726.14 L141.2 725.69 L151.35 703.64 L161.5 696.9 L171.65 694.62 L181.8 688.24 L191.95 686.42 L202.1 683.5 L212.25 680.68 L222.4 675.21 L232.55 668.74 L242.7 662.73 L252.85 657.36 L263 652.98 L273.15 643.6 L283.3 638.4 L293.45 637.04 L303.6 629.66 L313.75 624.69 L323.9 623.92 L334.05 623.01 L344.2 620.82 L354.35 620.64 L364.5 620.64 L374.65 620.64 L384.8 620.64 L394.95 620.64 L405.1 620.64 L415.25 620.64 L425.4 620.64 L435.55 620.64 L445.7 620.64 L455.85 620.64" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M70.15 780.36 L80.3 780.36 L90.45 780.36 L100.6 780.36 L110.75 764.78 L120.9 764.78 L131.05 761.4 L141.2 753.3 L151.35 743.36 L161.5 736.26 L171.65 719.4 L181.8 716.26 L191.95 713.12 L202.1 695.17 L212.25 680.04 L222.4 680.04 L232.55 679.22 L242.7 633.76 L252.85 632.12 L263 631.84 L273.15 631.57 L283.3 631.57 L293.45 631.57 L303.6 631.57 L313.75 631.57 L323.9 631.57 L334.05 631.57 L344.2 631.57 L354.35 631.57 L364.5 631.57 L374.65 631.57 L384.8 631.57 L394.95 631.57 L405.1 631.57 L415.25 631.57 L425.4 631.57 L435.55 631.57 L445.7 631.57 L455.85 631.57" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M80.3 776.72 L90.45 776.72 L100.6 776.72 L110.75 776.72 L120.9 776.72 L131.05 776.72 L141.2 776.72 L151.35 776.72 L161.5 776.72 L171.65 776.72 L181.8 776.72 L191.95 776.72 L202.1 776.72 L212.25 776.72 L222.4 776.72 L232.55 776.72 L242.7 776.72 L252.85 776.72 L263 776.72 L273.15 776.72 L283.3 776.72 L293.45 776.72 L303.6 776.72 L313.75 776.72 L323.9 776.72 L334.05 776.72 L344.2 776.72 L354.35 776.72 L364.5 776.72 L374.65 776.72 L384.8 776.72 L394.95 776.72 L405.1 776.72 L415.25 776.72 L425.4 776.72 L435.55 776.72 L445.7 776.72 L455.85 776.72" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<text x="496" y="590" class="panel-title" text-anchor="start">northrop-mall, quick-turn, 0.75 Mbit/s</text>
+<line x1="540" y1="775.8" x2="946" y2="775.8" class="grid"/>
+<text x="534" y="779.8" class="tick" text-anchor="end">15</text>
+<line x1="540" y1="734.8" x2="946" y2="734.8" class="grid"/>
+<text x="534" y="738.8" class="tick" text-anchor="end">20</text>
+<line x1="540" y1="693.8" x2="946" y2="693.8" class="grid"/>
+<text x="534" y="697.8" class="tick" text-anchor="end">25</text>
+<line x1="540" y1="652.8" x2="946" y2="652.8" class="grid"/>
+<text x="534" y="656.8" class="tick" text-anchor="end">30</text>
+<line x1="540" y1="784" x2="946" y2="784" class="axis"/>
+<line x1="540" y1="784" x2="540" y2="788" class="axis"/>
+<text x="540" y="800" class="tick" text-anchor="middle">0</text>
+<line x1="621.2" y1="784" x2="621.2" y2="788" class="axis"/>
+<text x="621.2" y="800" class="tick" text-anchor="middle">2</text>
+<line x1="702.4" y1="784" x2="702.4" y2="788" class="axis"/>
+<text x="702.4" y="800" class="tick" text-anchor="middle">4</text>
+<line x1="783.6" y1="784" x2="783.6" y2="788" class="axis"/>
+<text x="783.6" y="800" class="tick" text-anchor="middle">6</text>
+<line x1="864.8" y1="784" x2="864.8" y2="788" class="axis"/>
+<text x="864.8" y="800" class="tick" text-anchor="middle">8</text>
+<line x1="946" y1="784" x2="946" y2="788" class="axis"/>
+<text x="946" y="800" class="tick" text-anchor="middle">10</text>
+<text x="743" y="815" class="tick" text-anchor="middle">seconds after entering</text>
+<text x="496" y="610" class="tick" text-anchor="start">view PSNR, dB</text>
+<path d="M550.15 779.16 L560.3 779.16 L570.45 779.16 L580.6 779.16 L590.75 768.42 L600.9 768.42 L611.05 765.96 L621.2 759.11 L631.35 741.4 L641.5 762.97 L651.65 769.4 L661.8 768.54 L671.95 767.48 L682.1 764.2 L692.25 757.6 L702.4 756.45 L712.55 749.11 L722.7 739.31 L732.85 730.7 L743 725.7 L753.15 708.85 L763.3 700.03 L773.45 692.73 L783.6 688.22 L793.75 678.1 L803.9 660.02 L814.05 635.58 L824.2 634.8 L834.35 634.02 L844.5 634.02 L854.65 634.02 L864.8 634.02 L874.95 634.02 L885.1 634.02 L895.25 634.02 L905.4 634.02 L915.55 634.02 L925.7 634.02 L935.85 634.02" class="line" stroke="var(--s1)"><title>EAC, finest level at once</title></path>
+<path d="M550.15 779.16 L560.3 779.16 L570.45 778.42 L580.6 778.42 L590.75 775.72 L600.9 732.34 L611.05 732.34 L621.2 731.52 L631.35 741.2 L641.5 762.48 L651.65 768.83 L661.8 756.12 L671.95 744.64 L682.1 733.32 L692.25 726.03 L702.4 718.73 L712.55 705.69 L722.7 698.56 L732.85 698.56 L743 692.24 L753.15 691.91 L763.3 691.83 L773.45 686.99 L783.6 685.27 L793.75 679.25 L803.9 675.84 L814.05 668.87 L824.2 666.66 L834.35 665.59 L844.5 658.79 L854.65 652.14 L864.8 648.29 L874.95 644.19 L885.1 642.8 L895.25 638.7 L905.4 636.97 L915.55 635.42 L925.7 634.02 L935.85 634.02" class="line" stroke="var(--s2)"><title>EAC, every level</title></path>
+<path d="M550.15 779.16 L560.3 779.16 L570.45 778.42 L580.6 778.42 L590.75 778.01 L600.9 732.34 L611.05 732.34 L621.2 731.52 L631.35 741.07 L641.5 762.15 L651.65 768.83 L661.8 768.5 L671.95 744.64 L682.1 726.03 L692.25 718.73 L702.4 712.17 L712.55 698.39 L722.7 696.92 L732.85 691.67 L743 691.67 L753.15 685.03 L763.3 681.34 L773.45 678.63 L783.6 668.63 L793.75 666.41 L803.9 660.34 L814.05 654.11 L824.2 648.04 L834.35 643.74 L844.5 642.55 L854.65 636.97 L864.8 636.15 L874.95 633.86 L885.1 633.69 L895.25 633.69 L905.4 633.69 L915.55 633.69 L925.7 633.69 L935.85 633.69" class="line" stroke="var(--s3)"><title>EAC, residual</title></path>
+<path d="M550.15 780.72 L560.3 780.72 L570.45 780.72 L580.6 780.72 L590.75 766.7 L600.9 766.7 L611.05 763.66 L621.2 756.28 L631.35 744.31 L641.5 765.43 L651.65 771.54 L661.8 771.54 L671.95 770.35 L682.1 761.7 L692.25 759.36 L702.4 756.78 L712.55 746.2 L722.7 740.09 L732.85 735.33 L743 724.96 L753.15 713.68 L763.3 695.03 L773.45 673.96 L783.6 665.39 L793.75 649.85 L803.9 641.98 L814.05 640.38 L824.2 640.25 L834.35 640.25 L844.5 640.25 L854.65 640.25 L864.8 640.25 L874.95 640.25 L885.1 640.25 L895.25 640.25 L905.4 640.25 L915.55 640.25 L925.7 640.25 L935.85 640.25" class="line" stroke="var(--s4)"><title>cubemap, finest level at once</title></path>
+<path d="M560.3 777.44 L570.45 777.44 L580.6 777.44 L590.75 777.44 L600.9 777.44 L611.05 777.44 L621.2 777.35 L631.35 736.49 L641.5 761.7 L651.65 766.6 L661.8 766.6 L671.95 766.6 L682.1 766.6 L692.25 766.6 L702.4 766.6 L712.55 766.6 L722.7 766.6 L732.85 766.6 L743 766.6 L753.15 766.6 L763.3 766.6 L773.45 766.6 L783.6 766.6 L793.75 766.6 L803.9 766.6 L814.05 766.6 L824.2 766.6 L834.35 766.6 L844.5 766.6 L854.65 766.6 L864.8 766.6 L874.95 766.6 L885.1 766.6 L895.25 766.6 L905.4 766.6 L915.55 766.6 L925.7 766.6 L935.85 766.6" class="line" stroke="var(--s5)"><title>current: preview, then whole 6144 image</title></path>
+<line x1="16" y1="838" x2="34" y2="838" class="line" stroke="var(--s1)"/><circle cx="25" cy="838" r="4" class="dot" fill="var(--s1)"/>
+<text x="40" y="842" class="" text-anchor="start">EAC, finest level at once</text>
+<line x1="228" y1="838" x2="246" y2="838" class="line" stroke="var(--s2)"/><circle cx="237" cy="838" r="4" class="dot" fill="var(--s2)"/>
+<text x="252" y="842" class="" text-anchor="start">EAC, every level</text>
+<line x1="379.52" y1="838" x2="397.52" y2="838" class="line" stroke="var(--s3)"/><circle cx="388.52" cy="838" r="4" class="dot" fill="var(--s3)"/>
+<text x="403.52" y="842" class="" text-anchor="start">EAC, residual</text>
+<line x1="510.88" y1="838" x2="528.88" y2="838" class="line" stroke="var(--s4)"/><circle cx="519.88" cy="838" r="4" class="dot" fill="var(--s4)"/>
+<text x="534.88" y="842" class="" text-anchor="start">cubemap, finest level at once</text>
+<line x1="16" y1="858" x2="34" y2="858" class="line" stroke="var(--s5)"/><circle cx="25" cy="858" r="4" class="dot" fill="var(--s5)"/>
+<text x="40" y="862" class="" text-anchor="start">current: preview, then whole 6144 image</text>
+<text x="16" y="878" class="note" text-anchor="start">The 6144 image lies on the source's own grid and scores higher against it than any resampled grid can; compare times, not final levels, between it and</text>
+<text x="16" y="893" class="note" text-anchor="start">the tiles. Rows: results/http.csv.</text>
+</svg>
