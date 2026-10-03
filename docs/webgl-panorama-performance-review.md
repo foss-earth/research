@@ -10,6 +10,13 @@ default, and are waiting for device trials. See
 how to turn it on, and the headless A/B results on the UMN tour. The rest of this review is
 unchanged.
 
+**Update 2026-10-03:** part of candidate 15 is built and on by default: an orb loads the
+preview its size on screen asks for, only while it is on screen, and no orb is sharpened
+while a panorama is entered. Bounded nearby retention is not: a preview once loaded stays
+until the GPU budget needs its room. Images are also kept between visits now, which this
+review did not list. See [the panorama proposal](proposals/panorama-scenes.md), "Loading
+once", for both and their measurements.
+
 The release requirement is a usable tour on inexpensive and older devices while
 preserving the richer experience on capable hardware. The user reports that 360
 images appear to be the largest slowdown in Android Firefox without WebGPU, and
