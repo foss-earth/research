@@ -522,8 +522,8 @@ Chrome's emulation. Whether a remote static host preserves them (GitHub Pages' h
 
 ## Where this leaves it
 
-**Adopted, 2026-10-03.** The phone trial below was tried by hand afterwards and the prototype
-worked; the architecture went into production as the scene format's `tiled-cube`
+**Adopted, 2026-10-03.** The published package was tried by hand afterwards and reported
+working (the device and the results were not recorded); the architecture went into production as the scene format's `tiled-cube`
 representation, with the orb's preview cube in place of the bootstrap, tiles that fade in,
 direct replacement only, and the parameters of this report's configuration. It was checked
 headlessly on this desktop's GPU on all three backends

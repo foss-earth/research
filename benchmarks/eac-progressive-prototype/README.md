@@ -9,7 +9,8 @@ it has to beat, and the current whole-image path as the baseline.
 **[REPORT.md](REPORT.md) has the results and the decision.** [INVENTORY.md](INVENTORY.md)
 records what existed, the plan and what could not be run.
 
-**In production since 2026-10-03.** After its phone package was tried by hand and worked,
+**In production since 2026-10-03.** After its published package was tried by hand and
+reported working,
 the design it supports went into FOSS Earth as the scene format's `tiled-cube` representation
 (`src/scenes/tiles/`, [format](../../docs/scenes/format.md#tiled-cubes)), in both warps, with
 the person choosing in 360 image settings → Representation; the UMN tour offers both. What
@@ -114,7 +115,8 @@ results), the drawing buffer, battery saver, charging and temperature for every 
 
 ## Testing by hand
 
-No person has yet looked at the prototype on a phone. The package (made by
+On 2026-10-02, after it was published, the package was tried by hand and reported working;
+which device, browser and network, and what each run measured, were not recorded. The package (made by
 `export-package.mjs`) is published on FOSS Earth's GitHub Pages; open its launcher on the
 phone: **<https://foss-earth.github.io/eac-prototype/launcher.html>**. It is HTTPS, so every
 backend, WebGPU included, can run, from any network.
