@@ -67,7 +67,7 @@ the package and instructions for that trial are ready ([Where this leaves it](#w
 | 6 | Representation at matched quality | `run-representation.mjs` | Node | yes |
 | 7 | Delivery policies, representation, insurance, sweeps | `run-sim.mjs` | simulation | yes, 897 runs |
 | 8 | Candidates and the control over real HTTP; backends and frames; warm cache; small cache; failures | `run-http.mjs` | throttled real HTTP, loopback | yes, 186 runs + 8 warm-cache runs over HTTP/1.1 |
-| 9 | Remote static host | `export-package.mjs` | – | **not run**: publishing was not authorised |
+| 9 | Remote static host | `export-package.mjs` | – | **not measured**; the package was published afterwards for testing by hand |
 | 10 | Phones | – | – | **blocked**: no device attached |
 
 **Environment and device matrix.**
@@ -509,7 +509,7 @@ Chrome's emulation. Whether a remote static host preserves them (GitHub Pages' h
 | 12 Ray lookup against mesh patches | done | on desktop only |
 | 13 Incremental updates | done | one sub-image upload a tile; the table uploaded whole |
 | 14 Bounded caches, eviction, switching, failures | done | context loss not exercised |
-| 15 Static HTTP, cold and warm | done on the loopback | remote host not run |
+| 15 Static HTTP, cold and warm | done on the loopback | remote host published for testing by hand, not measured |
 | 16 Network profiles | done | Chrome's emulation, calibrated; no OS shaper |
 | 17 Traces, starts, elapsed time | done | |
 | 18 Quality of what is seen | done | judged on the validated CPU renderer; screenshots by GPU replay |
@@ -522,9 +522,11 @@ Chrome's emulation. Whether a remote static host preserves them (GitHub Pages' h
 
 ## Where this leaves it
 
-**Phones, by hand.** After the report, a test by hand on an Android phone was tried and did
-not get going; the cause was not found. README.md, "Testing by hand", has the instructions
-and what is known to stop it. Nothing in this report has been seen by a person on a phone.
+**Phones, by hand.** After the report, a test by hand on an Android phone, served from this
+computer over the LAN, was tried and did not get going; the cause was not found. The package
+was then published at <https://foss-earth.github.io/eac-prototype/launcher.html> (HTTPS, so
+WebGPU too) and checked headlessly there; README.md, "Testing by hand", has the
+instructions. Nothing in this report has yet been seen by a person on a phone.
 
 **Outcome: continue with one specific experiment, then propose production.** Under the
 tested conditions (this desktop, Chrome 154 on three backends, loopback HTTP/2 with

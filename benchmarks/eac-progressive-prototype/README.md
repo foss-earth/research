@@ -65,7 +65,7 @@ way, after the first full run's control replay failed at its last step (see the 
 | --- | --- | --- |
 | Simulation | `run-sim.mjs` | The client, selection, scheduler and caches; Phase 1's network model; quality drawn on the CPU |
 | Throttled real HTTP, loopback | `run-http.mjs` | HTTP/2 over TLS from a static server on 127.0.0.1, Chrome's network emulation, the browser's JPEG decoder, the GPU, frame timing |
-| Remote static host | – | Not run: nothing was published. `export-package.mjs` makes the folder to publish |
+| Remote static host | – | Published for testing by hand (<https://foss-earth.github.io/eac-prototype/>); nothing measured on it |
 
 The loopback server serves files only, with GitHub Pages' `Cache-Control: max-age=600`
 and cross-origin isolation headers (so the page's clock is fine; GitHub Pages cannot send
@@ -106,12 +106,25 @@ results), the drawing buffer, battery saver, charging and temperature for every 
 
 ## Testing by hand
 
-No person has yet looked at the prototype on a phone. To do it, serve the package (made by
-`export-package.mjs`) from this computer and open its launcher on the phone:
+No person has yet looked at the prototype on a phone. The package (made by
+`export-package.mjs`) is published on FOSS Earth's GitHub Pages; open its launcher on the
+phone: **<https://foss-earth.github.io/eac-prototype/launcher.html>**. It is HTTPS, so every
+backend, WebGPU included, can run, from any network.
+
+It lives in `eac-prototype/` on the `gh-pages` branch, beside the app. The app's own
+`npm run deploy` replaces that branch without keeping it; to put it back, or to publish a
+new package, from the repository root:
+
+```sh
+node benchmarks/eac-progressive-prototype/export-package.mjs --panoramas=northrop-mall,bookstore,superblock
+npx gh-pages -d build/benchmarks/eac-progressive-prototype/package -e eac-prototype --add -m "Publish the prototype's phone package"
+```
+
+To serve it from this computer instead, to a phone on the same Wi-Fi:
 
 ```sh
 python3 -m http.server 8000 --bind 0.0.0.0 --directory build/benchmarks/eac-progressive-prototype/package
-npm run qr -- --port=8000 --path=/launcher.html --no-key     # a QR code for a phone on the same Wi-Fi
+npm run qr -- --port=8000 --path=/launcher.html --no-key
 ```
 
 The launcher's "look around" pages show each panorama as EAC or as a cubemap, to drag
@@ -130,10 +143,10 @@ What to ask of the people testing:
 7. The same panorama in the live tour (<https://umn-vr.github.io/tour/twin-cities/>), on the
    same phone and network.
 
-Wi-Fi is too fast to show the difference the report measured. On Android, connect USB, run
-`adb reverse tcp:8000 tcp:8000`, open `http://localhost:8000/launcher.html` on the phone,
-and throttle that tab from desktop Chrome's `chrome://inspect` (Network panel, a custom
-profile of 2 Mbit/s and 100 ms). Record the device, OS and browser versions, battery saver,
+Wi-Fi is too fast to show the difference the report measured. On Android, open the
+launcher, connect USB, and throttle that tab from desktop Chrome's `chrome://inspect`
+(Network panel, a custom profile of 2 Mbit/s and 100 ms); or turn Wi-Fi off and use the
+phone's own network. Record the device, OS and browser versions, battery saver,
 charging and warmth for every session. The other launcher links play fixed camera traces
 and offer a results file at the end; scoring files brought back from a phone needs a small
 script that is not written yet.
@@ -147,8 +160,9 @@ going; the cause was not found. Things known to stop it:
   available there (WebGL is). `adb reverse` with `http://localhost` is one; HTTPS is the other.
 - 0sfs keeps a LAN certificate its iPhone trusts (`build/dev-certs`, for `npm run dev:lan`
   there); serving the package over HTTPS with it might work on an iPhone. Not tried.
-- Publishing the package to a static host such as GitHub Pages would remove all of these;
-  it has not been done.
+- The published package removes all of these. On 2026-10-02 its launcher, a free-look page,
+  a WebGL 2 run and a WebGPU run were opened headlessly on the live site and worked: a secure
+  context, WebGPU available, results offered at the end.
 
 ## Provenance
 
