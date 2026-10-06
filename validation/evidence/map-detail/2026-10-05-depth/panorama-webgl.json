@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-10-05T23:17:03.143Z",
+  "browser": "Chrome/154.0.8037.98",
+  "sources": {
+    "scripts/validation/panorama-webgl.mjs": "aa64e35a96b054eb59c0cae24dbe0831baae4ac803637c003eba7bb1e5503d3b",
+    "scripts/validation/panoramaWebglCheck.ts": "7fd66b706c21f8c9c8a3ea1a0b01ab288d0952495629a571c9c569b6e832cca1",
+    "src/engine/babylon/panorama/panoramaRenderer.ts": "eea8bcc0beea315c5a2518a6ae860e64da8bc5598951a3bb4c6564ce86dc66cd",
+    "src/engine/babylon/panorama/panoramaShadersWebGL.ts": "c87f75894ae5a51a6d22a9fd972567d29ed699621dc1201966b2c01d6b2dec62",
+    "src/engine/babylon/panorama/panoramaTextures.ts": "6469832d19e50172e15dfc6589ffa4047b266c99f426d616a9f73befc56cec68",
+    "src/engine/babylon/panorama/panoramaWebGlTextures.ts": "e5c4b3131b9e7c708157314212b7a0fb1961eefb72bfde9c2529aa4e01137e29"
+  },
+  "results": [
+    {
+      "backend": "webgl1",
+      "done": true,
+      "ok": true,
+      "report": {
+        "backend": "webgl1",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "reverseDepth": true,
+        "orbPixel": [
+          220,
+          32,
+          220
+        ],
+        "occluded": [
+          64,
+          64,
+          64
+        ],
+        "maxUploadedPerFrame": 16384,
+        "uploadAllowance": 16384,
+        "npotMipLevels": 1,
+        "steadyFrames": 120,
+        "glError": 0
+      },
+      "errors": []
+    },
+    {
+      "backend": "webgl2",
+      "done": true,
+      "ok": true,
+      "report": {
+        "backend": "webgl2",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "reverseDepth": true,
+        "orbPixel": [
+          220,
+          32,
+          220
+        ],
+        "occluded": [
+          64,
+          64,
+          64
+        ],
+        "maxUploadedPerFrame": 16384,
+        "uploadAllowance": 16384,
+        "npotMipLevels": 9,
+        "steadyFrames": 120,
+        "glError": 0
+      },
+      "errors": []
+    }
+  ],
+  "scope": "Correctness only. Timing samples from concurrent desktop use are intentionally excluded."
+}

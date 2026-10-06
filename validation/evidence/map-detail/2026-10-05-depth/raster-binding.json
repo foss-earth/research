@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-05",
+  "scope": "Synthetic raster atlas correctness with production reversed depth on the real GPU; no performance timing claims.",
+  "browser": "154.0.8037.98",
+  "gpu": "Apple M5, ANGLE Metal renderer",
+  "fixture": {
+    "widthPx": 960,
+    "heightPx": 540,
+    "syntheticImagery": true,
+    "terrain": "flat",
+    "terrainLinkedToImagery": false,
+    "maximumGradientTexelError": 3
+  },
+  "provenance": {
+    "original": {
+      "run": "initial-reversed-depth",
+      "cases": 9,
+      "fixtureSha256": "61fe0052112712b7c1855cb82483d2f20e49934f89ef539fda62ffcf602fd37c",
+      "fixtureHashReconstructed": "Reconstructed from the retained current fixture by removing only the shader-readiness wait added before the affected rerun.",
+      "invalidCaptures": [
+        {
+          "backend": "webgl2",
+          "scenario": "overhead",
+          "terrainPixels": 0,
+          "placementProbes": 0
+        },
+        {
+          "backend": "webgl",
+          "scenario": "overhead",
+          "terrainPixels": 0,
+          "placementProbes": 0
+        }
+      ]
+    },
+    "rerun": {
+      "run": "overhead-readiness-rerun",
+      "cases": 2,
+      "fixtureSha256": "9c42f005cba72db533d82f68ac4cea41413ad25c8352e06bba96be61bc5ac194",
+      "change": "Await scene.whenReadyAsync() before taking the capture; rerun only the two affected overhead cases."
+    },
+    "sourceHashes": {
+      "benchmarks/map-detail/binding-fixture.ts": "9c42f005cba72db533d82f68ac4cea41413ad25c8352e06bba96be61bc5ac194",
+      "benchmarks/map-detail/run-binding.mjs": "c80048812df5c3fd39ac23a8065c1f7428fcc2dfcb41fa80495603396483a95a",
+      "src/engine/babylon/createRendererMode.ts": "e9ee154dc768eb109727492399b108d349a351fa5587870b35f0ceeb7b4597de",
+      "src/engine/babylon/createRasterTilesRuntime.ts": "83536ec3d2283c66869b8906dfcd7390c70bb790d09e3d12f80e231fcae6daba",
+      "src/engine/babylon/imagery/createImageryRuntime.ts": "98e375c82d4e8892e37108166be85321b6a9130de3bdf2bbf54a8fa894d4bbdf",
+      "src/engine/babylon/imagery/imageryResidency.ts": "e5f047b57ed1f4b1ed85ad056f3b765d13220c85a59f017664338f5649668459",
+      "src/engine/babylon/imagery/imageryMaterialPlugin.ts": "340ca67752f50aed0eb1fc768a438df6a7dfdefe8df9725aaa6f54a67bf3bf6d",
+      "src/engine/babylon/imagery/imageryView.ts": "e7cae5c09b0769bae568963cf406164d1e2a67f2ee0538b6432185f50aa8fc99"
+    },
+    "sourceHashScope": "Working tree after the successful affected rerun. Source paths are repository-relative; no private machine paths or performance observations are retained."
+  },
+  "runnerCorrection": "The original runner printed 0/0 for empty WebGL overhead captures without failing. The runner now exits unsuccessfully for empty pixel/probe coverage, incorrect placement or colours, terrain changes, or stationary work.",
+  "chromeShutdown": "Both completed native runs closed Chrome gracefully; zero code-sign clones remained.",
+  "passedCases": 9,
+  "cases": [
+    {
+      "backend": "webgpu",
+      "scenario": "overhead",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": 515399,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 209,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgpu",
+      "scenario": "near-horizon",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": 328676,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 133,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgpu",
+      "scenario": "floating-origin",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": null,
+      "foreignPixels": null,
+      "placement": {
+        "probes": 201,
+        "misplaced": 0,
+        "maxTexelError": 1.0471764840185642
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgl2",
+      "scenario": "overhead",
+      "run": "overhead-readiness-rerun",
+      "reverseDepth": true,
+      "terrainPixels": 515399,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 209,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgl2",
+      "scenario": "near-horizon",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": 328676,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 133,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgl2",
+      "scenario": "floating-origin",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": null,
+      "foreignPixels": null,
+      "placement": {
+        "probes": 201,
+        "misplaced": 0,
+        "maxTexelError": 1.1341021731495857
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgl",
+      "scenario": "overhead",
+      "run": "overhead-readiness-rerun",
+      "reverseDepth": true,
+      "terrainPixels": 515399,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 209,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    },
+    {
+      "backend": "webgl",
+      "scenario": "near-horizon",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": 328676,
+      "foreignPixels": 0,
+      "placement": {
+        "probes": 133,
+        "misplaced": 0,
+        "maxTexelError": null
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": [
+        "backend",
+        "memory"
+      ]
+    },
+    {
+      "backend": "webgl",
+      "scenario": "floating-origin",
+      "run": "initial-reversed-depth",
+      "reverseDepth": true,
+      "terrainPixels": null,
+      "foreignPixels": null,
+      "placement": {
+        "probes": 201,
+        "misplaced": 0,
+        "maxTexelError": 1.1341021731495857
+      },
+      "terrainUnchangedByImagery": true,
+      "stationaryWork": {
+        "selections": 0,
+        "uploads": 0,
+        "tableWrites": 0,
+        "publishes": 0
+      },
+      "reportedLimits": []
+    }
+  ]
+}

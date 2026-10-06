@@ -56,13 +56,25 @@ try {
     await tab.goto(pathToFileURL(page).href);
     const results = await tab.evaluate(([name, only]) => window.runMapDetailFixtures(name, only ?? undefined), [backend, scenarios ?? null]);
     for (const entry of results) {
+      const failures = [];
+      if (entry.error) failures.push(entry.error.split("\n")[0]);
+      else {
+        if (!entry.reverseDepth) failures.push("Reversed depth was not enabled");
+        if (!entry.placement?.probes) failures.push("No terrain placement probes were captured");
+        if (entry.placement?.misplaced) failures.push(`${entry.placement.misplaced} misplaced terrain probes`);
+        if (entry.image?.terrainPixels === 0) failures.push("No terrain pixels were captured");
+        if (entry.image?.foreignPixels) failures.push(`${entry.image.foreignPixels} foreign terrain pixels`);
+        if (entry.intermediate?.some(check => check.terrainPixels === 0 || check.foreignPixels > 0)) failures.push("Invalid imagery during churn");
+        if (!entry.independence?.unchanged) failures.push("Imagery-only changes modified terrain");
+        if (entry.stationary && ["selections", "uploads", "tableWrites", "publishes"].some(key => entry.stationary[key] !== 0)) failures.push("Stationary imagery continued working");
+      }
       if (entry.screenshot) {
         const file = `${backend}-${entry.scenario}.png`;
         writeFileSync(path.join(output, file), Buffer.from(entry.screenshot.split(",")[1], "base64"));
         entry.screenshot = file;
       }
       summary.push({
-        backend, scenario: entry.scenario, error: entry.error?.split("\n")[0],
+        backend, scenario: entry.scenario, passed: failures.length === 0, failures, reverseDepth: entry.reverseDepth, error: entry.error?.split("\n")[0],
         foreign: entry.image ? `${entry.image.foreignPixels}/${entry.image.terrainPixels}` : "-",
         churnForeign: entry.intermediate?.map(check => check.foreignPixels).join(",") || "-",
         misplaced: entry.placement ? `${entry.placement.misplaced}/${entry.placement.probes}` : "-",
@@ -86,3 +98,4 @@ try {
 console.table(summary);
 writeFileSync(path.join(output, "summary.json"), `${JSON.stringify(summary, null, 2)}\n`);
 console.log(`Evidence: ${output}`);
+if (summary.length === 0 || summary.some(entry => !entry.passed)) process.exitCode = 1;

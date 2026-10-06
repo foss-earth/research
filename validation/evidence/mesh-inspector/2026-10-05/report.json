@@ -1,0 +1,2040 @@
+{
+  "generatedAt": "2026-10-06T03:48:05.401Z",
+  "sources": {
+    "scripts/validation/mesh-inspector.mjs": "4fce149624e17e8fbf1c9f0d4ab45a75884783ecb91864b3883e1ce26192aa35",
+    "scripts/validation/meshInspectorCheck.ts": "af3bba3e6d7073e355c8cd8c3ed83190b8be0c9eaeba84c0ef0284cff9cde27c",
+    "src/diagnostics/createMeshInspector.ts": "9a84ead1106c2c3429edc434a397aedbe0ca400e1d2256ff181b781993bf52f4",
+    "src/engine/babylon/createRendererMode.ts": "e9ee154dc768eb109727492399b108d349a351fa5587870b35f0ceeb7b4597de"
+  },
+  "scope": "Real-GPU correctness only; no timing qualification or device performance claim.",
+  "results": [
+    {
+      "backend": "webgpu",
+      "errors": [],
+      "warnings": [],
+      "browser": "Chrome/154.0.8037.98",
+      "gpu": {
+        "devices": [
+          {
+            "vendorId": 4203,
+            "deviceId": 0,
+            "vendorString": "Google Inc. (Apple)",
+            "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+            "driverVendor": "Apple",
+            "driverVersion": "27.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "enabled_on",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        }
+      },
+      "done": true,
+      "report": {
+        "backend": "webgpu",
+        "actual": "webgpu",
+        "renderer": {
+          "vendor": "apple",
+          "renderer": "metal-3",
+          "version": "unknown version"
+        },
+        "viewport": {
+          "width": 384,
+          "height": 384
+        },
+        "reverseDepth": true,
+        "readback": {
+          "channels": "BGRA",
+          "bottomUp": false
+        },
+        "checks": [
+          {
+            "name": "hierarchy includes nested groups and meshes",
+            "passed": true,
+            "detail": {
+              "roots": [
+                {
+                  "id": 10,
+                  "name": "model root",
+                  "children": [
+                    {
+                      "id": 11,
+                      "name": "solid body",
+                      "children": [],
+                      "mesh": true,
+                      "selected": true,
+                      "mixed": false
+                    },
+                    {
+                      "id": 13,
+                      "name": "moving nested group",
+                      "children": [
+                        {
+                          "id": 14,
+                          "name": "nested moving part",
+                          "children": [],
+                          "mesh": true,
+                          "selected": true,
+                          "mixed": false
+                        }
+                      ],
+                      "mesh": false,
+                      "selected": true,
+                      "mixed": false
+                    }
+                  ],
+                  "mesh": false,
+                  "selected": true,
+                  "mixed": false
+                }
+              ],
+              "enabled": false,
+              "error": null
+            }
+          },
+          {
+            "name": "baseline contains solid fill and no orange",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 17880,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "selected polygon edges overlay solid fill",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "selected": {
+                "orange": 1258,
+                "green": 17020,
+                "orangeCentroid": {
+                  "x": 173.65182829888712,
+                  "y": 179.60413354531002
+                },
+                "orangeBoundsX": {
+                  "min": 68,
+                  "max": 292
+                }
+              }
+            }
+          },
+          {
+            "name": "front triangle diagonals remain continuous",
+            "passed": true,
+            "detail": {
+              "body": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 191.51570048077963,
+                    "y": 255.76935202694125
+                  },
+                  "last": {
+                    "x": 103.14631686662473,
+                    "y": 166.50290372938463
+                  }
+                }
+              },
+              "part": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 289.88512140786344,
+                    "y": 186.38042525979768
+                  },
+                  "last": {
+                    "x": 236.20532925005435,
+                    "y": 129.42721117068163
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "wireframe shares original vertex geometry",
+            "passed": true,
+            "detail": {
+              "originalGeometryCount": 2,
+              "selectedGeometryCount": 2,
+              "overlayCount": 2
+            }
+          },
+          {
+            "name": "source material preserved",
+            "passed": true,
+            "detail": {
+              "sourceWireframe": false
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.90835265960422
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.72818094563777
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.9083526596042
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.7281809456378
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "deselect clears polygon edges",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "deselected": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "group selection isolates its descendant",
+            "passed": true,
+            "detail": {
+              "orange": 469,
+              "green": 17591,
+              "orangeCentroid": {
+                "x": 252.88699360341153,
+                "y": 149.22388059701493
+              },
+              "orangeBoundsX": {
+                "min": 219,
+                "max": 292
+              }
+            }
+          },
+          {
+            "name": "overlay follows nested source motion",
+            "passed": true,
+            "detail": {
+              "movementPixels": 44.3400897299218,
+              "expectedPixels": 44.79999999999999
+            }
+          },
+          {
+            "name": "motion reuses overlay resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "after": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "frameRequestsDuringMotion": 0
+            }
+          },
+          {
+            "name": "hidden ancestor leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "source visibility restored",
+            "passed": true,
+            "detail": {
+              "restored": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "invisible source leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "solid foreground hides selected edges behind it",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 22647,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "disabled inspector removes edges and releases resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDisabled": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "disabled": {
+                "orange": 0,
+                "green": 17879,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "disabled inspector requests no recurring frames",
+            "passed": true,
+            "detail": {
+              "additionalRequests": 0
+            }
+          },
+          {
+            "name": "reenabling preserves selection",
+            "passed": true,
+            "detail": {
+              "reenabled": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "unloading roots releases overlays",
+            "passed": true,
+            "detail": {
+              "meshes": 2,
+              "geometries": 2,
+              "materials": 2,
+              "beforeActiveMeshesObservers": 0,
+              "beforeRenderObservers": 0,
+              "afterRenderObservers": 0
+            }
+          },
+          {
+            "name": "dispose releases inspector material and observers",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDispose": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              }
+            }
+          }
+        ],
+        "samples": {
+          "Solid baseline": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes selected": {
+            "orange": 1258,
+            "green": 17020,
+            "orangeCentroid": {
+              "x": 173.65182829888712,
+              "y": 179.60413354531002
+            },
+            "orangeBoundsX": {
+              "min": 68,
+              "max": 292
+            }
+          },
+          "Perspective selected at 10 m": {
+            "orange": 319,
+            "green": 8657,
+            "orangeCentroid": {
+              "x": 235.63949843260187,
+              "y": 163.0501567398119
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 10 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Perspective selected at 1000 m": {
+            "orange": 319,
+            "green": 8657,
+            "orangeCentroid": {
+              "x": 235.63949843260187,
+              "y": 163.0501567398119
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 1000 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes deselected": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Nested group selected": {
+            "orange": 469,
+            "green": 17591,
+            "orangeCentroid": {
+              "x": 252.88699360341153,
+              "y": 149.22388059701493
+            },
+            "orangeBoundsX": {
+              "min": 219,
+              "max": 292
+            }
+          },
+          "Nested group moved": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected group hidden": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected group restored": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected mesh invisible": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected mesh behind solid occluder": {
+            "orange": 0,
+            "green": 22647,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector disabled": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 0": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 1": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 2": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector enabled again": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          }
+        },
+        "renderRequests": 8
+      }
+    },
+    {
+      "backend": "webgl2",
+      "errors": [],
+      "warnings": [],
+      "browser": "Chrome/154.0.8037.98",
+      "gpu": {
+        "devices": [
+          {
+            "vendorId": 4203,
+            "deviceId": 0,
+            "vendorString": "Google Inc. (Apple)",
+            "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+            "driverVendor": "Apple",
+            "driverVersion": "27.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "enabled_on",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        }
+      },
+      "done": true,
+      "report": {
+        "backend": "webgl2",
+        "actual": "webgl2",
+        "renderer": {
+          "vendor": "Google Inc. (Apple)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+        },
+        "viewport": {
+          "width": 384,
+          "height": 384
+        },
+        "reverseDepth": true,
+        "readback": {
+          "channels": "RGBA",
+          "bottomUp": true
+        },
+        "checks": [
+          {
+            "name": "hierarchy includes nested groups and meshes",
+            "passed": true,
+            "detail": {
+              "roots": [
+                {
+                  "id": 8,
+                  "name": "model root",
+                  "children": [
+                    {
+                      "id": 9,
+                      "name": "solid body",
+                      "children": [],
+                      "mesh": true,
+                      "selected": true,
+                      "mixed": false
+                    },
+                    {
+                      "id": 11,
+                      "name": "moving nested group",
+                      "children": [
+                        {
+                          "id": 12,
+                          "name": "nested moving part",
+                          "children": [],
+                          "mesh": true,
+                          "selected": true,
+                          "mixed": false
+                        }
+                      ],
+                      "mesh": false,
+                      "selected": true,
+                      "mixed": false
+                    }
+                  ],
+                  "mesh": false,
+                  "selected": true,
+                  "mixed": false
+                }
+              ],
+              "enabled": false,
+              "error": null
+            }
+          },
+          {
+            "name": "baseline contains solid fill and no orange",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 17880,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "selected polygon edges overlay solid fill",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "selected": {
+                "orange": 1258,
+                "green": 17020,
+                "orangeCentroid": {
+                  "x": 173.65182829888712,
+                  "y": 179.60413354531002
+                },
+                "orangeBoundsX": {
+                  "min": 68,
+                  "max": 292
+                }
+              }
+            }
+          },
+          {
+            "name": "front triangle diagonals remain continuous",
+            "passed": true,
+            "detail": {
+              "body": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 191.51570048077963,
+                    "y": 255.76935202694125
+                  },
+                  "last": {
+                    "x": 103.14631686662473,
+                    "y": 166.50290372938463
+                  }
+                }
+              },
+              "part": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 289.88512140786344,
+                    "y": 186.38042525979768
+                  },
+                  "last": {
+                    "x": 236.20532925005435,
+                    "y": 129.42721117068163
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "wireframe shares original vertex geometry",
+            "passed": true,
+            "detail": {
+              "originalGeometryCount": 2,
+              "selectedGeometryCount": 2,
+              "overlayCount": 2
+            }
+          },
+          {
+            "name": "source material preserved",
+            "passed": true,
+            "detail": {
+              "sourceWireframe": false
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.90835265960422
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.72818094563777
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 313,
+                "green": 8663,
+                "orangeCentroid": {
+                  "x": 236.03194888178913,
+                  "y": 162.92651757188497
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.9083526596042
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.7281809456378
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 313,
+                "green": 8663,
+                "orangeCentroid": {
+                  "x": 236.03194888178913,
+                  "y": 162.92651757188497
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "deselect clears polygon edges",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "deselected": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "group selection isolates its descendant",
+            "passed": true,
+            "detail": {
+              "orange": 469,
+              "green": 17591,
+              "orangeCentroid": {
+                "x": 252.88699360341153,
+                "y": 149.22388059701493
+              },
+              "orangeBoundsX": {
+                "min": 219,
+                "max": 292
+              }
+            }
+          },
+          {
+            "name": "overlay follows nested source motion",
+            "passed": true,
+            "detail": {
+              "movementPixels": 44.3400897299218,
+              "expectedPixels": 44.79999999999999
+            }
+          },
+          {
+            "name": "motion reuses overlay resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "after": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "frameRequestsDuringMotion": 0
+            }
+          },
+          {
+            "name": "hidden ancestor leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "source visibility restored",
+            "passed": true,
+            "detail": {
+              "restored": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "invisible source leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "solid foreground hides selected edges behind it",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 22647,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "disabled inspector removes edges and releases resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDisabled": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "disabled": {
+                "orange": 0,
+                "green": 17879,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "disabled inspector requests no recurring frames",
+            "passed": true,
+            "detail": {
+              "additionalRequests": 0
+            }
+          },
+          {
+            "name": "reenabling preserves selection",
+            "passed": true,
+            "detail": {
+              "reenabled": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "unloading roots releases overlays",
+            "passed": true,
+            "detail": {
+              "meshes": 2,
+              "geometries": 2,
+              "materials": 2,
+              "beforeActiveMeshesObservers": 0,
+              "beforeRenderObservers": 0,
+              "afterRenderObservers": 0
+            }
+          },
+          {
+            "name": "dispose releases inspector material and observers",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDispose": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              }
+            }
+          }
+        ],
+        "samples": {
+          "Solid baseline": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes selected": {
+            "orange": 1258,
+            "green": 17020,
+            "orangeCentroid": {
+              "x": 173.65182829888712,
+              "y": 179.60413354531002
+            },
+            "orangeBoundsX": {
+              "min": 68,
+              "max": 292
+            }
+          },
+          "Perspective selected at 10 m": {
+            "orange": 319,
+            "green": 8657,
+            "orangeCentroid": {
+              "x": 235.63949843260187,
+              "y": 163.0501567398119
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 10 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Perspective selected at 1000 m": {
+            "orange": 313,
+            "green": 8663,
+            "orangeCentroid": {
+              "x": 236.03194888178913,
+              "y": 162.92651757188497
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 1000 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes deselected": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Nested group selected": {
+            "orange": 469,
+            "green": 17591,
+            "orangeCentroid": {
+              "x": 252.88699360341153,
+              "y": 149.22388059701493
+            },
+            "orangeBoundsX": {
+              "min": 219,
+              "max": 292
+            }
+          },
+          "Nested group moved": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected group hidden": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected group restored": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected mesh invisible": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected mesh behind solid occluder": {
+            "orange": 0,
+            "green": 22647,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector disabled": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 0": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 1": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 2": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector enabled again": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          }
+        },
+        "renderRequests": 8
+      }
+    },
+    {
+      "backend": "webgl",
+      "errors": [],
+      "warnings": [],
+      "browser": "Chrome/154.0.8037.98",
+      "gpu": {
+        "devices": [
+          {
+            "vendorId": 4203,
+            "deviceId": 0,
+            "vendorString": "Google Inc. (Apple)",
+            "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+            "driverVendor": "Apple",
+            "driverVersion": "27.0"
+          }
+        ],
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "enabled_on",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        }
+      },
+      "done": true,
+      "report": {
+        "backend": "webgl",
+        "actual": "webgl",
+        "renderer": {
+          "vendor": "Google Inc. (Apple)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+          "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+        },
+        "viewport": {
+          "width": 384,
+          "height": 384
+        },
+        "reverseDepth": true,
+        "readback": {
+          "channels": "RGBA",
+          "bottomUp": true
+        },
+        "checks": [
+          {
+            "name": "hierarchy includes nested groups and meshes",
+            "passed": true,
+            "detail": {
+              "roots": [
+                {
+                  "id": 8,
+                  "name": "model root",
+                  "children": [
+                    {
+                      "id": 9,
+                      "name": "solid body",
+                      "children": [],
+                      "mesh": true,
+                      "selected": true,
+                      "mixed": false
+                    },
+                    {
+                      "id": 11,
+                      "name": "moving nested group",
+                      "children": [
+                        {
+                          "id": 12,
+                          "name": "nested moving part",
+                          "children": [],
+                          "mesh": true,
+                          "selected": true,
+                          "mixed": false
+                        }
+                      ],
+                      "mesh": false,
+                      "selected": true,
+                      "mixed": false
+                    }
+                  ],
+                  "mesh": false,
+                  "selected": true,
+                  "mixed": false
+                }
+              ],
+              "enabled": false,
+              "error": null
+            }
+          },
+          {
+            "name": "baseline contains solid fill and no orange",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 17880,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "selected polygon edges overlay solid fill",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "selected": {
+                "orange": 1258,
+                "green": 17020,
+                "orangeCentroid": {
+                  "x": 173.65182829888712,
+                  "y": 179.60413354531002
+                },
+                "orangeBoundsX": {
+                  "min": 68,
+                  "max": 292
+                }
+              }
+            }
+          },
+          {
+            "name": "front triangle diagonals remain continuous",
+            "passed": true,
+            "detail": {
+              "body": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 191.51570048077963,
+                    "y": 255.76935202694125
+                  },
+                  "last": {
+                    "x": 103.14631686662473,
+                    "y": 166.50290372938463
+                  }
+                }
+              },
+              "part": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 289.88512140786344,
+                    "y": 186.38042525979768
+                  },
+                  "last": {
+                    "x": 236.20532925005435,
+                    "y": 129.42721117068163
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "wireframe shares original vertex geometry",
+            "passed": true,
+            "detail": {
+              "originalGeometryCount": 2,
+              "selectedGeometryCount": 2,
+              "overlayCount": 2
+            }
+          },
+          {
+            "name": "source material preserved",
+            "passed": true,
+            "detail": {
+              "sourceWireframe": false
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.90835265960422
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.72818094563777
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 10 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 319,
+                "green": 8657,
+                "orangeCentroid": {
+                  "x": 235.63949843260187,
+                  "y": 163.0501567398119
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "perspective diagonal continuous at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 313,
+                "green": 8663,
+                "orangeCentroid": {
+                  "x": 236.03194888178913,
+                  "y": 162.92651757188497
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "coverage": {
+                "covered": 80,
+                "total": 80,
+                "ratio": 1,
+                "projected": {
+                  "first": {
+                    "x": 263.2707660612738,
+                    "y": 187.9083526596042
+                  },
+                  "last": {
+                    "x": 225.39576778729037,
+                    "y": 144.7281809456378
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "perspective foreground occludes at 1000 m",
+            "passed": true,
+            "detail": {
+              "selected": {
+                "orange": 313,
+                "green": 8663,
+                "orangeCentroid": {
+                  "x": 236.03194888178913,
+                  "y": 162.92651757188497
+                },
+                "orangeBoundsX": {
+                  "min": 211,
+                  "max": 265
+                }
+              },
+              "covered": {
+                "orange": 0,
+                "green": 14173,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "deselect clears polygon edges",
+            "passed": true,
+            "detail": {
+              "baseline": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              },
+              "deselected": {
+                "orange": 0,
+                "green": 17880,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "group selection isolates its descendant",
+            "passed": true,
+            "detail": {
+              "orange": 469,
+              "green": 17591,
+              "orangeCentroid": {
+                "x": 252.88699360341153,
+                "y": 149.22388059701493
+              },
+              "orangeBoundsX": {
+                "min": 219,
+                "max": 292
+              }
+            }
+          },
+          {
+            "name": "overlay follows nested source motion",
+            "passed": true,
+            "detail": {
+              "movementPixels": 44.3400897299218,
+              "expectedPixels": 44.79999999999999
+            }
+          },
+          {
+            "name": "motion reuses overlay resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "after": {
+                "meshes": 3,
+                "geometries": 2,
+                "materials": 3,
+                "beforeActiveMeshesObservers": 1,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "frameRequestsDuringMotion": 0
+            }
+          },
+          {
+            "name": "hidden ancestor leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "source visibility restored",
+            "passed": true,
+            "detail": {
+              "restored": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "invisible source leaves no phantom edges",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 13431,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "solid foreground hides selected edges behind it",
+            "passed": true,
+            "detail": {
+              "orange": 0,
+              "green": 22647,
+              "orangeCentroid": null,
+              "orangeBoundsX": null
+            }
+          },
+          {
+            "name": "disabled inspector removes edges and releases resources",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDisabled": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "disabled": {
+                "orange": 0,
+                "green": 17879,
+                "orangeCentroid": null,
+                "orangeBoundsX": null
+              }
+            }
+          },
+          {
+            "name": "disabled inspector requests no recurring frames",
+            "passed": true,
+            "detail": {
+              "additionalRequests": 0
+            }
+          },
+          {
+            "name": "reenabling preserves selection",
+            "passed": true,
+            "detail": {
+              "reenabled": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              },
+              "moved": {
+                "orange": 480,
+                "green": 17583,
+                "orangeCentroid": {
+                  "x": 297.2270833333333,
+                  "y": 149.17708333333334
+                },
+                "orangeBoundsX": {
+                  "min": 264,
+                  "max": 336
+                }
+              }
+            }
+          },
+          {
+            "name": "unloading roots releases overlays",
+            "passed": true,
+            "detail": {
+              "meshes": 2,
+              "geometries": 2,
+              "materials": 2,
+              "beforeActiveMeshesObservers": 0,
+              "beforeRenderObservers": 0,
+              "afterRenderObservers": 0
+            }
+          },
+          {
+            "name": "dispose releases inspector material and observers",
+            "passed": true,
+            "detail": {
+              "before": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              },
+              "afterDispose": {
+                "meshes": 2,
+                "geometries": 2,
+                "materials": 2,
+                "beforeActiveMeshesObservers": 0,
+                "beforeRenderObservers": 0,
+                "afterRenderObservers": 0
+              }
+            }
+          }
+        ],
+        "samples": {
+          "Solid baseline": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes selected": {
+            "orange": 1258,
+            "green": 17020,
+            "orangeCentroid": {
+              "x": 173.65182829888712,
+              "y": 179.60413354531002
+            },
+            "orangeBoundsX": {
+              "min": 68,
+              "max": 292
+            }
+          },
+          "Perspective selected at 10 m": {
+            "orange": 319,
+            "green": 8657,
+            "orangeCentroid": {
+              "x": 235.63949843260187,
+              "y": 163.0501567398119
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 10 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Perspective selected at 1000 m": {
+            "orange": 313,
+            "green": 8663,
+            "orangeCentroid": {
+              "x": 236.03194888178913,
+              "y": 162.92651757188497
+            },
+            "orangeBoundsX": {
+              "min": 211,
+              "max": 265
+            }
+          },
+          "Perspective occluded at 1000 m": {
+            "orange": 0,
+            "green": 14173,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "All meshes deselected": {
+            "orange": 0,
+            "green": 17880,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Nested group selected": {
+            "orange": 469,
+            "green": 17591,
+            "orangeCentroid": {
+              "x": 252.88699360341153,
+              "y": 149.22388059701493
+            },
+            "orangeBoundsX": {
+              "min": 219,
+              "max": 292
+            }
+          },
+          "Nested group moved": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected group hidden": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected group restored": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          },
+          "Selected mesh invisible": {
+            "orange": 0,
+            "green": 13431,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Selected mesh behind solid occluder": {
+            "orange": 0,
+            "green": 22647,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector disabled": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 0": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 1": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Disabled frame 2": {
+            "orange": 0,
+            "green": 17879,
+            "orangeCentroid": null,
+            "orangeBoundsX": null
+          },
+          "Inspector enabled again": {
+            "orange": 480,
+            "green": 17583,
+            "orangeCentroid": {
+              "x": 297.2270833333333,
+              "y": 149.17708333333334
+            },
+            "orangeBoundsX": {
+              "min": 264,
+              "max": 336
+            }
+          }
+        },
+        "renderRequests": 8
+      }
+    }
+  ]
+}

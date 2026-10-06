@@ -1,5 +1,11 @@
 # Timing a benchmark on this machine
 
+The current [shared-machine benchmark policy](benchmark-interference.md) governs
+qualification. The observations and older guards below remain useful evidence;
+input idleness and aggregate load alone do not attribute CPU cost on the fanless
+Mac's performance/efficiency cores or establish thermal stability. Defer affected
+timings when the required attribution is unavailable, and continue untimed work.
+
 What the [spherical image representation benchmark](../../benchmarks/spherical-image-representation/REPORT.md)
 learned about timing, on 2026-10-01 and 02, by getting it wrong first. It applies to any
 benchmark here that reports milliseconds. Results that are computed and not timed (bytes,

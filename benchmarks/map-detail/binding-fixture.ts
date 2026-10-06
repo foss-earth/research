@@ -35,6 +35,7 @@ import type { RasterBaseMapSource } from "../../src/engine/babylon/rasterBaseMap
 import { preparePages } from "../../src/engine/babylon/imagery/imageryPagePreparation";
 import type { ImageryLoader, PreparedImage } from "../../src/engine/babylon/imagery/imageryResidency";
 import { lonLatToTileXY } from "../../src/terrain/imagery/imageryGeometry";
+import { createSettingsRegistry, FOSS_EARTH_PARAMETERS, readDeviceContext } from "../../src/settings";
 
 type Mode = "solid" | "gradient";
 
@@ -159,6 +160,9 @@ function fixtureLoader(delayMs: () => number): ImageryLoader & { requests: numbe
  */
 async function capture(scene: Scene): Promise<Uint8Array> {
   const engine = scene.getEngine();
+  // Residency can settle before asynchronous shader compilation. A capture
+  // must wait for drawable materials rather than count an empty image.
+  await scene.whenReadyAsync();
   const target = new RenderTargetTexture("fixture-capture", { width: WIDTH, height: HEIGHT }, scene, false);
   target.renderList = scene.meshes.slice();
   target.activeCamera = scene.activeCamera;
@@ -303,6 +307,7 @@ async function runScenario(backend: RendererMode, scenario: Scenario) {
   const engine = backend === "webgl"
     ? new Engine(canvas, true, { preserveDrawingBuffer: false, stencil: true, useLargeWorldRendering: true, disableWebGL2Support: true }, true)
     : (await createRendererMode(canvas, { force: backend })).engine;
+  if (backend === "webgl") engine.useReverseDepthBuffer = true;
   const actual = (engine as unknown as { isWebGPU?: boolean }).isWebGPU ? "webgpu" : (engine as Engine).webGLVersion === 1 ? "webgl" : "webgl2";
   log(scenario.name, "engine", actual);
   if (actual !== backend) throw new Error(`Asked for ${backend}, got ${actual}`);
@@ -345,6 +350,10 @@ async function runScenario(backend: RendererMode, scenario: Scenario) {
   }
   const delay = scenario.churn ? () => Math.random() * 40 : () => 0;
   const loader = fixtureLoader(delay);
+  const settings = createSettingsRegistry({ storage: null, deviceContext: readDeviceContext() });
+  settings.register(FOSS_EARTH_PARAMETERS);
+  // This fixture varies imagery alone for its terrain-independence check.
+  settings.set("map.detail.linkTerrainToImagery", false);
   const runtime = createRasterTilesRuntime({
     scene,
     source: descriptor(scenario),
@@ -354,6 +363,7 @@ async function runScenario(backend: RendererMode, scenario: Scenario) {
     imagery: "atlas",
     imageryLoader: loader,
     detailOffset: scenario.offset,
+    settings,
     quality: "balanced",
   });
   const frame = async () => {
@@ -448,6 +458,7 @@ async function runScenario(backend: RendererMode, scenario: Scenario) {
   const result = {
     scenario: scenario.name,
     backend,
+    reverseDepth: engine.useReverseDepthBuffer,
     settledFrames: settled.frames,
     updateCpuMs: { p50: sortedUpdate[Math.floor(sortedUpdate.length * 0.5)] ?? null, p95: sortedUpdate[Math.floor(sortedUpdate.length * 0.95)] ?? null, max: sortedUpdate.at(-1) ?? null },
     feedback,
