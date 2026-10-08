@@ -1,0 +1,310 @@
+{
+  "readDate": "2026-10-08",
+  "scope": "Source identity and local file hashes; source descriptions and primary links are in weather-research.md. Full primary sources not redistributed.",
+  "records": [
+    {
+      "repository": "foss-earth",
+      "path": "AGENTS.md",
+      "sha256": "51e05417d7722d818d3930c629fbb640e3886bdc68ad930e3ae358436e005a4c",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "AGENTS.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "foss-earth",
+      "path": "docs/proposals/sky.md",
+      "sha256": "95a1538b0a9b95182795cd3fda4b20a1aa7eb26e514d081bb82e7cda1169f3d7",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "docs/proposals/sky.md"
+      ],
+      "gitStatusOutput": "?? docs/proposals/sky.md\n"
+    },
+    {
+      "repository": "foss-earth",
+      "path": "docs/proposals/settings.md",
+      "sha256": "3c1c09f343c40fe0cef7cb04eaa3f76081995b23d55c2514e371a7595d7f50d1",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "docs/proposals/settings.md"
+      ],
+      "gitStatusOutput": " M docs/proposals/settings.md\n"
+    },
+    {
+      "repository": "foss-earth",
+      "path": "docs/render-on-demand.md",
+      "sha256": "bba57adfdfc7e90e6258a5dfe09d6d3a16abaef2a251e335b8b54429f83f2b8d",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "docs/render-on-demand.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "foss-earth",
+      "path": "COMMERCIAL_LICENSE.md",
+      "sha256": "1abeb4338def437f7d9bc65bd9afded4d57b1ff37384b88433163c29fe1cb451",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "COMMERCIAL_LICENSE.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "0sfs",
+      "path": "AGENTS.md",
+      "sha256": "4169f61c8a7f9574c5bf888314289eba78d713f367cb80c1897930f67be9fe44",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "AGENTS.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "0sfs",
+      "path": "docs/proposals/skies.md",
+      "sha256": "cd3df7fa551c5aa41042dd824545eed89c8a01f3fe0dab30ff15e5c5c62c366a",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "docs/proposals/skies.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "0sfs",
+      "path": "src/flight/createFlightSimApp.ts",
+      "sha256": "3ac2d378400a707641b08161fbc632d122b7eb59a461b4c785543de6f599fc46",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "src/flight/createFlightSimApp.ts"
+      ],
+      "gitStatusOutput": " M src/flight/createFlightSimApp.ts\n"
+    },
+    {
+      "repository": "0sfs",
+      "path": "src/flight/jsbsim/savedFlight.ts",
+      "sha256": "f88341b571fd4157c45b397ff1e40c9b045834607f642e8e8317d3390261156f",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "src/flight/jsbsim/savedFlight.ts"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "0sfs",
+      "path": "public/jsbsim-data/engine/fj33_5a.xml",
+      "sha256": "d40f4f5f8dfd042a64f19f053d95c9bb6372e302ef4896d7dcd9868f8e689e8b",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "public/jsbsim-data/engine/fj33_5a.xml"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "0sfs",
+      "path": "docs/jsbsim-upstream-contribution-policy.md",
+      "sha256": "4cece85fc14bfae70dfadef16a3fb181e1d384ef63868f5bef055e67ed043890",
+      "gitStatusCommand": [
+        "git",
+        "status",
+        "--short",
+        "--",
+        "docs/jsbsim-upstream-contribution-policy.md"
+      ],
+      "gitStatusOutput": ""
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/atmosphere/FGWinds.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/atmosphere/FGWinds.cpp"
+      ],
+      "bytes": 25763,
+      "sha256": "067f456af95a9e7c94c8c8d0f4f309eb54a8bd05dbf0e34d5e0f47d23c587ac0"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/atmosphere/FGWinds.h",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/atmosphere/FGWinds.h"
+      ],
+      "bytes": 18295,
+      "sha256": "519c1270e10fcaac6aeb5625811e48b42963eb39fe20bc3245a4a70d9239bfe7"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/atmosphere/FGStandardAtmosphere.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/atmosphere/FGStandardAtmosphere.cpp"
+      ],
+      "bytes": 31572,
+      "sha256": "727675916e0376df5ebbc86246376e27e86e3b0cd0b36f2d17b08237ed5b28ec"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/FGAtmosphere.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/FGAtmosphere.cpp"
+      ],
+      "bytes": 12614,
+      "sha256": "337e5a63a2088b2fcf22863068a7a3b6dd7a410ec4afaff933c969f0d0a092eb"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/FGAuxiliary.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/FGAuxiliary.cpp"
+      ],
+      "bytes": 20411,
+      "sha256": "90ca5c757b08ee6d6dc82b0ed8f4e86ec5bac588a95676cd0190ced6147ba405"
+    },
+    {
+      "scratchName": "hillaire2020.pdf",
+      "bytes": 35991506,
+      "sha256": "83ed5ad77722785950aeeeaf27033e9f184ac4736faf1f500b212066d5adfc6d"
+    },
+    {
+      "scratchName": "frostbite2016.pdf",
+      "bytes": 52658903,
+      "sha256": "a494bacba53bec42839e2664588f2a9b1e024031d5c0ec1dc503458966c698b9"
+    },
+    {
+      "scratchName": "nubis2018.pptx",
+      "bytes": 298262503,
+      "sha256": "5d3472c6e222cf84c124901a4c31ca7188dd1ff04b5ee35007bf3306c1f03222"
+    },
+    {
+      "scratchName": "addons-9.29.0.tgz",
+      "bytes": 316790,
+      "sha256": "c8a3a354f9d04bafcd458ad8b70c5fe0bf7cb17edc4aa5bd3e47219aed3781c3"
+    },
+    {
+      "scratchName": "flightgear-environment_ctrl.cxx",
+      "bytes": 13013,
+      "sha256": "6cf8d44977deca6bd81776615c97033e084799e50913cb91408449c515904186"
+    },
+    {
+      "scratchName": "fgdata-weather_dynamics.nas",
+      "bytes": 19438,
+      "sha256": "cbaa07a06142498360e2553d93ecfa24e344a3687aaa1e165dafe478d12d4684"
+    },
+    {
+      "scratchName": "fgdata-weather_tile_management.nas",
+      "bytes": 58438,
+      "sha256": "bbde6476e4e343c549e9aaf70a3cca8da50345f64a7bf484b5d8d175aed5acb7"
+    },
+    {
+      "source": "Skybolt",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "output": "0589ee56310e67d539637d96cbeba78e368ae71c"
+    },
+    {
+      "source": "SimGear",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "output": "e3c9d3f6f1293cddf49f27dfb34e283a4ff6e710"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/FGAtmosphere.h",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/FGAtmosphere.h"
+      ],
+      "bytes": 12414,
+      "sha256": "549bf738e7a5c178a83dcb810bb70ce16f4eaf01c6939b685d1949c41291157e"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/atmosphere/FGStandardAtmosphere.h",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/atmosphere/FGStandardAtmosphere.h"
+      ],
+      "bytes": 16814,
+      "sha256": "08e8e31bb8788fd6ff4671ea96fc5273e76ac34127d02ff532a6db3d3fba995c"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/FGFDMExec.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/FGFDMExec.cpp"
+      ],
+      "bytes": 52435,
+      "sha256": "6ca4de83e72eeed3470aec1275b5cbf96092e5f77fe2aeb2c906b06ef4a9664c"
+    },
+    {
+      "repository": "jsbsim",
+      "commit": "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28",
+      "path": "src/models/propulsion/FGTurbine.cpp",
+      "command": [
+        "git",
+        "show",
+        "97fe6ddf1c8a7d9e10dad46a88e60e79e69fae28:src/models/propulsion/FGTurbine.cpp"
+      ],
+      "bytes": 44540,
+      "sha256": "5a51543d54589c0467c8f492abd86ca1025401d4bc5de4bdb542d10be6ac90a3"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+ ["icon-range","https://opendata.dwd.de/weather/nwp/icon/grib/00/t_2m/icon_global_icosahedral_single-level_2026100800_000_T_2M.grib2.bz2","0-63"],
+ ["ecmwf-s3-list","https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/?list-type=2&prefix=20261008/00z/ifs/0p25/oper/&max-keys=2"],
+ ["gfs-inventory","https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261008/00/atmos/gfs.t00z.pgrb2.0p25.f000.idx"],
+ ["hrrr-range","https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20261008/conus/hrrr.t00z.wrfprsf00.grib2","0-63"],
+ ["gfs-past-list","https://noaa-gfs-bdp-pds.s3.amazonaws.com/?list-type=2&prefix=gfs.20260601/00/atmos/gfs.t00z.pgrb2.0p25.f000&max-keys=2"],
+ ["gibs-rain-tile","https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/IMERG_Precipitation_Rate_30min/default/2026-06-01T00:00:00Z/2km/0/0/0.png"],
+ ["dwd-terms","https://opendata.dwd.de/README.txt"],
+ ["flightgear-head","https://api.github.com/repos/FlightGear/flightgear/commits/next"],
+ ["fgdata-head","https://api.github.com/repos/FlightGear/fgdata/commits/next"]
+]

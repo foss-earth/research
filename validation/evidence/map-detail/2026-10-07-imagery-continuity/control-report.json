@@ -1,0 +1,495 @@
+{
+  "generatedAt": "2026-10-08T07:51:34.027Z",
+  "source": {
+    "revision": "a3c696af50f6ba212e3094b15504ac40ec8c3e32",
+    "dirtyPaths": [
+      "TODO.md",
+      "docs/proposals/settings.md",
+      "docs/ui-layout.md",
+      "docs/validation/README.md",
+      "docs/validation/map-quality-recovery.md",
+      "package.json",
+      "src/app/createGlobeApp.test.ts",
+      "src/app/createGlobeApp.ts",
+      "src/app/mountGlobeApp.tsx",
+      "src/engine/babylon/createBabylonRuntime.sim.test.ts",
+      "src/engine/babylon/createBabylonRuntime.ts",
+      "src/engine/babylon/createRasterTilesRuntime.atlas.test.ts",
+      "src/engine/babylon/createRasterTilesRuntime.ts",
+      "src/engine/babylon/createTilesRuntime.ts",
+      "src/engine/babylon/imagery/createImageryRuntime.test.ts",
+      "src/engine/babylon/imagery/createImageryRuntime.ts",
+      "src/engine/babylon/imagery/imageryBinding.ts",
+      "src/engine/babylon/imagery/imageryResidency.test.ts",
+      "src/engine/babylon/imagery/imageryResidency.ts",
+      "src/runtime/index.ts",
+      "src/settings/catalogue/index.ts",
+      "src/settings/catalogue/loading.ts",
+      "src/settings/catalogue/renderer.ts",
+      "src/settings/index.ts",
+      "src/settings/presets/1-this-device.json",
+      "src/settings/presets/2-save-battery.json",
+      "src/settings/presets/3-sharpest.json",
+      "src/settings/presets/4-smooth-motion.json",
+      "src/settings/tuningConstants.test.ts",
+      "src/shell/WindowOverlay.test.tsx",
+      "src/shell/WindowOverlay.tsx",
+      "src/shell/choicePanels.test.ts",
+      "src/shell/connectMapDetailRuntime.ts",
+      "src/shell/index.ts",
+      "src/shell/mapDetailController.ts",
+      "src/shell/mapDetailLog.ts",
+      "src/shell/mapDetailPanel.test.ts",
+      "src/shell/mapDetailPanel.ts",
+      "src/shell/mapDetailSlider.ts",
+      "src/styles/hud.css",
+      "src/terrain/imagery/imageryGeometry.ts",
+      "src/terrain/imagery/imagerySelector.test.ts",
+      "src/terrain/imagery/imagerySelector.ts",
+      "src/terrain/imagery/imagerySources.ts",
+      "src/terrain/mapDetailPolicy.ts",
+      "docs/imagery-detail-drop-prompt.md",
+      "docs/proposals/imagery-detail-continuity.md",
+      "docs/proposals/research/weather-research-prompt.md",
+      "docs/proposals/research/weather-research.md",
+      "docs/proposals/sky.md",
+      "docs/sky-lighting-implementation-prompt.md",
+      "scripts/sky/",
+      "scripts/validation/imagery-continuity.mjs",
+      "scripts/validation/imageryContinuityCheck.ts",
+      "scripts/validation/sky-model.mjs",
+      "scripts/validation/sky-render.mjs",
+      "scripts/validation/skyModelCheck.ts",
+      "scripts/validation/skyRenderCheck.ts",
+      "scripts/validation/weather-research/",
+      "src/engine/babylon/createGroundLightProbe.test.ts",
+      "src/engine/babylon/createGroundLightProbe.ts",
+      "src/engine/babylon/createLightPoints.test.ts",
+      "src/engine/babylon/createLightPoints.ts",
+      "src/engine/babylon/createNightLights.ts",
+      "src/engine/babylon/createSkyRuntime.test.ts",
+      "src/engine/babylon/createSkyRuntime.ts",
+      "src/engine/babylon/createStarField.ts",
+      "src/engine/babylon/imagery/createImageryRuntime.continuity.test.ts",
+      "src/engine/babylon/imagery/terrainLightPlugin.test.ts",
+      "src/engine/babylon/imagery/terrainLightPlugin.ts",
+      "src/settings/catalogue/sky.ts",
+      "src/shell/dateTimePanel.test.ts",
+      "src/shell/dateTimePanel.ts",
+      "src/shell/dial.test.ts",
+      "src/shell/dial.ts",
+      "src/shell/mapDetailExplanations.ts",
+      "src/shell/mapDetailLog.test.ts",
+      "src/shell/skyPanel.ts",
+      "src/sky/",
+      "src/terrain/imagery/imageryConstraints.ts",
+      "validation/evidence/sky/",
+      "validation/evidence/weather/"
+    ],
+    "sha256": {
+      "scripts/validation/imagery-continuity.mjs": "6a62860f33775a444a27aa7061200ff701b626e9fa39a3d3831ab7d5bbba45d7",
+      "scripts/validation/imageryContinuityCheck.ts": "79290fc69b333f7eb8c573ca53dcb415185af90d0acde6ff166a4d4d3ff5e7f9",
+      "src/terrain/imagery/imagerySelector.ts": "baac738fd2dd2638fe214696d26fb12ac4da4ff4ec5479ee0e199cbc97142473",
+      "src/engine/babylon/imagery/createImageryRuntime.ts": "4cc70c01e899958facd8a44b0d24ecf2c546484cd568b01ef80ad9902c81256c",
+      "src/engine/babylon/imagery/imageryResidency.ts": "66770ea27ebd37dccf4e29411216fef90e3d3b9eb62a47563f7b38b65d7fb072",
+      "src/engine/babylon/imagery/imageryBinding.ts": "a2ec812398f4d42b8326588b9f21276017109d1a5375277bf0d28f06fca4e237",
+      "src/engine/babylon/createRasterTilesRuntime.ts": "e154ba84d2c56d053e3e722910b3a4c323cbe3a737774b249147b257ae2cba21"
+    }
+  },
+  "results": [
+    {
+      "backend": "webgpu",
+      "browser": "Chrome/154.0.8037.98",
+      "gpu": {
+        "devices": "Google Inc. (Apple) ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+        "auxAttributes": {
+          "amdSwitchable": false,
+          "canSupportThreadedTextureMailbox": false,
+          "directRenderingVersion": "",
+          "displayType": "ANGLE_METAL",
+          "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_pvrtc_sRGB GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_IMG_texture_compression_pvrtc GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_KHR_texture_compression_astc_hdr GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_NV_fence GL_NV_framebuffer_blit GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_QCOM_render_shared_exponent ",
+          "glImplementationParts": "(gl=egl-angle,angle=metal)",
+          "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+          "glResetNotificationStrategy": 33362,
+          "glVendor": "Google Inc. (Apple)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28734 git hash: e12217f3e133)",
+          "glWsExtensions": "",
+          "glWsVendor": "",
+          "glWsVersion": "",
+          "inProcessGpu": false,
+          "initializationTime": 0.03539,
+          "isAsan": false,
+          "isClangCoverage": false,
+          "jpegDecodeAcceleratorSupported": false,
+          "maxMsaaSamples": "8",
+          "optimus": false,
+          "passthroughCmdDecoder": true,
+          "pixelShaderVersion": "3.00",
+          "processCrashCount": 0,
+          "sandboxed": true,
+          "skiaBackendType": "GraphiteDawnMetal",
+          "subpixelFontRendering": true,
+          "targetCpuBits": 64,
+          "vertexShaderVersion": "3.00",
+          "visibilityCallbackCallCount": 0
+        }
+      },
+      "errors": [],
+      "available": true,
+      "renderer": {
+        "vendor": "apple",
+        "renderer": "metal-3",
+        "version": "unknown version"
+      },
+      "reverseDepth": true,
+      "inputs": {
+        "view": {
+          "latDeg": 36.1,
+          "lonDeg": -112.1,
+          "zoomMeters": 3000,
+          "pitchDeg": 85,
+          "headingDeg": 0
+        },
+        "viewport": [
+          960,
+          540
+        ],
+        "source": {
+          "kind": "photographic",
+          "maxZoom": 20,
+          "tile": 256
+        },
+        "fallbackStep": 3,
+        "fallbackGap": 4,
+        "centre": "15/6180/12856",
+        "standIn": "12/772/1607"
+      },
+      "dryRun": {
+        "settledMs": 1921,
+        "requests": 41,
+        "centre": {
+          "key": "15/6180/12856",
+          "selected": 15,
+          "bound": 15
+        },
+        "standInRequested": true
+      },
+      "settledMs": {
+        "held": 1903,
+        "afterAnswer": 1622
+      },
+      "checks": [
+        {
+          "name": "the stand-in was asked for and held until the source answered",
+          "passed": true,
+          "detail": {
+            "standIn": "12/772/1607",
+            "cancelled": false
+          }
+        },
+        {
+          "name": "both captures show terrain, and the stand-in's ground in at least 20 sampled pixels",
+          "passed": true,
+          "detail": {
+            "terrainPixels": [
+              518400,
+              518400
+            ],
+            "samples": [
+              133,
+              133
+            ]
+          }
+        },
+        {
+          "name": "before the answer, the centre shows its own fine imagery: selected, resident and bound at its level",
+          "passed": true,
+          "detail": {
+            "key": "15/6180/12856",
+            "selected": 15,
+            "bound": 15,
+            "resident": 15
+          }
+        },
+        {
+          "name": "each sampled pixel away from tile edges shows the level bound where it lies, at the right texel",
+          "passed": true,
+          "detail": {
+            "tested": 131,
+            "mismatched": [],
+            "misplaced": []
+          }
+        },
+        {
+          "name": "the source's answer is recorded, and selection refined past it toward the resident imagery",
+          "passed": false,
+          "detail": {
+            "missing": 1,
+            "refinedPastMissing": 0
+          }
+        },
+        {
+          "name": "no frame after the answer binds coarser imagery at the centre",
+          "passed": false,
+          "detail": {
+            "frames": 318,
+            "levels": {
+              "2": 316,
+              "15": 2
+            }
+          }
+        },
+        {
+          "name": "no sampled pixel under the stand-in shows coarser imagery after the answer, and the centre keeps its levels",
+          "passed": false,
+          "detail": {
+            "coarser": [
+              {
+                "before": {
+                  "x": 48,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6178/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 48,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 96,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6178/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 96,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 144,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6178/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 144,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 192,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6179/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 192,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 240,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6179/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 240,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 288,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6179/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 288,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 336,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6179/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 336,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              },
+              {
+                "before": {
+                  "x": 384,
+                  "y": 225,
+                  "shown": 15,
+                  "placed": true,
+                  "region": "15/6179/12856",
+                  "selected": 15,
+                  "bound": 15,
+                  "resident": 15
+                },
+                "after": {
+                  "x": 384,
+                  "y": 225,
+                  "shown": 2,
+                  "placed": true,
+                  "region": "12/772/1607",
+                  "selected": 12,
+                  "bound": 2,
+                  "resident": 15
+                }
+              }
+            ],
+            "before": {
+              "15": 133
+            },
+            "after": {
+              "2": 133
+            },
+            "centre": {
+              "key": "12/772/1607",
+              "selected": 12,
+              "bound": 2,
+              "resident": 15
+            }
+          }
+        },
+        {
+          "name": "nothing was evicted, and nothing downloaded waits to be placed",
+          "passed": true,
+          "detail": {
+            "before": {
+              "missing": 0,
+              "evictions": 0,
+              "staged": 0,
+              "unplaced": 0,
+              "inFlight": 1,
+              "failed": 0
+            },
+            "after": {
+              "missing": 1,
+              "evictions": 0,
+              "staged": 0,
+              "unplaced": 0,
+              "inFlight": 0,
+              "failed": 0
+            }
+          }
+        },
+        {
+          "name": "the absent stand-in is not reported as a limit on what the view shows",
+          "passed": false,
+          "detail": [
+            {
+              "cause": "source",
+              "missingRegions": 1,
+              "finestLevelRegions": 0,
+              "finestLevel": 20,
+              "outsideRegions": 0,
+              "scaleRegions": 0
+            }
+          ]
+        },
+        {
+          "name": "once settled, a still view selects, uploads, writes and asks for nothing",
+          "passed": true,
+          "detail": {
+            "ms": 3000,
+            "frames": 614,
+            "selections": 0,
+            "uploads": 0,
+            "tableWrites": 0,
+            "publishes": 0,
+            "renderRequests": 0
+          }
+        }
+      ],
+      "passed": false,
+      "screenshots": {
+        "after": "control-webgpu-after.png"
+      }
+    }
+  ],
+  "control": "The same fixture with the selector change reverted (a missing image ends refinement whatever is resident below it): it must fail."
+}

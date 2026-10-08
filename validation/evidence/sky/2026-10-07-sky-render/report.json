@@ -1,0 +1,1594 @@
+{
+  "tool": "scripts/validation/sky-render.mjs",
+  "generatedAt": "2026-10-08T02:37:13.983Z",
+  "browser": "Chrome/154.0.8037.98",
+  "software": true,
+  "sources": {
+    "scripts/validation/sky-render.mjs": "d8ca5829967223e2682daded8a91a1105be91260941a24a7901d1068466eb3f3",
+    "scripts/validation/skyRenderCheck.ts": "93770ef56ca27b49167837e787f9d3b3871c57c1d055c1caf1e911e67c2ff13d",
+    "src/engine/babylon/createSkyRuntime.ts": "9601ea315d20c6b7ed2f958876eaf6aaaffd7750628b53550677d6925a5c5621",
+    "src/engine/babylon/imagery/terrainLightPlugin.ts": "13781078c28f8ba3584958591e5ce791c496b04b56d1c6928c5c1a8727ffb990",
+    "src/engine/babylon/createStarField.ts": "c11ba29a624162d40c90c0b8d4209e93c73c94ce32dd5741885b1e7a5c1f2687",
+    "src/engine/babylon/createLightPoints.ts": "92f30652807563ae7fb7ffce5463d22139a8110da548f72dc6eb97a109681328",
+    "src/engine/babylon/createGroundLightProbe.ts": "195d6ae01c6ec4a8ec89260b78427d698d62650bb83d6036fd2ccc7bff88aadc",
+    "src/sky/skyState.ts": "805173d21e2c4baae76468fceedf2ca53f34a1488f2f9c5bf8d8fdd1708358f7",
+    "src/sky/atmosphere.ts": "b5f0e0a7fa78934af80081189a8ee57dcf7dbb9fe4be54c4626f626c56f5feab",
+    "src/sky/lunarPosition.ts": "4f476b28088fe7cedb1a10ffdd3d270a74b1ae759204b8d60da62d846790b621",
+    "src/sky/stars.ts": "42e974106a7b2642e15c07412a382e797a4b9f35634ff092a2610911fdfd2456"
+  },
+  "errors": [],
+  "results": [
+    {
+      "backend": "webgl2",
+      "renderer": "WebGL 2: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "checks": [
+        {
+          "name": "afternoon: 2D map tile (standard material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon: unlit glTF tile (PBR material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: 2D map tile (standard material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: unlit glTF tile (PBR material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: 2D map tile (standard material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: 2D map tile (standard material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: unlit glTF tile (PBR material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: 2D map tile (standard material)",
+          "expected": [
+            86,
+            85,
+            83
+          ],
+          "actual": [
+            86,
+            84,
+            82
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: 2D map tile (standard material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: unlit glTF tile (PBR material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 140°W (factor 0.60)",
+          "expected": [
+            154,
+            149,
+            145
+          ],
+          "actual": [
+            154,
+            149,
+            145
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 110°W (factor 0.73)",
+          "expected": [
+            167,
+            163,
+            160
+          ],
+          "actual": [
+            167,
+            163,
+            160
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 80°W (factor 0.63)",
+          "expected": [
+            157,
+            152,
+            148
+          ],
+          "actual": [
+            157,
+            152,
+            149
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 50°W (factor 0.31)",
+          "expected": [
+            117,
+            111,
+            106
+          ],
+          "actual": [
+            117,
+            111,
+            107
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 35°W (factor 0.12)",
+          "expected": [
+            78,
+            71,
+            68
+          ],
+          "actual": [
+            78,
+            71,
+            67
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 25°W (factor 0.020)",
+          "expected": [
+            35,
+            32,
+            35
+          ],
+          "actual": [
+            35,
+            31,
+            34
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 20°W (factor 0.0031)",
+          "expected": [
+            15,
+            14,
+            17
+          ],
+          "actual": [
+            15,
+            13,
+            16
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 15°W (factor 0.000056)",
+          "expected": [
+            3,
+            2,
+            3
+          ],
+          "actual": [
+            2,
+            2,
+            2
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 10°W (factor 2.3e-7)",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "actual": [
+            0,
+            0,
+            0
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "the full Moon's disc",
+          "expected": [
+            255,
+            255,
+            255
+          ],
+          "actual": [
+            255,
+            255,
+            255
+          ],
+          "tolerance": 2,
+          "ok": true
+        },
+        {
+          "name": "the moonlit sky 10° from the Moon: lit, and under 120",
+          "expected": [
+            1,
+            1,
+            1
+          ],
+          "actual": [
+            33,
+            32,
+            29
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star at night, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            34,
+            34,
+            34
+          ],
+          "actual": [
+            64,
+            59,
+            53
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "by day near the ground no star is drawn: the stars' exposure within a tenth of a stop of the scene's",
+          "expected": [
+            0
+          ],
+          "actual": [
+            0
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star from 400 km by day, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            30,
+            30,
+            30
+          ],
+          "actual": [
+            76,
+            67,
+            56
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a 40 cd red lamp at 20 m at night, 7.01e+3 × white at its core: red at 255, green under 40",
+          "expected": [
+            255,
+            0,
+            0
+          ],
+          "actual": [
+            255,
+            3,
+            3
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "the same lamp by day, 0.308 × white, added to the ground's light",
+          "expected": [
+            210,
+            151,
+            147
+          ],
+          "actual": [
+            207,
+            151,
+            147
+          ],
+          "tolerance": 12,
+          "ok": true
+        },
+        {
+          "name": "the ground's light read back in 119 ms, cd/m²: within a tenth",
+          "expected": [
+            18699,
+            17337,
+            16216
+          ],
+          "actual": [
+            17640,
+            16201,
+            15276
+          ],
+          "tolerance": 0,
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "shots": [
+        "afternoon",
+        "dusk",
+        "full-moon night",
+        "moonless night",
+        "full-moon night with a beam on the 2D tile",
+        "afternoon, as at the viewpoint",
+        "afternoon, as photographed",
+        "sky off",
+        "planet, afternoon over Minneapolis",
+        "full Moon",
+        "stars",
+        "stars from 400 km by day",
+        "light point at night"
+      ],
+      "notes": [
+        "afternoon: factor 0.670, 0.621, 0.581; EV 15.47",
+        "dusk: factor 0.265, 0.203, 0.328; EV 9.34",
+        "full-moon night: factor 0.0402, 0.0346, 0.0258; EV 1.66",
+        "moonless night: factor 0.000125, 0.000125, 0.000125; EV 1.00",
+        "full-moon night with a beam on the 2D tile: factor 0.180, 0.175, 0.166; EV 1.66",
+        "afternoon, as at the viewpoint: factor 0.667, 0.619, 0.579; EV 15.47",
+        "afternoon, as photographed: factor 1.00, 1.00, 1.00; EV 15.47",
+        "sky off: factor 1.00, 1.00, 1.00; EV none",
+        "from 400 km by day: the scene at EV 15.70, the stars at EV 1.00"
+      ]
+    },
+    {
+      "backend": "webgl1",
+      "renderer": "WebGL 1: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "checks": [
+        {
+          "name": "afternoon: 2D map tile (standard material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon: unlit glTF tile (PBR material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: 2D map tile (standard material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: unlit glTF tile (PBR material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: 2D map tile (standard material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: 2D map tile (standard material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: unlit glTF tile (PBR material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: 2D map tile (standard material)",
+          "expected": [
+            86,
+            85,
+            83
+          ],
+          "actual": [
+            86,
+            84,
+            82
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: 2D map tile (standard material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: unlit glTF tile (PBR material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 140°W (factor 0.60)",
+          "expected": [
+            154,
+            149,
+            145
+          ],
+          "actual": [
+            154,
+            149,
+            145
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 110°W (factor 0.73)",
+          "expected": [
+            167,
+            163,
+            160
+          ],
+          "actual": [
+            167,
+            163,
+            160
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 80°W (factor 0.63)",
+          "expected": [
+            157,
+            152,
+            148
+          ],
+          "actual": [
+            157,
+            152,
+            149
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 50°W (factor 0.31)",
+          "expected": [
+            117,
+            111,
+            106
+          ],
+          "actual": [
+            117,
+            111,
+            107
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 35°W (factor 0.12)",
+          "expected": [
+            78,
+            71,
+            68
+          ],
+          "actual": [
+            78,
+            71,
+            67
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 25°W (factor 0.020)",
+          "expected": [
+            35,
+            32,
+            35
+          ],
+          "actual": [
+            35,
+            31,
+            34
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 20°W (factor 0.0031)",
+          "expected": [
+            15,
+            14,
+            17
+          ],
+          "actual": [
+            15,
+            13,
+            16
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 15°W (factor 0.000056)",
+          "expected": [
+            3,
+            2,
+            3
+          ],
+          "actual": [
+            2,
+            2,
+            2
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 10°W (factor 2.3e-7)",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "actual": [
+            0,
+            0,
+            0
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "the full Moon's disc",
+          "expected": [
+            255,
+            255,
+            255
+          ],
+          "actual": [
+            255,
+            255,
+            255
+          ],
+          "tolerance": 2,
+          "ok": true
+        },
+        {
+          "name": "the moonlit sky 10° from the Moon: lit, and under 120",
+          "expected": [
+            1,
+            1,
+            1
+          ],
+          "actual": [
+            33,
+            32,
+            29
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star at night, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            34,
+            34,
+            34
+          ],
+          "actual": [
+            64,
+            59,
+            53
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "by day near the ground no star is drawn: the stars' exposure within a tenth of a stop of the scene's",
+          "expected": [
+            0
+          ],
+          "actual": [
+            0
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star from 400 km by day, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            30,
+            30,
+            30
+          ],
+          "actual": [
+            76,
+            67,
+            56
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a 40 cd red lamp at 20 m at night, 7.01e+3 × white at its core: red at 255, green under 40",
+          "expected": [
+            255,
+            0,
+            0
+          ],
+          "actual": [
+            255,
+            3,
+            3
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "the same lamp by day, 0.308 × white, added to the ground's light",
+          "expected": [
+            210,
+            151,
+            147
+          ],
+          "actual": [
+            207,
+            151,
+            147
+          ],
+          "tolerance": 12,
+          "ok": true
+        },
+        {
+          "name": "the ground's light read back in 152 ms, cd/m²: within a tenth",
+          "expected": [
+            18699,
+            17337,
+            16216
+          ],
+          "actual": [
+            17640,
+            16201,
+            15276
+          ],
+          "tolerance": 0,
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "shots": [
+        "afternoon",
+        "dusk",
+        "full-moon night",
+        "moonless night",
+        "full-moon night with a beam on the 2D tile",
+        "afternoon, as at the viewpoint",
+        "afternoon, as photographed",
+        "sky off",
+        "planet, afternoon over Minneapolis",
+        "full Moon",
+        "stars",
+        "stars from 400 km by day",
+        "light point at night"
+      ],
+      "notes": [
+        "afternoon: factor 0.670, 0.621, 0.581; EV 15.47",
+        "dusk: factor 0.265, 0.203, 0.328; EV 9.34",
+        "full-moon night: factor 0.0402, 0.0346, 0.0258; EV 1.66",
+        "moonless night: factor 0.000125, 0.000125, 0.000125; EV 1.00",
+        "full-moon night with a beam on the 2D tile: factor 0.180, 0.175, 0.166; EV 1.66",
+        "afternoon, as at the viewpoint: factor 0.667, 0.619, 0.579; EV 15.47",
+        "afternoon, as photographed: factor 1.00, 1.00, 1.00; EV 15.47",
+        "sky off: factor 1.00, 1.00, 1.00; EV none",
+        "from 400 km by day: the scene at EV 15.70, the stars at EV 1.00"
+      ]
+    },
+    {
+      "backend": "webgpu",
+      "renderer": "google swiftshader",
+      "checks": [
+        {
+          "name": "afternoon: 2D map tile (standard material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon: unlit glTF tile (PBR material)",
+          "expected": [
+            157,
+            151,
+            147
+          ],
+          "actual": [
+            157,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: 2D map tile (standard material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "dusk: unlit glTF tile (PBR material)",
+          "expected": [
+            103,
+            91,
+            113
+          ],
+          "actual": [
+            103,
+            91,
+            113
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: 2D map tile (standard material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: 2D map tile (standard material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "moonless night: unlit glTF tile (PBR material)",
+          "expected": [
+            3,
+            3,
+            3
+          ],
+          "actual": [
+            3,
+            3,
+            3
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: 2D map tile (standard material)",
+          "expected": [
+            86,
+            85,
+            83
+          ],
+          "actual": [
+            86,
+            84,
+            82
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "full-moon night with a beam on the 2D tile: unlit glTF tile (PBR material)",
+          "expected": [
+            44,
+            41,
+            36
+          ],
+          "actual": [
+            44,
+            41,
+            36
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: 2D map tile (standard material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as at the viewpoint: unlit glTF tile (PBR material)",
+          "expected": [
+            156,
+            151,
+            147
+          ],
+          "actual": [
+            156,
+            151,
+            147
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "afternoon, as photographed: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: 2D map tile (standard material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "sky off: unlit glTF tile (PBR material)",
+          "expected": [
+            188,
+            188,
+            188
+          ],
+          "actual": [
+            188,
+            188,
+            188
+          ],
+          "tolerance": 4,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 140°W (factor 0.60)",
+          "expected": [
+            154,
+            149,
+            145
+          ],
+          "actual": [
+            154,
+            149,
+            145
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 110°W (factor 0.73)",
+          "expected": [
+            167,
+            163,
+            160
+          ],
+          "actual": [
+            167,
+            163,
+            160
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 80°W (factor 0.63)",
+          "expected": [
+            157,
+            152,
+            148
+          ],
+          "actual": [
+            157,
+            152,
+            149
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 50°W (factor 0.31)",
+          "expected": [
+            117,
+            111,
+            106
+          ],
+          "actual": [
+            117,
+            111,
+            107
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 35°W (factor 0.12)",
+          "expected": [
+            78,
+            71,
+            68
+          ],
+          "actual": [
+            78,
+            71,
+            67
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 25°W (factor 0.020)",
+          "expected": [
+            35,
+            32,
+            35
+          ],
+          "actual": [
+            35,
+            31,
+            34
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 20°W (factor 0.0031)",
+          "expected": [
+            15,
+            14,
+            17
+          ],
+          "actual": [
+            15,
+            13,
+            16
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 15°W (factor 0.000056)",
+          "expected": [
+            3,
+            2,
+            3
+          ],
+          "actual": [
+            2,
+            2,
+            2
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "planet at 30°N 10°W (factor 2.3e-7)",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "actual": [
+            0,
+            0,
+            0
+          ],
+          "tolerance": 8,
+          "ok": true
+        },
+        {
+          "name": "the full Moon's disc",
+          "expected": [
+            255,
+            255,
+            255
+          ],
+          "actual": [
+            255,
+            255,
+            255
+          ],
+          "tolerance": 2,
+          "ok": true
+        },
+        {
+          "name": "the moonlit sky 10° from the Moon: lit, and under 120",
+          "expected": [
+            1,
+            1,
+            1
+          ],
+          "actual": [
+            33,
+            32,
+            29
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star at night, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            34,
+            34,
+            34
+          ],
+          "actual": [
+            64,
+            59,
+            53
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "by day near the ground no star is drawn: the stars' exposure within a tenth of a stop of the scene's",
+          "expected": [
+            0
+          ],
+          "actual": [
+            0
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a bright star from 400 km by day, of 8404 drawn: at least 30 above the sky beside it",
+          "expected": [
+            30,
+            30,
+            30
+          ],
+          "actual": [
+            76,
+            67,
+            56
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "a 40 cd red lamp at 20 m at night, 7.01e+3 × white at its core: red at 255, green under 40",
+          "expected": [
+            255,
+            0,
+            0
+          ],
+          "actual": [
+            255,
+            3,
+            3
+          ],
+          "tolerance": 0,
+          "ok": true
+        },
+        {
+          "name": "the same lamp by day, 0.308 × white, added to the ground's light",
+          "expected": [
+            210,
+            151,
+            147
+          ],
+          "actual": [
+            207,
+            151,
+            147
+          ],
+          "tolerance": 12,
+          "ok": true
+        },
+        {
+          "name": "the ground's light read back in 224 ms, cd/m²: within a tenth",
+          "expected": [
+            18699,
+            17337,
+            16216
+          ],
+          "actual": [
+            17533,
+            16181,
+            15435
+          ],
+          "tolerance": 0,
+          "ok": true
+        }
+      ],
+      "errors": [],
+      "shots": [
+        "afternoon",
+        "dusk",
+        "full-moon night",
+        "moonless night",
+        "full-moon night with a beam on the 2D tile",
+        "afternoon, as at the viewpoint",
+        "afternoon, as photographed",
+        "sky off",
+        "planet, afternoon over Minneapolis",
+        "full Moon",
+        "stars",
+        "stars from 400 km by day",
+        "light point at night"
+      ],
+      "notes": [
+        "afternoon: factor 0.670, 0.621, 0.581; EV 15.47",
+        "dusk: factor 0.265, 0.203, 0.328; EV 9.34",
+        "full-moon night: factor 0.0402, 0.0346, 0.0258; EV 1.66",
+        "moonless night: factor 0.000125, 0.000125, 0.000125; EV 1.00",
+        "full-moon night with a beam on the 2D tile: factor 0.180, 0.175, 0.166; EV 1.66",
+        "afternoon, as at the viewpoint: factor 0.667, 0.619, 0.579; EV 15.47",
+        "afternoon, as photographed: factor 1.00, 1.00, 1.00; EV 15.47",
+        "sky off: factor 1.00, 1.00, 1.00; EV none",
+        "from 400 km by day: the scene at EV 15.70, the stars at EV 1.00"
+      ]
+    }
+  ]
+}

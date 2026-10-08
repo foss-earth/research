@@ -1,0 +1,689 @@
+{
+  "tool": "scripts/validation/sky-model.mjs",
+  "ranAt": "2026-10-08T02:37:02.732Z",
+  "node": "v26.9.0",
+  "sources": {
+    "scripts/validation/sky-model.mjs": "23b09a4d335d6c79093223716934821406fd98427ebf321a3b57b2b49ba468dd",
+    "scripts/validation/skyModelCheck.ts": "0db3c5764a64f056361f14424458ecff483df2360191f81342768122bffb4223",
+    "src/sky/atmosphere.ts": "b5f0e0a7fa78934af80081189a8ee57dcf7dbb9fe4be54c4626f626c56f5feab",
+    "src/sky/skyState.ts": "805173d21e2c4baae76468fceedf2ca53f34a1488f2f9c5bf8d8fdd1708358f7",
+    "src/sky/solarPosition.ts": "00bb35e22f83fdd030d5f6f437cf19dd060694bad55b239de4d2fb785e2c782b",
+    "src/sky/solarPositionTerms.ts": "c333c9c2121496131cf3811f90a11a66fd379baaff1387de29b962d981cb68a7",
+    "src/sky/lunarPosition.ts": "4f476b28088fe7cedb1a10ffdd3d270a74b1ae759204b8d60da62d846790b621",
+    "src/sky/stars.ts": "42e974106a7b2642e15c07412a382e797a4b9f35634ff092a2610911fdfd2456",
+    "src/sky/starCatalogue.ts": "e486cfc3be312f4bb08a291c8dc035ea6b3c96efa8f3d9f4eae8691f3dcd8864",
+    "src/settings/catalogue/sky.ts": "801a01d8c93578d52e1382d89953cd3a41ab5b09a6aa736f43d9e52e13c69eb3"
+  },
+  "parameters": {
+    "aerosolOpticalDepth": 0.1,
+    "groundAlbedo": 0.2
+  },
+  "solar": {
+    "report": "NREL/TP-560-34302 (revised January 2008), Table A5.1",
+    "zenithDeg": {
+      "computed": 50.11162202403697,
+      "report": 50.11162
+    },
+    "azimuthDeg": {
+      "computed": 194.34024051024002,
+      "report": 194.34024
+    },
+    "apparentLongitudeDeg": {
+      "computed": 204.0085519280827,
+      "report": 204.0085519281
+    },
+    "radiusVectorAu": {
+      "computed": 0.9965422973539708,
+      "report": 0.9965422974
+    }
+  },
+  "light": [
+    {
+      "unrefractedElevationDeg": 88.14,
+      "drawnElevationDeg": 88.14,
+      "sunLux": 107000,
+      "skyLux": 19440,
+      "levelGroundLux": 126400,
+      "meteredEv100": 15.63
+    },
+    {
+      "unrefractedElevationDeg": 60,
+      "drawnElevationDeg": 60.01,
+      "sunLux": 103400,
+      "skyLux": 18120,
+      "levelGroundLux": 107700,
+      "meteredEv100": 15.57
+    },
+    {
+      "unrefractedElevationDeg": 45,
+      "drawnElevationDeg": 45.02,
+      "sunLux": 97540,
+      "skyLux": 16570,
+      "levelGroundLux": 85550,
+      "meteredEv100": 15.48
+    },
+    {
+      "unrefractedElevationDeg": 30,
+      "drawnElevationDeg": 30.03,
+      "sunLux": 85630,
+      "skyLux": 13990,
+      "levelGroundLux": 56840,
+      "meteredEv100": 15.28
+    },
+    {
+      "unrefractedElevationDeg": 20,
+      "drawnElevationDeg": 20.05,
+      "sunLux": 70010,
+      "skyLux": 11260,
+      "levelGroundLux": 35220,
+      "meteredEv100": 14.99
+    },
+    {
+      "unrefractedElevationDeg": 10,
+      "drawnElevationDeg": 10.09,
+      "sunLux": 39180,
+      "skyLux": 6980,
+      "levelGroundLux": 13750,
+      "meteredEv100": 14.17
+    },
+    {
+      "unrefractedElevationDeg": 5,
+      "drawnElevationDeg": 5.159,
+      "sunLux": 14710,
+      "skyLux": 4034,
+      "levelGroundLux": 5351,
+      "meteredEv100": 12.87
+    },
+    {
+      "unrefractedElevationDeg": 2,
+      "drawnElevationDeg": 2.278,
+      "sunLux": 2280,
+      "skyLux": 2111,
+      "levelGroundLux": 2194,
+      "meteredEv100": 10.78
+    },
+    {
+      "unrefractedElevationDeg": 1.152e-7,
+      "drawnElevationDeg": 0.4762,
+      "sunLux": 23.47,
+      "skyLux": 1096,
+      "levelGroundLux": 1094,
+      "meteredEv100": 8.806
+    },
+    {
+      "unrefractedElevationDeg": -0.833,
+      "drawnElevationDeg": -0.2236,
+      "sunLux": 0.01298,
+      "skyLux": 798.5,
+      "levelGroundLux": 793.2,
+      "meteredEv100": 8.319
+    },
+    {
+      "unrefractedElevationDeg": -2,
+      "drawnElevationDeg": -1.528,
+      "sunLux": 0,
+      "skyLux": 388.3,
+      "levelGroundLux": 382.7,
+      "meteredEv100": 7.279
+    },
+    {
+      "unrefractedElevationDeg": -4,
+      "drawnElevationDeg": -3.764,
+      "sunLux": 0,
+      "skyLux": 62.42,
+      "levelGroundLux": 62.24,
+      "meteredEv100": 4.642
+    },
+    {
+      "unrefractedElevationDeg": -6,
+      "drawnElevationDeg": -6,
+      "sunLux": 0,
+      "skyLux": 5.163,
+      "levelGroundLux": 5.139,
+      "meteredEv100": 1.046,
+      "publishedLux": [
+        2,
+        3.5
+      ],
+      "modelOverPublished": [
+        1.47,
+        2.57
+      ],
+      "source": "AMS Glossary, civil and nautical twilight: about 3.5 to 2 lux where civil twilight ends"
+    },
+    {
+      "unrefractedElevationDeg": -9,
+      "drawnElevationDeg": -9,
+      "sunLux": 0,
+      "skyLux": 0.1086,
+      "levelGroundLux": 0.1084,
+      "meteredEv100": -4.525
+    },
+    {
+      "unrefractedElevationDeg": -12,
+      "drawnElevationDeg": -12,
+      "sunLux": 0,
+      "skyLux": 0.003196,
+      "levelGroundLux": 0.00321,
+      "meteredEv100": -9.611,
+      "publishedLux": [
+        0.008,
+        0.008
+      ],
+      "modelOverPublished": [
+        0.401,
+        0.401
+      ],
+      "source": "AMS Glossary, nautical and astronomical twilight: about 0.008 lux where nautical twilight ends"
+    },
+    {
+      "unrefractedElevationDeg": -15,
+      "drawnElevationDeg": -15,
+      "sunLux": 0,
+      "skyLux": 0.0007599,
+      "levelGroundLux": 0.000759,
+      "meteredEv100": -11.68
+    },
+    {
+      "unrefractedElevationDeg": -18,
+      "drawnElevationDeg": -18,
+      "sunLux": 0,
+      "skyLux": 0.000642,
+      "levelGroundLux": 0.0006419,
+      "meteredEv100": -11.93,
+      "publishedLux": [
+        0.0006,
+        0.0006
+      ],
+      "modelOverPublished": [
+        1.07,
+        1.07
+      ],
+      "source": "AMS Glossary, astronomical twilight: about 0.0006 lux where it ends"
+    },
+    {
+      "unrefractedElevationDeg": -30,
+      "drawnElevationDeg": -30,
+      "sunLux": 0,
+      "skyLux": 0.0006283,
+      "levelGroundLux": 0.0006299,
+      "meteredEv100": -11.96
+    }
+  ],
+  "moon": {
+    "theory": "J. Meeus, Astronomical Algorithms, 2nd edition (1998), chapter 47, example 47.a: 1992 April 12, 0h TD",
+    "longitudeDeg": {
+      "computed": 133.16265468516212,
+      "published": 133.162655
+    },
+    "latitudeDeg": {
+      "computed": -3.2291264192230993,
+      "published": -3.229126
+    },
+    "distanceKm": {
+      "computed": 368409.6848161263,
+      "published": 368409.7
+    },
+    "parallaxDeg": {
+      "computed": 0.9919901025203558,
+      "published": 0.99199
+    },
+    "rightAscensionDeg": {
+      "computed": 134.6884685484426,
+      "published": 134.68847
+    },
+    "declinationDeg": {
+      "computed": 13.768366630550803,
+      "published": 13.768368
+    },
+    "published": "A full Moon on a clear night lights the ground with 0.05 to 0.3 lux, by its height and distance (C. Kyba, A. Mohar and T. Posch, How bright is moonlight?, Astronomy & Geophysics 58, 2017)",
+    "aboveTheAirAtMeanDistance": [
+      {
+        "phaseAngleDeg": 0,
+        "magnitude": -12.73,
+        "lux": 0.3318
+      },
+      {
+        "phaseAngleDeg": 30,
+        "magnitude": -11.947,
+        "lux": 0.1613
+      },
+      {
+        "phaseAngleDeg": 60,
+        "magnitude": -11.118,
+        "lux": 0.0752
+      },
+      {
+        "phaseAngleDeg": 90,
+        "magnitude": -10.128,
+        "lux": 0.0302
+      },
+      {
+        "phaseAngleDeg": 120,
+        "magnitude": -8.7806,
+        "lux": 0.008733
+      },
+      {
+        "phaseAngleDeg": 150,
+        "magnitude": -6.805,
+        "lux": 0.001416
+      }
+    ],
+    "nights": [
+      {
+        "name": "full Moon high",
+        "utc": "2026-10-26T06:00:00.000Z",
+        "sunElevationDeg": -57.45,
+        "moonElevationDeg": 61.64,
+        "moonPhaseAngleDeg": 4.255,
+        "moonLitFraction": 0.999,
+        "moonAboveTheAirLux": 0.34,
+        "moonDirectLux": 0.2716,
+        "moonlitSkyLux": 0.04012,
+        "levelGroundLux": 0.2783,
+        "meteredEv100": -3.001,
+        "adaptedEv100": 1.659,
+        "ev100AtDefaults": 1.659,
+        "groundOfReflectance03": 0.00701
+      },
+      {
+        "name": "quarter Moon at dusk",
+        "utc": "2026-10-18T23:30:00.000Z",
+        "sunElevationDeg": -1.835,
+        "moonElevationDeg": 20.08,
+        "moonPhaseAngleDeg": 86.55,
+        "moonLitFraction": 0.53,
+        "moonAboveTheAirLux": 0.03164,
+        "moonDirectLux": 0.01797,
+        "moonlitSkyLux": 0.002406,
+        "levelGroundLux": 312.1,
+        "meteredEv100": 7.032,
+        "adaptedEv100": 9.182,
+        "ev100AtDefaults": 9.182,
+        "groundOfReflectance03": 0.0428
+      },
+      {
+        "name": "no Moon up",
+        "utc": "2026-10-08T06:00:00.000Z",
+        "sunElevationDeg": -50.9,
+        "moonElevationDeg": -35.42,
+        "moonPhaseAngleDeg": 150.8,
+        "moonLitFraction": 0.0634,
+        "moonAboveTheAirLux": 0.001343,
+        "moonDirectLux": 0,
+        "moonlitSkyLux": 0,
+        "levelGroundLux": 0.0006298,
+        "meteredEv100": -11.96,
+        "adaptedEv100": -5.063,
+        "ev100AtDefaults": 1,
+        "groundOfReflectance03": 0.0000251
+      }
+    ]
+  },
+  "stars": {
+    "catalogue": "Bright Star Catalogue, 5th revised edition (D. Hoffleit and W. H. Warren Jr., 1991; CDS V/50)",
+    "count": 9096,
+    "packedBytes": 145536,
+    "countToMagnitude": {
+      "2": 50,
+      "4": 518,
+      "6": 5080,
+      "6.5": 8404,
+      "8.1": 9096
+    },
+    "brightest": {
+      "magnitude": -1.46,
+      "lux": 0.0000103
+    },
+    "faintestDrawnByDefault": {
+      "magnitude": 6.5,
+      "lux": 6.744e-9
+    },
+    "allToMagnitude65AboveTheAirLux": 0.0002539,
+    "precession": {
+      "example": "Meeus, example 21.b: θ Persei at 2028 November 13.19 TD",
+      "rightAscensionDeg": {
+        "computed": 41.54721294562489,
+        "published": 41.547214
+      },
+      "declinationDeg": {
+        "computed": 49.34848147946796,
+        "published": 49.348483
+      }
+    }
+  },
+  "starsByHeight": {
+    "heightsKm": {
+      "min": 0,
+      "max": 80
+    },
+    "sunElevationDeg": 60,
+    "rows": [
+      {
+        "km": 0,
+        "skyMeanCdPerM2": 5720,
+        "ofSeaLevel": 1,
+        "sceneEv100": 15.57,
+        "meteredOnTheSkyEv100": 15.48,
+        "starEv100AtDefaults": 15.57,
+        "starWhiteCdPerM2": 58430
+      },
+      {
+        "km": 10,
+        "skyMeanCdPerM2": 840.4,
+        "ofSeaLevel": 0.147,
+        "sceneEv100": 15.65,
+        "meteredOnTheSkyEv100": 12.71,
+        "starEv100AtDefaults": 13.82,
+        "starWhiteCdPerM2": 17320
+      },
+      {
+        "km": 20,
+        "skyMeanCdPerM2": 245.1,
+        "ofSeaLevel": 0.0429,
+        "sceneEv100": 15.67,
+        "meteredOnTheSkyEv100": 10.94,
+        "starEv100AtDefaults": 12,
+        "starWhiteCdPerM2": 4922
+      },
+      {
+        "km": 30,
+        "skyMeanCdPerM2": 71.6,
+        "ofSeaLevel": 0.0125,
+        "sceneEv100": 15.69,
+        "meteredOnTheSkyEv100": 9.162,
+        "starEv100AtDefaults": 10.18,
+        "starWhiteCdPerM2": 1395
+      },
+      {
+        "km": 40,
+        "skyMeanCdPerM2": 20.74,
+        "ofSeaLevel": 0.00363,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 7.374,
+        "starEv100AtDefaults": 8.351,
+        "starWhiteCdPerM2": 391.9
+      },
+      {
+        "km": 50,
+        "skyMeanCdPerM2": 5.885,
+        "ofSeaLevel": 0.00103,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 5.557,
+        "starEv100AtDefaults": 6.513,
+        "starWhiteCdPerM2": 109.6
+      },
+      {
+        "km": 60,
+        "skyMeanCdPerM2": 1.63,
+        "ofSeaLevel": 0.000285,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 3.705,
+        "starEv100AtDefaults": 4.676,
+        "starWhiteCdPerM2": 30.67
+      },
+      {
+        "km": 70,
+        "skyMeanCdPerM2": 0.4446,
+        "ofSeaLevel": 0.0000777,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 1.831,
+        "starEv100AtDefaults": 2.838,
+        "starWhiteCdPerM2": 8.579
+      },
+      {
+        "km": 80,
+        "skyMeanCdPerM2": 0.118,
+        "ofSeaLevel": 0.0000206,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 1,
+        "starEv100AtDefaults": 1,
+        "starWhiteCdPerM2": 2.4
+      },
+      {
+        "km": 100,
+        "skyMeanCdPerM2": 0.0002,
+        "ofSeaLevel": 3.5e-8,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 1,
+        "starEv100AtDefaults": 1,
+        "starWhiteCdPerM2": 2.4
+      },
+      {
+        "km": 400,
+        "skyMeanCdPerM2": 0.0002,
+        "ofSeaLevel": 3.5e-8,
+        "sceneEv100": 15.7,
+        "meteredOnTheSkyEv100": 1,
+        "starEv100AtDefaults": 1,
+        "starWhiteCdPerM2": 2.4
+      }
+    ]
+  },
+  "accuracy": {
+    "transmittanceWorstErrorAgainstBruteForce": 0.011,
+    "convergence": [
+      {
+        "steps": 8,
+        "worstErrorAgainst512Steps": 0.225
+      },
+      {
+        "steps": 16,
+        "worstErrorAgainst512Steps": 0.0516
+      },
+      {
+        "steps": 32,
+        "worstErrorAgainst512Steps": 0.0133
+      },
+      {
+        "steps": 64,
+        "worstErrorAgainst512Steps": 0.00317
+      }
+    ],
+    "groundTable": {
+      "samples": 27,
+      "bytes": 432,
+      "layout": {
+        "fromDeg": -18,
+        "fineToDeg": 12,
+        "fineStepDeg": 1.5,
+        "coarseStepDeg": 13,
+        "fadeDeg": 2
+      },
+      "fineSteps": {
+        "fromDeg": -18,
+        "toDeg": 12,
+        "worstErrorAgainstTheModel": 0.0641,
+        "worstAtElevationDeg": -12.8
+      },
+      "wideSteps": {
+        "fromDeg": 12,
+        "toDeg": 90,
+        "worstErrorAgainstTheModel": 0.0418,
+        "worstAtElevationDeg": 16.95
+      }
+    }
+  },
+  "cost": {
+    "qualified": false,
+    "note": "Single-threaded JavaScript on a machine in use: read as orders of magnitude, not as measurements.",
+    "atmosphereTablesMs": 71,
+    "atmosphereTableBytes": 108384,
+    "solarEphemerisMicroseconds": 7.99,
+    "illuminationMs": 0.937,
+    "lunarEphemerisMicroseconds": 12.2,
+    "illuminationWithMoonMs": 1.22,
+    "groundTableMs": 0.00882,
+    "starDirectionsMs": 0.355,
+    "domes": [
+      {
+        "zenithSamples": 16,
+        "azimuthSamples": 16,
+        "integrationSteps": 16,
+        "samples": 443,
+        "vertices": 998,
+        "triangles": 1884,
+        "vertexBytes": 27944,
+        "fillMs": 1.28
+      },
+      {
+        "zenithSamples": 32,
+        "azimuthSamples": 32,
+        "integrationSteps": 16,
+        "samples": 1387,
+        "vertices": 2854,
+        "triangles": 5532,
+        "vertexBytes": 79912,
+        "fillMs": 3.34
+      },
+      {
+        "zenithSamples": 64,
+        "azimuthSamples": 64,
+        "integrationSteps": 32,
+        "samples": 4811,
+        "vertices": 9638,
+        "triangles": 18972,
+        "vertexBytes": 269864,
+        "fillMs": 22.3
+      }
+    ],
+    "moonlitDome": {
+      "zenithSamples": 32,
+      "azimuthSamples": 32,
+      "integrationSteps": 16,
+      "samples": 4077,
+      "moonSamples": 2688,
+      "vertices": 2854,
+      "fillMs": 8.38
+    }
+  },
+  "exposure": {
+    "defaults": {
+      "adaptation": 0.75,
+      "minEv100": 1,
+      "maxEv100": 16
+    },
+    "rows": [
+      {
+        "unrefractedElevationDeg": 60,
+        "meteredEv100": 15.57,
+        "adaptedEv100": 15.58,
+        "ev100AtDefaults": 15.58,
+        "whiteCdPerM2": 58920,
+        "groundOfReflectance03": 0.175,
+        "skyMean": 0.0979,
+        "emitterOf1CdPerM2": 0.000017,
+        "groundFollowingTheMeter": 0.176,
+        "skyMeanFollowingTheMeter": 0.0989
+      },
+      {
+        "unrefractedElevationDeg": 30,
+        "meteredEv100": 15.28,
+        "adaptedEv100": 15.37,
+        "ev100AtDefaults": 15.37,
+        "whiteCdPerM2": 50760,
+        "groundOfReflectance03": 0.107,
+        "skyMean": 0.0877,
+        "emitterOf1CdPerM2": 0.0000197,
+        "groundFollowingTheMeter": 0.114,
+        "skyMeanFollowingTheMeter": 0.0931
+      },
+      {
+        "unrefractedElevationDeg": 10,
+        "meteredEv100": 14.17,
+        "adaptedEv100": 14.54,
+        "ev100AtDefaults": 14.54,
+        "whiteCdPerM2": 28510,
+        "groundOfReflectance03": 0.046,
+        "skyMean": 0.0779,
+        "emitterOf1CdPerM2": 0.0000351,
+        "groundFollowingTheMeter": 0.0593,
+        "skyMeanFollowingTheMeter": 0.1
+      },
+      {
+        "unrefractedElevationDeg": 5,
+        "meteredEv100": 12.87,
+        "adaptedEv100": 13.56,
+        "ev100AtDefaults": 13.56,
+        "whiteCdPerM2": 14500,
+        "groundOfReflectance03": 0.0352,
+        "skyMean": 0.0885,
+        "emitterOf1CdPerM2": 0.000069,
+        "groundFollowingTheMeter": 0.0568,
+        "skyMeanFollowingTheMeter": 0.143
+      },
+      {
+        "unrefractedElevationDeg": 2,
+        "meteredEv100": 10.78,
+        "adaptedEv100": 11.99,
+        "ev100AtDefaults": 11.99,
+        "whiteCdPerM2": 4883,
+        "groundOfReflectance03": 0.0429,
+        "skyMean": 0.138,
+        "emitterOf1CdPerM2": 0.000205,
+        "groundFollowingTheMeter": 0.0994,
+        "skyMeanFollowingTheMeter": 0.319
+      },
+      {
+        "unrefractedElevationDeg": 0,
+        "meteredEv100": 8.806,
+        "adaptedEv100": 10.51,
+        "ev100AtDefaults": 10.51,
+        "whiteCdPerM2": 1752,
+        "groundOfReflectance03": 0.0597,
+        "skyMean": 0.199,
+        "emitterOf1CdPerM2": 0.000571,
+        "groundFollowingTheMeter": 0.195,
+        "skyMeanFollowingTheMeter": 0.649
+      },
+      {
+        "unrefractedElevationDeg": -2,
+        "meteredEv100": 7.279,
+        "adaptedEv100": 9.366,
+        "ev100AtDefaults": 9.366,
+        "whiteCdPerM2": 791.9,
+        "groundOfReflectance03": 0.0461,
+        "skyMean": 0.156,
+        "emitterOf1CdPerM2": 0.00126,
+        "groundFollowingTheMeter": 0.196,
+        "skyMeanFollowingTheMeter": 0.663
+      },
+      {
+        "unrefractedElevationDeg": -4,
+        "meteredEv100": 4.642,
+        "adaptedEv100": 7.388,
+        "ev100AtDefaults": 7.388,
+        "whiteCdPerM2": 201,
+        "groundOfReflectance03": 0.0296,
+        "skyMean": 0.0988,
+        "emitterOf1CdPerM2": 0.00497,
+        "groundFollowingTheMeter": 0.198,
+        "skyMeanFollowingTheMeter": 0.663
+      },
+      {
+        "unrefractedElevationDeg": -6,
+        "meteredEv100": 1.046,
+        "adaptedEv100": 4.691,
+        "ev100AtDefaults": 4.691,
+        "whiteCdPerM2": 31.01,
+        "groundOfReflectance03": 0.0158,
+        "skyMean": 0.053,
+        "emitterOf1CdPerM2": 0.0323,
+        "groundFollowingTheMeter": 0.198,
+        "skyMeanFollowingTheMeter": 0.663
+      },
+      {
+        "unrefractedElevationDeg": -18,
+        "meteredEv100": -11.93,
+        "adaptedEv100": -5.039,
+        "ev100AtDefaults": 1,
+        "whiteCdPerM2": 2.4,
+        "groundOfReflectance03": 0.0000255,
+        "skyMean": 0.0000851,
+        "emitterOf1CdPerM2": 0.417,
+        "groundFollowingTheMeter": 0.0000255,
+        "skyMeanFollowingTheMeter": 0.0000851
+      }
+    ]
+  }
+}
