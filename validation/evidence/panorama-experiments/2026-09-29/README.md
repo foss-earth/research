@@ -1,9 +1,9 @@
 # Work-saving experiments on the UMN tour, 2026-09-29
 
-The first pass of the [work-saving rendering experiments](../../../../docs/validation/panorama-experiments.md),
+The first pass of the [work-saving rendering experiments](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md),
 measured on the UMN campus tour's own build and photographs with the
 [scene A/B benchmark](../../../../benchmarks/scene-ab/README.md), and checked for correctness
-with the [panorama campus check](../../../../scripts/validation/panorama-campus.mjs) on WebGL 2.
+with the [panorama campus check](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/panorama-campus.mjs) on WebGL 2.
 
 **Result:** every experiment draws the tour as before. Four of them are pixel-identical, and
 the simpler shaders differ by at most 1/255 in under 0.3% of pixels. Inside a stop, skipping

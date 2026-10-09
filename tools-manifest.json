@@ -1,0 +1,3544 @@
+{
+  "schemaVersion": 1,
+  "owner": "foss-earth/research",
+  "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+  "status": "source-only inventory; no tool/check/experiment executed",
+  "runtimeQualification": false,
+  "publicOwnerDependencies": [
+    "@foss-earth/cubemap/babylon",
+    "@foss-earth/cubemap/core",
+    "@foss-earth/engine",
+    "@foss-earth/engine/babylon",
+    "@foss-earth/engine/imagery",
+    "@foss-earth/equirectangular/babylon",
+    "@foss-earth/equirectangular/core",
+    "@foss-earth/images",
+    "@foss-earth/images/node",
+    "@foss-earth/renderer/babylon",
+    "@foss-earth/ui/settings"
+  ],
+  "tools": [
+    {
+      "path": "scripts/benchmarks/collision/build-gpu-comparison.mjs",
+      "sha256": "8ceec5dbdb3f69a9df4adbc9bb32cc9fb462ebd6ebdfdd051066a77517754c1b",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:module",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "vite",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/collision/bvh-prototype.mjs",
+      "sha256": "5ec944afbecb9e333d60360085ea6589b4fc98654a772644bf7b3b63177e270f",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/collision/gpu-comparison.mjs",
+      "sha256": "acad508c6c1384441721494085e5baa407a9f2c57c5e388a2169371f5f0585e2",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./bvh-prototype.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/collision/bvh-prototype.mjs"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/collision/run-gpu-headless.mjs",
+      "sha256": "e38db49742b2222eaa19f878acf9b44d5d110467deaa648f2897b04d4bd3f2c6",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/collision/run.mjs",
+      "sha256": "83c8077022c2a3a4be80a8f7beb8b1599732a26d45b2d10769d5a7d8e1494bd6",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable",
+        "pinned historical collision baseline cd84c609 admitted artifact"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/collision/surface-query.mjs",
+      "sha256": "afd8dcd9e58a33ccb7d707ef754adfe17c375a46feaf376d62ae58727e284144",
+      "group": "collision",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public engine installed artifact; CPU/GPU benchmark grant as applicable",
+        "pinned historical collision baseline cd84c609 admitted artifact"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/export-package.mjs",
+      "sha256": "d16b84c08a1ba2e6bee5a98812d82ce4cb0130f9c49832fa3c1062376746148b",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/analysis.mjs",
+      "sha256": "a50c4fbbd868886d784bd815420eecb97f48bc1ed194afc639b43be5f9962135",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/svg.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs"
+        },
+        {
+          "specifier": "./paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs",
+      "sha256": "63aa4605df558ea77a6f38b2673dffe4d178aec1273d631127f33f4a0bd60c97",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "./paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:http",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:http2",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "vite",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/client.mjs",
+      "sha256": "01cfacdd576bf4fc252d2734f255020d3d797c798776129307f60d73f7abaa3a",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/cones.mjs",
+      "sha256": "c28c17242259e4b2a8d48b22b51ff83015e5620b8bb0d911e6eb052e149aa27f",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs",
+      "sha256": "61ff65628f8236a950576fcde4071046d280bd91bdba1e5a465aed1eab2651ee",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/judge.mjs",
+      "sha256": "60a36877341c66a52297e02addaf3306b29edb2c1ca583ffe15a65e41cefd856",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs",
+      "sha256": "0d3814da218fdc81f4ec6956fc8dd4346b4ef2c7c8e6d37f50f7c77cba061d79",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/pattern.mjs",
+      "sha256": "9de8877880b6cd154969413f0e4d35eb74334818bb2ae96ed9903c03a76c0828",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs",
+      "sha256": "baaae86dc4a3b9f86dacfe4dac955889e12d4d8b4705b2eb3599647b0edf0055",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/views.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/views.mjs"
+        },
+        {
+          "specifier": "./residual.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs"
+        },
+        {
+          "specifier": "./selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "./tiling.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs",
+      "sha256": "bb3d976a70186d2ee4a77dbb0e3f9fe35b2e81232c482a07e397edfdee42aecd",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs",
+      "sha256": "60fbf265e5370ad1c8004c37a67348423030b8c79caba759657f0bbfad5f1204",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./cones.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/cones.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/sim.mjs",
+      "sha256": "5d1732deff0ca9cd3e0444178a3c1f582b9e9c9dd467a84d8e43f8595c1e436f",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs",
+      "sha256": "2fe52b62b1244450b3d4af403aad94de326631b7349d15b3a545a737b4330619",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs",
+      "sha256": "93daf9164c9d184fe5ba6d4c9f45a8b42419e444c76748ba0724d8e67cae3577",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/traces.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/make-plots.mjs",
+      "sha256": "5d6d6b5161e28b79264eeab8794770d536ca79e1111fd232088b7c9d6186a00b",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../spherical-image-representation/lib/svg.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs"
+        },
+        {
+          "specifier": "./lib/analysis.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/analysis.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/make-screens.mjs",
+      "sha256": "cef637c1c2fd0de67ebb4fcd7bce6cff1ad288bbf86ba6e2f3e29a2b691c9938",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/make-tables.mjs",
+      "sha256": "b9ba7cf2b849fcde01f9f98bc3e60cda030be3256420a2b5267fa4e6578931b1",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/analysis.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/analysis.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/preprocess/build-dataset.mjs",
+      "sha256": "b33bf60d2f632d8821d356d0ef5b4ed0068278091cfa11290e92bec7c0cc2eca",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "../lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "../lib/pattern.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/pattern.mjs"
+        },
+        {
+          "specifier": "../lib/residual.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs"
+        },
+        {
+          "specifier": "../lib/tiling.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/run-gpu-checks.mjs",
+      "sha256": "46b062c6a942a00922c102d30d47fae0badb61c553c805dc3040ec4d41b520ea",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "./lib/pattern.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/pattern.mjs"
+        },
+        {
+          "specifier": "./lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "./lib/selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/run-http.mjs",
+      "sha256": "dcdf143f10b6be5eb1bde1dc0672fd7eb70bbf834df5aeb714a955d4f2948bff",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/quiet.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/judge.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/judge.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "./lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "./lib/sim.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/sim.mjs"
+        },
+        {
+          "specifier": "./lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/run-representation.mjs",
+      "sha256": "963fe9233e0b90e66f6c8a48662c341fdf9ca54c3c0459a26ddb5be5edcb9726",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../spherical-image-representation/lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/evaluation.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/judge.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/judge.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "./lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/run-sim.mjs",
+      "sha256": "c34c7dd7be68ec87b735441a04954f3d8f6aceb994cefdac8e8a36b641eed7b7",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../spherical-image-representation/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/client.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/client.mjs"
+        },
+        {
+          "specifier": "./lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "./lib/judge.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/judge.mjs"
+        },
+        {
+          "specifier": "./lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "./lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "./lib/selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "./lib/sim.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/sim.mjs"
+        },
+        {
+          "specifier": "./lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/tests/check-client.mjs",
+      "sha256": "fc3e9a09d0c7178955f3a49f6c7feddaba8f56f32480d6d6889da4599b1c5834",
+      "group": "eac-progressive-prototype",
+      "kind": "retained experimental test entry; not part of source-only default checks",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../lib/client.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/client.mjs"
+        },
+        {
+          "specifier": "../lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "../lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "../lib/selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "../lib/sim.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/sim.mjs"
+        },
+        {
+          "specifier": "../lib/tiling.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs"
+        },
+        {
+          "specifier": "../lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:test",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "experimental test grant and exact public format/images artifacts pending",
+        "explicit generated dataset/input receipt; native codec tools where used; synthetic expectations not qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/tests/check-geometry.mjs",
+      "sha256": "0461dcd215894b584e02e0f04369a028ff5815fff34d9b5ffa9a7211e2ca1a11",
+      "group": "eac-progressive-prototype",
+      "kind": "retained experimental test entry; not part of source-only default checks",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "../lib/config.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs"
+        },
+        {
+          "specifier": "../lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "../lib/pattern.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/pattern.mjs"
+        },
+        {
+          "specifier": "../lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "../lib/selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "../lib/tiling.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs"
+        },
+        {
+          "specifier": "../lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:test",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "experimental test grant and exact public format/images artifacts pending",
+        "explicit generated dataset/input receipt; native codec tools where used; synthetic expectations not qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/tests/check-residual.mjs",
+      "sha256": "c630cfb5ba608be79f8a36af7a04a2ceeb0c83a4ae7bca5deab68dd7fd9720f8",
+      "group": "eac-progressive-prototype",
+      "kind": "retained experimental test entry; not part of source-only default checks",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "../lib/paths.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs"
+        },
+        {
+          "specifier": "../lib/render-cpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs"
+        },
+        {
+          "specifier": "../lib/residual.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "external-tool",
+          "status": "tool/public artifact receipt pending"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:test",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "experimental test grant and exact public format/images artifacts pending",
+        "explicit generated dataset/input receipt; native codec tools where used; synthetic expectations not qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/viewer/page.ts",
+      "sha256": "9738f3424fb56f64413357ba5d54db18a7982ebf7e001ef18124fe004fe5a6e3",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../../lib/controlUploader.js",
+          "kind": "local",
+          "path": "scripts/lib/controlUploader.ts"
+        },
+        {
+          "specifier": "../lib/client.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/client.mjs"
+        },
+        {
+          "specifier": "../lib/residual.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs"
+        },
+        {
+          "specifier": "../lib/selection.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs"
+        },
+        {
+          "specifier": "../lib/tiling.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs"
+        },
+        {
+          "specifier": "../lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs"
+        },
+        {
+          "specifier": "./shaders",
+          "kind": "local",
+          "path": "scripts/benchmarks/eac-progressive-prototype/viewer/shaders.ts"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/cubemap/core",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/eac-progressive-prototype/viewer/shaders.ts",
+      "sha256": "5b8da7673bc002c65414c49e63a73ac8ee6420b0e971eecdc405526c8b4f9dde",
+      "group": "eac-progressive-prototype",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable",
+        "ResearchImageHost composition not yet bound by control runner; shared broker/scope/renderer queue"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/globe-compare/run.mjs",
+      "sha256": "f2604ac04c2848104274307c278f203374a32d294cf002f238407a6cea787a87",
+      "group": "globe-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:http",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit PLAYWRIGHT_MODULE/Chrome/provider tool receipts; local HTTP server and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/map-detail/binding-fixture.ts",
+      "sha256": "c4142f09fc13e4aa1a1c5001a7e5d13bf27c8d3341328b13e5628110b6a530a2",
+      "group": "map-detail",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/browserHost.js",
+          "kind": "local",
+          "path": "scripts/lib/browserHost.ts"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/engine/imagery",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/renderer/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "ResearchMapHost composition not yet bound by runner; one camera/clock/settings/renderer/device authority",
+        "explicit Vite/Playwright/Chrome tool receipt and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/map-detail/report.mjs",
+      "sha256": "65aa6a2f1e9a36ac515f1cf69d57bc63a52545252424a2f171be0ada5d4a35f6",
+      "group": "map-detail",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "ResearchMapHost composition not yet bound by runner; one camera/clock/settings/renderer/device authority",
+        "explicit Vite/Playwright/Chrome tool receipt and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/map-detail/run-binding.mjs",
+      "sha256": "9ce8e8bbec60db74a85d2ca04fc30b923a26c0aacef68a998c3e695dcee368cd",
+      "group": "map-detail",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "vite",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "ResearchMapHost composition not yet bound by runner; one camera/clock/settings/renderer/device authority",
+        "explicit Vite/Playwright/Chrome tool receipt and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/map-detail/run-sweep.mjs",
+      "sha256": "2193abea6d23a4e4ba1bdaadc06a29d82469b0a01e4323fd43b0b32e64e91fe6",
+      "group": "map-detail",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "vite",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "ResearchMapHost composition not yet bound by runner; one camera/clock/settings/renderer/device authority",
+        "explicit Vite/Playwright/Chrome tool receipt and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/map-detail/sweep-page.ts",
+      "sha256": "a8217e70b3465c0a6f6974749b47b83988bbb9f5a4f4c4082035ec1ba9a5c962",
+      "group": "map-detail",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/browserHost.js",
+          "kind": "local",
+          "path": "scripts/lib/browserHost.ts"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/renderer/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "ResearchMapHost composition not yet bound by runner; one camera/clock/settings/renderer/device authority",
+        "explicit Vite/Playwright/Chrome tool receipt and GPU/network grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/scene-ab/agent.js",
+      "sha256": "783cfd1249924e86ad1a41f90c217f2b5e30b97cc1c61ca9edd0b199179dd335",
+      "group": "scene-ab",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit admitted built host app and content/rights; retained panoramaTest/experimental settings adapter compatibility",
+        "Chrome/GPU/provider/network benchmark grant; neutral request identity"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/scene-ab/run.mjs",
+      "sha256": "17d679d748676ff6a0399b0a183ee5d5432f7795ada35178b9766add99b099f8",
+      "group": "scene-ab",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit admitted built host app and content/rights; retained panoramaTest/experimental settings adapter compatibility",
+        "Chrome/GPU/provider/network benchmark grant; neutral request identity"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/gpu/page.ts",
+      "sha256": "bfa54cfda1d96d716d0f659a9fe046632755a802752445538880d95f50d70c5e",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../lib/decodeKernel.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/decodeKernel.mjs"
+        },
+        {
+          "specifier": "../lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./shaders",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/gpu/shaders.ts"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/gpu/shaders.ts",
+      "sha256": "6a6a6dcebb94a791824d0a8904c639bbb31a045aada0e6f4efee6020e2fe68b2",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/analysis.mjs",
+      "sha256": "d481d877708e8ee605eda811b2b9daadb59508edff6571a7cfd0ea6fe54c9187",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./svg.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs",
+      "sha256": "1190e1c24e1596ee3d30622c3c93284c0189e9962f6500397e0f77dd4f10795b",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/decodeKernel.mjs",
+      "sha256": "1cf48863a1cdc2bf0d265624c714c0b93f4bd422c1c57049d5cfd68ed44c8249",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs",
+      "sha256": "77041a50bedbfdb3318daa703b91ac030c14a39277dfceddad0ce9a2316728d7",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs",
+      "sha256": "892b012e277fd0640c4d215d3726a4e7c9c294d2ac3ce6115115c2623bdf6e66",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./views.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/views.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs",
+      "sha256": "ce931d63d1ea6a5cd3141c72a111cf563e6a31a676cfe4d58e8052d697bf2b3b",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/geometry.mjs",
+      "sha256": "7b81317f13fe3cdf116188b068b0f2600a978cf18bd6e6672548791d9cee591d",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs",
+      "sha256": "e17a73f33166face15db17421446584949ce6a126c1adb7502a9ced4455dbadf",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./geometry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/geometry.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs",
+      "sha256": "24384e0d6de876fe0e05c2bdb65961f4c4868d7722286870ac5b33525c2951cc",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/network.mjs",
+      "sha256": "ccf37c605f2d9f7e7793388ffadb60363acd76dd050a26b94f965ccc84dea5ea",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/ordering.mjs",
+      "sha256": "24e13711e7d273caf4f192952d791ff4146d73d2b2a319d8b53300e319f388ed",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs",
+      "sha256": "37c05c8f31f0e0eb57a88ddce523aaec6851319cbea0231d55f12bfa6b0679e8",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "sha256": "531ec89c3730832b1cb37ae3611cb83e9dd4d3ff68981407cdd4929ce8a46bfd",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs",
+      "sha256": "b82a66cd4c8841de7fd9bfd287c879a72dad9e10680a348bd365f9139facfcaa",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs",
+      "sha256": "c59cb1b8b8e56f852fd58d8ac3b965f081f7bcbf8a8ed30bd2155ef491e5a0e4",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "@foss-earth/cubemap/core",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/equirectangular/core",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs",
+      "sha256": "57894303759b74a76acaf178ab36dcbf7e139667ae29741acb43189d02fd29d0",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs",
+      "sha256": "405c92c45d0d79a2c69cd2e9ae6d82093e3db94ad8bad60a0974a2db2f584f48",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs",
+      "sha256": "f0d6bdb7a2378d49690a46fb88077dd4d8c2f425b792a47745cde4151f1bbbfc",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/traces.mjs",
+      "sha256": "487547f474874c0b9c647eedf03dda8168d9066d1b908f44cec38216424a7090",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/lib/views.mjs",
+      "sha256": "2537866d31a450dfa0bc81d5d3fd1dbefb1f3309a60395ed7afe8702ab6f9b40",
+      "group": "spherical-image-representation",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "./source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/make-plots.mjs",
+      "sha256": "4fc8a7658fa94b78148548bb3d938852eba76a29310632b6a5a4cd46f13bc5e9",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/analysis.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/analysis.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/svg.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/make-tables.mjs",
+      "sha256": "080103983374cb162f5b099ae5e440e3637dcc263e60bc741d9ba66870177735",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/analysis.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/analysis.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-codec.mjs",
+      "sha256": "b115a452ef7bad14a0a42af1ab29a30a3a0490bdc9d49ed330d3b9687df25449",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/evaluation.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-cpu.mjs",
+      "sha256": "b3f6b92922b4f826faf4520a6e6e9278f12579834a067a9f921067675ffe1039",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/decodeKernel.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/decodeKernel.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/quiet.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+        },
+        {
+          "specifier": "./lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "jpeg-js",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-geometry.mjs",
+      "sha256": "6f0fcdb2e911d11bb01553eac4ad1721484a815af6783f58c287f608ccbdc589",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/geometry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/geometry.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-gpu.mjs",
+      "sha256": "e9143755f69c695fa5ac91e05124a5696308399c0d2add0bf22d7ceb3790a5fe",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/quiet.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "vite",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-hierarchy.mjs",
+      "sha256": "c09a6ab6b8f78ab1572ddca510d5df2a946331d6d3409abc80b52ef54c35eb9e",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/evaluation.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/schemes.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-network.mjs",
+      "sha256": "6124a718ac57e2b235ab3212a797741099eb0891125e9c751655d267d507c6a2",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/evaluation.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/network.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/network.mjs"
+        },
+        {
+          "specifier": "./lib/ordering.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/ordering.mjs"
+        },
+        {
+          "specifier": "./lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/schemes.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/traces.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/traces.mjs"
+        },
+        {
+          "specifier": "./lib/views.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/views.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-progressive.mjs",
+      "sha256": "75dd137589a457b84ca323c1215900e93bc68450dc2c544a716d0d9cfcd21dad",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/codecs.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/evaluation.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/ordering.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/ordering.mjs"
+        },
+        {
+          "specifier": "./lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/schemes.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/run-reconstruction.mjs",
+      "sha256": "1b2a8e4e852366ddb9f4cf76a7c860832c9e0637f8d228d53351b15ab12d525f",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/pool.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "./lib/source.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/source.mjs"
+        },
+        {
+          "specifier": "./lib/views.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/views.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/spherical-image-representation/verify.mjs",
+      "sha256": "9ef64b2ba3f703753d085ea11eef1b5c648b1826639b48426ddd2b813dcc2a97",
+      "group": "spherical-image-representation",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/field.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/field.mjs"
+        },
+        {
+          "specifier": "./lib/geometry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/geometry.mjs"
+        },
+        {
+          "specifier": "./lib/hierarchy.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+        },
+        {
+          "specifier": "./lib/metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs"
+        },
+        {
+          "specifier": "./lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "./lib/representations.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:module",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "public images/cubemap/equirectangular exact artifacts",
+        "explicit corpus/tour and data rights receipts; native codec tool receipts when required",
+        "separate CPU/GPU/browser/server benchmark grant as applicable"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/current-path.mjs",
+      "sha256": "61d398f47b1553b18679d674327a1634d6b7e2b559a35d189e7c7bd3c8bf5f67",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "./layouts.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/terrain/layouts.mjs"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant",
+        "unpublished benchmarkDesiredTiles/benchmarkSegments public planner contract"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/download.py",
+      "sha256": "8923a9ac996ef78292102dbeac0fc1c21a6c9f8c9d386441ad1c84a7639f88d8",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/layouts.mjs",
+      "sha256": "02c8b7737448d6135fce6cd7aadb3415918e6f6003b81c82e37aacad01f1aedc",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/quality-sweep.mjs",
+      "sha256": "39744f3b00fcd1a170494e66d04f5fed3bd046e7c4f3505acf29a8839acb162e",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "./layouts.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/terrain/layouts.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/run-current.mjs",
+      "sha256": "c2c822dcde856b6c2044dc194172a5c30e0b8da5fc1fd845a49cfaeb57c55d5d",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant",
+        "unpublished benchmarkDesiredTiles/benchmarkSegments public planner contract"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/run.mjs",
+      "sha256": "d0cc81bb5a604565e237a5eaf03d6c42f8dfea7a27e3c48be6cf19de42762da9",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "./layouts.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/terrain/layouts.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/terrain/verify.mjs",
+      "sha256": "10b419970e52ac43b166b7a53e4b04fc1692b0f80ca230b5b4a4454ecd81d173",
+      "group": "terrain",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./layouts.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/terrain/layouts.mjs"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:test",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "explicit terrain fixture download/data receipt; network/CPU benchmark grant"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/wheels/run-adapter.mjs",
+      "sha256": "2272c582d22cfb59848bb731c21cf373898686408b5341f107799787952bc210",
+      "group": "wheels",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "CPU benchmark grant; experimental reference kernels remain unqualified",
+        "Flight owner public experiment adapter/data artifact; no Earth-owned Flight implementation"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/wheels/run-integrated.mjs",
+      "sha256": "59a3ed21881893ccb9dbe6b699a47bba4d1660ee748bc1d3756761f4d6d0cb57",
+      "group": "wheels",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "CPU benchmark grant; experimental reference kernels remain unqualified",
+        "Flight owner public experiment adapter/data artifact; no Earth-owned Flight implementation"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/wheels/run-reference-kernels.mjs",
+      "sha256": "3d667f7973910e0130b494c49fb5b295605eab140a44296b7f88841bd4673bdf",
+      "group": "wheels",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "CPU benchmark grant; experimental reference kernels remain unqualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/wheels/run.mjs",
+      "sha256": "7f23b50f0847bb5be6449611c30ca9d28f2b5fc59ce4b8228fdaa1f68e78089f",
+      "group": "wheels",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/pendingContracts.mjs",
+          "kind": "local",
+          "path": "scripts/lib/pendingContracts.mjs"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "CPU benchmark grant; experimental reference kernels remain unqualified",
+        "Flight owner public experiment adapter/data artifact; no Earth-owned Flight implementation"
+      ]
+    },
+    {
+      "path": "scripts/lib/browserHost.ts",
+      "sha256": "f11c5c54c0b06f8531956e0db38f7a07b5e2d8b11b423d4cea3322493eaa05f1",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/engine/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/images",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/renderer/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/ui/settings",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/controlUploader.ts",
+      "sha256": "6112ed0032396ee67bd8ead5fe1e350675882c3ea57054a8eb3e37f301f5e1c0",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./browserHost.js",
+          "kind": "local",
+          "path": "scripts/lib/browserHost.ts"
+        },
+        {
+          "specifier": "@babylonjs/core",
+          "kind": "external-tool",
+          "status": "explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "@foss-earth/cubemap/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/equirectangular/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        },
+        {
+          "specifier": "@foss-earth/renderer/babylon",
+          "kind": "public-owner",
+          "status": "exact installed artifact and exported declaration validation pending"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/documentLinks.mjs",
+      "sha256": "e27327c2a7177b280e3587c45dc1a76e74fe43464d377f664f9ba204275fa3d1",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/headlessChrome.mjs",
+      "sha256": "12cecf60ab6e15ca776dec38f2e66ba56288bf22839c20afb9ba7b0c443915ed",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/outputDirectory.mjs",
+      "sha256": "f52e784e0629c5490ca26a34e9550c3727d53b10e5bb093e2a4319af6838ff3b",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/pendingContracts.mjs",
+      "sha256": "be98f6c9cc43247c31c92f68b71d33c04eeffc800a7f38a9608803fecaa5199d",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    },
+    {
+      "path": "scripts/lib/researchPaths.mjs",
+      "sha256": "2574b166292bb45cdcc55f46c293e315a84e758ad35286825e827fd95239f8a2",
+      "group": "shared-research-helper",
+      "kind": "experiment-library",
+      "status": "prepared source only; not executed",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source checks queued; exact tool/public-artifact qualification pending",
+        "optional helper source only; fake-child tests need a later source-check grant"
+      ]
+    }
+  ],
+  "sourceFixtures": [
+    "fixtures/documentLinks.test.mjs",
+    "fixtures/headlessChrome.test.mjs"
+  ],
+  "checksDoNotExecuteExperimentalTools": true,
+  "publicHelperContracts": [
+    {
+      "export": "./headless-chrome",
+      "module": "scripts/lib/headlessChrome.mjs",
+      "moduleSha256": "12cecf60ab6e15ca776dec38f2e66ba56288bf22839c20afb9ba7b0c443915ed",
+      "declaration": "scripts/lib/headlessChrome.d.mts",
+      "declarationSha256": "f0003e56175b92c886c146486a38b6f7bae5152e01da5733b957267a4a7e905f",
+      "status": "public optional development helper source only; type/archive/installed consumer checks UNRUN",
+      "execution": "No import spawns a process; explicit browser invocation still requires its separate experimental grant."
+    },
+    {
+      "export": "./output-directory",
+      "module": "scripts/lib/outputDirectory.mjs",
+      "moduleSha256": "f52e784e0629c5490ca26a34e9550c3727d53b10e5bb093e2a4319af6838ff3b",
+      "declaration": "scripts/lib/outputDirectory.d.mts",
+      "declarationSha256": "9fd6e28c02320907ea79335379713527f7bc97c4f63bdd1b9b698826dd9acbd9",
+      "status": "public optional development helper source only; type/archive/installed consumer checks UNRUN",
+      "execution": "No import spawns a process; explicit browser invocation still requires its separate experimental grant."
+    }
+  ],
+  "sourcePreparationStatus": "Actual optional public entries prepared; all existing tools remain unexecuted/unqualified."
+}

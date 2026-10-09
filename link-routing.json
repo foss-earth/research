@@ -1,0 +1,2946 @@
+{
+  "schemaVersion": 1,
+  "owner": "foss-earth/research",
+  "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+  "status": "source-prepared; no link/check/network verification executed",
+  "links": [
+    {
+      "document": "benchmarks/collision/README.md",
+      "originalTarget": "results-gpu.json",
+      "resolvedOriginalPath": "benchmarks/collision/results-gpu.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/collision/results-gpu.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results-gpu.json"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/README.md",
+      "originalTarget": "REPORT.md",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "REPORT.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/README.md",
+      "originalTarget": "INVENTORY.md",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "INVENTORY.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/README.md",
+      "originalTarget": "../../docs/scenes/format.md#tiled-cubes",
+      "resolvedOriginalPath": "docs/scenes/format.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/scenes/format.md#tiled-cubes"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/README.md",
+      "originalTarget": "../../docs/proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "README.md",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "README.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "INVENTORY.md",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "INVENTORY.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "results/tables.md",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "results/tables.md#correctness-gates",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md#correctness-gates"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/screens/",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/screens",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "results/tables.md#representation-at-matched-quality",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md#representation-at-matched-quality"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-sim.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-sim.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quality-vs-bytes-sim.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-bytes-sim.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-bytes-sim.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-bytes-sim.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-sim.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-sim.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "results/tables.md#one-parameter-at-a-time-two-panoramas-off-axis-start",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md#one-parameter-at-a-time-two-panoramas-off-axis-start"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quick-turn-insurance-sim.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quick-turn-insurance-sim.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quick-turn-insurance-sim.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quick-turn-insurance-sim.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-http.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-http.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-http.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-http.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "results/tables.md#throttled-real-http-over-the-loopback-chromes-emulation-webgl-2-unless-named",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md#throttled-real-http-over-the-loopback-chromes-emulation-webgl-2-unless-named"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/frame-times-http.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/frame-times-http.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/frame-times-http.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/frame-times-http.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "plots/resources-over-time-http.svg",
+      "resolvedOriginalPath": "benchmarks/eac-progressive-prototype/plots/resources-over-time-http.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/resources-over-time-http.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/resources-over-time-http.svg"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "../../scripts/validation/panorama-tiles.mjs",
+      "resolvedOriginalPath": "scripts/validation/panorama-tiles.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/panorama-tiles.mjs"
+    },
+    {
+      "document": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "originalTarget": "../../docs/proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "benchmarks/map-detail/README.md",
+      "originalTarget": "../../docs/proposals/map-detail-control.md",
+      "resolvedOriginalPath": "docs/proposals/map-detail-control.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/map-detail-control.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/map-detail-control.md"
+    },
+    {
+      "document": "benchmarks/scene-ab/README.md",
+      "originalTarget": "../../docs/validation/panorama-experiments.md",
+      "resolvedOriginalPath": "docs/validation/panorama-experiments.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md"
+    },
+    {
+      "document": "benchmarks/scene-ab/README.md",
+      "originalTarget": "run.mjs",
+      "resolvedOriginalPath": "benchmarks/scene-ab/run.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/scene-ab/run.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/scene-ab/run.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../docs/validation/README.md",
+      "resolvedOriginalPath": "docs/validation/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/validation/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../docs/docs/validation/README.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../scripts/lib/headlessChrome.mjs",
+      "resolvedOriginalPath": "scripts/lib/headlessChrome.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/lib/headlessChrome.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/lib/headlessChrome.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/perf/frameProfiler.ts",
+      "resolvedOriginalPath": "src/perf/frameProfiler.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/perf/frameProfiler.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/engine/babylon/createRendererMode.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createRendererMode.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRendererMode.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/engine/babylon/panorama/",
+      "resolvedOriginalPath": "src/engine/babylon/panorama",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/engine/babylon/panorama/panoramaTextures.ts",
+      "resolvedOriginalPath": "src/engine/babylon/panorama/panoramaTextures.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaTextures.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/engine/babylon/panorama/panoramaWebGlTextures.ts",
+      "resolvedOriginalPath": "src/engine/babylon/panorama/panoramaWebGlTextures.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaWebGlTextures.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../docs/proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../docs/scenes/format.md",
+      "resolvedOriginalPath": "docs/scenes/format.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/scenes/format.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/scenes/",
+      "resolvedOriginalPath": "src/scenes",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/scenes/loadScene.ts",
+      "resolvedOriginalPath": "src/scenes/loadScene.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/loadScene.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../src/scenes/panoramaResources.ts",
+      "resolvedOriginalPath": "src/scenes/panoramaResources.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/panoramaResources.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../scripts/prepare-panorama.mjs",
+      "resolvedOriginalPath": "scripts/prepare-panorama.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/prepare-panorama.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "originalTarget": "../../scripts/lib/panoramaImage.mjs",
+      "resolvedOriginalPath": "scripts/lib/panoramaImage.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/lib/panoramaImage.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/README.md",
+      "originalTarget": "REPORT.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/REPORT.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/REPORT.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "REPORT.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/README.md",
+      "originalTarget": "INVENTORY.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "INVENTORY.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/README.md",
+      "originalTarget": "../../docs/validation/timing.md",
+      "resolvedOriginalPath": "docs/validation/timing.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/validation/timing.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/validation/timing.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "README.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "README.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "INVENTORY.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "INVENTORY.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "results/tables.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "lib/representations.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/representations.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/representations.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/cell-area.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/cell-area.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/cell-shape.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/cell-shape.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/cell-area.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/cell-area.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/cell-shape.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/cell-shape.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-samples.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-samples.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "results/tables.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-samples.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-samples.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-bytes.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-bytes.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/codecs.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/codecs.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-bytes.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-bytes.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/codecs.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/codecs.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "lib/schemes.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/schemes.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/schemes.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "lib/hierarchy.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/hierarchy.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-per-level.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-per-level.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-per-level.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-per-level.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/haar-details.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/haar-details.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/haar-details.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/haar-details.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-bytes-received.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-bytes-received.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-bytes-received.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-bytes-received.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-after-a-turn.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-after-a-turn.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/memory-vs-quality.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/memory-vs-quality.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/memory-vs-quality.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/memory-vs-quality.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-after-a-turn.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-after-a-turn.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "lib/network.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/network.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/network.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/network.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "lib/traces.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/traces.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/traces.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/traces.mjs"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-stationary.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-stationary.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-stationary.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-stationary.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-quick-turn.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-quick-turn.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-quick-turn.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-quick-turn.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-vs-time-slow-turn.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-slow-turn.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-slow-turn.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-vs-time-slow-turn.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/bytes-never-looked-at.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/bytes-never-looked-at.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/bytes-never-looked-at.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/bytes-never-looked-at.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "results/tables.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results/tables.md"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/decode-time.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/decode-time.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/decode-time.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/decode-time.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "gpu/page.ts",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/gpu/page.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/gpu/page.ts",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/gpu/page.ts"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/gpu-draw-cost.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/gpu-draw-cost.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/gpu-draw-cost.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/gpu-draw-cost.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/frame-times.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/frame-times.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/frame-times.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/frame-times.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-per-sample.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-per-sample.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-per-sample.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-per-sample.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-by-view.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-by-view.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/quality-by-view.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/quality-by-view.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/bytes-at-equal-quality.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/bytes-at-equal-quality.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/bytes-at-equal-quality.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/bytes-at-equal-quality.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/residual-vs-replacement.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/residual-vs-replacement.svg"
+    },
+    {
+      "document": "benchmarks/spherical-image-representation/REPORT.md",
+      "originalTarget": "plots/residual-vs-replacement.svg",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "plots/residual-vs-replacement.svg"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "results.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results.json"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "results-adapter.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results-adapter.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-adapter.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results-adapter.json"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "README.reference-kernels.md",
+      "resolvedOriginalPath": "benchmarks/wheels/README.reference-kernels.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.reference-kernels.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "README.reference-kernels.md"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "../../docs/proposals/wheel-simulation-options.md",
+      "resolvedOriginalPath": "docs/proposals/wheel-simulation-options.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/wheel-simulation-options.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/proposals/wheel-simulation-options.md"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "results-integrated.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results-integrated.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-integrated.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results-integrated.json"
+    },
+    {
+      "document": "benchmarks/wheels/README.md",
+      "originalTarget": "results-feedback-browser.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results-feedback-browser.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-feedback-browser.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "results-feedback-browser.json"
+    },
+    {
+      "document": "benchmarks/wheels/README.reference-kernels.md",
+      "originalTarget": "../../docs/proposals/wheel-simulation-options.md",
+      "resolvedOriginalPath": "docs/proposals/wheel-simulation-options.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/wheel-simulation-options.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/proposals/wheel-simulation-options.md"
+    },
+    {
+      "document": "docs/360-images-virtual-tour-review.md",
+      "originalTarget": "proposals/research/panorama-scenes-research.md",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "proposals/research/panorama-scenes-research.md"
+    },
+    {
+      "document": "docs/360-images-virtual-tour-review.md",
+      "originalTarget": "360-images-virtual-tour-research.md",
+      "resolvedOriginalPath": "docs/360-images-virtual-tour-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/360-images-virtual-tour-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "360-images-virtual-tour-research.md"
+    },
+    {
+      "document": "docs/360-images-virtual-tour-review.md",
+      "originalTarget": "proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "docs/360-images-virtual-tour-review.md",
+      "originalTarget": "../src/engine/babylon/renderScheduler.ts",
+      "resolvedOriginalPath": "src/engine/babylon/renderScheduler.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/renderScheduler.ts"
+    },
+    {
+      "document": "docs/360-images-virtual-tour-review.md",
+      "originalTarget": "proposals/research/panorama-scenes-research.md",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "proposals/research/panorama-scenes-research.md"
+    },
+    {
+      "document": "docs/camera-pivot-and-zoom-prompt.md",
+      "originalTarget": "ui-layout.md",
+      "resolvedOriginalPath": "docs/ui-layout.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/ui-layout.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/docs/ui-layout.md"
+    },
+    {
+      "document": "docs/camera-pivot-and-zoom-prompt.md",
+      "originalTarget": "proposals/settings.md",
+      "resolvedOriginalPath": "docs/proposals/settings.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/settings.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/docs/proposals/settings.md"
+    },
+    {
+      "document": "docs/camera-pivot-and-zoom-prompt.md",
+      "originalTarget": "../src/camera/cameraState.ts",
+      "resolvedOriginalPath": "src/camera/cameraState.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/camera/cameraState.ts"
+    },
+    {
+      "document": "docs/camera-pivot-and-zoom-prompt.md",
+      "originalTarget": "../src/camera/anchorPan.ts",
+      "resolvedOriginalPath": "src/camera/anchorPan.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/camera/anchorPan.ts"
+    },
+    {
+      "document": "docs/globe-comparison.md",
+      "originalTarget": "performance-pass.md",
+      "resolvedOriginalPath": "docs/performance-pass.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/performance-pass.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "performance-pass.md"
+    },
+    {
+      "document": "docs/globe-comparison.md",
+      "originalTarget": "../benchmarks/globe-compare/results.json",
+      "resolvedOriginalPath": "benchmarks/globe-compare/results.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/globe-compare/results.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../benchmarks/globe-compare/results.json"
+    },
+    {
+      "document": "docs/globe-comparison.md",
+      "originalTarget": "../benchmarks/globe-compare/run.mjs",
+      "resolvedOriginalPath": "benchmarks/globe-compare/run.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/globe-compare/run.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../scripts/benchmarks/globe-compare/run.mjs"
+    },
+    {
+      "document": "docs/globe-comparison.md",
+      "originalTarget": "../benchmarks/globe-compare/pages/",
+      "resolvedOriginalPath": "benchmarks/globe-compare/pages",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/globe-comparison.md",
+      "originalTarget": "performance-pass.md#how-to-measure-again",
+      "resolvedOriginalPath": "docs/performance-pass.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/performance-pass.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "performance-pass.md#how-to-measure-again"
+    },
+    {
+      "document": "docs/proposals/raster-terrain-performance.md",
+      "originalTarget": "map-detail-control.md",
+      "resolvedOriginalPath": "docs/proposals/map-detail-control.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/map-detail-control.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/map-detail-control.md"
+    },
+    {
+      "document": "docs/proposals/raster-terrain-performance.md",
+      "originalTarget": "../../benchmarks/terrain/README.md",
+      "resolvedOriginalPath": "benchmarks/terrain/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/terrain/README.md"
+    },
+    {
+      "document": "docs/proposals/raster-terrain-performance.md",
+      "originalTarget": "raster-provider-detail.md",
+      "resolvedOriginalPath": "docs/proposals/raster-provider-detail.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/raster-provider-detail.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md"
+    },
+    {
+      "document": "docs/proposals/raster-terrain-performance.md",
+      "originalTarget": "raster-provider-detail.md#independent-elevation-provider-selection",
+      "resolvedOriginalPath": "docs/proposals/raster-provider-detail.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/raster-provider-detail.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md#independent-elevation-provider-selection"
+    },
+    {
+      "document": "docs/proposals/raster-terrain-performance.md",
+      "originalTarget": "raster-provider-detail.md#hot-swap-basemaps-without-restarting-the-app",
+      "resolvedOriginalPath": "docs/proposals/raster-provider-detail.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/raster-provider-detail.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md#hot-swap-basemaps-without-restarting-the-app"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-studio-agent-prompt.md",
+      "originalTarget": "gamepad-tools-agent-prompt.md",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad-tools-agent-prompt.md"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-studio-research.md",
+      "originalTarget": "gamepad-tools-research.md",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad-tools-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad-tools-research.md"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-studio-research.md",
+      "originalTarget": "gamepad-tools-agent-prompt.md",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad-tools-agent-prompt.md"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "originalTarget": "gamepad-tools-research.md",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad-tools-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad-tools-research.md"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "gamepad-tools-agent-prompt.md",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad-tools-agent-prompt.md"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/input/createInputController.ts",
+      "resolvedOriginalPath": "src/input/createInputController.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/input/createInputController.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/input/inputSettings.ts",
+      "resolvedOriginalPath": "src/input/inputSettings.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/input/inputSettings.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/input/inertialCameraController.ts",
+      "resolvedOriginalPath": "src/input/inertialCameraController.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/input/inertialCameraController.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/camera/cameraState.ts",
+      "resolvedOriginalPath": "src/camera/cameraState.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/camera/cameraState.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/app/createGlobeApp.ts",
+      "resolvedOriginalPath": "src/app/createGlobeApp.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/app/createGlobeApp.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/engine/babylon/createBabylonRuntime.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createBabylonRuntime.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createBabylonRuntime.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/input/public.ts",
+      "resolvedOriginalPath": "src/input/public.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/input/public.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/hud/inputModeHud.ts",
+      "resolvedOriginalPath": "src/hud/inputModeHud.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/hud/inputModeHud.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/windowing/index.ts",
+      "resolvedOriginalPath": "src/windowing/index.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/windowing/index.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/input/flightInputManager.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/input/flightInputManager.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/input/applyFlightControls.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/input/applyFlightControls.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/createFlightSimApp.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/createFlightSimApp.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/hud/flightHud.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/hud/flightHud.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/remote/createPhoneControlSession.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/remote/createPhoneControlSession.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/remote/protocol.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/remote/protocol.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "/Users/felg/gh/0sfs/src/flight/feedback/haptics.ts",
+      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/feedback/haptics.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/gamepad-tools-research.md",
+      "originalTarget": "../../../src/engine/babylon/renderScheduler.ts",
+      "resolvedOriginalPath": "src/engine/babylon/renderScheduler.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/renderScheduler.ts"
+    },
+    {
+      "document": "docs/proposals/research/gamepad.md",
+      "originalTarget": "gamepad_arch.png",
+      "resolvedOriginalPath": "docs/proposals/research/gamepad_arch.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad_arch.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "gamepad_arch.png"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research-review.md",
+      "originalTarget": "panorama-scenes-research.md",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes-research.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research-review.md",
+      "originalTarget": "panorama-scenes-proposal-prompt.md",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes-proposal-prompt.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research-review.md",
+      "originalTarget": "../../../scripts/render-orb-appearances.mjs",
+      "resolvedOriginalPath": "scripts/render-orb-appearances.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/render-orb-appearances.mjs"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research-review.md",
+      "originalTarget": "../../streamed-terrain.md",
+      "resolvedOriginalPath": "docs/streamed-terrain.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/streamed-terrain.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/streamed-terrain.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../360-images-virtual-tour-review.md",
+      "resolvedOriginalPath": "docs/360-images-virtual-tour-review.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/360-images-virtual-tour-review.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../360-images-virtual-tour-review.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../360-images-virtual-tour-research.md",
+      "resolvedOriginalPath": "docs/360-images-virtual-tour-research.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/360-images-virtual-tour-research.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../360-images-virtual-tour-research.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../../scripts/render-orb-appearances.mjs",
+      "resolvedOriginalPath": "scripts/render-orb-appearances.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/render-orb-appearances.mjs"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-window.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-window.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-window.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-window-fisheye.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-window-fisheye.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window-fisheye.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-window-fisheye.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-bubble.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-bubble.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-bubble.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-bubble.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-portal.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-portal.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-portal.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-portal.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-ball.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-ball.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-ball.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-ball.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-mirror.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-mirror.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-mirror.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-mirror.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-glass.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-glass.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-glass.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-glass.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/fixture.png",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/fixture.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/fixture.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/fixture.png"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-window-fixture.png",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-window-fixture.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window-fixture.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-window-fixture.png"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/orb-ball-fixture.png",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/orb-ball-fixture.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-ball-fixture.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/orb-ball-fixture.png"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/entry-window.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/entry-window.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-window.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/entry-window.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/entry-bubble.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/entry-bubble.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-bubble.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/entry-bubble.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "panorama-scenes/entry-ball.jpg",
+      "resolvedOriginalPath": "docs/proposals/research/panorama-scenes/entry-ball.jpg",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-ball.jpg",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "panorama-scenes/entry-ball.jpg"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../raster-terrain-performance.md",
+      "resolvedOriginalPath": "docs/proposals/raster-terrain-performance.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/raster-terrain-performance.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../raster-terrain-performance.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../../src/engine/babylon/renderScheduler.ts",
+      "resolvedOriginalPath": "src/engine/babylon/renderScheduler.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/renderScheduler.ts"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../streamed-terrain.md",
+      "resolvedOriginalPath": "docs/streamed-terrain.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/streamed-terrain.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/streamed-terrain.md"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../../src/engine/babylon/createRendererMode.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createRendererMode.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRendererMode.ts"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../../../src/engine/babylon/imagery/imageryMaterialPlugin.ts",
+      "resolvedOriginalPath": "src/engine/babylon/imagery/imageryMaterialPlugin.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/imageryMaterialPlugin.ts"
+    },
+    {
+      "document": "docs/proposals/research/panorama-scenes-research.md",
+      "originalTarget": "../panorama-scenes.md#settings-inventory-to-complete",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md#settings-inventory-to-complete"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "weather-research-prompt.md",
+      "resolvedOriginalPath": "docs/proposals/research/weather-research-prompt.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/weather-research-prompt.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "weather-research-prompt.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/proposals/skies.md",
+      "resolvedOriginalPath": "../0sfs/docs/proposals/skies.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/source-manifest.json",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/source-manifest.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/source-manifest.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/source-manifest.json"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/http-observations.json",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/http-observations.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-observations.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/http-observations.json"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/http-more-observations.json",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/http-more-observations.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-more-observations.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/http-more-observations.json"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/validation/evidence/weather/2026-10-08/wasm-followup-report.json",
+      "resolvedOriginalPath": "../0sfs/validation/evidence/weather/2026-10-08/wasm-followup-report.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../scripts/validation/weather-research/http-probe.mjs",
+      "resolvedOriginalPath": "scripts/validation/weather-research/http-probe.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/weather-research/http-probe.mjs"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/scripts/validation/weather-research/wasm-probe.mjs",
+      "resolvedOriginalPath": "../0sfs/scripts/validation/weather-research/wasm-probe.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/gibs-layers.json",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/gibs-layers.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/gibs-layers.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/gibs-layers.json"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/jsbsim-upstream-contribution-policy.md",
+      "resolvedOriginalPath": "../0sfs/docs/jsbsim-upstream-contribution-policy.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/external-weather-report.md",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/external-weather-report.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/external-weather-report.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/external-weather-report.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../validation/evidence/weather/2026-10-08/external-report-review.json",
+      "resolvedOriginalPath": "validation/evidence/weather/2026-10-08/external-report-review.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/external-report-review.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../validation/evidence/weather/2026-10-08/external-report-review.json"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../AGENTS.md",
+      "resolvedOriginalPath": "AGENTS.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/AGENTS.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/AGENTS.md",
+      "resolvedOriginalPath": "../0sfs/AGENTS.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../sky.md",
+      "resolvedOriginalPath": "docs/proposals/sky.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/sky",
+      "destinationPath": "docs/proposals/sky.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/sky.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../settings.md",
+      "resolvedOriginalPath": "docs/proposals/settings.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/settings.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../../docs/docs/proposals/settings.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../render-on-demand.md",
+      "resolvedOriginalPath": "docs/render-on-demand.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/render-on-demand.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../../docs/docs/render-on-demand.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../airport-locations.md",
+      "resolvedOriginalPath": "docs/airport-locations.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/airport-locations.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/airport-locations.md"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/proposals/sf50-flight-model-v2.md",
+      "resolvedOriginalPath": "../0sfs/docs/proposals/sf50-flight-model-v2.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/proposals/ardupilot-sitl.md",
+      "resolvedOriginalPath": "../0sfs/docs/proposals/ardupilot-sitl.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/sound.md",
+      "resolvedOriginalPath": "../0sfs/docs/sound.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/jsbsim.md",
+      "resolvedOriginalPath": "../0sfs/docs/jsbsim.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../../0sfs/docs/jsbsim-upstream-contribution-policy.md",
+      "resolvedOriginalPath": "../0sfs/docs/jsbsim-upstream-contribution-policy.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/research/weather-research.md",
+      "originalTarget": "../../../COMMERCIAL_LICENSE.md",
+      "resolvedOriginalPath": "COMMERCIAL_LICENSE.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/COMMERCIAL_LICENSE.md"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../../flight-sim/docs/wheel-spin-experiment.md",
+      "resolvedOriginalPath": "../flight-sim/docs/wheel-spin-experiment.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/README.md#integrated-fixed-step-path",
+      "resolvedOriginalPath": "benchmarks/wheels/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/wheels/README.md#integrated-fixed-step-path"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/README.md",
+      "resolvedOriginalPath": "benchmarks/wheels/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/wheels/README.md"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/results-adapter.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results-adapter.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-adapter.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/wheels/results-adapter.json"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/run-adapter.mjs",
+      "resolvedOriginalPath": "benchmarks/wheels/run-adapter.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run-adapter.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/wheels/run-adapter.mjs"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/run-reference-kernels.mjs",
+      "resolvedOriginalPath": "benchmarks/wheels/run-reference-kernels.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run-reference-kernels.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/wheels/run-reference-kernels.mjs"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/results-reference-kernels.json",
+      "resolvedOriginalPath": "benchmarks/wheels/results-reference-kernels.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-reference-kernels.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/wheels/results-reference-kernels.json"
+    },
+    {
+      "document": "docs/proposals/wheel-simulation-options.md",
+      "originalTarget": "../../benchmarks/wheels/README.reference-kernels.md",
+      "resolvedOriginalPath": "benchmarks/wheels/README.reference-kernels.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.reference-kernels.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/wheels/README.reference-kernels.md"
+    },
+    {
+      "document": "docs/validation/benchmark-interference.md",
+      "originalTarget": "timing.md",
+      "resolvedOriginalPath": "docs/validation/timing.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/validation/timing.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "timing.md"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "benchmark-interference.md",
+      "resolvedOriginalPath": "docs/validation/benchmark-interference.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/validation/benchmark-interference.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "benchmark-interference.md"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "../../benchmarks/spherical-image-representation/REPORT.md",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/REPORT.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/REPORT.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/spherical-image-representation/REPORT.md"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "../../benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "../../benchmarks/scene-ab/README.md",
+      "resolvedOriginalPath": "benchmarks/scene-ab/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/scene-ab/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../benchmarks/scene-ab/README.md"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "../../benchmarks/spherical-image-representation/lib/pool.mjs",
+      "resolvedOriginalPath": "benchmarks/spherical-image-representation/lib/pool.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../scripts/benchmarks/spherical-image-representation/lib/pool.mjs"
+    },
+    {
+      "document": "docs/validation/timing.md",
+      "originalTarget": "README.md",
+      "resolvedOriginalPath": "docs/validation/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/validation/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../docs/docs/validation/README.md"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "validation/panorama-experiments.md",
+      "resolvedOriginalPath": "docs/validation/panorama-experiments.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../../UMN-VR/UMN-VR.github.io/docs/webgl-performance-review.md",
+      "resolvedOriginalPath": "../UMN-VR/UMN-VR.github.io/docs/webgl-performance-review.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../../UMN-VR/UMN-VR.github.io/docs/roadmap.md",
+      "resolvedOriginalPath": "../UMN-VR/UMN-VR.github.io/docs/roadmap.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "validation/panorama-webgl.md",
+      "resolvedOriginalPath": "docs/validation/panorama-webgl.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-webgl.md"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/panorama/panoramaRenderer.ts",
+      "resolvedOriginalPath": "src/engine/babylon/panorama/panoramaRenderer.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaRenderer.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/panorama/panoramaShadersWebGL.ts",
+      "resolvedOriginalPath": "src/engine/babylon/panorama/panoramaShadersWebGL.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaShadersWebGL.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/imagery/imageryMaterialPlugin.ts",
+      "resolvedOriginalPath": "src/engine/babylon/imagery/imageryMaterialPlugin.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/imageryMaterialPlugin.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/scenes/loadScene.ts",
+      "resolvedOriginalPath": "src/scenes/loadScene.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/loadScene.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/settings/catalogue/scenes.ts",
+      "resolvedOriginalPath": "src/settings/catalogue/scenes.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/scenes.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/scenes/panoramaResources.ts",
+      "resolvedOriginalPath": "src/scenes/panoramaResources.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/panoramaResources.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/panorama/panoramaWebGlTextures.ts",
+      "resolvedOriginalPath": "src/engine/babylon/panorama/panoramaWebGlTextures.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaWebGlTextures.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/createBabylonRuntime.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createBabylonRuntime.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createBabylonRuntime.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/app/createGlobeApp.ts",
+      "resolvedOriginalPath": "src/app/createGlobeApp.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/app/createGlobeApp.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/createTilesRuntime.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createTilesRuntime.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createTilesRuntime.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/settings/catalogue/loading.ts",
+      "resolvedOriginalPath": "src/settings/catalogue/loading.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/loading.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/createRasterTilesRuntime.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createRasterTilesRuntime.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRasterTilesRuntime.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/terrain/terrainTiles.ts",
+      "resolvedOriginalPath": "src/terrain/terrainTiles.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/terrain/terrainTiles.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/imagery/createImageryRuntime.ts",
+      "resolvedOriginalPath": "src/engine/babylon/imagery/createImageryRuntime.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/createImageryRuntime.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/terrain/autoDetail.ts",
+      "resolvedOriginalPath": "src/terrain/autoDetail.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/terrain/autoDetail.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/settings/catalogue/auto.ts",
+      "resolvedOriginalPath": "src/settings/catalogue/auto.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/auto.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/shell/scenesPanel.ts",
+      "resolvedOriginalPath": "src/shell/scenesPanel.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/shell/scenesPanel.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/shell/panoramaTabs.ts",
+      "resolvedOriginalPath": "src/shell/panoramaTabs.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/shell/panoramaTabs.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/perf/metrics.ts",
+      "resolvedOriginalPath": "src/perf/metrics.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/perf/metrics.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "../src/engine/babylon/createRendererMode.ts",
+      "resolvedOriginalPath": "src/engine/babylon/createRendererMode.ts",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRendererMode.ts"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "proposals/settings.md",
+      "resolvedOriginalPath": "docs/proposals/settings.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/settings.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/docs/proposals/settings.md"
+    },
+    {
+      "document": "docs/webgl-panorama-performance-review.md",
+      "originalTarget": "camera-motion.md",
+      "resolvedOriginalPath": "docs/camera-motion.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/camera-motion.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../docs/docs/camera-motion.md"
+    },
+    {
+      "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "originalTarget": "report.json",
+      "resolvedOriginalPath": "validation/evidence/mesh-inspector/2026-10-05/report.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/report.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "report.json"
+    },
+    {
+      "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "originalTarget": "../../../../scripts/validation/mesh-inspector.mjs",
+      "resolvedOriginalPath": "scripts/validation/mesh-inspector.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/mesh-inspector.mjs"
+    },
+    {
+      "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "originalTarget": "webgpu.png",
+      "resolvedOriginalPath": "validation/evidence/mesh-inspector/2026-10-05/webgpu.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgpu.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "webgpu.png"
+    },
+    {
+      "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "originalTarget": "webgl2.png",
+      "resolvedOriginalPath": "validation/evidence/mesh-inspector/2026-10-05/webgl2.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgl2.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "webgl2.png"
+    },
+    {
+      "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "originalTarget": "webgl.png",
+      "resolvedOriginalPath": "validation/evidence/mesh-inspector/2026-10-05/webgl.png",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgl.png",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "webgl.png"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "../../../../docs/validation/panorama-experiments.md",
+      "resolvedOriginalPath": "docs/validation/panorama-experiments.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "../../../../benchmarks/scene-ab/README.md",
+      "resolvedOriginalPath": "benchmarks/scene-ab/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/scene-ab/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../../../../benchmarks/scene-ab/README.md"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "../../../../scripts/validation/panorama-campus.mjs",
+      "resolvedOriginalPath": "scripts/validation/panorama-campus.mjs",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/panorama-campus.mjs"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "tour-webgl2/summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "tour-webgl2/summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "tour-webgl1/summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "tour-webgl1/summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "campus-webgl2-off/summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "campus-webgl2-off/summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "originalTarget": "campus-webgl2-all/summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "campus-webgl2-all/summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "originalTarget": "../../../../docs/proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "originalTarget": "summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-scenes/campus-2026-09-27/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "originalTarget": "report.json",
+      "resolvedOriginalPath": "validation/evidence/panorama-scenes/campus-2026-09-27/report.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/report.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "report.json"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "originalTarget": "../../../../public/examples/panorama-scenes/",
+      "resolvedOriginalPath": "public/examples/panorama-scenes",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
+      "newTarget": "../../../../navigation.md#retained-local-and-host-evidence"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "originalTarget": "../visual-contract-2026-09-27/README.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "../visual-contract-2026-09-27/README.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/input-2026-09-27/README.md",
+      "originalTarget": "../../../../docs/proposals/panorama-scenes.md",
+      "resolvedOriginalPath": "docs/proposals/panorama-scenes.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/input-2026-09-27/README.md",
+      "originalTarget": "summary.md",
+      "resolvedOriginalPath": "validation/evidence/panorama-scenes/input-2026-09-27/summary.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/summary.md",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "summary.md"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/input-2026-09-27/README.md",
+      "originalTarget": "report.json",
+      "resolvedOriginalPath": "validation/evidence/panorama-scenes/input-2026-09-27/report.json",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/report.json",
+      "status": "routed-local-source-navigation; checks pending",
+      "newTarget": "report.json"
+    },
+    {
+      "document": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md",
+      "originalTarget": "../../../../docs/validation/panorama-visual-contract.md",
+      "resolvedOriginalPath": "docs/validation/panorama-visual-contract.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "status": "immutable retained implementation/source reference; ownership index gives the new public boundary",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-visual-contract.md"
+    },
+    {
+      "document": "validation/evidence/sky/2026-10-07-sky-model/README.md",
+      "originalTarget": "../../../../docs/proposals/sky.md",
+      "resolvedOriginalPath": "docs/proposals/sky.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/sky",
+      "destinationPath": "docs/proposals/sky.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/sky.md"
+    },
+    {
+      "document": "validation/evidence/sky/2026-10-07-sky-render/README.md",
+      "originalTarget": "../../../../docs/proposals/sky.md#drawn-pixels",
+      "resolvedOriginalPath": "docs/proposals/sky.md",
+      "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+      "owner": "foss-earth/sky",
+      "destinationPath": "docs/proposals/sky.md",
+      "status": "immutable compatibility reference; component transfer/publication pending",
+      "newTarget": "https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/sky.md#drawn-pixels"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "navigation.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "source-routing.json"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "migration.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "tools-manifest.json"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/collision/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/eac-progressive-prototype/INVENTORY.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/eac-progressive-prototype/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/eac-progressive-prototype/REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/eac-progressive-prototype/results/tables.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/globe-compare/pages/cesium.html"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/globe-compare/pages/maplibre.html"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/globe-compare/pages/worldwind.html"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/map-detail/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/map-detail/sweep.html"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/scene-ab/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/spherical-image-representation/INVENTORY.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/spherical-image-representation/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/spherical-image-representation/REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/spherical-image-representation/results/tables.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/terrain/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/wheels/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "benchmarks/wheels/README.reference-kernels.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/360-images-virtual-tour-research.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/360-images-virtual-tour-review.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/camera-pivot-and-zoom-prompt.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/globe-comparison.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/performance-pass.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/raster-terrain-performance.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/gamepad-studio-agent-prompt.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/gamepad-studio-research.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/gamepad-tools-agent-prompt.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/gamepad-tools-research.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/gamepad.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/panorama-scenes-proposal-prompt.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/panorama-scenes-research-review.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/panorama-scenes-research.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/weather-research-prompt.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/research/weather-research.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/wheel-roadmap-handoff.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/proposals/wheel-simulation-options.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/validation/benchmark-interference.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/validation/timing.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "docs/webgl-panorama-performance-review.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/mesh-inspector/2026-10-05/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-experiments/2026-09-29/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-scenes/campus-2026-09-27/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-scenes/input-2026-09-27/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-scenes/input-2026-09-27/summary.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/sky/2026-10-07-sky-model/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/sky/2026-10-07-sky-render/README.md"
+    },
+    {
+      "document": "README.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/weather/2026-10-08/external-weather-report.md"
+    },
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "README.md"
+    },
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "../docs/README.md"
+    },
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "tools-manifest.json"
+    },
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "validation/evidence/"
+    },
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/research",
+      "status": "authored source navigation; checks pending",
+      "newTarget": "component-transfers.json"
+    }
+  ]
+}

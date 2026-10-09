@@ -1,7 +1,7 @@
 # Map detail validation
 
 Runnable checks for the projected raster imagery described in
-[Map detail control](../../docs/proposals/map-detail-control.md). Both runners use
+[Map detail control](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/map-detail-control.md). Both runners use
 isolated headless Chromium with the real GPU: they reject a software renderer,
 never open a window, use no user profile and start no server. Runs write to a
 dated folder under `build/benchmarks/map-detail/`; selected runs are copied to

@@ -1,6 +1,6 @@
 # Panorama campus check, 2026-09-27
 
-The stage 1 acceptance check of [panorama scenes](../../../../docs/proposals/panorama-scenes.md):
+The stage 1 acceptance check of [panorama scenes](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md):
 one 360° orb 30 m above the University of Minnesota campus (44.974°, −93.235°),
 driven through the real globe camera and scene loader in headless Chrome, on this
 machine's GPU. [`summary.md`](summary.md) is the run's own summary, and
@@ -25,7 +25,7 @@ added nothing measurable to its frame intervals. Manual acceptance is pending.
   about the person running it.
 - **Scenes:** `umn-single` (the photograph), `umn-cardinal` (a synthetic image
   with N, E, S and W on it) and `campus-pair` (two linked panoramas). All three
-  are in [`public/examples/panorama-scenes/`](../../../../public/examples/panorama-scenes/).
+  are in [`public/examples/panorama-scenes/`](../../../../navigation.md#retained-local-and-host-evidence).
 
 ## Results
 

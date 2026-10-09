@@ -4,7 +4,7 @@ Status: Initial Stage B–C4 implementation complete; in-game calibration remain
 Date: 2026-09-07  
 Scope: foss-earth raster basemaps and their flight-sim integration
 
-The [Map detail control implementation specification](map-detail-control.md)
+The [Map detail control implementation specification](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/map-detail-control.md)
 (2026-09-24) defines the next imagery-selection policy and shared Map-tab controls.
 It extends the conservative C1/C2 implementation below with projected image-pixel
 selection, independent imagery residency and bounded loading. It was implemented
@@ -283,7 +283,7 @@ upload stalls must be measured separately and may require smaller commit batches
 
 ### C0. Provider-specific available levels
 
-The [provider detail appendix](raster-provider-detail.md) defines the supported
+The [provider detail appendix](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md) defines the supported
 source ranges, sample spacing and candidate mesh sizes. Low/Balanced/High are
 budget policies, not universal texture or height levels. Each adopted patch must
 identify its imagery source level, actual elevation source level and mesh detail
@@ -427,7 +427,7 @@ by this controller must land with Stage C, rather than waiting for Stage D.
 Add an Elevation selector alongside Basemap and Quality, backed by a foss-earth
 provider registry and live switching API. Mapterhorn remains the default;
 Mapzen/AWS Terrain Tiles is the proposed second adapter, pending validation.
-The [provider selection contract](raster-provider-detail.md#independent-elevation-provider-selection)
+The [provider selection contract](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md#independent-elevation-provider-selection)
 defines persistence, provider-specific limits, custom host sources and acceptance.
 
 Switching elevation preserves imagery and the running flight. Keep the existing
@@ -446,7 +446,7 @@ bounded replacement path and required switching checks are ready.
 Replace the reload-based map-selection handlers in both foss-earth and flight-sim
 with a shared runtime API. For flat-to-flat changes, replace imagery in place,
 keeping elevation data, terrain geometry and flight state. Update the URL without
-navigation. The [hot-swap contract](raster-provider-detail.md#hot-swap-basemaps-without-restarting-the-app)
+navigation. The [hot-swap contract](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/raster-provider-detail.md#hot-swap-basemaps-without-restarting-the-app)
 defines loading continuity, cancellation, persistence, resource limits and checks.
 
 Implement flat-to-flat switching as a focused step after the Stage A review; it

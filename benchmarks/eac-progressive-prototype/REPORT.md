@@ -148,7 +148,7 @@ All passed; the details are in [results/tables.md](results/tables.md#correctness
   tile: two independently coded JPEGs disagree about their shared edge by about their
   coding error, which is less than the picture changes over a texel. Within one texel of a
   face edge the picture is no further from the closed-form pattern than 4 to 16 texels in
-  (7.7 against 8.0 for EAC). Enlarged crops: [plots/screens/](plots/screens/).
+  (7.7 against 8.0 for EAC). Enlarged crops: [plots/screens/](../../navigation.md#retained-local-and-host-evidence).
 - **Gutters** across face edges and at cube corners are as close to the truth as interior
   texels (mean error 3.5 across edges, 0.4 at the four corner texels checked, 4.1 inside).
 - **Mixed levels** never show uninitialized memory: the atlas is allocated zeroed, and a
@@ -527,9 +527,9 @@ working (the device and the results were not recorded); the architecture went in
 representation, with the orb's preview cube in place of the bootstrap, tiles that fade in,
 direct replacement only, and the parameters of this report's configuration. It was checked
 headlessly on this desktop's GPU on all three backends
-([scripts/validation/panorama-tiles.mjs](../../scripts/validation/panorama-tiles.mjs)). The
+([scripts/validation/panorama-tiles.mjs](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/panorama-tiles.mjs)). The
 differences and what that check found are in
-[the panorama proposal](../../docs/proposals/panorama-scenes.md) ("Built"). This report's
+[the panorama proposal](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md) ("Built"). This report's
 numbers stand as measured; nothing here was rerun.
 
 **Phones, by hand.** After the report, a test by hand on an Android phone, served from this

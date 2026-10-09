@@ -61,7 +61,7 @@ gardens, a stadium with field lines and lettering, and a tree canopy overhead. E
 6144 × 3072 equirectangular JPEG, the largest copy that survives; their hashes are in
 `results/reconstruction.json`.
 
-**Candidates.** Eleven chart maps in six families ([lib/representations.mjs](lib/representations.mjs)).
+**Candidates.** Eleven chart maps in six families ([lib/representations.mjs](../../scripts/benchmarks/spherical-image-representation/lib/representations.mjs)).
 A chart is a rectangular array of samples with a map to and from directions.
 
 | Representation | Charts | Defined by | Equal area | Nested quadtree |
@@ -191,12 +191,12 @@ At full resolution and JPEG 4:2:0 quality 75, mean over panoramas:
 ### 4. The hierarchy: replacement against residual refinement
 
 Each representation's quadtree was cut into 256-cell tiles above a coarse whole sphere of
-10 to 16 thousand samples, and encoded as six schemes ([lib/schemes.mjs](lib/schemes.mjs)):
+10 to 16 thousand samples, and encoded as six schemes ([lib/schemes.mjs](../../scripts/benchmarks/spherical-image-representation/lib/schemes.mjs)):
 JPEG and WebP tiles (replacement); JPEG tiles of the difference from the enlarged parent
 (residual); an area-weighted Haar transform with uniform quantization and deflate, both as
 residual details and, as the like-for-like control, with every tile coded alone.
 
-The transform ([lib/hierarchy.mjs](lib/hierarchy.mjs)) turns four children into their
+The transform ([lib/hierarchy.mjs](../../scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs)) turns four children into their
 area-weighted mean and three details. Checked on all 168 cases (6 panoramas, 7
 representations, 4 steps): it inverts to within 7.6 × 10⁻⁵ of a byte value, and decoding
 quantized details stays inside the error the steps allow, the worst case being 1.12
@@ -267,7 +267,7 @@ direction ([figure](plots/quality-vs-bytes-received.svg)). Cubemap, view PSNR in
 
 ### 6. Simulated network and camera motion
 
-A model, not a network ([lib/network.mjs](lib/network.mjs)): a link of fixed rate; each
+A model, not a network ([lib/network.mjs](../../scripts/benchmarks/spherical-image-representation/lib/network.mjs)): a link of fixed rate; each
 request waits one round trip before its first byte; six requests at once share the link
 equally; 300 bytes of overhead per response; no loss, no slow start. Four profiles:
 50 Mbit/s with a 20 ms round trip, 10 Mbit/s with 50 ms, 2 Mbit/s with 100 ms, and
@@ -275,7 +275,7 @@ equally; 300 bytes of overhead per response; no loss, no slow start. Four profil
 "the view only" asks for the tiles under the current view, level by level, and cancels what
 the view no longer needs; "then the rest" goes on to the rest of the sphere once the view is
 complete; "whole sphere" ignores the camera. Four scripted cameras
-([lib/traces.mjs](lib/traces.mjs)): looking forward for 10 s; a full turn in 20 s; forward
+([lib/traces.mjs](../../scripts/benchmarks/spherical-image-representation/lib/traces.mjs)): looking forward for 10 s; a full turn in 20 s; forward
 for 2 s, then 180° in 0.6 s; and 16 s of turning while looking up and down. Three panoramas,
 five representations, thirteen combinations of scheme and policy.
 
@@ -458,7 +458,7 @@ These are costs in a loop, with the processor awake. A frame's work is not in a 
 
 One panorama in each representation, at the delivery experiments' resolution, drawn by
 Babylon 8.56.2 in headless Chrome on the machine's own GPU at 1080 × 2400, on WebGL 1,
-WebGL 2 and WebGPU ([gpu/page.ts](gpu/page.ts)). Textures are RGBA8, 10 to 16 MiB,
+WebGL 2 and WebGPU ([gpu/page.ts](../../scripts/benchmarks/spherical-image-representation/gpu/page.ts)). Textures are RGBA8, 10 to 16 MiB,
 bilinear, without mipmaps. Two ways of drawing were built:
 
 - **Ray lookup:** one triangle covers the screen, and the pixel shader turns each pixel's

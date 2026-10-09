@@ -6,7 +6,7 @@ runs were made for this review. The subsequent documentation task records the re
 
 **Update 2026-09-29:** candidates 3, 5, 6 and 7 are implemented behind switches, off by
 default, and are waiting for device trials. See
-[Work-saving rendering experiments](validation/panorama-experiments.md) for what each does,
+[Work-saving rendering experiments](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md) for what each does,
 how to turn it on, and the headless A/B results on the UMN tour. The rest of this review is
 unchanged.
 
@@ -14,7 +14,7 @@ unchanged.
 preview its size on screen asks for, only while it is on screen, and no orb is sharpened
 while a panorama is entered. Bounded nearby retention is not: a preview once loaded stays
 until the GPU budget needs its room. Images are also kept between visits now, which this
-review did not list. See [the panorama proposal](proposals/panorama-scenes.md), "Loading
+review did not list. See [the panorama proposal](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md), "Loading
 once", for both and their measurements.
 
 The release requirement is a usable tour on inexpensive and older devices while
@@ -26,9 +26,9 @@ panorama WebGL path, without limiting optimization to one phone or browser.**
 FOSS Earth owns the shared renderer, scene format, loader, preparation tools,
 settings, and capability fallbacks. The consuming application owns its photographs,
 tour routes, content delivery, and accessible content. The
-[UMN companion review](../../UMN-VR/UMN-VR.github.io/docs/webgl-performance-review.md)
+[UMN companion review](../navigation.md#retained-local-and-host-evidence)
 records the content inventory, payload findings, and application work; its
-[roadmap](../../UMN-VR/UMN-VR.github.io/docs/roadmap.md) links this review.
+[roadmap](../navigation.md#retained-local-and-host-evidence) links this review.
 
 ## Scope and confidence
 
@@ -51,7 +51,7 @@ deployment. Recheck cited symbols before implementation as the new WebGL code ev
 - **Static compatibility concern:** a potentially unsupported code path requiring
   a real capability-limited context to establish its runtime outcome.
 
-The existing [WebGL validation](validation/panorama-webgl.md) covers a small Chrome
+The existing [WebGL validation](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-webgl.md) covers a small Chrome
 fixture on Apple M5/ANGLE/Metal. Its timings are CPU submission timings, not phone
 GPU performance. No tests, benchmarks, servers, deployments, or device trials were
 run as part of this review.
@@ -91,14 +91,14 @@ downloads alone do not fix steady rotation.
 
 ### Panorama draw and shader work
 
-In [panoramaRenderer.ts](../src/engine/babylon/panorama/panoramaRenderer.ts),
+In [panoramaRenderer.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaRenderer.ts),
 `currentFrame` formats a camera digest, `drawFrame` maintains negative-control frame
 history, and `record` pushes and trims a 600-entry draw-record array during ordinary
 rendering. Gate this test/capture work explicitly. Each orb has separate normal and
 reveal meshes/materials with `alwaysSelectAsActiveMesh = true`. Immersion currently
 uses an alpha-blended material even at full opacity.
 
-In [panoramaShadersWebGL.ts](../src/engine/babylon/panorama/panoramaShadersWebGL.ts),
+In [panoramaShadersWebGL.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaShadersWebGL.ts),
 the orb fragment computes distance, axis and cone terms that are constant per draw.
 The immersive fragment rotates the direction per pixel; its equirectangular path
 normalizes a direction already normalized earlier. Cube direction lookup allows
@@ -109,11 +109,11 @@ The renderer's common availability gate requires fragment depth, derivatives and
 high-precision fragments for all panoramas. A simple cube viewer need not inherit
 all analytic-orb requirements. The WebGL1 atlas also emits `dFdx`/`dFdy` in its
 lowest-capability mode; its extension-free outcome needs a real-context check.
-See [imageryMaterialPlugin.ts](../src/engine/babylon/imagery/imageryMaterialPlugin.ts).
+See [imageryMaterialPlugin.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/imageryMaterialPlugin.ts).
 
 ### Loading, admission, and cancellation
 
-In [loadScene.ts](../src/scenes/loadScene.ts), every entry starts preview loading at
+In [loadScene.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/loadScene.ts), every entry starts preview loading at
 mount. Preview selection uses the maximum marker diameter, not the current projected
 diameter. Preview handles remain referenced. `refine` selects the largest admissible
 whole representation by default because `scene.panorama.immersionDensity` is off.
@@ -121,16 +121,16 @@ Its existing screen-density choice needs triggers for zoom, viewport and renderi
 resolution changes plus hysteresis; current look updates present the view and emit
 status, and explicit refinement watchers cover only image/budget settings.
 
-[Scene defaults](../src/settings/catalogue/scenes.ts) derive panorama GPU allowance
+[Scene defaults](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/scenes.ts) derive panorama GPU allowance
 from 128 MiB of preview room plus two equirectangular images as wide as the maximum
 texture dimension. These are limits, not allocations made immediately. A legal
 texture dimension does not establish that a phone has enough memory for that policy.
 Cube representations also need their separate cube-map dimension limit checked.
 
-In [panoramaResources.ts](../src/scenes/panoramaResources.ts), eviction can abort the
+In [panoramaResources.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/scenes/panoramaResources.ts), eviction can abort the
 consumer and release a reservation while an upload still owns a not-yet-returned
 texture. The upload completes, generates mips, and is then discarded. The
-[WebGL uploader](../src/engine/babylon/panorama/panoramaWebGlTextures.ts) has FIFO jobs
+[WebGL uploader](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/panorama/panoramaWebGlTextures.ts) has FIFO jobs
 and only global cancellation. Allocation happens before queued row pacing, and
 `finish` calls `generateMipmap` for the entire texture. The byte limit meters uploaded
 base-level strips, not all allocation/mip work. WebGL1 has no fence-based completion
@@ -143,13 +143,13 @@ in flight need headroom beyond the current logical pools.
 
 ### Hidden world and map costs
 
-[createBabylonRuntime.ts](../src/engine/babylon/createBabylonRuntime.ts) already stops
+[createBabylonRuntime.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createBabylonRuntime.ts) already stops
 map admission/update work through navigation suspension and switches the camera to
 the presentation layer. **Do not describe invisible-world rendering as wholly
 unimplemented.** However, Babylon 8.56.2's default `scene.js` candidate list is
 `scene.meshes`. `_evaluateActiveMeshes` performs per-mesh work before layer-mask
 rejection, so retaining a detailed world can still cost CPU while viewing a photograph.
-The app's [before-render HUD callback](../src/app/createGlobeApp.ts) also continues
+The app's [before-render HUD callback](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/app/createGlobeApp.ts) also continues
 view, anchor, compass, culling and metrics work.
 
 Both inspected `3d-tiles-renderer` versions contain these methods in
@@ -160,7 +160,7 @@ Both inspected `3d-tiles-renderer` versions contain these methods in
   represent actual memory. Tile count is not a reliable substitute for bytes.
 - `calculateTileViewError` derives camera/projection state, inverts the group matrix,
   and creates transformed frustum planes per tile. The local
-  [wrapper](../src/engine/babylon/createTilesRuntime.ts) still calls this native method
+  [wrapper](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createTilesRuntime.ts) still calls this native method
   for each tile despite caching its own additional focus calculations.
 
 The adapter also multiplies render dimensions by hardware scaling when calculating
@@ -171,10 +171,10 @@ to what the world-detail slider means.
 Google defaults admit 25 downloads and 5 parses independently of panorama work.
 The raster path has additional main-thread DEM decode, disposable terrain mesh
 construction on data arrival, and whole-patch imagery publication opportunities.
-Sources: [loading settings](../src/settings/catalogue/loading.ts),
-[raster runtime](../src/engine/babylon/createRasterTilesRuntime.ts),
-[DEM loader](../src/terrain/terrainTiles.ts),
-[imagery runtime](../src/engine/babylon/imagery/createImageryRuntime.ts).
+Sources: [loading settings](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/loading.ts),
+[raster runtime](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRasterTilesRuntime.ts),
+[DEM loader](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/terrain/terrainTiles.ts),
+[imagery runtime](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/createImageryRuntime.ts).
 
 ### Settings and UI
 
@@ -182,18 +182,18 @@ Rendering defaults to full device-pixel resolution with antialiasing. Existing
 controls expose resolution scale, AA, frame cap, image detail and resource budgets.
 They are building blocks, not a coordinated tour performance controller.
 
-The [automatic detail controller](../src/terrain/autoDetail.ts) uses the shortest
+The [automatic detail controller](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/terrain/autoDetail.ts) uses the shortest
 observed frame interval as its measured goal. Its
-[settings](../src/settings/catalogue/auto.ts) explicitly default automatic adjustment
+[settings](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/settings/catalogue/auto.ts) explicitly default automatic adjustment
 off because a short interval can poison that goal. The observation/adjustment path is
 wired to raster detail, not a common Google/panorama/framebuffer controller. The
 existing Smooth motion preset turns those automatic flags on; its presence is not
 evidence that the timing issue is resolved.
 
-[Scene panels](../src/shell/scenesPanel.ts) and
-[panorama tabs](../src/shell/panoramaTabs.ts) already guard against unnecessary DOM
+[Scene panels](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/shell/scenesPanel.ts) and
+[panorama tabs](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/shell/panoramaTabs.ts) already guard against unnecessary DOM
 rebuilds, but serialize status to discover changes during look updates.
-[Performance metrics](../src/perf/metrics.ts) copy/sort frame history for a percentile
+[Performance metrics](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/perf/metrics.ts) copy/sort frame history for a percentile
 every rendered frame. Separate metadata changes from camera changes and update
 informational statistics at a bounded rate without delaying input.
 
@@ -357,7 +357,7 @@ automatic policy is implemented or approved.
   the cost of each frame. Missing WebGPU is a backend/capability fact, not a performance
   tier. Static sprites must remain an optional fallback, not a downgrade for everyone.
 - The app's WebGL/WebGL2 choices currently use the same engine-construction path in
-  [createRendererMode.ts](../src/engine/babylon/createRendererMode.ts). Selecting
+  [createRendererMode.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRendererMode.ts). Selecting
   WebGL is not reliable proof of a forced WebGL1 context. Use an actually forced
   context when qualifying the fallback.
 
@@ -381,10 +381,10 @@ or assume the flight's quality system qualifies this workload.
 5. Keep actual numeric controls, units, ranges, defaults, reasons and locks visible.
    Automatic changes stay within user-set limits. Presets are explicit copied values,
    not hidden branches on labels such as Low/Medium/High. Follow the
-   [settings specification](proposals/settings.md).
+   [settings specification](../../docs/docs/proposals/settings.md).
 6. Preserve immediate input, camera momentum, readable text, touch targets and all
    destinations. If motion is reduced, follow the existing
-   [camera contract](camera-motion.md). Shed decorative/world work before fundamental
+   [camera contract](../../docs/docs/camera-motion.md). Shed decorative/world work before fundamental
    navigation. Marker appearance, immersive source quality and framebuffer resolution
    are independent axes.
 7. Treat device hints as a starting estimate only. Missing memory information is not

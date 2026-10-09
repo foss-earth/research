@@ -2,7 +2,7 @@
 
 Execute this task when the user starts a fresh conversation with this file.
 Work in `/Users/felg/gh/foss-earth`. Read the current `AGENTS.md`,
-[docs/ui-layout.md](ui-layout.md) and [docs/proposals/settings.md](proposals/settings.md)
+[docs/ui-layout.md](../../docs/docs/ui-layout.md) and [docs/proposals/settings.md](../../docs/docs/proposals/settings.md)
 first.
 
 There are two parts: a bug to fix first, then a feature that touches the same code.
@@ -20,7 +20,7 @@ The user's report, while testing the UMN campus tour beside the Mississippi:
 > what i think happens is that the 'height' we are orbiting from is only updated when i zoom
 > in/out
 
-The code agrees with them. In [src/camera/cameraState.ts](../src/camera/cameraState.ts), as of
+The code agrees with them. In [src/camera/cameraState.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/camera/cameraState.ts), as of
 commit `b9a8db6`:
 
 - `panBy` and the anchor pan's `applyViewState` call pass `getCurrentCenterHeightMeters()` as
@@ -39,7 +39,7 @@ What to do:
    should fail on the current code.
 2. **Find out why the pan and orbit keep the old height.** Use `git log -S
    getCurrentCenterHeightMeters`. It may have been deliberate, for example to keep the grabbed
-   point under the cursor during an anchor pan ([src/camera/anchorPan.ts](../src/camera/anchorPan.ts)),
+   point under the cursor during an anchor pan ([src/camera/anchorPan.ts](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/camera/anchorPan.ts)),
    or to stop the pivot jumping mid-drag. Fix it in a way that keeps whatever that protected.
    One option is resolving the height once the pan ends, through the existing smoothing in
    `smoothSurfaceHeightMeters`.

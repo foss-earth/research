@@ -14,7 +14,7 @@ omits essential interaction and resource contracts, and contradicts the requeste
 selectable sphere renderer. Its source list names domains rather than identifiable
 documents, so its numbered citations cannot be audited as written.
 
-The [preliminary implementation spec](proposals/panorama-scenes.md) records the
+The [preliminary implementation spec](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md) records the
 proposed direction and remaining decisions. It is deliberately not a completed
 handoff to an implementation agent. No performance experiments have been run.
 
@@ -110,7 +110,7 @@ A useful cache cost model is `N × P` for direct projection, versus
 P is direct projection cost, B is bake cost including target writes, and S is
 cached sampling cost. Caching helps only when saved work exceeds its added costs.
 This is a reasoning model, not a performance result. FOSS Earth's
-[render scheduler](../src/engine/babylon/renderScheduler.ts) already reduces N
+[render scheduler](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/renderScheduler.ts) already reduces N
 to zero while idle.
 
 Screen footprint depends on object size, distance, projection/FOV, viewport and

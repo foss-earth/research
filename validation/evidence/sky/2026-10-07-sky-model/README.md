@@ -2,7 +2,7 @@
 
 `sky-model.json` is one run of `node scripts/validation/sky-model.mjs` at the
 sources its `sources` field hashes. CPU only: no browser, GPU, network or server.
-What it records and what the numbers mean: [docs/proposals/sky.md](../../../../docs/proposals/sky.md).
+What it records and what the numbers mean: [docs/proposals/sky.md](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/sky.md).
 
 - `solar`: the Solar Position Algorithm against its report's worked example
   (NREL/TP-560-34302, Table A5.1).

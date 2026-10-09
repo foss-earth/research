@@ -23,7 +23,7 @@ The machine was an Apple M5 with 10 cores and 16 GiB, on macOS 27.0, with Chrome
 | The processor idling between frames | Work done once a frame 5 to 20 times slower than the same work in a loop | Nothing: it is a condition to state, not a disturbance |
 
 `quietRound` in
-[benchmarks/spherical-image-representation/lib/quiet.mjs](../../benchmarks/spherical-image-representation/lib/quiet.mjs)
+[benchmarks/spherical-image-representation/lib/quiet.mjs](../../scripts/benchmarks/spherical-image-representation/lib/quiet.mjs)
 has the first three: it waits for ten seconds without input and for normal memory pressure,
 runs the round, and runs it again if any of the three happened during it. A round still
 disturbed after three more tries is kept and marked. [scene-ab](../../benchmarks/scene-ab/README.md)
@@ -51,7 +51,7 @@ input guard nor the load guard sees it.
 - **Several processes at once must fit.** Half the cores is not a memory budget. Five
   workers at once, at up to 3.4 GiB each in the network experiment, made the 16 GiB machine
   swap, in bursts over two hours. Measure what one worker needs before starting several: `process.resourceUsage().maxRSS`
-  is the peak in kibibytes. [lib/pool.mjs](../../benchmarks/spherical-image-representation/lib/pool.mjs)
+  is the peak in kibibytes. [lib/pool.mjs](../../scripts/benchmarks/spherical-image-representation/lib/pool.mjs)
   starts half the cores or as many workers as fit in half the memory, whichever is fewer,
   and prints each worker's peak.
 - **To show that a result was not affected, reproduce it.** The experiments that swapped
@@ -92,4 +92,4 @@ of 16.67 ms. To see a late frame, read `performance.now()` at the start of the c
 difference those.
 
 `performance.now()` is itself rounded to 100 µs unless the page is cross-origin isolated;
-see [Checks on a real GPU](README.md).
+see [Checks on a real GPU](../../../docs/docs/validation/README.md).

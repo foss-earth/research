@@ -4,7 +4,7 @@ Research date: 2026-09-26. Owner: FOSS Earth.
 
 This finishes the research phase for custom scenes with 360° panoramas in FOSS Earth.
 It answers the questions the [research review](../../360-images-virtual-tour-review.md)
-left open, and gives whoever completes the [preliminary spec](../panorama-scenes.md)
+left open, and gives whoever completes the [preliminary spec](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md)
 observed facts, derivations and pictures rather than assertions. The
 [original research](../../360-images-virtual-tour-research.md) is kept unchanged as a
 record; the review lists what is wrong with it.
@@ -101,7 +101,7 @@ orb is shown enlarged.
 
 The photograph is [Buikslotermeerplein](https://polyhaven.com/a/buikslotermeerplein) by
 Greg Zaal, CC0, from Poly Haven. The renderer is
-[scripts/render-orb-appearances.mjs](../../../scripts/render-orb-appearances.mjs); see
+[scripts/render-orb-appearances.mjs](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/render-orb-appearances.mjs); see
 [Reproducing the figures](#reproducing-the-figures).
 
 **Window, 90° preview angle.** The view along the direction to the orb, at least 90° wide:
@@ -304,7 +304,7 @@ mapping, the numbers say otherwise:
   | 128 px | 0.70° | 0.4 m | 1.2 m | 3.7 m | 12.3 m |
 
   So a far orb's sprite would stay valid for many frames, but near orbs change every
-  frame of motion. And FOSS Earth's [render scheduler](../../../src/engine/babylon/renderScheduler.ts)
+  frame of motion. And FOSS Earth's [render scheduler](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/renderScheduler.ts)
   already draws nothing while the view is still.
 - **What a cache actually saves is source memory.** A 64×64 RGBA8 sprite is 16 KiB. A
   128² preview cube with mipmaps is 512 KiB. With a cache, the source could be evicted
@@ -402,7 +402,7 @@ At 44.974° N, 93.235° W the geoid heights are EGM2008 −27.30 m and EGM96 −
 A GNSS ellipsoid height there is 27.3 m less than the same point's height above sea level.
 
 FOSS Earth enters Terrarium heights, which are relative to sea level, directly as
-ellipsoid heights with no geoid correction ([streamed terrain](../../streamed-terrain.md)).
+ellipsoid heights with no geoid correction ([streamed terrain](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/streamed-terrain.md)).
 Google's photorealistic tiles use ellipsoid heights. So a capture point stored as a true
 ellipsoid height sits about 27 m below the raster terrain surface at this campus, and at
 the right height on Google's. A point stored as a sea-level height does the reverse.
@@ -557,7 +557,7 @@ must honour `prefers-reduced-motion` with a cut or fade
 
 ## Facts for the FOSS Earth integration
 
-- **Device capabilities.** [createRendererMode](../../../src/engine/babylon/createRendererMode.ts)
+- **Device capabilities.** [createRendererMode](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/createRendererMode.ts)
   passes `deviceDescriptor: { requiredFeatures: ["timestamp-query"] }`. With explicit
   features, Babylon 8.56.2 enables nothing else, and without `setMaximumLimits` it takes
   default limits. So compressed textures are unavailable, and 2D textures stop at 8192.
@@ -571,7 +571,7 @@ must honour `prefers-reduced-motion` with a cut or fade
 - **Shaders.** Babylon's WGSL processing handles `texture_cube<f32>` and maps
   `fragmentOutputs.fragDepth` to `@builtin(frag_depth)`; thin instances draw every orb in
   one call. FOSS Earth's
-  [imagery material plugin](../../../src/engine/babylon/imagery/imageryMaterialPlugin.ts)
+  [imagery material plugin](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/src/engine/babylon/imagery/imageryMaterialPlugin.ts)
   already keeps WGSL and GLSL versions and samples with explicit gradients
   (`textureSampleGrad`, `textureGrad`). A WebGL version of the
   orb shader would therefore be about twenty more lines, which makes the no-WebGPU
@@ -615,7 +615,7 @@ shaders" stance all stand.
 ## Parameters the findings imply
 
 These fill in units, bounds and defaults for the draft spec's
-[settings inventory](../panorama-scenes.md#settings-inventory-to-complete), where the
+[settings inventory](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md#settings-inventory-to-complete), where the
 research gives a reason. Anything unmeasured stays an explicit gap.
 
 | Parameter | Unit and bounds | Default and reason |

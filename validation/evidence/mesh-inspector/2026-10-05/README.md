@@ -1,7 +1,7 @@
 # Mesh inspector GPU check — 2026-10-05
 
 [Report](report.json) from
-[`node scripts/validation/mesh-inspector.mjs`](../../../../scripts/validation/mesh-inspector.mjs).
+[`node scripts/validation/mesh-inspector.mjs`](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/validation/mesh-inspector.mjs).
 Chrome 154.0.8037.98 on the Apple M5 GPU passed **23 checks on each backend**:
 WebGPU, WebGL 2, and WebGL 1 forced with `--disable-webgl2`. The runner and page
 independently record the actual backend and reject software rendering. Console

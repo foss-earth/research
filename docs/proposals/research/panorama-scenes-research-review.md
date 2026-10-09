@@ -39,7 +39,7 @@ and consolidate the existing preliminary spec into one coherent proposal.
 ### 1. Full viewport coverage is not the transition handoff condition
 
 The research says the window equals immersion once it fills the screen. Its own
-[reference mapping](../../../scripts/render-orb-appearances.mjs) returns the
+[reference mapping](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/scripts/render-orb-appearances.mjs) returns the
 unchanged view ray only after the orb's angular radius reaches the preview
 half-angle, or once the camera is inside. That is a separate condition from
 covering the frame.
@@ -159,7 +159,7 @@ Camera/input ownership and resource lifetime remain substantial runtime work.
 ### 7. Datum handling must be provider-specific
 
 The existing runtime applies decoded heights without a datum correction; that
-finding is supported by [the terrain documentation](../../streamed-terrain.md).
+finding is supported by [the terrain documentation](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/streamed-terrain.md).
 Terrarium describes an encoding, however, not one universal vertical reference.
 The runtime supports Mapterhorn, AWS and arbitrary provider URLs, without a datum
 field. The report's local geoid calculation does not establish the datum or

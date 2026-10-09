@@ -2,7 +2,7 @@
 
 Status: implementation specification and measured algorithm-cost envelope,
 2026-09-10. This document does not add new gameplay modes. The current
-experiment is described in [flight-sim's implementation notes](../../../flight-sim/docs/wheel-spin-experiment.md).
+experiment is described in [flight-sim's implementation notes](../../navigation.md#retained-local-and-host-evidence).
 
 ## Implementation status (2026-09-10)
 
@@ -69,7 +69,7 @@ fraction of that time. The conversion is not a measured game frame time.
 This is a warmed Node/V8 measurement of static inputs. It excludes simulation
 advance, sound, visuals, dynamic contact transients and browser/rendering load.
 [Raw adapter results](../../benchmarks/wheels/results-adapter.json) and
-[reproducible script](../../benchmarks/wheels/run-adapter.mjs).
+[reproducible script](../../scripts/benchmarks/wheels/run-adapter.mjs).
 
 An instantaneous animation mode is a useful baseline. The measured difference
 does not justify presenting it as a substantial battery-saving optimization.
@@ -98,7 +98,7 @@ integrated game's cost. They deliberately exclude JSBSim/WASM, telemetry,
 terrain/mesh queries, the contact solver, rendering, audio, and browser load;
 the compliance field is not an FEA tire or persistent soil model. The rigid
 kernel's especially small number is a reason not to make a production claim
-from a microbenchmark. [Script](../../benchmarks/wheels/run-reference-kernels.mjs),
+from a microbenchmark. [Script](../../scripts/benchmarks/wheels/run-reference-kernels.mjs),
 [raw results](../../benchmarks/wheels/results-reference-kernels.json), and
 [methodology](../../benchmarks/wheels/README.reference-kernels.md).
 

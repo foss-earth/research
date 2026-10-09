@@ -1,6 +1,6 @@
 # Panorama input check, 2026-09-27
 
-The changes after the first user trial of [panorama scenes](../../../../docs/proposals/panorama-scenes.md),
+The changes after the first user trial of [panorama scenes](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md),
 checked with real mouse, wheel and key events from headless Chrome, through the
 app's own listeners, on this machine's GPU. [`summary.md`](summary.md) is the
 run's own summary, and [`report.json`](report.json) holds every number.

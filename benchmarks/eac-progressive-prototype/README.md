@@ -12,9 +12,9 @@ records what existed, the plan and what could not be run.
 **In production since 2026-10-03.** After its published package was tried by hand and
 reported working,
 the design it supports went into FOSS Earth as the scene format's `tiled-cube` representation
-(`src/scenes/tiles/`, [format](../../docs/scenes/format.md#tiled-cubes)), in both warps, with
+(`src/scenes/tiles/`, [format](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/scenes/format.md#tiled-cubes)), in both warps, with
 the person choosing in 360 image settings → Representation; the UMN tour offers both. What
-changed on the way is in [the panorama proposal](../../docs/proposals/panorama-scenes.md)
+changed on the way is in [the panorama proposal](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/panorama-scenes.md)
 ("Built"). This folder stays as the evidence behind the defaults and is not used by the app.
 
 The prototype's code is apart from the app. The only production code it touches is imported

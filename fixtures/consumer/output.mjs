@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import { mkdirSync, readFileSync, readdirSync, realpathSync, symlinkSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { newOutputDirectory } from "@foss-earth/research/output-directory";
+
+const owner = realpathSync(fileURLToPath(new URL("../../", import.meta.resolve("@foss-earth/research/output-directory"))));
+assert.ok(owner.startsWith(realpathSync(process.cwd()) + path.sep));
+const fixture = newOutputDirectory("public-consumer-cases");
+const relative = path.relative(path.join(owner, "build"), fixture);
+const target = path.join(fixture, "target");
+mkdirSync(target);
+symlinkSync(target, path.join(fixture, "redirect"), "dir");
+assert.throws(() => newOutputDirectory(relative, "redirect", "must-not-exist"), /redirected directory/);
+assert.deepEqual(readdirSync(target), []);
+const first = newOutputDirectory(relative, "runs");
+writeFileSync(path.join(first, "evidence.txt"), "retain these exact bytes\n");
+const second = newOutputDirectory(relative, "runs");
+assert.notEqual(first, second);
+assert.equal(readFileSync(path.join(first, "evidence.txt"), "utf8"), "retain these exact bytes\n");
+assert.deepEqual(readdirSync(second), []);
+assert.throws(() => newOutputDirectory("../outside"), /inside this owner's build/);
+process.stdout.write("Installed public output helper preserves prior evidence and refuses redirected output.\n");

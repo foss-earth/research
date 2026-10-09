@@ -2,7 +2,7 @@
 
 Compares conditions, sets of registry values, in a built FOSS Earth app with a scene, on this
 machine's real GPU in headless Chrome, with no server. It was written for the
-[work-saving experiments](../../docs/validation/panorama-experiments.md) and the UMN campus
+[work-saving experiments](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-experiments.md) and the UMN campus
 tour, whose performance on phones is what they are for.
 
 ## Running it on the UMN tour
@@ -18,7 +18,7 @@ node benchmarks/scene-ab/run.mjs \
 
 Add `--webgl1` to start Chrome without WebGL 2, so the app gets a real WebGL 1 context
 (`?renderer=webgl` alone does not guarantee one). Other options are listed at the top of
-[run.mjs](run.mjs): the stops, the workloads (`look` inside each stop, `overview` of the
+[run.mjs](../../scripts/benchmarks/scene-ab/run.mjs): the stops, the workloads (`look` inside each stop, `overview` of the
 campus with its orbs), the conditions, the viewport and the renderer.
 
 Output goes to a new `build/benchmarks/scene-ab/<local time>/` folder: `report.json`, a

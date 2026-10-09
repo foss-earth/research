@@ -22,7 +22,7 @@ Raw numbers: [`benchmarks/globe-compare/results.json`](../benchmarks/globe-compa
 - **Browser:** headless Google Chrome. It reported `ANGLE Metal Renderer: Apple M5`, so the run used the real GPU, not a software renderer.
 - **Viewport:** 1280 × 720.
 - **Flight:** over the Grand Canyon (36.1° N, 112.14° W) at about 1200 m and 55° pitch. The camera turns a full 360° and drifts 0.08° east over 8 seconds, after 6 seconds of warmup.
-- **Script:** [`benchmarks/globe-compare/run.mjs`](../benchmarks/globe-compare/run.mjs). The competitor pages it loads are in [`benchmarks/globe-compare/pages/`](../benchmarks/globe-compare/pages/).
+- **Script:** [`benchmarks/globe-compare/run.mjs`](../scripts/benchmarks/globe-compare/run.mjs). The competitor pages it loads are in [`benchmarks/globe-compare/pages/`](../navigation.md#retained-local-and-host-evidence).
 
 ## Reading the numbers
 

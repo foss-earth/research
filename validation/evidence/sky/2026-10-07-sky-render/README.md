@@ -4,7 +4,7 @@
 the sources its `sources` field hashes: Chrome 154, headless, drawing with its own
 software renderer (SwiftShader) through WebGL 2, WebGL 1 and WebGPU. No GPU, no
 network and no server. What each check is of:
-[docs/proposals/sky.md](../../../../docs/proposals/sky.md#drawn-pixels).
+[docs/proposals/sky.md](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/proposals/sky.md#drawn-pixels).
 
 **This is not a GPU run.** `software` is `true` in the report. A software renderer
 runs the same GLSL and WGSL and gives the pixels to compare with the model; it

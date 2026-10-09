@@ -1,7 +1,7 @@
 # Panorama visual-contract evidence
 
 CPU reference only, 2026-09-27 UTC, Node v26.9.0. Interpretation and equations:
-[visual contract](../../../../docs/validation/panorama-visual-contract.md).
+[visual contract](https://github.com/foss-earth/foss-earth.github.io/blob/90e23b3ee96f53ec5900afc5991a21fffa58649d/docs/validation/panorama-visual-contract.md).
 No GPU, browser, network timing or interactive-usability qualification is implied.
 
 - `fixture.json`, `photo.json`: complete configurations, source/script SHA-256,

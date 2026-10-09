@@ -1,0 +1,2436 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
+  "routes": [
+    {
+      "sourcePath": "benchmarks/collision/.gitignore",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/collision/.gitignore",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/collision/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/collision/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/collision/build-gpu-comparison.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/build-gpu-comparison.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/collision/bvh-prototype.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/bvh-prototype.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/collision/gpu-comparison.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/gpu-comparison.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/collision/results-gpu.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/collision/results-gpu.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/collision/results.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/collision/results.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/collision/run-gpu-headless.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/run-gpu-headless.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/collision/run.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/run.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/collision/surface-query.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/collision/surface-query.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/INVENTORY.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/REPORT.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/config/default.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/config/default.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/config/experiments.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/config/experiments.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/export-package.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/export-package.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/analysis.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/analysis.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/browser.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/browser.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/client.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/client.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/cones.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/cones.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/config.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/config.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/judge.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/judge.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/paths.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/paths.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/pattern.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/pattern.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/render-cpu.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/render-cpu.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/residual.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/residual.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/selection.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/selection.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/sim.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/sim.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/tiling.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/tiling.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/lib/traces.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/lib/traces.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/make-plots.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/make-plots.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/make-screens.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/make-screens.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/make-tables.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/make-tables.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/frame-times-http.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/quality-vs-bytes-sim.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-bytes-sim.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-http.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quality-vs-time-sim.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/quick-turn-insurance-sim.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/resources-over-time-http.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/resources-over-time-http.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/cube-direct-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-direct-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-levels-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-1000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-2000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-2700ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/eac-residual-northrop-mall-constrained-mobile-quick-turn-4000ms.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-bootstrap-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-bootstrap-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-bootstrap-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-bootstrap-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-level-below-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-level-below-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-level-below-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-beside-the-level-below-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-level-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-level-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-level-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/pattern-finest-level-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-bootstrap-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-bootstrap-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-bootstrap-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-bootstrap-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-level-below-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-level-below-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-level-below-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-beside-the-level-below-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-level-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-level-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-level-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/patternCube-finest-level-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-bootstrap-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-bootstrap-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-bootstrap-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-bootstrap-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-level-below-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-level-below-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-level-below-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-beside-the-level-below-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-level-cube-corner.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-level-cube-corner.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-level-face-edge.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/plots/screens/real-finest-level-face-edge.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/preprocess/build-dataset.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/preprocess/build-dataset.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/correctness-client.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/correctness-client.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/correctness-geometry.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/correctness-geometry.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/correctness-residual.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/correctness-residual.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/datasets.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/datasets.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/gpu-checks.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/gpu-checks.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/gpu-checks.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/gpu-checks.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-frames.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-frames.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-series.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-series.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-warm-frames.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-warm-frames.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-warm-series.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-warm-series.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-warm.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-warm.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http-warm.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http-warm.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/http.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/http.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/representation-face2048.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/representation-face2048.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/representation-face2048.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/representation-face2048.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/representation.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/representation.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/representation.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/representation.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/sim-series.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/sim-series.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/sim.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/sim.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/sim.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/sim.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/eac-progressive-prototype/results/tables.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/run-gpu-checks.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/run-gpu-checks.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/run-http.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/run-http.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/run-representation.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/run-representation.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/run-sim.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/run-sim.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/tests/check-client.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/tests/check-client.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/tests/check-geometry.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/tests/check-geometry.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/tests/check-residual.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/tests/check-residual.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/viewer/page.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/viewer/page.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/eac-progressive-prototype/viewer/shaders.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/eac-progressive-prototype/viewer/shaders.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/globe-compare/pages/cesium.html",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/globe-compare/pages/cesium.html",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/globe-compare/pages/maplibre.html",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/globe-compare/pages/maplibre.html",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/globe-compare/pages/worldwind.html",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/globe-compare/pages/worldwind.html",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/globe-compare/results.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/globe-compare/results.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/globe-compare/run.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/globe-compare/run.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/map-detail/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/binding-fixture.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/map-detail/binding-fixture.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/report.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/map-detail/report.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/run-binding.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/map-detail/run-binding.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/run-sweep.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/map-detail/run-sweep.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/sweep-page.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/map-detail/sweep-page.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/map-detail/sweep.html",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/map-detail/sweep.html",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/scene-ab/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/scene-ab/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/scene-ab/agent.js",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/scene-ab/agent.js",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/scene-ab/run.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/scene-ab/run.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/INVENTORY.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/REPORT.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/REPORT.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/gpu/page.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/gpu/page.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/gpu/shaders.ts",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/gpu/shaders.ts",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/analysis.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/analysis.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/codecs.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/codecs.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/decodeKernel.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/decodeKernel.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/environment.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/environment.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/evaluation.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/evaluation.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/field.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/field.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/geometry.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/geometry.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/hierarchy.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/hierarchy.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/metrics.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/metrics.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/network.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/network.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/ordering.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/ordering.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/pool.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/pool.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/random.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/random.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/representations.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/representations.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/schemes.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/schemes.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/source.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/source.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/svg.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/svg.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/traces.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/traces.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/lib/views.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/lib/views.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/make-plots.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/make-plots.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/make-tables.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/make-tables.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-at-equal-quality.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/bytes-never-looked-at.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-area.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/cell-shape.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/codecs.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/decode-time.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/frame-times.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/gpu-draw-cost.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/haar-details.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/memory-vs-quality.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/memory-vs-quality.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-after-a-turn.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-by-view.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-level.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-per-sample.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes-received.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-bytes.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-samples.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-quick-turn.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-time-slow-turn.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-slow-turn.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/quality-vs-time-stationary.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/plots/residual-vs-replacement.svg",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/codec.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/codec.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/codec.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/codec.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/cpu.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/cpu.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/cpu.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/cpu.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/geometry.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/geometry.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/geometry.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/geometry.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-busy-decode.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-busy-decode.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-busy-refine.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-busy-refine.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-busy-render.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-busy-render.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-busy.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-busy.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-decode.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-decode.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-refine.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-refine.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu-render.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu-render.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/gpu.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/gpu.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/hierarchy.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/hierarchy.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/hierarchy.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/hierarchy.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-concurrency12.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-concurrency12.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-concurrency12.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-concurrency12.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-concurrency2.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-concurrency2.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-concurrency2.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-concurrency2.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-ordered.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-ordered.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-ordered.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-ordered.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-series.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-series.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-tile128.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-tile128.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-tile128.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-tile128.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-tile512.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-tile512.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network-tile512.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network-tile512.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/network.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/network.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/progressive.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/progressive.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/progressive.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/progressive.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/reconstruction.csv",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/reconstruction.csv",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/reconstruction.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/reconstruction.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/results/tables.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/results/tables.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-codec.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-codec.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-cpu.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-cpu.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-geometry.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-geometry.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-gpu.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-gpu.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-hierarchy.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-hierarchy.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-network.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-network.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-progressive.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-progressive.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/run-reconstruction.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/run-reconstruction.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/verify.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/spherical-image-representation/verify.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/spherical-image-representation/wasm/decode_kernel.c",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/spherical-image-representation/wasm/decode_kernel.c",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/.gitignore",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/.gitignore",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/current-path.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/current-path.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/download.py",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/download.py",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/layouts.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/layouts.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/quality-sweep.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/quality-sweep.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-current-repeat.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-current-repeat.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-current.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-current.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-layouts-repeat.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-layouts-repeat.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-layouts.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-layouts.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-quality.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-quality.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-stage-a1.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-stage-a1.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-stage-a2-final.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-stage-a2-final.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/results-stage-a2.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/terrain/results-stage-a2.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/run-current.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/run-current.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/run.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/run.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/terrain/verify.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/terrain/verify.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/README.reference-kernels.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/README.reference-kernels.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/results-adapter.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-adapter.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/results-feedback-browser.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-feedback-browser.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/results-integrated.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-integrated.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/results-reference-kernels.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results-reference-kernels.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/results.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "benchmarks/wheels/results.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/run-adapter.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run-adapter.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/run-integrated.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run-integrated.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/run-reference-kernels.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run-reference-kernels.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "benchmarks/wheels/run.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/benchmarks/wheels/run.mjs",
+      "responsibility": "research tool source; dependency migration/checks pending"
+    },
+    {
+      "sourcePath": "docs/360-images-virtual-tour-research.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/360-images-virtual-tour-research.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/360-images-virtual-tour-review.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/360-images-virtual-tour-review.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/airport-locations.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/airport-locations.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/app-files.md",
+      "owner": "foss-earth/ui",
+      "destinationPath": "docs/app-files.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/bug-reporting.md",
+      "owner": "foss-earth/ui",
+      "destinationPath": "docs/bug-reporting.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/camera-motion.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/camera-motion.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/camera-pivot-and-zoom-prompt.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/camera-pivot-and-zoom-prompt.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/ci-cd.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/ci-cd.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/ci-correctness-performance-followup-prompt.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/ci-correctness-performance-followup-prompt.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/compass-height-model.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/compass-height-model.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/deploying.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/deploying.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/development.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/development.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/diagnostics.md",
+      "owner": "foss-earth/ui",
+      "destinationPath": "docs/diagnostics.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/globe-comparison.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/globe-comparison.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/imagery-detail-drop-prompt.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/imagery-detail-drop-prompt.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/manual-qa.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/manual-qa.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/panorama-exit-animation-prompt.md",
+      "owner": "foss-earth/360",
+      "destinationPath": "docs/panorama-exit-animation-prompt.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/panorama-mode-prompt.md",
+      "owner": "foss-earth/360",
+      "destinationPath": "docs/panorama-mode-prompt.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/performance-pass.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/performance-pass.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/image-repositories.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/image-repositories.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/imagery-detail-continuity.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/imagery-detail-continuity.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/implementation/earth-agent.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/implementation/earth-agent.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/implementation/platform-agent.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/implementation/platform-agent.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/map-detail-control.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/map-detail-control.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/panorama-scenes.md",
+      "owner": "foss-earth/scenes",
+      "destinationPath": "docs/proposals/panorama-scenes.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/physics ",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/physics ",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/raster-provider-detail.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/raster-provider-detail.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/raster-terrain-performance.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/raster-terrain-performance.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/repository-graph-template.html",
+      "owner": "foss-earth/about",
+      "destinationPath": "docs/proposals/repository-graph-template.html",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/repository-graphs.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/repository-graphs.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/repository-split-graph.html",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/repository-split-graph.html",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/repository-split-graph.json",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/repository-split-graph.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad-studio-agent-prompt.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-studio-agent-prompt.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad-studio-research.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-studio-research.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-agent-prompt.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad-tools-research.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad-tools-research.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/gamepad_arch.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/gamepad_arch.png",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes-research-review.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-research-review.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes-research.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes-research.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/entry-ball.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-ball.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/entry-bubble.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-bubble.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/entry-window.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/entry-window.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/fixture.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/fixture.png",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-ball-fixture.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-ball-fixture.png",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-ball.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-ball.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-bubble.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-bubble.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-glass.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-glass.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-mirror.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-mirror.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-portal.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-portal.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-window-fisheye.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window-fisheye.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-window-fixture.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window-fixture.png",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/panorama-scenes/orb-window.jpg",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/panorama-scenes/orb-window.jpg",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/weather-research-prompt.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/weather-research-prompt.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/research/weather-research.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/research/weather-research.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/search.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/search.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/settings.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/settings.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/sky.md",
+      "owner": "foss-earth/sky",
+      "destinationPath": "docs/proposals/sky.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/smooth-elevation-height-model.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/proposals/smooth-elevation-height-model.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/tab-inventory.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/tab-inventory.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/vr.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/proposals/vr.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/proposals/weather.md",
+      "owner": "foss-earth/weather",
+      "destinationPath": "docs/proposals/weather.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/proposals/wheel-roadmap-handoff.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/wheel-roadmap-handoff.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/proposals/wheel-simulation-options.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/proposals/wheel-simulation-options.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/render-on-demand.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/render-on-demand.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/sky-lighting-implementation-prompt.md",
+      "owner": "foss-earth/sky",
+      "destinationPath": "docs/sky-lighting-implementation-prompt.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/streamed-terrain.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/streamed-terrain.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/tile-loading-prompt.md",
+      "owner": "foss-earth/engine",
+      "destinationPath": "docs/tile-loading-prompt.md",
+      "responsibility": "Component specification travels with its implementation owner; exact existing prose/provenance and staged capability limits retained."
+    },
+    {
+      "sourcePath": "docs/ui-layout.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/ui-layout.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/validation/README.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/validation/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/validation/benchmark-interference.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/validation/benchmark-interference.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/validation/chrome-code-sign-clones.md",
+      "owner": "foss-earth/docs",
+      "destinationPath": "docs/validation/chrome-code-sign-clones.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "docs/validation/timing.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/validation/timing.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "docs/webgl-panorama-performance-review.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "docs/webgl-panorama-performance-review.md",
+      "responsibility": "Research source/hypothesis/experiment record; no runtime dependency or result qualification inferred."
+    },
+    {
+      "sourcePath": "validation/evidence/diagnostics/vector-label-readiness-2026-10-05/acceptance.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/diagnostics/vector-label-readiness-2026-10-05/acceptance.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-depth/panorama-webgl.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-depth/panorama-webgl.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-depth/raster-binding.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-depth/raster-binding.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-depth/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-depth/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-loaded-detail/dark.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-loaded-detail/dark.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-loaded-detail/light.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-loaded-detail/light.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-05-loaded-detail/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-05-loaded-detail/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/control-report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/control-report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/control-webgpu-after.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/control-webgpu-after.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/webgpu.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/map-detail/2026-10-07-imagery-continuity/webgpu.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/mesh-inspector/2026-10-05/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/mesh-inspector/2026-10-05/webgl.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgl.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/mesh-inspector/2026-10-05/webgl2.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgl2.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/mesh-inspector/2026-10-05/webgpu.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/mesh-inspector/2026-10-05/webgpu.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-all/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/campus-webgl2-off/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_northrop-mall-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_northrop-mall-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_northrop-mall-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_northrop-mall-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_rarig-theater-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_rarig-theater-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_rarig-theater-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/look_rarig-theater-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/overview-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/overview-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/overview-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/heatmaps/overview-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl1/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_northrop-mall-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_northrop-mall-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_northrop-mall-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_northrop-mall-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_rarig-theater-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_rarig-theater-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_rarig-theater-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/look_rarig-theater-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/overview-all.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/overview-all.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/overview-panoramaShaders.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/heatmaps/overview-panoramaShaders.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-experiments/2026-09-29/tour-webgl2/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/cardinal-east-landscape.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/cardinal-east-landscape.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/cardinal-north-landscape.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/cardinal-north-landscape.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/photograph-east-landscape.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/photograph-east-landscape.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/photograph-north-landscape.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/screenshots/photograph-north-landscape.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/correctness-probes.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/correctness-probes.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-hidden-frames.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-hidden-frames.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-hidden-profile.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-hidden-profile.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-frames.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-frames.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-profile.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-profile.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-unprofiled-frames.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/campus-2026-09-27/traces/timing-shown-unprofiled-frames.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/immersive-hud.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/immersive-hud.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/overview-hovered.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/overview-hovered.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/overview-styled.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/screenshots/overview-styled.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/input-2026-09-27/summary.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/input-2026-09-27/summary.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/fixture.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/fixture.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/fixture.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/fixture.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo-input.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo-input.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-scenes/visual-contract-2026-09-27/photo.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/panorama-webgl/2026-09-28/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/panorama-webgl/2026-09-28/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-model/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-model/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-model/sky-model.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-model/sky-model.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/README.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/README.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/report.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/report.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon-as-at-the-viewpoint.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon-as-at-the-viewpoint.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon-as-photographed.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon-as-photographed.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-afternoon.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-dusk.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-dusk.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon-night-with-a-beam-on-the-2d-tile.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon-night-with-a-beam-on-the-2d-tile.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon-night.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon-night.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-full-moon.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-light-point-at-night.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-light-point-at-night.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-moonless-night.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-moonless-night.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-planet-afternoon-over-minneapolis.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-planet-afternoon-over-minneapolis.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-sky-off.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-sky-off.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-stars-from-400-km-by-day.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-stars-from-400-km-by-day.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-stars.png",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/sky/2026-10-07-sky-render/webgl2-stars.png",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/external-report-review.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/external-report-review.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/external-weather-report.md",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/external-weather-report.md",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/gibs-layers.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/gibs-layers.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/http-more-observations.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-more-observations.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/http-more-requests.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-more-requests.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/http-observations.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-observations.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/http-requests.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/http-requests.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "validation/evidence/weather/2026-10-08/source-manifest.json",
+      "owner": "foss-earth/research",
+      "destinationPath": "validation/evidence/weather/2026-10-08/source-manifest.json",
+      "responsibility": "documentation/research record"
+    },
+    {
+      "sourcePath": "scripts/lib/headlessChrome.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/lib/headlessChrome.mjs",
+      "responsibility": "explicit primary assignment: optional experiment helper; source-only, not a runtime dependency"
+    },
+    {
+      "sourcePath": "scripts/lib/outputDirectory.mjs",
+      "owner": "foss-earth/research",
+      "destinationPath": "scripts/lib/outputDirectory.mjs",
+      "responsibility": "explicit primary assignment: optional experiment helper; source-only, not a runtime dependency"
+    }
+  ]
+}
