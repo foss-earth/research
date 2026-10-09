@@ -2191,10 +2191,10 @@
     },
     "status": "prepared source only; UNRUN"
   },
-  "verifiedAtUtc": "2026-10-09T23:39:05.675233+00:00",
+  "verifiedAtUtc": "2026-10-09T23:40:37.715460+00:00",
   "currentSourceManifest": {
-    "path": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-sealed-source-files.json",
-    "sha256": "b1f106c7af797b743f892533ce842b0f5c6008b0b64354faf528dfd61c75293c",
+    "path": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-r2-sealed-source-files.json",
+    "sha256": "5aeb3279a5420c8467c7781cdf63badb3282692297bf388f1f0bacdd6c5dec41",
     "fileCount": 415
   },
   "currentSharedCi": {
@@ -2206,26 +2206,5 @@
     "fullIntendedRefs": "external release descriptor; mandatory complete nonempty audit after this commit",
     "remoteAdmissionVerifiedByOwner": false
   },
-  "currentChecks": [
-    {
-      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-causal-source-ports.json",
-      "sha256": "241e441a05124645c8baeb4bc317ade4b67d539cfe39b548c19a8cecb8153125",
-      "exitCode": 0
-    },
-    {
-      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-causal-types.json",
-      "sha256": "4ca2159b252e77166d89aee000d3779f9081cee529cbf6b5234a3b837ae4b4fd",
-      "exitCode": 0
-    },
-    {
-      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-ci-install.json",
-      "sha256": "2b507fc86cca88a8cd6c287e72933806d5c50276d45c092f34dd7cc69f9e24eb",
-      "exitCode": 0
-    },
-    {
-      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-current-inputs-install.json",
-      "sha256": "d80bb0677de1e67c8b69d509f473c0fa731bb812cbe5162290dcb18af396a88f",
-      "exitCode": 0
-    }
-  ]
+  "currentChecks": []
 }
