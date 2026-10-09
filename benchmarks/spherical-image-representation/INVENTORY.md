@@ -23,7 +23,7 @@ tracked `results*.json` beside the scripts; everything else in the gitignored
 
 ## Headless GPU harness
 
-[docs/validation/README.md](../../../docs/docs/validation/README.md) lists the harnesses.
+[docs/validation/README.md](https://github.com/foss-earth/docs/blob/main/docs/validation/README.md) lists the harnesses.
 [scripts/lib/headlessChrome.mjs](../../scripts/lib/headlessChrome.mjs) drives the installed
 Chrome over DevTools pipes; pages are bundled with Vite's library mode and served by request
 interception. Real WebGL 1 comes from an engine built with `disableWebGL2Support` or from

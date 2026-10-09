@@ -92,4 +92,4 @@ of 16.67 ms. To see a late frame, read `performance.now()` at the start of the c
 difference those.
 
 `performance.now()` is itself rounded to 100 µs unless the page is cross-origin isolated;
-see [Checks on a real GPU](../../../docs/docs/validation/README.md).
+see [Checks on a real GPU](https://github.com/foss-earth/docs/blob/main/docs/validation/README.md).

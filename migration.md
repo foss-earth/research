@@ -1,39 +1,86 @@
 # Migration and admission
 
-This is a prepared source migration from immutable Earth `90e23b3ee96f53ec5900afc5991a21fffa58649d`. There is no destination commit, package archive, installed consumer result or accepted owner release in this receipt. No source validation, network link check, experiment, browser launch, benchmark or device qualification ran during preparation. Commands below are for the primary after the coordinator grants a check slot.
+This checkout is the final independent owner destination in the organization
+layout. Original Earth source `90e23b3ee96f53ec5900afc5991a21fffa58649d`,
+transformed navigation and any subsequent owner inputs retain their explicit
+source and destination hashes. The source increment described by the current
+`SOURCE_RECEIPT.json` records current source and individual verification receipts.
+Local qualification does not establish application or remote admission. Prior
+lineage, source checks or artifacts keep their original scope and evidence.
 
-The original application and dirty or ignored evidence are untouched. Original documents and result bytes remain attributable through `SOURCE_PROVENANCE.json`; changed navigation or tool bindings also record the destination digest. Runnable research files moved under `scripts/`. Original license and notices are preserved. Dated plans and benchmark results describe their original versions and conditions; source adaptation does not turn them into measurements of these candidates.
+[Current setup](setup.md) supersedes the retained single-checkout development
+instructions. Organization directories group independent repositories; they are
+not Git roots. Original app archives are read-only recovery inputs. No archive
+source or old monolith `node_modules` is a build prerequisite for this owner.
+Runnable tools live with their implementing owner, never among prose documents.
+Original notices, research assets and historical result bytes retain their rights
+and conditions; source adaptation supplies no new timing or device claim.
 
-## Navigation and ownership
+## Source navigation
 
-`source-routing.json` records every original route. `link-routing.json` records each rewritten original local Markdown target, its original address and its actual owner. Known docs/research routes stay local. Component or original source links use exact immutable original source URLs until a published owner artifact is admitted. `component-transfers.json` is a transfer plan only: no other owner repository was written by this agent. Local ignored build evidence, sibling app paths and host-specific inputs retain their original target in the manifest and link to an explicit blocker notice. The prepared link tool checks file routing without network access; it cannot qualify remote links, fragment targets, private evidence or publishing readiness.
+`source-routing.json` preserves every original route and `link-routing.json`
+preserves original local Markdown targets. Local owner links remain relative.
+Docs/Research cross-owner links now use public repository URLs, which survive an
+independent checkout or installed package; they do not fetch another checkout.
+Those URLs' publication and remote fragments remain pending verification.
+Historical component citations may still name the exact original Earth revision
+as compatibility references; they are neither imports nor current implementation
+proof. `component-transfers.json` records the original contracts and actual owner
+destination paths without writing those owners' source.
 
-The default tab map and documented exceptions remain the retained specification. Geography/camera/terrain/maps belong to engine; scheduling/device/readiness to renderer; common shell/settings to UI; toolbar/About/Dev to their owners. Scenes owns envelopes and placement/navigation policy, 360 the top viewer, images common contracts/services, and each image format its distinct structure. Weather remains staged. Search, `foss-earth/vr` and `0sfs/vr` are deferred plans only; this source migration provisions none of them.
+The default tab map and its exceptions are preserved. Scenes owns scene envelopes,
+placements and navigation; 360 the top viewer; Images the common contracts and
+services; each image structure its separate implementation. All composition uses
+one supplied renderer and render-on-demand authority. Weather remains staged.
+Search and the Earth/Flight VR lanes are deferred and unprovisioned.
 
-## One shared metadata gate
+## Unconditional shared metadata gate
 
-Every change, including documentation-only changes, uses the existing unconditional caller `.github/workflows/attribution-check.yml`. It calls `foss-earth/ci` revision `9e046dd482e0229dc7c7b2d71b079d5905664656` and the same validator revision; shared archive SHA256 `450ede699f55f9b9c78146eadb73de7c6297e56553e7d7f9e5b164786a7beb24`, policy SHA256 `9ca88bf5861685e22e65e5f39fa65b05faaf9c218875fccbecce1b9f2dca5bd3`. No attribution checker was copied or replaced here. `.attribution-release.json` is the trusted release descriptor. The primary installs exactly that archived component and runs its shared conformance suite, then audits the actual full intended refs/candidate after clean lineage import. The coordinator separately verifies actual hosted admission settings and required context `attribution / Attribution policy`; local files prove no remote setting.
+Every change, including documentation-only changes, uses
+`.github/workflows/attribution-check.yml`. Its caller and validator pin
+is `1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e`; archive SHA256
+`bd884d925b8a7339b15fa61a477cf652bb73d41cc68addf50a050ab6cb151611`
+and policy1.0.1 SHA256
+`cdcda3c5d2968fe115e61627fca95ec744637de533750f1ee680c2a5ede49606`.
+The exact external descriptor, tracked archive and26 executable seals establish
+the checked common input. Earlier immutable receipts remain retained. The
+contribution policy is in [Contributing](CONTRIBUTING.md#commit-attribution),
+with advertising and human accountability explained there. Actual installed
+shared cases and the complete intended publication heads/tags audit are required.
+No validator implementation is copied into this owner.
 
-YOU CANNOT HAVE AI AS A CO-AUTHOR, OR YOUR CONTRIBUTIONS WILL BE REJECTED.
+The coordinator separately verifies actual hosted admission, the required
+`attribution / Attribution policy` context and trusted backend/witness binding.
+Local workflow files establish none of those remote settings. No docs-only
+exception, synthetic green, or admission waiver applies.
 
-## Next commands after a grant
+## Qualification and compatibility
 
-From this owner checkout, retain each command's output under a fresh dated `build/checks/` directory. Install only the exact reviewed CI archive and actual admitted public owner archives using the platform installer contract; the prepared package names are staging requirements, not artifact pins.
+Source commands and their exact prerequisite/consumer closure are documented in
+[setup](setup.md). They run only after a check grant. The source link check reads
+current files and prepared routing metadata without network or browser activity;
+it cannot qualify remote links, fragments, private evidence or distribution
+rights. Retained benchmark/test drivers are excluded from this metadata check.
 
-```sh
-npm run check:implementation
-npm run check:conformance
-```
+A release needs the exact source commit, archive hash/size/full file map, declared
+exports or document destinations, common CI receipts, independent installed
+consumer evidence and complete publication-ref audit. Actual app adoption and
+public artifact transport are additional gates. Do not relabel older source-only
+receipts as checks at the new paths. Preserve changed receipts before resealing.
 
-The source check reads routes/manifests and executes the small prepared Node source fixtures only. Research benchmark/test sources under `scripts/benchmarks/` are excluded from this command. Shared conformance exercises the actual CI component. Full intended-ref metadata admission is still required after primary-owned history import, with explicit `--base/--head` or the coordinator's complete intended-refs file. These commands were not executed during preparation. Documentation sources need no TypeScript/build check; the optional research browser bindings need a later isolated installed-package declaration check (`npm run check:public-ports`) once exact dependency artifacts and host composition exist. The prepared `fixtures/public-owner-ports.ts` constructs no device, queue or frame loop.
-
-## Compatibility and rollback
-
-Current Earth compatibility paths remain in the canonical app until accepted exports and actual consumers prove adoption. Existing consumers have not been switched by this migration. Restore any document or experimental tool from its original revision/blob map, or retain the compatibility source URL; no original source or evidence was deleted. Reverting an adapted helper or experimental import also invalidates any later source receipt/check result. Old benchmark timings are immutable historical records and cannot be compared to new public bindings without a separately authorized, qualified run.
+Rollback keeps original source revision/blob maps, prior archives and ignored
+evidence. Revert only the reviewed source increment; do not reset/clean archives
+or erase another owner's dirty work. A reverted helper/import invalidates its
+new consumer receipt. Historical measurements remain historical after rollback.
 
 ## Outstanding blockers
 
-Common CI installation/conformance, source checks, exact destination candidate/artifact pins, real consumer adoption, full intended-ref audit, hosted admission settings, remote link/anchor checks, component contract transfers, ignored evidence availability and additional data rights are pending. Publication cannot be accepted solely because the source graph checker reports declared unresolved prerequisites.
+The current increment's source fixtures and portable navigation checks, exact
+resealed artifacts/installed consumers, replacement common policy adoption,
+complete publication-ref audits, actual hosted admission/public transport and
+current application adoption remain pending. Optional research host bindings,
+private input availability, historical-baseline adapters and asset/data rights
+are reported separately; none is silently implemented or experimentally qualified.
 
 ## Research tool prerequisites
 

@@ -1,27 +1,16 @@
 {
   "schemaVersion": 1,
   "owner": "foss-earth/research",
-  "preparedAtUtc": "2026-10-09T19-04-11Z",
-  "status": "SOURCE-ONLY current bytes; checks/history/installed consumers/artifacts/adoption/admission UNRUN",
+  "preparedAtUtc": "2026-10-09T22-32-19Z",
+  "status": "Current source seal; individual retained check receipts define qualification. Installed archive and application/remote adoption separately recorded in external release descriptor.",
   "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
-  "priorSourceReceipt": "build/source-only/2026-10-09T19-04-11Z/SOURCE_RECEIPT.json.before",
-  "sourceManifestPath": "build/source-only/2026-10-09T19-04-11Z/source-manifest.json",
-  "sourceManifestEncoding": "UTF-8 sorted path JSON array, indent2, trailing LF; ignored outputs and receipt excluded",
-  "sourceManifestSha256": "6078772008abc9c97782b77194fe01c4156540ead155f73b3e2e435a5cfff824",
-  "sourceFileCount": 409,
-  "provenancePath": "SOURCE_PROVENANCE.json",
-  "provenanceSha256": "5fcb45b2f9a024ad9da713ddc469b99f9e72bb22d21f0758796eb44d9069ed67",
-  "publicExports": {
-    "./headless-chrome": {
-      "types": "./scripts/lib/headlessChrome.d.mts",
-      "import": "./scripts/lib/headlessChrome.mjs"
-    },
-    "./output-directory": {
-      "types": "./scripts/lib/outputDirectory.d.mts",
-      "import": "./scripts/lib/outputDirectory.mjs"
-    }
-  },
-  "bins": {},
+  "priorSourceReceipt": "build/source-only/local-layout-2026-10-09T22-23-46Z/SOURCE_RECEIPT.json.before",
+  "priorSourceReceiptSha256": "3783df3dfc326b8ba02ecd608f21b9d7113556089a5839aca7016526029d1c45",
+  "priorQualificationScope": "Retained prior receipts/archives are unchanged evidence only; this receipt claims no current-layout qualification.",
+  "sourceManifestPath": "build/source-only/local-layout-2026-10-09T22-23-46Z/source-manifest.json",
+  "sourceManifestEncoding": "UTF-8 sorted path JSON array, indent2, trailing LF; .git/build/node_modules/dist and receipt excluded",
+  "sourceManifestSha256": "e79b75be3e9125d4ad43ef36fa4c3e5d03325264724bf5a20d861c0183a08aac",
+  "sourceFileCount": 414,
   "sourceFiles": [
     {
       "path": ".attribution-release.json",
@@ -45,13 +34,18 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "de656953133716d4acf05c52b026a454d114f698e074fa325e82b3fc1d5efe6d",
+      "sha256": "85eda2b7ca0f62daec6a079df415d34b02e90e38e69d792640033afcb7aac09b",
       "bytes": 572
     },
     {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "c3a907b9e659a0f5a4c701be1b34a7d416526c3a99f129bf4d3b9db09c7ffa9d",
+      "bytes": 3442
+    },
+    {
       "path": "CONTRIBUTING.md",
-      "sha256": "3e4b363295e341632a6f30f1d3908d55b9df1e0b509533efc44d64d66073e1f6",
-      "bytes": 677
+      "sha256": "ae17c446b45bb7819aa2f12775c1acaf1a2626affbb49a8b0e578dccecadd69c",
+      "bytes": 2613
     },
     {
       "path": "LICENSE",
@@ -65,8 +59,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "78f81843e6b6c78c3e487b459427665254392a56f82d244c538a841fb1b845dd",
-      "bytes": 8129
+      "sha256": "2161425f96ba9afdc3a8a90b36b81f5d3d669a9776a32df99057e619adf50558",
+      "bytes": 8324
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "6baf6d3c1755360f5d902275c893074fd17af2fc10c140fe932b8a90d77d9942",
+      "bytes": 791
     },
     {
       "path": "SOURCE_LINEAGE.json",
@@ -75,8 +74,8 @@
     },
     {
       "path": "SOURCE_PROVENANCE.json",
-      "sha256": "5fcb45b2f9a024ad9da713ddc469b99f9e72bb22d21f0758796eb44d9069ed67",
-      "bytes": 273662
+      "sha256": "03d3c3c2228a3037c14f33dbc9b9d9f69d12ea9a61f374a4de1d08999ca78084",
+      "bytes": 283620
     },
     {
       "path": "benchmarks/collision/.gitignore",
@@ -470,8 +469,8 @@
     },
     {
       "path": "benchmarks/spherical-image-representation/INVENTORY.md",
-      "sha256": "b613ee01efdc74a1bb304e9fbf118704d1a3a2783c45faea4234c118d9d552c4",
-      "bytes": 7356
+      "sha256": "09b3782779199e912a07860146cd825b3dcc09d7590389d996e35ff4fd7b2631",
+      "bytes": 7387
     },
     {
       "path": "benchmarks/spherical-image-representation/README.md",
@@ -865,8 +864,8 @@
     },
     {
       "path": "docs/camera-pivot-and-zoom-prompt.md",
-      "sha256": "18ea229c4c634c4409ce8c132c41a8baa91aeb0df9ac4f07da18fa0954b135be",
-      "bytes": 4955
+      "sha256": "7ff2da54da4d0dadfb2fe66fe0976a44c82f464b5241cc34845350c95500a3f7",
+      "bytes": 5023
     },
     {
       "path": "docs/globe-comparison.md",
@@ -917,6 +916,21 @@
       "path": "docs/proposals/research/gamepad_arch.png",
       "sha256": "7810237fde5606651ac2904dadab6927e11c3ff0cf005100d6555dbb952b8262",
       "bytes": 292612
+    },
+    {
+      "path": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
+      "sha256": "f649f3f9db28545e19401f9acd2597403e4182c58a1ec279db61c090a93f2f23",
+      "bytes": 8466
+    },
+    {
+      "path": "docs/proposals/research/panorama-scenes-research-review.md",
+      "sha256": "0f3aca34bfea583ce29846797b71acd805d7b2135a612fa0889d6b37d1dc5a35",
+      "bytes": 13201
+    },
+    {
+      "path": "docs/proposals/research/panorama-scenes-research.md",
+      "sha256": "d6aba1bd104bd8b3718402baf3b45527f3ec69f3af76a25fa58aa4160c194ed8",
+      "bytes": 43148
     },
     {
       "path": "docs/proposals/research/panorama-scenes/entry-ball.jpg",
@@ -984,29 +998,14 @@
       "bytes": 44522
     },
     {
-      "path": "docs/proposals/research/panorama-scenes-proposal-prompt.md",
-      "sha256": "f649f3f9db28545e19401f9acd2597403e4182c58a1ec279db61c090a93f2f23",
-      "bytes": 8466
-    },
-    {
-      "path": "docs/proposals/research/panorama-scenes-research-review.md",
-      "sha256": "0f3aca34bfea583ce29846797b71acd805d7b2135a612fa0889d6b37d1dc5a35",
-      "bytes": 13201
-    },
-    {
-      "path": "docs/proposals/research/panorama-scenes-research.md",
-      "sha256": "d6aba1bd104bd8b3718402baf3b45527f3ec69f3af76a25fa58aa4160c194ed8",
-      "bytes": 43148
-    },
-    {
       "path": "docs/proposals/research/weather-research-prompt.md",
       "sha256": "269e644776b9e7c12bdadc4e90f6830d13379cf0ea64964cea7a56ffa0ee8e7c",
       "bytes": 17666
     },
     {
       "path": "docs/proposals/research/weather-research.md",
-      "sha256": "a08d25fbccc16dd973b036343d807dac64cda60290b93d0d97273651dd2a2744",
-      "bytes": 128601
+      "sha256": "d6834aa63cbfa691101083b644e33a54c1571ffdb460e82dbbfe1f5e6af04190",
+      "bytes": 128657
     },
     {
       "path": "docs/proposals/wheel-roadmap-handoff.md",
@@ -1030,13 +1029,18 @@
     },
     {
       "path": "docs/validation/timing.md",
-      "sha256": "592ef193418392694cc3e4cd5a3e3968f6605e36ed4983a3523409c95dca1522",
-      "bytes": 5703
+      "sha256": "d38fbea6b0572ea982ee84ac5f91b17266aa38f819ce36fe5ae507a0b5f89bcc",
+      "bytes": 5734
     },
     {
       "path": "docs/webgl-panorama-performance-review.md",
-      "sha256": "62184693538dd703a2e62fe027337c23b29a50ce2310991e3924a2359d78fa16",
-      "bytes": 40042
+      "sha256": "521c3f248ce296bf83708026426cb95e9d3041ac9fb41d3648711bb61b1ea915",
+      "bytes": 40110
+    },
+    {
+      "path": "fixtures/communityDocuments.test.mjs",
+      "sha256": "c57dc79504b7dfceae724ba327045ec5883ba32da353d587d9fa8e537953ba56",
+      "bytes": 1485
     },
     {
       "path": "fixtures/consumer/minimal.mjs",
@@ -1055,8 +1059,8 @@
     },
     {
       "path": "fixtures/documentLinks.test.mjs",
-      "sha256": "6b0ad765abca01ce892aad412cc036a2baf948e0d477cdb66f0a157bace9aaf1",
-      "bytes": 1404
+      "sha256": "03d66911a4887e4c9c54108ffd462dacc9362e02793f073749e2b84627eac8cb",
+      "bytes": 3018
     },
     {
       "path": "fixtures/headlessChrome.test.mjs",
@@ -1105,23 +1109,23 @@
     },
     {
       "path": "link-routing.json",
-      "sha256": "c06879109d84e31f051c285eb0ebf27f80dfd15884ec7aed77c7a40a52d2e2fd",
-      "bytes": 159606
+      "sha256": "4f8f95d2f0144fe4c100476e4db3fe50797454f76327bed58ca7ae6eee5f1627",
+      "bytes": 160778
     },
     {
       "path": "migration.md",
-      "sha256": "b692e3bfef25536ecb36ad7c0253d53555fc1220d7008072c92d826d8d1ce393",
-      "bytes": 8075
+      "sha256": "36b9490a095e97543989d2007091d9c82bb9f0f1d02ded15dfc0c9244edae5c4",
+      "bytes": 7624
     },
     {
       "path": "navigation.md",
-      "sha256": "3bcd2861065b1a9e4ecb3bb40319a05701a16614ea4cfe27a54a135ad9f5a2b2",
-      "bytes": 2014
+      "sha256": "48b8b637105a792ed3dbdbdd00f02ed70be77cd92b7cad0537feca26c319e796",
+      "bytes": 4361
     },
     {
       "path": "package.json",
-      "sha256": "dde074eb960b9d2986722030bad561ea52442eb10071ee6d3b66532fe4a33866",
-      "bytes": 2491
+      "sha256": "139f88a7699943e366dce61c659d54e4e3f186bd2282273812fac1fab53a608e",
+      "bytes": 2621
     },
     {
       "path": "scripts/benchmarks/collision/build-gpu-comparison.mjs",
@@ -1555,8 +1559,8 @@
     },
     {
       "path": "scripts/check-links.mjs",
-      "sha256": "c53550f2383dde0f28dd5ec05d7e79e1378b474c42ce1bf6fdf353613fbe31b4",
-      "bytes": 1985
+      "sha256": "68b54b584ab945b749058db77ebb55d0f7e2badfae2983b622a0d26379410b3b",
+      "bytes": 3771
     },
     {
       "path": "scripts/check-public-consumer.mjs",
@@ -1574,14 +1578,19 @@
       "bytes": 2121
     },
     {
+      "path": "scripts/lib/communityDocuments.mjs",
+      "sha256": "1900690bfd57a6eb05ffc78e97714bacef161b7d4518fd643722ee734be516ff",
+      "bytes": 1682
+    },
+    {
       "path": "scripts/lib/controlUploader.ts",
       "sha256": "6112ed0032396ee67bd8ead5fe1e350675882c3ea57054a8eb3e37f301f5e1c0",
       "bytes": 1095
     },
     {
       "path": "scripts/lib/documentLinks.mjs",
-      "sha256": "e27327c2a7177b280e3587c45dc1a76e74fe43464d377f664f9ba204275fa3d1",
-      "bytes": 969
+      "sha256": "3def9e0efc59beeba2fed1023917cb57473b8edf7743c845f3589ed2f5f1bbd9",
+      "bytes": 2682
     },
     {
       "path": "scripts/lib/headlessChrome.d.mts",
@@ -1614,14 +1623,19 @@
       "bytes": 1949
     },
     {
+      "path": "setup.md",
+      "sha256": "fc03d011bc9165d154b6e64433d1acf12aa39620b70cfa9fee57e1cfd182b4bc",
+      "bytes": 3886
+    },
+    {
       "path": "source-routing.json",
       "sha256": "f854b19baf002124ddbe24f65da7ed95f1d9f2e75f98a77fa6db855540649aca",
       "bytes": 121439
     },
     {
       "path": "tools-manifest.json",
-      "sha256": "a7b00958362c6f5f01669273881034c691bfe6f5137e6ae35341ec54dfacf37c",
-      "bytes": 134910
+      "sha256": "e9124713fae890304749ca32957fe3058e4c89adf5a882a70649469bda14eb77",
+      "bytes": 135615
     },
     {
       "path": "tsconfig.fixtures.json",
@@ -2069,7 +2083,21 @@
       "bytes": 9147
     }
   ],
-  "frozenFoundation": null,
+  "provenancePath": "SOURCE_PROVENANCE.json",
+  "provenanceSha256": "03d3c3c2228a3037c14f33dbc9b9d9f69d12ea9a61f374a4de1d08999ca78084",
+  "changeMapPath": "build/source-only/local-layout-2026-10-09T22-23-46Z/change-map.json",
+  "changeMapSha256": "c332cc1db92733582f18d2cd92f311a61ef1fda6876c2681d8c44563489416a7",
+  "publicExports": {
+    "./headless-chrome": {
+      "types": "./scripts/lib/headlessChrome.d.mts",
+      "import": "./scripts/lib/headlessChrome.mjs"
+    },
+    "./output-directory": {
+      "types": "./scripts/lib/outputDirectory.d.mts",
+      "import": "./scripts/lib/outputDirectory.mjs"
+    }
+  },
+  "bins": {},
   "sharedCi": {
     "revision": "9e046dd482e0229dc7c7b2d71b079d5905664656",
     "archiveSha256": "450ede699f55f9b9c78146eadb73de7c6297e56553e7d7f9e5b164786a7beb24",
@@ -2078,22 +2106,126 @@
     "installedConformance": null,
     "fullIntendedRefAudit": null,
     "actualRemoteAdmissionVerified": false,
-    "docsOnlyMetadataSkipped": false
+    "docsOnlyMetadataSkipped": false,
+    "replacementPolicyStatus": "pending checked sentence-case CI replacement; old immutable caller/descriptor retained"
   },
+  "policySentence": "You cannot have AI as a co-author, or your contributions will be rejected.",
+  "communityDirectiveAcknowledged": true,
+  "communityDocuments": [
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "c3a907b9e659a0f5a4c701be1b34a7d416526c3a99f129bf4d3b9db09c7ffa9d",
+      "bytes": 3442,
+      "mandatorySentenceLines": [],
+      "readmeTarget": "CODE_OF_CONDUCT.md",
+      "observation": "actual owner file bytes; source presentation check queued"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ae17c446b45bb7819aa2f12775c1acaf1a2626affbb49a8b0e578dccecadd69c",
+      "bytes": 2613,
+      "mandatorySentenceLines": [
+        32
+      ],
+      "readmeTarget": "CONTRIBUTING.md",
+      "observation": "actual owner file bytes; source presentation check queued"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "bytes": 34523,
+      "mandatorySentenceLines": [],
+      "readmeTarget": "LICENSE",
+      "observation": "actual owner file bytes; source presentation check queued"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "6baf6d3c1755360f5d902275c893074fd17af2fc10c140fe932b8a90d77d9942",
+      "bytes": 791,
+      "mandatorySentenceLines": [],
+      "readmeTarget": "SECURITY.md",
+      "observation": "actual owner file bytes; source presentation check queued"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "85eda2b7ca0f62daec6a079df415d34b02e90e38e69d792640033afcb7aac09b",
+      "bytes": 572,
+      "mandatorySentenceLines": [
+        3
+      ],
+      "readmeTarget": null,
+      "observation": "actual owner file bytes; source presentation check queued"
+    }
+  ],
+  "childWriters": [],
   "checksExecuted": [],
   "currentArtifact": null,
   "acceptedArtifacts": [],
   "actualConsumerAdoption": null,
-  "rollback": "Canonical original application remains live; frozen prior artifacts and earlier exact source receipts retained. New source has not replaced or retired any consumer.",
-  "outstandingBlockers": [
-    "granted bounded owner and actual public-only consumer checks",
-    "exact replacement prerequisites",
-    "source/API/CSS link/asset compatibility",
-    "expanded clean lineage and actual complete intended publication scopes",
-    "actual installed CI conformance",
-    "final source/archive/export seals",
-    "actual app adoption",
-    "coordinator public transport and remote admission"
+  "remainingQualification": [
+    "granted source/navigation/community fixture checks",
+    "exact checked common CI replacement adoption and shared conformance",
+    "complete intended heads/tags attribution audit after primary-owned clean history/transformation",
+    "exact resealed archive/hash/size/full file map",
+    "independent installed archive consumer with retained input pins and negative controls",
+    "actual app/tool caller adoption where required",
+    "coordinator public transport, remote URLs/fragments and actual admission settings"
   ],
-  "policySentence": "YOU CANNOT HAVE AI AS A CO-AUTHOR, OR YOUR CONTRIBUTIONS WILL BE REJECTED."
+  "researchExperimentQualification": "none; optional experiments, native/browser/GPU/media/network calls excluded",
+  "compatibility": "Historical source/version citations and original rights/source hashes retained; independent public owner navigation replaces adjacent checkout assumptions; no app runtime was switched.",
+  "rollback": "Restore only reviewed increment using retained before/ source bytes/change map. Keep archives, previous receipts, dirty inputs and ignored evidence; no reset/clean/delete authorized.",
+  "consumerContract": {
+    "command": "RESEARCH_CONSUMER_ARCHIVES=<reviewed flat closure.json> npm run test:consumer",
+    "closure": "version1 packages rows name/version/archive/sha256/bytes; Research0.1.0 TypeScript5.9.3 Node declarations24.12.4 plus complete actual transitive closure",
+    "publicPortPrerequisites": {
+      "@foss-earth/ci": "0.1.0",
+      "@foss-earth/images": "0.1.0",
+      "@foss-earth/engine": "0.1.0",
+      "@foss-earth/renderer": "0.1.0",
+      "@foss-earth/ui": "0.1.0",
+      "@foss-earth/cubemap": "0.1.0",
+      "@foss-earth/equirectangular": "0.1.0",
+      "@babylonjs/core": "8.56.2",
+      "typescript": "5.9.3",
+      "@types/node": "24.12.4"
+    },
+    "status": "prepared source only; UNRUN"
+  },
+  "verifiedAtUtc": "2026-10-09T23:39:05.675233+00:00",
+  "currentSourceManifest": {
+    "path": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-sealed-source-files.json",
+    "sha256": "b1f106c7af797b743f892533ce842b0f5c6008b0b64354faf528dfd61c75293c",
+    "fileCount": 415
+  },
+  "currentSharedCi": {
+    "revision": "1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e",
+    "policySha256": "cdcda3c5d2968fe115e61627fca95ec744637de533750f1ee680c2a5ede49606",
+    "artifactSha256": "bd884d925b8a7339b15fa61a477cf652bb73d41cc68addf50a050ab6cb151611",
+    "descriptorSha256": "d60ee5067185a768f0890da2ed87d82dbfa08f28282e4d05a35e823c70307122",
+    "callerSha256": "b9fdfbf4bd61ed727abaef4fd9990b92714a6d2c1388feec600dc16337436b2c",
+    "fullIntendedRefs": "external release descriptor; mandatory complete nonempty audit after this commit",
+    "remoteAdmissionVerifiedByOwner": false
+  },
+  "currentChecks": [
+    {
+      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-causal-source-ports.json",
+      "sha256": "241e441a05124645c8baeb4bc317ade4b67d539cfe39b548c19a8cecb8153125",
+      "exitCode": 0
+    },
+    {
+      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-causal-types.json",
+      "sha256": "4ca2159b252e77166d89aee000d3779f9081cee529cbf6b5234a3b837ae4b4fd",
+      "exitCode": 0
+    },
+    {
+      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-ci-install.json",
+      "sha256": "2b507fc86cca88a8cd6c287e72933806d5c50276d45c092f34dd7cc69f9e24eb",
+      "exitCode": 0
+    },
+    {
+      "receipt": "/Users/felg/gh/foss-earth/foss-earth.github.io/build/repository-split/checks/2026-10-09-granted-verification/research-current-inputs-install.json",
+      "sha256": "d80bb0677de1e67c8b69d509f473c0fa731bb812cbe5162290dcb18af396a88f",
+      "exitCode": 0
+    }
+  ]
 }

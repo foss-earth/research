@@ -381,10 +381,10 @@ or assume the flight's quality system qualifies this workload.
 5. Keep actual numeric controls, units, ranges, defaults, reasons and locks visible.
    Automatic changes stay within user-set limits. Presets are explicit copied values,
    not hidden branches on labels such as Low/Medium/High. Follow the
-   [settings specification](../../docs/docs/proposals/settings.md).
+   [settings specification](https://github.com/foss-earth/docs/blob/main/docs/proposals/settings.md).
 6. Preserve immediate input, camera momentum, readable text, touch targets and all
    destinations. If motion is reduced, follow the existing
-   [camera contract](../../docs/docs/camera-motion.md). Shed decorative/world work before fundamental
+   [camera contract](https://github.com/foss-earth/docs/blob/main/docs/camera-motion.md). Shed decorative/world work before fundamental
    navigation. Marker appearance, immersive source quality and framebuffer resolution
    are independent axes.
 7. Treat device hints as a starting estimate only. Missing memory information is not

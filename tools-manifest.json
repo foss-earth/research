@@ -3406,10 +3406,10 @@
     },
     {
       "path": "scripts/lib/documentLinks.mjs",
-      "sha256": "e27327c2a7177b280e3587c45dc1a76e74fe43464d377f664f9ba204275fa3d1",
+      "sha256": "3def9e0efc59beeba2fed1023917cb57473b8edf7743c845f3589ed2f5f1bbd9",
       "group": "shared-research-helper",
       "kind": "experiment-library",
-      "status": "prepared source only; not executed",
+      "status": "SOURCE-ONLY independent document navigation increment; UNRUN",
       "runtimeQualification": false,
       "dependencies": [
         {
@@ -3513,11 +3513,30 @@
         "source checks queued; exact tool/public-artifact qualification pending",
         "optional helper source only; fake-child tests need a later source-check grant"
       ]
+    },
+    {
+      "path": "scripts/lib/communityDocuments.mjs",
+      "sha256": "1900690bfd57a6eb05ffc78e97714bacef161b7d4518fd643722ee734be516ff",
+      "group": "source-metadata-check",
+      "kind": "metadata-source-helper",
+      "status": "SOURCE-ONLY document-presentation increment; UNRUN",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./documentLinks.mjs",
+          "kind": "local",
+          "path": "scripts/lib/documentLinks.mjs"
+        }
+      ],
+      "requirements": [
+        "source/check fixtures need a later shared slot; no experiment execution required"
+      ]
     }
   ],
   "sourceFixtures": [
     "fixtures/documentLinks.test.mjs",
-    "fixtures/headlessChrome.test.mjs"
+    "fixtures/headlessChrome.test.mjs",
+    "fixtures/communityDocuments.test.mjs"
   ],
   "checksDoNotExecuteExperimentalTools": true,
   "publicHelperContracts": [
@@ -3540,5 +3559,5 @@
       "execution": "No import spawns a process; explicit browser invocation still requires its separate experimental grant."
     }
   ],
-  "sourcePreparationStatus": "Actual optional public entries prepared; all existing tools remain unexecuted/unqualified."
+  "sourcePreparationStatus": "SOURCE-ONLY independent-layout navigation/community increment; no tool or fixture executed"
 }

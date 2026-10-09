@@ -30,7 +30,13 @@
     ".attribution-release.json",
     ".github/workflows/attribution-check.yml",
     "tsconfig.fixtures.json",
-    "SOURCE_LINEAGE.json"
+    "SOURCE_LINEAGE.json",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "AGENTS.md",
+    "setup.md",
+    "deps/foss-earth-ci-1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e.tgz"
   ],
   "scripts": {
     "check:links": "node scripts/check-links.mjs",
@@ -39,13 +45,13 @@
     "check:implementation": "npm run check:source && npm run check:public-ports && npm run test:consumer",
     "check:attribution": "node node_modules/@foss-earth/ci/bin/attribution.mjs --repo . --refs-file build/repository-split/intended-publication-refs.json",
     "check:conformance": "node node_modules/@foss-earth/ci/bin/conformance.mjs --consumer . --trusted-release .attribution-release.json --output-root build/common-conformance",
-    "ci": "npm run check:conformance && npm run check:implementation",
+    "ci": "npm run check:conformance && npm run check:implementation && npm run check:attribution",
     "check:tools": "node scripts/check-tool-sources.mjs",
     "check:public-ports": "tsc --project tsconfig.fixtures.json",
     "test:consumer": "node scripts/check-public-consumer.mjs"
   },
   "devDependencies": {
-    "@foss-earth/ci": "0.1.0",
+    "@foss-earth/ci": "file:deps/foss-earth-ci-1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e.tgz",
     "@foss-earth/images": "0.1.0",
     "@foss-earth/engine": "0.1.0",
     "@foss-earth/renderer": "0.1.0",

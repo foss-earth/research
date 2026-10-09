@@ -2,15 +2,35 @@
 
 Earth research sources, hypotheses, experiment records and retained evidence. This repository is not an application runtime dependency.
 
-YOU CANNOT HAVE AI AS A CO-AUTHOR, OR YOUR CONTRIBUTIONS WILL BE REJECTED.
 
-This is a source-only migration candidate from Earth `90e23b3ee96f53ec5900afc5991a21fffa58649d`. No new check, experiment, device qualification, accepted document artifact or consumer adoption is claimed. Current Earth source, dirty work and ignored evidence remain intact. Original license/notices and original blob/content hashes are retained in SOURCE_PROVENANCE.json.
+This independent repository is part of the FOSS Earth split. Start with
+[checkout and release preparation](setup.md), [navigation](navigation.md),
+[owner routing](source-routing.json) and [migration state](migration.md).
+Current source and exact archive qualification are recorded in the release descriptor
+and SOURCE_RECEIPT.json. Consumer application adoption and remote publication
+remain separate gates; historical evidence retains its original scope.
 
-Start at [navigation](navigation.md), [owner routing](source-routing.json) and [migration/admission notes](migration.md). Component contracts are transfer plans in component-transfers.json; their owners are the sole writers. Local docs/research links use known routed destinations. Unpublished component contracts use immutable compatibility source references until their actual owner revisions are accepted.
+Original source identities and transformed-document hashes are retained in
+[SOURCE_PROVENANCE.json](SOURCE_PROVENANCE.json). Historical citations identify
+their original versions. They are references, never imports or build inputs.
+Cross-repository navigation uses public owner URLs so this checkout and a packed
+copy do not need an adjacent monolith. Those repositories' source publication
+remains a separate gate; no network link or fragment check is claimed here.
 
-The unchanged unconditional shared workflow calls `foss-earth/ci` at `9e046dd482e0229dc7c7b2d71b079d5905664656`, with archive SHA256 `450ede699f55f9b9c78146eadb73de7c6297e56553e7d7f9e5b164786a7beb24` and policy SHA256 `9ca88bf5861685e22e65e5f39fa65b05faaf9c218875fccbecce1b9f2dca5bd3`. The primary installs that exact component and runs its shared conformance/full intended-ref audit. Documentation-only changes follow the same metadata gate. Local scaffold files do not establish actual hosted admission rules.
+The unconditional metadata caller adopts common CI
+`1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e`, exact archive SHA256
+`bd884d925b8a7339b15fa61a477cf652bb73d41cc68addf50a050ab6cb151611`
+and policy1.0.1 SHA256
+`cdcda3c5d2968fe115e61627fca95ec744637de533750f1ee680c2a5ede49606`.
+Installed shared cases and the complete publication-ref audit are mandatory.
+Documentation-only changes use this same metadata gate. Earlier immutable
+receipts and artifacts remain retained with their original scope.
 
-Runnable sources are under scripts/. [Tool requirements](tools-manifest.json) distinguish adapted public imports, required host/data/native/browser contracts and explicit blocked legacy comparisons. Historical results/assets under benchmarks/ and validation/evidence/ remain unchanged. New output belongs in fresh owner build/ folders; no experiment is included in the metadata/source check command.
+Runnable experiment sources are under `scripts/`. The
+[tool inventory](tools-manifest.json) records public imports, host/data/native
+prerequisites and blocked historical comparisons. Research is not an application
+runtime dependency. Historical results and asset bytes under `benchmarks/` and
+`validation/evidence/` remain intact. Metadata/source checks execute no experiment.
 
 ## Retained source navigation
 
@@ -73,5 +93,12 @@ the retained development helpers with explicit declarations. These are not app
 runtime dependencies. Sky validation may use the installed public headless
 helper only after binding the exact archive and module digests; browser execution
 still needs a separately scoped experimental grant. See
-[tool-contracts.md](docs/tool-contracts.md). Declarations and the prepared public
-fixture remain UNRUN; no new artifact or runtime qualification is claimed.
+[tool-contracts.md](docs/tool-contracts.md). The current source increment and its installed fixture remain UNRUN; retained
+receipts keep their original scope and do not qualify this increment.
+
+## Project policies
+
+- [Code of conduct](CODE_OF_CONDUCT.md)
+- [Contributing](CONTRIBUTING.md)
+- [AGPL-3.0 license](LICENSE)
+- [Security](SECURITY.md)

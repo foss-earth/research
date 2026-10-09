@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "owner": "foss-earth/research",
   "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
-  "status": "source-prepared; no link/check/network verification executed",
+  "status": "source-only portable independent-owner navigation; network/fragment/publication qualification pending",
   "links": [
     {
       "document": "benchmarks/collision/README.md",
@@ -283,8 +283,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/validation/README.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../../docs/docs/validation/README.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/validation/README.md",
+      "priorPreparedTarget": "../../../docs/docs/validation/README.md"
     },
     {
       "document": "benchmarks/spherical-image-representation/INVENTORY.md",
@@ -1059,8 +1060,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/ui-layout.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../docs/docs/ui-layout.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md",
+      "priorPreparedTarget": "../../docs/docs/ui-layout.md"
     },
     {
       "document": "docs/camera-pivot-and-zoom-prompt.md",
@@ -1069,8 +1071,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/proposals/settings.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../docs/docs/proposals/settings.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/proposals/settings.md",
+      "priorPreparedTarget": "../../docs/docs/proposals/settings.md"
     },
     {
       "document": "docs/camera-pivot-and-zoom-prompt.md",
@@ -1785,8 +1788,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/proposals/settings.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../../../docs/docs/proposals/settings.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/proposals/settings.md",
+      "priorPreparedTarget": "../../../../docs/docs/proposals/settings.md"
     },
     {
       "document": "docs/proposals/research/weather-research.md",
@@ -1795,8 +1799,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/render-on-demand.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../../../docs/docs/render-on-demand.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/render-on-demand.md",
+      "priorPreparedTarget": "../../../../docs/docs/render-on-demand.md"
     },
     {
       "document": "docs/proposals/research/weather-research.md",
@@ -2001,8 +2006,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/validation/README.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../../docs/docs/validation/README.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/validation/README.md",
+      "priorPreparedTarget": "../../../docs/docs/validation/README.md"
     },
     {
       "document": "docs/webgl-panorama-performance-review.md",
@@ -2213,8 +2219,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/proposals/settings.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../docs/docs/proposals/settings.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/proposals/settings.md",
+      "priorPreparedTarget": "../../docs/docs/proposals/settings.md"
     },
     {
       "document": "docs/webgl-panorama-performance-review.md",
@@ -2223,8 +2230,9 @@
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "owner": "foss-earth/docs",
       "destinationPath": "docs/camera-motion.md",
-      "status": "routed-local-source-navigation; checks pending",
-      "newTarget": "../../docs/docs/camera-motion.md"
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/docs/camera-motion.md",
+      "priorPreparedTarget": "../../docs/docs/camera-motion.md"
     },
     {
       "document": "validation/evidence/mesh-inspector/2026-10-05/README.md",
@@ -2916,14 +2924,6 @@
       "sourceRevision": null,
       "owner": "foss-earth/research",
       "status": "authored source navigation; checks pending",
-      "newTarget": "../docs/README.md"
-    },
-    {
-      "document": "navigation.md",
-      "originalTarget": null,
-      "sourceRevision": null,
-      "owner": "foss-earth/research",
-      "status": "authored source navigation; checks pending",
       "newTarget": "tools-manifest.json"
     },
     {
@@ -2941,6 +2941,18 @@
       "owner": "foss-earth/research",
       "status": "authored source navigation; checks pending",
       "newTarget": "component-transfers.json"
+    }
+  ],
+  "priorAuthoredLinks": [
+    {
+      "document": "navigation.md",
+      "originalTarget": null,
+      "sourceRevision": null,
+      "owner": "foss-earth/docs",
+      "status": "routed-public-owner-navigation; publication availability pending",
+      "newTarget": "https://github.com/foss-earth/docs/blob/main/README.md",
+      "priorPreparedTarget": "../docs/README.md",
+      "destinationPath": "README.md"
     }
   ]
 }

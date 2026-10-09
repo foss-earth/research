@@ -2,7 +2,7 @@
 
 Execute this task when the user starts a fresh conversation with this file.
 Work in `/Users/felg/gh/foss-earth`. Read the current `AGENTS.md`,
-[docs/ui-layout.md](../../docs/docs/ui-layout.md) and [docs/proposals/settings.md](../../docs/docs/proposals/settings.md)
+[docs/ui-layout.md](https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md) and [docs/proposals/settings.md](https://github.com/foss-earth/docs/blob/main/docs/proposals/settings.md)
 first.
 
 There are two parts: a bug to fix first, then a feature that touches the same code.

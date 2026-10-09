@@ -1342,9 +1342,10 @@
       "responsibility": "documentation/research record",
       "sourceBlob": "af939d2961701cb98e181ee850a9d0c652379f07",
       "sourceSha256": "9d13109c3f622851312f8df82edcec3f719c6dee66298d794a527900eda05f2a",
-      "destinationSha256": "b613ee01efdc74a1bb304e9fbf118704d1a3a2783c45faea4234c118d9d552c4",
-      "bytes": 7356,
-      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers"
+      "destinationSha256": "09b3782779199e912a07860146cd825b3dcc09d7590389d996e35ff4fd7b2631",
+      "bytes": 7387,
+      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers",
+      "localLayoutTransform": "Original source SHA/blob retained; independent-owner navigation updated; source-only current increment UNRUN."
     },
     {
       "sourcePath": "benchmarks/spherical-image-representation/README.md",
@@ -2684,9 +2685,10 @@
       "responsibility": "documentation/research record",
       "sourceBlob": "094454648b4e44e61834815bcf8d590e3a185485",
       "sourceSha256": "c04cbdcfdae110f30358bead0a2bf9efa105d8f509de9cf0d67d91c219f0e15a",
-      "destinationSha256": "18ea229c4c634c4409ce8c132c41a8baa91aeb0df9ac4f07da18fa0954b135be",
-      "bytes": 4955,
-      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers"
+      "destinationSha256": "7ff2da54da4d0dadfb2fe66fe0976a44c82f464b5241cc34845350c95500a3f7",
+      "bytes": 5023,
+      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers",
+      "localLayoutTransform": "Original source SHA/blob retained; independent-owner navigation updated; source-only current increment UNRUN."
     },
     {
       "sourcePath": "docs/globe-comparison.md",
@@ -2992,9 +2994,10 @@
       "responsibility": "documentation/research record",
       "sourceBlob": "8c4bc7b659ca3de337cef95502ef23dcd99d2f5a",
       "sourceSha256": "f2abd3675a85a66428e5d16680d26706f8a6f589c29384509206b3ac73713d1c",
-      "destinationSha256": "a08d25fbccc16dd973b036343d807dac64cda60290b93d0d97273651dd2a2744",
-      "bytes": 128601,
-      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers"
+      "destinationSha256": "d6834aa63cbfa691101083b644e33a54c1571ffdb460e82dbbfe1f5e6af04190",
+      "bytes": 128657,
+      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers",
+      "localLayoutTransform": "Original source SHA/blob retained; independent-owner navigation updated; source-only current increment UNRUN."
     },
     {
       "sourcePath": "docs/proposals/wheel-roadmap-handoff.md",
@@ -3036,9 +3039,10 @@
       "responsibility": "documentation/research record",
       "sourceBlob": "13569387bfed5a03ff5f2efa8f7ba27e85c16e6c",
       "sourceSha256": "8d64da82b2e8007677b1bdee42e77b525bf5a43209a8fc8a3b248ba72e09ae87",
-      "destinationSha256": "592ef193418392694cc3e4cd5a3e3968f6605e36ed4983a3523409c95dca1522",
-      "bytes": 5703,
-      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers"
+      "destinationSha256": "d38fbea6b0572ea982ee84ac5f91b17266aa38f819ce36fe5ae507a0b5f89bcc",
+      "bytes": 5734,
+      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers",
+      "localLayoutTransform": "Original source SHA/blob retained; independent-owner navigation updated; source-only current increment UNRUN."
     },
     {
       "sourcePath": "docs/webgl-panorama-performance-review.md",
@@ -3047,9 +3051,10 @@
       "responsibility": "documentation/research record",
       "sourceBlob": "d47c55325be797b5207d5866aa39e61c2e5c2fb3",
       "sourceSha256": "47bd98d9b29e3f43e66724f7a510958bb20da001ec5c1c23842aae2d596d1b0c",
-      "destinationSha256": "62184693538dd703a2e62fe027337c23b29a50ce2310991e3924a2359d78fa16",
-      "bytes": 40042,
-      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers"
+      "destinationSha256": "521c3f248ce296bf83708026426cb95e9d3041ac9fb41d3648711bb61b1ea915",
+      "bytes": 40110,
+      "transform": "original prose/evidence retained; local navigation routes repaired with immutable original compatibility references and explicit unresolved local/host evidence blockers",
+      "localLayoutTransform": "Original source SHA/blob retained; independent-owner navigation updated; source-only current increment UNRUN."
     },
     {
       "sourcePath": "validation/evidence/diagnostics/vector-label-readiness-2026-10-05/acceptance.json",
@@ -4175,9 +4180,9 @@
     },
     {
       "destinationPath": "README.md",
-      "sha256": "94c849b734f45e157cdc7c3d1dfebd7f11339fbf04469957f116b680885477e4",
-      "bytes": 7599,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "2161425f96ba9afdc3a8a90b36b81f5d3d669a9776a32df99057e619adf50558",
+      "bytes": 8324,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "component-transfers.json",
@@ -4186,10 +4191,16 @@
       "origin": "source-preparation routing/manifests/fixtures/host adapters"
     },
     {
+      "destinationPath": "fixtures/communityDocuments.test.mjs",
+      "sha256": "c57dc79504b7dfceae724ba327045ec5883ba32da353d587d9fa8e537953ba56",
+      "bytes": 1485,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
+    },
+    {
       "destinationPath": "fixtures/documentLinks.test.mjs",
-      "sha256": "6b0ad765abca01ce892aad412cc036a2baf948e0d477cdb66f0a157bace9aaf1",
-      "bytes": 1404,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "03d66911a4887e4c9c54108ffd462dacc9362e02793f073749e2b84627eac8cb",
+      "bytes": 3018,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "fixtures/headlessChrome.test.mjs",
@@ -4205,33 +4216,33 @@
     },
     {
       "destinationPath": "link-routing.json",
-      "sha256": "c06879109d84e31f051c285eb0ebf27f80dfd15884ec7aed77c7a40a52d2e2fd",
-      "bytes": 159606,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "4f8f95d2f0144fe4c100476e4db3fe50797454f76327bed58ca7ae6eee5f1627",
+      "bytes": 160778,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "migration.md",
-      "sha256": "b692e3bfef25536ecb36ad7c0253d53555fc1220d7008072c92d826d8d1ce393",
-      "bytes": 8075,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "36b9490a095e97543989d2007091d9c82bb9f0f1d02ded15dfc0c9244edae5c4",
+      "bytes": 7624,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "navigation.md",
-      "sha256": "3bcd2861065b1a9e4ecb3bb40319a05701a16614ea4cfe27a54a135ad9f5a2b2",
-      "bytes": 2014,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "48b8b637105a792ed3dbdbdd00f02ed70be77cd92b7cad0537feca26c319e796",
+      "bytes": 4361,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "package.json",
-      "sha256": "ddfe8425d143b173983d865d09dc5a0b0fd2bbbba9c19f53ab5b00db19f86cc6",
-      "bytes": 1953,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "139f88a7699943e366dce61c659d54e4e3f186bd2282273812fac1fab53a608e",
+      "bytes": 2621,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "scripts/check-links.mjs",
-      "sha256": "c53550f2383dde0f28dd5ec05d7e79e1378b474c42ce1bf6fdf353613fbe31b4",
-      "bytes": 1985,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "68b54b584ab945b749058db77ebb55d0f7e2badfae2983b622a0d26379410b3b",
+      "bytes": 3771,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "scripts/check-tool-sources.mjs",
@@ -4246,6 +4257,12 @@
       "origin": "source-preparation routing/manifests/fixtures/host adapters"
     },
     {
+      "destinationPath": "scripts/lib/communityDocuments.mjs",
+      "sha256": "1900690bfd57a6eb05ffc78e97714bacef161b7d4518fd643722ee734be516ff",
+      "bytes": 1682,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
+    },
+    {
       "destinationPath": "scripts/lib/controlUploader.ts",
       "sha256": "6112ed0032396ee67bd8ead5fe1e350675882c3ea57054a8eb3e37f301f5e1c0",
       "bytes": 1095,
@@ -4253,9 +4270,9 @@
     },
     {
       "destinationPath": "scripts/lib/documentLinks.mjs",
-      "sha256": "e27327c2a7177b280e3587c45dc1a76e74fe43464d377f664f9ba204275fa3d1",
-      "bytes": 969,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "3def9e0efc59beeba2fed1023917cb57473b8edf7743c845f3589ed2f5f1bbd9",
+      "bytes": 2682,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "scripts/lib/pendingContracts.mjs",
@@ -4270,6 +4287,12 @@
       "origin": "source-preparation routing/manifests/fixtures/host adapters"
     },
     {
+      "destinationPath": "setup.md",
+      "sha256": "fc03d011bc9165d154b6e64433d1acf12aa39620b70cfa9fee57e1cfd182b4bc",
+      "bytes": 3886,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
+    },
+    {
       "destinationPath": "source-routing.json",
       "sha256": "9ed5f9a0ff700eb9a960a0fae21040983a684dc7322f9f06deb9d975fa93a096",
       "bytes": 117213,
@@ -4277,9 +4300,9 @@
     },
     {
       "destinationPath": "tools-manifest.json",
-      "sha256": "ac2d3200a3dfc148c32604a39fdf64a1b596a1d331a63a1d4c62fc1bc908de65",
-      "bytes": 133593,
-      "origin": "source-preparation routing/manifests/fixtures/host adapters"
+      "sha256": "e9124713fae890304749ca32957fe3058e4c89adf5a882a70649469bda14eb77",
+      "bytes": 135615,
+      "origin": "SOURCE-ONLY independent-owner navigation/community fixtures/archive-consumer preparation; no execution"
     },
     {
       "destinationPath": "tsconfig.fixtures.json",
@@ -4582,5 +4605,201 @@
       "Concurrent external path replacement is unqualified",
       "Installed public fixtures require exact new archive and granted slot"
     ]
+  },
+  "localLayoutSourceIncrement": {
+    "preparedAtUtc": "2026-10-09T22-32-19Z",
+    "owner": "foss-earth/research",
+    "checkout": "<workspace>/foss-earth/research",
+    "status": "SOURCE-ONLY UNRUN; no modules/checks/install/build/pack/Git mutation/audit/remote execution",
+    "priorReceiptPath": "build/source-only/local-layout-2026-10-09T22-23-46Z/SOURCE_RECEIPT.json.before",
+    "priorReceiptSha256": "3783df3dfc326b8ba02ecd608f21b9d7113556089a5839aca7016526029d1c45",
+    "priorProvenanceSha256": "5fcb45b2f9a024ad9da713ddc469b99f9e72bb22d21f0758796eb44d9069ed67",
+    "sourceChanges": [
+      {
+        "path": "README.md",
+        "sha256": "2161425f96ba9afdc3a8a90b36b81f5d3d669a9776a32df99057e619adf50558",
+        "bytes": 8324,
+        "before": {
+          "path": "README.md",
+          "sha256": "8c6a75bab9372e5f1a0672347fe871c4f342af7c917e78e03914d6aef7a13563",
+          "bytes": 8206
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "benchmarks/spherical-image-representation/INVENTORY.md",
+        "sha256": "09b3782779199e912a07860146cd825b3dcc09d7590389d996e35ff4fd7b2631",
+        "bytes": 7387,
+        "before": {
+          "path": "benchmarks/spherical-image-representation/INVENTORY.md",
+          "sha256": "b613ee01efdc74a1bb304e9fbf118704d1a3a2783c45faea4234c118d9d552c4",
+          "bytes": 7356
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "docs/camera-pivot-and-zoom-prompt.md",
+        "sha256": "7ff2da54da4d0dadfb2fe66fe0976a44c82f464b5241cc34845350c95500a3f7",
+        "bytes": 5023,
+        "before": {
+          "path": "docs/camera-pivot-and-zoom-prompt.md",
+          "sha256": "18ea229c4c634c4409ce8c132c41a8baa91aeb0df9ac4f07da18fa0954b135be",
+          "bytes": 4955
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "docs/proposals/research/weather-research.md",
+        "sha256": "d6834aa63cbfa691101083b644e33a54c1571ffdb460e82dbbfe1f5e6af04190",
+        "bytes": 128657,
+        "before": {
+          "path": "docs/proposals/research/weather-research.md",
+          "sha256": "a08d25fbccc16dd973b036343d807dac64cda60290b93d0d97273651dd2a2744",
+          "bytes": 128601
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "docs/validation/timing.md",
+        "sha256": "d38fbea6b0572ea982ee84ac5f91b17266aa38f819ce36fe5ae507a0b5f89bcc",
+        "bytes": 5734,
+        "before": {
+          "path": "docs/validation/timing.md",
+          "sha256": "592ef193418392694cc3e4cd5a3e3968f6605e36ed4983a3523409c95dca1522",
+          "bytes": 5703
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "docs/webgl-panorama-performance-review.md",
+        "sha256": "521c3f248ce296bf83708026426cb95e9d3041ac9fb41d3648711bb61b1ea915",
+        "bytes": 40110,
+        "before": {
+          "path": "docs/webgl-panorama-performance-review.md",
+          "sha256": "62184693538dd703a2e62fe027337c23b29a50ce2310991e3924a2359d78fa16",
+          "bytes": 40042
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "fixtures/communityDocuments.test.mjs",
+        "sha256": "c57dc79504b7dfceae724ba327045ec5883ba32da353d587d9fa8e537953ba56",
+        "bytes": 1485,
+        "before": null,
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "fixtures/documentLinks.test.mjs",
+        "sha256": "03d66911a4887e4c9c54108ffd462dacc9362e02793f073749e2b84627eac8cb",
+        "bytes": 3018,
+        "before": {
+          "path": "fixtures/documentLinks.test.mjs",
+          "sha256": "6b0ad765abca01ce892aad412cc036a2baf948e0d477cdb66f0a157bace9aaf1",
+          "bytes": 1404
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "link-routing.json",
+        "sha256": "4f8f95d2f0144fe4c100476e4db3fe50797454f76327bed58ca7ae6eee5f1627",
+        "bytes": 160778,
+        "before": {
+          "path": "link-routing.json",
+          "sha256": "c06879109d84e31f051c285eb0ebf27f80dfd15884ec7aed77c7a40a52d2e2fd",
+          "bytes": 159606
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "migration.md",
+        "sha256": "36b9490a095e97543989d2007091d9c82bb9f0f1d02ded15dfc0c9244edae5c4",
+        "bytes": 7624,
+        "before": {
+          "path": "migration.md",
+          "sha256": "b692e3bfef25536ecb36ad7c0253d53555fc1220d7008072c92d826d8d1ce393",
+          "bytes": 8075
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "navigation.md",
+        "sha256": "48b8b637105a792ed3dbdbdd00f02ed70be77cd92b7cad0537feca26c319e796",
+        "bytes": 4361,
+        "before": {
+          "path": "navigation.md",
+          "sha256": "3bcd2861065b1a9e4ecb3bb40319a05701a16614ea4cfe27a54a135ad9f5a2b2",
+          "bytes": 2014
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "package.json",
+        "sha256": "139f88a7699943e366dce61c659d54e4e3f186bd2282273812fac1fab53a608e",
+        "bytes": 2621,
+        "before": {
+          "path": "package.json",
+          "sha256": "fdc7d48c8b5a4fa24aecf5e51f93330a01e707ba27e6b27370bbaff77535f00d",
+          "bytes": 2576
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "scripts/check-links.mjs",
+        "sha256": "68b54b584ab945b749058db77ebb55d0f7e2badfae2983b622a0d26379410b3b",
+        "bytes": 3771,
+        "before": {
+          "path": "scripts/check-links.mjs",
+          "sha256": "c53550f2383dde0f28dd5ec05d7e79e1378b474c42ce1bf6fdf353613fbe31b4",
+          "bytes": 1985
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "scripts/lib/communityDocuments.mjs",
+        "sha256": "1900690bfd57a6eb05ffc78e97714bacef161b7d4518fd643722ee734be516ff",
+        "bytes": 1682,
+        "before": null,
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "scripts/lib/documentLinks.mjs",
+        "sha256": "3def9e0efc59beeba2fed1023917cb57473b8edf7743c845f3589ed2f5f1bbd9",
+        "bytes": 2682,
+        "before": {
+          "path": "scripts/lib/documentLinks.mjs",
+          "sha256": "e27327c2a7177b280e3587c45dc1a76e74fe43464d377f664f9ba204275fa3d1",
+          "bytes": 969
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "setup.md",
+        "sha256": "fc03d011bc9165d154b6e64433d1acf12aa39620b70cfa9fee57e1cfd182b4bc",
+        "bytes": 3886,
+        "before": null,
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      },
+      {
+        "path": "tools-manifest.json",
+        "sha256": "e9124713fae890304749ca32957fe3058e4c89adf5a882a70649469bda14eb77",
+        "bytes": 135615,
+        "before": {
+          "path": "tools-manifest.json",
+          "sha256": "a7b00958362c6f5f01669273881034c691bfe6f5137e6ae35341ec54dfacf37c",
+          "bytes": 134910
+        },
+        "status": "SOURCE-ONLY UNRUN independent-layout increment"
+      }
+    ],
+    "originalSourceAndLicenseIdentitiesPreserved": true,
+    "researchAssetsAndResultBytesChanged": false,
+    "runtimeHelpersChanged": false,
+    "publicNavigationAvailability": "pending coordinator publication; main URLs are navigation, not dependency/release pins",
+    "commonPolicyReplacement": "pending exact checked CI release; existing immutable common descriptor/caller untouched",
+    "communityDirectiveAcknowledged": true,
+    "childWriters": [],
+    "checksExecuted": [],
+    "candidateArchive": null,
+    "actualAppAdoption": null
   }
 }
