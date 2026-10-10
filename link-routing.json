@@ -1313,59 +1313,66 @@
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/input/flightInputManager.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/input/flightInputManager.ts",
+      "originalTarget": "0sfs/src/flight/input/flightInputManager.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/input/flightInputManager.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/input/applyFlightControls.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/input/applyFlightControls.ts",
+      "originalTarget": "0sfs/src/flight/input/applyFlightControls.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/input/applyFlightControls.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/createFlightSimApp.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/createFlightSimApp.ts",
+      "originalTarget": "0sfs/src/flight/createFlightSimApp.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/createFlightSimApp.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/hud/flightHud.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/hud/flightHud.ts",
+      "originalTarget": "0sfs/src/flight/hud/flightHud.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/hud/flightHud.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/remote/createPhoneControlSession.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/remote/createPhoneControlSession.ts",
+      "originalTarget": "0sfs/src/flight/remote/createPhoneControlSession.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/remote/createPhoneControlSession.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/remote/protocol.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/remote/protocol.ts",
+      "originalTarget": "0sfs/src/remote/protocol.ts",
+      "resolvedOriginalPath": "0sfs/src/remote/protocol.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
-      "originalTarget": "/Users/felg/gh/0sfs/src/flight/feedback/haptics.ts",
-      "resolvedOriginalPath": "/Users/felg/gh/0sfs/src/flight/feedback/haptics.ts",
+      "originalTarget": "0sfs/src/flight/feedback/haptics.ts",
+      "resolvedOriginalPath": "0sfs/src/flight/feedback/haptics.ts",
       "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
       "status": "unresolved original local/host evidence; retained original target and explicit blocker, no fabricated source URL",
-      "newTarget": "../../../navigation.md#retained-local-and-host-evidence"
+      "newTarget": "../../../navigation.md#retained-local-and-host-evidence",
+      "originalHostPathContext": "Historical 0SFS project-relative source identity; unresolved host-evidence status and original revision fields remain unchanged. The private original absolute target is retained separately."
     },
     {
       "document": "docs/proposals/research/gamepad-tools-research.md",
@@ -2954,5 +2961,9 @@
       "priorPreparedTarget": "../docs/README.md",
       "destinationPath": "README.md"
     }
-  ]
+  ],
+  "portablePublicationEvidence": {
+    "originalMetadataSha256": "4f8f95d2f0144fe4c100476e4db3fe50797454f76327bed58ca7ae6eee5f1627",
+    "scope": "Original host target locations are documentary organization/project-relative identities. Their prior unresolved-source status is preserved; no new source URL, revision qualification or host ownership is claimed."
+  }
 }
