@@ -98,7 +98,7 @@ receipts keep their original scope and do not qualify this increment.
 
 ## Project policies
 
-- [Code of conduct](CODE_OF_CONDUCT.md)
-- [Contributing](CONTRIBUTING.md)
+- [Code of conduct](https://github.com/foss-earth/.github/blob/main/CODE_OF_CONDUCT.md)
+- [Contributing](https://github.com/foss-earth/.github/blob/main/CONTRIBUTING.md)
 - [AGPL-3.0 license](LICENSE)
-- [Security](SECURITY.md)
+- [Security](https://github.com/foss-earth/.github/blob/main/SECURITY.md)

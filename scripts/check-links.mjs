@@ -52,6 +52,6 @@ for (const document of documents) for (const target of markdownTargets(readFileS
   if (result.owner !== manifest.owner) throw new Error("Current navigation requires an undeclared adjacent checkout: " + document + " -> " + target);
   ownerFile(result.path); currentLocal++;
 }
-const community = Object.fromEntries(["README.md", "AGENTS.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE", "SECURITY.md"].map(file => [file, readFileSync(ownerFile(file), "utf8")]));
+const community = Object.fromEntries(["README.md", "LICENSE"].map(file => [file, readFileSync(ownerFile(file), "utf8")]));
 communityDocuments(community);
 console.log(JSON.stringify({ check: "independent owner document routes, current Markdown and community navigation", documents: documents.length, local, immutableCompatibility: compatibility, publicNavigation, declaredPending, currentLocal, currentExternal, siblingCheckoutsRead: 0, networkChecked: false, anchorQualification: false, publicationReady: false }));

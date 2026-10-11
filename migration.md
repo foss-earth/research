@@ -44,7 +44,7 @@ and policy1.0.1 SHA256
 `cdcda3c5d2968fe115e61627fca95ec744637de533750f1ee680c2a5ede49606`.
 The exact external descriptor, tracked archive and26 executable seals establish
 the checked common input. Earlier immutable receipts remain retained. The
-contribution policy is in [Contributing](CONTRIBUTING.md#commit-attribution),
+contribution policy is in [Contributing](https://github.com/foss-earth/.github/blob/main/CONTRIBUTING.md#commit-attribution),
 with advertising and human accountability explained there. Actual installed
 shared cases and the complete intended publication heads/tags audit are required.
 No validator implementation is copied into this owner.
