@@ -46,11 +46,17 @@ Benchmarks:
 
 Documents and proposals:
 
+- [Shared AI frame generation and upscaling review](docs/ai-framegen-upscale.md) —
+  opt-in reconstruction for FOSS Earth apps, including the UMN tour; source
+  corrections, shared ownership and an experiment plan. The
+  [original report](docs/sources/ai-framegen-upscale-original.md) is preserved as
+  reviewed evidence, not an implementation guide.
 - [docs/360-images-virtual-tour-research.md](docs/360-images-virtual-tour-research.md)
 - [docs/360-images-virtual-tour-review.md](docs/360-images-virtual-tour-review.md)
 - [docs/camera-pivot-and-zoom-prompt.md](docs/camera-pivot-and-zoom-prompt.md)
 - [docs/globe-comparison.md](docs/globe-comparison.md)
 - [docs/performance-pass.md](docs/performance-pass.md)
+- [docs/proposals/navigation-anchors.md](docs/proposals/navigation-anchors.md)
 - [docs/proposals/raster-terrain-performance.md](docs/proposals/raster-terrain-performance.md)
 - [docs/proposals/research/gamepad-studio-agent-prompt.md](docs/proposals/research/gamepad-studio-agent-prompt.md)
 - [docs/proposals/research/gamepad-studio-research.md](docs/proposals/research/gamepad-studio-research.md)
