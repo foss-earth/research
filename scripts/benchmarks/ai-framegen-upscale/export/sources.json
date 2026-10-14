@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "description": "Pinned inputs of the ai-framegen-upscale export: upstream code (imported only from the verified copies in <work>/sources), model weights (terms recorded separately from code) and the corpus panoramas. fetch.py verifies and imports these; it never downloads. Hashes are sha256 of the file bytes; gitBlob is git's object id of the file at the pinned commit.",
+  "recorded": "2026-10-13, from the research-phase copies in build/ai-framegen-upscale/{upstream,weights} (retrieved 2026-10-12/13) and the corpus census build/ai-framegen-upscale/probes/replay/census_youvisit_backup.json",
+  "code": {
+    "practical-rife": {
+      "name": "Practical-RIFE",
+      "repository": "https://github.com/hzwer/Practical-RIFE",
+      "commit": "bbfd2ea90910789a860ea3e2b32a240cd577b75e",
+      "commitDate": "2026-08-27T16:13:42+08:00",
+      "tree": "4bf2513df3e0ef02afbc483dcd862786741d5ab9",
+      "license": {
+        "spdx": "MIT",
+        "file": "LICENSE",
+        "copyright": "Copyright (c) 2021 hzwer",
+        "notice": "MIT: the copyright and permission notice must accompany copies or substantial portions."
+      },
+      "workPath": "sources/Practical-RIFE",
+      "importFrom": ["upstream/Practical-RIFE"],
+      "copy": "git archive of the pinned commit from a clone (or a plain folder holding the listed files); __pycache__ and .DS_Store are never copied",
+      "files": [
+        { "path": "LICENSE", "sha256": "7932fb49341512b959b1744a6d9cbb39e5a1ec89da438a34d0454d5d8df9fecd", "bytes": 1062, "gitBlob": "d6c5c55f0fb8dd177b19e59993cf7da4ef010931", "use": "license text" },
+        { "path": "README.md", "sha256": "b695ac5d4a69c2f551512678883f8234d784c286d805ca546f4873cb465959b4", "bytes": 9583, "gitBlob": "2a697484325450203b63985346449926020f14fc", "use": "line 16: weight terms; line 19: 4.25.lite Google Drive link" },
+        { "path": "inference_video.py", "sha256": "72070ee3a8f0f6878179c41a754748440e3dbf1614d3c923ef52f3030f68854c", "bytes": 11008, "gitBlob": "1069fc15479e56fe056d4b83de3e778a43f2c756", "use": "not imported; reference for the input rule (lines 193-196 padding to multiples of 128, 205 RGB u8/255, crop top-left)" },
+        { "path": "model/warplayer.py", "sha256": "feb3af9475b724749b023d1913c3b135431eff13d0045b8efb472a699058385f", "bytes": 1209, "gitBlob": "f3fff44d6857e1a841092d5f017492255a52d4f5", "use": "imported: warp() (grid_sample bilinear, border, align_corners) used by IFNet" },
+        { "path": "model/loss.py", "sha256": "9e4679cd685a37add8d8bb4a963b9822df0e1d344b82d01f975fc3426c8fc77a", "bytes": 4641, "gitBlob": "72e5de6af050df7d55c2871a69637077970ddfb9", "use": "imported by RIFE_HDv3.py (EPE, SOBEL objects constructed by Model(); not used for inference)" },
+        { "path": "model/pytorch_msssim/__init__.py", "sha256": "220e4639c7dc0a4c22a50ade0f2fb51d0dac5d1fc9eedccfa4b25c16ae557425", "bytes": 6999, "gitBlob": "a4d30326188cf6afacf2fc84c7ae18efe14dae2e", "use": "part of the model package; not imported by the inference path" }
+      ],
+      "retrieval": "git clone https://github.com/hzwer/Practical-RIFE <import-root>/upstream/Practical-RIFE && git -C <import-root>/upstream/Practical-RIFE checkout bbfd2ea90910789a860ea3e2b32a240cd577b75e; then run fetch.py --import-from=<import-root>."
+    },
+    "rt4ksr": {
+      "name": "RT4KSR (Towards Real-Time 4K Image Super-Resolution, Zamfir, Conde, Timofte, CVPRW 2023)",
+      "repository": "https://github.com/eduardzamfir/RT4KSR",
+      "commit": "fd6627a48d789adf5d9aad29f02ab2a3d2a25296",
+      "commitDate": "2023-08-08T13:44:09+02:00",
+      "tree": "fb8d7fa0eb804e17cb21ad0d76f97ff67869c7c4",
+      "license": {
+        "spdx": "Apache-2.0",
+        "file": "LICENSE",
+        "addedIn": "fd6627a48d789adf5d9aad29f02ab2a3d2a25296 (2023-08-08, 'Create LICENSE')",
+        "notice": "Apache-2.0: keep the license text with redistributed copies; state changes made (our export uses a CPU port of test.py reparameterize() and a pruned live path with an equivalent LayerNorm; see candidates.py)."
+      },
+      "workPath": "sources/RT4KSR",
+      "importFrom": ["upstream/RT4KSR"],
+      "copy": "git archive of the pinned commit from a clone (or a plain folder holding the listed files); the repository's committed __pycache__/*.cpython-310.pyc and .DS_Store are never copied",
+      "files": [
+        { "path": "LICENSE", "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4", "bytes": 11357, "gitBlob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64", "use": "license text (Apache-2.0)" },
+        { "path": "README.md", "sha256": "c94b44327823128a4f5156f92ad1688555aad7b0150077f549e008d7b946dc50", "bytes": 5122, "gitBlob": "d865c78e4b39c32c4e581c0ca7b1354233526c2b", "use": "line 56/59: --is-train and --arch rt4ksr_rep test command; citation" },
+        { "path": "code/model/__init__.py", "sha256": "2465f23fc98359c09e984246940c39c840228be9f87983fe06737ff48265707d", "bytes": 24, "gitBlob": "d374bd8cc905faa6a0b12e6f28bc2b0832030c17", "use": "imported: model package (re-exports model.arch)" },
+        { "path": "code/model/arch.py", "sha256": "79b604979fb90611f5d484b4541c67f92974f83185fcbc95011a2865c41d0abf", "bytes": 3336, "gitBlob": "677eb46bb3ba2d50f8964999ea6609f866e16252", "use": "imported: rt4ksr_rep / RT4KSR_Rep architecture" },
+        { "path": "code/model/modules.py", "sha256": "fa6261eba7106886de050ac55668bff858a7b32e0a6c97f43633311569c324ee", "bytes": 6489, "gitBlob": "78f1cd50d83f2d1eb8517e80b426d2f71b2498b5", "use": "imported: blocks, LayerNorm2d (formula reproduced by PlainLayerNorm2d)" },
+        { "path": "code/model/utils/rep_utils.py", "sha256": "2c8ed76bdd8c17f436b52e7c3face4e6cf452dc7a1683bcf616c459f0de0cf4a", "bytes": 1476, "gitBlob": "c1f6b2d6c2125e4579f92f2c12ebf3fbebdc63ba", "use": "imported by modules.py" },
+        { "path": "code/test.py", "sha256": "23d61f4f7087ce45804c44a83f9a5421dd0a75866a9b680090787aa61b44443f", "bytes": 6077, "gitBlob": "cfa1623e190a3c6656cbe16df20d75c901d06093", "use": "not imported; reparameterize() (lines 32-83) is ported side-effect-free in candidates.clean_reparameterize; model construction mirrors lines 101-111" },
+        { "path": "code/utils/parser.py", "sha256": "2a0ad95bdac3397f2730bf586ba8fbc7c88db45f1f15f8e77b214e389c7c148d", "bytes": 1470, "gitBlob": "eaa1fe2b28909895417641e022a0f6225b3fe752", "use": "not imported; config defaults (lines 13-27) reproduced in candidates.rt4ksr_config" },
+        { "path": "code/checkpoints/rt4ksr_x2.pth", "sha256": "9ec7500092848a480e058a9c703e4b2254bc0cc97928c076bba272177752124f", "bytes": 1699164, "gitBlob": "16df41f2d068c05d86761221c18fd51c6a30f112", "use": "the x2 checkpoint as committed (same bytes as weights.rt4ksr-x2)" }
+      ],
+      "retrieval": "git clone https://github.com/eduardzamfir/RT4KSR <import-root>/upstream/RT4KSR && git -C <import-root>/upstream/RT4KSR checkout fd6627a48d789adf5d9aad29f02ab2a3d2a25296; then run fetch.py --import-from=<import-root>."
+    }
+  },
+  "weights": {
+    "rife-4.25-lite": {
+      "candidate": "rife-4.25-lite",
+      "file": "RIFEv4.25lite_1018.zip",
+      "sha256": "e84366c23e0eb1a637a55aad2e4f3442ec2bf4c388043b4aabbf590be289e6e8",
+      "bytes": 22765148,
+      "origin": {
+        "listedIn": "Practical-RIFE README.md line 19 at commit bbfd2ea90910789a860ea3e2b32a240cd577b75e: '[4.25.lite - 2024.10.20](https://drive.google.com/file/d/1zlKblGuKNatulJNFf5jdB-emp9AqGK05/view?usp=share_link)'",
+        "url": "https://drive.google.com/file/d/1zlKblGuKNatulJNFf5jdB-emp9AqGK05/view?usp=share_link",
+        "googleDriveFileId": "1zlKblGuKNatulJNFf5jdB-emp9AqGK05",
+        "downloadUrl": "https://drive.google.com/uc?export=download&id=1zlKblGuKNatulJNFf5jdB-emp9AqGK05 (HTTP 303 to drive.usercontent.google.com, then 200 with content-disposition filename RIFEv4.25lite_1018.zip)",
+        "serverLastModified": "Sun, 20 Oct 2024 09:13:25 GMT",
+        "serverCrc32c": "hCcRvQ== (x-goog-hash, base64; matched by the research-phase probe)",
+        "retrieved": "2026-10-13T04:13:08Z",
+        "retrievalRecord": "build/ai-framegen-upscale/weights/rife-4.25-lite/download-headers.txt (research-phase scratch)"
+      },
+      "terms": {
+        "license": "MIT, by reference: Practical-RIFE README.md line 16 at the pinned commit says 'The content of these links is under the same MIT license as this project.'",
+        "licenseText": "code.practical-rife LICENSE (Copyright (c) 2021 hzwer)",
+        "trainingData": "Not stated in the pinned README or the archive; unknown.",
+        "notices": "The archive also contains model code (train_log/*.py), a stale train_log/__pycache__ (cpython-311 .pyc from 2024-09-19), train_log/.DS_Store and __MACOSX/ resource forks; none of these extras is extracted or run."
+      },
+      "workPath": "sources/rife-4.25-lite",
+      "importFrom": ["weights/rife-4.25-lite/RIFEv4.25lite_1018.zip"],
+      "extractTo": "sources/rife-4.25-lite/extracted",
+      "extracted": [
+        { "path": "train_log/IFNet_HDv3.py", "sha256": "ea5eb5f05a391a2ac26402b16acf9fdb91968f299373f9be24aa4a8c5483d3d3", "bytes": 6433, "use": "imported: IFNet (the network that is exported)" },
+        { "path": "train_log/RIFE_HDv3.py", "sha256": "7b7b1ed62b3d14ab5a130b397f928d6c4d7f95edb03def1190d2a655a20ad886", "bytes": 3102, "use": "imported: Model (official inference() is the PyTorch reference; load_model rank=-1 conversion reproduced with weights_only=True)" },
+        { "path": "train_log/refine.py", "sha256": "0c5698b4a05b9f6ab551740575c1c35e248e5b1829bab6445186081ebe15f032", "bytes": 3510, "use": "extracted for completeness; not imported" },
+        { "path": "train_log/flownet.pkl", "sha256": "81cdba223fe72a120130cc8552e5d2ecac824259d406f0c15323b3decf96b8b1", "bytes": 24467405, "use": "weights: IFNet state dict with 'module.' prefix (plus unused teacher/caltime entries), loaded with torch.load(weights_only=True)" }
+      ],
+      "retrieval": "Open https://drive.google.com/file/d/1zlKblGuKNatulJNFf5jdB-emp9AqGK05/view (the '4.25.lite - 2024.10.20' link on README.md line 19 of Practical-RIFE at commit bbfd2ea9), download RIFEv4.25lite_1018.zip (22,765,148 bytes, sha256 e84366c23e0eb1a637a55aad2e4f3442ec2bf4c388043b4aabbf590be289e6e8) and save it as <import-root>/weights/rife-4.25-lite/RIFEv4.25lite_1018.zip; then run fetch.py --import-from=<import-root>."
+    },
+    "rt4ksr-x2": {
+      "candidate": "rt4ksr-x2",
+      "file": "rt4ksr_x2.pth",
+      "sha256": "9ec7500092848a480e058a9c703e4b2254bc0cc97928c076bba272177752124f",
+      "bytes": 1699164,
+      "origin": {
+        "repository": "https://github.com/eduardzamfir/RT4KSR",
+        "path": "code/checkpoints/rt4ksr_x2.pth",
+        "gitBlob": "16df41f2d068c05d86761221c18fd51c6a30f112",
+        "addedIn": "f8b80dd3006788e5f78e5b75bb438403e0173010 (2023-04-20, 'updated README'); unchanged at the pinned commit fd6627a48d789adf5d9aad29f02ab2a3d2a25296",
+        "retrieved": "2026-10-12 (git clone of the repository; research-phase copy build/ai-framegen-upscale/weights/rt4ksr/rt4ksr_x2.pth has the same bytes)"
+      },
+      "terms": {
+        "license": "Apache-2.0 as part of the repository content: the checkpoint is a committed file of the repository whose LICENSE (added 2023-08-08) is Apache-2.0. The repository states no separate model or weight terms.",
+        "licenseText": "code.rt4ksr LICENSE",
+        "trainingData": "Not stated in the pinned README (it describes testing on standard SR benchmarks and the NTIRE 2023 Real-Time 4K SR challenge); unknown.",
+        "notices": "Checkpoint was committed (2023-04-20) before the LICENSE file (2023-08-08); the pinned commit has both. Cite Zamfir, Conde, Timofte, 'Towards Real-Time 4K Image Super-Resolution', CVPRW 2023 (README citation)."
+      },
+      "workPath": "sources/rt4ksr-x2/rt4ksr_x2.pth",
+      "importFrom": ["weights/rt4ksr/rt4ksr_x2.pth", "upstream/RT4KSR/code/checkpoints/rt4ksr_x2.pth"],
+      "retrieval": "The file is in the RT4KSR repository at code/checkpoints/rt4ksr_x2.pth (commit fd6627a48d789adf5d9aad29f02ab2a3d2a25296); clone it as described in code.rt4ksr.retrieval, or save that file as <import-root>/weights/rt4ksr/rt4ksr_x2.pth; then run fetch.py --import-from=<import-root>."
+    }
+  },
+  "corpusSource": {
+    "description": "The spherical-image-representation benchmark corpus (scripts/benchmarks/spherical-image-representation/lib/source.mjs CORPUS): six UMN tour panoramas as served by YouVisit, 6144x3072 equirectangular baseline JPEG, 4:2:0, no ICC profile.",
+    "snapshot": "UMN-VR YouVisit backup snapshot-2026-09-27 (media/panoramas/<panorama>/6144.jpg; manifest.json lists URL, bytes, sha256, Last-Modified)",
+    "rootArgument": "--corpus-root=<folder holding <panorama>/6144.jpg>, else $FOSS_EARTH_RESEARCH_CORPUS, else build/datasets/panoramas-requires-explicit-rights-receipt",
+    "rights": "Follows the spherical benchmark's rules: the source images are read from the given root and never copied into the repository; derived images (crops, renders) stay in build/; only numbers and hashes are committed.",
+    "census": "build/ai-framegen-upscale/probes/replay/census_youvisit_backup.json (research phase): all six hashes match the benchmark's"
+  },
+  "corpus": {
+    "northrop-mall": { "panorama": "363729", "file": "6144.jpg", "sha256": "590025b7ad3a45a0071ed045bdd0493bdc7921466592936409134b7b96b9c3f3", "bytes": 3830737, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/363729/6144.jpg", "lastModified": "Fri, 28 Aug 2026 17:46:09 GMT", "content": "outdoor: sky with the sun, lawn, trees, buildings on the horizon" },
+    "walter-study": { "panorama": "365409", "file": "6144.jpg", "sha256": "4e7d6c897347e1f503b2a830c068424c9a12aa8210a7e04f659a5b0c3ac0cd69", "bytes": 3877645, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/365409/6144.jpg", "lastModified": "Fri, 28 Aug 2026 18:21:53 GMT", "content": "indoor: ornate painted ceiling at the zenith, bookshelves, patterned carpet" },
+    "bookstore": { "panorama": "365382", "file": "6144.jpg", "sha256": "55d2b1ea46e27f251422859051ce98662e7d963269bc56d6d4de821a7f42bfdd", "bytes": 1231639, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/365382/6144.jpg", "lastModified": "Fri, 28 Aug 2026 18:21:46 GMT", "content": "indoor: shop signage and text, smooth ceiling and tiled floor" },
+    "gardens": { "panorama": "363756", "file": "6144.jpg", "sha256": "d6bd0e91c3b7ec6035d66f098a8c6613d40c1f4c3d4a7f3ad628821b35b65b86", "bytes": 3355873, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/363756/6144.jpg", "lastModified": "Fri, 28 Aug 2026 17:46:12 GMT", "content": "outdoor: flowers and foliage, clouds, brick paving" },
+    "stadium": { "panorama": "363732", "file": "6144.jpg", "sha256": "a31497e574e6ccef068383edc1314505459a8f1a6e5b51fcd1d14c46b295afb1", "bytes": 3070297, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/363732/6144.jpg", "lastModified": "Fri, 28 Aug 2026 17:46:10 GMT", "content": "outdoor: field lines, lettering, stands; large smooth sky" },
+    "superblock": { "panorama": "363760", "file": "6144.jpg", "sha256": "f38f88d27fed067ab9fc7a8db065397369185dcd789ed81667a6cc22eb50dca0", "bytes": 4623586, "width": 6144, "height": 3072, "url": "https://www.youvisit.com/media/80239/panoramas/363760/6144.jpg", "lastModified": "Fri, 28 Aug 2026 17:46:14 GMT", "content": "outdoor: tree canopy overhead, so fine detail at the zenith" }
+  }
+}

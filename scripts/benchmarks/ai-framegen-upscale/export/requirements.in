@@ -1,0 +1,25 @@
+# Python dependencies of the ai-framegen-upscale export/reference/quality scripts (Python 3.11).
+# Direct dependencies only, pinned to the versions used in the research phase
+# (build/ai-framegen-upscale/env/requirements.lock). requirements.lock is compiled from this file with
+# hashes (command in its header). Commands used on 2026-10-13 (uv 0.12.17, run with paths relative to
+# research/ through `uv --directory <research>`; the uv cache is the research-phase one, so no network):
+#   UV_CACHE_DIR=build/ai-framegen-upscale/cache/uv uv --directory <research> pip compile --offline \
+#     --generate-hashes --python-version 3.11 --python-platform aarch64-apple-darwin \
+#     scripts/benchmarks/ai-framegen-upscale/export/requirements.in \
+#     -o scripts/benchmarks/ai-framegen-upscale/export/requirements.lock
+#   UV_CACHE_DIR=... uv --directory <research> venv --offline --python 3.11 --no-python-downloads \
+#     build/benchmarks/ai-framegen-upscale/work/venv          (CPython 3.11.16, Homebrew)
+#   UV_CACHE_DIR=... uv --directory <research> pip sync --offline --require-hashes \
+#     --python build/benchmarks/ai-framegen-upscale/work/venv/bin/python \
+#     scripts/benchmarks/ai-framegen-upscale/export/requirements.lock
+# Without the cache, drop --offline (PyPI). Every script records the installed versions and the lock
+# sha256 (common.environment()) and flags any mismatch.
+torch==2.11.0
+torchvision==0.26.0  # imported by Practical-RIFE model/loss.py (VGG perceptual loss), never run
+numpy==2.4.6
+pillow==12.3.0
+onnx==1.23.2
+onnxruntime==1.23.2
+onnxscript==0.7.2  # torch.onnx dynamo exporter
+onnxconverter-common==1.16.0  # fp16 conversion
+scikit-image==0.26.0  # quality.py (SSIM)

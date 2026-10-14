@@ -1,0 +1,782 @@
+{
+  "schema": 1,
+  "status": "Completed 720p fp32 profile from a stopped, incomplete overall quality screen",
+  "overallScreenComplete": false,
+  "profileComplete": true,
+  "candidate": "rife-4.25-lite",
+  "profile": "720p",
+  "precision": "fp32",
+  "source": {
+    "path": "build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+    "sha256": "1e761662c1c017e023324f2733fddc81d82886f9bc2b2773b1551c8170028fe4",
+    "bytes": 33446
+  },
+  "scripts": [
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+      "sha256": "9aa62b3ec5372503cc6f95b96816d05f354bc1dc136d7ea7b35b6020ab2801d1"
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+      "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+      "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+    }
+  ],
+  "runtime": {
+    "onnxruntime": "1.23.2",
+    "provider": "CPUExecutionProvider",
+    "intraOpThreads": 4,
+    "graphOptimizationLevel": "ORT_ENABLE_ALL (default)",
+    "torch": "2.11.0",
+    "torchThreads": 4
+  },
+  "replay": {
+    "root": "build/benchmarks/ai-framegen-upscale/work/replay",
+    "sequences": [
+      {
+        "sequence": "cut",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/cut/sequence.json",
+        "sha256": "f8b68639d07ea4c711695ebd4918236d7449be1a6dde89b6176cb36e8fe077de",
+        "sources": [
+          {
+            "name": "northrop-mall",
+            "panorama": "363729",
+            "sha256": "590025b7ad3a45a0071ed045bdd0493bdc7921466592936409134b7b96b9c3f3",
+            "frames": [
+              0,
+              29
+            ]
+          },
+          {
+            "name": "superblock",
+            "panorama": "363760",
+            "sha256": "f38f88d27fed067ab9fc7a8db065397369185dcd789ed81667a6cc22eb50dca0",
+            "frames": [
+              30,
+              60
+            ]
+          }
+        ],
+        "description": "northrop-mall -> superblock (from frame 30); yaw 30 deg/s; start yaw 60, pitch 0",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": [
+          30
+        ]
+      },
+      {
+        "sequence": "diagonal",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/diagonal/sequence.json",
+        "sha256": "e0eae09561fb13e722184a1b8cacb46800def515c812628b70c09d2695f52937",
+        "sources": [
+          {
+            "name": "bookstore",
+            "panorama": "365382",
+            "sha256": "55d2b1ea46e27f251422859051ce98662e7d963269bc56d6d4de821a7f42bfdd",
+            "frames": [
+              0,
+              60
+            ]
+          }
+        ],
+        "description": "bookstore; yaw 60 deg/s, pitch 20 deg/s; start yaw -10, pitch -5",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": []
+      },
+      {
+        "sequence": "inertia",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/inertia/sequence.json",
+        "sha256": "8e63516957ed1651c83affdfe7d3fdcac30530aa7c69fa4a5462b16885724a66",
+        "sources": [
+          {
+            "name": "gardens",
+            "panorama": "363756",
+            "sha256": "d6bd0e91c3b7ec6035d66f098a8c6613d40c1f4c3d4a7f3ad628821b35b65b86",
+            "frames": [
+              0,
+              60
+            ]
+          }
+        ],
+        "description": "gardens; yaw rate 180 deg/s decelerating linearly to 0; start yaw -110, pitch -5",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": []
+      },
+      {
+        "sequence": "pan-fast",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/pan-fast/sequence.json",
+        "sha256": "c20a000bde42e88e393f437d51ed190921bfd65a94423418959a2e081c453d61",
+        "sources": [
+          {
+            "name": "stadium",
+            "panorama": "363732",
+            "sha256": "a31497e574e6ccef068383edc1314505459a8f1a6e5b51fcd1d14c46b295afb1",
+            "frames": [
+              0,
+              60
+            ]
+          }
+        ],
+        "description": "stadium; yaw 120 deg/s; start yaw 150, pitch 0",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": []
+      },
+      {
+        "sequence": "pan-slow",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/pan-slow/sequence.json",
+        "sha256": "19463c6bbe9d1b6b3b86c757ae8ad62076849e705a4194b1a56e4b74123ced61",
+        "sources": [
+          {
+            "name": "northrop-mall",
+            "panorama": "363729",
+            "sha256": "590025b7ad3a45a0071ed045bdd0493bdc7921466592936409134b7b96b9c3f3",
+            "frames": [
+              0,
+              60
+            ]
+          }
+        ],
+        "description": "northrop-mall; yaw 30 deg/s; start yaw -7.5, pitch 0",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": []
+      },
+      {
+        "sequence": "zoom",
+        "path": "build/benchmarks/ai-framegen-upscale/work/replay/zoom/sequence.json",
+        "sha256": "ecb587101a257c2c8e88419ccdf5b75904a3e027aa1a157d22532d296ec9012a",
+        "sources": [
+          {
+            "name": "walter-study",
+            "panorama": "365409",
+            "sha256": "4e7d6c897347e1f503b2a830c068424c9a12aa8210a7e04f659a5b0c3ac0cd69",
+            "frames": [
+              0,
+              60
+            ]
+          }
+        ],
+        "description": "walter-study; vertical FOV 90 -> 40 deg, cosine ease-in-out; start yaw 45, pitch 5",
+        "replayScript": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+          "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+        },
+        "cuts": []
+      }
+    ]
+  },
+  "model": {
+    "candidate": "rife-4.25-lite",
+    "profile": "720p",
+    "precision": "fp32",
+    "file": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/720p/fp32.onnx",
+    "sha256": "9fec2b658794ecbf8f278d1dfd360fada11e3df6429bb211ff250d94e2bf8c24",
+    "bytes": 30422300,
+    "inputs": [
+      "img0",
+      "img1"
+    ],
+    "inputDims": [
+      1,
+      3,
+      768,
+      1280
+    ],
+    "output": "output",
+    "trial": false,
+    "nonFiniteOutputValues": 0,
+    "zeroProbeNonFiniteOutputValues": 0,
+    "receipt": {
+      "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/720p/fp32.receipt.json",
+      "sha256": "99f068b5b05f4b640f13be16f0e19f0d60117cfee4b7910eb00b1d6c75f28efa",
+      "exporter": "torch.onnx.export TorchScript opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant ts17",
+      "opset": 17,
+      "nodeCount": 332,
+      "gateA": {
+        "maxAbs": 0.0008686184883117676,
+        "meanAbs": 0.000003873797669449222,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 0.00001
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.011,
+        "seconds": 1.164,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0004741847515106201,
+            "meanAbs": 0.000002756456361078529,
+            "psnr": 104.36053098786385,
+            "unclamped": {
+              "maxAbs": 0.0004741847515106201,
+              "meanAbs": 0.000002756456361078529
+            },
+            "outputRange": [
+              0,
+              1
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1,
+              "max": 1
+            },
+            "runSeconds": 0.257
+          },
+          "natural": {
+            "maxAbs": 0.0008686184883117676,
+            "meanAbs": 0.000003873797669449222,
+            "psnr": 97.90325137935824,
+            "unclamped": {
+              "maxAbs": 0.0008686184883117676,
+              "meanAbs": 0.000003873797669449222
+            },
+            "outputRange": [
+              0,
+              1
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1,
+              "max": 1
+            },
+            "runSeconds": 0.277
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0002963542938232422,
+            "meanAbs": 0.000002915656499074733
+          },
+          "natural": {
+            "maxAbs": 0.0006872415542602539,
+            "meanAbs": 0.0000037107668742368613
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "fp16": null
+    },
+    "status": "run",
+    "seconds": 287.9,
+    "cpuModelMs": {
+      "median": 234.83,
+      "runs": 722,
+      "note": "ORT CPU wall time, informational only (not a gate G input)"
+    }
+  },
+  "fg": {
+    "30->60": {
+      "k": 4,
+      "sequences": {
+        "cut": {
+          "pairs": 53,
+          "medians": {
+            "psnr_model": 35.332646,
+            "psnr_repeat": 17.615722,
+            "psnr_blend": 19.388035,
+            "ssim_model": 0.973536,
+            "ssim_repeat": 0.379399,
+            "ssim_blend": 0.41855
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 53,
+            "psnr>blend": 53,
+            "ssim>repeat": 53,
+            "ssim>blend": 53
+          },
+          "pass": true
+        },
+        "diagonal": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 40.173916,
+            "psnr_repeat": 18.160173,
+            "psnr_blend": 20.437376,
+            "ssim_model": 0.986158,
+            "ssim_repeat": 0.650689,
+            "ssim_blend": 0.662268
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "inertia": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 25.790718,
+            "psnr_repeat": 13.367066,
+            "psnr_blend": 15.026739,
+            "ssim_model": 0.893849,
+            "ssim_repeat": 0.201769,
+            "ssim_blend": 0.223741
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "pan-fast": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 25.813181,
+            "psnr_repeat": 16.620741,
+            "psnr_blend": 18.334612,
+            "ssim_model": 0.852874,
+            "ssim_repeat": 0.382553,
+            "ssim_blend": 0.419197
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "pan-slow": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 30.230301,
+            "psnr_repeat": 15.207093,
+            "psnr_blend": 17.010004,
+            "ssim_model": 0.959925,
+            "ssim_repeat": 0.281339,
+            "ssim_blend": 0.313752
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "zoom": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 28.310428,
+            "psnr_repeat": 15.515975,
+            "psnr_blend": 17.55715,
+            "ssim_model": 0.900827,
+            "ssim_repeat": 0.415685,
+            "ssim_blend": 0.439762
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        }
+      },
+      "pooled": {
+        "pairs": 338,
+        "medians": {
+          "psnr_model": 29.956606,
+          "psnr_repeat": 15.918578,
+          "psnr_blend": 17.994771,
+          "ssim_model": 0.938596,
+          "ssim_repeat": 0.378356,
+          "ssim_blend": 0.410764
+        },
+        "checks": {
+          "psnr>repeat": true,
+          "psnr>blend": true,
+          "ssim>repeat": true,
+          "ssim>blend": true
+        },
+        "pairWins": {
+          "psnr>repeat": 338,
+          "psnr>blend": 338,
+          "ssim>repeat": 338,
+          "ssim>blend": 338
+        },
+        "pass": true
+      },
+      "verdict": "pass",
+      "failingSequences": [],
+      "cutPairs": {
+        "medians": {
+          "psnr_model": 12.260832,
+          "psnr_repeat": 12.58474,
+          "psnr_blend": 13.963448,
+          "ssim_model": 0.239512,
+          "ssim_repeat": 0.252346,
+          "ssim_blend": 0.24282
+        },
+        "pairs": [
+          {
+            "sequence": "cut",
+            "k": 4,
+            "first": 26,
+            "last": 30,
+            "truth": 28,
+            "cut": true,
+            "psnr_model": 11.56259,
+            "ssim_model": 0.234796,
+            "psnr_repeat": 15.900814,
+            "ssim_repeat": 0.37928,
+            "psnr_blend": 13.737661,
+            "ssim_blend": 0.237415
+          },
+          {
+            "sequence": "cut",
+            "k": 4,
+            "first": 27,
+            "last": 31,
+            "truth": 29,
+            "cut": true,
+            "psnr_model": 11.95158,
+            "ssim_model": 0.244153,
+            "psnr_repeat": 15.894535,
+            "ssim_repeat": 0.379059,
+            "psnr_blend": 13.736978,
+            "ssim_blend": 0.23732
+          },
+          {
+            "sequence": "cut",
+            "k": 4,
+            "first": 28,
+            "last": 32,
+            "truth": 30,
+            "cut": true,
+            "psnr_model": 12.803757,
+            "ssim_model": 0.242515,
+            "psnr_repeat": 9.27211,
+            "ssim_repeat": 0.125632,
+            "psnr_blend": 14.189234,
+            "ssim_blend": 0.248369
+          },
+          {
+            "sequence": "cut",
+            "k": 4,
+            "first": 29,
+            "last": 33,
+            "truth": 31,
+            "cut": true,
+            "psnr_model": 12.570084,
+            "ssim_model": 0.236509,
+            "psnr_repeat": 9.274945,
+            "ssim_repeat": 0.125493,
+            "psnr_blend": 14.191908,
+            "ssim_blend": 0.248224
+          }
+        ]
+      }
+    },
+    "60->120": {
+      "k": 2,
+      "sequences": {
+        "cut": {
+          "pairs": 57,
+          "medians": {
+            "psnr_model": 36.356244,
+            "psnr_repeat": 19.448023,
+            "psnr_blend": 21.535721,
+            "ssim_model": 0.978566,
+            "ssim_repeat": 0.467269,
+            "ssim_blend": 0.526102
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 57,
+            "psnr>blend": 57,
+            "ssim>repeat": 57,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "diagonal": {
+          "pairs": 59,
+          "medians": {
+            "psnr_model": 42.080489,
+            "psnr_repeat": 20.662783,
+            "psnr_blend": 23.24316,
+            "ssim_model": 0.989821,
+            "ssim_repeat": 0.701212,
+            "ssim_blend": 0.720798
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 59,
+            "psnr>blend": 59,
+            "ssim>repeat": 59,
+            "ssim>blend": 59
+          },
+          "pass": true
+        },
+        "inertia": {
+          "pairs": 59,
+          "medians": {
+            "psnr_model": 32.204868,
+            "psnr_repeat": 14.410244,
+            "psnr_blend": 16.109541,
+            "ssim_model": 0.975358,
+            "ssim_repeat": 0.235695,
+            "ssim_blend": 0.262546
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 59,
+            "psnr>blend": 57,
+            "ssim>repeat": 59,
+            "ssim>blend": 57
+          },
+          "pass": true
+        },
+        "pan-fast": {
+          "pairs": 59,
+          "medians": {
+            "psnr_model": 30.005092,
+            "psnr_repeat": 18.237694,
+            "psnr_blend": 20.205011,
+            "ssim_model": 0.925203,
+            "ssim_repeat": 0.458902,
+            "ssim_blend": 0.505189
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 59,
+            "psnr>blend": 59,
+            "ssim>repeat": 59,
+            "ssim>blend": 59
+          },
+          "pass": true
+        },
+        "pan-slow": {
+          "pairs": 59,
+          "medians": {
+            "psnr_model": 31.565258,
+            "psnr_repeat": 16.886239,
+            "psnr_blend": 18.878309,
+            "ssim_model": 0.967896,
+            "ssim_repeat": 0.387837,
+            "ssim_blend": 0.44427
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 59,
+            "psnr>blend": 59,
+            "ssim>repeat": 59,
+            "ssim>blend": 59
+          },
+          "pass": true
+        },
+        "zoom": {
+          "pairs": 59,
+          "medians": {
+            "psnr_model": 32.999594,
+            "psnr_repeat": 17.556746,
+            "psnr_blend": 19.827547,
+            "ssim_model": 0.960938,
+            "ssim_repeat": 0.481896,
+            "ssim_blend": 0.512235
+          },
+          "checks": {
+            "psnr>repeat": true,
+            "psnr>blend": true,
+            "ssim>repeat": true,
+            "ssim>blend": true
+          },
+          "pairWins": {
+            "psnr>repeat": 59,
+            "psnr>blend": 58,
+            "ssim>repeat": 59,
+            "ssim>blend": 58
+          },
+          "pass": true
+        }
+      },
+      "pooled": {
+        "pairs": 352,
+        "medians": {
+          "psnr_model": 32.401729,
+          "psnr_repeat": 17.924563,
+          "psnr_blend": 19.871248,
+          "ssim_model": 0.968286,
+          "ssim_repeat": 0.457469,
+          "ssim_blend": 0.503368
+        },
+        "checks": {
+          "psnr>repeat": true,
+          "psnr>blend": true,
+          "ssim>repeat": true,
+          "ssim>blend": true
+        },
+        "pairWins": {
+          "psnr>repeat": 352,
+          "psnr>blend": 349,
+          "ssim>repeat": 352,
+          "ssim>blend": 349
+        },
+        "pass": true
+      },
+      "verdict": "pass",
+      "failingSequences": [],
+      "cutPairs": {
+        "medians": {
+          "psnr_model": 12.293685,
+          "psnr_repeat": 13.416869,
+          "psnr_blend": 14.356546,
+          "ssim_model": 0.239263,
+          "ssim_repeat": 0.292299,
+          "ssim_blend": 0.290441
+        },
+        "pairs": [
+          {
+            "sequence": "cut",
+            "k": 2,
+            "first": 28,
+            "last": 30,
+            "truth": 29,
+            "cut": true,
+            "psnr_model": 11.945811,
+            "ssim_model": 0.241076,
+            "psnr_repeat": 17.554494,
+            "ssim_repeat": 0.457617,
+            "psnr_blend": 14.174035,
+            "ssim_blend": 0.28263
+          },
+          {
+            "sequence": "cut",
+            "k": 2,
+            "first": 29,
+            "last": 31,
+            "truth": 30,
+            "cut": true,
+            "psnr_model": 12.641558,
+            "ssim_model": 0.237449,
+            "psnr_repeat": 9.279243,
+            "ssim_repeat": 0.126981,
+            "psnr_blend": 14.539057,
+            "ssim_blend": 0.298253
+          }
+        ]
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "gate": "H",
+      "candidate": "rife-4.25-lite",
+      "profile": "720p",
+      "precision": "fp32",
+      "part": "FG 30->60",
+      "verdict": "pass",
+      "status": "gate",
+      "failingSequences": [],
+      "gateA": true
+    },
+    {
+      "gate": "H",
+      "candidate": "rife-4.25-lite",
+      "profile": "720p",
+      "precision": "fp32",
+      "part": "FG 60->120",
+      "verdict": "pass",
+      "status": "gate",
+      "failingSequences": [],
+      "gateA": true
+    }
+  ],
+  "qualification": "CPU reference replay quality only; failed browser B/C remain failures. No qualified CPU cost, gate G or human review."
+}

@@ -1,0 +1,2834 @@
+{
+  "schema": 1,
+  "environment": {
+    "schema": 1,
+    "generatedAt": "2026-10-13T06:40:28.002Z",
+    "research": {
+      "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+      "workingTreeDirty": true
+    },
+    "node": "v26.9.0",
+    "v8": "14.6.202.34-node.32",
+    "platform": "Darwin 27.0.0 arm64",
+    "os": {
+      "productVersion": "27.0",
+      "buildVersion": "26A428"
+    },
+    "hardware": {
+      "model": "Mac17,3",
+      "cpu": "Apple M5",
+      "logicalCores": 10,
+      "performanceLevels": [
+        {
+          "level": 0,
+          "name": "Super",
+          "logicalCpu": 4
+        },
+        {
+          "level": 1,
+          "name": "Efficiency",
+          "logicalCpu": 6
+        }
+      ],
+      "memoryBytes": 17179869184,
+      "memoryGiB": 16
+    },
+    "power": {
+      "source": "AC Power",
+      "batteryPercent": 79,
+      "batteryState": "charging",
+      "lowPowerMode": false
+    },
+    "browser": null,
+    "gpu": null
+  },
+  "script": {
+    "path": "build/ai-framegen-upscale/harness-dev/capture-diagnostic.mjs",
+    "sha256": "c08b8b873335933310d4ee83af425dddc2cfa4aa668338deb0c39a849b8430f1"
+  },
+  "sources": {
+    "files": [
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json",
+        "sha256": "8f33845b0e33cb6c44e90903b94c6fe068b4e13415b25d923b8db4f8e319845b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+        "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+        "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+        "sha256": "c9e3de101e1a033bfe3b9b29ebcc8a53aae8c94136034e3e647d6454acf21c33"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/fetch.py",
+        "sha256": "d8110930cfa1a15d292e022577a8fbb49e3048f009eb6166f0bdf1dedf4d1424"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/manifest.py",
+        "sha256": "6f64a73d97b956b97dc6af396af3a1c8bcec96ca6c9a8129529076595e2bef05"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+        "sha256": "9aa62b3ec5372503cc6f95b96816d05f354bc1dc136d7ea7b35b6020ab2801d1"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+        "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+        "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.in",
+        "sha256": "759e67543c1acf08aec320c86e3ed5b2f2f8a84a16ce9cc519d960fdbe83e37d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock",
+        "sha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json",
+        "sha256": "df39c33709476f03fb6bc225330e8dfe06875d617f806c6fc2eea49632b41219"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/fetch-ort-web.mjs",
+        "sha256": "3b7b9cf494dc122b8d4c1dc3f288e3bc3513adb21c9451f0ac60d1ed25b8444d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs",
+        "sha256": "f29b9e7d809a7d0b8dd4a8eb98339def715f4f4e1ad06b214c38d0d434b1b50c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/index.html",
+        "sha256": "0cd5612468a2ff48aa4223fb1d936e7946c8a0fec7bb2d811562a03ef7fc0a3e"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs",
+        "sha256": "cbc0f38857544d8ffdb41da8c51c03ec90b623814ec8133809f274c1f3fedf06"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs",
+        "sha256": "67183f251d791836a82018d7c4fb190e62fc2cdbff46e092c4a05a598e03e457"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs",
+        "sha256": "a1746e38857d039e80e61c78cb8c012ac057fe4136eb684d894638932855942b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs",
+        "sha256": "665a1a03fc0e72e5813e95085c9d0cbe6afc41342b8f6b5d13e55e6e39f73552"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs",
+        "sha256": "180702b82ebd14af68ec128a3a69ef5e23423499a0ff24eabf46fe4e0aa7f43d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+        "sha256": "d37e2bc31b11dac43594ed9e133dda164846904ed6fa4e4d0872ebc1639520b6"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs",
+        "sha256": "6f404a22e39f0a2ce6ec9f4f5d0564ca31c317932ca54ac171bda231fd1c37db"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+        "sha256": "4e990d282d76a4dcf02474fef7afd6bbfd48a70801691a95f60fdf824ac9d4f4"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs",
+        "sha256": "236fd1927de60fa315cb6c37216accf48c2045482b33bbfee73160192fca304d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs",
+        "sha256": "52d311a9a86d5250ce5785f41c700e8a716ec38d86b0aca413ea0dfa1cb4b85a"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs",
+        "sha256": "dd4c2a331d952e1981805b316d97012ef21b6f424c57d1ebbb66a28387cc5c72"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs",
+        "sha256": "60ca1e38500d19dbf0db81e81293e309a7af2f27a1ae5cde6dc370c52a65308f"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift",
+        "sha256": "011b3270b5f50963de81109f40fdbf4fdc3d210e077926e5c0bc28c6a4bd360d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+        "sha256": "1c272729f7dd2779f2a467d0c86bd2ef65c14143dad6a9286bacf2fc565e068e"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-parity.mjs",
+        "sha256": "0bb4f77dcd8a2d76a822dd6a97fd701740208910acceed09896737bb8b7086e0"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+        "sha256": "80c2d984b8b9027c40734095634f31e33d329c9f7cbfed1541cfba156a009418"
+      }
+    ],
+    "combinedSha256": "4849aa11969c2fd50cb1d159637799545810ec64a3822bd70623b4c8e8c5a375"
+  },
+  "configuration": {
+    "status": "diagnostic-only",
+    "purpose": "explicit captured-session parity before a separately labelled timing capture variant; never substitutes for registered default parity",
+    "candidate": "rt4ksr-x2",
+    "precisions": ["fp32"],
+    "profiles": ["small", "720p", "1080p"],
+    "enableGraphCapture": true
+  },
+  "profiles": [
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "small",
+      "precision": "fp32",
+      "modelSha256": "1ef4602e42f57eaf02770ad4aee5fcf5eaea24820a482bb3ead7c6bbe27f08a6",
+      "enableGraphCapture": true,
+      "status": "diagnostic-only",
+      "cases": [
+        {
+          "case": "synthetic",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 49152,
+                "total": 49152,
+                "withinOneFraction": 1,
+                "histogram": [49152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde",
+                "expectedSha256": "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.000003516674041748047,
+            "meanAbs": 5.265060842492749e-7,
+            "psnrDb": 123.53282639640577,
+            "mse": 4.4332003654052183e-13,
+            "nonfinite": 0,
+            "total": 196608,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.000003516674041748047,
+              "meanAbs": 5.324368892214067e-7,
+              "psnrDb": 123.4798950683077,
+              "mse": 4.487562323877327e-13,
+              "nonfinite": 0,
+              "total": 196608,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde",
+                "uploadedSha256": "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 62.07999999821186,
+            "availableMs": 65.86500000953674
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 196608,
+            "total": 196608,
+            "withinOneFraction": 1,
+            "histogram": [196578, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.000003516674041748047,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.265060842492749e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.53282639640577,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 196608,
+                  "total": 196608
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        },
+        {
+          "case": "natural",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 49152,
+                "total": 49152,
+                "withinOneFraction": 1,
+                "histogram": [49152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b",
+                "expectedSha256": "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.000003516674041748047,
+            "meanAbs": 5.302027837143323e-7,
+            "psnrDb": 123.3688998322988,
+            "mse": 4.603731819149362e-13,
+            "nonfinite": 0,
+            "total": 196608,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.0000036954879760742188,
+              "meanAbs": 5.460718378036411e-7,
+              "psnrDb": 123.23553226131025,
+              "mse": 4.74730105548247e-13,
+              "nonfinite": 0,
+              "total": 196608,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b",
+                "uploadedSha256": "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 0.9449999928474426,
+            "availableMs": 4.759999990463257
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 196608,
+            "total": 196608,
+            "withinOneFraction": 1,
+            "histogram": [196575, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.000003516674041748047,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.302027837143323e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.3688998322988,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 196608,
+                  "total": 196608
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        }
+      ],
+      "memoryPressureBefore": 1,
+      "prepare": {
+        "load": {
+          "importMs": 3.070000007748604,
+          "fetchMs": 2.875,
+          "bytes": 251876,
+          "createMs": 423.059999987483
+        },
+        "options": {
+          "executionProviders": [
+            {
+              "name": "webgpu",
+              "device": "harness GPUDevice"
+            }
+          ],
+          "graphOptimizationLevel": "all",
+          "preferredOutputLocation": "gpu-buffer",
+          "logSeverityLevel": 0,
+          "logVerbosityLevel": 0,
+          "enableGraphCapture": true,
+          "extra": {
+            "session": {
+              "use_ort_model_bytes_directly": "1"
+            }
+          },
+          "enableMemPattern": false
+        },
+        "env": {
+          "versions": {
+            "common": "1.30.0",
+            "web": "1.30.0"
+          },
+          "logLevel": "verbose",
+          "wasm": {
+            "numThreads": 1,
+            "proxy": false,
+            "wasmPaths": "/ort/",
+            "simd": null
+          },
+          "webgpu": {
+            "keys": ["adapter"],
+            "adapterSet": true,
+            "deviceType": "undefined"
+          }
+        },
+        "session": {
+          "createMs": 423.059999987483,
+          "inputNames": ["input"],
+          "outputNames": ["output"],
+          "inputMetadata": [
+            {
+              "name": "input",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 128, 128]
+            }
+          ],
+          "outputMetadata": [
+            {
+              "name": "output",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 256, 256]
+            }
+          ]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 2.2000000029802322
+        }
+      },
+      "placement": {
+        "found": true,
+        "header": true,
+        "providers": {
+          "WebGpuExecutionProvider": 58
+        },
+        "cpuNodes": 0,
+        "cpuNodeList": [],
+        "warning": null,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58",
+        "evidence": ["2026-10-13 01:40:22.019959 [V:onnxruntime:, session_state.cc:1377 VerifyEachNodeIsAssignedToAnEp] Node placements", "2026-10-13 01:40:22.020025 [V:onnxruntime:, session_state.cc:1380 VerifyEachNodeIsAssignedToAnEp]  All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"]
+      },
+      "gateD": {
+        "gate": "D",
+        "status": "pass",
+        "pass": true,
+        "cpuNodes": 0,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+      },
+      "memory": {
+        "accounting": {
+          "liveBytes": 5196752,
+          "peakLiveBytes": 5983184,
+          "objectsCreated": 150,
+          "objectsDestroyed": 46,
+          "baseline": {
+            "liveBytes": 0
+          },
+          "incremental": {
+            "liveBytes": 5196752,
+            "peakBytes": 5196752,
+            "excludedPhases": ["readback", "selftest", "existing-renderer"]
+          },
+          "byPhase": {
+            "steady": {
+              "objects": 6,
+              "createdBytes": 1310752,
+              "destroyedBytes": 0,
+              "liveBytes": 1310752,
+              "peakLiveBytes": 1310752,
+              "byKind": {
+                "buffer": 983072,
+                "texture": 327680
+              }
+            },
+            "ort-session": {
+              "objects": 66,
+              "createdBytes": 470504,
+              "destroyedBytes": 292040,
+              "liveBytes": 178464,
+              "peakLiveBytes": 219744,
+              "byKind": {
+                "buffer": 470504
+              }
+            },
+            "selftest": {
+              "objects": 8,
+              "createdBytes": 655392,
+              "destroyedBytes": 655392,
+              "liveBytes": 0,
+              "peakLiveBytes": 262160,
+              "byKind": {
+                "texture": 131072,
+                "buffer": 524320
+              }
+            },
+            "readback": {
+              "objects": 6,
+              "createdBytes": 2490368,
+              "destroyedBytes": 2490368,
+              "liveBytes": 0,
+              "peakLiveBytes": 786432,
+              "byKind": {
+                "buffer": 2490368
+              }
+            },
+            "ort-run": {
+              "objects": 64,
+              "createdBytes": 3707536,
+              "destroyedBytes": 0,
+              "liveBytes": 3707536,
+              "peakLiveBytes": 3707536,
+              "byKind": {
+                "buffer": 3707536
+              }
+            }
+          },
+          "byDevice": {
+            "1": {
+              "objects": 150,
+              "bytes": 8634552
+            }
+          },
+          "calls": {
+            "steady": {
+              "createBuffer@1": 4,
+              "createTexture@1": 2,
+              "createShaderModule@1": 3,
+              "createComputePipeline@1": 2,
+              "createBindGroup@1": 3,
+              "createRenderPipeline@1": 1,
+              "createCommandEncoder@1": 4,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 4
+            },
+            "ort-session": {
+              "createBuffer@1": 66,
+              "createCommandEncoder@1": 33,
+              "submit@0": 33,
+              "createShaderModule@1": 1,
+              "createComputePipelineAsync@1": 1,
+              "createBindGroup@1": 7,
+              "dispatchWorkgroups@0": 7
+            },
+            "selftest": {
+              "createTexture@1": 2,
+              "createBuffer@1": 6,
+              "createBindGroup@1": 2,
+              "createCommandEncoder@1": 6,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 6
+            },
+            "readback": {
+              "createBuffer@1": 6,
+              "createCommandEncoder@1": 6,
+              "submit@0": 6
+            },
+            "ort-run": {
+              "createBuffer@1": 64,
+              "createShaderModule@1": 14,
+              "createComputePipelineAsync@1": 14,
+              "createBindGroup@1": 56,
+              "createCommandEncoder@1": 20,
+              "dispatchWorkgroups@0": 280,
+              "submit@0": 20
+            }
+          },
+          "requested": {
+            "adapters": 1,
+            "devices": 1
+          },
+          "unknownFormats": []
+        },
+        "canvasSwapchainTextureBytes": 262144,
+        "exclusions": "Readback staging/self-test resources and existing renderer resources; canvas swapchain separately. Dropped undestroyed objects conservatively remain live.",
+        "errors": {
+          "uncaptured": [],
+          "lost": null
+        }
+      },
+      "environment": {
+        "schema": 1,
+        "generatedAt": "2026-10-13T06:40:23.148Z",
+        "research": {
+          "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+          "workingTreeDirty": true
+        },
+        "node": "v26.9.0",
+        "v8": "14.6.202.34-node.32",
+        "platform": "Darwin 27.0.0 arm64",
+        "os": {
+          "productVersion": "27.0",
+          "buildVersion": "26A428"
+        },
+        "hardware": {
+          "model": "Mac17,3",
+          "cpu": "Apple M5",
+          "logicalCores": 10,
+          "performanceLevels": [
+            {
+              "level": 0,
+              "name": "Super",
+              "logicalCpu": 4
+            },
+            {
+              "level": 1,
+              "name": "Efficiency",
+              "logicalCpu": 6
+            }
+          ],
+          "memoryBytes": 17179869184,
+          "memoryGiB": 16
+        },
+        "power": {
+          "source": "AC Power",
+          "batteryPercent": 79,
+          "batteryState": "charging",
+          "lowPowerMode": false
+        },
+        "browser": {
+          "product": "Chrome/155.0.8059.40",
+          "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+          "protocolVersion": "1.3",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "jsVersion": "15.5.35.20",
+          "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 2.2000000029802322
+        }
+      },
+      "pass": true
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "720p",
+      "precision": "fp32",
+      "modelSha256": "b7ead88c5d0d56853cdb5be940d2178e5d9a6fb6972e829787cba6a08b85616a",
+      "enableGraphCapture": true,
+      "status": "diagnostic-only",
+      "cases": [
+        {
+          "case": "synthetic",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 691200,
+                "total": 691200,
+                "withinOneFraction": 1,
+                "histogram": [691200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8",
+                "expectedSha256": "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.0000036954879760742188,
+            "meanAbs": 5.085341619172192e-7,
+            "psnrDb": 123.85204249332239,
+            "mse": 4.119037545967132e-13,
+            "nonfinite": 0,
+            "total": 2764800,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.0000036954879760742188,
+              "meanAbs": 5.107812225762448e-7,
+              "psnrDb": 123.82713262025757,
+              "mse": 4.142731036334539e-13,
+              "nonfinite": 0,
+              "total": 2764800,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8",
+                "uploadedSha256": "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 68.9750000089407,
+            "availableMs": 83.80500000715256
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 2764800,
+            "total": 2764800,
+            "withinOneFraction": 1,
+            "histogram": [2764485, 315, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.0000036954879760742188,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.085341619172192e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.85204249332239,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 2764800,
+                  "total": 2764800
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        },
+        {
+          "case": "natural",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 691200,
+                "total": 691200,
+                "withinOneFraction": 1,
+                "histogram": [691200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3",
+                "expectedSha256": "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.000003993511199951172,
+            "meanAbs": 5.271312123268183e-7,
+            "psnrDb": 123.39738312163497,
+            "mse": 4.573636949896836e-13,
+            "nonfinite": 0,
+            "total": 2764800,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.000003993511199951172,
+              "meanAbs": 5.471500404198665e-7,
+              "psnrDb": 123.23439156808834,
+              "mse": 4.748548118383088e-13,
+              "nonfinite": 0,
+              "total": 2764800,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3",
+                "uploadedSha256": "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 0.35999999940395355,
+            "availableMs": 17.99500000476837
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 2764800,
+            "total": 2764800,
+            "withinOneFraction": 1,
+            "histogram": [2764469, 331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.000003993511199951172,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.271312123268183e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.39738312163497,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 2764800,
+                  "total": 2764800
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        }
+      ],
+      "memoryPressureBefore": 1,
+      "prepare": {
+        "load": {
+          "importMs": 5.3499999940395355,
+          "fetchMs": 2.6200000047683716,
+          "bytes": 251994,
+          "createMs": 419.15000000596046
+        },
+        "options": {
+          "executionProviders": [
+            {
+              "name": "webgpu",
+              "device": "harness GPUDevice"
+            }
+          ],
+          "graphOptimizationLevel": "all",
+          "preferredOutputLocation": "gpu-buffer",
+          "logSeverityLevel": 0,
+          "logVerbosityLevel": 0,
+          "enableGraphCapture": true,
+          "extra": {
+            "session": {
+              "use_ort_model_bytes_directly": "1"
+            }
+          },
+          "enableMemPattern": false
+        },
+        "env": {
+          "versions": {
+            "common": "1.30.0",
+            "web": "1.30.0"
+          },
+          "logLevel": "verbose",
+          "wasm": {
+            "numThreads": 1,
+            "proxy": false,
+            "wasmPaths": "/ort/",
+            "simd": null
+          },
+          "webgpu": {
+            "keys": ["adapter"],
+            "adapterSet": true,
+            "deviceType": "undefined"
+          }
+        },
+        "session": {
+          "createMs": 419.15000000596046,
+          "inputNames": ["input"],
+          "outputNames": ["output"],
+          "inputMetadata": [
+            {
+              "name": "input",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 360, 640]
+            }
+          ],
+          "outputMetadata": [
+            {
+              "name": "output",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 720, 1280]
+            }
+          ]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 1.9600000083446503
+        }
+      },
+      "placement": {
+        "found": true,
+        "header": true,
+        "providers": {
+          "WebGpuExecutionProvider": 58
+        },
+        "cpuNodes": 0,
+        "cpuNodeList": [],
+        "warning": null,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58",
+        "evidence": ["2026-10-13 01:40:24.218549 [V:onnxruntime:, session_state.cc:1377 VerifyEachNodeIsAssignedToAnEp] Node placements", "2026-10-13 01:40:24.218619 [V:onnxruntime:, session_state.cc:1380 VerifyEachNodeIsAssignedToAnEp]  All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"]
+      },
+      "gateD": {
+        "gate": "D",
+        "status": "pass",
+        "pass": true,
+        "cpuNodes": 0,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+      },
+      "memory": {
+        "accounting": {
+          "liveBytes": 69471184,
+          "peakLiveBytes": 80530384,
+          "objectsCreated": 150,
+          "objectsDestroyed": 46,
+          "baseline": {
+            "liveBytes": 0
+          },
+          "incremental": {
+            "liveBytes": 69471184,
+            "peakBytes": 69471184,
+            "excludedPhases": ["readback", "selftest", "existing-renderer"]
+          },
+          "byPhase": {
+            "steady": {
+              "objects": 6,
+              "createdBytes": 18432032,
+              "destroyedBytes": 0,
+              "liveBytes": 18432032,
+              "peakLiveBytes": 18432032,
+              "byKind": {
+                "buffer": 13824032,
+                "texture": 4608000
+              }
+            },
+            "ort-session": {
+              "objects": 66,
+              "createdBytes": 470504,
+              "destroyedBytes": 292040,
+              "liveBytes": 178464,
+              "peakLiveBytes": 219744,
+              "byKind": {
+                "buffer": 470504
+              }
+            },
+            "selftest": {
+              "objects": 8,
+              "createdBytes": 9216032,
+              "destroyedBytes": 9216032,
+              "liveBytes": 0,
+              "peakLiveBytes": 3686416,
+              "byKind": {
+                "texture": 1843200,
+                "buffer": 7372832
+              }
+            },
+            "readback": {
+              "objects": 6,
+              "createdBytes": 35020800,
+              "destroyedBytes": 35020800,
+              "liveBytes": 0,
+              "peakLiveBytes": 11059200,
+              "byKind": {
+                "buffer": 35020800
+              }
+            },
+            "ort-run": {
+              "objects": 64,
+              "createdBytes": 50860688,
+              "destroyedBytes": 0,
+              "liveBytes": 50860688,
+              "peakLiveBytes": 50860688,
+              "byKind": {
+                "buffer": 50860688
+              }
+            }
+          },
+          "byDevice": {
+            "1": {
+              "objects": 150,
+              "bytes": 114000056
+            }
+          },
+          "calls": {
+            "steady": {
+              "createBuffer@1": 4,
+              "createTexture@1": 2,
+              "createShaderModule@1": 3,
+              "createComputePipeline@1": 2,
+              "createBindGroup@1": 3,
+              "createRenderPipeline@1": 1,
+              "createCommandEncoder@1": 4,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 4
+            },
+            "ort-session": {
+              "createBuffer@1": 66,
+              "createCommandEncoder@1": 33,
+              "submit@0": 33,
+              "createShaderModule@1": 1,
+              "createComputePipelineAsync@1": 1,
+              "createBindGroup@1": 7,
+              "dispatchWorkgroups@0": 7
+            },
+            "selftest": {
+              "createTexture@1": 2,
+              "createBuffer@1": 6,
+              "createBindGroup@1": 2,
+              "createCommandEncoder@1": 6,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 6
+            },
+            "readback": {
+              "createBuffer@1": 6,
+              "createCommandEncoder@1": 6,
+              "submit@0": 6
+            },
+            "ort-run": {
+              "createBuffer@1": 64,
+              "createShaderModule@1": 14,
+              "createComputePipelineAsync@1": 14,
+              "createBindGroup@1": 56,
+              "createCommandEncoder@1": 20,
+              "dispatchWorkgroups@0": 280,
+              "submit@0": 20
+            }
+          },
+          "requested": {
+            "adapters": 1,
+            "devices": 1
+          },
+          "unknownFormats": []
+        },
+        "canvasSwapchainTextureBytes": 3686400,
+        "exclusions": "Readback staging/self-test resources and existing renderer resources; canvas swapchain separately. Dropped undestroyed objects conservatively remain live.",
+        "errors": {
+          "uncaptured": [],
+          "lost": null
+        }
+      },
+      "environment": {
+        "schema": 1,
+        "generatedAt": "2026-10-13T06:40:25.340Z",
+        "research": {
+          "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+          "workingTreeDirty": true
+        },
+        "node": "v26.9.0",
+        "v8": "14.6.202.34-node.32",
+        "platform": "Darwin 27.0.0 arm64",
+        "os": {
+          "productVersion": "27.0",
+          "buildVersion": "26A428"
+        },
+        "hardware": {
+          "model": "Mac17,3",
+          "cpu": "Apple M5",
+          "logicalCores": 10,
+          "performanceLevels": [
+            {
+              "level": 0,
+              "name": "Super",
+              "logicalCpu": 4
+            },
+            {
+              "level": 1,
+              "name": "Efficiency",
+              "logicalCpu": 6
+            }
+          ],
+          "memoryBytes": 17179869184,
+          "memoryGiB": 16
+        },
+        "power": {
+          "source": "AC Power",
+          "batteryPercent": 79,
+          "batteryState": "charging",
+          "lowPowerMode": false
+        },
+        "browser": {
+          "product": "Chrome/155.0.8059.40",
+          "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+          "protocolVersion": "1.3",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "jsVersion": "15.5.35.20",
+          "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 1.9600000083446503
+        }
+      },
+      "pass": true
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "1080p",
+      "precision": "fp32",
+      "modelSha256": "2b9d09b481fac1bb7b0f6e4d0fc7a1c8daf3340bca17adb24da102f6eee118ea",
+      "enableGraphCapture": true,
+      "status": "diagnostic-only",
+      "cases": [
+        {
+          "case": "synthetic",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 1555200,
+                "total": 1555200,
+                "withinOneFraction": 1,
+                "histogram": [1555200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0",
+                "expectedSha256": "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.000004291534423828125,
+            "meanAbs": 5.227481214793905e-7,
+            "psnrDb": 123.53297856969232,
+            "mse": 4.4330450323584585e-13,
+            "nonfinite": 0,
+            "total": 6220800,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.000004291534423828125,
+              "meanAbs": 5.244116758067682e-7,
+              "psnrDb": 123.51740700728678,
+              "mse": 4.448968176741625e-13,
+              "nonfinite": 0,
+              "total": 6220800,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0",
+                "uploadedSha256": "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 64.28499999642372,
+            "availableMs": 101.70999999344349
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 6220800,
+            "total": 6220800,
+            "withinOneFraction": 1,
+            "histogram": [6220063, 737, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.000004291534423828125,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.227481214793905e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.53297856969232,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 6220800,
+                  "total": 6220800
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        },
+        {
+          "case": "natural",
+          "conversionSelfTest": {
+            "pass": true,
+            "inputs": [
+              {
+                "input": "input",
+                "maxDifference": 0,
+                "withinOne": 1555200,
+                "total": 1555200,
+                "withinOneFraction": 1,
+                "histogram": [1555200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                "floatMaxAbs": 0,
+                "floatDifferentValues": 0,
+                "floatNonfinite": 0,
+                "packedSha256": "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c",
+                "expectedSha256": "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c",
+                "bitwiseEqual": true,
+                "conversionNote": "rgba8unorm texture decoding can differ from the JS byte division by one f32 ULP; require finite values, max abs <= 1e-7, and exact 8-bit roundtrip. This check adds no numerical model acceptance threshold."
+              }
+            ]
+          },
+          "deviceParity": {
+            "maxAbs": 0.000003993511199951172,
+            "meanAbs": 5.205308621839366e-7,
+            "psnrDb": 123.51539593138224,
+            "mse": 4.451028825673165e-13,
+            "nonfinite": 0,
+            "total": 6220800,
+            "clamp": true,
+            "unclamped": {
+              "maxAbs": 0.000003993511199951172,
+              "meanAbs": 5.383749925499631e-7,
+              "psnrDb": 123.36457111052431,
+              "mse": 4.608322761425966e-13,
+              "nonfinite": 0,
+              "total": 6220800,
+              "clamp": false
+            },
+            "inputHashes": [
+              {
+                "name": "input",
+                "sha256": "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c",
+                "uploadedSha256": "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c",
+                "verified": true
+              }
+            ],
+            "outputLocation": "gpu-buffer",
+            "outputBinding": "preallocated GPU tensor",
+            "submissionMs": 0.48499999940395355,
+            "availableMs": 29.12999999523163
+          },
+          "fullPath": {
+            "maxDifference": 1,
+            "withinOne": 6220800,
+            "total": 6220800,
+            "withinOneFraction": 1,
+            "histogram": [6220035, 765, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "injection": {
+              "sameDevice": true,
+              "gpuInputsAccepted": true,
+              "outputConsumed": true,
+              "scopeErrors": 0,
+              "scopeDetails": [],
+              "thrown": null,
+              "uncapturedErrors": 0,
+              "uncapturedDetails": [],
+              "deviceLost": false,
+              "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+              "harnessDeviceId": 1,
+              "outputBufferDeviceId": 1,
+              "requested": {
+                "adapters": 1,
+                "devices": 1
+              },
+              "env": {
+                "versions": {
+                  "common": "1.30.0",
+                  "web": "1.30.0"
+                },
+                "logLevel": "verbose",
+                "wasm": {
+                  "numThreads": 1,
+                  "proxy": false,
+                  "wasmPaths": "/ort/",
+                  "simd": null
+                },
+                "webgpu": {
+                  "keys": ["adapter"],
+                  "adapterSet": true,
+                  "deviceType": "undefined"
+                }
+              }
+            }
+          },
+          "gateB": {
+            "gate": "B",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "maxAbs",
+                "value": 0.000003993511199951172,
+                "comparison": "<=",
+                "limit": 0.02,
+                "pass": true
+              },
+              {
+                "name": "meanAbs",
+                "value": 5.205308621839366e-7,
+                "comparison": "<=",
+                "limit": 0.001,
+                "pass": true
+              },
+              {
+                "name": "psnrDb",
+                "value": 123.51539593138224,
+                "comparison": ">=",
+                "limit": 50,
+                "pass": true
+              }
+            ]
+          },
+          "gateC": {
+            "gate": "C",
+            "precision": "fp32",
+            "pass": true,
+            "checks": [
+              {
+                "name": "withinOneCodePercent",
+                "value": 100,
+                "counts": {
+                  "withinOne": 6220800,
+                  "total": 6220800
+                },
+                "comparison": ">=",
+                "limit": 99.5,
+                "pass": true
+              },
+              {
+                "name": "maxDifference",
+                "value": 1,
+                "comparison": "<=",
+                "limit": 8,
+                "pass": true
+              }
+            ]
+          },
+          "gateE": {
+            "gate": "E",
+            "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+            "pass": true,
+            "checks": [
+              {
+                "name": "sameDevice",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "gpuInputsAccepted",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "outputConsumed",
+                "value": true,
+                "pass": true
+              },
+              {
+                "name": "scopeErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "uncapturedErrors",
+                "value": 0,
+                "comparison": "<=",
+                "limit": 0,
+                "pass": true
+              },
+              {
+                "name": "deviceLost",
+                "value": false,
+                "pass": true
+              }
+            ]
+          }
+        }
+      ],
+      "memoryPressureBefore": 1,
+      "prepare": {
+        "load": {
+          "importMs": 3.070000007748604,
+          "fetchMs": 2.564999997615814,
+          "bytes": 251994,
+          "createMs": 435.98499999940395
+        },
+        "options": {
+          "executionProviders": [
+            {
+              "name": "webgpu",
+              "device": "harness GPUDevice"
+            }
+          ],
+          "graphOptimizationLevel": "all",
+          "preferredOutputLocation": "gpu-buffer",
+          "logSeverityLevel": 0,
+          "logVerbosityLevel": 0,
+          "enableGraphCapture": true,
+          "extra": {
+            "session": {
+              "use_ort_model_bytes_directly": "1"
+            }
+          },
+          "enableMemPattern": false
+        },
+        "env": {
+          "versions": {
+            "common": "1.30.0",
+            "web": "1.30.0"
+          },
+          "logLevel": "verbose",
+          "wasm": {
+            "numThreads": 1,
+            "proxy": false,
+            "wasmPaths": "/ort/",
+            "simd": null
+          },
+          "webgpu": {
+            "keys": ["adapter"],
+            "adapterSet": true,
+            "deviceType": "undefined"
+          }
+        },
+        "session": {
+          "createMs": 435.98499999940395,
+          "inputNames": ["input"],
+          "outputNames": ["output"],
+          "inputMetadata": [
+            {
+              "name": "input",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 540, 960]
+            }
+          ],
+          "outputMetadata": [
+            {
+              "name": "output",
+              "isTensor": true,
+              "type": "float32",
+              "shape": [1, 3, 1080, 1920]
+            }
+          ]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 2.094999998807907
+        }
+      },
+      "placement": {
+        "found": true,
+        "header": true,
+        "providers": {
+          "WebGpuExecutionProvider": 58
+        },
+        "cpuNodes": 0,
+        "cpuNodeList": [],
+        "warning": null,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58",
+        "evidence": ["2026-10-13 01:40:26.584669 [V:onnxruntime:, session_state.cc:1377 VerifyEachNodeIsAssignedToAnEp] Node placements", "2026-10-13 01:40:26.584728 [V:onnxruntime:, session_state.cc:1380 VerifyEachNodeIsAssignedToAnEp]  All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"]
+      },
+      "gateD": {
+        "gate": "D",
+        "status": "pass",
+        "pass": true,
+        "cpuNodes": 0,
+        "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+      },
+      "memory": {
+        "accounting": {
+          "liveBytes": 137075664,
+          "peakLiveBytes": 161958864,
+          "objectsCreated": 150,
+          "objectsDestroyed": 46,
+          "baseline": {
+            "liveBytes": 0
+          },
+          "incremental": {
+            "liveBytes": 137075664,
+            "peakBytes": 137075664,
+            "excludedPhases": ["readback", "selftest", "existing-renderer"]
+          },
+          "byPhase": {
+            "steady": {
+              "objects": 6,
+              "createdBytes": 41472032,
+              "destroyedBytes": 0,
+              "liveBytes": 41472032,
+              "peakLiveBytes": 41472032,
+              "byKind": {
+                "buffer": 31104032,
+                "texture": 10368000
+              }
+            },
+            "ort-session": {
+              "objects": 66,
+              "createdBytes": 470504,
+              "destroyedBytes": 292040,
+              "liveBytes": 178464,
+              "peakLiveBytes": 219744,
+              "byKind": {
+                "buffer": 470504
+              }
+            },
+            "selftest": {
+              "objects": 8,
+              "createdBytes": 20736032,
+              "destroyedBytes": 20736032,
+              "liveBytes": 0,
+              "peakLiveBytes": 8294416,
+              "byKind": {
+                "texture": 4147200,
+                "buffer": 16588832
+              }
+            },
+            "readback": {
+              "objects": 6,
+              "createdBytes": 78796800,
+              "destroyedBytes": 78796800,
+              "liveBytes": 0,
+              "peakLiveBytes": 24883200,
+              "byKind": {
+                "buffer": 78796800
+              }
+            },
+            "ort-run": {
+              "objects": 64,
+              "createdBytes": 95425168,
+              "destroyedBytes": 0,
+              "liveBytes": 95425168,
+              "peakLiveBytes": 95425168,
+              "byKind": {
+                "buffer": 95425168
+              }
+            }
+          },
+          "byDevice": {
+            "1": {
+              "objects": 150,
+              "bytes": 236900536
+            }
+          },
+          "calls": {
+            "steady": {
+              "createBuffer@1": 4,
+              "createTexture@1": 2,
+              "createShaderModule@1": 3,
+              "createComputePipeline@1": 2,
+              "createBindGroup@1": 3,
+              "createRenderPipeline@1": 1,
+              "createCommandEncoder@1": 4,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 4
+            },
+            "ort-session": {
+              "createBuffer@1": 66,
+              "createCommandEncoder@1": 33,
+              "submit@0": 33,
+              "createShaderModule@1": 1,
+              "createComputePipelineAsync@1": 1,
+              "createBindGroup@1": 7,
+              "dispatchWorkgroups@0": 7
+            },
+            "selftest": {
+              "createTexture@1": 2,
+              "createBuffer@1": 6,
+              "createBindGroup@1": 2,
+              "createCommandEncoder@1": 6,
+              "dispatchWorkgroups@0": 4,
+              "submit@0": 6
+            },
+            "readback": {
+              "createBuffer@1": 6,
+              "createCommandEncoder@1": 6,
+              "submit@0": 6
+            },
+            "ort-run": {
+              "createBuffer@1": 64,
+              "createShaderModule@1": 14,
+              "createComputePipelineAsync@1": 14,
+              "createBindGroup@1": 56,
+              "createCommandEncoder@1": 20,
+              "dispatchWorkgroups@0": 280,
+              "submit@0": 20
+            }
+          },
+          "requested": {
+            "adapters": 1,
+            "devices": 1
+          },
+          "unknownFormats": []
+        },
+        "canvasSwapchainTextureBytes": 8294400,
+        "exclusions": "Readback staging/self-test resources and existing renderer resources; canvas swapchain separately. Dropped undestroyed objects conservatively remain live.",
+        "errors": {
+          "uncaptured": [],
+          "lost": null
+        }
+      },
+      "environment": {
+        "schema": 1,
+        "generatedAt": "2026-10-13T06:40:27.890Z",
+        "research": {
+          "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+          "workingTreeDirty": true
+        },
+        "node": "v26.9.0",
+        "v8": "14.6.202.34-node.32",
+        "platform": "Darwin 27.0.0 arm64",
+        "os": {
+          "productVersion": "27.0",
+          "buildVersion": "26A428"
+        },
+        "hardware": {
+          "model": "Mac17,3",
+          "cpu": "Apple M5",
+          "logicalCores": 10,
+          "performanceLevels": [
+            {
+              "level": 0,
+              "name": "Super",
+              "logicalCpu": 4
+            },
+            {
+              "level": 1,
+              "name": "Efficiency",
+              "logicalCpu": 6
+            }
+          ],
+          "memoryBytes": 17179869184,
+          "memoryGiB": 16
+        },
+        "power": {
+          "source": "AC Power",
+          "batteryPercent": 79,
+          "batteryState": "charging",
+          "lowPowerMode": false
+        },
+        "browser": {
+          "product": "Chrome/155.0.8059.40",
+          "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+          "protocolVersion": "1.3",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "jsVersion": "15.5.35.20",
+          "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+        },
+        "gpu": {
+          "adapterInfo": {
+            "vendor": "apple",
+            "architecture": "metal-3",
+            "device": "0x0000",
+            "description": "Apple M5",
+            "subgroupMinSize": 32,
+            "subgroupMaxSize": 32,
+            "isFallbackAdapter": false,
+            "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+            "backend": "metal",
+            "type": "integrated GPU",
+            "d3dShaderModel": null,
+            "vkDriverVersion": null,
+            "powerPreference": "high-performance",
+            "subgroupMatrixConfigs": 2
+          },
+          "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+          "adapterLimits": {
+            "maxTextureDimension1D": 16384,
+            "maxTextureDimension2D": 16384,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 2048,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 10,
+            "maxDynamicStorageBuffersPerPipelineLayout": 8,
+            "maxSampledTexturesPerShaderStage": 48,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 8,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 30,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 28,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 128,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 8,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 8
+          },
+          "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+          "missingOrtFeatures": [],
+          "requiredLimits": {
+            "maxBindGroups": 4,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageBufferBindingSize": 4294967292,
+            "maxBufferSize": 4294967292,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64
+          },
+          "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+          "deviceLimits": {
+            "maxTextureDimension1D": 8192,
+            "maxTextureDimension2D": 8192,
+            "maxTextureDimension3D": 2048,
+            "maxTextureArrayLayers": 256,
+            "maxBindGroups": 4,
+            "maxBindGroupsPlusVertexBuffers": 24,
+            "maxBindingsPerBindGroup": 1000,
+            "maxDynamicUniformBuffersPerPipelineLayout": 8,
+            "maxDynamicStorageBuffersPerPipelineLayout": 4,
+            "maxSampledTexturesPerShaderStage": 16,
+            "maxSamplersPerShaderStage": 16,
+            "maxStorageBuffersPerShaderStage": 10,
+            "maxStorageTexturesPerShaderStage": 4,
+            "maxUniformBuffersPerShaderStage": 12,
+            "maxUniformBufferBindingSize": 65536,
+            "maxStorageBufferBindingSize": 4294967292,
+            "minUniformBufferOffsetAlignment": 256,
+            "minStorageBufferOffsetAlignment": 256,
+            "maxVertexBuffers": 8,
+            "maxBufferSize": 4294967292,
+            "maxVertexAttributes": 16,
+            "maxVertexBufferArrayStride": 2048,
+            "maxInterStageShaderVariables": 16,
+            "maxColorAttachments": 8,
+            "maxColorAttachmentBytesPerSample": 32,
+            "maxComputeWorkgroupStorageSize": 32768,
+            "maxComputeInvocationsPerWorkgroup": 1024,
+            "maxComputeWorkgroupSizeX": 1024,
+            "maxComputeWorkgroupSizeY": 1024,
+            "maxComputeWorkgroupSizeZ": 64,
+            "maxComputeWorkgroupsPerDimension": 65535,
+            "maxImmediateSize": 64,
+            "maxStorageBuffersInFragmentStage": 10,
+            "maxStorageTexturesInFragmentStage": 4,
+            "maxStorageBuffersInVertexStage": 10,
+            "maxStorageTexturesInVertexStage": 4
+          },
+          "preferredCanvasFormat": "bgra8unorm",
+          "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+          "createMs": 2.094999998807907
+        }
+      },
+      "pass": true
+    }
+  ]
+}

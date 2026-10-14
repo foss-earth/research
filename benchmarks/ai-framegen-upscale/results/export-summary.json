@@ -1,0 +1,5307 @@
+{
+  "schema": 1,
+  "createdAt": "2026-10-13T01:41:37-05:00",
+  "publisher": {
+    "path": "build/ai-framegen-upscale/scratch/export/publish_export_summary.py",
+    "sha256": "3a13bc8d78de5fccc01e8bcceeb56dad4802df1d6c8d92699a8c102e9bc42e80"
+  },
+  "exports": [
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "1080p",
+      "precision": "fp16",
+      "sha256": "dd5adcb6c234b08e5703271018f2b09231b81befd3f3d3f0b68462e662ca0bea",
+      "bytes": 20165681,
+      "opset": 17,
+      "irVersion": 10,
+      "nodeCount": 365,
+      "initializerBytes": 20092978,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.6794051378965378,
+        "meanAbs": 0.01158150262761926,
+        "pass": false,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.042,
+        "seconds": 2.937,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.38950544595718384,
+            "meanAbs": 0.006857137480463714,
+            "psnr": 38.1569209726105,
+            "unclamped": {
+              "maxAbs": 0.38950544595718384,
+              "meanAbs": 0.006857137480463714
+            },
+            "outputRange": [
+              0.1019897386431694,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.6330817579732511,
+              "max": 99
+            },
+            "runSeconds": 0.632
+          },
+          "natural": {
+            "maxAbs": 0.6794051378965378,
+            "meanAbs": 0.01158150262761926,
+            "psnr": 31.59408900668683,
+            "unclamped": {
+              "maxAbs": 0.6794051378965378,
+              "meanAbs": 0.01158150262761926
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.6012467849794239,
+              "max": 173
+            },
+            "runSeconds": 0.735
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.39045798778533936,
+            "meanAbs": 0.006859092288662549
+          },
+          "natural": {
+            "maxAbs": 0.679401084780693,
+            "meanAbs": 0.01158023636857257
+          },
+          "cpuPlacement": {
+            "insertedCasts": 212,
+            "castNodesBefore": 3,
+            "castNodesAfter": 215,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 11,
+              "Concat": 4,
+              "Conv": 56,
+              "ConvTranspose": 7,
+              "Div": 23,
+              "GridSample": 10,
+              "Mul": 46,
+              "Resize": 1,
+              "Sub": 1
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant dyn17-warm, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "dyn17-warm",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "dyn17-warm",
+          "description": "dynamo opset 17 after one eager forward (backwarp grids baked from the cache)",
+          "dynamo": true,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17-warm",
+            "description": "dynamo opset 17 after one eager forward (backwarp grids baked from the cache)",
+            "gridCacheEntriesCleared": 0,
+            "gridCacheEntriesAtExport": 1,
+            "export": {
+              "seconds": 2.163,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 362,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0017777681350708008,
+              "meanAbs": 2.9581091985478954e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/1080p/synthetic",
+          "outSha256": "1c9c6ecc35cfb4a5d1fffcf03d7dd7d7b7314cf53749b634d89aa642443706a4",
+          "inputSha256F32": [
+            "1e6b20d38ac98229ce03a829877019db2b944d75d45995257b6c79b1e5894e6f",
+            "e2f931bb098771d66273a8ad8b7e59ca77ee38105502ffa019252c1cc64a3c33"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/1080p/natural",
+          "outSha256": "cf5d06a0e382dab386b9231c096aca992631a573fd5d5098df0c7390b2efcaa5",
+          "inputSha256F32": [
+            "6f70b2f94ed44a047a4306e4542427ddc71b93ce5b4ee3d04e13cf47940b5900",
+            "1dc4d24df92fd02c85784143f53e878eb7372169300006d5ba41c25b68209395"
+          ]
+        }
+      },
+      "status": "failed-gate-A",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/1080p/fp16.receipt.json",
+        "sha256": "193610a2ca69c08d354e91114d09129fc28a5810d53bdedc7ebbe691c08ddb6b",
+        "bytes": 19128
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=1080p --variants=dyn17-warm --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "7e925a344545e63dbd10680eeb4f414c9aaa1c0b5b44ee7ae043b750dabe053b"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:29:03-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012851",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.123,
+          "restoredFp32Initializers": [
+            {
+              "initializer": "val_35",
+              "as": "val_35__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.03125,
+                0.03125
+              ]
+            },
+            {
+              "initializer": "val_36",
+              "as": "val_36__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                32.0,
+                32.0
+              ]
+            },
+            {
+              "initializer": "val_193",
+              "as": "val_193__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.0625,
+                0.0625
+              ]
+            },
+            {
+              "initializer": "val_197",
+              "as": "val_197__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                16.0,
+                16.0
+              ]
+            },
+            {
+              "initializer": "val_348",
+              "as": "val_348__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.125,
+                0.125
+              ]
+            },
+            {
+              "initializer": "val_351",
+              "as": "val_351__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "initializer": "val_502",
+              "as": "val_502__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "initializer": "val_505",
+              "as": "val_505__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "initializer": "val_656",
+              "as": "val_656__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "removedOrphanInitializers": [
+            "val_35",
+            "val_36",
+            "val_193",
+            "val_197",
+            "val_348",
+            "val_351",
+            "val_502",
+            "val_505",
+            "val_656"
+          ],
+          "weightClamping": {
+            "belowMinPositive": 13,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 5873,
+            "elements": 10046425
+          },
+          "converterWarnings": 11,
+          "converterWarningSamples": [
+            "1x the float32 number -6.823074727435596e-08 will be truncated to -1e-07",
+            "1x the float32 number 3.901875800238486e-08 will be truncated to 1e-07",
+            "1x the float32 number -2.5030946204651627e-08 will be truncated to -1e-07",
+            "1x the float32 number 3.61987844144096e-08 will be truncated to 1e-07",
+            "1x the float32 number -7.727135198365431e-08 will be truncated to -1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "1080p",
+      "precision": "fp32",
+      "sha256": "b809592a1310460265bd553d2195df3b758fd8a029267b62014ffbaf30b6c99b",
+      "bytes": 40258001,
+      "opset": 17,
+      "irVersion": 10,
+      "nodeCount": 362,
+      "initializerBytes": 40185756,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            1152,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.0017777681350708008,
+        "meanAbs": 2.9581091985478954e-06,
+        "pass": false,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.026,
+        "seconds": 3.092,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0007392168045043945,
+            "meanAbs": 2.815961415463591e-06,
+            "psnr": 103.39412459983015,
+            "unclamped": {
+              "maxAbs": 0.0007392168045043945,
+              "meanAbs": 2.815961415463591e-06
+            },
+            "outputRange": [
+              0.10196077823638916,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.568
+          },
+          "natural": {
+            "maxAbs": 0.0017777681350708008,
+            "meanAbs": 2.9581091985478954e-06,
+            "psnr": 98.10870802992837,
+            "unclamped": {
+              "maxAbs": 0.0017777681350708008,
+              "meanAbs": 2.9581091985478954e-06
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.672
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0006664395332336426,
+            "meanAbs": 2.97259837590204e-06
+          },
+          "natural": {
+            "maxAbs": 0.001927018165588379,
+            "meanAbs": 2.973661931056204e-06
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant dyn17-warm",
+      "exportVariant": {
+        "id": "dyn17-warm",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "dyn17-warm",
+          "description": "dynamo opset 17 after one eager forward (backwarp grids baked from the cache)",
+          "dynamo": true,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17-warm",
+            "description": "dynamo opset 17 after one eager forward (backwarp grids baked from the cache)",
+            "gridCacheEntriesCleared": 0,
+            "gridCacheEntriesAtExport": 1,
+            "export": {
+              "seconds": 2.163,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 362,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0017777681350708008,
+              "meanAbs": 2.9581091985478954e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/1080p/synthetic",
+          "outSha256": "1c9c6ecc35cfb4a5d1fffcf03d7dd7d7b7314cf53749b634d89aa642443706a4",
+          "inputSha256F32": [
+            "1e6b20d38ac98229ce03a829877019db2b944d75d45995257b6c79b1e5894e6f",
+            "e2f931bb098771d66273a8ad8b7e59ca77ee38105502ffa019252c1cc64a3c33"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/1080p/natural",
+          "outSha256": "cf5d06a0e382dab386b9231c096aca992631a573fd5d5098df0c7390b2efcaa5",
+          "inputSha256F32": [
+            "6f70b2f94ed44a047a4306e4542427ddc71b93ce5b4ee3d04e13cf47940b5900",
+            "1dc4d24df92fd02c85784143f53e878eb7372169300006d5ba41c25b68209395"
+          ]
+        }
+      },
+      "status": "failed-gate-A",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/1080p/fp32.receipt.json",
+        "sha256": "049c9f5b8881b7346619d09795f3cb0c072c0eb45551242089a897dd3c2c3fc7",
+        "bytes": 15440
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=1080p --variants=dyn17-warm --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "7e925a344545e63dbd10680eeb4f414c9aaa1c0b5b44ee7ae043b750dabe053b"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:29:03-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012851"
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "540p",
+      "precision": "fp16",
+      "sha256": "78cd98ed24c7ba40997e59b652d57467a5968da2aec3159c4fd9a02225b0baec",
+      "bytes": 13965548,
+      "opset": 17,
+      "irVersion": 8,
+      "nodeCount": 335,
+      "initializerBytes": 13858994,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.5771749801933765,
+        "meanAbs": 0.012162530943929899,
+        "pass": false,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.039,
+        "seconds": 0.939,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.36092516779899597,
+            "meanAbs": 0.004739886680029864,
+            "psnr": 39.79469941348065,
+            "unclamped": {
+              "maxAbs": 0.36092516779899597,
+              "meanAbs": 0.004739886680029864
+            },
+            "outputRange": [
+              0.01568603515625,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.763886316872428,
+              "max": 92
+            },
+            "runSeconds": 0.205
+          },
+          "natural": {
+            "maxAbs": 0.5771749801933765,
+            "meanAbs": 0.012162530943929899,
+            "psnr": 30.9797688312985,
+            "unclamped": {
+              "maxAbs": 0.5771749801933765,
+              "meanAbs": 0.012162530943929899
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.6291113683127572,
+              "max": 147
+            },
+            "runSeconds": 0.21
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.3609372079372406,
+            "meanAbs": 0.004741595327195907
+          },
+          "natural": {
+            "maxAbs": 0.5771606154739857,
+            "meanAbs": 0.012163415076841454
+          },
+          "cpuPlacement": {
+            "insertedCasts": 186,
+            "castNodesBefore": 3,
+            "castNodesAfter": 189,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 11,
+              "Conv": 56,
+              "ConvTranspose": 7,
+              "Div": 23,
+              "GridSample": 10,
+              "Mul": 6,
+              "Resize": 5,
+              "Sub": 1
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export TorchScript opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant ts17, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "ts17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "ts17",
+          "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+          "dynamo": false,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.166,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Expand:node_expand",
+                "Expand:node_expand_1",
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 3,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0010051727294921875,
+              "meanAbs": 3.9367541686722595e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          },
+          {
+            "variant": "ts17",
+            "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+            "gridCacheEntriesCleared": 1,
+            "export": {
+              "seconds": 0.582,
+              "warnings": [
+                "1x DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/be",
+                "1x DeprecationWarning: The feature will be removed. Please remove usage of this function"
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "dynamic dims",
+                "runtime integer tensors",
+                "foldable constant subgraphs",
+                "shape/control-flow ops"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [
+                "/flownet/Expand_output_0",
+                "/flownet/Expand_1_output_0",
+                "/flownet/Concat_1_output_0",
+                "/flownet/Cast_output_0",
+                "/flownet/Add_1_output_0",
+                "/flownet/Transpose_output_0",
+                "/flownet/Add_2_output_0",
+                "/flownet/Transpose_1_output_0",
+                "/flownet/Add_3_output_0",
+                "/flownet/Transpose_2_output_0",
+                "/flownet/Add_4_output_0",
+                "/flownet/Transpose_3_output_0",
+                "/flownet/Add_6_output_0",
+                "/flownet/Transpose_4_output_0",
+                "/flownet/Add_7_output_0",
+                "/flownet/Transpose_5_output_0",
+                "/flownet/Add_8_output_0",
+                "/flownet/Transpose_6_output_0",
+                "/flownet/Add_9_output_0",
+                "/flownet/Transpose_7_output_0"
+              ],
+              "dynamicCount": 40,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [
+                "ConstantOfShape:/flownet/ConstantOfShape_output_0:INT64",
+                "Mul:/flownet/Mul_2_output_0:INT64",
+                "Equal:/flownet/Equal_output_0:BOOL",
+                "Where:/flownet/Where_output_0:INT64",
+                "ConstantOfShape:/flownet/ConstantOfShape_1_output_0:INT64",
+                "Mul:/flownet/Mul_3_output_0:INT64",
+                "Equal:/flownet/Equal_1_output_0:BOOL",
+                "Where:/flownet/Where_1_output_0:INT64"
+              ],
+              "runtimeIntegerCount": 8,
+              "foldableNodes": [
+                "ConstantOfShape:/flownet/ConstantOfShape",
+                "Mul:/flownet/Mul_2",
+                "Equal:/flownet/Equal",
+                "Where:/flownet/Where",
+                "Expand:/flownet/Expand",
+                "ConstantOfShape:/flownet/ConstantOfShape_1",
+                "Mul:/flownet/Mul_3",
+                "Equal:/flownet/Equal_1",
+                "Where:/flownet/Where_1",
+                "Expand:/flownet/Expand_1",
+                "Concat:/flownet/Concat_1",
+                "Cast:/flownet/Cast"
+              ],
+              "foldableCount": 12,
+              "forbiddenOps": {
+                "ConstantOfShape": 2
+              },
+              "constantNodes": 303,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 332,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.000471651554107666,
+              "meanAbs": 2.525330454875815e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/540p/synthetic",
+          "outSha256": "c6b754ec2e2fa5e41e2a3ec0d8f644584f30de7ea25a2f672843538d6dea62e6",
+          "inputSha256F32": [
+            "d01a0055b80230f1d8cfc69b5a9f09974bb4c3d84c989017ee2e05ae866d748e",
+            "1132635c4a1cc6f9001aa60445cf9be552c30e802aeee34b8118b8e1287cdead"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/540p/natural",
+          "outSha256": "db0a86fb664e537ddbb972694711a4536f48fa1d5611d58dfad803420c611c4d",
+          "inputSha256F32": [
+            "b91fee158fba2661d0dacc3aaf175607c7972801dabf9b05a4e3e4cb0e54bba1",
+            "3f09ee623afea6ef38b1100aa160f80790901eecc905010f3d9c76f737f83b52"
+          ]
+        }
+      },
+      "status": "failed-gate-A",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/540p/fp16.receipt.json",
+        "sha256": "2022a8dfb65cb9d72326068b22fd27e262f54be27cd6a15adf77294508a9cb68",
+        "bytes": 25045
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:44-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.076,
+          "restoredFp32Initializers": [
+            {
+              "initializer": "/flownet/block0/Constant_output_0",
+              "as": "/flownet/block0/Constant_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.03125,
+                0.03125
+              ]
+            },
+            {
+              "initializer": "/flownet/block0/Constant_1_output_0",
+              "as": "/flownet/block0/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                32.0,
+                32.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block1/Constant_1_output_0",
+              "as": "/flownet/block1/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.0625,
+                0.0625
+              ]
+            },
+            {
+              "initializer": "/flownet/block1/Constant_4_output_0",
+              "as": "/flownet/block1/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                16.0,
+                16.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block2/Constant_1_output_0",
+              "as": "/flownet/block2/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.125,
+                0.125
+              ]
+            },
+            {
+              "initializer": "/flownet/block2/Constant_4_output_0",
+              "as": "/flownet/block2/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block3/Constant_output_0",
+              "as": "/flownet/block3/Constant_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "initializer": "/flownet/block3/Constant_4_output_0",
+              "as": "/flownet/block3/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block4/Constant_4_output_0",
+              "as": "/flownet/block4/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "removedOrphanInitializers": [
+            "/flownet/block2/Constant_1_output_0",
+            "/flownet/block3/Constant_output_0",
+            "/flownet/block0/Constant_output_0",
+            "/flownet/block2/Constant_4_output_0",
+            "/flownet/block0/Constant_1_output_0",
+            "/flownet/block3/Constant_4_output_0",
+            "/flownet/block1/Constant_1_output_0",
+            "/flownet/block4/Constant_4_output_0",
+            "/flownet/block1/Constant_4_output_0"
+          ],
+          "weightClamping": {
+            "belowMinPositive": 19063,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 232941,
+            "elements": 6929433
+          },
+          "converterWarnings": 44,
+          "converterWarningSamples": [
+            "1x the float32 number 4.034387546258955e-10 will be truncated to 1e-07",
+            "1x the float32 number -6.4740728333845254e-09 will be truncated to -1e-07",
+            "1x the float32 number 3.8409059266442114e-10 will be truncated to 1e-07",
+            "1x the float32 number -4.397407771250528e-09 will be truncated to -1e-07",
+            "1x the float32 number 8.980059473806534e-10 will be truncated to 1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "540p",
+      "precision": "fp32",
+      "sha256": "827c57ae522782b5604b1de23311208317f864a9cb287508fc6658a9170c61bb",
+      "bytes": 27800860,
+      "opset": 17,
+      "irVersion": 8,
+      "nodeCount": 332,
+      "initializerBytes": 27717788,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            640,
+            1024
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.000471651554107666,
+        "meanAbs": 2.525330454875815e-06,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.01,
+        "seconds": 0.738,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.00023621320724487305,
+            "meanAbs": 2.1728562105374235e-06,
+            "psnr": 104.54803087634234,
+            "unclamped": {
+              "maxAbs": 0.00023621320724487305,
+              "meanAbs": 2.1728562105374235e-06
+            },
+            "outputRange": [
+              0.0156862735748291,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.166
+          },
+          "natural": {
+            "maxAbs": 0.000471651554107666,
+            "meanAbs": 2.525330454875815e-06,
+            "psnr": 101.70283847321427,
+            "unclamped": {
+              "maxAbs": 0.000471651554107666,
+              "meanAbs": 2.525330454875815e-06
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.17
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.00029331445693969727,
+            "meanAbs": 2.025840890214399e-06
+          },
+          "natural": {
+            "maxAbs": 0.000486910343170166,
+            "meanAbs": 2.7341585053629063e-06
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export TorchScript opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant ts17",
+      "exportVariant": {
+        "id": "ts17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "ts17",
+          "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+          "dynamo": false,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.166,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Expand:node_expand",
+                "Expand:node_expand_1",
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 3,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0010051727294921875,
+              "meanAbs": 3.9367541686722595e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          },
+          {
+            "variant": "ts17",
+            "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+            "gridCacheEntriesCleared": 1,
+            "export": {
+              "seconds": 0.582,
+              "warnings": [
+                "1x DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/be",
+                "1x DeprecationWarning: The feature will be removed. Please remove usage of this function"
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "dynamic dims",
+                "runtime integer tensors",
+                "foldable constant subgraphs",
+                "shape/control-flow ops"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [
+                "/flownet/Expand_output_0",
+                "/flownet/Expand_1_output_0",
+                "/flownet/Concat_1_output_0",
+                "/flownet/Cast_output_0",
+                "/flownet/Add_1_output_0",
+                "/flownet/Transpose_output_0",
+                "/flownet/Add_2_output_0",
+                "/flownet/Transpose_1_output_0",
+                "/flownet/Add_3_output_0",
+                "/flownet/Transpose_2_output_0",
+                "/flownet/Add_4_output_0",
+                "/flownet/Transpose_3_output_0",
+                "/flownet/Add_6_output_0",
+                "/flownet/Transpose_4_output_0",
+                "/flownet/Add_7_output_0",
+                "/flownet/Transpose_5_output_0",
+                "/flownet/Add_8_output_0",
+                "/flownet/Transpose_6_output_0",
+                "/flownet/Add_9_output_0",
+                "/flownet/Transpose_7_output_0"
+              ],
+              "dynamicCount": 40,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [
+                "ConstantOfShape:/flownet/ConstantOfShape_output_0:INT64",
+                "Mul:/flownet/Mul_2_output_0:INT64",
+                "Equal:/flownet/Equal_output_0:BOOL",
+                "Where:/flownet/Where_output_0:INT64",
+                "ConstantOfShape:/flownet/ConstantOfShape_1_output_0:INT64",
+                "Mul:/flownet/Mul_3_output_0:INT64",
+                "Equal:/flownet/Equal_1_output_0:BOOL",
+                "Where:/flownet/Where_1_output_0:INT64"
+              ],
+              "runtimeIntegerCount": 8,
+              "foldableNodes": [
+                "ConstantOfShape:/flownet/ConstantOfShape",
+                "Mul:/flownet/Mul_2",
+                "Equal:/flownet/Equal",
+                "Where:/flownet/Where",
+                "Expand:/flownet/Expand",
+                "ConstantOfShape:/flownet/ConstantOfShape_1",
+                "Mul:/flownet/Mul_3",
+                "Equal:/flownet/Equal_1",
+                "Where:/flownet/Where_1",
+                "Expand:/flownet/Expand_1",
+                "Concat:/flownet/Concat_1",
+                "Cast:/flownet/Cast"
+              ],
+              "foldableCount": 12,
+              "forbiddenOps": {
+                "ConstantOfShape": 2
+              },
+              "constantNodes": 303,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 332,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.000471651554107666,
+              "meanAbs": 2.525330454875815e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/540p/synthetic",
+          "outSha256": "c6b754ec2e2fa5e41e2a3ec0d8f644584f30de7ea25a2f672843538d6dea62e6",
+          "inputSha256F32": [
+            "d01a0055b80230f1d8cfc69b5a9f09974bb4c3d84c989017ee2e05ae866d748e",
+            "1132635c4a1cc6f9001aa60445cf9be552c30e802aeee34b8118b8e1287cdead"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/540p/natural",
+          "outSha256": "db0a86fb664e537ddbb972694711a4536f48fa1d5611d58dfad803420c611c4d",
+          "inputSha256F32": [
+            "b91fee158fba2661d0dacc3aaf175607c7972801dabf9b05a4e3e4cb0e54bba1",
+            "3f09ee623afea6ef38b1100aa160f80790901eecc905010f3d9c76f737f83b52"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/540p/fp32.receipt.json",
+        "sha256": "c7030a99113095514c339a9d710cb55032deb3d19166bbbe009c5be1ec0ec805",
+        "bytes": 20616
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:44-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556"
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "720p",
+      "precision": "fp16",
+      "sha256": "5128f29222535b429a1ecdc6e042185befc7169a55f8236adae65d312a51108a",
+      "bytes": 15276268,
+      "opset": 17,
+      "irVersion": 8,
+      "nodeCount": 335,
+      "initializerBytes": 15169714,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.6091251075267792,
+        "meanAbs": 0.008143569832595218,
+        "pass": false,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.038,
+        "seconds": 1.519,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.430635541677475,
+            "meanAbs": 0.0052396920354418185,
+            "psnr": 40.612988171374084,
+            "unclamped": {
+              "maxAbs": 0.430635541677475,
+              "meanAbs": 0.0052396920354418185
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.7000321903935185,
+              "max": 110
+            },
+            "runSeconds": 0.341
+          },
+          "natural": {
+            "maxAbs": 0.6091251075267792,
+            "meanAbs": 0.008143569832595218,
+            "psnr": 34.69942773375627,
+            "unclamped": {
+              "maxAbs": 0.6091251075267792,
+              "meanAbs": 0.008143569832595218
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.6658865017361111,
+              "max": 155
+            },
+            "runSeconds": 0.336
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.43064671754837036,
+            "meanAbs": 0.005239807091939897
+          },
+          "natural": {
+            "maxAbs": 0.6091286838054657,
+            "meanAbs": 0.00814260479120401
+          },
+          "cpuPlacement": {
+            "insertedCasts": 186,
+            "castNodesBefore": 3,
+            "castNodesAfter": 189,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 11,
+              "Conv": 56,
+              "ConvTranspose": 7,
+              "Div": 23,
+              "GridSample": 10,
+              "Mul": 6,
+              "Resize": 5,
+              "Sub": 1
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export TorchScript opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant ts17, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "ts17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "ts17",
+          "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+          "dynamo": false,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.163,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Expand:node_expand",
+                "Expand:node_expand_1",
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 3,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0012236535549163818,
+              "meanAbs": 4.390332943876314e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          },
+          {
+            "variant": "ts17",
+            "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+            "gridCacheEntriesCleared": 1,
+            "export": {
+              "seconds": 0.836,
+              "warnings": [
+                "1x DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/be",
+                "1x DeprecationWarning: The feature will be removed. Please remove usage of this function"
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "dynamic dims",
+                "runtime integer tensors",
+                "foldable constant subgraphs",
+                "shape/control-flow ops"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [
+                "/flownet/Expand_output_0",
+                "/flownet/Expand_1_output_0",
+                "/flownet/Concat_1_output_0",
+                "/flownet/Cast_output_0",
+                "/flownet/Add_1_output_0",
+                "/flownet/Transpose_output_0",
+                "/flownet/Add_2_output_0",
+                "/flownet/Transpose_1_output_0",
+                "/flownet/Add_3_output_0",
+                "/flownet/Transpose_2_output_0",
+                "/flownet/Add_4_output_0",
+                "/flownet/Transpose_3_output_0",
+                "/flownet/Add_6_output_0",
+                "/flownet/Transpose_4_output_0",
+                "/flownet/Add_7_output_0",
+                "/flownet/Transpose_5_output_0",
+                "/flownet/Add_8_output_0",
+                "/flownet/Transpose_6_output_0",
+                "/flownet/Add_9_output_0",
+                "/flownet/Transpose_7_output_0"
+              ],
+              "dynamicCount": 40,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [
+                "ConstantOfShape:/flownet/ConstantOfShape_output_0:INT64",
+                "Mul:/flownet/Mul_2_output_0:INT64",
+                "Equal:/flownet/Equal_output_0:BOOL",
+                "Where:/flownet/Where_output_0:INT64",
+                "ConstantOfShape:/flownet/ConstantOfShape_1_output_0:INT64",
+                "Mul:/flownet/Mul_3_output_0:INT64",
+                "Equal:/flownet/Equal_1_output_0:BOOL",
+                "Where:/flownet/Where_1_output_0:INT64"
+              ],
+              "runtimeIntegerCount": 8,
+              "foldableNodes": [
+                "ConstantOfShape:/flownet/ConstantOfShape",
+                "Mul:/flownet/Mul_2",
+                "Equal:/flownet/Equal",
+                "Where:/flownet/Where",
+                "Expand:/flownet/Expand",
+                "ConstantOfShape:/flownet/ConstantOfShape_1",
+                "Mul:/flownet/Mul_3",
+                "Equal:/flownet/Equal_1",
+                "Where:/flownet/Where_1",
+                "Expand:/flownet/Expand_1",
+                "Concat:/flownet/Concat_1",
+                "Cast:/flownet/Cast"
+              ],
+              "foldableCount": 12,
+              "forbiddenOps": {
+                "ConstantOfShape": 2
+              },
+              "constantNodes": 303,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 332,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0008686184883117676,
+              "meanAbs": 3.873797669449222e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/720p/synthetic",
+          "outSha256": "94da55198b124ab73e20521045e6456d871ee709c4e8e94e4ec82d640336d717",
+          "inputSha256F32": [
+            "55045f6393f229fa5610267061be708675c8f78cae4b3d6ae429a868ef4ff250",
+            "cb2880a33852d310df42ca7da588f5ef4b5f6277abed043a0a0f36b81819a74c"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/720p/natural",
+          "outSha256": "6103cdffafef73acc7a25ac5b8a86ae2cc4582df88d4e76f6683be502815a16c",
+          "inputSha256F32": [
+            "fb801849ada40bbb656fde2ccee857812082739efa045018a6f5b9a76bd9e81a",
+            "b29bbc2b28a6a28b434bba8efb0c3112ee5cc59bd23b8a2dbd0360bab1374bde"
+          ]
+        }
+      },
+      "status": "failed-gate-A",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/720p/fp16.receipt.json",
+        "sha256": "a4029aacae7d08e4b8ec92847a57e06e50f026332b6e0e3acec0e83c320e3fb9",
+        "bytes": 25036
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:06-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.081,
+          "restoredFp32Initializers": [
+            {
+              "initializer": "/flownet/block0/Constant_output_0",
+              "as": "/flownet/block0/Constant_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.03125,
+                0.03125
+              ]
+            },
+            {
+              "initializer": "/flownet/block0/Constant_1_output_0",
+              "as": "/flownet/block0/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                32.0,
+                32.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block1/Constant_1_output_0",
+              "as": "/flownet/block1/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.0625,
+                0.0625
+              ]
+            },
+            {
+              "initializer": "/flownet/block1/Constant_4_output_0",
+              "as": "/flownet/block1/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                16.0,
+                16.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block2/Constant_1_output_0",
+              "as": "/flownet/block2/Constant_1_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.125,
+                0.125
+              ]
+            },
+            {
+              "initializer": "/flownet/block2/Constant_4_output_0",
+              "as": "/flownet/block2/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block3/Constant_output_0",
+              "as": "/flownet/block3/Constant_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "initializer": "/flownet/block3/Constant_4_output_0",
+              "as": "/flownet/block3/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "initializer": "/flownet/block4/Constant_4_output_0",
+              "as": "/flownet/block4/Constant_4_output_0__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "removedOrphanInitializers": [
+            "/flownet/block2/Constant_1_output_0",
+            "/flownet/block3/Constant_output_0",
+            "/flownet/block0/Constant_output_0",
+            "/flownet/block2/Constant_4_output_0",
+            "/flownet/block0/Constant_1_output_0",
+            "/flownet/block3/Constant_4_output_0",
+            "/flownet/block1/Constant_1_output_0",
+            "/flownet/block4/Constant_4_output_0",
+            "/flownet/block1/Constant_4_output_0"
+          ],
+          "weightClamping": {
+            "belowMinPositive": 19063,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 232941,
+            "elements": 7584793
+          },
+          "converterWarnings": 44,
+          "converterWarningSamples": [
+            "1x the float32 number 4.034387546258955e-10 will be truncated to 1e-07",
+            "1x the float32 number -6.4740728333845254e-09 will be truncated to -1e-07",
+            "1x the float32 number 3.8409059266442114e-10 will be truncated to 1e-07",
+            "1x the float32 number -4.397407771250528e-09 will be truncated to -1e-07",
+            "1x the float32 number 8.980059473806534e-10 will be truncated to 1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "720p",
+      "precision": "fp32",
+      "sha256": "9fec2b658794ecbf8f278d1dfd360fada11e3df6429bb211ff250d94e2bf8c24",
+      "bytes": 30422300,
+      "opset": 17,
+      "irVersion": 8,
+      "nodeCount": 332,
+      "initializerBytes": 30339228,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            768,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.0008686184883117676,
+        "meanAbs": 3.873797669449222e-06,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.011,
+        "seconds": 1.164,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0004741847515106201,
+            "meanAbs": 2.756456361078529e-06,
+            "psnr": 104.36053098786385,
+            "unclamped": {
+              "maxAbs": 0.0004741847515106201,
+              "meanAbs": 2.756456361078529e-06
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.257
+          },
+          "natural": {
+            "maxAbs": 0.0008686184883117676,
+            "meanAbs": 3.873797669449222e-06,
+            "psnr": 97.90325137935824,
+            "unclamped": {
+              "maxAbs": 0.0008686184883117676,
+              "meanAbs": 3.873797669449222e-06
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.277
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0002963542938232422,
+            "meanAbs": 2.915656499074733e-06
+          },
+          "natural": {
+            "maxAbs": 0.0006872415542602539,
+            "meanAbs": 3.7107668742368613e-06
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export TorchScript opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant ts17",
+      "exportVariant": {
+        "id": "ts17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "ts17",
+          "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+          "dynamo": false,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.163,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Expand:node_expand",
+                "Expand:node_expand_1",
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 3,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0012236535549163818,
+              "meanAbs": 4.390332943876314e-06,
+              "pass": false,
+              "status": null,
+              "reason": null
+            },
+            "ok": false
+          },
+          {
+            "variant": "ts17",
+            "description": "torch.onnx.export(dynamo=False, opset_version=17, do_constant_folding=True), grid cache cleared",
+            "gridCacheEntriesCleared": 1,
+            "export": {
+              "seconds": 0.836,
+              "warnings": [
+                "1x DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/be",
+                "1x DeprecationWarning: The feature will be removed. Please remove usage of this function"
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "dynamic dims",
+                "runtime integer tensors",
+                "foldable constant subgraphs",
+                "shape/control-flow ops"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [
+                "/flownet/Expand_output_0",
+                "/flownet/Expand_1_output_0",
+                "/flownet/Concat_1_output_0",
+                "/flownet/Cast_output_0",
+                "/flownet/Add_1_output_0",
+                "/flownet/Transpose_output_0",
+                "/flownet/Add_2_output_0",
+                "/flownet/Transpose_1_output_0",
+                "/flownet/Add_3_output_0",
+                "/flownet/Transpose_2_output_0",
+                "/flownet/Add_4_output_0",
+                "/flownet/Transpose_3_output_0",
+                "/flownet/Add_6_output_0",
+                "/flownet/Transpose_4_output_0",
+                "/flownet/Add_7_output_0",
+                "/flownet/Transpose_5_output_0",
+                "/flownet/Add_8_output_0",
+                "/flownet/Transpose_6_output_0",
+                "/flownet/Add_9_output_0",
+                "/flownet/Transpose_7_output_0"
+              ],
+              "dynamicCount": 40,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [
+                "ConstantOfShape:/flownet/ConstantOfShape_output_0:INT64",
+                "Mul:/flownet/Mul_2_output_0:INT64",
+                "Equal:/flownet/Equal_output_0:BOOL",
+                "Where:/flownet/Where_output_0:INT64",
+                "ConstantOfShape:/flownet/ConstantOfShape_1_output_0:INT64",
+                "Mul:/flownet/Mul_3_output_0:INT64",
+                "Equal:/flownet/Equal_1_output_0:BOOL",
+                "Where:/flownet/Where_1_output_0:INT64"
+              ],
+              "runtimeIntegerCount": 8,
+              "foldableNodes": [
+                "ConstantOfShape:/flownet/ConstantOfShape",
+                "Mul:/flownet/Mul_2",
+                "Equal:/flownet/Equal",
+                "Where:/flownet/Where",
+                "Expand:/flownet/Expand",
+                "ConstantOfShape:/flownet/ConstantOfShape_1",
+                "Mul:/flownet/Mul_3",
+                "Equal:/flownet/Equal_1",
+                "Where:/flownet/Where_1",
+                "Expand:/flownet/Expand_1",
+                "Concat:/flownet/Concat_1",
+                "Cast:/flownet/Cast"
+              ],
+              "foldableCount": 12,
+              "forbiddenOps": {
+                "ConstantOfShape": 2
+              },
+              "constantNodes": 303,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 332,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0008686184883117676,
+              "meanAbs": 3.873797669449222e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/720p/synthetic",
+          "outSha256": "94da55198b124ab73e20521045e6456d871ee709c4e8e94e4ec82d640336d717",
+          "inputSha256F32": [
+            "55045f6393f229fa5610267061be708675c8f78cae4b3d6ae429a868ef4ff250",
+            "cb2880a33852d310df42ca7da588f5ef4b5f6277abed043a0a0f36b81819a74c"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/720p/natural",
+          "outSha256": "6103cdffafef73acc7a25ac5b8a86ae2cc4582df88d4e76f6683be502815a16c",
+          "inputSha256F32": [
+            "fb801849ada40bbb656fde2ccee857812082739efa045018a6f5b9a76bd9e81a",
+            "b29bbc2b28a6a28b434bba8efb0c3112ee5cc59bd23b8a2dbd0360bab1374bde"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/720p/fp32.receipt.json",
+        "sha256": "99f068b5b05f4b640f13be16f0e19f0d60117cfee4b7910eb00b1d6c75f28efa",
+        "bytes": 20602
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:06-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556"
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "small",
+      "precision": "fp16",
+      "sha256": "b56eb87b22c7e3f84a7d64b9e7900caff0e5f32fa2331aca8e49aee33072a2b8",
+      "bytes": 11568817,
+      "opset": 17,
+      "irVersion": 10,
+      "nodeCount": 325,
+      "initializerBytes": 11499696,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.3883642256259918,
+        "meanAbs": 0.004218120560900443,
+        "pass": false,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.04,
+        "seconds": 0.17,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.18255675956606865,
+            "meanAbs": 0.002227710922153866,
+            "psnr": 46.07524170570517,
+            "unclamped": {
+              "maxAbs": 0.18255675956606865,
+              "meanAbs": 0.002227710922153866
+            },
+            "outputRange": [
+              0.003921508323401213,
+              0.9984771013259888
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.9050496419270834,
+              "max": 47
+            },
+            "runSeconds": 0.022
+          },
+          "natural": {
+            "maxAbs": 0.3883642256259918,
+            "meanAbs": 0.004218120560900443,
+            "psnr": 38.55822240271674,
+            "unclamped": {
+              "maxAbs": 0.3883642256259918,
+              "meanAbs": 0.004218120560900443
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 0.83734130859375,
+              "max": 99
+            },
+            "runSeconds": 0.021
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.18445492535829544,
+            "meanAbs": 0.0022261178427479913
+          },
+          "natural": {
+            "maxAbs": 0.3873082101345062,
+            "meanAbs": 0.004214581398973043
+          },
+          "cpuPlacement": {
+            "insertedCasts": 171,
+            "castNodesBefore": 3,
+            "castNodesAfter": 174,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 11,
+              "Concat": 4,
+              "Conv": 56,
+              "ConvTranspose": 7,
+              "Div": 23,
+              "GridSample": 10,
+              "Mul": 6,
+              "Resize": 1,
+              "Sub": 1
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant dyn17, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "dyn17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "dyn17",
+          "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+          "dynamo": true,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.27,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 1,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0005144476890563965,
+              "meanAbs": 1.435852031202055e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/small/synthetic",
+          "outSha256": "cc210573f9f07d3e78484a5bd3fb087705adb27f9d8b99a71dcc02cedc686347",
+          "inputSha256F32": [
+            "c2735f0eb96746bb5d057d988f009f9b82c05ad578d76f1d9c0067ec61ed6cec",
+            "2afa89d88991123ad1866f640589bd66a2b7669740fbdfdfcbda04b07f3ddc44"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/small/natural",
+          "outSha256": "db704136285b25955c67fcbae260290f81792499ef9898e70f5e2129c1cc9ac6",
+          "inputSha256F32": [
+            "65131b6499be987bd8f962898bb93cfc7cc6aab2bd28a77db59af755d9505e5c",
+            "a2402206598180e564f33b418fe095cebbf45283db5dd987797d60a839688349"
+          ]
+        }
+      },
+      "status": "failed-gate-A",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/small/fp16.receipt.json",
+        "sha256": "726b58d008d2598f8f5c0f33cd1ff683a915b90fe671d1ee257828f38b5c0ca6",
+        "bytes": 19813
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=small --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:25:38-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012532",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.061,
+          "restoredFp32Initializers": [
+            {
+              "initializer": "val_35",
+              "as": "val_35__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.03125,
+                0.03125
+              ]
+            },
+            {
+              "initializer": "val_36",
+              "as": "val_36__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                32.0,
+                32.0
+              ]
+            },
+            {
+              "initializer": "val_259",
+              "as": "val_259__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.0625,
+                0.0625
+              ]
+            },
+            {
+              "initializer": "val_262",
+              "as": "val_262__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                16.0,
+                16.0
+              ]
+            },
+            {
+              "initializer": "val_413",
+              "as": "val_413__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.125,
+                0.125
+              ]
+            },
+            {
+              "initializer": "val_416",
+              "as": "val_416__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "initializer": "val_567",
+              "as": "val_567__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "initializer": "val_570",
+              "as": "val_570__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "initializer": "val_721",
+              "as": "val_721__fp32",
+              "slot": "scales",
+              "values": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "removedOrphanInitializers": [
+            "val_567",
+            "val_262",
+            "val_35",
+            "val_36",
+            "val_413",
+            "val_721",
+            "val_416",
+            "val_570",
+            "val_259"
+          ],
+          "weightClamping": {
+            "belowMinPositive": 19063,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 232941,
+            "elements": 5749784
+          },
+          "converterWarnings": 44,
+          "converterWarningSamples": [
+            "1x the float32 number 3.6534171243829405e-08 will be truncated to 1e-07",
+            "1x the float32 number 3.8877018271321617e-10 will be truncated to 1e-07",
+            "1x the float32 number -4.213544713138617e-08 will be truncated to -1e-07",
+            "1x the float32 number 5.055910357043558e-09 will be truncated to 1e-07",
+            "1x the float32 number -1.7832430643238695e-08 will be truncated to -1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rife-4.25-lite",
+      "profile": "small",
+      "precision": "fp32",
+      "sha256": "a0b1501e6c9a01d80aa019351556c6d45237f41f080e1099a29d713473754701",
+      "bytes": 23067978,
+      "opset": 17,
+      "irVersion": 10,
+      "nodeCount": 322,
+      "initializerBytes": 22999192,
+      "inputs": [
+        {
+          "name": "img0",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        },
+        {
+          "name": "img1",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.0005144476890563965,
+        "meanAbs": 1.435852031202055e-06,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "synthetic",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.009,
+        "seconds": 0.108,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0005144476890563965,
+            "meanAbs": 1.3098698445901391e-06,
+            "psnr": 103.83746938278931,
+            "unclamped": {
+              "maxAbs": 0.0005144476890563965,
+              "meanAbs": 1.3098698445901391e-06
+            },
+            "outputRange": [
+              0.003921568393707275,
+              0.9943848252296448
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.019
+          },
+          "natural": {
+            "maxAbs": 0.0001461505889892578,
+            "meanAbs": 1.435852031202055e-06,
+            "psnr": 107.17559771547508,
+            "unclamped": {
+              "maxAbs": 0.0001461505889892578,
+              "meanAbs": 1.435852031202055e-06
+            },
+            "outputRange": [
+              0.0,
+              1.0
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.017
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0004436969757080078,
+            "meanAbs": 1.3972330871562615e-06
+          },
+          "natural": {
+            "maxAbs": 0.00013488531112670898,
+            "meanAbs": 1.7144050854025496e-06
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 17 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant dyn17",
+      "exportVariant": {
+        "id": "dyn17",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "dyn17",
+          "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+          "dynamo": true,
+          "opsetVersion": 17,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)"
+        },
+        "attempts": [
+          {
+            "variant": "dyn17",
+            "description": "torch.onnx.export(dynamo=True, opset_version=17, optimize=True), backwarp grid cache cleared",
+            "gridCacheEntriesCleared": 0,
+            "export": {
+              "seconds": 2.27,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "staticBeforeOrtBasic": {
+              "problems": [
+                "foldable constant subgraphs"
+              ],
+              "shapeInference": "ok (strict)",
+              "dynamicValues": [],
+              "dynamicCount": 0,
+              "untypedValues": [],
+              "untypedCount": 0,
+              "runtimeIntegerTensors": [],
+              "runtimeIntegerCount": 0,
+              "foldableNodes": [
+                "Concat:node_cat_2"
+              ],
+              "foldableCount": 1,
+              "forbiddenOps": {},
+              "constantNodes": 0,
+              "integerInitializersOutsideShapeInputs": [],
+              "nonDefaultDomains": [],
+              "ok": false
+            },
+            "ortBasicOptimization": "applied (offline, ORT_ENABLE_BASIC, CPU)",
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 322,
+              "opsetImport": {
+                "ai.onnx": 17
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 0.0005144476890563965,
+              "meanAbs": 1.435852031202055e-06,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/small/synthetic",
+          "outSha256": "cc210573f9f07d3e78484a5bd3fb087705adb27f9d8b99a71dcc02cedc686347",
+          "inputSha256F32": [
+            "c2735f0eb96746bb5d057d988f009f9b82c05ad578d76f1d9c0067ec61ed6cec",
+            "2afa89d88991123ad1866f640589bd66a2b7669740fbdfdfcbda04b07f3ddc44"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rife-4.25-lite/small/natural",
+          "outSha256": "db704136285b25955c67fcbae260290f81792499ef9898e70f5e2129c1cc9ac6",
+          "inputSha256F32": [
+            "65131b6499be987bd8f962898bb93cfc7cc6aab2bd28a77db59af755d9505e5c",
+            "a2402206598180e564f33b418fe095cebbf45283db5dd987797d60a839688349"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rife-4.25-lite/small/fp32.receipt.json",
+        "sha256": "edd2f99c5012c71f1c6ff1d5b9e9c8d5685cd1d09288648aec857de706dee05c",
+        "bytes": 16115
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=small --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:25:38-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012532"
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "1080p",
+      "precision": "fp16",
+      "sha256": "f128e8d2d6803647a8aaefe88b1239821de032be4e77bf35c8dd331ca14388c3",
+      "bytes": 173997,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 62,
+      "initializerBytes": 78716,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            540,
+            960
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.002768099308013916,
+        "meanAbs": 0.00039078978829059827,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "synthetic"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.005,
+        "seconds": 0.412,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0022173523902893066,
+            "meanAbs": 0.00039078978829059827,
+            "psnr": 65.9835794550121,
+            "unclamped": {
+              "maxAbs": 0.0022173523902893066,
+              "meanAbs": 0.00039193044821969207
+            },
+            "outputRange": [
+              -0.20940661430358887,
+              1.4536820650100708
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.063
+          },
+          "natural": {
+            "maxAbs": 0.002768099308013916,
+            "meanAbs": 0.00038933369505783405,
+            "psnr": 65.92015514320937,
+            "unclamped": {
+              "maxAbs": 0.002768099308013916,
+              "meanAbs": 0.0003985289951667426
+            },
+            "outputRange": [
+              -0.3009669780731201,
+              1.3713805675506592
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.064
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0022173523902893066,
+            "meanAbs": 0.00039078978829059827
+          },
+          "natural": {
+            "maxAbs": 0.002768099308013916,
+            "meanAbs": 0.00038933369505783405
+          },
+          "cpuPlacement": {
+            "insertedCasts": 27,
+            "castNodesBefore": 2,
+            "castNodesAfter": 29,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 10,
+              "Conv": 7,
+              "Mul": 5,
+              "Pow": 5
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 1.086,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.635883331298828e-06,
+              "meanAbs": 5.029676483432936e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/1080p/synthetic",
+          "outSha256": "66957b08f403192dc27edaba94c8be65a8733cd0a36c488db821a16e713b3a2b",
+          "inputSha256F32": [
+            "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/1080p/natural",
+          "outSha256": "10d8656dfe62a37b45cda7207f4893f0ab09e3d4f3f00787e229dd87c5e6d300",
+          "inputSha256F32": [
+            "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/1080p/fp16.receipt.json",
+        "sha256": "360d57402c822874643f935b69dfa8d990ec13f25891f9f63fbe2c68cd72dae1",
+        "bytes": 15621
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:36-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.002,
+          "restoredFp32Initializers": [],
+          "removedOrphanInitializers": [],
+          "weightClamping": {
+            "belowMinPositive": 1,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 44,
+            "elements": 39314
+          },
+          "converterWarnings": 1,
+          "converterWarningSamples": [
+            "1x the float32 number -1.6996636986732483e-08 will be truncated to -1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "1080p",
+      "precision": "fp32",
+      "sha256": "2b9d09b481fac1bb7b0f6e4d0fc7a1c8daf3340bca17adb24da102f6eee118ea",
+      "bytes": 251994,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 60,
+      "initializerBytes": 157344,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            540,
+            960
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            1080,
+            1920
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 3.635883331298828e-06,
+        "meanAbs": 5.029676483432936e-07,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "synthetic",
+          "meanAbs": "synthetic"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.016,
+        "seconds": 0.367,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 3.635883331298828e-06,
+            "meanAbs": 5.029676483432936e-07,
+            "psnr": 123.91188130467054,
+            "unclamped": {
+              "maxAbs": 3.635883331298828e-06,
+              "meanAbs": 5.045151097843657e-07
+            },
+            "outputRange": [
+              -0.2086523175239563,
+              1.4549975395202637
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.052
+          },
+          "natural": {
+            "maxAbs": 3.4570693969726562e-06,
+            "meanAbs": 4.921082512735994e-07,
+            "psnr": 124.01730790842015,
+            "unclamped": {
+              "maxAbs": 3.4570693969726562e-06,
+              "meanAbs": 5.085446690721472e-07
+            },
+            "outputRange": [
+              -0.30053049325942993,
+              1.371725082397461
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.049
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 3.635883331298828e-06,
+            "meanAbs": 5.029676483432936e-07
+          },
+          "natural": {
+            "maxAbs": 3.4570693969726562e-06,
+            "meanAbs": 4.921082512735994e-07
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 1.086,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.635883331298828e-06,
+              "meanAbs": 5.029676483432936e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/1080p/synthetic",
+          "outSha256": "66957b08f403192dc27edaba94c8be65a8733cd0a36c488db821a16e713b3a2b",
+          "inputSha256F32": [
+            "9bddf63d7078eabdac17f60b28a63f0d9cfaac91bbe3f356300f5f999472b1c0"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/1080p/natural",
+          "outSha256": "10d8656dfe62a37b45cda7207f4893f0ab09e3d4f3f00787e229dd87c5e6d300",
+          "inputSha256F32": [
+            "3f05ec700934820aa34023b923f8fc8d491e11cd67121a18b065b955ad03966c"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/1080p/fp32.receipt.json",
+        "sha256": "2a96baf46bb1f2653bdbdf06ff4a0361c7a7a810c5737702a30cc66f04cf21bc",
+        "bytes": 14367
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:36-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556"
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "720p",
+      "precision": "fp16",
+      "sha256": "41e99387c84c3c04128a42bb843e0dc53c07d686257f2264153fb1c08e5edd3d",
+      "bytes": 173997,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 62,
+      "initializerBytes": 78716,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            720,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.002506852149963379,
+        "meanAbs": 0.0003980243001229755,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.005,
+        "seconds": 0.251,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0021872520446777344,
+            "meanAbs": 0.0003919539629467347,
+            "psnr": 65.97893397194498,
+            "unclamped": {
+              "maxAbs": 0.0022072792053222656,
+              "meanAbs": 0.0003934988712642996
+            },
+            "outputRange": [
+              -0.17172302305698395,
+              1.4685466289520264
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.034
+          },
+          "natural": {
+            "maxAbs": 0.002506852149963379,
+            "meanAbs": 0.0003980243001229755,
+            "psnr": 65.72906472041291,
+            "unclamped": {
+              "maxAbs": 0.002506852149963379,
+              "meanAbs": 0.0004081340618025338
+            },
+            "outputRange": [
+              -0.21258610486984253,
+              1.2900224924087524
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.043
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0021872520446777344,
+            "meanAbs": 0.0003919539629467347
+          },
+          "natural": {
+            "maxAbs": 0.002506852149963379,
+            "meanAbs": 0.0003980243001229755
+          },
+          "cpuPlacement": {
+            "insertedCasts": 27,
+            "castNodesBefore": 2,
+            "castNodesAfter": 29,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 10,
+              "Conv": 7,
+              "Mul": 5,
+              "Pow": 5
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 1.226,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.4570693969726562e-06,
+              "meanAbs": 4.993557087779764e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/720p/synthetic",
+          "outSha256": "5427005937802fbe08b65b2b86ddaf347cbc37d3e588720f7dc4e10800fee5f0",
+          "inputSha256F32": [
+            "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/720p/natural",
+          "outSha256": "bf5368756313da0fa614edca24a77cf7bb5d4e33478291475edf0e7aeff95ee1",
+          "inputSha256F32": [
+            "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/720p/fp16.receipt.json",
+        "sha256": "d8489adc049e02b8d3ae1f0f1928215bacfd930d8380987fc291cf4bb04b2b11",
+        "bytes": 15606
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:11-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.002,
+          "restoredFp32Initializers": [],
+          "removedOrphanInitializers": [],
+          "weightClamping": {
+            "belowMinPositive": 1,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 44,
+            "elements": 39314
+          },
+          "converterWarnings": 1,
+          "converterWarningSamples": [
+            "1x the float32 number -1.6996636986732483e-08 will be truncated to -1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "720p",
+      "precision": "fp32",
+      "sha256": "b7ead88c5d0d56853cdb5be940d2178e5d9a6fb6972e829787cba6a08b85616a",
+      "bytes": 251994,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 60,
+      "initializerBytes": 157344,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            360,
+            640
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            720,
+            1280
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 3.4570693969726562e-06,
+        "meanAbs": 4.993557087779764e-07,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "synthetic",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.017,
+        "seconds": 0.388,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 3.4570693969726562e-06,
+            "meanAbs": 4.953701350037439e-07,
+            "psnr": 124.1414618468788,
+            "unclamped": {
+              "maxAbs": 3.4570693969726562e-06,
+              "meanAbs": 4.974690682502114e-07
+            },
+            "outputRange": [
+              -0.17095190286636353,
+              1.4694223403930664
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.169
+          },
+          "natural": {
+            "maxAbs": 3.3974647521972656e-06,
+            "meanAbs": 4.993557087779764e-07,
+            "psnr": 123.8822455213232,
+            "unclamped": {
+              "maxAbs": 3.3974647521972656e-06,
+              "meanAbs": 5.178809671157748e-07
+            },
+            "outputRange": [
+              -0.21214231848716736,
+              1.2901363372802734
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.038
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 3.4570693969726562e-06,
+            "meanAbs": 4.953701350037439e-07
+          },
+          "natural": {
+            "maxAbs": 3.3974647521972656e-06,
+            "meanAbs": 4.993557087779764e-07
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 1.226,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.4570693969726562e-06,
+              "meanAbs": 4.993557087779764e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/720p/synthetic",
+          "outSha256": "5427005937802fbe08b65b2b86ddaf347cbc37d3e588720f7dc4e10800fee5f0",
+          "inputSha256F32": [
+            "cab54a64345515788603a7b713156c99065f1a877bfdda1d085519f070bb11f8"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/720p/natural",
+          "outSha256": "bf5368756313da0fa614edca24a77cf7bb5d4e33478291475edf0e7aeff95ee1",
+          "inputSha256F32": [
+            "044be3fa644942ac6bf0a6c8bf394eb3c530c42c61ccb8f4087388c22db0bbf3"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/720p/fp32.receipt.json",
+        "sha256": "6575204b45e7e1a6f5914a0dd8a457f6b40616f3fce8d097c8757ffca9236be6",
+        "bytes": 14360
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "9c4f1ad7468c3ac07bf8bb47eb22c1f35360b0a7cd774d3d32b2004ded5bdf22"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 8
+          }
+        },
+        "createdAt": "2026-10-13T01:26:11-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556"
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "small",
+      "precision": "fp16",
+      "sha256": "d9a34c7ef66e9a80327c12f6121329c8eb4693f3db8514908785b969f4f79963",
+      "bytes": 173879,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 62,
+      "initializerBytes": 78716,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            128,
+            128
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 0.00243300199508667,
+        "meanAbs": 0.00039883106011406877,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.05,
+          "meanAbs": 0.002
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.005,
+        "seconds": 0.024,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 0.0021252036094665527,
+            "meanAbs": 0.000382517210811469,
+            "psnr": 66.11409781254137,
+            "unclamped": {
+              "maxAbs": 0.0021252036094665527,
+              "meanAbs": 0.0003867385663013506
+            },
+            "outputRange": [
+              -0.3273281455039978,
+              1.3091259002685547
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.003
+          },
+          "natural": {
+            "maxAbs": 0.00243300199508667,
+            "meanAbs": 0.00039883106011406877,
+            "psnr": 65.70201448331727,
+            "unclamped": {
+              "maxAbs": 0.00243300199508667,
+              "meanAbs": 0.0004078158110636017
+            },
+            "outputRange": [
+              -0.1965370774269104,
+              1.2437270879745483
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.002
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 0.0021252036094665527,
+            "meanAbs": 0.000382517210811469
+          },
+          "natural": {
+            "maxAbs": 0.00243300199508667,
+            "meanAbs": 0.00039883106011406877
+          },
+          "cpuPlacement": {
+            "insertedCasts": 27,
+            "castNodesBefore": 2,
+            "castNodesAfter": 29,
+            "nodesFedByInsertedFp32Casts": {
+              "Add": 10,
+              "Conv": 7,
+              "Mul": 5,
+              "Pow": 5
+            },
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20, fp16 by onnxconverter-common",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 0.971,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.427267074584961e-06,
+              "meanAbs": 5.028612463653381e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/small/synthetic",
+          "outSha256": "32463e0ace6426ebfe39467fcf92bc81791edd65f2baf9e1431015b6639f2759",
+          "inputSha256F32": [
+            "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/small/natural",
+          "outSha256": "5d0a04a27953a91951bf4271aa73a2b351f47bb39d3ed714ca1444fc35c5403a",
+          "inputSha256F32": [
+            "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/small/fp16.receipt.json",
+        "sha256": "b70f332fdf036481eed0723cb950e31c0869ae6c34a64bb0c6393c9b3947ac2d",
+        "bytes": 15573
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=small --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "ecc05c857ea668761139d3a5f748e4f284a6be606768912e82414e861c0ec549"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 7
+          }
+        },
+        "createdAt": "2026-10-13T01:20:13-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012003",
+        "fp16": {
+          "opBlockList": [],
+          "keepIoTypes": true,
+          "function": "onnxconverter_common.float16.convert_float_to_float16",
+          "nodeBlockList": [],
+          "minPositiveVal": 1e-07,
+          "maxFiniteVal": 10000.0,
+          "postprocess": "Resize roi/scales inputs restored to the original float32 tensors",
+          "converter": "onnxconverter-common 1.16.0",
+          "seconds": 0.002,
+          "restoredFp32Initializers": [],
+          "removedOrphanInitializers": [],
+          "weightClamping": {
+            "belowMinPositive": 1,
+            "aboveMaxFinite": 0,
+            "fp16Subnormal": 44,
+            "elements": 39314
+          },
+          "converterWarnings": 1,
+          "converterWarningSamples": [
+            "1x the float32 number -1.6996636986732483e-08 will be truncated to -1e-07"
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "rt4ksr-x2",
+      "profile": "small",
+      "precision": "fp32",
+      "sha256": "1ef4602e42f57eaf02770ad4aee5fcf5eaea24820a482bb3ead7c6bbe27f08a6",
+      "bytes": 251876,
+      "opset": 20,
+      "irVersion": 10,
+      "nodeCount": 60,
+      "initializerBytes": 157344,
+      "inputs": [
+        {
+          "name": "input",
+          "dims": [
+            1,
+            3,
+            128,
+            128
+          ],
+          "type": "float32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "dims": [
+            1,
+            3,
+            256,
+            256
+          ],
+          "type": "float32"
+        }
+      ],
+      "gateA": {
+        "maxAbs": 3.427267074584961e-06,
+        "meanAbs": 5.028612463653381e-07,
+        "pass": true,
+        "runtime": "onnxruntime 1.23.2 CPUExecutionProvider",
+        "input": "synthetic+natural",
+        "worstCase": {
+          "maxAbs": "natural",
+          "meanAbs": "natural"
+        },
+        "limits": {
+          "maxAbs": 0.001,
+          "meanAbs": 1e-05
+        },
+        "comparison": "valid (cropped) region, all 3 channels, ORT output and stored PyTorch fp32 reference both clamped to [0,1]; worst case per metric; non-finite values fail",
+        "sessionOptions": "CPUExecutionProvider, ORT_ENABLE_ALL, intra_op_num_threads=4",
+        "sessionCreateSeconds": 0.015,
+        "seconds": 0.03,
+        "cases": {
+          "synthetic": {
+            "maxAbs": 3.129243850708008e-06,
+            "meanAbs": 4.7482375601740995e-07,
+            "psnr": 124.39622333406712,
+            "unclamped": {
+              "maxAbs": 3.129243850708008e-06,
+              "meanAbs": 4.802339775613248e-07
+            },
+            "outputRange": [
+              -0.32734161615371704,
+              1.3091973066329956
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.003
+          },
+          "natural": {
+            "maxAbs": 3.427267074584961e-06,
+            "meanAbs": 5.028612463653381e-07,
+            "psnr": 123.84310821188302,
+            "unclamped": {
+              "maxAbs": 3.427267074584961e-06,
+              "meanAbs": 5.176362108949562e-07
+            },
+            "outputRange": [
+              -0.1970737874507904,
+              1.2440431118011475
+            ],
+            "nonFinite": 0,
+            "codes8": {
+              "within1": 1.0,
+              "max": 1
+            },
+            "runSeconds": 0.002
+          }
+        },
+        "ortDisableAll": {
+          "synthetic": {
+            "maxAbs": 3.129243850708008e-06,
+            "meanAbs": 4.7482375601740995e-07
+          },
+          "natural": {
+            "maxAbs": 3.427267074584961e-06,
+            "meanAbs": 5.028612463653381e-07
+          },
+          "cpuPlacement": {
+            "insertedCasts": 0,
+            "castNodesBefore": 0,
+            "castNodesAfter": 0,
+            "nodesFedByInsertedFp32Casts": {},
+            "note": "ORT_DISABLE_ALL session; inserted casts mean the CPU EP ran those nodes in float32"
+          }
+        }
+      },
+      "exporter": "torch.onnx.export dynamo opset 20 (torch 2.11.0, onnxscript 0.7.2, onnx 1.23.2), variant clean-dyn20",
+      "exportVariant": {
+        "id": "clean-dyn20",
+        "exporter": {
+          "function": "torch.onnx.export",
+          "variant": "clean-dyn20",
+          "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+          "dynamo": true,
+          "opsetVersion": 20,
+          "torch": "2.11.0",
+          "onnxscript": "0.7.2",
+          "onnx": "1.23.2",
+          "ortBasicOptimization": "not applied"
+        },
+        "attempts": [
+          {
+            "variant": "clean-dyn20",
+            "description": "LivePath, torch.onnx.export(dynamo=True, opset_version=20, optimize=True) (Gelu op)",
+            "export": {
+              "seconds": 0.971,
+              "warnings": [
+                "1x FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead."
+              ]
+            },
+            "graph": {
+              "checker": "ok",
+              "nodeCount": 60,
+              "opsetImport": {
+                "ai.onnx": 20
+              },
+              "static": {
+                "problems": [],
+                "shapeInference": "ok (strict)",
+                "dynamicValues": [],
+                "dynamicCount": 0,
+                "untypedValues": [],
+                "untypedCount": 0,
+                "runtimeIntegerTensors": [],
+                "runtimeIntegerCount": 0,
+                "foldableNodes": [],
+                "foldableCount": 0,
+                "forbiddenOps": {},
+                "constantNodes": 0,
+                "integerInitializersOutsideShapeInputs": [],
+                "nonDefaultDomains": [],
+                "ok": true
+              }
+            },
+            "webgpu": {
+              "ok": true,
+              "problems": []
+            },
+            "ioContract": "ok",
+            "gateA": {
+              "maxAbs": 3.427267074584961e-06,
+              "meanAbs": 5.028612463653381e-07,
+              "pass": true,
+              "status": null,
+              "reason": null
+            },
+            "ok": true
+          }
+        ]
+      },
+      "references": {
+        "synthetic": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/small/synthetic",
+          "outSha256": "32463e0ace6426ebfe39467fcf92bc81791edd65f2baf9e1431015b6639f2759",
+          "inputSha256F32": [
+            "841a81571d6cb030ff538a13f5f973129104408e77d3eed41c9e28606540ffde"
+          ]
+        },
+        "natural": {
+          "path": "build/benchmarks/ai-framegen-upscale/work/references/rt4ksr-x2/small/natural",
+          "outSha256": "5d0a04a27953a91951bf4271aa73a2b351f47bb39d3ed714ca1444fc35c5403a",
+          "inputSha256F32": [
+            "cbe34858eddf925dcb6000ac4773305dba7b9e49d43e8b6033870ae02745c09b"
+          ]
+        }
+      },
+      "status": "pass",
+      "receipt": {
+        "path": "build/benchmarks/ai-framegen-upscale/work/models/rt4ksr-x2/small/fp32.receipt.json",
+        "sha256": "bbf9a0ed609a0947f165de5e850a80ce8fb012801ec09466a473656d3a41503b",
+        "bytes": 14325
+      },
+      "graphChecks": {
+        "checker": "ok",
+        "static": true,
+        "webgpu": true
+      },
+      "conversion": {
+        "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=small --precisions=fp32,fp16 --threads=4",
+        "script": {
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+          "sha256": "ecc05c857ea668761139d3a5f748e4f284a6be606768912e82414e861c0ec549"
+        },
+        "modules": [
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+            "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+            "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+          },
+          {
+            "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+            "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+          }
+        ],
+        "environment": {
+          "python": "3.11.16",
+          "packages": {
+            "coloredlogs": "15.0.1",
+            "filelock": "4.1.1",
+            "flatbuffers": "25.12.19",
+            "fsspec": "2026.9.0",
+            "humanfriendly": "10.0",
+            "imageio": "2.38.1",
+            "jinja2": "3.1.6",
+            "lazy-loader": "0.6",
+            "markupsafe": "3.0.4",
+            "ml-dtypes": "0.6.0",
+            "mpmath": "1.3.0",
+            "networkx": "3.6.1",
+            "numpy": "2.4.6",
+            "onnx": "1.23.2",
+            "onnx-ir": "1.0.0",
+            "onnxconverter-common": "1.16.0",
+            "onnxruntime": "1.23.2",
+            "onnxscript": "0.7.2",
+            "packaging": "26.3",
+            "pillow": "12.3.0",
+            "protobuf": "7.36.2",
+            "scikit-image": "0.26.0",
+            "scipy": "1.17.1",
+            "setuptools": "81.0.0",
+            "sympy": "1.14.0",
+            "tifffile": "2026.3.3",
+            "torch": "2.11.0",
+            "torchvision": "0.26.0",
+            "typing-extensions": "4.16.0"
+          },
+          "lockSha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+          "lockMatchesInstalled": true,
+          "platform": "macOS-27.0-arm64-arm-64bit",
+          "cpu": "Apple M5",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "dirty": true,
+            "dirtyEntries": 7
+          }
+        },
+        "createdAt": "2026-10-13T01:20:13-05:00",
+        "run": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012003"
+      }
+    }
+  ],
+  "sourceRuns": [
+    {
+      "path": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012003/results/export.json",
+      "sha256": "e8655e45222f47f3408b2aec45aadfa1aebde46724a9a70221b4bf0f3bbd4a01",
+      "bytes": 5907,
+      "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=small --precisions=fp32,fp16 --threads=4",
+      "niceness": 10,
+      "threads": 4
+    },
+    {
+      "path": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012532/results/export.json",
+      "sha256": "2ea3e876aee9deddf5a9553698909c3569d0c384d8abd2a1bd969926c64e24ad",
+      "bytes": 4047,
+      "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=small --precisions=fp32,fp16 --threads=4",
+      "niceness": 10,
+      "threads": 4
+    },
+    {
+      "path": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556/results/export.json",
+      "sha256": "f88c180d1fc86c9141ab5814d431f63a486c93e46d21e2bcef3877253c73274e",
+      "bytes": 10360,
+      "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --profiles=720p,1080p,540p --precisions=fp32,fp16 --threads=4",
+      "niceness": 10,
+      "threads": 4
+    },
+    {
+      "path": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012851/results/export.json",
+      "sha256": "d65f735307dea7bd129323257ef2c915f31bf51962baee905e474434b3f48c54",
+      "bytes": 4075,
+      "command": "<work>/venv/bin/python -I -B -X pycache_prefix=<work>/cache/pycache scripts/benchmarks/ai-framegen-upscale/export/export.py --candidates=rife-4.25-lite --profiles=1080p --variants=dyn17-warm --precisions=fp32,fp16 --threads=4",
+      "niceness": 10,
+      "threads": 4
+    }
+  ],
+  "rife1080pFallbackScreen": {
+    "source": {
+      "path": "build/benchmarks/ai-framegen-upscale/export/2026-10-13_012556/jobs/rife-4.25-lite/1080p/job.json",
+      "sha256": "0fadf32b274b8a6ce2ba33eecac29a77e7c2eaa5a48894761369435e1a6f57a1"
+    },
+    "attempts": [
+      {
+        "variant": "dyn17",
+        "graph": {
+          "checker": "ok",
+          "nodeCount": 322,
+          "opsetImport": {
+            "ai.onnx": 17
+          },
+          "static": {
+            "problems": [],
+            "shapeInference": "ok (strict)",
+            "dynamicValues": [],
+            "dynamicCount": 0,
+            "untypedValues": [],
+            "untypedCount": 0,
+            "runtimeIntegerTensors": [],
+            "runtimeIntegerCount": 0,
+            "foldableNodes": [],
+            "foldableCount": 0,
+            "forbiddenOps": {},
+            "constantNodes": 0,
+            "integerInitializersOutsideShapeInputs": [],
+            "nonDefaultDomains": [],
+            "ok": true
+          }
+        },
+        "gateA": {
+          "maxAbs": 0.0021095871925354004,
+          "meanAbs": 5.457369983422557e-06,
+          "pass": false,
+          "status": null,
+          "reason": null
+        },
+        "ioContract": "ok",
+        "webgpu": {
+          "ok": true,
+          "problems": []
+        }
+      },
+      {
+        "variant": "ts17",
+        "graph": {
+          "checker": "ok",
+          "nodeCount": 332,
+          "opsetImport": {
+            "ai.onnx": 17
+          },
+          "static": {
+            "problems": [],
+            "shapeInference": "ok (strict)",
+            "dynamicValues": [],
+            "dynamicCount": 0,
+            "untypedValues": [],
+            "untypedCount": 0,
+            "runtimeIntegerTensors": [],
+            "runtimeIntegerCount": 0,
+            "foldableNodes": [],
+            "foldableCount": 0,
+            "forbiddenOps": {},
+            "constantNodes": 0,
+            "integerInitializersOutsideShapeInputs": [],
+            "nonDefaultDomains": [],
+            "ok": true
+          }
+        },
+        "gateA": {
+          "maxAbs": 0.0027279257774353027,
+          "meanAbs": 6.684460140041188e-06,
+          "pass": false,
+          "status": null,
+          "reason": null
+        },
+        "ioContract": "ok",
+        "webgpu": {
+          "ok": true,
+          "problems": []
+        }
+      },
+      {
+        "variant": "dyn17-warm",
+        "graph": {
+          "checker": "ok",
+          "nodeCount": 362,
+          "opsetImport": {
+            "ai.onnx": 17
+          },
+          "static": {
+            "problems": [],
+            "shapeInference": "ok (strict)",
+            "dynamicValues": [],
+            "dynamicCount": 0,
+            "untypedValues": [],
+            "untypedCount": 0,
+            "runtimeIntegerTensors": [],
+            "runtimeIntegerCount": 0,
+            "foldableNodes": [],
+            "foldableCount": 0,
+            "forbiddenOps": {},
+            "constantNodes": 0,
+            "integerInitializersOutsideShapeInputs": [],
+            "nonDefaultDomains": [],
+            "ok": true
+          }
+        },
+        "gateA": {
+          "maxAbs": 0.0017777681350708008,
+          "meanAbs": 2.9581091985478954e-06,
+          "pass": false,
+          "status": null,
+          "reason": null
+        },
+        "ioContract": "ok",
+        "webgpu": {
+          "ok": true,
+          "problems": []
+        }
+      }
+    ]
+  },
+  "qualification": "Numerical export parity and graph checks. Export wall/RSS are preparation diagnostics; no isolated performance or admission claim.",
+  "artifactPolicy": "No ONNX, weights, input/reference tensors or derived corpus images published."
+}

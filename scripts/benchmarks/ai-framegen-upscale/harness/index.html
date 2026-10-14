@@ -1,0 +1,12 @@
+<!doctype html>
+<!--
+  ai-framegen-upscale WebGPU harness page. Served only by lib/serve.mjs through CDP
+  request interception on https://foss-earth.test (cross-origin isolated); driven by
+  run-parity.mjs / run-timing.mjs through window.aiHarness.start/poll (main.mjs).
+-->
+<meta charset="utf-8">
+<title>ai-framegen-upscale harness</title>
+<body style="margin:0;background:#000">
+<canvas id="canvas" width="256" height="256" style="display:block"></canvas>
+<script type="module" src="/main.mjs"></script>
+</body>

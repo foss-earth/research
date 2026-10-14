@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "owner": "foss-earth/research",
   "sourceRevision": "90e23b3ee96f53ec5900afc5991a21fffa58649d",
-  "status": "source-only inventory; no tool/check/experiment executed",
+  "status": "source inventory; ai-framegen-upscale execution/evidence is documented in its benchmark report; other groups retain their per-entry status",
   "runtimeQualification": false,
   "publicOwnerDependencies": [
     "@foss-earth/cubemap/babylon",
@@ -3516,7 +3516,7 @@
     },
     {
       "path": "scripts/lib/communityDocuments.mjs",
-      "sha256": "1900690bfd57a6eb05ffc78e97714bacef161b7d4518fd643722ee734be516ff",
+      "sha256": "006b2b0560a6a2596e91b4922d36fee55a15bf6d3bfa9646cbaea6adfab39cb1",
       "group": "source-metadata-check",
       "kind": "metadata-source-helper",
       "status": "SOURCE-ONLY document-presentation increment; UNRUN",
@@ -3531,12 +3531,1321 @@
       "requirements": [
         "source/check fixtures need a later shared slot; no experiment execution required"
       ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json",
+      "sha256": "8f33845b0e33cb6c44e90903b94c6fe068b4e13415b25d923b8db4f8e319845b",
+      "group": "ai-framegen-upscale",
+      "kind": "pinned-input-or-native-helper",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+      "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "model",
+          "kind": "external-tool",
+          "status": "Imports only verified pinned upstream files from work/sources; source/weight pins in export/sources.json."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "train_log",
+          "kind": "external-tool",
+          "status": "Imports only verified pinned upstream files from work/sources; source/weight pins in export/sources.json."
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+      "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "git",
+          "kind": "external-tool",
+          "status": "Read-only source/machine prerequisite; no implicit network or power change."
+        },
+        {
+          "specifier": "numpy==2.4.6",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "pillow==12.3.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only source/machine prerequisite; no implicit network or power change."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+      "sha256": "c9e3de101e1a033bfe3b9b29ebcc8a53aae8c94136034e3e647d6454acf21c33",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "numpy==2.4.6",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "onnx==1.23.2",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "onnxconverter-common==1.16.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "onnxruntime==1.23.2",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only source/machine prerequisite; no implicit network or power change."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "candidates",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py"
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        },
+        {
+          "specifier": "references",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/fetch.py",
+      "sha256": "d8110930cfa1a15d292e022577a8fbb49e3048f009eb6166f0bdf1dedf4d1424",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "git",
+          "kind": "external-tool",
+          "status": "Read-only source/machine prerequisite; no implicit network or power change."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/manifest.py",
+      "sha256": "043b212a9826e20134bf2b8973a3fc6e4bd12227f7f8e784326f47c481105a90",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        },
+        {
+          "specifier": "references",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+      "sha256": "8713c29225ae20522045d214277c7bea6d508291063c8d58a2d92f1d070bbe9d",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "numpy==2.4.6",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "onnxruntime==1.23.2",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "pillow==12.3.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "scikit-image==0.26.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only source/machine prerequisite; no implicit network or power change."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        },
+        {
+          "specifier": "replay",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+      "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "numpy==2.4.6",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "pillow==12.3.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "candidates",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py"
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+      "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "numpy==2.4.6",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "pillow==12.3.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "python3.11",
+          "kind": "external-tool",
+          "status": "Run isolated -I -B with scratch caches under research/build; exact version is in each run receipt."
+        },
+        {
+          "specifier": "torch==2.11.0",
+          "kind": "external-tool",
+          "status": "Exact package/hash pins in export/requirements.lock; prepared Python3.11 environment required."
+        },
+        {
+          "specifier": "common",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py"
+        },
+        {
+          "specifier": "export/requirements.lock",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock"
+        },
+        {
+          "specifier": "export/sources.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.in",
+      "sha256": "759e67543c1acf08aec320c86e3ed5b2f2f8a84a16ce9cc519d960fdbe83e37d",
+      "group": "ai-framegen-upscale",
+      "kind": "pinned-input-or-native-helper",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "uv",
+          "kind": "external-tool",
+          "status": "Offline hash-pinned compile/sync recipe recorded in this file; no new download required."
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock",
+      "sha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed",
+      "group": "ai-framegen-upscale",
+      "kind": "pinned-input-or-native-helper",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json",
+      "sha256": "df39c33709476f03fb6bc225330e8dfe06875d617f806c6fc2eea49632b41219",
+      "group": "ai-framegen-upscale",
+      "kind": "pinned-input-or-native-helper",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/fetch-ort-web.mjs",
+      "sha256": "3b7b9cf494dc122b8d4c1dc3f288e3bc3513adb21c9451f0ac60d1ed25b8444d",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "npm",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "npm",
+          "kind": "external-tool",
+          "status": "Offline pinned package cache by default; no implicit network."
+        },
+        {
+          "specifier": "tar",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "tar",
+          "kind": "external-tool",
+          "status": "Pinned archive entry/type/hash verification before extraction."
+        },
+        {
+          "specifier": "./browser-dependencies.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs",
+      "sha256": "f29b9e7d809a7d0b8dd4a8eb98339def715f4f4e1ad06b214c38d0d434b1b50c",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/index.html",
+      "sha256": "0cd5612468a2ff48aa4223fb1d936e7946c8a0fec7bb2d811562a03ef7fc0a3e",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "/main.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs",
+      "sha256": "cbc0f38857544d8ffdb41da8c51c03ec90b623814ec8133809f274c1f3fedf06",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./parity.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs"
+        },
+        {
+          "specifier": "./pipelines.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs",
+      "sha256": "67183f251d791836a82018d7c4fb190e62fc2cdbff46e092c4a05a598e03e457",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "browser-dependencies.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs",
+      "sha256": "a1746e38857d039e80e61c78cb8c012ac057fe4136eb684d894638932855942b",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./gpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs"
+        },
+        {
+          "specifier": "./ort.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs"
+        },
+        {
+          "specifier": "./wgsl.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs",
+      "sha256": "665a1a03fc0e72e5813e95085c9d0cbe6afc41342b8f6b5d13e55e6e39f73552",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./gpu.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs"
+        },
+        {
+          "specifier": "./ort.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs"
+        },
+        {
+          "specifier": "./parity.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs"
+        },
+        {
+          "specifier": "./wgsl.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/preview.html",
+      "sha256": "a691e95116a3c0ad7c9dac4826a472bb432505f9672b299cfecc6d88e31d8d97",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "/preview.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/preview.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/preview.mjs",
+      "sha256": "1cf52885128d3311b3e7782b0d0249a709b0f5839a1bc10572013c3ea49ec42f",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./parity.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs",
+      "sha256": "180702b82ebd14af68ec128a3a69ef5e23423499a0ff24eabf46fe4e0aa7f43d",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+      "sha256": "d37e2bc31b11dac43594ed9e133dda164846904ed6fa4e4d0872ebc1639520b6",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../spherical-image-representation/lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "./stats.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs",
+      "sha256": "6f404a22e39f0a2ce6ec9f4f5d0564ca31c317932ca54ac171bda231fd1c37db",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "Chrome",
+          "kind": "external-tool",
+          "status": "Compatible headless Chrome with actual WebGPU adapter, isolated HTTPS/CDP and timestamp-query; observed Chrome155 AppleM5 is profile-specific evidence."
+        },
+        {
+          "specifier": "../../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "./serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+      "sha256": "4e990d282d76a4dcf02474fef7afd6bbfd48a70801691a95f60fdf824ac9d4f4",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "git",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "pmset",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "sw_vers",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "../../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs",
+      "sha256": "236fd1927de60fa315cb6c37216accf48c2045482b33bbfee73160192fca304d",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs",
+      "sha256": "52d311a9a86d5250ce5785f41c700e8a716ec38d86b0aca413ea0dfa1cb4b85a",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs",
+      "sha256": "dd4c2a331d952e1981805b316d97012ef21b6f424c57d1ebbb66a28387cc5c72",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs",
+      "sha256": "60ca1e38500d19dbf0db81e81293e309a7af2f27a1ae5cde6dc370c52a65308f",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "ioreg",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "ioreg",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "pmset",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "ps",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "ps",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "swiftc",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "swiftc",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "vm_stat",
+          "kind": "external-tool",
+          "status": "Unprivileged macOS state read; unavailable/material signals prevent timing qualification."
+        },
+        {
+          "specifier": "../../spherical-image-representation/lib/quiet.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+        },
+        {
+          "specifier": "./environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "./stats.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs"
+        },
+        {
+          "specifier": "./thermal.swift",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift",
+      "sha256": "011b3270b5f50963de81109f40fdbf4fdc3d210e077926e5c0bc28c6a4bd360d",
+      "group": "ai-framegen-upscale",
+      "kind": "pinned-input-or-native-helper",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "swiftc",
+          "kind": "external-tool",
+          "status": "Compile into work/bin with module/temp caches inside build; reads ProcessInfo thermal state only."
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+      "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/gates.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/preview-server.mjs",
+      "sha256": "fb017322413fde73ff55a2c6960926d6b538a893ff8a5bfacb0a99b989b3f81c",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "./lib/serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:http",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/run-parity.mjs",
+      "sha256": "0bb4f77dcd8a2d76a822dd6a97fd701740208910acceed09896737bb8b7086e0",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "Chrome",
+          "kind": "external-tool",
+          "status": "Compatible headless Chrome with actual WebGPU adapter, isolated HTTPS/CDP and timestamp-query; observed Chrome155 AppleM5 is profile-specific evidence."
+        },
+        {
+          "specifier": "sysctl",
+          "kind": "external-tool",
+          "status": "Read-only host/tool prerequisite; current qualification is recorded in REPORT.md."
+        },
+        {
+          "specifier": "./harness/ort.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/gates.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs"
+        },
+        {
+          "specifier": "./lib/serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs"
+        },
+        {
+          "specifier": "browser-dependencies.json",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json"
+        },
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+      "sha256": "29a9eb40a36f2a04db942dac95de8aa5204cefb8a98970fdd3df71d19be8497f",
+      "group": "ai-framegen-upscale",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "Chrome",
+          "kind": "external-tool",
+          "status": "Compatible headless Chrome with actual WebGPU adapter, isolated HTTPS/CDP and timestamp-query; observed Chrome155 AppleM5 is profile-specific evidence."
+        },
+        {
+          "specifier": "./lib/blocks.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs"
+        },
+        {
+          "specifier": "./lib/browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs"
+        },
+        {
+          "specifier": "./lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "./lib/gates.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs"
+        },
+        {
+          "specifier": "./lib/serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs"
+        },
+        {
+          "specifier": "./lib/stats.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs"
+        },
+        {
+          "specifier": "./lib/telemetry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Profile-specific A-I evidence and qualification are recorded in benchmarks/ai-framegen-upscale/REPORT.md; runtimeQualification remains false.",
+        "No renderer/application admission; no usable globe render-cost measurement; CPU and cold/elapsed timings remain unqualified."
+      ]
+    },
+    {
+      "path": "fixtures/aiFramegenUpscale.test.mjs",
+      "sha256": "2e2b8d2af610fb96716f3f41a13309d03ea61934128dace28dd835ca1e4191ea",
+      "group": "ai-framegen-upscale",
+      "kind": "source-fixture",
+      "status": "source inventory with profile-specific correctness/observational evidence; see benchmark report",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs"
+        },
+        {
+          "specifier": "../scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "../scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs"
+        },
+        {
+          "specifier": "../scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs"
+        },
+        {
+          "specifier": "node:assert/strict",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:test",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "Pure node --test source fixture; no GPU/browser/network/process spawning; test outcome recorded in benchmark REPORT.md."
+      ]
     }
   ],
   "sourceFixtures": [
     "fixtures/documentLinks.test.mjs",
     "fixtures/headlessChrome.test.mjs",
-    "fixtures/communityDocuments.test.mjs"
+    "fixtures/communityDocuments.test.mjs",
+    "fixtures/aiFramegenUpscale.test.mjs"
   ],
   "checksDoNotExecuteExperimentalTools": true,
   "publicHelperContracts": [

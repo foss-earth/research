@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>RT4KSR x2 preview</title>
+<style>
+  body { margin: 0; font: 15px/1.45 system-ui, sans-serif; background: #111; color: #eee; }
+  header, main { padding: 16px 20px; }
+  header p { max-width: 70rem; color: #ccc; }
+  label { margin-right: 12px; }
+  button { font: inherit; padding: 6px 12px; }
+  #status { min-height: 3em; white-space: pre-wrap; }
+  .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+  figure { margin: 0; }
+  figcaption { margin-bottom: 6px; color: #bbb; }
+  canvas { display: block; background: #000; max-width: min(100%, 640px); height: auto; }
+  #canvas { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+</style>
+<header>
+  <h1>RT4KSR x2, fp32</h1>
+  <p>This is the only candidate whose WebGPU output matched the stored reference on this machine. RIFE is omitted because its GPU output fails that check. The full-frame quality screen did not show RT4KSR beating bicubic on directly rendered half-resolution frames; this page shows the registered reference cases, not a new image.</p>
+  <p>
+    <label>Profile <select id="profile"><option>720p</option><option>1080p</option><option>small</option></select></label>
+    <label>Case <select id="case"><option>natural</option><option>synthetic</option></select></label>
+    <button id="run" type="button">Run on GPU</button>
+  </p>
+  <p id="status">Choose a profile and run. The first session compile can take several seconds.</p>
+</header>
+<main class="row">
+  <figure>
+    <figcaption>Half-resolution input</figcaption>
+    <canvas id="input" width="640" height="360"></canvas>
+  </figure>
+  <figure>
+    <figcaption>WebGPU output</figcaption>
+    <canvas id="output" width="1280" height="720"></canvas>
+    <canvas id="canvas" width="1280" height="720"></canvas>
+  </figure>
+  <figure>
+    <figcaption>Stored reference</figcaption>
+    <canvas id="reference" width="1280" height="720"></canvas>
+  </figure>
+</main>
+<script type="module" src="/preview.mjs"></script>

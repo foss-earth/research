@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "purpose": "ONNX Runtime Web build served to the ai-framegen-upscale browser harness. Only the three files listed are served (lib/serve.mjs); nothing is fetched from a CDN by the page.",
+  "package": {
+    "name": "onnxruntime-web",
+    "version": "1.30.0",
+    "published": "2026-09-14",
+    "license": "MIT",
+    "repository": "https://github.com/microsoft/onnxruntime",
+    "sourceTag": "v1.30.0",
+    "sourceCommit": "f2c39fe2f838cf35ce7da92824f5a5e3ee6e88a7",
+    "registryTarball": "https://registry.npmjs.org/onnxruntime-web/-/onnxruntime-web-1.30.0.tgz",
+    "integrity": "sha512-q0y+JrrtukXSzsBWEMccVfqX25LRmosXHF+CaRJmg8pZClzcV7svNc4rKY3jL02Vb7QmRMDs1SigqR4CXAfKYQ=="
+  },
+  "build": {
+    "bundle": "dist/ort.webgpu.min.mjs",
+    "executionProvider": "native WebGPU EP (C++ onnxruntime/core/providers/webgpu compiled to WebAssembly with Dawn's emdawnwebgpu), not the JSEP build",
+    "evidence": "dist/ort.webgpu.mjs selects ort-wasm-simd-threaded.asyncify.mjs (the jsep/jspi branches are compiled out: `false ? \"ort-wasm-simd-threaded.jsep.mjs\" : ...`) and registers the WebGPU EP as \"WebGPU\" with device/deviceId/webgpuInstance/webgpuDevice options"
+  },
+  "files": [
+    {
+      "path": "package/dist/ort.webgpu.min.mjs",
+      "served": "/ort/ort.webgpu.min.mjs",
+      "contentType": "text/javascript",
+      "bytes": 66349,
+      "sha256": "3dffff71811bc13a3a3d9591c57ca5ee5735b8f5f3eaf789510b02bb040ae3a0"
+    },
+    {
+      "path": "package/dist/ort-wasm-simd-threaded.asyncify.mjs",
+      "served": "/ort/ort-wasm-simd-threaded.asyncify.mjs",
+      "contentType": "text/javascript",
+      "bytes": 53057,
+      "sha256": "3d1c85995364bb643302fc6fd877a0c3ba5ae72401815e0f24828a53d9191e28"
+    },
+    {
+      "path": "package/dist/ort-wasm-simd-threaded.asyncify.wasm",
+      "served": "/ort/ort-wasm-simd-threaded.asyncify.wasm",
+      "contentType": "application/wasm",
+      "bytes": 26781914,
+      "sha256": "39f9f0894d478800487ed9f7dbe92618498db320cf55c8e3d89adff8dce658da"
+    }
+  ]
+}

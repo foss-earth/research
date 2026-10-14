@@ -1,0 +1,282 @@
+{
+  "schema": 1,
+  "environment": {
+    "schema": 1,
+    "generatedAt": "2026-10-13T08:48:25.359Z",
+    "research": {
+      "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+      "workingTreeDirty": true
+    },
+    "node": "v26.9.0",
+    "v8": "14.6.202.34-node.32",
+    "platform": "Darwin 27.0.0 arm64",
+    "os": {
+      "productVersion": "27.0",
+      "buildVersion": "26A428"
+    },
+    "hardware": {
+      "model": "Mac17,3",
+      "cpu": "Apple M5",
+      "logicalCores": 10,
+      "performanceLevels": [
+        {
+          "level": 0,
+          "name": "Super",
+          "logicalCpu": 4
+        },
+        {
+          "level": 1,
+          "name": "Efficiency",
+          "logicalCpu": 6
+        }
+      ],
+      "memoryBytes": 17179869184,
+      "memoryGiB": 16
+    },
+    "power": {
+      "source": "AC Power",
+      "batteryPercent": 80,
+      "batteryState": "AC attached",
+      "lowPowerMode": true
+    },
+    "browser": null,
+    "gpu": null
+  },
+  "script": {
+    "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+    "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+  },
+  "sources": {
+    "files": [
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json",
+        "sha256": "8f33845b0e33cb6c44e90903b94c6fe068b4e13415b25d923b8db4f8e319845b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+        "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+        "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+        "sha256": "c9e3de101e1a033bfe3b9b29ebcc8a53aae8c94136034e3e647d6454acf21c33"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/fetch.py",
+        "sha256": "d8110930cfa1a15d292e022577a8fbb49e3048f009eb6166f0bdf1dedf4d1424"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/manifest.py",
+        "sha256": "043b212a9826e20134bf2b8973a3fc6e4bd12227f7f8e784326f47c481105a90"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+        "sha256": "8713c29225ae20522045d214277c7bea6d508291063c8d58a2d92f1d070bbe9d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+        "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+        "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.in",
+        "sha256": "759e67543c1acf08aec320c86e3ed5b2f2f8a84a16ce9cc519d960fdbe83e37d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock",
+        "sha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json",
+        "sha256": "df39c33709476f03fb6bc225330e8dfe06875d617f806c6fc2eea49632b41219"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/fetch-ort-web.mjs",
+        "sha256": "3b7b9cf494dc122b8d4c1dc3f288e3bc3513adb21c9451f0ac60d1ed25b8444d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs",
+        "sha256": "f29b9e7d809a7d0b8dd4a8eb98339def715f4f4e1ad06b214c38d0d434b1b50c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/index.html",
+        "sha256": "0cd5612468a2ff48aa4223fb1d936e7946c8a0fec7bb2d811562a03ef7fc0a3e"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs",
+        "sha256": "cbc0f38857544d8ffdb41da8c51c03ec90b623814ec8133809f274c1f3fedf06"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs",
+        "sha256": "67183f251d791836a82018d7c4fb190e62fc2cdbff46e092c4a05a598e03e457"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs",
+        "sha256": "a1746e38857d039e80e61c78cb8c012ac057fe4136eb684d894638932855942b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs",
+        "sha256": "665a1a03fc0e72e5813e95085c9d0cbe6afc41342b8f6b5d13e55e6e39f73552"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs",
+        "sha256": "180702b82ebd14af68ec128a3a69ef5e23423499a0ff24eabf46fe4e0aa7f43d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+        "sha256": "d37e2bc31b11dac43594ed9e133dda164846904ed6fa4e4d0872ebc1639520b6"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs",
+        "sha256": "6f404a22e39f0a2ce6ec9f4f5d0564ca31c317932ca54ac171bda231fd1c37db"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+        "sha256": "4e990d282d76a4dcf02474fef7afd6bbfd48a70801691a95f60fdf824ac9d4f4"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs",
+        "sha256": "236fd1927de60fa315cb6c37216accf48c2045482b33bbfee73160192fca304d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs",
+        "sha256": "52d311a9a86d5250ce5785f41c700e8a716ec38d86b0aca413ea0dfa1cb4b85a"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs",
+        "sha256": "dd4c2a331d952e1981805b316d97012ef21b6f424c57d1ebbb66a28387cc5c72"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs",
+        "sha256": "60ca1e38500d19dbf0db81e81293e309a7af2f27a1ae5cde6dc370c52a65308f"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift",
+        "sha256": "011b3270b5f50963de81109f40fdbf4fdc3d210e077926e5c0bc28c6a4bd360d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+        "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-parity.mjs",
+        "sha256": "0bb4f77dcd8a2d76a822dd6a97fd701740208910acceed09896737bb8b7086e0"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+        "sha256": "29a9eb40a36f2a04db942dac95de8aa5204cefb8a98970fdd3df71d19be8497f"
+      }
+    ],
+    "combinedSha256": "896605e16f02df5d2bc7706e4c87622260103f1b056c596135125636abd0f6bb"
+  },
+  "configuration": {
+    "parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+    "quality": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+    "timing": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results",
+    "capture-parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+    "optimizer-diagnostic": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+    "publish": true
+  },
+  "evidence": {
+    "schema": 1,
+    "createdAt": "2026-10-13T08:48:25.057Z",
+    "generator": {
+      "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+      "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+    },
+    "sourceResults": [
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+        "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778",
+        "bytes": 1496658
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+        "sha256": "39255fc133d809ff6effd636ee2759edcd1439f2bd6e257afc43dd368f88cc41",
+        "bytes": 214258
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-1080p.json",
+        "sha256": "8d2e5588c3acf345233e437b8e76e34ad2e1cc2a2aea0e1c3ad1f932402be540",
+        "bytes": 6039566
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-720p.json",
+        "sha256": "29b02204437b19a117cb0d204c0c10179a1f1806d7aab4eae2f23e10a51fcd6e",
+        "bytes": 8809093
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-small.json",
+        "sha256": "94fd78ba9e74241eabdd8fdc0245c8bfd709337465b5d16249a476bfd149e16f",
+        "bytes": 9147038
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+        "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad",
+        "bytes": 117818
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+        "sha256": "374e62a586253e5ef9e420f814ed5d0995d1ba4409628e27bcf8b735a9637dea",
+        "bytes": 78327
+      }
+    ],
+    "corpusImagesPublished": false,
+    "qualification": "GPU timings can qualify only as conditional observations on this machine; CPU/elapsed/cold timings remain unqualified. G_span/U_span is an upper bound; no kernel lower bound measured.",
+    "review": "Root plus independent workflow adversarial reviews; final gate rows recomputed from numeric results. Contact sheets remain in build for human inspection."
+  },
+  "provenance": {
+    "schema": 1,
+    "createdAt": "2026-10-13T08:48:25.057Z",
+    "generator": {
+      "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+      "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+    },
+    "sourceResults": [
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+        "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778",
+        "bytes": 1496658
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+        "sha256": "39255fc133d809ff6effd636ee2759edcd1439f2bd6e257afc43dd368f88cc41",
+        "bytes": 214258
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-1080p.json",
+        "sha256": "8d2e5588c3acf345233e437b8e76e34ad2e1cc2a2aea0e1c3ad1f932402be540",
+        "bytes": 6039566
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-720p.json",
+        "sha256": "29b02204437b19a117cb0d204c0c10179a1f1806d7aab4eae2f23e10a51fcd6e",
+        "bytes": 8809093
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-small.json",
+        "sha256": "94fd78ba9e74241eabdd8fdc0245c8bfd709337465b5d16249a476bfd149e16f",
+        "bytes": 9147038
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+        "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad",
+        "bytes": 117818
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+        "sha256": "374e62a586253e5ef9e420f814ed5d0995d1ba4409628e27bcf8b735a9637dea",
+        "bytes": 78327
+      }
+    ],
+    "corpusImagesPublished": false,
+    "qualification": "GPU timings can qualify only as conditional observations on this machine; CPU/elapsed/cold timings remain unqualified. G_span/U_span is an upper bound; no kernel lower bound measured.",
+    "review": "Root plus independent workflow adversarial reviews; final gate rows recomputed from numeric results. Contact sheets remain in build for human inspection."
+  }
+}

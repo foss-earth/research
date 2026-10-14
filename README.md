@@ -25,6 +25,7 @@ Importing a helper starts no browser, server, capture or benchmark. See [tool co
 
 Benchmarks:
 
+- [benchmarks/ai-framegen-upscale/README.md](benchmarks/ai-framegen-upscale/README.md)
 - [benchmarks/collision/README.md](benchmarks/collision/README.md)
 - [benchmarks/eac-progressive-prototype/INVENTORY.md](benchmarks/eac-progressive-prototype/INVENTORY.md)
 - [benchmarks/eac-progressive-prototype/README.md](benchmarks/eac-progressive-prototype/README.md)
@@ -46,11 +47,17 @@ Benchmarks:
 
 Documents and proposals:
 
+- [Shared AI upscaling and frame generation proposal](docs/proposals/ai-framegen-upscale.md) —
+  staged implementation, shared contracts, opt-in controls and acceptance gates
+  for FOSS Earth applications, including the UMN tour.
 - [Shared AI frame generation and upscaling review](docs/ai-framegen-upscale.md) —
   opt-in reconstruction for FOSS Earth apps, including the UMN tour; source
   corrections, shared ownership and an experiment plan. The
   [original report](docs/sources/ai-framegen-upscale-original.md) is preserved as
   reviewed evidence, not an implementation guide.
+- [RIFE and RT4KSR on ONNX Runtime Web](docs/ai-framegen-upscale-models.md) — pinned
+  sources, input contracts, export choices, WebGPU runtime behavior and early quality
+  observations from building the Stage 1 harness.
 - [docs/360-images-virtual-tour-research.md](docs/360-images-virtual-tour-research.md)
 - [docs/360-images-virtual-tour-review.md](docs/360-images-virtual-tour-review.md)
 - [docs/camera-pivot-and-zoom-prompt.md](docs/camera-pivot-and-zoom-prompt.md)

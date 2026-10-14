@@ -1,0 +1,5550 @@
+{
+  "schema": 1,
+  "environment": {
+    "schema": 1,
+    "generatedAt": "2026-10-13T08:48:25.237Z",
+    "research": {
+      "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+      "workingTreeDirty": true
+    },
+    "node": "v26.9.0",
+    "v8": "14.6.202.34-node.32",
+    "platform": "Darwin 27.0.0 arm64",
+    "os": {
+      "productVersion": "27.0",
+      "buildVersion": "26A428"
+    },
+    "hardware": {
+      "model": "Mac17,3",
+      "cpu": "Apple M5",
+      "logicalCores": 10,
+      "performanceLevels": [
+        {
+          "level": 0,
+          "name": "Super",
+          "logicalCpu": 4
+        },
+        {
+          "level": 1,
+          "name": "Efficiency",
+          "logicalCpu": 6
+        }
+      ],
+      "memoryBytes": 17179869184,
+      "memoryGiB": 16
+    },
+    "power": {
+      "source": "AC Power",
+      "batteryPercent": 80,
+      "batteryState": "AC attached",
+      "lowPowerMode": true
+    },
+    "browser": null,
+    "gpu": null
+  },
+  "script": {
+    "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+    "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+  },
+  "sources": {
+    "files": [
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json",
+        "sha256": "8f33845b0e33cb6c44e90903b94c6fe068b4e13415b25d923b8db4f8e319845b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+        "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+        "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+        "sha256": "c9e3de101e1a033bfe3b9b29ebcc8a53aae8c94136034e3e647d6454acf21c33"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/fetch.py",
+        "sha256": "d8110930cfa1a15d292e022577a8fbb49e3048f009eb6166f0bdf1dedf4d1424"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/manifest.py",
+        "sha256": "043b212a9826e20134bf2b8973a3fc6e4bd12227f7f8e784326f47c481105a90"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+        "sha256": "8713c29225ae20522045d214277c7bea6d508291063c8d58a2d92f1d070bbe9d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+        "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+        "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.in",
+        "sha256": "759e67543c1acf08aec320c86e3ed5b2f2f8a84a16ce9cc519d960fdbe83e37d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock",
+        "sha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json",
+        "sha256": "df39c33709476f03fb6bc225330e8dfe06875d617f806c6fc2eea49632b41219"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/fetch-ort-web.mjs",
+        "sha256": "3b7b9cf494dc122b8d4c1dc3f288e3bc3513adb21c9451f0ac60d1ed25b8444d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs",
+        "sha256": "f29b9e7d809a7d0b8dd4a8eb98339def715f4f4e1ad06b214c38d0d434b1b50c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/index.html",
+        "sha256": "0cd5612468a2ff48aa4223fb1d936e7946c8a0fec7bb2d811562a03ef7fc0a3e"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs",
+        "sha256": "cbc0f38857544d8ffdb41da8c51c03ec90b623814ec8133809f274c1f3fedf06"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs",
+        "sha256": "67183f251d791836a82018d7c4fb190e62fc2cdbff46e092c4a05a598e03e457"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs",
+        "sha256": "a1746e38857d039e80e61c78cb8c012ac057fe4136eb684d894638932855942b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs",
+        "sha256": "665a1a03fc0e72e5813e95085c9d0cbe6afc41342b8f6b5d13e55e6e39f73552"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs",
+        "sha256": "180702b82ebd14af68ec128a3a69ef5e23423499a0ff24eabf46fe4e0aa7f43d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+        "sha256": "d37e2bc31b11dac43594ed9e133dda164846904ed6fa4e4d0872ebc1639520b6"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs",
+        "sha256": "6f404a22e39f0a2ce6ec9f4f5d0564ca31c317932ca54ac171bda231fd1c37db"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+        "sha256": "4e990d282d76a4dcf02474fef7afd6bbfd48a70801691a95f60fdf824ac9d4f4"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs",
+        "sha256": "236fd1927de60fa315cb6c37216accf48c2045482b33bbfee73160192fca304d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs",
+        "sha256": "52d311a9a86d5250ce5785f41c700e8a716ec38d86b0aca413ea0dfa1cb4b85a"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs",
+        "sha256": "dd4c2a331d952e1981805b316d97012ef21b6f424c57d1ebbb66a28387cc5c72"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs",
+        "sha256": "60ca1e38500d19dbf0db81e81293e309a7af2f27a1ae5cde6dc370c52a65308f"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift",
+        "sha256": "011b3270b5f50963de81109f40fdbf4fdc3d210e077926e5c0bc28c6a4bd360d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+        "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-parity.mjs",
+        "sha256": "0bb4f77dcd8a2d76a822dd6a97fd701740208910acceed09896737bb8b7086e0"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+        "sha256": "29a9eb40a36f2a04db942dac95de8aa5204cefb8a98970fdd3df71d19be8497f"
+      }
+    ],
+    "combinedSha256": "896605e16f02df5d2bc7706e4c87622260103f1b056c596135125636abd0f6bb"
+  },
+  "configuration": {
+    "parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+    "quality": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+    "timing": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results",
+    "capture-parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+    "optimizer-diagnostic": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+    "publish": true
+  },
+  "evidence": {
+    "rows": [
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "1080p",
+        "variant": "model-fp32",
+        "regime": "SR",
+        "graphCapture": true,
+        "taps": 1,
+        "qualified": false,
+        "acceptedRounds": 0,
+        "aaPercent": null,
+        "renderMedian": null,
+        "cinMedian": null,
+        "modelMedian": null,
+        "coutMedian": null,
+        "presentMedian": null,
+        "reconstructionMedian": null,
+        "totalMedian": null,
+        "costs": null,
+        "verdict": "not evaluated",
+        "bound": null,
+        "reliedOn": null,
+        "reasons": ["0 rounds accepted for every W term, fewer than minimumPairs 11", "cinGpuMs: A/A differs by ? %, more than 5 %", "modelSpanMs: A/A differs by ? %, more than 5 %", "coutGpuMs: A/A differs by ? %, more than 5 %", "presentGpuMs: A/A differs by ? %, more than 5 %"]
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "720p",
+        "variant": "model-fp32",
+        "regime": "SR",
+        "graphCapture": true,
+        "taps": 1,
+        "qualified": false,
+        "acceptedRounds": 0,
+        "aaPercent": null,
+        "renderMedian": null,
+        "cinMedian": null,
+        "modelMedian": null,
+        "coutMedian": null,
+        "presentMedian": null,
+        "reconstructionMedian": null,
+        "totalMedian": null,
+        "costs": null,
+        "verdict": "not evaluated",
+        "bound": null,
+        "reliedOn": null,
+        "reasons": ["0 rounds accepted for every W term, fewer than minimumPairs 11", "cinGpuMs: A/A differs by ? %, more than 5 %", "modelSpanMs: A/A differs by ? %, more than 5 %", "coutGpuMs: A/A differs by ? %, more than 5 %", "presentGpuMs: A/A differs by ? %, more than 5 %"]
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "small",
+        "variant": "model-fp32",
+        "regime": "SR",
+        "graphCapture": true,
+        "taps": 1,
+        "qualified": false,
+        "acceptedRounds": 0,
+        "aaPercent": null,
+        "renderMedian": null,
+        "cinMedian": null,
+        "modelMedian": null,
+        "coutMedian": null,
+        "presentMedian": null,
+        "reconstructionMedian": null,
+        "totalMedian": null,
+        "costs": null,
+        "verdict": "not evaluated",
+        "bound": null,
+        "reliedOn": null,
+        "reasons": ["0 rounds accepted for every W term, fewer than minimumPairs 11", "cinGpuMs: A/A differs by ? %, more than 5 %", "modelSpanMs: A/A differs by ? %, more than 5 %", "coutGpuMs: A/A differs by ? %, more than 5 %", "presentGpuMs: A/A differs by ? %, more than 5 %"]
+      }
+    ],
+    "comparisons": [
+      {
+        "configuration": {
+          "candidate": "rt4ksr-x2",
+          "profile": "1080p",
+          "precisions": ["fp32"],
+          "taps": 1,
+          "graphCapture": true,
+          "captureParity": {
+            "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+            "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad"
+          },
+          "timingParameters": {
+            "blockIterations": {
+              "unit": "iterations",
+              "default": 30,
+              "minimum": 1,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I: 30 iterations = 1 s of 30->60 FG or 0.5 s of SR at 60 Hz; short enough to interleave, long enough to amortize the per-block telemetry.",
+              "value": 30
+            },
+            "maximumWarmupSeconds": {
+              "unit": "s",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 120,
+              "reason": "Rule I: bounded warmup after the separately recorded cold first run; bounds pre-measurement work and its thermal effect.",
+              "value": 5
+            },
+            "minimumPairs": {
+              "unit": "accepted rounds",
+              "default": 11,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: enough repetitions to expose unstable comparisons; n = 11 gives a 98.8 % order-statistic interval for the median.",
+              "value": 11
+            },
+            "maximumPairs": {
+              "unit": "rounds",
+              "default": 33,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: bounds retries as well as accepted rounds (at least minimumPairs).",
+              "value": 33
+            },
+            "maximumRunSeconds": {
+              "unit": "s",
+              "default": 120,
+              "minimum": 1,
+              "maximum": 3600,
+              "reason": "Rule I: per (candidate, profile) comparison; exhaustion keeps the evidence and ends qualification.",
+              "value": 120
+            },
+            "orderSeed": {
+              "unit": "unsigned 32-bit integer",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 4294967295,
+              "integer": true,
+              "reason": "Rule I: reproduces the block order; round r uses mulberry32(orderSeed + r).",
+              "value": 0
+            },
+            "requiredMemoryPressureLevel": {
+              "unit": "kern.memorystatus_vm_pressure_level (1 normal, 2 warning, 4 critical)",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 4,
+              "integer": true,
+              "reason": "Rule I: memory pressure level != 1 at either end disturbs the block.",
+              "value": 1
+            },
+            "maximumSwapoutPages": {
+              "unit": "pages (vm_stat Swapouts delta)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 1000000000,
+              "integer": true,
+              "reason": "Rule I: any swapout disturbs the block.",
+              "value": 0
+            },
+            "maximumCompressedMiB": {
+              "unit": "MiB (vm_stat Compressions delta x page size)",
+              "default": 16,
+              "minimum": 0,
+              "maximum": 16384,
+              "reason": "Rule I: more than 16 MiB compressed during the block disturbs it (the quiet.mjs/timing.md guard).",
+              "value": 16
+            },
+            "maximumThermalState": {
+              "unit": "ProcessInfo.ThermalState (0 nominal, 1 fair, 2 serious, 3 critical)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 3,
+              "integer": true,
+              "reason": "Rule I: thermal state above nominal at either end disturbs the block.",
+              "value": 0
+            },
+            "maximumOtherProcessCores": {
+              "unit": "cores (average over the block)",
+              "default": 1.5,
+              "minimum": 0,
+              "maximum": 1024,
+              "reason": "Rule I: other processes' aggregate CPU above 1.5 cores on average disturbs the block.",
+              "value": 1.5
+            },
+            "maximumIdleGpuUtilizationPercent": {
+              "unit": "% (IOAccelerator Device Utilization, idle sample before the block)",
+              "default": 10,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: GPU busy above 10 % before the block means another client was using the GPU.",
+              "value": 10
+            },
+            "maximumAaDifferencePercent": {
+              "unit": "% of the candidate's median of block medians",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: candidate-again within 5 % of the candidate, or the comparison does not qualify.",
+              "value": 5
+            },
+            "confidence": {
+              "unit": "probability",
+              "default": 0.95,
+              "minimum": 0.5,
+              "maximum": 0.999,
+              "reason": "Requested coverage of the order-statistic interval for the median; the achieved (discrete) coverage is reported.",
+              "value": 0.95
+            }
+          },
+          "overrides": {},
+          "telemetryCadenceMs": 500,
+          "parity": {
+            "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+            "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778"
+          }
+        },
+        "comparisons": [
+          {
+            "candidate": "model-fp32",
+            "control": "native",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "bilinear",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "plumbing",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          }
+        ],
+        "stop": "maximumRunSeconds",
+        "preparation": {
+          "timer": {
+            "validated": true,
+            "monotonic": true,
+            "positive": true,
+            "unquantized": true,
+            "passes": [
+              {
+                "beginNs": 120392577873012,
+                "endNs": 120392577875137,
+                "ns": 2125
+              },
+              {
+                "beginNs": 120392577875554,
+                "endNs": 120392577877554,
+                "ns": 2000
+              },
+              {
+                "beginNs": 120392577878096,
+                "endNs": 120392577880054,
+                "ns": 1958
+              },
+              {
+                "beginNs": 120392577881137,
+                "endNs": 120392577883096,
+                "ns": 1959
+              },
+              {
+                "beginNs": 120392577883887,
+                "endNs": 120392577885803,
+                "ns": 1916
+              },
+              {
+                "beginNs": 120392577886803,
+                "endNs": 120392577888761,
+                "ns": 1958
+              },
+              {
+                "beginNs": 120392577889303,
+                "endNs": 120392577891261,
+                "ns": 1958
+              },
+              {
+                "beginNs": 120392577892261,
+                "endNs": 120392577894220,
+                "ns": 1959
+              }
+            ],
+            "unit": "ns",
+            "hardware": {
+              "vendor": "apple",
+              "architecture": "metal-3",
+              "device": "0x0000",
+              "description": "Apple M5",
+              "subgroupMinSize": 32,
+              "subgroupMaxSize": 32,
+              "isFallbackAdapter": false,
+              "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+              "backend": "metal",
+              "type": "integrated GPU",
+              "d3dShaderModel": null,
+              "vkDriverVersion": null,
+              "powerPreference": "high-performance",
+              "subgroupMatrixConfigs": 2
+            },
+            "range": "eight sequential marker compute passes"
+          },
+          "kernelLowerBound": {
+            "status": "missing",
+            "reason": "native WASM EP profiling has no readable kernel profile; no lower bound manufactured"
+          }
+        },
+        "warmup": {
+          "boundedSeconds": 5,
+          "wallSeconds": 4.927571041999996,
+          "iterations": 32,
+          "order": ["native", "bilinear", "plumbing", "model-fp32"],
+          "allVariantsExecuted": true
+        },
+        "sustained": {
+          "status": "not-run",
+          "reason": "screen must pass A-I and quality first"
+        },
+        "environment": {
+          "schema": 1,
+          "generatedAt": "2026-10-13T08:42:51.280Z",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "workingTreeDirty": true
+          },
+          "node": "v26.9.0",
+          "v8": "14.6.202.34-node.32",
+          "platform": "Darwin 27.0.0 arm64",
+          "os": {
+            "productVersion": "27.0",
+            "buildVersion": "26A428"
+          },
+          "hardware": {
+            "model": "Mac17,3",
+            "cpu": "Apple M5",
+            "logicalCores": 10,
+            "performanceLevels": [
+              {
+                "level": 0,
+                "name": "Super",
+                "logicalCpu": 4
+              },
+              {
+                "level": 1,
+                "name": "Efficiency",
+                "logicalCpu": 6
+              }
+            ],
+            "memoryBytes": 17179869184,
+            "memoryGiB": 16
+          },
+          "power": {
+            "source": "AC Power",
+            "batteryPercent": 80,
+            "batteryState": "AC attached",
+            "lowPowerMode": true
+          },
+          "browser": {
+            "product": "Chrome/155.0.8059.40",
+            "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+            "protocolVersion": "1.3",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+            "jsVersion": "15.5.35.20",
+            "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+          },
+          "gpu": {
+            "devices": [
+              {
+                "vendorId": 4203,
+                "deviceId": 0,
+                "vendorString": "Google Inc. (Apple)",
+                "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+                "driverVendor": "Apple",
+                "driverVersion": "27.0"
+              }
+            ],
+            "featureStatus": {
+              "gpu_compositing": "enabled",
+              "rasterization": "enabled",
+              "webgpu": "enabled"
+            }
+          }
+        }
+      },
+      {
+        "configuration": {
+          "candidate": "rt4ksr-x2",
+          "profile": "720p",
+          "precisions": ["fp32"],
+          "taps": 1,
+          "graphCapture": true,
+          "captureParity": {
+            "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+            "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad"
+          },
+          "timingParameters": {
+            "blockIterations": {
+              "unit": "iterations",
+              "default": 30,
+              "minimum": 1,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I: 30 iterations = 1 s of 30->60 FG or 0.5 s of SR at 60 Hz; short enough to interleave, long enough to amortize the per-block telemetry.",
+              "value": 30
+            },
+            "maximumWarmupSeconds": {
+              "unit": "s",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 120,
+              "reason": "Rule I: bounded warmup after the separately recorded cold first run; bounds pre-measurement work and its thermal effect.",
+              "value": 5
+            },
+            "minimumPairs": {
+              "unit": "accepted rounds",
+              "default": 11,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: enough repetitions to expose unstable comparisons; n = 11 gives a 98.8 % order-statistic interval for the median.",
+              "value": 11
+            },
+            "maximumPairs": {
+              "unit": "rounds",
+              "default": 33,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: bounds retries as well as accepted rounds (at least minimumPairs).",
+              "value": 33
+            },
+            "maximumRunSeconds": {
+              "unit": "s",
+              "default": 120,
+              "minimum": 1,
+              "maximum": 3600,
+              "reason": "Rule I: per (candidate, profile) comparison; exhaustion keeps the evidence and ends qualification.",
+              "value": 120
+            },
+            "orderSeed": {
+              "unit": "unsigned 32-bit integer",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 4294967295,
+              "integer": true,
+              "reason": "Rule I: reproduces the block order; round r uses mulberry32(orderSeed + r).",
+              "value": 0
+            },
+            "requiredMemoryPressureLevel": {
+              "unit": "kern.memorystatus_vm_pressure_level (1 normal, 2 warning, 4 critical)",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 4,
+              "integer": true,
+              "reason": "Rule I: memory pressure level != 1 at either end disturbs the block.",
+              "value": 1
+            },
+            "maximumSwapoutPages": {
+              "unit": "pages (vm_stat Swapouts delta)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 1000000000,
+              "integer": true,
+              "reason": "Rule I: any swapout disturbs the block.",
+              "value": 0
+            },
+            "maximumCompressedMiB": {
+              "unit": "MiB (vm_stat Compressions delta x page size)",
+              "default": 16,
+              "minimum": 0,
+              "maximum": 16384,
+              "reason": "Rule I: more than 16 MiB compressed during the block disturbs it (the quiet.mjs/timing.md guard).",
+              "value": 16
+            },
+            "maximumThermalState": {
+              "unit": "ProcessInfo.ThermalState (0 nominal, 1 fair, 2 serious, 3 critical)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 3,
+              "integer": true,
+              "reason": "Rule I: thermal state above nominal at either end disturbs the block.",
+              "value": 0
+            },
+            "maximumOtherProcessCores": {
+              "unit": "cores (average over the block)",
+              "default": 1.5,
+              "minimum": 0,
+              "maximum": 1024,
+              "reason": "Rule I: other processes' aggregate CPU above 1.5 cores on average disturbs the block.",
+              "value": 1.5
+            },
+            "maximumIdleGpuUtilizationPercent": {
+              "unit": "% (IOAccelerator Device Utilization, idle sample before the block)",
+              "default": 10,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: GPU busy above 10 % before the block means another client was using the GPU.",
+              "value": 10
+            },
+            "maximumAaDifferencePercent": {
+              "unit": "% of the candidate's median of block medians",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: candidate-again within 5 % of the candidate, or the comparison does not qualify.",
+              "value": 5
+            },
+            "confidence": {
+              "unit": "probability",
+              "default": 0.95,
+              "minimum": 0.5,
+              "maximum": 0.999,
+              "reason": "Requested coverage of the order-statistic interval for the median; the achieved (discrete) coverage is reported.",
+              "value": 0.95
+            }
+          },
+          "overrides": {},
+          "telemetryCadenceMs": 500,
+          "parity": {
+            "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+            "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778"
+          }
+        },
+        "comparisons": [
+          {
+            "candidate": "model-fp32",
+            "control": "native",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "bilinear",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "plumbing",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          }
+        ],
+        "stop": "maximumRunSeconds",
+        "preparation": {
+          "timer": {
+            "validated": true,
+            "monotonic": true,
+            "positive": true,
+            "unquantized": true,
+            "passes": [
+              {
+                "beginNs": 120269754196702,
+                "endNs": 120269754199286,
+                "ns": 2584
+              },
+              {
+                "beginNs": 120269754199827,
+                "endNs": 120269754202161,
+                "ns": 2334
+              },
+              {
+                "beginNs": 120269754247075,
+                "endNs": 120269754249492,
+                "ns": 2417
+              },
+              {
+                "beginNs": 120269754250283,
+                "endNs": 120269754252658,
+                "ns": 2375
+              },
+              {
+                "beginNs": 120269754253116,
+                "endNs": 120269754255533,
+                "ns": 2417
+              },
+              {
+                "beginNs": 120269754256283,
+                "endNs": 120269754258699,
+                "ns": 2416
+              },
+              {
+                "beginNs": 120269754259074,
+                "endNs": 120269754261533,
+                "ns": 2459
+              },
+              {
+                "beginNs": 120269754261949,
+                "endNs": 120269754264324,
+                "ns": 2375
+              }
+            ],
+            "unit": "ns",
+            "hardware": {
+              "vendor": "apple",
+              "architecture": "metal-3",
+              "device": "0x0000",
+              "description": "Apple M5",
+              "subgroupMinSize": 32,
+              "subgroupMaxSize": 32,
+              "isFallbackAdapter": false,
+              "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+              "backend": "metal",
+              "type": "integrated GPU",
+              "d3dShaderModel": null,
+              "vkDriverVersion": null,
+              "powerPreference": "high-performance",
+              "subgroupMatrixConfigs": 2
+            },
+            "range": "eight sequential marker compute passes"
+          },
+          "kernelLowerBound": {
+            "status": "missing",
+            "reason": "native WASM EP profiling has no readable kernel profile; no lower bound manufactured"
+          }
+        },
+        "warmup": {
+          "boundedSeconds": 5,
+          "wallSeconds": 4.931394958000005,
+          "iterations": 32,
+          "order": ["native", "bilinear", "plumbing", "model-fp32"],
+          "allVariantsExecuted": true
+        },
+        "sustained": {
+          "status": "not-run",
+          "reason": "screen must pass A-I and quality first"
+        },
+        "environment": {
+          "schema": 1,
+          "generatedAt": "2026-10-13T08:40:50.640Z",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "workingTreeDirty": true
+          },
+          "node": "v26.9.0",
+          "v8": "14.6.202.34-node.32",
+          "platform": "Darwin 27.0.0 arm64",
+          "os": {
+            "productVersion": "27.0",
+            "buildVersion": "26A428"
+          },
+          "hardware": {
+            "model": "Mac17,3",
+            "cpu": "Apple M5",
+            "logicalCores": 10,
+            "performanceLevels": [
+              {
+                "level": 0,
+                "name": "Super",
+                "logicalCpu": 4
+              },
+              {
+                "level": 1,
+                "name": "Efficiency",
+                "logicalCpu": 6
+              }
+            ],
+            "memoryBytes": 17179869184,
+            "memoryGiB": 16
+          },
+          "power": {
+            "source": "AC Power",
+            "batteryPercent": 80,
+            "batteryState": "AC attached",
+            "lowPowerMode": true
+          },
+          "browser": {
+            "product": "Chrome/155.0.8059.40",
+            "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+            "protocolVersion": "1.3",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+            "jsVersion": "15.5.35.20",
+            "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+          },
+          "gpu": {
+            "devices": [
+              {
+                "vendorId": 4203,
+                "deviceId": 0,
+                "vendorString": "Google Inc. (Apple)",
+                "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+                "driverVendor": "Apple",
+                "driverVersion": "27.0"
+              }
+            ],
+            "featureStatus": {
+              "gpu_compositing": "enabled",
+              "rasterization": "enabled",
+              "webgpu": "enabled"
+            }
+          }
+        }
+      },
+      {
+        "configuration": {
+          "candidate": "rt4ksr-x2",
+          "profile": "small",
+          "precisions": ["fp32"],
+          "taps": 1,
+          "graphCapture": true,
+          "captureParity": {
+            "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+            "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad"
+          },
+          "timingParameters": {
+            "blockIterations": {
+              "unit": "iterations",
+              "default": 30,
+              "minimum": 1,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I: 30 iterations = 1 s of 30->60 FG or 0.5 s of SR at 60 Hz; short enough to interleave, long enough to amortize the per-block telemetry.",
+              "value": 30
+            },
+            "maximumWarmupSeconds": {
+              "unit": "s",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 120,
+              "reason": "Rule I: bounded warmup after the separately recorded cold first run; bounds pre-measurement work and its thermal effect.",
+              "value": 5
+            },
+            "minimumPairs": {
+              "unit": "accepted rounds",
+              "default": 11,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: enough repetitions to expose unstable comparisons; n = 11 gives a 98.8 % order-statistic interval for the median.",
+              "value": 11
+            },
+            "maximumPairs": {
+              "unit": "rounds",
+              "default": 33,
+              "minimum": 3,
+              "maximum": 1000,
+              "integer": true,
+              "reason": "Rule I / interference policy default: bounds retries as well as accepted rounds (at least minimumPairs).",
+              "value": 33
+            },
+            "maximumRunSeconds": {
+              "unit": "s",
+              "default": 120,
+              "minimum": 1,
+              "maximum": 3600,
+              "reason": "Rule I: per (candidate, profile) comparison; exhaustion keeps the evidence and ends qualification.",
+              "value": 120
+            },
+            "orderSeed": {
+              "unit": "unsigned 32-bit integer",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 4294967295,
+              "integer": true,
+              "reason": "Rule I: reproduces the block order; round r uses mulberry32(orderSeed + r).",
+              "value": 0
+            },
+            "requiredMemoryPressureLevel": {
+              "unit": "kern.memorystatus_vm_pressure_level (1 normal, 2 warning, 4 critical)",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 4,
+              "integer": true,
+              "reason": "Rule I: memory pressure level != 1 at either end disturbs the block.",
+              "value": 1
+            },
+            "maximumSwapoutPages": {
+              "unit": "pages (vm_stat Swapouts delta)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 1000000000,
+              "integer": true,
+              "reason": "Rule I: any swapout disturbs the block.",
+              "value": 0
+            },
+            "maximumCompressedMiB": {
+              "unit": "MiB (vm_stat Compressions delta x page size)",
+              "default": 16,
+              "minimum": 0,
+              "maximum": 16384,
+              "reason": "Rule I: more than 16 MiB compressed during the block disturbs it (the quiet.mjs/timing.md guard).",
+              "value": 16
+            },
+            "maximumThermalState": {
+              "unit": "ProcessInfo.ThermalState (0 nominal, 1 fair, 2 serious, 3 critical)",
+              "default": 0,
+              "minimum": 0,
+              "maximum": 3,
+              "integer": true,
+              "reason": "Rule I: thermal state above nominal at either end disturbs the block.",
+              "value": 0
+            },
+            "maximumOtherProcessCores": {
+              "unit": "cores (average over the block)",
+              "default": 1.5,
+              "minimum": 0,
+              "maximum": 1024,
+              "reason": "Rule I: other processes' aggregate CPU above 1.5 cores on average disturbs the block.",
+              "value": 1.5
+            },
+            "maximumIdleGpuUtilizationPercent": {
+              "unit": "% (IOAccelerator Device Utilization, idle sample before the block)",
+              "default": 10,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: GPU busy above 10 % before the block means another client was using the GPU.",
+              "value": 10
+            },
+            "maximumAaDifferencePercent": {
+              "unit": "% of the candidate's median of block medians",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 100,
+              "reason": "Rule I: candidate-again within 5 % of the candidate, or the comparison does not qualify.",
+              "value": 5
+            },
+            "confidence": {
+              "unit": "probability",
+              "default": 0.95,
+              "minimum": 0.5,
+              "maximum": 0.999,
+              "reason": "Requested coverage of the order-statistic interval for the median; the achieved (discrete) coverage is reported.",
+              "value": 0.95
+            }
+          },
+          "overrides": {},
+          "telemetryCadenceMs": 500,
+          "parity": {
+            "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+            "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778"
+          }
+        },
+        "comparisons": [
+          {
+            "candidate": "model-fp32",
+            "control": "native",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 27,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "native",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "bilinear",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 27,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "bilinear",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          },
+          {
+            "candidate": "model-fp32",
+            "control": "plumbing",
+            "metric": "totalGpuMs",
+            "metricKind": "gpu",
+            "acceptedRounds": 0,
+            "rounds": [],
+            "excluded": [
+              {
+                "round": 0,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 1,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 2,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 3,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 4,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 5,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 6,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 7,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 8,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 9,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 10,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 11,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 12,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 13,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 14,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 15,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 16,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 17,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: other-process-cpu, gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 18,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 19,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 20,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 21,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 22,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 23,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 24,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 25,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 26,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              },
+              {
+                "round": 27,
+                "problems": [
+                  {
+                    "name": "model-fp32",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "plumbing",
+                    "reason": "disturbed: gpu-busy-before"
+                  },
+                  {
+                    "name": "model-fp32-again",
+                    "reason": "disturbed: gpu-busy-before"
+                  }
+                ]
+              }
+            ],
+            "candidateMedian": null,
+            "controlMedian": null,
+            "paired": {
+              "pairs": 0,
+              "rounds": [],
+              "dropped": 0,
+              "difference": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              },
+              "ratio": {
+                "count": 0,
+                "median": null,
+                "lower": null,
+                "upper": null,
+                "lowerRank": null,
+                "upperRank": null,
+                "requestedConfidence": 0.95,
+                "achievedConfidence": 0,
+                "meetsRequested": false
+              }
+            },
+            "aa": {
+              "candidateMedian": null,
+              "againMedian": null,
+              "ratio": null,
+              "differencePercent": null,
+              "limitPercent": 5,
+              "within": false,
+              "paired": {
+                "pairs": 0,
+                "rounds": [],
+                "dropped": 0,
+                "difference": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                },
+                "ratio": {
+                  "count": 0,
+                  "median": null,
+                  "lower": null,
+                  "upper": null,
+                  "lowerRank": null,
+                  "upperRank": null,
+                  "requestedConfidence": 0.95,
+                  "achievedConfidence": 0,
+                  "meetsRequested": false
+                }
+              }
+            },
+            "qualified": false,
+            "claim": "unqualified",
+            "reasons": ["0 accepted rounds, fewer than minimumPairs 11", "A/A differs by ? %, more than 5 %"]
+          }
+        ],
+        "stop": "maximumRunSeconds",
+        "preparation": {
+          "timer": {
+            "validated": true,
+            "monotonic": true,
+            "positive": true,
+            "unquantized": true,
+            "passes": [
+              {
+                "beginNs": 120147571389252,
+                "endNs": 120147571393293,
+                "ns": 4041
+              },
+              {
+                "beginNs": 120147571394043,
+                "endNs": 120147571397877,
+                "ns": 3834
+              },
+              {
+                "beginNs": 120147571398418,
+                "endNs": 120147571402251,
+                "ns": 3833
+              },
+              {
+                "beginNs": 120147571403001,
+                "endNs": 120147571406834,
+                "ns": 3833
+              },
+              {
+                "beginNs": 120147571407459,
+                "endNs": 120147571411251,
+                "ns": 3792
+              },
+              {
+                "beginNs": 120147571412001,
+                "endNs": 120147571415792,
+                "ns": 3791
+              },
+              {
+                "beginNs": 120147571416376,
+                "endNs": 120147571420292,
+                "ns": 3916
+              },
+              {
+                "beginNs": 120147571420917,
+                "endNs": 120147571424750,
+                "ns": 3833
+              }
+            ],
+            "unit": "ns",
+            "hardware": {
+              "vendor": "apple",
+              "architecture": "metal-3",
+              "device": "0x0000",
+              "description": "Apple M5",
+              "subgroupMinSize": 32,
+              "subgroupMaxSize": 32,
+              "isFallbackAdapter": false,
+              "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+              "backend": "metal",
+              "type": "integrated GPU",
+              "d3dShaderModel": null,
+              "vkDriverVersion": null,
+              "powerPreference": "high-performance",
+              "subgroupMatrixConfigs": 2
+            },
+            "range": "eight sequential marker compute passes"
+          },
+          "kernelLowerBound": {
+            "status": "missing",
+            "reason": "native WASM EP profiling has no readable kernel profile; no lower bound manufactured"
+          }
+        },
+        "warmup": {
+          "boundedSeconds": 5,
+          "wallSeconds": 4.935899458,
+          "iterations": 32,
+          "order": ["native", "bilinear", "plumbing", "model-fp32"],
+          "allVariantsExecuted": true
+        },
+        "sustained": {
+          "status": "not-run",
+          "reason": "screen must pass A-I and quality first"
+        },
+        "environment": {
+          "schema": 1,
+          "generatedAt": "2026-10-13T08:38:48.664Z",
+          "research": {
+            "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+            "workingTreeDirty": true
+          },
+          "node": "v26.9.0",
+          "v8": "14.6.202.34-node.32",
+          "platform": "Darwin 27.0.0 arm64",
+          "os": {
+            "productVersion": "27.0",
+            "buildVersion": "26A428"
+          },
+          "hardware": {
+            "model": "Mac17,3",
+            "cpu": "Apple M5",
+            "logicalCores": 10,
+            "performanceLevels": [
+              {
+                "level": 0,
+                "name": "Super",
+                "logicalCpu": 4
+              },
+              {
+                "level": 1,
+                "name": "Efficiency",
+                "logicalCpu": 6
+              }
+            ],
+            "memoryBytes": 17179869184,
+            "memoryGiB": 16
+          },
+          "power": {
+            "source": "AC Power",
+            "batteryPercent": 80,
+            "batteryState": "AC attached",
+            "lowPowerMode": true
+          },
+          "browser": {
+            "product": "Chrome/155.0.8059.40",
+            "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+            "protocolVersion": "1.3",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+            "jsVersion": "15.5.35.20",
+            "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+          },
+          "gpu": {
+            "devices": [
+              {
+                "vendorId": 4203,
+                "deviceId": 0,
+                "vendorString": "Google Inc. (Apple)",
+                "deviceString": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Version 27.0 (Build 26A428))",
+                "driverVendor": "Apple",
+                "driverVersion": "27.0"
+              }
+            ],
+            "featureStatus": {
+              "gpu_compositing": "enabled",
+              "rasterization": "enabled",
+              "webgpu": "enabled"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "schema": 1,
+    "createdAt": "2026-10-13T08:48:25.057Z",
+    "generator": {
+      "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+      "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+    },
+    "sourceResults": [
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+        "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778",
+        "bytes": 1496658
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+        "sha256": "39255fc133d809ff6effd636ee2759edcd1439f2bd6e257afc43dd368f88cc41",
+        "bytes": 214258
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-1080p.json",
+        "sha256": "8d2e5588c3acf345233e437b8e76e34ad2e1cc2a2aea0e1c3ad1f932402be540",
+        "bytes": 6039566
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-720p.json",
+        "sha256": "29b02204437b19a117cb0d204c0c10179a1f1806d7aab4eae2f23e10a51fcd6e",
+        "bytes": 8809093
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-small.json",
+        "sha256": "94fd78ba9e74241eabdd8fdc0245c8bfd709337465b5d16249a476bfd149e16f",
+        "bytes": 9147038
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+        "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad",
+        "bytes": 117818
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+        "sha256": "374e62a586253e5ef9e420f814ed5d0995d1ba4409628e27bcf8b735a9637dea",
+        "bytes": 78327
+      }
+    ],
+    "corpusImagesPublished": false,
+    "qualification": "GPU timings can qualify only as conditional observations on this machine; CPU/elapsed/cold timings remain unqualified. G_span/U_span is an upper bound; no kernel lower bound measured.",
+    "review": "Root plus independent workflow adversarial reviews; final gate rows recomputed from numeric results. Contact sheets remain in build for human inspection."
+  }
+}

@@ -93,3 +93,39 @@ difference those.
 
 `performance.now()` is itself rounded to 100 µs unless the page is cross-origin isolated;
 see [Checks on a real GPU](https://github.com/foss-earth/docs/blob/main/docs/validation/README.md).
+
+## Background work while agents run
+
+Learned on 2026-10-13 while building the AI frame generation harness. The largest
+disturbances in that session came with no keyboard input at all:
+
+| What | How it showed | What fixes or catches it |
+| --- | --- | --- |
+| Pylance, VS Code's Python language server, indexing `build/` | 2.1 GB resident and busy cores after agents created package caches and virtual environments under `build/` (one uv cache held 8,419 `.py` files) | `python.analysis.include` in the VS Code workspace settings, listing only the folders with tracked Python. If the command palette has no "Python: Restart Language Server", ending the server's process makes VS Code start a fresh one |
+| `rg --files --follow` started by an extension looking for `package.json` files (most likely VS Code's built-in npm extension) | Two processes at about 5 cores each for over a minute, more than once. The linked `node_modules` packages in foss-earth and UMN-VR point at each other and at whole sibling repositories, so following symlinks walks the same trees again and again | `"search.followSymlinks": false` in the VS Code user settings. The same search then takes 0.2 s per repository |
+| Other agents' exports and renders | 1.43 to 1.46 cores of other-process CPU in idle one-second blocks, against 0.12 to 0.33 cores without them | Nothing but stopping them: a limit of 1.5 extra cores, as in scene-ab's `--max-extra-cores` and the frame generation rules, would not catch this load |
+
+## Reading the machine's state
+
+- The "Device Utilization %" from `ioreg -r -d 1 -w 0 -c IOAccelerator` is the value at
+  the moment of the call. It read 100 % during a Metal compute load and 0 at the first
+  reading 0 to 8 ms after the load ended, in three repeats. A GPU-idle check before a
+  block needs no settling time, but it must come after `queue.onSubmittedWorkDone()` for
+  earlier work, or it reads the benchmark's own load.
+- One full telemetry sample cost 12.9 ms back to back but 32 ms after a second of
+  idleness. It reads memory pressure, `vm_stat`, thermal state, `ps`, `ioreg`, `pmset` and
+  input idle time in parallel. The processor slows while idle, as in
+  [a frame's work is not a loop's work](#a-frames-work-is-not-a-loops-work).
+- `pmset -g` names the apps holding sleep assertions. Keep only the parsed values (Low
+  Power Mode, and the power source from `pmset -g batt`), not the text. The power source
+  changed during one session while Low Power Mode stayed off, so record both for every block.
+- WebGPU timestamps in Chrome 155 are quantized to 65,536 ns unless Chrome starts with
+  `--enable-unsafe-webgpu`; see
+  [RIFE and RT4KSR on ONNX Runtime Web](../ai-framegen-upscale-models.md#headless-chrome-and-webgpu-on-this-machine).
+
+On 2026-10-13 the captured RT4KSR fp32 screen, with Low Power Mode on and thermal
+state nominal, still read idle device utilization above 10% before nearly every
+block (medians 49–53%). The GPU timer itself validated. Zero rounds qualified, so
+the cost screen was not evaluated. That is a rule I result, not a change to the
+10% limit. The numbers are in the
+[frame-generation report](../../benchmarks/ai-framegen-upscale/REPORT.md#quality-and-full-path-cost).

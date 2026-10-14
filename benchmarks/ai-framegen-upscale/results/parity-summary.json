@@ -1,0 +1,4151 @@
+{
+  "schema": 1,
+  "environment": {
+    "schema": 1,
+    "generatedAt": "2026-10-13T08:48:25.103Z",
+    "research": {
+      "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+      "workingTreeDirty": true
+    },
+    "node": "v26.9.0",
+    "v8": "14.6.202.34-node.32",
+    "platform": "Darwin 27.0.0 arm64",
+    "os": {
+      "productVersion": "27.0",
+      "buildVersion": "26A428"
+    },
+    "hardware": {
+      "model": "Mac17,3",
+      "cpu": "Apple M5",
+      "logicalCores": 10,
+      "performanceLevels": [
+        {
+          "level": 0,
+          "name": "Super",
+          "logicalCpu": 4
+        },
+        {
+          "level": 1,
+          "name": "Efficiency",
+          "logicalCpu": 6
+        }
+      ],
+      "memoryBytes": 17179869184,
+      "memoryGiB": 16
+    },
+    "power": {
+      "source": "AC Power",
+      "batteryPercent": 80,
+      "batteryState": "AC attached",
+      "lowPowerMode": true
+    },
+    "browser": null,
+    "gpu": null
+  },
+  "script": {
+    "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+    "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+  },
+  "sources": {
+    "files": [
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/browser-dependencies.json",
+        "sha256": "8f33845b0e33cb6c44e90903b94c6fe068b4e13415b25d923b8db4f8e319845b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/candidates.py",
+        "sha256": "ab1ebb547a25209bd49f4902b645aa7f166b49be808a991a782935aca5b80bd1"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/common.py",
+        "sha256": "57ac481e502a6175d71a6ac9dd9eb3f2ea3983c40b74ae2b1a62c603232a09bd"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/export.py",
+        "sha256": "c9e3de101e1a033bfe3b9b29ebcc8a53aae8c94136034e3e647d6454acf21c33"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/fetch.py",
+        "sha256": "d8110930cfa1a15d292e022577a8fbb49e3048f009eb6166f0bdf1dedf4d1424"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/manifest.py",
+        "sha256": "043b212a9826e20134bf2b8973a3fc6e4bd12227f7f8e784326f47c481105a90"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/quality.py",
+        "sha256": "8713c29225ae20522045d214277c7bea6d508291063c8d58a2d92f1d070bbe9d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/references.py",
+        "sha256": "8b30c30638d575e745303d9b26f050f10432548bd6232b2dabcbd2ac8f83ef9c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/replay.py",
+        "sha256": "2cd34abd0a6ea6597cd3388663981e3184dc768c851f0e42fc6d422b85b000c3"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.in",
+        "sha256": "759e67543c1acf08aec320c86e3ed5b2f2f8a84a16ce9cc519d960fdbe83e37d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/requirements.lock",
+        "sha256": "141ea416a6f30e7b13f32ed747ea57632261939cd8952ae558dfa17f92bf44ed"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/export/sources.json",
+        "sha256": "df39c33709476f03fb6bc225330e8dfe06875d617f806c6fc2eea49632b41219"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/fetch-ort-web.mjs",
+        "sha256": "3b7b9cf494dc122b8d4c1dc3f288e3bc3513adb21c9451f0ac60d1ed25b8444d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/gpu.mjs",
+        "sha256": "f29b9e7d809a7d0b8dd4a8eb98339def715f4f4e1ad06b214c38d0d434b1b50c"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/index.html",
+        "sha256": "0cd5612468a2ff48aa4223fb1d936e7946c8a0fec7bb2d811562a03ef7fc0a3e"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/main.mjs",
+        "sha256": "cbc0f38857544d8ffdb41da8c51c03ec90b623814ec8133809f274c1f3fedf06"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/ort.mjs",
+        "sha256": "67183f251d791836a82018d7c4fb190e62fc2cdbff46e092c4a05a598e03e457"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/parity.mjs",
+        "sha256": "a1746e38857d039e80e61c78cb8c012ac057fe4136eb684d894638932855942b"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/pipelines.mjs",
+        "sha256": "665a1a03fc0e72e5813e95085c9d0cbe6afc41342b8f6b5d13e55e6e39f73552"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/harness/wgsl.mjs",
+        "sha256": "180702b82ebd14af68ec128a3a69ef5e23423499a0ff24eabf46fe4e0aa7f43d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/blocks.mjs",
+        "sha256": "d37e2bc31b11dac43594ed9e133dda164846904ed6fa4e4d0872ebc1639520b6"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/browser.mjs",
+        "sha256": "6f404a22e39f0a2ce6ec9f4f5d0564ca31c317932ca54ac171bda231fd1c37db"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs",
+        "sha256": "4e990d282d76a4dcf02474fef7afd6bbfd48a70801691a95f60fdf824ac9d4f4"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/gates.mjs",
+        "sha256": "236fd1927de60fa315cb6c37216accf48c2045482b33bbfee73160192fca304d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/serve.mjs",
+        "sha256": "52d311a9a86d5250ce5785f41c700e8a716ec38d86b0aca413ea0dfa1cb4b85a"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs",
+        "sha256": "dd4c2a331d952e1981805b316d97012ef21b6f424c57d1ebbb66a28387cc5c72"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs",
+        "sha256": "60ca1e38500d19dbf0db81e81293e309a7af2f27a1ae5cde6dc370c52a65308f"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/lib/thermal.swift",
+        "sha256": "011b3270b5f50963de81109f40fdbf4fdc3d210e077926e5c0bc28c6a4bd360d"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+        "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-parity.mjs",
+        "sha256": "0bb4f77dcd8a2d76a822dd6a97fd701740208910acceed09896737bb8b7086e0"
+      },
+      {
+        "path": "scripts/benchmarks/ai-framegen-upscale/run-timing.mjs",
+        "sha256": "29a9eb40a36f2a04db942dac95de8aa5204cefb8a98970fdd3df71d19be8497f"
+      }
+    ],
+    "combinedSha256": "896605e16f02df5d2bc7706e4c87622260103f1b056c596135125636abd0f6bb"
+  },
+  "configuration": {
+    "parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+    "quality": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+    "timing": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results",
+    "capture-parity": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+    "optimizer-diagnostic": "/Users/felg/gh/foss-earth/research/build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+    "publish": true
+  },
+  "evidence": {
+    "profiles": [
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "small",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "a0b1501e6c9a01d80aa019351556c6d45237f41f080e1099a29d713473754701",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0005144476890563965,
+        "exportMeanAbs": 0.000001435852031202055,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.6841997653245926,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.049974141637664594,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.170994149248298,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 27.930196126302082,
+              "counts": {
+                "withinOne": 54913,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 174,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 320"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 72684784,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.6841997653245926,
+        "meanAbs": 0.049974141637664594,
+        "psnrDb": 22.170994149248298,
+        "withinOnePercent": 27.930196126302082,
+        "maxCodes": 174,
+        "peakMiB": 69.31761169433594,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "small",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "a0b1501e6c9a01d80aa019351556c6d45237f41f080e1099a29d713473754701",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0005144476890563965,
+        "exportMeanAbs": 0.000001435852031202055,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.7845771908760071,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.09218995676505137,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 17.16822678835041,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 9.627278645833334,
+              "counts": {
+                "withinOne": 18928,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 200,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 320"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 72684784,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.7845771908760071,
+        "meanAbs": 0.09218995676505137,
+        "psnrDb": 17.16822678835041,
+        "withinOnePercent": 9.627278645833332,
+        "maxCodes": 200,
+        "peakMiB": 69.31761169433594,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "small",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "b56eb87b22c7e3f84a7d64b9e7900caff0e5f32fa2331aca8e49aee33072a2b8",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.3883642256259918,
+        "exportMeanAbs": 0.004218120560900443,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.683995246887207,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.050010156377685654,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.18223744201012,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 27.910359700520832,
+              "counts": {
+                "withinOne": 54874,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 174,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 323"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 37918832,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.683995246887207,
+        "meanAbs": 0.050010156377685654,
+        "psnrDb": 22.18223744201012,
+        "withinOnePercent": 27.910359700520832,
+        "maxCodes": 174,
+        "peakMiB": 36.16221618652344,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "small",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "b56eb87b22c7e3f84a7d64b9e7900caff0e5f32fa2331aca8e49aee33072a2b8",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.3883642256259918,
+        "exportMeanAbs": 0.004218120560900443,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.8814753293991089,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.093217426777434,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 17.087380059235276,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 9.50469970703125,
+              "counts": {
+                "withinOne": 18687,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 224,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 323"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 37918832,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.8814753293991089,
+        "meanAbs": 0.093217426777434,
+        "psnrDb": 17.087380059235276,
+        "withinOnePercent": 9.50469970703125,
+        "maxCodes": 224,
+        "peakMiB": 36.16221618652344,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "small",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "1ef4602e42f57eaf02770ad4aee5fcf5eaea24820a482bb3ead7c6bbe27f08a6",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000003427267074584961,
+        "exportMeanAbs": 5.028612463653381e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.000003516674041748047,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.265060842492749e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.53282639640577,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 196608,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 5193680,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.000003516674041748047,
+        "meanAbs": 5.265060842492749e-7,
+        "psnrDb": 123.53282639640577,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 4.9530792236328125,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "small",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "1ef4602e42f57eaf02770ad4aee5fcf5eaea24820a482bb3ead7c6bbe27f08a6",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000003427267074584961,
+        "exportMeanAbs": 5.028612463653381e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.000003516674041748047,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.302027837143323e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.3688998322988,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 196608,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 5193680,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.000003516674041748047,
+        "meanAbs": 5.302027837143323e-7,
+        "psnrDb": 123.3688998322988,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 4.9530792236328125,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "small",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "d9a34c7ef66e9a80327c12f6121329c8eb4693f3db8514908785b969f4f79963",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.00243300199508667,
+        "exportMeanAbs": 0.00039883106011406877,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.023432135581970215,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.003697785607312339,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 46.53447897048996,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 78.155517578125,
+              "counts": {
+                "withinOne": 153660,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 6,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 4301776,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.023432135581970215,
+        "meanAbs": 0.003697785607312339,
+        "psnrDb": 46.53447897048996,
+        "withinOnePercent": 78.155517578125,
+        "maxCodes": 6,
+        "peakMiB": 4.1024932861328125,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "small",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "d9a34c7ef66e9a80327c12f6121329c8eb4693f3db8514908785b969f4f79963",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.00243300199508667,
+        "exportMeanAbs": 0.00039883106011406877,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.026290714740753174,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.00360199762808161,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 46.66543864415358,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 78.99729410807292,
+              "counts": {
+                "withinOne": 155315,
+                "total": 196608
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 7,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 4301776,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.026290714740753174,
+        "meanAbs": 0.00360199762808161,
+        "psnrDb": 46.66543864415358,
+        "withinOnePercent": 78.99729410807291,
+        "maxCodes": 7,
+        "peakMiB": 4.1024932861328125,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "720p",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "9fec2b658794ecbf8f278d1dfd360fada11e3df6429bb211ff250d94e2bf8c24",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0008686184883117676,
+        "exportMeanAbs": 0.000003873797669449222,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.736918150447309,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.049939203869836954,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.447717247833054,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 22.53150318287037,
+              "counts": {
+                "withinOne": 622951,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 188,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 330"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 818500272,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.736918150447309,
+        "meanAbs": 0.049939203869836954,
+        "psnrDb": 22.447717247833054,
+        "withinOnePercent": 22.53150318287037,
+        "maxCodes": 188,
+        "peakMiB": 780.5826873779297,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "720p",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "9fec2b658794ecbf8f278d1dfd360fada11e3df6429bb211ff250d94e2bf8c24",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0008686184883117676,
+        "exportMeanAbs": 0.000003873797669449222,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.9459946267306805,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.043787956053144846,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.302250921725673,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 24.30201099537037,
+              "counts": {
+                "withinOne": 671902,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 241,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 330"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 818500272,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.9459946267306805,
+        "meanAbs": 0.043787956053144846,
+        "psnrDb": 22.302250921725673,
+        "withinOnePercent": 24.30201099537037,
+        "maxCodes": 241,
+        "peakMiB": 780.5826873779297,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "720p",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "5128f29222535b429a1ecdc6e042185befc7169a55f8236adae65d312a51108a",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.6091251075267792,
+        "exportMeanAbs": 0.008143569832595218,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.7369183301925659,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.04984392916075809,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.479003157828604,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 22.343352141203702,
+              "counts": {
+                "withinOne": 617749,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 188,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 333"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 449910336,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.7369183301925659,
+        "meanAbs": 0.04984392916075809,
+        "psnrDb": 22.479003157828604,
+        "withinOnePercent": 22.343352141203702,
+        "maxCodes": 188,
+        "peakMiB": 429.06793212890625,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "720p",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "5128f29222535b429a1ecdc6e042185befc7169a55f8236adae65d312a51108a",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.6091251075267792,
+        "exportMeanAbs": 0.008143569832595218,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.9476879350841045,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.0435349283916739,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.426680511049423,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 23.22479021990741,
+              "counts": {
+                "withinOne": 642119,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 241,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 333"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 449910336,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.9476879350841045,
+        "meanAbs": 0.0435349283916739,
+        "psnrDb": 22.426680511049423,
+        "withinOnePercent": 23.22479021990741,
+        "maxCodes": 241,
+        "peakMiB": 429.06793212890625,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "720p",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "b7ead88c5d0d56853cdb5be940d2178e5d9a6fb6972e829787cba6a08b85616a",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0000034570693969726562,
+        "exportMeanAbs": 4.993557087779764e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.0000036954879760742188,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.085341619172192e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.85204249332239,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 2764800,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 69468112,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.0000036954879760742188,
+        "meanAbs": 5.085341619172192e-7,
+        "psnrDb": 123.85204249332239,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 66.24995422363281,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "720p",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "b7ead88c5d0d56853cdb5be940d2178e5d9a6fb6972e829787cba6a08b85616a",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.0000034570693969726562,
+        "exportMeanAbs": 4.993557087779764e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.000003993511199951172,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.271312123268183e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.39738312163497,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 2764800,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 69468112,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.000003993511199951172,
+        "meanAbs": 5.271312123268183e-7,
+        "psnrDb": 123.39738312163497,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 66.24995422363281,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "720p",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "41e99387c84c3c04128a42bb843e0dc53c07d686257f2264153fb1c08e5edd3d",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.002506852149963379,
+        "exportMeanAbs": 0.0003980243001229755,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.030162036418914795,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.0037055380486948133,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 46.55416554664463,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 77.8556495949074,
+              "counts": {
+                "withinOne": 2152553,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 8,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 60728272,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.030162036418914795,
+        "meanAbs": 0.0037055380486948133,
+        "psnrDb": 46.55416554664463,
+        "withinOnePercent": 77.8556495949074,
+        "maxCodes": 8,
+        "peakMiB": 57.91499328613281,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "720p",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "41e99387c84c3c04128a42bb843e0dc53c07d686257f2264153fb1c08e5edd3d",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.002506852149963379,
+        "exportMeanAbs": 0.0003980243001229755,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.026484698057174683,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.0036436502512676833,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 46.603373536284124,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 78.24106626157408,
+              "counts": {
+                "withinOne": 2163209,
+                "total": 2764800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 7,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 60728272,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.026484698057174683,
+        "meanAbs": 0.0036436502512676833,
+        "psnrDb": 46.603373536284124,
+        "withinOnePercent": 78.24106626157408,
+        "maxCodes": 7,
+        "peakMiB": 57.91499328613281,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "1080p",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "b809592a1310460265bd553d2195df3b758fd8a029267b62014ffbaf30b6c99b",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.0017777681350708008,
+        "exportMeanAbs": 0.0000029581091985478954,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.7520179748535156,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.05561519001208034,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 21.689611409851793,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 25.06124614197531,
+              "counts": {
+                "withinOne": 1559010,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 192,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 320"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 2139178112,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.7520179748535156,
+        "meanAbs": 0.05561519001208034,
+        "psnrDb": 21.689611409851793,
+        "withinOnePercent": 25.061246141975307,
+        "maxCodes": 192,
+        "peakMiB": 2040.0792236328125,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "1080p",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "b809592a1310460265bd553d2195df3b758fd8a029267b62014ffbaf30b6c99b",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.0017777681350708008,
+        "exportMeanAbs": 0.0000029581091985478954,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.941491138190031,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.0387404682981897,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.813406215541782,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 32.43007330246913,
+              "counts": {
+                "withinOne": 2017410,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 240,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 320"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 2139178112,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.941491138190031,
+        "meanAbs": 0.0387404682981897,
+        "psnrDb": 22.813406215541782,
+        "withinOnePercent": 32.43007330246914,
+        "maxCodes": 240,
+        "peakMiB": 2040.0792236328125,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "1080p",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "dd5adcb6c234b08e5703271018f2b09231b81befd3f3d3f0b68462e662ca0bea",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.6794051378965378,
+        "exportMeanAbs": 0.01158150262761926,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.7603754997253418,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.05527330039793059,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 21.75104697769101,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 24.883021476337447,
+              "counts": {
+                "withinOne": 1547923,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 194,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 323"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 1041729536,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.7603754997253418,
+        "meanAbs": 0.05527330039793059,
+        "psnrDb": 21.75104697769101,
+        "withinOnePercent": 24.88302147633745,
+        "maxCodes": 194,
+        "peakMiB": 993.470703125,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "1080p",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "dd5adcb6c234b08e5703271018f2b09231b81befd3f3d3f0b68462e662ca0bea",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.6794051378965378,
+        "exportMeanAbs": 0.01158150262761926,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.9416900984942913,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.03935908432468053,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.88812627999522,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 28.783098636831276,
+              "counts": {
+                "withinOne": 1790539,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 240,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 323"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 1041729536,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.9416900984942913,
+        "meanAbs": 0.03935908432468053,
+        "psnrDb": 22.88812627999522,
+        "withinOnePercent": 28.783098636831276,
+        "maxCodes": 240,
+        "peakMiB": 993.470703125,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "1080p",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "2b9d09b481fac1bb7b0f6e4d0fc7a1c8daf3340bca17adb24da102f6eee118ea",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000003635883331298828,
+        "exportMeanAbs": 5.029676483432936e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.000004291534423828125,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.227481214793905e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.53297856969232,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 6220800,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 137072592,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.000004291534423828125,
+        "meanAbs": 5.227481214793905e-7,
+        "psnrDb": 123.53297856969232,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 130.7226104736328,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "1080p",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "2b9d09b481fac1bb7b0f6e4d0fc7a1c8daf3340bca17adb24da102f6eee118ea",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000003635883331298828,
+        "exportMeanAbs": 5.029676483432936e-7,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.000003993511199951172,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 5.205308621839366e-7,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 123.51539593138224,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": true,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 100,
+              "counts": {
+                "withinOne": 6220800,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": true
+            },
+            {
+              "name": "maxDifference",
+              "value": 1,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 58"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 137072592,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.000003993511199951172,
+        "meanAbs": 5.205308621839366e-7,
+        "psnrDb": 123.51539593138224,
+        "withinOnePercent": 100,
+        "maxCodes": 1,
+        "peakMiB": 130.7226104736328,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "1080p",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "f128e8d2d6803647a8aaefe88b1239821de032be4e77bf35c8dd331ca14388c3",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.002768099308013916,
+        "exportMeanAbs": 0.00039078978829059827,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.027811169624328613,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.004146214384286939,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 45.6657445836432,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 73.03160365226337,
+              "counts": {
+                "withinOne": 4543150,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 7,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 118633424,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.027811169624328613,
+        "meanAbs": 0.004146214384286939,
+        "psnrDb": 45.6657445836432,
+        "withinOnePercent": 73.03160365226337,
+        "maxCodes": 7,
+        "peakMiB": 113.13764953613281,
+        "error": null
+      },
+      {
+        "candidate": "rt4ksr-x2",
+        "profile": "1080p",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "f128e8d2d6803647a8aaefe88b1239821de032be4e77bf35c8dd331ca14388c3",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.002768099308013916,
+        "exportMeanAbs": 0.00039078978829059827,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": true,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.029059529304504395,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": true
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.0036654695734836653,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": true
+            },
+            {
+              "name": "psnrDb",
+              "value": 46.569932841486605,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": true
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 78.11431005658436,
+              "counts": {
+                "withinOne": 4859335,
+                "total": 6220800
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 8,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": true
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 60"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": true,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 118633424,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": true
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.029059529304504395,
+        "meanAbs": 0.0036654695734836653,
+        "psnrDb": 46.569932841486605,
+        "withinOnePercent": 78.11431005658436,
+        "maxCodes": 8,
+        "peakMiB": 113.13764953613281,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "540p",
+        "precision": "fp32",
+        "case": "synthetic",
+        "modelSha256": "827c57ae522782b5604b1de23311208317f864a9cb287508fc6658a9170c61bb",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000471651554107666,
+        "exportMeanAbs": 0.000002525330454875815,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.960784312337637,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.06770378072346789,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 19.716945885802843,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 25.62133487654321,
+              "counts": {
+                "withinOne": 398463,
+                "total": 1555200
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 245,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 330"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 830275248,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.960784312337637,
+        "meanAbs": 0.06770378072346789,
+        "psnrDb": 19.716945885802843,
+        "withinOnePercent": 25.621334876543212,
+        "maxCodes": 245,
+        "peakMiB": 791.8121795654297,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "540p",
+        "precision": "fp32",
+        "case": "natural",
+        "modelSha256": "827c57ae522782b5604b1de23311208317f864a9cb287508fc6658a9170c61bb",
+        "status": "completed",
+        "A": true,
+        "exportMaxAbs": 0.000471651554107666,
+        "exportMeanAbs": 0.000002525330454875815,
+        "B": {
+          "gate": "B",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.8793769478797913,
+              "comparison": "<=",
+              "limit": 0.02,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.04411780563019967,
+              "comparison": "<=",
+              "limit": 0.001,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.692027025173445,
+              "comparison": ">=",
+              "limit": 50,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp32",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 23.75147890946502,
+              "counts": {
+                "withinOne": 369383,
+                "total": 1555200
+              },
+              "comparison": ">=",
+              "limit": 99.5,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 224,
+              "comparison": "<=",
+              "limit": 8,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 330"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 830275248,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.8793769478797913,
+        "meanAbs": 0.04411780563019967,
+        "psnrDb": 22.692027025173445,
+        "withinOnePercent": 23.75147890946502,
+        "maxCodes": 224,
+        "peakMiB": 791.8121795654297,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "540p",
+        "precision": "fp16",
+        "case": "synthetic",
+        "modelSha256": "78cd98ed24c7ba40997e59b652d57467a5968da2aec3159c4fd9a02225b0baec",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.5771749801933765,
+        "exportMeanAbs": 0.012162530943929899,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.960784312337637,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.06749844363637995,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 19.75441387408444,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 25.506751543209877,
+              "counts": {
+                "withinOne": 396681,
+                "total": 1555200
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 245,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 333"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 398164544,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.960784312337637,
+        "meanAbs": 0.06749844363637995,
+        "psnrDb": 19.75441387408444,
+        "withinOnePercent": 25.506751543209877,
+        "maxCodes": 245,
+        "peakMiB": 379.71929931640625,
+        "error": null
+      },
+      {
+        "candidate": "rife-4.25-lite",
+        "profile": "540p",
+        "precision": "fp16",
+        "case": "natural",
+        "modelSha256": "78cd98ed24c7ba40997e59b652d57467a5968da2aec3159c4fd9a02225b0baec",
+        "status": "completed",
+        "A": false,
+        "exportMaxAbs": 0.5771749801933765,
+        "exportMeanAbs": 0.012162530943929899,
+        "B": {
+          "gate": "B",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "maxAbs",
+              "value": 0.8793769478797913,
+              "comparison": "<=",
+              "limit": 0.06,
+              "pass": false
+            },
+            {
+              "name": "meanAbs",
+              "value": 0.04415411695116275,
+              "comparison": "<=",
+              "limit": 0.004,
+              "pass": false
+            },
+            {
+              "name": "psnrDb",
+              "value": 22.742041854249475,
+              "comparison": ">=",
+              "limit": 40,
+              "pass": false
+            }
+          ]
+        },
+        "C": {
+          "gate": "C",
+          "precision": "fp16",
+          "pass": false,
+          "checks": [
+            {
+              "name": "withinOneCodePercent",
+              "value": 22.491833847736626,
+              "counts": {
+                "withinOne": 349793,
+                "total": 1555200
+              },
+              "comparison": ">=",
+              "limit": 98,
+              "pass": false
+            },
+            {
+              "name": "maxDifference",
+              "value": 224,
+              "comparison": "<=",
+              "limit": 16,
+              "pass": false
+            }
+          ]
+        },
+        "D": {
+          "gate": "D",
+          "status": "pass",
+          "pass": true,
+          "cpuNodes": 0,
+          "statement": "All nodes placed on [WebGpuExecutionProvider]. Number of nodes: 333"
+        },
+        "E": {
+          "gate": "E",
+          "proof": "Injected EP option + harness GPU input/output buffers + harness WGSL consumption under validation/out-of-memory/internal scopes; preallocated output identity checked. env.webgpu.device is undefined for custom native device ids.",
+          "pass": true,
+          "checks": [
+            {
+              "name": "sameDevice",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "gpuInputsAccepted",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "outputConsumed",
+              "value": true,
+              "pass": true
+            },
+            {
+              "name": "scopeErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "uncapturedErrors",
+              "value": 0,
+              "comparison": "<=",
+              "limit": 0,
+              "pass": true
+            },
+            {
+              "name": "deviceLost",
+              "value": false,
+              "pass": true
+            }
+          ]
+        },
+        "F": {
+          "gate": "F",
+          "limitMiB": 256,
+          "pass": false,
+          "checks": [
+            {
+              "name": "peakIncrementalBytes",
+              "value": 398164544,
+              "comparison": "<=",
+              "limit": 268435456,
+              "pass": false
+            }
+          ]
+        },
+        "disagreement": false,
+        "maxAbs": 0.8793769478797913,
+        "meanAbs": 0.04415411695116275,
+        "psnrDb": 22.742041854249475,
+        "withinOnePercent": 22.491833847736626,
+        "maxCodes": 224,
+        "peakMiB": 379.71929931640625,
+        "error": null
+      }
+    ],
+    "environment": {
+      "schema": 1,
+      "generatedAt": "2026-10-13T06:34:17.318Z",
+      "research": {
+        "commit": "1f5aa29141c36ec1ae8531c421d663696804e37e",
+        "workingTreeDirty": true
+      },
+      "node": "v26.9.0",
+      "v8": "14.6.202.34-node.32",
+      "platform": "Darwin 27.0.0 arm64",
+      "os": {
+        "productVersion": "27.0",
+        "buildVersion": "26A428"
+      },
+      "hardware": {
+        "model": "Mac17,3",
+        "cpu": "Apple M5",
+        "logicalCores": 10,
+        "performanceLevels": [
+          {
+            "level": 0,
+            "name": "Super",
+            "logicalCpu": 4
+          },
+          {
+            "level": 1,
+            "name": "Efficiency",
+            "logicalCpu": 6
+          }
+        ],
+        "memoryBytes": 17179869184,
+        "memoryGiB": 16
+      },
+      "power": {
+        "source": "AC Power",
+        "batteryPercent": 74,
+        "batteryState": "charging",
+        "lowPowerMode": false
+      },
+      "browser": {
+        "product": "Chrome/155.0.8059.40",
+        "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+        "protocolVersion": "1.3",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+        "jsVersion": "15.5.35.20",
+        "flags": ["--enable-webgpu-developer-features", "--enable-unsafe-webgpu"]
+      },
+      "gpu": {
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "0x0000",
+          "description": "Apple M5",
+          "subgroupMinSize": 32,
+          "subgroupMaxSize": 32,
+          "isFallbackAdapter": false,
+          "driver": "Metal driver on macOS Version 27.0 (Build 26A428)",
+          "backend": "metal",
+          "type": "integrated GPU",
+          "d3dShaderModel": null,
+          "vkDriverVersion": null,
+          "powerPreference": "high-performance",
+          "subgroupMatrixConfigs": 2
+        },
+        "adapterFeatures": ["atomic-vec2u-min-max", "bgra8unorm-storage", "chromium-experimental-subgroup-matrix", "clip-distances", "core-features-and-limits", "depth-clip-control", "depth32float-stencil8", "dual-source-blending", "float32-blendable", "float32-filterable", "indirect-first-instance", "primitive-index", "rg11b10ufloat-renderable", "shader-f16", "subgroup-size-control", "subgroups", "texture-component-swizzle", "texture-compression-astc", "texture-compression-astc-sliced-3d", "texture-compression-bc", "texture-compression-bc-sliced-3d", "texture-compression-etc2", "texture-compression-unaligned", "texture-formats-tier1", "texture-formats-tier2", "timestamp-query"],
+        "adapterLimits": {
+          "maxTextureDimension1D": 16384,
+          "maxTextureDimension2D": 16384,
+          "maxTextureDimension3D": 2048,
+          "maxTextureArrayLayers": 2048,
+          "maxBindGroups": 4,
+          "maxBindGroupsPlusVertexBuffers": 24,
+          "maxBindingsPerBindGroup": 1000,
+          "maxDynamicUniformBuffersPerPipelineLayout": 10,
+          "maxDynamicStorageBuffersPerPipelineLayout": 8,
+          "maxSampledTexturesPerShaderStage": 48,
+          "maxSamplersPerShaderStage": 16,
+          "maxStorageBuffersPerShaderStage": 10,
+          "maxStorageTexturesPerShaderStage": 8,
+          "maxUniformBuffersPerShaderStage": 12,
+          "maxUniformBufferBindingSize": 65536,
+          "maxStorageBufferBindingSize": 4294967292,
+          "minUniformBufferOffsetAlignment": 256,
+          "minStorageBufferOffsetAlignment": 256,
+          "maxVertexBuffers": 8,
+          "maxBufferSize": 4294967292,
+          "maxVertexAttributes": 30,
+          "maxVertexBufferArrayStride": 2048,
+          "maxInterStageShaderVariables": 28,
+          "maxColorAttachments": 8,
+          "maxColorAttachmentBytesPerSample": 128,
+          "maxComputeWorkgroupStorageSize": 32768,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024,
+          "maxComputeWorkgroupSizeY": 1024,
+          "maxComputeWorkgroupSizeZ": 64,
+          "maxComputeWorkgroupsPerDimension": 65535,
+          "maxImmediateSize": 64,
+          "maxStorageBuffersInFragmentStage": 10,
+          "maxStorageTexturesInFragmentStage": 8,
+          "maxStorageBuffersInVertexStage": 10,
+          "maxStorageTexturesInVertexStage": 8
+        },
+        "requiredFeatures": ["chromium-experimental-subgroup-matrix", "timestamp-query", "shader-f16", "subgroups", "subgroup-size-control"],
+        "missingOrtFeatures": [],
+        "requiredLimits": {
+          "maxBindGroups": 4,
+          "maxComputeWorkgroupStorageSize": 32768,
+          "maxComputeWorkgroupsPerDimension": 65535,
+          "maxStorageBuffersPerShaderStage": 10,
+          "maxStorageBufferBindingSize": 4294967292,
+          "maxBufferSize": 4294967292,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024,
+          "maxComputeWorkgroupSizeY": 1024,
+          "maxComputeWorkgroupSizeZ": 64
+        },
+        "deviceFeatures": ["chromium-experimental-subgroup-matrix", "core-features-and-limits", "shader-f16", "subgroup-size-control", "subgroups", "timestamp-query"],
+        "deviceLimits": {
+          "maxTextureDimension1D": 8192,
+          "maxTextureDimension2D": 8192,
+          "maxTextureDimension3D": 2048,
+          "maxTextureArrayLayers": 256,
+          "maxBindGroups": 4,
+          "maxBindGroupsPlusVertexBuffers": 24,
+          "maxBindingsPerBindGroup": 1000,
+          "maxDynamicUniformBuffersPerPipelineLayout": 8,
+          "maxDynamicStorageBuffersPerPipelineLayout": 4,
+          "maxSampledTexturesPerShaderStage": 16,
+          "maxSamplersPerShaderStage": 16,
+          "maxStorageBuffersPerShaderStage": 10,
+          "maxStorageTexturesPerShaderStage": 4,
+          "maxUniformBuffersPerShaderStage": 12,
+          "maxUniformBufferBindingSize": 65536,
+          "maxStorageBufferBindingSize": 4294967292,
+          "minUniformBufferOffsetAlignment": 256,
+          "minStorageBufferOffsetAlignment": 256,
+          "maxVertexBuffers": 8,
+          "maxBufferSize": 4294967292,
+          "maxVertexAttributes": 16,
+          "maxVertexBufferArrayStride": 2048,
+          "maxInterStageShaderVariables": 16,
+          "maxColorAttachments": 8,
+          "maxColorAttachmentBytesPerSample": 32,
+          "maxComputeWorkgroupStorageSize": 32768,
+          "maxComputeInvocationsPerWorkgroup": 1024,
+          "maxComputeWorkgroupSizeX": 1024,
+          "maxComputeWorkgroupSizeY": 1024,
+          "maxComputeWorkgroupSizeZ": 64,
+          "maxComputeWorkgroupsPerDimension": 65535,
+          "maxImmediateSize": 64,
+          "maxStorageBuffersInFragmentStage": 10,
+          "maxStorageTexturesInFragmentStage": 4,
+          "maxStorageBuffersInVertexStage": 10,
+          "maxStorageTexturesInVertexStage": 4
+        },
+        "preferredCanvasFormat": "bgra8unorm",
+        "wgslLanguageFeatures": ["buffer_view", "immediate_address_space", "linear_indexing", "packed_4x8_integer_dot_product", "pointer_composite_access", "readonly_and_readwrite_storage_textures", "subgroup_id", "subgroup_uniformity", "swizzle_assignment", "texture_and_sampler_let", "texture_formats_tier1", "uniform_buffer_standard_layout", "unrestricted_pointer_parameters"],
+        "createMs": 2.010000005364418
+      }
+    }
+  },
+  "provenance": {
+    "schema": 1,
+    "createdAt": "2026-10-13T08:48:25.057Z",
+    "generator": {
+      "path": "scripts/benchmarks/ai-framegen-upscale/make-tables.mjs",
+      "sha256": "65519991d3b6f0c3d24900c85412a8b565ac6ecc5b5d8e45e6d1cffe0c9f5665"
+    },
+    "sourceResults": [
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/parity/2026-10-13_013126/results/parity.json",
+        "sha256": "a1310d0a2148ddd95bbe2892c4183cb33046cbe7c7b0a82ec0c9431446c57778",
+        "bytes": 1496658
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/quality/2026-10-13_014220/results/quality.json",
+        "sha256": "39255fc133d809ff6effd636ee2759edcd1439f2bd6e257afc43dd368f88cc41",
+        "bytes": 214258
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-1080p.json",
+        "sha256": "8d2e5588c3acf345233e437b8e76e34ad2e1cc2a2aea0e1c3ad1f932402be540",
+        "bytes": 6039566
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-720p.json",
+        "sha256": "29b02204437b19a117cb0d204c0c10179a1f1806d7aab4eae2f23e10a51fcd6e",
+        "bytes": 8809093
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/timing/2026-10-13_033847/results/timing-rt4ksr-x2-small.json",
+        "sha256": "94fd78ba9e74241eabdd8fdc0245c8bfd709337465b5d16249a476bfd149e16f",
+        "bytes": 9147038
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_014021/results/capture-diagnostic.json",
+        "sha256": "b11bf200554311eb824abf6c82182ff714e833d360ca580e76590bf0a30894ad",
+        "bytes": 117818
+      },
+      {
+        "path": "build/benchmarks/ai-framegen-upscale/harness-dev/2026-10-13_013608/results/optimizer-diagnostic.json",
+        "sha256": "374e62a586253e5ef9e420f814ed5d0995d1ba4409628e27bcf8b735a9637dea",
+        "bytes": 78327
+      }
+    ],
+    "corpusImagesPublished": false,
+    "qualification": "GPU timings can qualify only as conditional observations on this machine; CPU/elapsed/cold timings remain unqualified. G_span/U_span is an upper bound; no kernel lower bound measured.",
+    "review": "Root plus independent workflow adversarial reviews; final gate rows recomputed from numeric results. Contact sheets remain in build for human inspection."
+  }
+}

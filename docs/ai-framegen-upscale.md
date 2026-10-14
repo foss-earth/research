@@ -3,6 +3,10 @@
 Reviewed **2026-10-12**. Status: source audit and experiment proposal; no inference
 prototype or application performance results were produced in this review.
 
+The [implementation proposal](proposals/ai-framegen-upscale.md) turns this review
+into shared ownership, frame contracts, opt-in behavior and staged acceptance
+criteria. It is a proposal, not an implemented feature.
+
 The supplied report contains useful terminology and some real upstream features,
 but its implementation guide is not usable as written. Its central rejection of
 browser frame generation is too broad for the requested tradeoff: **smoother
