@@ -27,6 +27,7 @@ Benchmarks:
 
 - [benchmarks/ai-framegen-upscale/README.md](benchmarks/ai-framegen-upscale/README.md)
 - [benchmarks/collision/README.md](benchmarks/collision/README.md)
+- [benchmarks/earth-compare/README.md](benchmarks/earth-compare/README.md)
 - [benchmarks/eac-progressive-prototype/INVENTORY.md](benchmarks/eac-progressive-prototype/INVENTORY.md)
 - [benchmarks/eac-progressive-prototype/README.md](benchmarks/eac-progressive-prototype/README.md)
 - [benchmarks/eac-progressive-prototype/REPORT.md](benchmarks/eac-progressive-prototype/REPORT.md)

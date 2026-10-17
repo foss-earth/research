@@ -4839,13 +4839,465 @@
       "requirements": [
         "Pure node --test source fixture; no GPU/browser/network/process spawning; test outcome recorded in benchmark REPORT.md."
       ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/analyze.mjs",
+      "sha256": "225ae416c78b32558d71268070a90db73d62bcab10dd03278258d2a00b60b622",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "./metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/metrics.mjs"
+        },
+        {
+          "specifier": "./support.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/support.mjs"
+        },
+        {
+          "specifier": "./renderGeometry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/renderGeometry.mjs"
+        },
+        {
+          "specifier": "./earthUi.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/earthUi.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "public-owner"
+        }
+      ],
+      "requirements": [
+        "installed headed Chrome; built app supplied as data; camera, image and live runtime qualification pending"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/browser.mjs",
+      "sha256": "0e034853d315f36cfea3af0ee7345184e4de50462b380de24e8de5714533600d",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        }
+      ],
+      "requirements": [
+        "installed headed Chrome; built app supplied as data; camera, image and live runtime qualification pending"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/camera.mjs",
+      "sha256": "6f2f53a0137b3190740e529d47edcaba2eb9c1a5697356dd751a0f91b1829226",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source fixtures qualify pure helpers; live benchmark integration remains separately qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/earthUi.mjs",
+      "sha256": "a067e2738236685ae2ca6e29ac37b3359ae11be5d13f6ce1cc89cab794b31390",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        }
+      ],
+      "requirements": [
+        "installed headed Chrome; built app supplied as data; camera, image and live runtime qualification pending"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/metrics.mjs",
+      "sha256": "eed053ed984a55191bf094dd655231e9dc5844cc16f4516c6481bb2baf694e3b",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "../ai-framegen-upscale/lib/stats.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs"
+        }
+      ],
+      "requirements": [
+        "source fixtures qualify pure helpers; live benchmark integration remains separately qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/run.mjs",
+      "sha256": "bb6df705d8c9344d1743f7e0127109517d4ecd25ed77be310b15887e152afe16",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "../ai-framegen-upscale/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "../ai-framegen-upscale/lib/telemetry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/telemetry.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/quiet.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/quiet.mjs"
+        },
+        {
+          "specifier": "./views.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/views.mjs"
+        },
+        {
+          "specifier": "./camera.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/camera.mjs"
+        },
+        {
+          "specifier": "./metrics.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/metrics.mjs"
+        },
+        {
+          "specifier": "../power/battery.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/power/battery.mjs"
+        },
+        {
+          "specifier": "./support.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/support.mjs"
+        },
+        {
+          "specifier": "./renderGeometry.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/renderGeometry.mjs"
+        },
+        {
+          "specifier": "./browser.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/browser.mjs"
+        },
+        {
+          "specifier": "./earthUi.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/earthUi.mjs"
+        },
+        {
+          "specifier": "@foss-earth/images/node",
+          "kind": "public-owner"
+        }
+      ],
+      "requirements": [
+        "installed headed Chrome; built app supplied as data; camera, image and live runtime qualification pending"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/support.mjs",
+      "sha256": "a47e694cfe9bd4649b8b8a39f8cc44a0151e4b4eddcc53c3feeec9cd1e64b4a3",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:http",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "source fixtures qualify pure helpers; live benchmark integration remains separately qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/views.mjs",
+      "sha256": "6dbf200ecf5a01ce2c132c382e9e6dc8584ed4fd8ce0039a7576083ba5824fc2",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [],
+      "requirements": [
+        "source fixtures qualify pure helpers; live benchmark integration remains separately qualified"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/power/battery.mjs",
+      "sha256": "32e936ef57a7ad06d5853cebfafbfff3a87af30c41fed8cb2afdd915ee018d0d",
+      "group": "power",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "../ai-framegen-upscale/lib/environment.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/environment.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        }
+      ],
+      "requirements": [
+        "live macOS ioreg/pmset discharge and Low Power Mode readings; fixed brightness",
+        "accepted idle baseline for workload power; no sudo or setting changes"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/shared.mjs",
+      "sha256": "6151ee517c650bc7499d347e9a14b00b46e211d0b311a5f6d1e25bcd9447d9a2",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:perf_hooks",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../spherical-image-representation/lib/random.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/spherical-image-representation/lib/random.mjs"
+        },
+        {
+          "specifier": "../ai-framegen-upscale/lib/stats.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/ai-framegen-upscale/lib/stats.mjs"
+        },
+        {
+          "specifier": "./support.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/support.mjs"
+        }
+      ],
+      "requirements": [
+        "explicit comparable measurement modules with independently validated output fingerprints; no idle requirement",
+        "relative statistical evidence only; no absolute power or W0 qualification"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/power/flight.mjs",
+      "sha256": "80a37d3c0f717130545f396e7ed553d2c81e8fc5ccd9f011c85d47464d6b7918",
+      "group": "power",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:url",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "./battery.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/power/battery.mjs"
+        },
+        {
+          "specifier": "../../lib/researchPaths.mjs",
+          "kind": "local",
+          "path": "scripts/lib/researchPaths.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        },
+        {
+          "specifier": "../earth-compare/run.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/earth-compare/run.mjs"
+        }
+      ],
+      "requirements": [
+        "prebuilt fly profiler executable and dist; owning CLI key and JSBSim prerequisites",
+        "live battery, Low Power Mode, fixed brightness and matching idle baseline",
+        "route coverage and altitude/heading hold must qualify before W0 completion"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/earth-compare/renderGeometry.mjs",
+      "group": "earth-compare",
+      "kind": "experiment-entry-or-browser-fixture",
+      "runtimeQualification": false,
+      "requirements": [
+        "full visible matching canvas geometry and per-view reviewed label/animation masks; live qualification pending"
+      ],
+      "sha256": "7359054766e01a208ed0f292ef4e54e2dea4dd3b3bfb462bb63f018a449fe6c7",
+      "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
+      "dependencies": []
     }
   ],
   "sourceFixtures": [
     "fixtures/documentLinks.test.mjs",
     "fixtures/headlessChrome.test.mjs",
     "fixtures/communityDocuments.test.mjs",
-    "fixtures/aiFramegenUpscale.test.mjs"
+    "fixtures/aiFramegenUpscale.test.mjs",
+    "fixtures/earthCompareAnalyze.test.mjs",
+    "fixtures/earthCompareCamera.test.mjs",
+    "fixtures/earthCompareCollection.test.mjs",
+    "fixtures/earthCompareHarness.test.mjs",
+    "fixtures/earthCompareMetrics.test.mjs",
+    "fixtures/earthCompareRenderGeometry.test.mjs",
+    "fixtures/earthCompareUi.test.mjs",
+    "fixtures/powerFlight.test.mjs",
+    "fixtures/sharedComparison.test.mjs"
   ],
   "checksDoNotExecuteExperimentalTools": true,
   "publicHelperContracts": [
