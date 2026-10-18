@@ -111,10 +111,18 @@ export async function main(args = process.argv.slice(2)) {
   const receipts = files.map(file => ({ file, sha256: createHash("sha256").update(readFileSync(file)).digest("hex") }));
   const [a, b] = await Promise.all(files.map(file => import(pathToFileURL(file).href)));
   const directory = newOutputDirectory("benchmarks", "shared-comparison");
-  const report = await runSharedComparison({ measureA: a.measure, measureB: b.measure, pairs, seed, maximumSeconds,
-    onTrial: trial => writeFileSync(path.join(directory, `trial-${trial.pair}-${trial.variant}.json`), JSON.stringify(redact(trial), null, 2)) });
-  writeFileSync(path.join(directory, "report.json"), JSON.stringify(redact({ ...report, receipts }), null, 2) + "\n");
-  console.log(JSON.stringify({ directory, summary: report.summary }, null, 2));
+  try {
+    const report = await runSharedComparison({ measureA: a.measure, measureB: b.measure, pairs, seed, maximumSeconds,
+      onTrial: trial => writeFileSync(path.join(directory, `trial-${trial.pair}-${trial.variant}.json`), JSON.stringify(redact(trial), null, 2)) });
+    const moduleReceipts = [a, b].map((mod, i) => ({ file: files[i], ...mod.receipts, ...mod.measure?.receipts }));
+    writeFileSync(path.join(directory, "report.json"), JSON.stringify(redact({ ...report, receipts, moduleReceipts }), null, 2) + "\n");
+    console.log(JSON.stringify({ directory, summary: report.summary }, null, 2));
+  } finally {
+    await Promise.all([
+      a.dispose?.() ?? a.measure?.dispose?.(),
+      b.dispose?.() ?? b.measure?.dispose?.(),
+    ]);
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) main().catch(error => { console.error(redact(error.message)); process.exitCode = 1; });
