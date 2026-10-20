@@ -3,17 +3,24 @@
 //
 //   node scripts/benchmarks/startup-audit/profile.mjs --target fly --root <dist built with --sourcemap>
 //     [--motion still|drag|enter] [--rates 1,4] [--seconds 8] [--query "set.renderer.profiling.enabled=1"] [--label name]
-//     [--phone]
+//     [--phone] [--layout] [--reduced-motion]
 //
 // The visit is the audit's: a cold visit on a new profile under Fast 4G and a 4x CPU slowdown, then a warm visit
 // through the service worker it installed, which waits for boot:content (and boot:settled on a page that settles, or
 // 15 s after the content on the flight). Then, for each rate in --rates, one stretch of --seconds with the CPU profiler
 // on. Output goes to build/benchmarks/startup-audit/profile-<label>/<local time>/: each profile (.cpuprofile, which
-// DevTools opens), and summary.md with each stretch's frames, main-thread share and the functions and files that took
-// its time, self and inclusive.
+// DevTools opens), and summary.md with each stretch's frames, main-thread share, style recalculations and layouts per
+// frame, and the functions and files that took its time, self and inclusive.
 //
 // --phone measures at a phone's viewport (412×915 CSS pixels at 2.625 device pixels each, touch), and drags with a
 // finger. --motion enter flies into a 360 image and out again, 3 s each way, through the page's test hook.
+//
+// --layout also traces each stretch's style recalculations and layouts, and names the script that forced each one
+// by reading layout while it was out of date. A CPU profile charges a forced layout to the script that read it. The
+// trace's stacks slow forced work a little. The trace is saved beside the profile, for DevTools' Performance panel.
+//
+// --reduced-motion has the page ask for less motion (prefers-reduced-motion: reduce), which stops the CSS animations
+// that honour it, to price them against a run without it.
 //
 // Build the page with source maps for names (vite build --sourcemap --outDir <somewhere in build/>). Without them the
 // summary names the minified chunks.
@@ -51,6 +58,8 @@ const { values: args } = parseArgs({ options: {
   // and a memory-infra dump of every Chrome process, by allocator.
   memory: { type: 'boolean', default: false },
   phone: { type: 'boolean', default: false },
+  layout: { type: 'boolean', default: false },
+  'reduced-motion': { type: 'boolean', default: false },
 } });
 
 const TARGETS = {
@@ -113,6 +122,7 @@ if (throttle) {
 }
 await send('Emulation.setDeviceMetricsOverride', VIEWPORT);
 if (args.phone) await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 5 });
+if (args['reduced-motion']) await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
 await send('Target.setAutoAttach', { autoAttach: true, waitForDebuggerOnStart: true, flatten: true });
 
 const marked = name => evaluate(`performance.getEntriesByName(${JSON.stringify(name)}, "mark").length > 0`).catch(() => false);
@@ -140,6 +150,52 @@ if (!args['cold-only']) {
   visits.push({ kind: 'warm', ...await visit() });
 }
 
+/** Starts a trace of every Chrome process; `stop` ends it and gives its events. */
+async function startTrace(traceConfig) {
+  const events = [];
+  let complete;
+  const done = new Promise(resolve => { complete = resolve; });
+  const stopListening = chrome.onEvent(message => {
+    if (message.sessionId) return;
+    if (message.method === 'Tracing.dataCollected') events.push(...message.params.value);
+    if (message.method === 'Tracing.tracingComplete') complete();
+  });
+  await chrome.send('Tracing.start', { transferMode: 'ReportEvents', traceConfig });
+  return {
+    async stop() {
+      await chrome.send('Tracing.end');
+      await done;
+      stopListening();
+      return events;
+    },
+  };
+}
+// Style recalculations and layouts, with the stack of the script that forced each one.
+const LAYOUT_TRACE = { includedCategories: ['devtools.timeline', 'disabled-by-default-devtools.timeline', 'disabled-by-default-devtools.timeline.stack'], excludedCategories: ['*'] };
+/**
+ * Each style recalculation and layout on the page's main thread, with its duration and the stack that forced it, or null;
+ * and each time style or layout went out of date, with the stack of the script that changed the page, or null.
+ */
+const LAYOUT_KINDS = { UpdateLayoutTree: 'style', Layout: 'layout', ScheduleStyleRecalculation: 'style', InvalidateLayout: 'layout' };
+function layoutWork(events) {
+  const main = new Set(events.filter(event => event.ph === 'M' && event.name === 'thread_name' && event.args?.name === 'CrRendererMain').map(event => `${event.pid}:${event.tid}`));
+  const work = [], invalidations = [], open = new Map();
+  const stackOf = each => each.args?.beginData?.stackTrace ?? each.args?.data?.stackTrace ?? null;
+  for (const event of [...events].sort((a, b) => a.ts - b.ts)) {
+    const kind = LAYOUT_KINDS[event.name];
+    if (!kind || !main.has(`${event.pid}:${event.tid}`)) continue;
+    if (event.name === 'ScheduleStyleRecalculation' || event.name === 'InvalidateLayout') { invalidations.push({ kind, stack: stackOf(event) }); continue; }
+    const key = `${event.pid}:${event.tid}:${event.name}`;
+    if (event.ph === 'X') work.push({ kind, ms: (event.dur ?? 0) / 1000, stack: stackOf(event) });
+    else if (event.ph === 'B') { if (!open.has(key)) open.set(key, []); open.get(key).push(event); }
+    else if (event.ph === 'E') {
+      const begin = open.get(key)?.pop();
+      if (begin) work.push({ kind, ms: (event.ts - begin.ts) / 1000, stack: stackOf(begin) });
+    }
+  }
+  return { work, invalidations };
+}
+
 const RECORDER = `(() => {
   const intervals = []; let last = null, on = true;
   const step = now => { if (last !== null) intervals.push(now - last); last = now; if (on) requestAnimationFrame(step); };
@@ -156,6 +212,7 @@ for (const rate of RATES) {
   await sleep(1000);
   const before = await metrics();
   const probeBefore = args.probe ? await evaluate(args.probe).catch(error => String(error)) : undefined;
+  const trace = args.layout ? await startTrace(LAYOUT_TRACE) : null;
   const startedAt = Date.now();
   await evaluate(RECORDER);
   await send('Profiler.start');
@@ -194,6 +251,10 @@ for (const rate of RATES) {
   const intervals = await evaluate('window.__auditFrames()');
   const after = await metrics();
   const wall = (Date.now() - startedAt) / 1000;
+  const traceEvents = trace ? await trace.stop() : null;
+  const layout = traceEvents ? layoutWork(traceEvents) : null;
+  // The whole trace, which DevTools' Performance panel opens.
+  if (traceEvents) await writeFile(path.join(out, `${args.target}-${motion}-${rate}x.trace.json`), JSON.stringify({ traceEvents }));
   const probeAfter = args.probe ? await evaluate(args.probe).catch(error => String(error)) : undefined;
   const sorted = [...intervals].sort((a, b) => a - b);
   const pct = rank => sorted.length ? sorted[Math.min(sorted.length - 1, Math.floor((sorted.length - 1) * rank))] : null;
@@ -203,6 +264,8 @@ for (const rate of RATES) {
     median: pct(0.5), p95: pct(0.95), p99: pct(0.99), max: sorted.at(-1) ?? null, slow: intervals.filter(value => value > 25).length,
     mainThread: ((after.TaskDuration ?? 0) - (before.TaskDuration ?? 0)) / wall,
     script: ((after.ScriptDuration ?? 0) - (before.ScriptDuration ?? 0)) / wall,
+    styles: (after.RecalcStyleCount ?? 0) - (before.RecalcStyleCount ?? 0), styleSeconds: (after.RecalcStyleDuration ?? 0) - (before.RecalcStyleDuration ?? 0),
+    layouts: (after.LayoutCount ?? 0) - (before.LayoutCount ?? 0), layoutSeconds: (after.LayoutDuration ?? 0) - (before.LayoutDuration ?? 0), layout,
     heapUsed: after.JSHeapUsedSize, probe: args.probe ? { before: probeBefore, after: probeAfter } : undefined, file, profile });
 }
 await send('Emulation.setCPUThrottlingRate', { rate: 1 });
@@ -225,20 +288,9 @@ async function footprintCategories(pids) {
 }
 /** A memory-infra dump of every Chrome process: each allocator's size, by process. */
 async function memoryInfra() {
-  const events = [];
-  let complete;
-  const done = new Promise(resolve => { complete = resolve; });
-  const stop = chrome.onEvent(message => {
-    if (message.sessionId) return;
-    if (message.method === 'Tracing.dataCollected') events.push(...message.params.value);
-    if (message.method === 'Tracing.tracingComplete') complete();
-  });
-  await chrome.send('Tracing.start', { transferMode: 'ReportEvents',
-    traceConfig: { includedCategories: ['disabled-by-default-memory-infra'], excludedCategories: ['*'], memoryDumpConfig: { triggers: [] } } });
+  const trace = await startTrace({ includedCategories: ['disabled-by-default-memory-infra'], excludedCategories: ['*'], memoryDumpConfig: { triggers: [] } });
   const requested = await chrome.send('Tracing.requestMemoryDump', { deterministic: true, levelOfDetail: 'detailed' });
-  await chrome.send('Tracing.end');
-  await done;
-  stop();
+  const events = await trace.stop();
   const names = {};
   for (const event of events) if (event.ph === 'M' && event.name === 'process_name') names[event.pid] = event.args?.name;
   const processes = {};
@@ -302,7 +354,7 @@ async function describe(frame) {
 }
 
 const ms = value => `${value.toFixed(1)}`;
-const lines = [`# CPU profile: ${args.target}, ${motion}${args.phone ? ', phone viewport' : ''}`, '', `Page ${url}, root ${root}.`,
+const lines = [`# CPU profile: ${args.target}, ${motion}${args.phone ? ', phone viewport' : ''}${args['reduced-motion'] ? ', reduced motion' : ''}`, '', `Page ${url}, root ${root}.`,
   `Visits: ${visits.map(each => `${each.kind} (isolated ${each.isolated}, shared memory ${each.sharedMemory}, content ${each.marks['boot:content'] ?? '—'} ms)`).join('; ')}.`, ''];
 const TOP = Number(args.top);
 for (const stretch of stretches) {
@@ -337,10 +389,40 @@ for (const stretch of stretches) {
     return [`### ${title}`, '', '| ms/s | % of busy | Where |', '| ---: | ---: | --- |',
       ...rows.map(([key, value]) => `| ${ms(perSecond(value))} | ${(100 * value / busy).toFixed(1)} | \`${key}\` |`), ''];
   };
+  const perFrame = count => (count / Math.max(1, stretch.frames)).toFixed(2);
+  // The traced style recalculations and layouts, by the script that forced them, and what put them out of date, by the
+  // script that changed the page: each a function and its caller.
+  const forced = [];
+  if (stretch.layout) {
+    // A trace's stacks count lines and columns from 1, a CPU profile's from 0.
+    const whereOf = async (stack, none) => {
+      const frames = await Promise.all((stack ?? []).slice(0, 2).map(frame => describe({ ...frame, lineNumber: frame.lineNumber - 1, columnNumber: frame.columnNumber - 1 })));
+      return frames.length ? `\`${frames.map(frame => frame.key).join(' ← ')}\`` : none;
+    };
+    const group = async (list, none) => {
+      const rows = new Map();
+      for (const each of list) {
+        const where = await whereOf(each.stack, none);
+        const row = rows.get(`${each.kind} ${where}`) ?? { kind: each.kind, where, count: 0, ms: 0 };
+        row.count += 1;
+        row.ms += each.ms ?? 0;
+        rows.set(`${each.kind} ${where}`, row);
+      }
+      return [...rows.values()];
+    };
+    forced.push('### Style and layout, by the script that forced them', '', '| Per frame | ms/s | Kind | Forced by |', '| ---: | ---: | --- | --- |',
+      ...(await group(stretch.layout.work, 'not forced')).sort((a, b) => b.ms - a.ms).slice(0, 25)
+        .map(row => `| ${perFrame(row.count)} | ${ms(perSecond(row.ms))} | ${row.kind} | ${row.where} |`), '',
+      '### Style and layout put out of date, by the script that changed the page', '', '| Per frame | Kind | Changed by |', '| ---: | --- | --- |',
+      ...(await group(stretch.layout.invalidations, 'not script')).sort((a, b) => b.count - a.count).slice(0, 25)
+        .map(row => `| ${perFrame(row.count)} | ${row.kind} | ${row.where} |`), '');
+  }
   lines.push(`## ${stretch.rate}x CPU, ${stretch.motion}, ${stretch.wall.toFixed(1)} s, load ${stretch.loadAverage.toFixed(2)}`, '',
     `Frames/s ${stretch.fps.toFixed(1)}, median ${stretch.median?.toFixed(1)} ms, p95 ${stretch.p95?.toFixed(1)} ms, p99 ${stretch.p99?.toFixed(1)} ms, longest ${stretch.max?.toFixed(1)} ms, over 25 ms ${(100 * stretch.slow / Math.max(1, stretch.frames)).toFixed(0)} %.`,
-    `Main thread ${(100 * stretch.mainThread).toFixed(0)} % of a core, script ${(100 * stretch.script).toFixed(0)} %. Profiled ${(perSecond(busy)).toFixed(0)} ms/s busy of ${(perSecond(total)).toFixed(0)} ms/s sampled. JS heap ${(stretch.heapUsed / 1048576).toFixed(0)} MiB.`, '',
+    `Main thread ${(100 * stretch.mainThread).toFixed(0)} % of a core, script ${(100 * stretch.script).toFixed(0)} %. Profiled ${(perSecond(busy)).toFixed(0)} ms/s busy of ${(perSecond(total)).toFixed(0)} ms/s sampled. JS heap ${(stretch.heapUsed / 1048576).toFixed(0)} MiB.`,
+    `Style recalculations ${perFrame(stretch.styles)} per frame, ${ms(1000 * stretch.styleSeconds / stretch.wall)} ms/s; layouts ${perFrame(stretch.layouts)} per frame, ${ms(1000 * stretch.layoutSeconds / stretch.wall)} ms/s.`, '',
     ...(stretch.probe ? [`Probe before \`${JSON.stringify(stretch.probe.before)}\`, after \`${JSON.stringify(stretch.probe.after)}\`.`, ''] : []),
+    ...forced,
     ...table('Self time by function', self, TOP),
     ...table('Self time by file', selfFile, 30),
     ...table('Inclusive time by function', inclusive, TOP),
@@ -365,7 +447,7 @@ if (memoryReport) {
   }
 }
 await writeFile(path.join(out, 'summary.md'), lines.join('\n'));
-await writeFile(path.join(out, 'stretches.json'), JSON.stringify(stretches.map(({ profile, ...rest }) => rest), null, 2));
+await writeFile(path.join(out, 'stretches.json'), JSON.stringify(stretches.map(({ profile, layout, ...rest }) => rest), null, 2));
 console.log(lines.slice(0, 6).join('\n'));
 for (const stretch of stretches) console.log(`${stretch.rate}x: ${stretch.fps.toFixed(1)} fps, p95 ${stretch.p95?.toFixed(1)} ms, main ${(100 * stretch.mainThread).toFixed(0)} %, script ${(100 * stretch.script).toFixed(0)} %`);
 console.log(out);
