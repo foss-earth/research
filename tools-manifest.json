@@ -5330,7 +5330,7 @@
     },
     {
       "path": "scripts/benchmarks/startup-audit/serve.mjs",
-      "sha256": "7f8c8ba256119ad8a0d3ed97c6bed23585af1313a812d571656888cb5105b800",
+      "sha256": "21209138d22dbcdfca2e96a1b9684235fcc8a1b6c31966a6381604b9b0fd383a",
       "group": "startup-audit",
       "kind": "experiment-entry-or-browser-fixture",
       "status": "source used for the 19 October 2026 audit in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",

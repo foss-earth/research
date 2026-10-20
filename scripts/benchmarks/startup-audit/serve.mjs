@@ -27,7 +27,10 @@ export async function serveStatic({ root, base, port, proxy = null }) {
     if (cache.has(key)) return cache.get(key);
     const answer = await fetch(new URL(pathname, proxy.target)).catch(() => null);
     if (!answer?.ok) { cache.set(key, null); return null; }
-    const body = Buffer.from(await answer.arrayBuffer());
+    // A connection dropped while the body is read is answered as missing, and asked again next time.
+    const bytes = await answer.arrayBuffer().catch(() => null);
+    if (!bytes) return null;
+    const body = Buffer.from(bytes);
     const type = answer.headers.get('content-type') ?? 'application/octet-stream';
     const entry = { type, body, gzip: COMPRESSIBLE.test(type) ? gzipSync(body, { level: 6 }) : null,
       etag: `"${createHash('sha1').update(body).digest('hex').slice(0, 16)}"`, modified: new Date(0).toUTCString() };
