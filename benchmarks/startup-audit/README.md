@@ -88,6 +88,34 @@ more than indicative.
    - the page's array buffers, its WebAssembly memories among them;
    - each Chrome process's macOS footprint, with its graphics part.
 
+## Profiling a stretch
+
+[profile.mjs](../../scripts/benchmarks/startup-audit/profile.mjs) makes the same visit,
+then records a V8 CPU profile of each stretch and maps it to source functions through the
+build's source maps. Build the page with `vite build --sourcemap --outDir build/<name>`.
+
+```sh
+node scripts/benchmarks/startup-audit/profile.mjs --target app \
+  --root ../app/build/perf/<name> --label <name> --rates 1,4 --seconds 8
+```
+
+- `--motion still|drag`: the tour and the app are dragged by default. The flight
+  flies itself, so it is left still.
+- `--probe '<expression>'`: an expression read before and after each stretch, such
+  as counters patched into a build.
+- `--memory`: after the stretches, the macOS footprint by category of the page's
+  renderer and of the GPU process, and a memory-infra dump by allocator.
+
+It writes `summary.md`, with each stretch's frames, main-thread share and self and
+inclusive time by function and file, and each `.cpuprofile`, which DevTools opens.
+[profile-tree.mjs](../../scripts/benchmarks/startup-audit/profile-tree.mjs) prints the
+call tree under one function of a saved profile:
+
+```sh
+node scripts/benchmarks/startup-audit/profile-tree.mjs --profile <file.cpuprofile> \
+  --root <dist> --base /app/ --focus "update createImageryRuntime.ts" --depth 4 --min 2
+```
+
 ## Reading the numbers
 
 - **Frame intervals are the display's pace, not GPU time.** A 60 Hz display caps them

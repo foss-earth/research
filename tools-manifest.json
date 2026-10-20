@@ -5385,6 +5385,97 @@
       "requirements": [
         "installed Chrome with a GPU; the tour, app and 0sfs builds supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
       ]
+    },
+    {
+      "path": "scripts/benchmarks/startup-audit/profile-tree.mjs",
+      "sha256": "10be5c5fb2fc2da6d4b40de7bd584ce208e5192f759309717e962c55a2391065",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source used for the 20 October 2026 frame profiles in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "source-map-js",
+          "kind": "external-tool",
+          "status": "installed with the build toolchain; explicit compatible tool receipt required before experiment"
+        }
+      ],
+      "requirements": [
+        "installed Chrome with a GPU; the tour, app and 0sfs builds with source maps supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/startup-audit/profile.mjs",
+      "sha256": "544435e11b70490dbdce128181a33e837e369f22a220fd9919068d5dbdc02611",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source used for the 20 October 2026 frame profiles in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "source-map-js",
+          "kind": "external-tool",
+          "status": "installed with the build toolchain; explicit compatible tool receipt required before experiment"
+        },
+        {
+          "specifier": "./serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/startup-audit/serve.mjs"
+        },
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        }
+      ],
+      "requirements": [
+        "installed Chrome with a GPU; the tour, app and 0sfs builds with source maps supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
+      ]
     }
   ],
   "sourceFixtures": [
