@@ -2,7 +2,8 @@
 // of each, mapped back to source files and functions through the build's source maps.
 //
 //   node scripts/benchmarks/startup-audit/profile.mjs --target fly --root <dist built with --sourcemap>
-//     [--motion still|drag] [--rates 1,4] [--seconds 8] [--query "set.renderer.profiling.enabled=1"] [--label name]
+//     [--motion still|drag|enter] [--rates 1,4] [--seconds 8] [--query "set.renderer.profiling.enabled=1"] [--label name]
+//     [--phone]
 //
 // The visit is the audit's: a cold visit on a new profile under Fast 4G and a 4x CPU slowdown, then a warm visit
 // through the service worker it installed, which waits for boot:content (and boot:settled on a page that settles, or
@@ -10,6 +11,9 @@
 // on. Output goes to build/benchmarks/startup-audit/profile-<label>/<local time>/: each profile (.cpuprofile, which
 // DevTools opens), and summary.md with each stretch's frames, main-thread share and the functions and files that took
 // its time, self and inclusive.
+//
+// --phone measures at a phone's viewport (412×915 CSS pixels at 2.625 device pixels each, touch), and drags with a
+// finger. --motion enter flies into a 360 image and out again, 3 s each way, through the page's test hook.
 //
 // Build the page with source maps for names (vite build --sourcemap --outDir <somewhere in build/>). Without them the
 // summary names the minified chunks.
@@ -46,6 +50,7 @@ const { values: args } = parseArgs({ options: {
   // After the stretches, where memory is: macOS footprint's categories for the page's renderer and the GPU process,
   // and a memory-infra dump of every Chrome process, by allocator.
   memory: { type: 'boolean', default: false },
+  phone: { type: 'boolean', default: false },
 } });
 
 const TARGETS = {
@@ -62,13 +67,15 @@ const SECONDS = Number(args.seconds);
 const RATES = args.rates.split(',').filter(Boolean).map(Number);
 const FAST_4G = { offline: false, latency: 60 * 2.75, downloadThroughput: 9 * 1000 * 1000 / 8 * 0.9, uploadThroughput: 1.5 * 1000 * 1000 / 8 * 0.9 };
 const CPU_SLOWDOWN = 4;
-const CHROME_ARGS = ['--enable-unsafe-webgpu', '--enable-gpu', '--use-angle=metal', '--ignore-gpu-blocklist', '--window-size=1280,800'];
+const VIEWPORT = args.phone ? { width: 412, height: 915, deviceScaleFactor: 2.625, mobile: true } : { width: 1280, height: 800, deviceScaleFactor: 1, mobile: false };
+const CHROME_ARGS = ['--enable-unsafe-webgpu', '--enable-gpu', '--use-angle=metal', '--ignore-gpu-blocklist', `--window-size=${VIEWPORT.width},${VIEWPORT.height}`];
 const AFTER_CONTENT_MS = 15000;
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const out = newOutputDirectory('benchmarks', 'startup-audit', `profile-${args.target}${args.label ? `-${args.label}` : ''}`);
+const out = newOutputDirectory('benchmarks', 'startup-audit', `profile-${args.target}${args.phone ? '-phone' : ''}${args.label ? `-${args.label}` : ''}`);
 
 const server = await serveStatic({ root, base: target.base, port: target.port, proxy: target.proxy });
-const query = args.query ? `?${args.query.replace(/^\?/, '')}` : '';
+const queries = [args.query.replace(/^\?/, ''), motion === 'enter' ? 'panoramaTest=1' : ''].filter(Boolean);
+const query = queries.length ? `?${queries.join('&')}` : '';
 const url = `http://localhost:${target.port}${target.base}${target.page}${query}`;
 const profileDir = path.join(out, 'chrome-profile');
 const chrome = await openHeadlessChrome(profileDir, args.binary, CHROME_ARGS);
@@ -104,7 +111,8 @@ if (throttle) {
   await send('Network.emulateNetworkConditions', FAST_4G);
   await send('Emulation.setCPUThrottlingRate', { rate: CPU_SLOWDOWN });
 }
-await send('Emulation.setDeviceMetricsOverride', { width: 1280, height: 800, deviceScaleFactor: 1, mobile: false });
+await send('Emulation.setDeviceMetricsOverride', VIEWPORT);
+if (args.phone) await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 5 });
 await send('Target.setAutoAttach', { autoAttach: true, waitForDebuggerOnStart: true, flatten: true });
 
 const marked = name => evaluate(`performance.getEntriesByName(${JSON.stringify(name)}, "mark").length > 0`).catch(() => false);
@@ -154,14 +162,31 @@ for (const rate of RATES) {
   if (motion === 'drag') {
     const { width, height } = await evaluate('({ width: innerWidth, height: innerHeight })');
     const cx = width / 2, cy = height / 2;
-    await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: cx, y: cy });
-    await send('Input.dispatchMouseEvent', { type: 'mousePressed', x: cx, y: cy, button: 'left', buttons: 1, clickCount: 1 });
+    const touch = (type, x, y) => send('Input.dispatchTouchEvent', { type, touchPoints: type === 'touchEnd' ? [] : [{ x, y, id: 1 }] });
+    if (args.phone) await touch('touchStart', cx, cy);
+    else {
+      await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: cx, y: cy });
+      await send('Input.dispatchMouseEvent', { type: 'mousePressed', x: cx, y: cy, button: 'left', buttons: 1, clickCount: 1 });
+    }
     while (Date.now() - startedAt < SECONDS * 1000) {
       const t = (Date.now() - startedAt) / 1000;
-      await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: cx + width * 0.2 * Math.sin(t * Math.PI), y: cy + height * 0.05 * Math.sin(t * Math.PI * 0.5), button: 'left', buttons: 1 });
+      const x = cx + width * 0.2 * Math.sin(t * Math.PI), y = cy + height * 0.05 * Math.sin(t * Math.PI * 0.5);
+      if (args.phone) await touch('touchMove', x, y);
+      else await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x, y, button: 'left', buttons: 1 });
       await sleep(16);
     }
-    await send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: cx, y: cy, button: 'left', buttons: 0, clickCount: 1 });
+    if (args.phone) await touch('touchEnd');
+    else await send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: cx, y: cy, button: 'left', buttons: 0, clickCount: 1 });
+  } else if (motion === 'enter') {
+    const scenes = 'window.__fossEarthPanoramaTest.scenes.handle()';
+    const id = await evaluate(`${scenes}.status.entries.find(entry => entry.supported && entry.preview === 'ready')?.id ?? null`);
+    if (!id) throw new Error('No 360 image is ready to enter.');
+    while (Date.now() - startedAt < SECONDS * 1000) {
+      await evaluate(`void ${scenes}.enter(${JSON.stringify(id)}); true`);
+      await sleep(3000);
+      await evaluate(`void ${scenes}.exit(); true`);
+      await sleep(3000);
+    }
   } else {
     await sleep(SECONDS * 1000);
   }
@@ -175,7 +200,7 @@ for (const rate of RATES) {
   const file = path.join(out, `${args.target}-${motion}-${rate}x.cpuprofile`);
   await writeFile(file, JSON.stringify(profile));
   stretches.push({ rate, motion, wall, loadAverage: os.loadavg()[0], frames: intervals.length, fps: intervals.length / wall,
-    median: pct(0.5), p95: pct(0.95), p99: pct(0.99), slow: intervals.filter(value => value > 25).length,
+    median: pct(0.5), p95: pct(0.95), p99: pct(0.99), max: sorted.at(-1) ?? null, slow: intervals.filter(value => value > 25).length,
     mainThread: ((after.TaskDuration ?? 0) - (before.TaskDuration ?? 0)) / wall,
     script: ((after.ScriptDuration ?? 0) - (before.ScriptDuration ?? 0)) / wall,
     heapUsed: after.JSHeapUsedSize, probe: args.probe ? { before: probeBefore, after: probeAfter } : undefined, file, profile });
@@ -277,7 +302,7 @@ async function describe(frame) {
 }
 
 const ms = value => `${value.toFixed(1)}`;
-const lines = [`# CPU profile: ${args.target}, ${motion}`, '', `Page ${url}, root ${root}.`,
+const lines = [`# CPU profile: ${args.target}, ${motion}${args.phone ? ', phone viewport' : ''}`, '', `Page ${url}, root ${root}.`,
   `Visits: ${visits.map(each => `${each.kind} (isolated ${each.isolated}, shared memory ${each.sharedMemory}, content ${each.marks['boot:content'] ?? '—'} ms)`).join('; ')}.`, ''];
 const TOP = Number(args.top);
 for (const stretch of stretches) {
@@ -313,7 +338,7 @@ for (const stretch of stretches) {
       ...rows.map(([key, value]) => `| ${ms(perSecond(value))} | ${(100 * value / busy).toFixed(1)} | \`${key}\` |`), ''];
   };
   lines.push(`## ${stretch.rate}x CPU, ${stretch.motion}, ${stretch.wall.toFixed(1)} s, load ${stretch.loadAverage.toFixed(2)}`, '',
-    `Frames/s ${stretch.fps.toFixed(1)}, median ${stretch.median?.toFixed(1)} ms, p95 ${stretch.p95?.toFixed(1)} ms, p99 ${stretch.p99?.toFixed(1)} ms, over 25 ms ${(100 * stretch.slow / Math.max(1, stretch.frames)).toFixed(0)} %.`,
+    `Frames/s ${stretch.fps.toFixed(1)}, median ${stretch.median?.toFixed(1)} ms, p95 ${stretch.p95?.toFixed(1)} ms, p99 ${stretch.p99?.toFixed(1)} ms, longest ${stretch.max?.toFixed(1)} ms, over 25 ms ${(100 * stretch.slow / Math.max(1, stretch.frames)).toFixed(0)} %.`,
     `Main thread ${(100 * stretch.mainThread).toFixed(0)} % of a core, script ${(100 * stretch.script).toFixed(0)} %. Profiled ${(perSecond(busy)).toFixed(0)} ms/s busy of ${(perSecond(total)).toFixed(0)} ms/s sampled. JS heap ${(stretch.heapUsed / 1048576).toFixed(0)} MiB.`, '',
     ...(stretch.probe ? [`Probe before \`${JSON.stringify(stretch.probe.before)}\`, after \`${JSON.stringify(stretch.probe.after)}\`.`, ''] : []),
     ...table('Self time by function', self, TOP),

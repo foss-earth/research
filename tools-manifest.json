@@ -5422,10 +5422,10 @@
     },
     {
       "path": "scripts/benchmarks/startup-audit/profile.mjs",
-      "sha256": "544435e11b70490dbdce128181a33e837e369f22a220fd9919068d5dbdc02611",
+      "sha256": "9d365937b4f756545142be59d86099262207f32c6a49b1338929f22e5f864492",
       "group": "startup-audit",
       "kind": "experiment-entry-or-browser-fixture",
-      "status": "source used for the 20 October 2026 frame profiles in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "status": "source used for the 20 October 2026 frame profiles in foss-earth/docs performance-audit.md, at a desktop or phone viewport (--phone), still, dragging or flying into a 360 image and out (--motion); indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
       "runtimeQualification": false,
       "dependencies": [
         {
