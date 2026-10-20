@@ -5,7 +5,7 @@ Research notes, benchmarks, experiment scripts and proposals for FOSS Earth. Thi
 ## Layout
 
 - `docs/`: research write-ups, reviews and design notes, with proposals under `docs/proposals/`.
-- `benchmarks/`: benchmark pages, inputs and recorded results (collision, EAC progressive prototype, globe comparison, map detail, scene A/B, spherical image representation, terrain, wheels).
+- `benchmarks/`: benchmark pages, inputs and recorded results (collision, EAC progressive prototype, globe comparison, map detail, scene A/B, spherical image representation, startup and runtime audit, terrain, wheels).
 - `scripts/`: the runnable experiment sources. `scripts/benchmarks/` has one directory per benchmark, and `scripts/lib/` holds shared helpers.
 - `fixtures/`: tests and fixtures for the helpers and for the document links.
 - [tools-manifest.json](tools-manifest.json): for each experiment tool, the public `@foss-earth/*` imports it uses and the host, data or native prerequisites it needs.
@@ -42,6 +42,7 @@ Benchmarks:
 - [benchmarks/spherical-image-representation/README.md](benchmarks/spherical-image-representation/README.md)
 - [benchmarks/spherical-image-representation/REPORT.md](benchmarks/spherical-image-representation/REPORT.md)
 - [benchmarks/spherical-image-representation/results/tables.md](benchmarks/spherical-image-representation/results/tables.md)
+- [benchmarks/startup-audit/README.md](benchmarks/startup-audit/README.md)
 - [benchmarks/terrain/README.md](benchmarks/terrain/README.md)
 - [benchmarks/wheels/README.md](benchmarks/wheels/README.md)
 - [benchmarks/wheels/README.reference-kernels.md](benchmarks/wheels/README.reference-kernels.md)

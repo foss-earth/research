@@ -5282,6 +5282,109 @@
       "sha256": "7359054766e01a208ed0f292ef4e54e2dea4dd3b3bfb462bb63f018a449fe6c7",
       "status": "W0 source prepared; live qualification awaits an agreed exclusive window; see benchmarks/earth-compare/README.md",
       "dependencies": []
+    },
+    {
+      "path": "scripts/benchmarks/startup-audit/run.mjs",
+      "sha256": "d23c1b341ac9695cea3795e299abc79a7b45d1e5e8cc675bf5f23ec062c0cbb3",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source used for the 19 October 2026 audit in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "./serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/startup-audit/serve.mjs"
+        },
+        {
+          "specifier": "./audit.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/startup-audit/audit.mjs"
+        },
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        },
+        {
+          "specifier": "../../lib/outputDirectory.mjs",
+          "kind": "local",
+          "path": "scripts/lib/outputDirectory.mjs"
+        }
+      ],
+      "requirements": [
+        "installed Chrome with a GPU; the tour, app and 0sfs builds supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/startup-audit/serve.mjs",
+      "sha256": "7f8c8ba256119ad8a0d3ed97c6bed23585af1313a812d571656888cb5105b800",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source used for the 19 October 2026 audit in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:http",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:crypto",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "installed Chrome with a GPU; the tour, app and 0sfs builds supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
+      ]
+    },
+    {
+      "path": "scripts/benchmarks/startup-audit/audit.mjs",
+      "sha256": "8e28f23c656192a5d1c421ff9c8e55aec36aa409a1881a7482e181b0119e974a",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "source used for the 19 October 2026 audit in foss-earth/docs performance-audit.md; indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:child_process",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:os",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:util",
+          "kind": "node-builtin"
+        }
+      ],
+      "requirements": [
+        "installed Chrome with a GPU; the tour, app and 0sfs builds supplied as data; live tile servers; an agreed exclusive window for more than indicative figures"
+      ]
     }
   ],
   "sourceFixtures": [
