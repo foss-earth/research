@@ -105,6 +105,12 @@ node scripts/benchmarks/startup-audit/profile.mjs --target app \
   as counters patched into a build.
 - `--memory`: after the stretches, the macOS footprint by category of the page's
   renderer and of the GPU process, and a memory-infra dump by allocator.
+- `--heap`: after the stretches, one heap snapshot of the page (`heap.heapsnapshot`,
+  which DevTools' Memory panel opens) and its self size by kind and constructor.
+- `--gpu`: after the stretches, every WebGPU texture and buffer the page made and
+  has not destroyed, by kind and by Babylon's label, with any name that could be
+  an address masked. It counts from the page's first script, so it runs only when
+  asked.
 
 It writes `summary.md`, with each stretch's frames, main-thread share and self and
 inclusive time by function and file, and each `.cpuprofile`, which DevTools opens.

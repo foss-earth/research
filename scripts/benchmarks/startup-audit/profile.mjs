@@ -3,7 +3,7 @@
 //
 //   node scripts/benchmarks/startup-audit/profile.mjs --target fly --root <dist built with --sourcemap>
 //     [--motion still|drag|enter] [--rates 1,4] [--seconds 8] [--query "set.renderer.profiling.enabled=1"] [--label name]
-//     [--phone] [--layout] [--reduced-motion]
+//     [--phone] [--layout] [--reduced-motion] [--memory] [--heap] [--gpu]
 //
 // The visit is the audit's: a cold visit on a new profile under Fast 4G and a 4x CPU slowdown, then a warm visit
 // through the service worker it installed, which waits for boot:content (and boot:settled on a page that settles, or
@@ -57,6 +57,13 @@ const { values: args } = parseArgs({ options: {
   // After the stretches, where memory is: macOS footprint's categories for the page's renderer and the GPU process,
   // and a memory-infra dump of every Chrome process, by allocator.
   memory: { type: 'boolean', default: false },
+  // After the stretches (and after --memory), one heap snapshot of the page: heap.heapsnapshot, which DevTools'
+  // Memory panel opens, and heap.json, its self size by kind of node and by constructor.
+  heap: { type: 'boolean', default: false },
+  // After the stretches, the GPU memory the page holds through WebGPU: every texture and buffer its GPUDevice made
+  // and has not destroyed, by kind (render target, sampled texture, buffer usage) and by Babylon's label with its
+  // numbers and any name that could be an address masked. Wraps createTexture and createBuffer from the first script.
+  gpu: { type: 'boolean', default: false },
   phone: { type: 'boolean', default: false },
   layout: { type: 'boolean', default: false },
   'reduced-motion': { type: 'boolean', default: false },
@@ -124,6 +131,58 @@ await send('Emulation.setDeviceMetricsOverride', VIEWPORT);
 if (args.phone) await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 5 });
 if (args['reduced-motion']) await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
 await send('Target.setAutoAttach', { autoAttach: true, waitForDebuggerOnStart: true, flatten: true });
+// Bytes per texel of the formats a page may make; block-compressed formats by their 4x4 blocks.
+const GPU_ACCOUNTING = `(() => {
+  if (!self.GPUDevice) return;
+  const texel = { r8unorm: 1, r8snorm: 1, r8uint: 1, r8sint: 1, stencil8: 1, r16float: 2, r16uint: 2, r16sint: 2, rg8unorm: 2, rg8snorm: 2,
+    rg8uint: 2, rg8sint: 2, depth16unorm: 2, r32float: 4, r32uint: 4, r32sint: 4, rg16float: 4, rg16uint: 4, rg16sint: 4, rgba8unorm: 4,
+    'rgba8unorm-srgb': 4, rgba8snorm: 4, rgba8uint: 4, rgba8sint: 4, bgra8unorm: 4, 'bgra8unorm-srgb': 4, rgb10a2unorm: 4, rgb10a2uint: 4,
+    rg11b10ufloat: 4, rgb9e5ufloat: 4, depth24plus: 4, 'depth24plus-stencil8': 4, depth32float: 4, 'depth32float-stencil8': 8,
+    rg32float: 8, rg32uint: 8, rg32sint: 8, rgba16float: 8, rgba16uint: 8, rgba16sint: 8, rgba32float: 16, rgba32uint: 16, rgba32sint: 16 };
+  const blockBytes = format => /^(bc1|bc4|etc2-rgb8|etc2-rgb8a1|eac-r11)/.test(format) ? 8 : /^(bc|etc2|eac|astc-4x4)/.test(format) ? 16 : null;
+  const bytesOf = d => {
+    const size = Array.isArray(d.size) ? { width: d.size[0], height: d.size[1] ?? 1, depthOrArrayLayers: d.size[2] ?? 1 } : d.size;
+    const width = size.width, height = size.height ?? 1, layers = size.depthOrArrayLayers ?? 1, block = blockBytes(d.format);
+    let total = 0;
+    for (let level = 0; level < (d.mipLevelCount ?? 1); level += 1) {
+      const w = Math.max(1, width >> level), h = Math.max(1, height >> level), l = d.dimension === '3d' ? Math.max(1, layers >> level) : layers;
+      total += block ? Math.ceil(w / 4) * Math.ceil(h / 4) * block * l : w * h * (texel[d.format] ?? 4) * l;
+    }
+    return total * (d.sampleCount ?? 1);
+  };
+  // A label names its kind: Babylon's own words (sizes, mips, format, samples), and its names with their numbers
+  // as #. Where any part could be an address, every name is <name>, so no piece of a URI is kept.
+  const structural = part => /^(Texture(2D|3D|Cube)?|\\d+x\\d+(x\\d+)?|w(o)?mips|samples\\d+|size\\d+|[A-Z]+|Buffer)$/.test(part)
+    || part in texel || blockBytes(part) !== null;
+  const kindOf = label => {
+    const text = String(label ?? '').replace(/^BabylonWebGPUDevice\\d+_/, '').replace(/DataBufferUniqueId=\\d+-?/, '');
+    const risky = /[/:?=%@.]/.test(text);
+    return text.split('_').map(part => structural(part) ? part.replace(/^size\\d+$/, 'size#') : risky || part.length > 48 ? '<name>' : part.replace(/\\d+/g, '#'))
+      .filter((part, at, parts) => part !== '<name>' || parts[at - 1] !== '<name>').join('_').slice(0, 120);
+  };
+  const live = new Map();
+  const account = (object, record) => {
+    live.set(object, record);
+    const destroy = object.destroy;
+    object.destroy = function () { live.delete(object); return destroy.call(this); };
+  };
+  const createTexture = GPUDevice.prototype.createTexture, createBuffer = GPUDevice.prototype.createBuffer;
+  GPUDevice.prototype.createTexture = function (d) {
+    const texture = createTexture.call(this, d);
+    account(texture, { what: (d.usage & 0x10) ? 'render target' : 'texture', format: d.format, bytes: bytesOf(d), kind: kindOf(d.label) });
+    return texture;
+  };
+  GPUDevice.prototype.createBuffer = function (d) {
+    const buffer = createBuffer.call(this, d);
+    const usage = (d.usage & 0x20 ? 'vertex ' : '') + (d.usage & 0x10 ? 'index ' : '') + (d.usage & 0x40 ? 'uniform ' : '') + (d.usage & 0x80 ? 'storage ' : '') + (d.usage & 0x3 ? 'map ' : '');
+    account(buffer, { what: \`buffer \${usage.trim() || 'copy'}\`, bytes: d.size, kind: kindOf(d.label) });
+    return buffer;
+  };
+  const configure = GPUCanvasContext.prototype.configure;
+  self.__gpuAccounting = { live, canvases: new Set() };
+  GPUCanvasContext.prototype.configure = function (c) { self.__gpuAccounting.canvases.add(this); return configure.call(this, c); };
+})()`;
+if (args.gpu) await send('Page.addScriptToEvaluateOnNewDocument', { source: GPU_ACCOUNTING });
 
 const marked = name => evaluate(`performance.getEntriesByName(${JSON.stringify(name)}, "mark").length > 0`).catch(() => false);
 async function visit() {
@@ -315,6 +374,58 @@ if (args.memory) {
   memoryReport = { renderer: renderer && { pid: renderer.id, ...prints[renderer.id] }, gpu: gpu && { pid: gpu.id, ...prints[gpu.id] }, infra: await memoryInfra() };
   await writeFile(path.join(out, 'memory.json'), JSON.stringify(memoryReport, null, 2));
 }
+/** Self size by kind of node, and by constructor for objects and native nodes, from a V8 heap snapshot. */
+function heapSummary(snapshot) {
+  const { node_fields: fields, node_types: [types] } = snapshot.snapshot.meta;
+  const typeAt = fields.indexOf('type'), nameAt = fields.indexOf('name'), sizeAt = fields.indexOf('self_size');
+  const byType = {}, byName = new Map();
+  let total = 0, count = 0;
+  for (let at = 0; at < snapshot.nodes.length; at += fields.length) {
+    const type = types[snapshot.nodes[at + typeAt]], size = snapshot.nodes[at + sizeAt];
+    total += size; count += 1;
+    byType[type] = (byType[type] ?? 0) + size;
+    if (type === 'object' || type === 'native' || type === 'closure') {
+      const key = `${type} ${snapshot.strings[snapshot.nodes[at + nameAt]]}`;
+      const entry = byName.get(key) ?? { size: 0, count: 0 };
+      entry.size += size; entry.count += 1; byName.set(key, entry);
+    }
+  }
+  const top = [...byName].sort((a, b) => b[1].size - a[1].size).slice(0, 40).map(([name, entry]) => ({ name, ...entry }));
+  return { total, count, byType, top };
+}
+let heapReport = null;
+if (args.heap) {
+  const chunks = [];
+  const stopListening = chrome.onEvent(message => {
+    if (message.sessionId === sessionId && message.method === 'HeapProfiler.addHeapSnapshotChunk') chunks.push(message.params.chunk);
+  });
+  await send('HeapProfiler.enable');
+  await send('HeapProfiler.takeHeapSnapshot', { reportProgress: false });
+  stopListening();
+  const text = chunks.join('');
+  await writeFile(path.join(out, 'heap.heapsnapshot'), text);
+  heapReport = heapSummary(JSON.parse(text));
+  await writeFile(path.join(out, 'heap.json'), JSON.stringify(heapReport, null, 2));
+}
+let gpuReport = null;
+if (args.gpu) {
+  gpuReport = await evaluate(`(() => {
+    const a = self.__gpuAccounting;
+    if (!a) return null;
+    const byWhat = {}, byKind = {};
+    let total = 0;
+    for (const r of a.live.values()) {
+      total += r.bytes;
+      byWhat[r.what] = (byWhat[r.what] ?? 0) + r.bytes;
+      const key = r.what + ' ' + r.kind + (r.format ? ' ' + r.format : '');
+      const entry = byKind[key] ??= { bytes: 0, count: 0 };
+      entry.bytes += r.bytes; entry.count += 1;
+    }
+    const canvases = [...a.canvases].map(context => ({ width: context.canvas.width, height: context.canvas.height }));
+    return { total, count: a.live.size, byWhat, byKind: Object.entries(byKind).sort((x, y) => y[1].bytes - x[1].bytes).slice(0, 40), canvases };
+  })()`).catch(error => ({ error: String(error) }));
+  await writeFile(path.join(out, 'gpu.json'), JSON.stringify(gpuReport, null, 2));
+}
 await chrome.close();
 await server.close();
 await rm(profileDir, { recursive: true, force: true });
@@ -445,6 +556,20 @@ if (memoryReport) {
     lines.push(`### memory-infra, ${dump.name ?? 'process'} ${pid}`, '', '| MiB | Allocator |', '| ---: | --- |',
       ...rows.map(([name, value]) => `| ${mib(value)} | ${name.includes('/') ? '&nbsp;&nbsp;' : ''}${name} |`), '');
   }
+}
+if (gpuReport) {
+  const mib = value => (value / 1048576).toFixed(1);
+  if (gpuReport.error) lines.push('## GPU memory', '', gpuReport.error, '');
+  else lines.push(`## GPU memory through WebGPU, ${mib(gpuReport.total)} MiB in ${gpuReport.count} live textures and buffers`, '',
+    `Canvases configured: ${gpuReport.canvases.map(c => `${c.width}x${c.height}`).join(', ') || 'none'} (their swap-chain textures are not counted). The page only, not workers; MSAA and mips counted.`, '',
+    '| MiB | Kind |', '| ---: | --- |', ...Object.entries(gpuReport.byWhat).sort((x, y) => y[1] - x[1]).map(([name, value]) => `| ${mib(value)} | ${name} |`), '',
+    '| MiB | Count | Label |', '| ---: | ---: | --- |', ...gpuReport.byKind.slice(0, 30).map(([name, entry]) => `| ${mib(entry.bytes)} | ${entry.count} | \`${name}\` |`), '');
+}
+if (heapReport) {
+  const mib = value => (value / 1048576).toFixed(1);
+  lines.push(`## Page heap snapshot, ${mib(heapReport.total)} MiB in ${heapReport.count} nodes`, '', 'Self sizes after the snapshot\'s garbage collection; workers are not included.', '',
+    '| MiB | Kind |', '| ---: | --- |', ...Object.entries(heapReport.byType).sort((x, y) => y[1] - x[1]).map(([name, value]) => `| ${mib(value)} | ${name} |`), '',
+    '| MiB | Count | Constructor |', '| ---: | ---: | --- |', ...heapReport.top.slice(0, 25).map(entry => `| ${mib(entry.size)} | ${entry.count} | \`${entry.name}\` |`), '');
 }
 await writeFile(path.join(out, 'summary.md'), lines.join('\n'));
 await writeFile(path.join(out, 'stretches.json'), JSON.stringify(stretches.map(({ profile, layout, ...rest }) => rest), null, 2));
