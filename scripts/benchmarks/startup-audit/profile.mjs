@@ -84,7 +84,9 @@ const RATES = args.rates.split(',').filter(Boolean).map(Number);
 const FAST_4G = { offline: false, latency: 60 * 2.75, downloadThroughput: 9 * 1000 * 1000 / 8 * 0.9, uploadThroughput: 1.5 * 1000 * 1000 / 8 * 0.9 };
 const CPU_SLOWDOWN = 4;
 const VIEWPORT = args.phone ? { width: 412, height: 915, deviceScaleFactor: 2.625, mobile: true } : { width: 1280, height: 800, deviceScaleFactor: 1, mobile: false };
-const CHROME_ARGS = ['--enable-unsafe-webgpu', '--enable-gpu', '--use-angle=metal', '--ignore-gpu-blocklist', `--window-size=${VIEWPORT.width},${VIEWPORT.height}`];
+// Metal on macOS; elsewhere Chrome's default, with any flags a machine needs in CHROME_EXTRA_ARGS (a Linux VM's software WebGPU, say).
+const CHROME_ARGS = ['--enable-unsafe-webgpu', '--enable-gpu', ...(process.platform === 'darwin' ? ['--use-angle=metal'] : []), '--ignore-gpu-blocklist',
+  `--window-size=${VIEWPORT.width},${VIEWPORT.height}`, ...(process.env.CHROME_EXTRA_ARGS?.split(' ').filter(Boolean) ?? [])];
 const AFTER_CONTENT_MS = 15000;
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const out = newOutputDirectory('benchmarks', 'startup-audit', `profile-${args.target}${args.phone ? '-phone' : ''}${args.label ? `-${args.label}` : ''}`);

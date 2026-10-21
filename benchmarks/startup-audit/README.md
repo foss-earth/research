@@ -112,6 +112,17 @@ node scripts/benchmarks/startup-audit/profile.mjs --target app \
   an address masked. It counts from the page's first script, so it runs only when
   asked.
 
+On a machine other than a Mac, `CHROME_EXTRA_ARGS` adds Chrome flags, such as a
+Linux VM's software WebGPU; check the backend the page reports.
+
+[pixels.mjs](../../scripts/benchmarks/startup-audit/pixels.mjs) compares the tour's
+pixels at a phone viewport with one setting off and on, with the page's clock
+stopped at each moment (the map, part way into a 360 image, inside and out):
+
+```sh
+node scripts/benchmarks/startup-audit/pixels.mjs <tour dist> build/pixels/<name> setting=renderer.experiments.all [query=set.renderer.backend=webgl2]
+```
+
 It writes `summary.md`, with each stretch's frames, main-thread share and self and
 inclusive time by function and file, and each `.cpuprofile`, which DevTools opens.
 [profile-tree.mjs](../../scripts/benchmarks/startup-audit/profile-tree.mjs) prints the

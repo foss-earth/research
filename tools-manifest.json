@@ -5421,8 +5421,40 @@
       ]
     },
     {
+      "path": "scripts/benchmarks/startup-audit/pixels.mjs",
+      "sha256": "1d73c973a1cda43a9d22a6836d75622849f6cde86248a37d80dc056a35d86227",
+      "group": "startup-audit",
+      "kind": "experiment-entry-or-browser-fixture",
+      "status": "pixel comparison of the tour at a phone viewport with one setting off and on (or the engine's held depth clears), the page's clock stopped at each moment: the map, part way into a 360 image, inside it and part way out; used for renderer 24b6a6d's pixel identity; see benchmarks/startup-audit/README.md",
+      "runtimeQualification": false,
+      "dependencies": [
+        {
+          "specifier": "node:fs/promises",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:path",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "node:zlib",
+          "kind": "node-builtin"
+        },
+        {
+          "specifier": "./serve.mjs",
+          "kind": "local",
+          "path": "scripts/benchmarks/startup-audit/serve.mjs"
+        },
+        {
+          "specifier": "../../lib/headlessChrome.mjs",
+          "kind": "local",
+          "path": "scripts/lib/headlessChrome.mjs"
+        }
+      ]
+    },
+    {
       "path": "scripts/benchmarks/startup-audit/profile.mjs",
-      "sha256": "bdbad7d9e1fa0f75c6bd6b7528a35b799f96011f29ffafccc064179f2912d173",
+      "sha256": "d2c6ef5f3b4b0c3ead57e63c8b1bda3105ed424e6ca362ed058e4d5aadc0842b",
       "group": "startup-audit",
       "kind": "experiment-entry-or-browser-fixture",
       "status": "source used for the 20 October 2026 frame profiles in foss-earth/docs performance-audit.md, at a desktop or phone viewport (--phone), still, dragging or flying into a 360 image and out (--motion); indicative runs on a shared machine; see benchmarks/startup-audit/README.md",
