@@ -86,25 +86,32 @@ export function redact(value, secrets = []) {
     for (const secret of secrets.filter(Boolean)) {
       for (const form of new Set([secret, encodeURIComponent(secret)])) text = text.split(form).join("[REDACTED]");
     }
-    return text.replace(/((?:key|session|token|api_key)(?:=|%3[dD]))[^\s&#"'<>\\]*/gi, "$1[REDACTED]")
+    return text.replace(/((?:gkey|key|session|token|api_key|GOOGLE_3D_TILES_KEY|FOSS_EARTH_GOOGLE_KEY)(?:=|%3[dD]))[^\s&#"'<>\\]*/gi, "$1[REDACTED]")
       .replace(/(Bearer\s+)[\w.+/=-]+/gi, "$1[REDACTED]");
   }
   if (Array.isArray(value)) return value.map(item => redact(item, secrets));
   if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key,
-    /^(key|session|token|apiKey|googleKey)$/i.test(key) ? "[REDACTED]" : redact(item, secrets)]));
+    /^(gkey|key|session|token|apiKey|googleKey|GOOGLE_3D_TILES_KEY|FOSS_EARTH_GOOGLE_KEY)$/i.test(key) ? "[REDACTED]" : redact(item, secrets)]));
   return value;
 }
 
 export function readGoogleKey(env = process.env, read = readFileSync) {
-  if (env.FOSS_EARTH_GOOGLE_KEY?.trim()) return env.FOSS_EARTH_GOOGLE_KEY.trim();
+  const names = ["GOOGLE_3D_TILES_KEY", "FOSS_EARTH_GOOGLE_KEY"];
+  for (const name of names) if (env[name]?.trim()) return env[name].trim();
+  let legacy = null;
   for (const file of ["/Users/felg/gh/foss-earth/app/.env.local", "/Users/felg/gh/UMN-VR/tour/.env.local", "/Users/felg/gh/0sfs/fly/.env.local"]) {
     let contents;
     try { contents = read(file, "utf8"); } catch (error) { if (error.code === "ENOENT") continue; throw error; }
-    const match = /^\s*(?:export\s+)?FOSS_EARTH_GOOGLE_KEY\s*=\s*(?:"([^"\r\n]*)"|'([^'\r\n]*)'|([^#\r\n]*))/m.exec(contents);
-    const value = (match?.[1] ?? match?.[2] ?? match?.[3] ?? "").trim();
-    if (value) return value;
+    for (const name of names) {
+      const match = new RegExp(`^[ \\t]*(?:export[ \\t]+)?${name}[ \\t]*=[ \\t]*(?:"([^"\\r\\n]*)"|'([^'\\r\\n]*)'|([^#\\r\\n]*))`, "m").exec(contents);
+      const value = (match?.[1] ?? match?.[2] ?? match?.[3] ?? "").trim();
+      if (!value) continue;
+      if (name === names[0]) return value;
+      legacy ??= value;
+    }
   }
-  throw new Error("FOSS_EARTH_GOOGLE_KEY is unavailable in the environment and the three ignored .env.local files");
+  if (legacy) return legacy;
+  throw new Error("GOOGLE_3D_TILES_KEY is unavailable in the environment and the three ignored .env.local files (FOSS_EARTH_GOOGLE_KEY is a legacy fallback)");
 }
 
 export function settingsScript(key, origin) {

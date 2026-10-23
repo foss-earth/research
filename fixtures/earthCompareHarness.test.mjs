@@ -22,18 +22,25 @@ test("credentials are injected as values and redacted recursively, including enc
   vm.runInNewContext(source, { location: { origin: "https://app.test" }, localStorage: { setItem: (key, value) => storage.set(key, value) } });
   assert.equal(JSON.parse(storage.get("foss-earth.settings.v1")).values["map.source.googleKey"], secret);
   vm.runInNewContext(source, { location: { origin: "https://third-party.test" }, localStorage: { setItem: () => assert.fail("Key crossed app origin") } });
-  const safe = redact({ nested: [`https://example.test/?key=${encodeURIComponent(secret)}&session=abc`, secret, `Bearer abc.xyz`], googleKey: secret }, [secret]);
+  const safe = redact({ nested: [`https://example.test/?gkey=${encodeURIComponent(secret)}&session=abc`, secret, `Bearer abc.xyz`], googleKey: secret }, [secret]);
   assert.ok(!JSON.stringify(safe).includes(secret));
   assert.ok(!JSON.stringify(safe).includes("session=abc"));
   assert.ok(!JSON.stringify(safe).includes("Bearer abc.xyz"));
   assert.equal(safe.googleKey, "[REDACTED]");
+  assert.deepEqual(redact({ gkey: "query-secret", GOOGLE_3D_TILES_KEY: "env-secret" }), { gkey: "[REDACTED]", GOOGLE_3D_TILES_KEY: "[REDACTED]" });
+  assert.doesNotMatch(redact("?gkey=query-secret GOOGLE_3D_TILES_KEY=env-secret"), /query-secret|env-secret/);
 });
 
 test("key lookup reads only the agreed named variable and follows source priority", () => {
   let reads = 0;
-  assert.equal(readGoogleKey({ FOSS_EARTH_GOOGLE_KEY: "from-env" }, () => { throw new Error("should not read"); }), "from-env");
-  assert.equal(readGoogleKey({}, () => { reads++; return 'UNRELATED_SECRET=never-use\nexport FOSS_EARTH_GOOGLE_KEY="from-file"\n'; }), "from-file");
+  const noRead = () => { throw new Error("should not read"); };
+  assert.equal(readGoogleKey({ GOOGLE_3D_TILES_KEY: " canonical-env ", FOSS_EARTH_GOOGLE_KEY: "legacy-env" }, noRead), "canonical-env");
+  assert.equal(readGoogleKey({ GOOGLE_3D_TILES_KEY: " ", FOSS_EARTH_GOOGLE_KEY: "legacy-env" }, noRead), "legacy-env");
+  assert.equal(readGoogleKey({}, () => { reads++; return 'UNRELATED_SECRET=never-use\nexport GOOGLE_3D_TILES_KEY="from-file" # local\n'; }), "from-file");
   assert.equal(reads, 1);
+  assert.equal(readGoogleKey({}, file => file.includes("foss-earth/app") ? "FOSS_EARTH_GOOGLE_KEY=legacy-first\n" : "GOOGLE_3D_TILES_KEY=canonical-later\n"), "canonical-later");
+  assert.equal(readGoogleKey({}, file => file.includes("foss-earth/app") ? "GOOGLE_3D_TILES_KEY=first\n" : "GOOGLE_3D_TILES_KEY=later\n"), "first");
+  assert.equal(readGoogleKey({}, () => "GOOGLE_3D_TILES_KEY= \nFOSS_EARTH_GOOGLE_KEY='legacy-file'\n"), "legacy-file");
   assert.throws(() => readGoogleKey({}, () => "OTHER_KEY=never-use"), /unavailable/);
 });
 
