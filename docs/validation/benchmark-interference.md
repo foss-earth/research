@@ -112,7 +112,7 @@ metric-specific gates.
 
 | Parameter | Unit and bounds | Default and reason |
 | --- | --- | --- |
-| `maximumWorkers` | workers, 1 to half the logical cores, rounded down (minimum 1) | The upper bound; leaves compute for the user's work. Actual native worker pools must be verified. |
+| `maximumWorkers` | workers, 1 to half the logical cores, rounded down (minimum 1) | The upper bound; leaves compute for the user's work. Actual WASM worker pools must be verified. |
 | `maximumResidentMiB` | MiB, positive and no more than half physical RAM | Half RAM; fewer workers when measured peak usage would exceed it. |
 | `measurementBlockMs` | ms, 1 to 1000 | 20 ms for hot CPU loops; amortizes timer/observation overhead. Frame/audio metrics use their actual scheduling cadence. |
 | `minimumPairs` | pairs, 3 to 1000 | 11; enough repetitions to expose unstable comparisons without an open-ended run. |

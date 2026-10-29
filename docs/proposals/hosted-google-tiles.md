@@ -1,6 +1,10 @@
 # Hosted access to Google Photorealistic 3D Tiles
 
-Status: implementation specification. Runtime changes are not implemented by this document.
+Status: superseded for identity and grants by
+[Accounts and hosted basemaps](https://github.com/foss-earth/docs/blob/main/docs/proposals/accounts-and-hosted-basemaps.md)
+(2026-10-27). The forwarding rules, Google policy constraints, and device-key
+path below still hold. Where the two disagree, that document wins. Runtime
+changes are not implemented by either document.
 Date: 2026-10-14.
 
 ## Intended result
