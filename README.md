@@ -5,6 +5,7 @@ Research notes, benchmarks, experiment scripts and proposals for FOSS Earth. Thi
 ## Layout
 
 - `docs/`: research write-ups, reviews and design notes, with proposals under `docs/proposals/`.
+- `3D_tiles/`: how Google bills Photorealistic 3D Tiles, the red team of that billing, and the ways to offer the tiles.
 - `benchmarks/`: benchmark pages, inputs and recorded results (collision, EAC progressive prototype, globe comparison, map detail, scene A/B, spherical image representation, startup and runtime audit, terrain, wheels).
 - `scripts/`: the runnable experiment sources. `scripts/benchmarks/` has one directory per benchmark, and `scripts/lib/` holds shared helpers.
 - `fixtures/`: tests and fixtures for the helpers and for the document links.
@@ -64,6 +65,9 @@ Documents and proposals:
 - [docs/360-images-virtual-tour-review.md](docs/360-images-virtual-tour-review.md)
 - [docs/camera-pivot-and-zoom-prompt.md](docs/camera-pivot-and-zoom-prompt.md)
 - [docs/globe-comparison.md](docs/globe-comparison.md)
+- [How Google bills Photorealistic 3D Tiles](3D_tiles/google-side-billing.md): the billable root request, the three-hour session, and why a Cloud quota cannot equal one user's balance
+- [Red team of that billing](3D_tiles/google-side-billing-red-team.md): the quota refills every Pacific day, the renderer spends roots on its own, and the terms can suspend the project
+- [Ways to offer Photorealistic 3D Tiles](3D_tiles/implementation-options.md): own key, session grant, proxy, a partner account, and the stacks that can ship together
 - [docs/performance-pass.md](docs/performance-pass.md)
 - [docs/proposals/navigation-anchors.md](docs/proposals/navigation-anchors.md)
 - [docs/proposals/raster-terrain-performance.md](docs/proposals/raster-terrain-performance.md)
