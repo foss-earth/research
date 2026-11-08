@@ -5,6 +5,7 @@ Research notes, benchmarks, experiment scripts and proposals for FOSS Earth. Thi
 ## Layout
 
 - `docs/`: research write-ups, reviews and design notes, with proposals under `docs/proposals/`.
+- `google-earth/`: what Google has published, what a third party read out of the client, what we measured, and what is still unknown about the Earth web client's runtime.
 - `3D_tiles/`: how Google bills Photorealistic 3D Tiles, the red team of that billing, and the ways to offer the tiles.
 - `benchmarks/`: benchmark pages, inputs and recorded results (collision, EAC progressive prototype, globe comparison, map detail, scene A/B, spherical image representation, startup and runtime audit, terrain, wheels).
 - `scripts/`: the runnable experiment sources. `scripts/benchmarks/` has one directory per benchmark, and `scripts/lib/` holds shared helpers.
@@ -65,6 +66,7 @@ Documents and proposals:
 - [docs/360-images-virtual-tour-review.md](docs/360-images-virtual-tour-review.md)
 - [docs/camera-pivot-and-zoom-prompt.md](docs/camera-pivot-and-zoom-prompt.md)
 - [docs/globe-comparison.md](docs/globe-comparison.md)
+- [Google Earth runtime](google-earth/README.md): how the Earth 9 web client stays fast, kept separate from the Photorealistic 3D Tiles our renderer loads. The chapters are the [client](google-earth/client.md), the [two data paths](google-earth/data.md), and the [numbers](google-earth/measurements.md).
 - [How Google bills Photorealistic 3D Tiles](3D_tiles/google-side-billing.md): the billable root request, the three-hour session, and why a Cloud quota cannot equal one user's balance
 - [Red team of that billing](3D_tiles/google-side-billing-red-team.md): the quota refills every Pacific day, the renderer spends roots on its own, and the terms can suspend the project
 - [Ways to offer Photorealistic 3D Tiles](3D_tiles/implementation-options.md): own key, session grant, proxy, a partner account, and the stacks that can ship together
